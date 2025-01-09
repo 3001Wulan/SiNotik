@@ -132,4 +132,11 @@ body {
     .register-link a:hover {
         text-decoration: underline;
     }
+    .error-message {
+        color: red;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
     
