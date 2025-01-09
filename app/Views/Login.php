@@ -50,5 +50,30 @@
             </form>
         </div>
     </div>
+
+    <div id="forgot-password-popup" class="popup hidden">
+        <div class="popup-content">
+            <div class="popup-header">
+                <img src="<?php echo base_url('assets/images/Info.png'); ?>" alt="Info Icon">
+            </div>
+            <p>Hubungi Admin untuk Reset Password!</p>
+            <div class="contact-info">
+                <p><span class="label">Whatsapp:</span> <span class="value">+628xxxxxxxxxx</span></p>
+                <p><span class="label">Email:</span> <span class="value">admin@gmail.com</span></p>
+            </div>
+            <button id="close-popup" class="btn-close">OK</button>
+        </div>
+    </div>
+    
+    <script>
+    document.querySelector('.links a').addEventListener('click', function (e) {
+        e.preventDefault();
+        document.getElementById('forgot-password-popup').classList.remove('hidden');
+    });
+
+    document.getElementById('close-popup').addEventListener('click', function () {
+        document.getElementById('forgot-password-popup').classList.add('hidden');
+    });
+    </script>
 </body>
 </html>
