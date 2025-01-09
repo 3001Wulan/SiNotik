@@ -10,7 +10,7 @@ class Auth extends BaseController
     {
         $session = session(); 
 
-        if ($this->request->getMethod() === 'post') {
+        if ($this->request->getMethod() === 'POST') {
             $email = $this->request->getPost('username'); 
             $password = $this->request->getPost('password'); 
 
