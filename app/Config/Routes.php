@@ -10,4 +10,6 @@ $routes->get('/login', 'Auth::login');
 $routes->post('login', 'Auth::login');
 $routes->get('/register', 'RegisterController::index');
 $routes->post('/register', 'RegisterController::register');
+$routes->get('admin/dashboard_admin', 'dashboardadminController::dashboardAdmin');
+
 
