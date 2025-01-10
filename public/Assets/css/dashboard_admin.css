@@ -284,7 +284,8 @@ body {
     margin-right: auto; 
 }
 
-.theme-toggle .theme-icon {
+.theme-togg
+le .theme-icon {
     width: 40px;  
     height: 40px; 
     cursor: pointer;
@@ -292,4 +293,24 @@ body {
 
 .main-content {
     padding-top: 80px; 
+}
+.profile-container {
+    width: 50px; /* Ukuran lebih kecil untuk container */
+    height: 50px; /* Ukuran lebih kecil untuk container */
+    background-color: #f0f0f0; /* Warna abu-abu untuk latar belakang */
+    border-radius: 50%; /* Membuat container menjadi bulat */
+    display: flex;
+    justify-content: center; /* Menjaga gambar di tengah */
+    align-items: center; /* Menjaga gambar di tengah */
+    padding: 3px; /* Ruang antara gambar dan border */
+    position: relative;
+    left: -20px; /* Geser sedikit ke kiri */
+}
+
+
+.profile-picture .profile-img {
+    width: 40px; /* Ukuran gambar lebih kecil */
+    height: 40px; /* Ukuran gambar lebih kecil */
+    border-radius: 50%; /* Membuat gambar menjadi bulat */
+    object-fit: cover; /* Memastikan gambar terjaga proporsinya */
 }

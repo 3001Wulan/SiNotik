@@ -32,7 +32,12 @@
         <div class="theme-toggle">
             <img src="assets/images/cahaya.png" alt="Theme Toggle" class="theme-icon">
         </div>
-            
+        <div class="profile-container">
+    <div class="profile">
+        <img src="path_to_your_image.jpg" alt="Profile Picture" class="profile-img">
+    </div>
+</div>
+
 
     </div>
     <div class="dashboard-title">
