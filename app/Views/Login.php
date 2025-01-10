@@ -36,10 +36,6 @@
                     <div class="input-wrapper">
                         <span class="icon"><img src="<?php echo base_url('assets/images/Lock.png'); ?>" alt="Lock Icon"></span>
                         <input type="password" id="password" name="password" placeholder="Input password here" required>
-                        <!-- Eye Icon to toggle password visibility -->
-                        <span id="toggle-password" class="eye-icon">
-                            <img src="<?php echo base_url('assets/images/Lockmata.png'); ?>" alt="Eye Icon">
-                        </span>
                     </div>
                 </div>
 
@@ -77,21 +73,6 @@
 
     document.getElementById('close-popup').addEventListener('click', function () {
         document.getElementById('forgot-password-popup').classList.add('hidden');
-    });
-
-    // Toggle password visibility
-    document.getElementById('toggle-password').addEventListener('click', function () {
-        const passwordField = document.getElementById('password');
-        const type = passwordField.type === 'password' ? 'text' : 'password';
-        passwordField.type = type;
-        
-        // Toggle eye icon (for visibility)
-        const eyeIcon = document.getElementById('toggle-password').querySelector('img');
-        if (type === 'text') {
-            eyeIcon.src = "<?php echo base_url('assets/images/Lockmata.png'); ?>"; // Update to 'eye-slash' icon when visible
-        } else {
-            eyeIcon.src = "<?php echo base_url('assets/images/Lockmata.png'); ?>"; // Update to regular 'eye' icon when hidden
-        }
     });
     </script>
 </body>

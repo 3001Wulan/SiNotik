@@ -26,13 +26,13 @@ body {
     
     .logo img {
         width: 100px;
-        height: 150px;
-        margin-top: -10px;
+        height: 100px;
+        margin-top: 10px;
     }
     
     .logo h1 {
         font-size: 30px;
-        margin-top: -80px;
+        margin-top: 5px;
         margin-bottom: 50px;
         color: #000000;
         font-family: sans-serif ;
@@ -216,16 +216,4 @@ body {
 }      
 .input-wrapper {
     position: relative;
-}
-
-.eye-icon {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-}
-
-input[type="password"], input[type="text"] {
-    padding-right: 30px; /* Memberikan ruang untuk ikon mata */
 }
