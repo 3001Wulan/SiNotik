@@ -748,3 +748,160 @@ INFO - 2025-01-10 07:03:05 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2025-01-10 07:08:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-01-10 07:08:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-01-10 07:09:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:11:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:11:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:12:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:12:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:12:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:12:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-10 07:12:13 --> Login attempt with username: lili
+ERROR - 2025-01-10 07:12:13 --> Checking login for username: lili
+ERROR - 2025-01-10 07:12:13 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => 
+    [nip] => 123456780123456789
+    [email] => jurandariyurianidu@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [profil_foto] => 
+    [alamat] => 
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-10 12:08:25
+)
+
+ERROR - 2025-01-10 07:12:13 --> Password verify result for username lili: Success
+ERROR - 2025-01-10 07:12:14 --> Login success for username: lili
+INFO - 2025-01-10 07:12:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:12:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:12:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:13:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:13:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:13:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:13:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:13:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:13:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-10 07:13:56 --> Login attempt with username: lili
+ERROR - 2025-01-10 07:13:56 --> Checking login for username: lili
+ERROR - 2025-01-10 07:13:56 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => 
+    [nip] => 123456780123456789
+    [email] => jurandariyurianidu@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [profil_foto] => 
+    [alamat] => 
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-10 12:08:25
+)
+
+ERROR - 2025-01-10 07:13:56 --> Password verify result for username lili: Success
+ERROR - 2025-01-10 07:13:56 --> Login success for username: lili
+INFO - 2025-01-10 07:13:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:14:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-10 07:14:42 --> Login attempt with username: lili
+ERROR - 2025-01-10 07:14:42 --> Checking login for username: lili
+ERROR - 2025-01-10 07:14:42 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => 
+    [nip] => 123456780123456789
+    [email] => jurandariyurianidu@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [profil_foto] => 
+    [alamat] => 
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-10 12:08:25
+)
+
+ERROR - 2025-01-10 07:14:43 --> Password verify result for username lili: Failure
+ERROR - 2025-01-10 07:14:43 --> Login failed for username: lili
+INFO - 2025-01-10 07:14:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:14:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:14:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-10 07:14:49 --> Login attempt with username: lili
+ERROR - 2025-01-10 07:14:49 --> Checking login for username: lili
+ERROR - 2025-01-10 07:14:49 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => 
+    [nip] => 123456780123456789
+    [email] => jurandariyurianidu@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [profil_foto] => 
+    [alamat] => 
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-10 12:08:25
+)
+
+ERROR - 2025-01-10 07:14:49 --> Password verify result for username lili: Success
+ERROR - 2025-01-10 07:14:49 --> Login success for username: lili
+INFO - 2025-01-10 07:14:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:17:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:19:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:19:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:20:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:21:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:22:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:23:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:30:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:31:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:31:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:33:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:34:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:35:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:38:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:38:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:39:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:40:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:40:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:40:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:43:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:43:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:44:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:45:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:49:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:49:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:50:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 07:54:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 08:08:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 08:09:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 08:10:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 08:21:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-10 08:22:45 --> ErrorException: Undefined variable $labels
+[Method: GET, Route: admin/dashboard_admin]
+in APPPATH\Views\admin\dashboard_admin.php on line 103.
+ 1 APPPATH\Views\admin\dashboard_admin.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $labels', 'C:\\xampp\\htdocs\\SiNotik\\app\\Views\\admin\\dashboard_admin.php', 103)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SiNotik\\app\\Views\\admin\\dashboard_admin.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/dashboard_admin', [], true)
+ 5 APPPATH\Controllers\DashboardAdminController.php(24): view('admin/dashboard_admin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardAdminController->dashboardAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardAdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-01-10 08:23:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 08:27:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 08:29:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 08:29:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 08:30:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 08:34:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 08:39:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 08:40:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 08:40:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 08:40:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 08:42:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 08:42:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 08:43:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

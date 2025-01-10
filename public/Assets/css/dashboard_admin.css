@@ -48,7 +48,6 @@ body {
     transition: box-shadow 0.3s ease, color 0.3s ease; 
 }
 
-
 .sidebar .menu li .menu-icon {
     width: 20px; 
     height: auto;
@@ -60,8 +59,6 @@ body {
     box-shadow: 0 0 10px rgba(0, 86, 179, 0.8);
     background-color: rgba(255, 255, 255, 0.2); 
 }
-
-
 
 .main-content {
     width: 80%;
@@ -110,22 +107,17 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
 .stat-box .stat-text h2 {
     color: #4E73DF !important; 
 }
-
 
 .stat-box .stat-text .pegawai-count {
     color: #000000 !important;
 }
 
-
 .stat-box .stat-text .notulensi-count {
-    color: #000000 !important; /
+    color: #000000 !important;
 }
-
-
 
 .stat-text .pegawai-count {
     color: #000000; 
@@ -135,12 +127,12 @@ body {
     color: #000000; 
 }
 
-
 .stat-box img {
     width: 100%;
     margin-top: 10px;
     border-radius: 8px;
 }
+
 .menu {
     list-style: none;
     padding: 0;
@@ -167,6 +159,7 @@ body {
 .active {
     font-weight: bold;
 }
+
 .dashboard-title {
     text-align: left; 
     margin-bottom: 30px; 
@@ -187,19 +180,18 @@ body {
     width: 100%; 
 }
 
-
 .stat-box {
-    background: white;
+    flex-basis: 100%;
     padding: 20px;
-    border-radius: 12px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    position: relative; 
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Tambahkan jarak antar elemen */
+    height: auto; /* Otomatis menyesuaikan isi */
+    min-height: 300px; /* Tambahkan tinggi minimum agar lebih proporsional */
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 180px;
-    width: 480px; 
-    border-left: 6px solid #0085C5; 
+    flex-direction: column; /* Agar konten berada dalam kolom */
+    justify-content: space-between; /* Untuk meratakan isi */
 }
 
 
@@ -210,13 +202,11 @@ body {
     border-left-color: #0085C5; 
 }
 
-
 .stat-status {
     width: 400px; 
     height: 300px; 
     border-left-color: #0085C5; 
 }
-
 
 .stat-kategori {
     width: 400px; 
@@ -239,7 +229,6 @@ body {
     text-align: left; 
 }
 
-
 .stat-icon {
     position: absolute;
     top: 10%;                
@@ -247,12 +236,10 @@ body {
     transform: translateY(0); 
 }
 
-
 .stat-icon img {
     width: 60px;             
     height: auto;            
 }
-
 
 .stat-chart {
     width: 100%;         
@@ -278,14 +265,11 @@ body {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-
-
 .theme-toggle {
     margin-right: auto; 
 }
 
-.theme-togg
-le .theme-icon {
+.theme-toggle .theme-icon {
     width: 40px;  
     height: 40px; 
     cursor: pointer;
@@ -294,6 +278,7 @@ le .theme-icon {
 .main-content {
     padding-top: 80px; 
 }
+
 .profile-container {
     width: 50px; /* Ukuran lebih kecil untuk container */
     height: 50px; /* Ukuran lebih kecil untuk container */
@@ -306,7 +291,6 @@ le .theme-icon {
     position: relative;
     left: -20px; /* Geser sedikit ke kiri */
 }
-
 
 .profile-picture .profile-img {
     width: 40px; /* Ukuran gambar lebih kecil */
