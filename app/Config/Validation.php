@@ -37,6 +37,8 @@ class Validation extends BaseConfig
         'list'   => 'CodeIgniter\Validation\Views\list',
         'single' => 'CodeIgniter\Validation\Views\single',
     ];
+// app/config/Validation.php
+    public $defaultLocale = 'id';  // Pastikan ini disetel ke 'id' untuk bahasa Indonesia
 
     // --------------------------------------------------------------------
     // Rules

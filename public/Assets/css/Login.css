@@ -214,3 +214,18 @@ body {
 .btn-close:hover {
     background-color: #3e9bff;
 }      
+.input-wrapper {
+    position: relative;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+input[type="password"], input[type="text"] {
+    padding-right: 30px; /* Memberikan ruang untuk ikon mata */
+}

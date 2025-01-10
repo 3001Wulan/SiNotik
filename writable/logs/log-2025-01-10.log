@@ -1,0 +1,81 @@
+INFO - 2025-01-10 01:55:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 02:03:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 02:03:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 02:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 02:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 02:05:16 --> User registered successfully: {"username":"cindy","nip":"123456789123456890","email":"murnawelis07@gmail.com","password":"$2y$10$itlqery4fORt6o6IfJv8T.6n5axK4nSrE1ktYq.iTasc.6VYBkf3O","role":"pegawai"}
+INFO - 2025-01-10 02:05:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 02:05:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 02:05:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 02:05:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-10 02:05:31 --> Login attempt with username: cindy
+ERROR - 2025-01-10 02:05:31 --> Checking login for username: cindy
+ERROR - 2025-01-10 02:05:31 --> User data: Array
+(
+    [user_id] => 8
+    [username] => cindy
+    [nama] => 
+    [nip] => 123456789123456890
+    [email] => murnawelis07@gmail.com
+    [password] => $2y$10$itlqery4fORt6o6IfJv8T.6n5axK4nSrE1ktYq.iTasc.6VYBkf3O
+    [role] => pegawai
+    [profil_foto] => 
+    [alamat] => 
+    [created_at] => 2025-01-10 02:05:16
+    [updated_at] => 2025-01-10 02:05:16
+)
+
+ERROR - 2025-01-10 02:05:31 --> Password verify result for username cindy: Failure
+ERROR - 2025-01-10 02:05:31 --> Login failed for username: cindy
+INFO - 2025-01-10 02:05:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 02:05:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 02:05:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-10 02:05:56 --> Login attempt with username: cindy
+ERROR - 2025-01-10 02:05:56 --> Checking login for username: cindy
+ERROR - 2025-01-10 02:05:56 --> User data: Array
+(
+    [user_id] => 8
+    [username] => cindy
+    [nama] => 
+    [nip] => 123456789123456890
+    [email] => murnawelis07@gmail.com
+    [password] => $2y$10$itlqery4fORt6o6IfJv8T.6n5axK4nSrE1ktYq.iTasc.6VYBkf3O
+    [role] => pegawai
+    [profil_foto] => 
+    [alamat] => 
+    [created_at] => 2025-01-10 02:05:16
+    [updated_at] => 2025-01-10 02:05:16
+)
+
+ERROR - 2025-01-10 02:05:56 --> Password verify result for username cindy: Failure
+ERROR - 2025-01-10 02:05:56 --> Login failed for username: cindy
+INFO - 2025-01-10 02:05:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 02:05:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 02:06:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 02:06:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 02:06:34 --> User registered successfully: {"username":"lili","nip":"123456780123456789","email":"jurandariyurianidu@gmail.com","password":"$2y$10$VOHOtZEaMBJvPLDT6v5\/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6","role":"pegawai"}
+INFO - 2025-01-10 02:06:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 02:06:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 02:06:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 02:06:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-10 02:06:47 --> Login attempt with username: lili
+ERROR - 2025-01-10 02:06:47 --> Checking login for username: lili
+ERROR - 2025-01-10 02:06:47 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => 
+    [nip] => 123456780123456789
+    [email] => jurandariyurianidu@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => pegawai
+    [profil_foto] => 
+    [alamat] => 
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-10 02:06:34
+)
+
+ERROR - 2025-01-10 02:06:47 --> Password verify result for username lili: Success
+ERROR - 2025-01-10 02:06:47 --> Login success for username: lili
+INFO - 2025-01-10 02:08:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 02:08:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
