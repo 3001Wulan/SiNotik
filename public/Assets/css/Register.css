@@ -132,4 +132,30 @@ body, html {
     .btn:hover {
         background: #3e9bff;
     }
-    
+
+.popup {
+    position: fixed;
+    width:250px;
+    max-width: 200px;
+    height: 100px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: none;
+    z-index: 1000;
+}
+.popup img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+.popup h3 {
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    font-style: italic;
+    font-family: sans-serif;
+}
