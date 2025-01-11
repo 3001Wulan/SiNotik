@@ -925,3 +925,56 @@ INFO - 2025-01-10 09:31:34 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2025-01-10 09:32:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-01-10 09:32:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-01-10 09:33:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 09:46:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 09:47:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 09:47:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 09:49:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 09:49:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 09:49:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-10 09:49:51 --> Login attempt with username: lili
+ERROR - 2025-01-10 09:49:53 --> Checking login for username: lili
+ERROR - 2025-01-10 09:49:53 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => 
+    [nip] => 123456780123456789
+    [email] => jurandariyurianidu@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => 
+    [alamat] => 
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-10 12:08:25
+)
+
+ERROR - 2025-01-10 09:49:53 --> Password verify result for username lili: Success
+ERROR - 2025-01-10 09:49:53 --> Login success for username: lili
+INFO - 2025-01-10 09:49:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-10 09:49:54 --> Login attempt with username: lili
+ERROR - 2025-01-10 09:49:54 --> Checking login for username: lili
+ERROR - 2025-01-10 09:49:54 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => 
+    [nip] => 123456780123456789
+    [email] => jurandariyurianidu@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => 
+    [alamat] => 
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-10 12:08:25
+)
+
+ERROR - 2025-01-10 09:49:54 --> Password verify result for username lili: Success
+ERROR - 2025-01-10 09:49:54 --> Login success for username: lili
+INFO - 2025-01-10 09:49:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 09:50:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 09:50:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 09:50:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 09:51:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-10 09:51:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

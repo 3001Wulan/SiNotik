@@ -9,61 +9,68 @@ body {
     width: 20%;
     background-color: #0085C5;
     color: white;
-    height: 120vh;
+    height: 100vh; /* Menggunakan full height layar */
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Menempel pada sisi kiri layar */
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    z-index: 1; /* Pastikan sidebar berada di atas konten */
 }
 
 .sidebar .logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px; 
-    margin-top: 50px; 
+    height: 100px;
+    margin-top: 50px;
 }
 
 .sidebar .logo img {
-    max-width: 50%; 
+    max-width: 50%;
     height: auto;
 }
 
 .sidebar .menu {
-    margin-top: 40px; 
+    margin-top: 40px;
     list-style-type: none;
     padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
     height: 30%;
 }
 
 .sidebar .menu li {
     padding: 10px 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    color: rgb(2, 2, 2); 
-    font-weight: bold; 
+    color: rgb(2, 2, 2);
+    font-weight: bold;
     margin-bottom: 15px;
     display: flex;
-    align-items: center; 
-    transition: box-shadow 0.3s ease, color 0.3s ease; 
+    align-items: center;
+    transition: box-shadow 0.3s ease, color 0.3s ease;
 }
 
 .sidebar .menu li .menu-icon {
-    width: 20px; 
+    width: 20px;
     height: auto;
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
 .sidebar .menu li:hover {
-    color: white; 
+    color: white;
     box-shadow: 0 0 10px rgba(0, 86, 179, 0.8);
-    background-color: rgba(255, 255, 255, 0.2); 
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .main-content {
-    width: 80%;
+    width: 80%; /* Mengambil sisa lebar dari layar */
     padding: 20px;
     background-color: #f4f4f4;
+    margin-left: 20%; /* Menambahkan margin untuk memberikan ruang bagi sidebar */
+    box-sizing: border-box;
 }
 
 .header {
@@ -108,7 +115,7 @@ body {
 }
 
 .stat-box .stat-text h2 {
-    color: #4E73DF !important; 
+    color: #4E73DF !important;
 }
 
 .stat-box .stat-text .pegawai-count {
@@ -120,11 +127,11 @@ body {
 }
 
 .stat-text .pegawai-count {
-    color: #000000; 
+    color: #000000;
 }
 
 .stat-text .notulensi-count {
-    color: #000000; 
+    color: #000000;
 }
 
 .stat-box img {
@@ -149,11 +156,11 @@ body {
     width: 20px;
     height: 20px;
     margin-right: 8px;
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
 }
 
 .menu li:hover img {
-    filter: brightness(0) invert(1); 
+    filter: brightness(0) invert(1);
 }
 
 .active {
@@ -161,57 +168,74 @@ body {
 }
 
 .dashboard-title {
-    text-align: left; 
-    margin-bottom: 30px; 
+    text-align: left;
+    margin-bottom: 30px;
 }
 
 .dashboard-title h2 {
-    font-size: 40px; 
+    font-size: 40px;
     font-weight: bold;
-    color: #333; 
+    color: #333;
 }
 
 .stats {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 20px; 
-    justify-content: center; 
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
     margin-bottom: 40px;
-    width: 100%; 
+    width: 100%;
 }
 
 .stat-box {
-    flex-basis: 100%;
+    background: white;
     padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Tambahkan jarak antar elemen */
-    height: auto; /* Otomatis menyesuaikan isi */
-    min-height: 300px; /* Tambahkan tinggi minimum agar lebih proporsional */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
     display: flex;
-    flex-direction: column; /* Agar konten berada dalam kolom */
-    justify-content: space-between; /* Untuk meratakan isi */
+    flex-direction: column;
+    justify-content: space-between;
+    height: 180px;
+    width: 480px;
+    border-left: 6px solid #0085C5;
 }
-
 
 .stat-pegawai,
 .stat-notulensi {
-    width: 400px; 
-    height: 100px; 
-    border-left-color: #0085C5; 
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+    width: 480px;
+    border-left-color: #0085C5;
+    border-left: 6px solid #0085C5;
 }
 
 .stat-status {
-    width: 400px; 
-    height: 300px; 
-    border-left-color: #0085C5; 
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+    width: 480px;
+    border-left-color: #0085C5;
+    border-left: 6px solid #0085C5;
 }
 
 .stat-kategori {
-    width: 400px; 
-    height: 300px; 
-    border-left-color: #0085C5; 
+    width: 400px;
+    height: 600px;
+    border-left-color: #0085C5;
 }
 
 .stat-text h2 {
@@ -219,82 +243,135 @@ body {
     font-weight: bold;
     color: #333;
     margin-bottom: 10px;
-    text-align: left; 
+    text-align: left;
 }
 
 .stat-text p {
     font-size: 24px;
     font-weight: bold;
     color: #000;
-    text-align: left; 
+    text-align: left;
 }
 
 .stat-icon {
     position: absolute;
-    top: 10%;                
-    right: 10px;             
-    transform: translateY(0); 
+    top: 10%;
+    right: 10px;
+    transform: translateY(0);
 }
 
 .stat-icon img {
-    width: 60px;             
-    height: auto;            
+    width: 60px;
+    height: auto;
 }
 
 .stat-chart {
-    width: 100%;         
-    height: auto;       
-    max-width: 200px;    
-    display: block;     
-    margin: 0 auto;     
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
 }
 
 .top-bar {
     display: flex;
-    justify-content: flex-end; 
+    justify-content: flex-end;
     align-items: center;
     padding: 10px 20px;
     background-color: #ffffff;
     border-bottom: 1px solid #e0e0e0;
     position: fixed;
     top: 0;
-    left: 304px; 
-    width: calc(100% - 320px); 
+    left: 20%; /* Sama dengan lebar sidebar */
+    width: 80%;
     z-index: 1000;
     height: 60px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .theme-toggle {
-    margin-right: auto; 
+    margin-right: auto;
 }
 
 .theme-toggle .theme-icon {
-    width: 40px;  
-    height: 40px; 
+    width: 40px;
+    height: 40px;
     cursor: pointer;
 }
 
 .main-content {
-    padding-top: 80px; 
+    padding-top: 80px;
 }
 
 .profile-container {
-    width: 50px; /* Ukuran lebih kecil untuk container */
-    height: 50px; /* Ukuran lebih kecil untuk container */
-    background-color: #f0f0f0; /* Warna abu-abu untuk latar belakang */
-    border-radius: 50%; /* Membuat container menjadi bulat */
+    width: 50px;
+    height: 50px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
     display: flex;
-    justify-content: center; /* Menjaga gambar di tengah */
-    align-items: center; /* Menjaga gambar di tengah */
-    padding: 3px; /* Ruang antara gambar dan border */
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
     position: relative;
-    left: -20px; /* Geser sedikit ke kiri */
+    left: -20px;
 }
 
 .profile-picture .profile-img {
-    width: 40px; /* Ukuran gambar lebih kecil */
-    height: 40px; /* Ukuran gambar lebih kecil */
-    border-radius: 50%; /* Membuat gambar menjadi bulat */
-    object-fit: cover; /* Memastikan gambar terjaga proporsinya */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-container {
+    position: relative;
+}
+
+.profile {
+    cursor: pointer;
+}
+
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 120px;
+}
+
+.dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.dropdown ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.dropdown ul li:hover {
+    background-color: #f0f0f0;
+}
+
+.profile-container:hover .dropdown {
+    display: block;
 }

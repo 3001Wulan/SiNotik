@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Admin</title>
-    <!-- Link ke file CSS terpisah -->
     <link rel="stylesheet" href="<?= base_url('assets/css/dashboard_admin.css') ?>">
-    <!-- Include Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="light-theme">
-    <!-- Sidebar -->
     <div class="sidebar">
         <div class="logo">
             <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo" class="logo-img">
@@ -71,27 +68,27 @@
                 </div>
                 <div class="stat-text">
                     <h3>Total Notulensi</h3>
-                    <p>Jumlah: 120</p>
+                    <p>Jumlah: <?= $total_notulensi ?></p>
                 </div>
             </div>
 
             <!-- Grafik Status Pegawai -->
-            <div class="stat-box">
+            <div class="stat-status">
                 <h3>Status Pegawai</h3>
                 <canvas id="statusPegawaiChart"></canvas>
             </div>
 
             <!-- Grafik Kategori Notulensi Perbidang -->
-            <div class="stat-box">
+            <div class="stat-notulensi">
                 <h3>Kategori Notulensi Perbidang</h3>
                 <canvas id="kategoriNotulensiChart"></canvas>
             </div>
         </div>
     </div>
 
-    <!-- JavaScript untuk Grafik dan Pengalihan Tema -->
+
     <script>
-        // Data untuk grafik Status Pegawai per Bidang
+        
         var bidangLabels = <?= json_encode(array_column($jumlah_pegawai_per_bidang, 'Bidang')); ?>;
         var bidangData = <?= json_encode(array_column($jumlah_pegawai_per_bidang, 'jumlah')); ?>;
 
@@ -119,9 +116,9 @@
             }
         });
 
-        // Data untuk grafik Kategori Notulensi Perbidang
-        var kategoriLabels = ['Bidang 1', 'Bidang 2'];
-        var kategoriData = [40, 80];
+        
+        var kategoriLabels = <?= json_encode(array_column($jumlah_notulensi_per_bidang, 'Bidang')); ?>;
+        var kategoriData = <?= json_encode(array_column($jumlah_notulensi_per_bidang, 'jumlah')); ?>;
 
         var ctxKategori = document.getElementById('kategoriNotulensiChart').getContext('2d');
         var kategoriNotulensiChart = new Chart(ctxKategori, {

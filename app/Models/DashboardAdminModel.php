@@ -38,4 +38,20 @@ class DashboardAdminModel extends Model
     {
         return $this->find($user_id);
     }
+
+    // Fungsi untuk menghitung total notulensi
+    public function getTotalNotulensi()
+    {
+        return $this->db->table('notulensi')->countAllResults();  // Menghitung semua notulensi
+    }
+
+    // Fungsi untuk mengambil jumlah notulensi per bidang
+    public function getJumlahNotulensiPerBidang()
+    {
+        return $this->db->table('notulensi')
+                        ->select('Bidang, COUNT(notulensi_id) AS jumlah')
+                        ->groupBy('Bidang')  // Kelompokkan berdasarkan Bidang
+                        ->get()
+                        ->getResultArray();  // Ambil hasilnya sebagai array
+    }
 }
