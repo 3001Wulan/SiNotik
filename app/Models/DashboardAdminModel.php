@@ -6,52 +6,59 @@ use CodeIgniter\Model;
 
 class DashboardAdminModel extends Model
 {
-    protected $table      = 'user';  // Nama tabel yang berisi data pengguna
-    protected $primaryKey = 'user_id'; // Kolom primary key
+    protected $table      = 'user';  
+    protected $primaryKey = 'user_id'; 
 
-    // Daftar kolom yang ada di tabel users
     protected $allowedFields = ['user_id', 'username', 'nama', 'nip', 'email', 'password', 'role', 'profil_foto', 'alamat', 'created_at', 'updated_at', 'Bidang'];
 
-    // Fungsi untuk menghitung jumlah pengguna dengan role "pegawai"
     public function getTotalPegawai()
     {
-        return $this->where('role', 'pegawai')->countAllResults();  // Hanya menghitung pengguna dengan role "pegawai"
+        return $this->where('role', 'pegawai')->countAllResults();  
     }
 
-    // Fungsi untuk mengambil semua pengguna dengan role "pegawai"
     public function getPegawai()
     {
-        return $this->where('role', 'pegawai')->findAll();  // Menampilkan semua pengguna dengan role "pegawai"
+        return $this->where('role', 'pegawai')->findAll();  
     }
 
-    // Fungsi untuk mengambil jumlah pegawai per bidang
     public function getJumlahPegawaiPerBidang()
     {
-        return $this->select('Bidang, COUNT(user_id) AS jumlah')  // Mengambil kolom Bidang dan menghitung jumlah user_id
-                    ->where('role', 'pegawai')  // Filter berdasarkan role pegawai
-                    ->groupBy('Bidang')  // Kelompokkan berdasarkan Bidang
-                    ->findAll();  // Ambil hasilnya
+        return $this->select('Bidang, COUNT(user_id) AS jumlah')  
+                    ->where('role', 'pegawai')  
+                    ->groupBy('Bidang')  
+                    ->findAll();  
     }
 
-    // Fungsi untuk mengambil pengguna berdasarkan user_id
     public function getUserById($user_id)
     {
         return $this->find($user_id);
     }
 
-    // Fungsi untuk menghitung total notulensi
     public function getTotalNotulensi()
     {
-        return $this->db->table('notulensi')->countAllResults();  // Menghitung semua notulensi
+        return $this->db->table('notulensi')->countAllResults();  
     }
 
-    // Fungsi untuk mengambil jumlah notulensi per bidang
     public function getJumlahNotulensiPerBidang()
     {
         return $this->db->table('notulensi')
                         ->select('Bidang, COUNT(notulensi_id) AS jumlah')
-                        ->groupBy('Bidang')  // Kelompokkan berdasarkan Bidang
+                        ->groupBy('Bidang')  
                         ->get()
-                        ->getResultArray();  // Ambil hasilnya sebagai array
+                        ->getResultArray();  
+    }
+
+    public function getProfilePicture($user_id)
+    {
+        return $this->select('profil_foto')
+                    ->where('user_id', $user_id)
+                    ->first(); 
+    }
+
+    public function getUserInfo($user_id)
+    {
+        return $this->select('nama, role')
+                    ->where('user_id', $user_id)
+                    ->first(); 
     }
 }

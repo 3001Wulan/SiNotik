@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Admin</title>
     <link rel="stylesheet" href="<?= base_url('assets/css/dashboard_admin.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/popup_logout.css') ?>">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="light-theme">
@@ -28,17 +29,30 @@
         </ul>
     </div>
 
-    <!-- Main Content -->
     <div class="main-content">
-        <!-- Top Bar -->
+
         <div class="top-bar">
             <div class="brand-name"></div>
             <div class="theme-toggle">
                 <img src="<?= base_url('assets/images/cahaya.png') ?>" alt="Theme Toggle" class="theme-icon">
             </div>
             <div class="profile-container">
-                <div class="profile">
-                    <img src="<?= base_url('assets/images/profile.jpg') ?>" alt="Profile Picture" class="profile-img">
+                <div class="profile" id="profileButton">
+                    <img src="<?= base_url('assets/images/profiles/' . $profile_picture) ?>" alt="Profile Picture" class="profile-img">
+                </div>
+                <div class="profile-info">
+                    <span class="profile-name"><?= $user_name ?></span>
+                    <span class="profile-role"><?= $user_role ?></span>
+                </div>
+                <div class="dropdown-menu" id="dropdownMenu" style="display: none;">
+                    <a href="<?= base_url('admin/profiladmin') ?>" class="dropdown-item">
+                        <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
+                        Profil
+                    </a>
+                    <a href="#" class="dropdown-item" id="logoutLink">
+                        <img src="<?= base_url('assets/images/icon_logout.png') ?>" alt="Logout" class="dropdown-icon">
+                        Logout
+                    </a>
                 </div>
             </div>
         </div>
@@ -57,7 +71,7 @@
                 </div>
                 <div class="stat-text">
                     <h3>Total Pegawai</h3>
-                    <p>Jumlah: <?= $total_pegawai ?></p>
+                    <p><?= $total_pegawai ?> Pegawai</p>
                 </div>
             </div>
 
@@ -68,17 +82,15 @@
                 </div>
                 <div class="stat-text">
                     <h3>Total Notulensi</h3>
-                    <p>Jumlah: <?= $total_notulensi ?></p>
+                    <p><?= $total_notulensi ?> Data</p>
                 </div>
             </div>
 
-            <!-- Grafik Status Pegawai -->
             <div class="stat-status">
                 <h3>Status Pegawai</h3>
                 <canvas id="statusPegawaiChart"></canvas>
             </div>
 
-            <!-- Grafik Kategori Notulensi Perbidang -->
             <div class="stat-notulensi">
                 <h3>Kategori Notulensi Perbidang</h3>
                 <canvas id="kategoriNotulensiChart"></canvas>
@@ -86,9 +98,53 @@
         </div>
     </div>
 
+    <!-- Popup Logout -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup">
+        <img src="<?= base_url('assets/images/logout_warning.png') ?>" alt="Logout Warning" class="popup-image">
+            <h3>Apakah Anda yakin ingin logout?</h3>
+            <div class="popup-buttons">
+                <button class="btn-yes" id="confirmLogout">Ya</button>
+                <button class="btn-no" id="cancelLogout">Tidak</button>
+            </div>
+        </div>
+    </div>
 
     <script>
-        
+        // Dropdown Menu
+        const profileButton = document.getElementById('profileButton');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        profileButton.addEventListener('click', () => {
+            dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!profileButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.style.display = 'none';
+            }
+        });
+
+        // Popup Logout
+        const logoutLink = document.getElementById('logoutLink');
+        const popupOverlay = document.getElementById('popupOverlay');
+        const confirmLogout = document.getElementById('confirmLogout');
+        const cancelLogout = document.getElementById('cancelLogout');
+
+        logoutLink.addEventListener('click', (event) => {
+            event.preventDefault(); // Mencegah tautan langsung dijalankan
+            popupOverlay.style.display = 'block';
+        });
+
+        cancelLogout.addEventListener('click', () => {
+            popupOverlay.style.display = 'none';
+        });
+
+        confirmLogout.addEventListener('click', () => {
+            window.location.href = '<?= base_url('/') ?>';
+        });
+
+        // Data dan Grafik Status Pegawai
         var bidangLabels = <?= json_encode(array_column($jumlah_pegawai_per_bidang, 'Bidang')); ?>;
         var bidangData = <?= json_encode(array_column($jumlah_pegawai_per_bidang, 'jumlah')); ?>;
 
@@ -116,7 +172,7 @@
             }
         });
 
-        
+        // Data dan Grafik Kategori Notulensi
         var kategoriLabels = <?= json_encode(array_column($jumlah_notulensi_per_bidang, 'Bidang')); ?>;
         var kategoriData = <?= json_encode(array_column($jumlah_notulensi_per_bidang, 'jumlah')); ?>;
 

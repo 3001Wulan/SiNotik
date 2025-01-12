@@ -11,5 +11,10 @@ $routes->post('login', 'Auth::login');
 $routes->get('/register', 'RegisterController::index');
 $routes->post('/register', 'RegisterController::register');
 $routes->get('admin/dashboard_admin', 'dashboardadminController::dashboardAdmin');
+$routes->get('/home', 'Home::index');
+$routes->get('admin/profiladmin', 'ProfilAdminController::profilAdmin');
+
+
+
 
 
