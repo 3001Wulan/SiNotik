@@ -75,5 +75,27 @@
             </form>
         </div>
     </div>
+    <!-- Popup HTML -->
+    <div class="popup" id="success-popup">
+        <img src="<?= base_url('assets/images/Info.png') ?>" alt="Success Icon">
+        <h3>Registrasi Berhasil!</h3>
+    </div>
+
+    <script>
+        // Event listener untuk tombol Sign up
+        document.getElementById('signup-button').addEventListener('click', function(event) {
+            event.preventDefault(); // Mencegah submit form
+
+            // Menampilkan popup
+            const popup = document.getElementById('success-popup');
+            popup.style.display = 'block';
+
+            // Sembunyikan popup setelah 5 detik
+            setTimeout(function() {
+                popup.style.display = 'none';
+            }, 1000);
+        });
+    </script>
+
 </body>
 </html>
