@@ -6,32 +6,6 @@
     <title>Register - SINOTIK</title>
     <link rel="stylesheet" href="<?= base_url('assets/css/Register.css') ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* CSS Popup */
-        .popup {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            display: none; /* Popup tidak terlihat secara default */
-            z-index: 1000;
-        }
-        .popup img {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 10px;
-        }
-        .popup h3 {
-            font-size: 18px;
-            margin: 0;
-            color: #333;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
@@ -82,9 +56,27 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="bidang">Bidang</label>
+                    <div class="custom-dropdown">
+                        <button class="dropdown-button" type="button">
+                            <span class="icon">
+                                <img src="<?= base_url('assets/images/User.png') ?>" alt="Email Icon" class="icon-img">
+                            </span>
+                            <span class="text">Pilih Bidang</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item" data-value="APTIKA">APTIKA</li>
+                            <li class="dropdown-item" data-value="IKP">IKP</li>
+                            <li class="dropdown-item" data-value="Statistik">Statistik dan Persandian</li>
+                        </ul>
+                        <input type="hidden" name="bidang" id="bidang">
+                    </div>
+                </div>
+
+                <div class="form-group">
                     <label for="password">Password</label>
                     <div class="input-wrapper">
-                        <span class="icon"><img src="<?php echo base_url('assets/images/Lock.png'); ?>" alt="User Icon"></span>
+                        <span class="icon"><img src="<?php echo base_url('assets/images/Lock.png'); ?>" alt="Lock Icon"></span>
                         <input type="password" id="password" name="password" placeholder="Input your password here">
                     </div>
                 </div>
@@ -92,12 +84,12 @@
                 <div class="form-group">
                     <label for="confirm-password">Confirm Password</label>
                     <div class="input-wrapper">
-                        <span class="icon"><img src="<?php echo base_url('assets/images/Lock.png'); ?>" alt="User Icon"></span>
+                        <span class="icon"><img src="<?php echo base_url('assets/images/Lock.png'); ?>" alt="Lock Icon"></span>
                         <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password here">
                     </div>
                 </div>
 
-                <button type="button" class="btn" id="signup-button">Sign up</button>
+                <button type="submit" class="btn" id="signup-button">Sign up</button>
             </form>
         </div>
     </div>
@@ -117,12 +109,43 @@
             const popup = document.getElementById('success-popup');
             popup.style.display = 'block';
 
-            // Sembunyikan popup setelah 5 detik dan redirect ke halaman login
+            // Sembunyikan popup setelah 5 detik
             setTimeout(function() {
                 popup.style.display = 'none';
-                window.location.href = '<?= base_url("login") ?>'; // Ganti dengan URL login Anda
             }, 1000);
         });
+
+        // Interaktivitas Dropdown
+document.addEventListener('DOMContentLoaded', function () {
+    const dropdownButton = document.querySelector('.dropdown-button');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    const dropdownItems = document.querySelectorAll('.dropdown-item');
+    const hiddenInput = document.querySelector('#bidang');
+    const textElement = dropdownButton.querySelector('.text'); // Ambil elemen teks di dalam tombol
+
+    // Toggle menu dropdown saat tombol "Pilih Bidang" diklik
+    dropdownButton.addEventListener('click', function (e) {
+        e.stopPropagation(); // Mencegah event bubbling
+        dropdownMenu.classList.toggle('show');
+    });
+
+    // Pilih opsi dropdown dan update teks tombol serta input tersembunyi
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', function () {
+            textElement.textContent = this.textContent; // Update teks tombol tanpa mengubah ikon
+            hiddenInput.value = this.dataset.value; // Update nilai input tersembunyi
+            dropdownMenu.classList.remove('show'); // Tutup dropdown setelah memilih
+        });
+    });
+
+    // Tutup dropdown jika klik di luar area dropdown
+    document.addEventListener('click', function (e) {
+        if (!dropdownButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
+            dropdownMenu.classList.remove('show');
+        }
+    });
+});
+
     </script>
 </body>
 </html>
