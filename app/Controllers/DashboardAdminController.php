@@ -8,22 +8,12 @@ class DashboardAdminController extends BaseController
 {
     public function dashboardAdmin()
     {
-        // Memuat model DashboardAdminModel
+      
         $dashboardAdminModel = new DashboardAdminModel();
-
-        // Mengambil data total pegawai
         $totalPegawai = $dashboardAdminModel->getTotalPegawai();
-
-        // Mengambil data pegawai
         $pegawai = $dashboardAdminModel->getPegawai();
-
-        // Mengambil data jumlah pegawai per bidang
         $jumlahPegawaiPerBidang = $dashboardAdminModel->getJumlahPegawaiPerBidang();
-
-        // Mengambil data total notulensi
         $totalNotulensi = $dashboardAdminModel->getTotalNotulensi();
-
-        // Mengambil data jumlah notulensi per bidang
         $jumlahNotulensiPerBidang = $dashboardAdminModel->getJumlahNotulensiPerBidang();
 
         // Mengambil gambar profil pengguna berdasarkan user_id (misalnya user_id disimpan di session)
@@ -56,7 +46,7 @@ class DashboardAdminController extends BaseController
             'jumlah_pegawai_per_bidang' => $jumlahPegawaiPerBidang,
             'total_notulensi' => $totalNotulensi,
             'jumlah_notulensi_per_bidang' => $jumlahNotulensiPerBidang,
-            'profile_picture' => $profile_picture,  // Menambahkan gambar profil ke data view
+            'profile_picture' => $profile_picture,  
             'user_name' => $user_name,              
             'user_role' => $user_role               
         ]);

@@ -14,19 +14,35 @@
             <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo" class="logo-img">
         </div>
         <ul class="menu">
-            <li class="menu-item active">
-                <img src="<?= base_url('assets/images/dashboard.png') ?>" alt="Dashboard" class="menu-icon">
-                <span class="menu-text">Dashboard</span>
-            </li>
-            <li class="menu-item">
-                <img src="<?= base_url('assets/images/icon_data.png') ?>" alt="Data Pengguna" class="menu-icon">
-                <span class="menu-text">Data Pengguna</span>
-            </li>
-            <li class="menu-item">
-                <img src="<?= base_url('assets/images/icon_riwayat.png') ?>" alt="Riwayat Notulensi" class="menu-icon">
-                <span class="menu-text">Riwayat Notulensi</span>
-            </li>
-        </ul>
+    <li class="menu-item active" data-link="<?= base_url('admin/dashboard_admin') ?>">
+        <img src="<?= base_url('assets/images/dashboard.png') ?>" alt="Dashboard" class="menu-icon">
+        <span class="menu-text">Dashboard</span>
+    </li>
+    <li class="menu-item active" data-link="<?= base_url('admin/data_pengguna') ?>">
+        <img src="<?= base_url('assets/images/icon_data.png') ?>" alt="Data Pengguna" class="menu-icon">
+        <span class="menu-text">Data Pengguna</span>
+    </li>
+    <li class="menu-item" data-link="<?= base_url('admin/riwayat_notulensi') ?>">
+        <img src="<?= base_url('assets/images/icon_riwayat.png') ?>" alt="Riwayat Notulensi" class="menu-icon">
+        <span class="menu-text">Riwayat Notulensi</span>
+    </li>
+</ul>
+
+<script>
+    // Mengambil semua elemen dengan class 'menu-item'
+    const menuItems = document.querySelectorAll('.menu-item');
+
+    // Menambahkan event listener pada setiap item menu
+    menuItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const link = item.getAttribute('data-link'); // Mengambil nilai dari atribut data-link
+            if (link) {
+                window.location.href = link; // Mengarahkan ke halaman tujuan
+            }
+        });
+    });
+</script>
+
     </div>
 
     <div class="main-content">

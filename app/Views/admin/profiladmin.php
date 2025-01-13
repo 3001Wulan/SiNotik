@@ -9,13 +9,12 @@
 </head>
 <body>
     <div class="container">
-        <!-- Sidebar -->
         <div class="sidebar">
             <div class="logo">
                 <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo">
             </div>
             <div class="menu">
-                <a href="#" class="menu-item">
+                <a href="dashboard_admin" class="menu-item">
                     <img src="<?= base_url('assets/images/dashboard.png') ?>" alt="Dashboard Icon">
                     <span>Dashboard</span>
                 </a>
@@ -31,8 +30,6 @@
                 </a>
             </div>
         </div>
-
-        <!-- Main Content -->
         <div class="main-content">
             <!-- Header -->
             <div class="header">
@@ -42,53 +39,53 @@
                 <div class="user-info">
                 </div>
             </div>
-
-            <!-- Profile Content -->
             <div class="profile-content">
                 <h2>Profil</h2>
                 
                 <div class="profile-container">
-                    <!-- Profile Card -->
                     <div class="profile-card">
                         <div class="avatar-container">
-                            <img src="<?= base_url('assets/images/default-avatar.png') ?>" alt="Profile Picture">
+                            <?php if (isset($user_profile['profil_foto']) && $user_profile['profil_foto']): ?>
+                                <img src="<?= base_url('assets/images/profiles/' . $user_profile['profil_foto']) ?>" alt="Profile Picture" class="profile-img">
+                            <?php else: ?>
+                                <img src="<?= base_url('assets/images/delvaut.png') ?>" alt="Profile Picture">
+                            <?php endif; ?>
                         </div>
                         <button class="edit-btn">Edit Profil</button>
                     </div>
 
-                    <!-- Profile Details -->
                     <div class="profile-details">
                         <div class="detail-item">
                             <label>Nama</label>
-                            <div class="value">Heni Yunida</div>
+                            <div class="value"><?= isset($user_profile['nama']) ? $user_profile['nama'] : 'N/A' ?></div>
                         </div>
                         <div class="detail-item">
                             <label>NIP</label>
-                            <div class="value">1234567890</div>
+                            <div class="value"><?= isset($user_profile['nip']) ? $user_profile['nip'] : 'N/A' ?></div>
                         </div>
                         <div class="detail-item">
                             <label>Jabatan</label>
-                            <div class="value">Staff</div>
+                            <div class="value"><?= isset($user_profile['jabatan']) ? $user_profile['jabatan'] : 'N/A' ?></div>
                         </div>
                         <div class="detail-item">
                             <label>Alamat</label>
-                            <div class="value">Solok Selatan</div>
+                            <div class="value"><?= isset($user_profile['alamat']) ? $user_profile['alamat'] : 'N/A' ?></div>
                         </div>
                         <div class="detail-item">
                             <label>Tanggal Lahir</label>
-                            <div class="value">10-10-2004</div>
+                            <div class="value"><?= isset($user_profile['tanggal_lahir']) ? $user_profile['tanggal_lahir'] : 'N/A' ?></div>
                         </div>
                         <div class="detail-item">
                             <label>Email</label>
-                            <div class="value">Heni@gmail.com</div>
+                            <div class="value"><?= isset($user_profile['email']) ? $user_profile['email'] : 'N/A' ?></div>
                         </div>
                         <div class="detail-item">
                             <label>Password</label>
-                            <div class="value">123</div>
+                            <div class="value"><?= isset($user_profile['password']) ? $user_profile['password'] : 'N/A' ?></div>
                         </div>
                         <div class="detail-item">
                             <label>Status</label>
-                            <div class="value">Admin</div>
+                            <div class="value"><?= isset($user_profile['role']) ? $user_profile['role'] : 'N/A' ?></div>
                         </div>
                     </div>
                 </div>
