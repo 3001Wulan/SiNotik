@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>Profil Pengguna</title>
     <link rel="stylesheet" href="<?= base_url('assets/css/profiladmin.css') ?>">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -31,7 +31,6 @@
             </div>
         </div>
         <div class="main-content">
-            <!-- Header -->
             <div class="header">
                 <div class="theme-toggle">
                     <img src="<?= base_url('assets/images/modegelap.png') ?>" alt="Toggle Theme" id="theme-icon">  
@@ -40,8 +39,8 @@
                     <div class="profile-header">
                         <img src="<?= base_url('assets/images/profiles/' . $user_profile['profil_foto']) ?>" alt="User Photo" class="header-profile-img">
                         <div class="header-user-details">
-                            <span class="header-user-name"> <?= isset($user_profile['nama']) ? $user_profile['nama'] : 'N/A' ?> </span>
-                            <span class="header-user-role"> <?= isset($user_profile['role']) ? $user_profile['role'] : 'N/A' ?> </span>
+                            <span class="header-user-name"><?= isset($user_profile['nama']) ? $user_profile['nama'] : 'N/A' ?></span>
+                            <span class="header-user-role"><?= isset($user_profile['role']) ? $user_profile['role'] : 'N/A' ?></span>
                         </div>
                     </div>
                 </div>
@@ -58,7 +57,7 @@
                                 <img src="<?= base_url('assets/images/delvaut.png') ?>" alt="Profile Picture">
                             <?php endif; ?>
                         </div>
-                        <button class="edit-btn">Edit Profil</button>
+                        <button class="edit-btn" onclick="window.location.href='<?= base_url('admin/editprofil') ?>'">Edit Profil</button>
                     </div>
 
                     <div class="profile-details">
@@ -99,24 +98,5 @@
             </div>
         </div>
     </div>
-
-    <script>
-        document.querySelectorAll('.menu-item').forEach(item => {
-            item.addEventListener('click', function() {
-                document.querySelectorAll('.menu-item').forEach(el => el.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
-
-        const themeIcon = document.getElementById('theme-icon');
-        themeIcon.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            if (document.body.classList.contains('dark-mode')) {
-                themeIcon.src = "<?= base_url('assets/images/modegelap.png') ?>";
-            } else {
-                themeIcon.src = "<?= base_url('assets/images/modegelap.png') ?>";
-            }
-        });
-    </script>
 </body>
 </html>
