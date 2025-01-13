@@ -14,8 +14,7 @@ $routes->get('admin/dashboard_admin', 'dashboardadminController::dashboardAdmin'
 $routes->get('/home', 'Home::index');
 $routes->get('admin/profiladmin', 'ProfilAdminController::profilAdmin');
 $routes->get('admin/data_pengguna', 'DetailPenggunaController::index');
-$routes->get('admin/editprofil', 'EditProfilAdminController::edit_profil');
-$routes->post('admin/editprofil/update', 'EditProfilAdminController::update_profil');
+$routes->get('admin/editprofil', 'EditProfilController::index');
 
 
 

@@ -83,7 +83,8 @@
                                 <img src="<?= base_url('assets/images/delvaut.png') ?>" alt="Profile Picture">
                             <?php endif; ?>
                         </div>
-                        <button class="edit-btn">Edit Profil</button>
+                        <!-- Tombol Edit Profil menggunakan Atribut href -->
+                        <a href="editprofil" class="edit-btn">Edit Profil</a>
                     </div>
 
                     <div class="profile-details">
