@@ -94,58 +94,38 @@
         </div>
     </div>
 
-    <!-- Popup HTML -->
-    <div class="popup" id="success-popup">
-        <img src="<?= base_url('assets/images/Info.png') ?>" alt="Success Icon">
-        <h3>Registrasi Berhasil!</h3>
-    </div>
-
     <script>
-        // Event listener untuk tombol Sign up
-        document.getElementById('signup-button').addEventListener('click', function(event) {
-            event.preventDefault(); // Mencegah submit form
-
-            // Menampilkan popup
-            const popup = document.getElementById('success-popup');
-            popup.style.display = 'block';
-
-            // Sembunyikan popup setelah 5 detik
-            setTimeout(function() {
-                popup.style.display = 'none';
-            }, 1000);
-        });
-
         // Interaktivitas Dropdown
-document.addEventListener('DOMContentLoaded', function () {
-    const dropdownButton = document.querySelector('.dropdown-button');
-    const dropdownMenu = document.querySelector('.dropdown-menu');
-    const dropdownItems = document.querySelectorAll('.dropdown-item');
-    const hiddenInput = document.querySelector('#bidang');
-    const textElement = dropdownButton.querySelector('.text'); // Ambil elemen teks di dalam tombol
-
-    // Toggle menu dropdown saat tombol "Pilih Bidang" diklik
-    dropdownButton.addEventListener('click', function (e) {
+        document.addEventListener('DOMContentLoaded', function () {
+        const dropdownButton = document.querySelector('.dropdown-button');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        const dropdownItems = document.querySelectorAll('.dropdown-item');
+        const hiddenInput = document.querySelector('#bidang');
+        const textElement = dropdownButton.querySelector('.text'); // Ambil elemen teks di dalam tombol
+        
+        // Toggle menu dropdown saat tombol "Pilih Bidang" diklik
+        dropdownButton.addEventListener('click', function (e) {
         e.stopPropagation(); // Mencegah event bubbling
         dropdownMenu.classList.toggle('show');
-    });
-
-    // Pilih opsi dropdown dan update teks tombol serta input tersembunyi
-    dropdownItems.forEach(item => {
+        });
+        
+        // Pilih opsi dropdown dan update teks tombol serta input tersembunyi
+        dropdownItems.forEach(item => {
         item.addEventListener('click', function () {
             textElement.textContent = this.textContent; // Update teks tombol tanpa mengubah ikon
             hiddenInput.value = this.dataset.value; // Update nilai input tersembunyi
             dropdownMenu.classList.remove('show'); // Tutup dropdown setelah memilih
+            });
         });
-    });
-
-    // Tutup dropdown jika klik di luar area dropdown
-    document.addEventListener('click', function (e) {
+        
+        // Tutup dropdown jika klik di luar area dropdown
+        document.addEventListener('click', function (e) {
         if (!dropdownButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
             dropdownMenu.classList.remove('show');
-        }
-    });
-});
-
+            }
+            });
+        });
+            
     </script>
 </body>
 </html>
