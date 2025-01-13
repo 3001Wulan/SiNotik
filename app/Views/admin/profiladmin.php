@@ -37,6 +37,13 @@
                     <img src="<?= base_url('assets/images/modegelap.png') ?>" alt="Toggle Theme" id="theme-icon">  
                 </div>
                 <div class="user-info">
+                    <div class="profile-header">
+                        <img src="<?= base_url('assets/images/profiles/' . $user_profile['profil_foto']) ?>" alt="User Photo" class="header-profile-img">
+                        <div class="header-user-details">
+                            <span class="header-user-name"> <?= isset($user_profile['nama']) ? $user_profile['nama'] : 'N/A' ?> </span>
+                            <span class="header-user-role"> <?= isset($user_profile['role']) ? $user_profile['role'] : 'N/A' ?> </span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="profile-content">

@@ -145,3 +145,44 @@ INFO - 2025-01-13 01:53:20 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2025-01-13 01:53:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-01-13 01:53:23 --> User profile for ID 9 retrieved successfully.
 INFO - 2025-01-13 01:53:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 01:54:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 01:57:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 01:57:16 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 01:57:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 01:58:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 01:58:59 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 01:59:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 02:00:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 02:00:35 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 02:00:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 02:00:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 02:00:39 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 02:00:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 02:01:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 02:01:28 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 02:01:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 02:02:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-13 02:02:22 --> User ID: 9
+DEBUG - 2025-01-13 02:02:22 --> Profile Picture: image.png
+DEBUG - 2025-01-13 02:02:22 --> User Name: lili saja
+DEBUG - 2025-01-13 02:02:22 --> User Role: admin
+INFO - 2025-01-13 02:02:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 02:02:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 02:02:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-13 02:02:28 --> User ID: 9
+DEBUG - 2025-01-13 02:02:28 --> Profile Picture: image.png
+DEBUG - 2025-01-13 02:02:28 --> User Name: lili saja
+DEBUG - 2025-01-13 02:02:28 --> User Role: admin
+INFO - 2025-01-13 02:02:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 02:02:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 02:02:36 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 02:02:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 02:03:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 02:03:08 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 02:03:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 02:33:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-13 02:33:51 --> User ID: 9
+DEBUG - 2025-01-13 02:33:51 --> Profile Picture: image.png
+DEBUG - 2025-01-13 02:33:51 --> User Name: lili saja
+DEBUG - 2025-01-13 02:33:51 --> User Role: admin
+INFO - 2025-01-13 02:33:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

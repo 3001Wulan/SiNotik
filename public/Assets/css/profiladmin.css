@@ -266,3 +266,37 @@ body.dark-mode .profile-content h2 {
 body.dark-mode .theme-toggle img {
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%); /* Ikon berubah menjadi putih */
 }
+.user-info {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.header-user-details {
+    display: flex;
+    flex-direction: column;
+    text-align: right; /* Mengatur teks sejajar ke kanan */
+}
+
+.header-user-name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.header-user-role {
+    font-size: 14px;
+    color: gray;
+}
