@@ -19,7 +19,7 @@
                     <span>Dashboard</span>
                 </a>
                 <div class="separator"></div>
-                <a href="#" class="menu-item">
+                <a href="data_pengguna" class="menu-item">
                     <img src="<?= base_url('assets/images/datauser.png') ?>" alt="Data User Icon">
                     <span>Data Pengguna</span>
                 </a>
@@ -37,18 +37,43 @@
                     <img src="<?= base_url('assets/images/modegelap.png') ?>" alt="Toggle Theme" id="theme-icon">  
                 </div>
                 <div class="user-info">
+                    <!-- Profile Info and Dropdown -->
                     <div class="profile-header">
-                        <img src="<?= base_url('assets/images/profiles/' . $user_profile['profil_foto']) ?>" alt="User Photo" class="header-profile-img">
                         <div class="header-user-details">
                             <span class="header-user-name"> <?= isset($user_profile['nama']) ? $user_profile['nama'] : 'N/A' ?> </span>
                             <span class="header-user-role"> <?= isset($user_profile['role']) ? $user_profile['role'] : 'N/A' ?> </span>
                         </div>
+                        <img src="<?= base_url('assets/images/profiles/' . $user_profile['profil_foto']) ?>" alt="User Photo" class="header-profile-img" id="profile-icon">
+                    </div>
+
+                    <!-- Dropdown Menu -->
+                    <div class="dropdown-menu" id="dropdown-menu">
+                        <a href="profiladmin" class="dropdown-item">
+                            <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
+                            Profil
+                        </a>
+                        <a href="#" class="dropdown-item" id="logoutBtn">
+                            <img src="<?= base_url('assets/images/icon_logout.png') ?>" alt="Logout" class="dropdown-icon">
+                            Logout
+                        </a>
                     </div>
                 </div>
             </div>
+
+            <!-- Popup Overlay -->
+            <div class="popup-overlay" id="popupOverlay">
+                <div class="popup">
+                    <img src="<?= base_url('assets/images/logout_warning.png') ?>" alt="Logout Warning" class="popup-image">
+                    <h3>Apakah Anda yakin ingin logout?</h3>
+                    <div class="popup-buttons">
+                        <button class="btn-yes" id="confirmLogout">Ya</button>
+                        <button class="btn-no" id="cancelLogout">Tidak</button>
+                    </div>
+                </div>
+            </div>
+
             <div class="profile-content">
                 <h2>Profil</h2>
-                
                 <div class="profile-container">
                     <div class="profile-card">
                         <div class="avatar-container">
@@ -101,13 +126,23 @@
     </div>
 
     <script>
-        document.querySelectorAll('.menu-item').forEach(item => {
-            item.addEventListener('click', function() {
-                document.querySelectorAll('.menu-item').forEach(el => el.classList.remove('active'));
-                this.classList.add('active');
-            });
+        // JavaScript untuk Dropdown Menu
+        const profileIcon = document.getElementById('profile-icon');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        // Menampilkan dropdown menu saat foto profil diklik
+        profileIcon.addEventListener('click', () => {
+            dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
         });
 
+        // Menyembunyikan dropdown menu jika klik di luar area dropdown
+        window.addEventListener('click', (event) => {
+            if (!profileIcon.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.style.display = 'none';
+            }
+        });
+
+        // Menangani pengaturan tema gelap
         const themeIcon = document.getElementById('theme-icon');
         themeIcon.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
@@ -115,6 +150,35 @@
                 themeIcon.src = "<?= base_url('assets/images/modegelap.png') ?>";
             } else {
                 themeIcon.src = "<?= base_url('assets/images/modegelap.png') ?>";
+            }
+        });
+
+        // JavaScript untuk Popup Logout
+        const logoutBtn = document.getElementById('logoutBtn');
+        const popupOverlay = document.getElementById('popupOverlay');
+        const confirmLogout = document.getElementById('confirmLogout');
+        const cancelLogout = document.getElementById('cancelLogout');
+
+        // Menampilkan popup konfirmasi logout
+        logoutBtn.addEventListener('click', (event) => {
+            event.preventDefault(); // Mencegah link logout berfungsi langsung
+            popupOverlay.style.display = 'block'; // Menampilkan popup overlay
+        });
+
+        // Menyelesaikan logout ketika tombol "Ya" diklik
+        confirmLogout.addEventListener('click', () => {
+            window.location.href = '/'; // Ganti dengan halaman logout atau proses logout
+        });
+
+        // Menyembunyikan popup ketika tombol "Tidak" diklik
+        cancelLogout.addEventListener('click', () => {
+            popupOverlay.style.display = 'none'; // Menyembunyikan popup
+        });
+
+        // Menyembunyikan popup jika klik di luar popup
+        window.addEventListener('click', (event) => {
+            if (!popupOverlay.contains(event.target) && !logoutBtn.contains(event.target)) {
+                popupOverlay.style.display = 'none'; // Menyembunyikan popup
             }
         });
     </script>

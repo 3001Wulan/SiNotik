@@ -450,6 +450,7 @@ INFO - 2025-01-13 05:13:15 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2025-01-13 05:13:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-01-13 05:13:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-01-13 05:13:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+<<<<<<< HEAD
 INFO - 2025-01-13 05:24:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-01-13 05:24:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-01-13 05:26:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
@@ -510,3 +511,626 @@ INFO - 2025-01-13 08:13:31 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2025-01-13 08:13:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-01-13 08:14:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-01-13 08:14:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+=======
+INFO - 2025-01-13 05:21:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:21:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:21:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:21:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:22:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-13 05:22:06 --> Login attempt with username: lili
+ERROR - 2025-01-13 05:22:07 --> Checking login for username: lili
+ERROR - 2025-01-13 05:22:07 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lili saja
+    [nip] => 123456780123456789
+    [email] => jurandariyurianidu@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => 
+    [jabatan] => 
+    [tanggal lahir] => 
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-12 00:11:35
+)
+
+ERROR - 2025-01-13 05:22:07 --> Password verify result for username lili: Success
+ERROR - 2025-01-13 05:22:07 --> Login success for username: lili
+INFO - 2025-01-13 05:22:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-13 05:22:08 --> User ID: 9
+DEBUG - 2025-01-13 05:22:08 --> Profile Picture: image.png
+DEBUG - 2025-01-13 05:22:08 --> User Name: lili saja
+DEBUG - 2025-01-13 05:22:08 --> User Role: admin
+INFO - 2025-01-13 05:22:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:22:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:22:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:22:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:22:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:24:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:25:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:25:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:25:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:25:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:26:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:26:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:26:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:26:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:26:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:26:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:26:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:26:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:26:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:26:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:30:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:30:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:30:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:30:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:30:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:55:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:55:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:55:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:55:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-13 05:55:14 --> Login attempt with username: lili
+ERROR - 2025-01-13 05:55:14 --> Checking login for username: lili
+ERROR - 2025-01-13 05:55:14 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lili saja
+    [nip] => 123456780123456789
+    [email] => jurandariyurianidu@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => 
+    [jabatan] => 
+    [tanggal lahir] => 
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-12 00:11:35
+)
+
+ERROR - 2025-01-13 05:55:14 --> Password verify result for username lili: Success
+ERROR - 2025-01-13 05:55:14 --> Login success for username: lili
+INFO - 2025-01-13 05:55:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-13 05:55:14 --> User ID: 9
+DEBUG - 2025-01-13 05:55:14 --> Profile Picture: image.png
+DEBUG - 2025-01-13 05:55:14 --> User Name: lili saja
+DEBUG - 2025-01-13 05:55:14 --> User Role: admin
+INFO - 2025-01-13 05:55:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:55:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:55:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-13 05:55:52 --> User ID: 9
+DEBUG - 2025-01-13 05:55:52 --> Profile Picture: image.png
+DEBUG - 2025-01-13 05:55:52 --> User Name: lili saja
+DEBUG - 2025-01-13 05:55:52 --> User Role: admin
+INFO - 2025-01-13 05:55:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:55:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:55:56 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 05:55:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:56:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-13 05:56:01 --> User ID: 9
+DEBUG - 2025-01-13 05:56:01 --> Profile Picture: image.png
+DEBUG - 2025-01-13 05:56:01 --> User Name: lili saja
+DEBUG - 2025-01-13 05:56:01 --> User Role: admin
+INFO - 2025-01-13 05:56:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:56:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:56:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:56:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:56:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-13 05:56:33 --> Login attempt with username: lili
+ERROR - 2025-01-13 05:56:33 --> Checking login for username: lili
+ERROR - 2025-01-13 05:56:33 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lili saja
+    [nip] => 123456780123456789
+    [email] => jurandariyurianidu@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => 
+    [jabatan] => 
+    [tanggal lahir] => 
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-12 00:11:35
+)
+
+ERROR - 2025-01-13 05:56:33 --> Password verify result for username lili: Success
+ERROR - 2025-01-13 05:56:33 --> Login success for username: lili
+INFO - 2025-01-13 05:56:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-13 05:56:34 --> User ID: 9
+DEBUG - 2025-01-13 05:56:34 --> Profile Picture: image.png
+DEBUG - 2025-01-13 05:56:34 --> User Name: lili saja
+DEBUG - 2025-01-13 05:56:34 --> User Role: admin
+INFO - 2025-01-13 05:56:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 05:57:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-13 05:57:29 --> User ID: 9
+DEBUG - 2025-01-13 05:57:29 --> Profile Picture: image.png
+DEBUG - 2025-01-13 05:57:29 --> User Name: lili saja
+DEBUG - 2025-01-13 05:57:29 --> User Role: admin
+INFO - 2025-01-13 05:57:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:25:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:25:08 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 06:25:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:31:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:31:01 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 06:31:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:31:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:31:07 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 06:31:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:31:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:31:44 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 06:31:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:31:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:31:45 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 06:31:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:41:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-01-13 06:41:38 --> [DEPRECATED] Creation of dynamic property App\Controllers\EditProfilAdminController::$userModel is deprecated in APPPATH\Controllers\EditProfilAdminController.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\EditProfilAdminController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-01-13 06:41:38 --> Attempting to retrieve user profile with ID 9
+INFO - 2025-01-13 06:41:38 --> User with ID 9 found in database.
+CRITICAL - 2025-01-13 06:41:39 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "edit_profil_admin.php"
+[Method: GET, Route: admin/editprofil]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('edit_profil_admin.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('edit_profil_admin', [], true)
+ 3 APPPATH\Controllers\EditProfilAdminController.php(31): view('edit_profil_admin', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EditProfilAdminController->edit_profil()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EditProfilAdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-01-13 06:42:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-01-13 06:42:42 --> [DEPRECATED] Creation of dynamic property App\Controllers\EditProfilAdminController::$userModel is deprecated in APPPATH\Controllers\EditProfilAdminController.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\EditProfilAdminController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-01-13 06:42:42 --> Attempting to retrieve user profile with ID 9
+INFO - 2025-01-13 06:42:42 --> User with ID 9 found in database.
+CRITICAL - 2025-01-13 06:42:42 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "edit_profil_admin.php"
+[Method: GET, Route: admin/editprofil]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('edit_profil_admin.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('edit_profil_admin', [], true)
+ 3 APPPATH\Controllers\EditProfilAdminController.php(31): view('edit_profil_admin', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EditProfilAdminController->edit_profil()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EditProfilAdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-01-13 06:42:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:42:46 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 06:42:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:42:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-01-13 06:42:48 --> [DEPRECATED] Creation of dynamic property App\Controllers\EditProfilAdminController::$userModel is deprecated in APPPATH\Controllers\EditProfilAdminController.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\EditProfilAdminController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-01-13 06:42:48 --> Attempting to retrieve user profile with ID 9
+INFO - 2025-01-13 06:42:48 --> User with ID 9 found in database.
+CRITICAL - 2025-01-13 06:42:48 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "edit_profil_admin.php"
+[Method: GET, Route: admin/editprofil]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('edit_profil_admin.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('edit_profil_admin', [], true)
+ 3 APPPATH\Controllers\EditProfilAdminController.php(31): view('edit_profil_admin', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EditProfilAdminController->edit_profil()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EditProfilAdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-01-13 06:47:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:50:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:50:06 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 06:50:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:50:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:50:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:50:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:50:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:50:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:51:25 --> User registered successfully: {"username":"saja","nip":"123456788987654321","email":"saja@gmail.com","password":"$2y$10$v\/LXVwnZ9jUq6z9BroJ4Ou7SqeHEogKC9mz2o1LKXa495FJlzkz2S","role":"pegawai"}
+INFO - 2025-01-13 06:51:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:51:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:51:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:52:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:52:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:53:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:53:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:53:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:53:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-13 06:53:32 --> Validation errors: {"username":"The username field is required.","nip":"The nip field is required.","email":"The email field is required.","password":"The password field is required.","confirm-password":"The confirm-password field is required."}
+INFO - 2025-01-13 06:53:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:53:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:53:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:53:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:53:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:53:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:53:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:53:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-13 06:53:48 --> Login attempt with username: lili
+ERROR - 2025-01-13 06:53:48 --> Checking login for username: lili
+ERROR - 2025-01-13 06:53:48 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lili saja
+    [nip] => 123456780123456789
+    [email] => jurandariyurianidu@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => 
+    [jabatan] => 
+    [tanggal lahir] => 
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-12 00:11:35
+)
+
+ERROR - 2025-01-13 06:53:48 --> Password verify result for username lili: Success
+ERROR - 2025-01-13 06:53:48 --> Login success for username: lili
+INFO - 2025-01-13 06:53:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-13 06:53:48 --> User ID: 9
+DEBUG - 2025-01-13 06:53:48 --> Profile Picture: image.png
+DEBUG - 2025-01-13 06:53:48 --> User Name: lili saja
+DEBUG - 2025-01-13 06:53:48 --> User Role: admin
+INFO - 2025-01-13 06:53:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:53:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:53:52 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 06:53:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:53:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:53:55 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 06:53:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:55:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:56:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:56:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:56:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:56:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:56:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:56:41 --> User registered successfully: {"username":"kak","nip":"123456788987654323","email":"kak@gmail.com","password":"$2y$10$be7aOfX4dXuJvRjWvJug9.I0RjJuUNZ\/n0YlOT\/ohNBRmqqBJmxNe","role":"pegawai"}
+INFO - 2025-01-13 06:56:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:56:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:56:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:58:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:58:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:58:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:58:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-13 06:58:49 --> Validation errors: {"nip":"The nip field is required.","email":"The email field is required.","password":"The password field is required.","confirm-password":"The confirm-password field is required."}
+INFO - 2025-01-13 06:58:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:58:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:58:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:59:20 --> User registered successfully: {"username":"fff","nip":"123456788987654325","email":"ff@gmail.com","password":"$2y$10$7kqV2x16s6pzGnElH9Efz.bWHKbdmARVNuQNNmwOzx0Tz1YKCWA4e","role":"pegawai"}
+INFO - 2025-01-13 06:59:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:59:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 06:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:05:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:05:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:05:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:05:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-13 07:05:28 --> Login attempt with username: lili
+ERROR - 2025-01-13 07:05:28 --> Checking login for username: lili
+ERROR - 2025-01-13 07:05:28 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lili saja
+    [nip] => 123456780123456789
+    [email] => jurandariyurianidu@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => 
+    [jabatan] => 
+    [tanggal lahir] => 
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-12 00:11:35
+)
+
+ERROR - 2025-01-13 07:05:28 --> Password verify result for username lili: Failure
+ERROR - 2025-01-13 07:05:28 --> Login failed for username: lili
+INFO - 2025-01-13 07:05:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:05:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:05:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-13 07:05:49 --> Login attempt with username: lili
+ERROR - 2025-01-13 07:05:49 --> Checking login for username: lili
+ERROR - 2025-01-13 07:05:49 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lili saja
+    [nip] => 123456780123456789
+    [email] => jurandariyurianidu@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => 
+    [jabatan] => 
+    [tanggal lahir] => 
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-12 00:11:35
+)
+
+ERROR - 2025-01-13 07:05:49 --> Password verify result for username lili: Success
+ERROR - 2025-01-13 07:05:49 --> Login success for username: lili
+INFO - 2025-01-13 07:05:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-13 07:05:49 --> User ID: 9
+DEBUG - 2025-01-13 07:05:49 --> Profile Picture: image.png
+DEBUG - 2025-01-13 07:05:49 --> User Name: lili saja
+DEBUG - 2025-01-13 07:05:49 --> User Role: admin
+INFO - 2025-01-13 07:05:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:05:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:05:54 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 07:05:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:05:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-13 07:05:58 --> User ID: 9
+DEBUG - 2025-01-13 07:05:58 --> Profile Picture: image.png
+DEBUG - 2025-01-13 07:05:58 --> User Name: lili saja
+DEBUG - 2025-01-13 07:05:58 --> User Role: admin
+INFO - 2025-01-13 07:05:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:06:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:06:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:06:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:06:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-13 07:06:10 --> Login attempt with username: lili
+ERROR - 2025-01-13 07:06:10 --> Checking login for username: lili
+ERROR - 2025-01-13 07:06:10 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lili saja
+    [nip] => 123456780123456789
+    [email] => jurandariyurianidu@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => 
+    [jabatan] => 
+    [tanggal lahir] => 
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-12 00:11:35
+)
+
+ERROR - 2025-01-13 07:06:11 --> Password verify result for username lili: Success
+ERROR - 2025-01-13 07:06:11 --> Login success for username: lili
+INFO - 2025-01-13 07:06:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-13 07:06:11 --> User ID: 9
+DEBUG - 2025-01-13 07:06:11 --> Profile Picture: image.png
+DEBUG - 2025-01-13 07:06:11 --> User Name: lili saja
+DEBUG - 2025-01-13 07:06:11 --> User Role: admin
+INFO - 2025-01-13 07:06:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:06:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:06:20 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 07:06:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:18:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:18:14 --> User profile for ID  retrieved successfully.
+CRITICAL - 2025-01-13 07:18:14 --> ErrorException: Undefined array key "profil_foto"
+[Method: GET, Route: admin/profiladmin]
+in APPPATH\Views\admin\profiladmin.php on line 46.
+ 1 APPPATH\Views\admin\profiladmin.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "profil_foto"', 'C:\\xampp\\htdocs\\SiNotik\\app\\Views\\admin\\profiladmin.php', 46)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SiNotik\\app\\Views\\admin\\profiladmin.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/profiladmin', [], true)
+ 5 APPPATH\Controllers\ProfilAdminController.php(23): view('admin/profiladmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProfilAdminController->profilAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfilAdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-01-13 07:18:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-13 07:18:27 --> User ID: 
+DEBUG - 2025-01-13 07:18:27 --> Profile Picture: default.jpg
+DEBUG - 2025-01-13 07:18:27 --> User Name: Guest
+DEBUG - 2025-01-13 07:18:27 --> User Role: Unknown
+INFO - 2025-01-13 07:18:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:18:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-13 07:18:33 --> User ID: 
+DEBUG - 2025-01-13 07:18:33 --> Profile Picture: default.jpg
+DEBUG - 2025-01-13 07:18:33 --> User Name: Guest
+DEBUG - 2025-01-13 07:18:33 --> User Role: Unknown
+INFO - 2025-01-13 07:18:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:18:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:18:38 --> User profile for ID  retrieved successfully.
+CRITICAL - 2025-01-13 07:18:38 --> ErrorException: Undefined array key "profil_foto"
+[Method: GET, Route: admin/profiladmin]
+in APPPATH\Views\admin\profiladmin.php on line 46.
+ 1 APPPATH\Views\admin\profiladmin.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "profil_foto"', 'C:\\xampp\\htdocs\\SiNotik\\app\\Views\\admin\\profiladmin.php', 46)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SiNotik\\app\\Views\\admin\\profiladmin.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/profiladmin', [], true)
+ 5 APPPATH\Controllers\ProfilAdminController.php(23): view('admin/profiladmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProfilAdminController->profilAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfilAdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-01-13 07:18:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:18:46 --> User profile for ID  retrieved successfully.
+CRITICAL - 2025-01-13 07:18:46 --> ErrorException: Undefined array key "profil_foto"
+[Method: GET, Route: admin/profiladmin]
+in APPPATH\Views\admin\profiladmin.php on line 46.
+ 1 APPPATH\Views\admin\profiladmin.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "profil_foto"', 'C:\\xampp\\htdocs\\SiNotik\\app\\Views\\admin\\profiladmin.php', 46)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SiNotik\\app\\Views\\admin\\profiladmin.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/profiladmin', [], true)
+ 5 APPPATH\Controllers\ProfilAdminController.php(23): view('admin/profiladmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProfilAdminController->profilAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfilAdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-01-13 07:18:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:18:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-13 07:18:57 --> Login attempt with username: lili
+ERROR - 2025-01-13 07:18:57 --> Checking login for username: lili
+ERROR - 2025-01-13 07:18:57 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lili saja
+    [nip] => 123456780123456789
+    [email] => jurandariyurianidu@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => 
+    [jabatan] => 
+    [tanggal lahir] => 
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-12 00:11:35
+)
+
+ERROR - 2025-01-13 07:18:57 --> Password verify result for username lili: Success
+ERROR - 2025-01-13 07:18:57 --> Login success for username: lili
+INFO - 2025-01-13 07:18:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-13 07:18:57 --> User ID: 9
+DEBUG - 2025-01-13 07:18:57 --> Profile Picture: image.png
+DEBUG - 2025-01-13 07:18:57 --> User Name: lili saja
+DEBUG - 2025-01-13 07:18:57 --> User Role: admin
+INFO - 2025-01-13 07:18:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:19:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:19:00 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 07:19:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:20:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:20:07 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 07:20:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:20:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:20:15 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 07:20:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:20:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:20:58 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 07:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:21:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-13 07:21:02 --> User ID: 9
+DEBUG - 2025-01-13 07:21:02 --> Profile Picture: image.png
+DEBUG - 2025-01-13 07:21:02 --> User Name: lili saja
+DEBUG - 2025-01-13 07:21:02 --> User Role: admin
+INFO - 2025-01-13 07:21:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:21:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:21:05 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 07:21:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:21:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:21:17 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 07:21:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:22:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:22:43 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 07:22:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:22:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:22:48 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 07:22:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:23:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:23:01 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 07:23:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:23:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:23:19 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 07:23:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:23:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:23:39 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 07:23:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:23:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:23:52 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 07:23:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:24:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:24:04 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 07:24:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:24:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:24:16 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 07:24:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:24:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:24:37 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 07:24:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:25:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:25:10 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 07:25:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:25:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:25:23 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 07:25:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:25:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:25:47 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 07:25:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:28:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:28:07 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 07:28:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:28:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:28:22 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 07:28:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:28:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:28:41 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 07:28:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:28:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:28:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:28:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:28:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-13 07:28:58 --> Login attempt with username: lili
+ERROR - 2025-01-13 07:28:58 --> Checking login for username: lili
+ERROR - 2025-01-13 07:28:58 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lili saja
+    [nip] => 123456780123456789
+    [email] => jurandariyurianidu@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => 
+    [jabatan] => 
+    [tanggal lahir] => 
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-12 00:11:35
+)
+
+ERROR - 2025-01-13 07:28:58 --> Password verify result for username lili: Success
+ERROR - 2025-01-13 07:28:58 --> Login success for username: lili
+INFO - 2025-01-13 07:28:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-13 07:28:58 --> User ID: 9
+DEBUG - 2025-01-13 07:28:58 --> Profile Picture: image.png
+DEBUG - 2025-01-13 07:28:58 --> User Name: lili saja
+DEBUG - 2025-01-13 07:28:58 --> User Role: admin
+INFO - 2025-01-13 07:28:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:29:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:29:01 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 07:29:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:29:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-13 07:29:05 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-13 07:29:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+>>>>>>> a6222896c0af0ed252f924456c070001c8d20882
