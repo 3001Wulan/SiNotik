@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>Profil</title>
     <link rel="stylesheet" href="<?= base_url('assets/css/profiladmin.css') ?>">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -40,8 +40,8 @@
                     <!-- Profile Info and Dropdown -->
                     <div class="profile-header">
                         <div class="header-user-details">
-                            <span class="header-user-name"> <?= isset($user_profile['nama']) ? $user_profile['nama'] : 'N/A' ?> </span>
-                            <span class="header-user-role"> <?= isset($user_profile['role']) ? $user_profile['role'] : 'N/A' ?> </span>
+                            <span class="header-user-name"><?= isset($user_profile['nama']) ? $user_profile['nama'] : 'N/A' ?></span>
+                            <span class="header-user-role"><?= isset($user_profile['role']) ? $user_profile['role'] : 'N/A' ?></span>
                         </div>
                         <img src="<?= base_url('assets/images/profiles/' . $user_profile['profil_foto']) ?>" alt="User Photo" class="header-profile-img" id="profile-icon">
                     </div>
@@ -72,19 +72,32 @@
                 </div>
             </div>
 
+            <!-- Profil Konten -->
             <div class="profile-content">
                 <h2>Profil</h2>
                 <div class="profile-container">
                     <div class="profile-card">
                         <div class="avatar-container">
+                            <!-- Menampilkan Foto Profil yang Ada -->
                             <?php if (isset($user_profile['profil_foto']) && $user_profile['profil_foto']): ?>
-                                <img src="<?= base_url('assets/images/profiles/' . $user_profile['profil_foto']) ?>" alt="Profile Picture" class="profile-img">
+                                <img src="<?= base_url('assets/images/profiles/' . $user_profile['profil_foto']) ?>" alt="Foto Profil" class="profile-img">
                             <?php else: ?>
-                                <img src="<?= base_url('assets/images/delvaut.png') ?>" alt="Profile Picture">
+                                <img src="<?= base_url('assets/images/delvaut.png') ?>" alt="Foto Profil" class="profile-img">
                             <?php endif; ?>
                         </div>
-                        <!-- Tombol Edit Profil menggunakan Atribut href -->
-                        <a href="editprofil" class="edit-btn">Edit Profil</a>
+                        <!-- Tombol Edit Profil -->
+                        <form action="editprofil" method="POST">
+                            <input type="hidden" name="nama" value="<?= isset($user_profile['nama']) ? $user_profile['nama'] : 'N/A' ?>">
+                            <input type="hidden" name="nip" value="<?= isset($user_profile['nip']) ? $user_profile['nip'] : 'N/A' ?>">
+                            <input type="hidden" name="jabatan" value="<?= isset($user_profile['jabatan']) ? $user_profile['jabatan'] : 'N/A' ?>">
+                            <input type="hidden" name="alamat" value="<?= isset($user_profile['alamat']) ? $user_profile['alamat'] : 'N/A' ?>">
+                            <input type="hidden" name="tanggal_lahir" value="<?= isset($user_profile['tanggal_lahir']) ? $user_profile['tanggal_lahir'] : 'N/A' ?>">
+                            <input type="hidden" name="email" value="<?= isset($user_profile['email']) ? $user_profile['email'] : 'N/A' ?>">
+                            <input type="hidden" name="password" value="<?= isset($user_profile['password']) ? $user_profile['password'] : 'N/A' ?>">
+                            <input type="hidden" name="role" value="<?= isset($user_profile['role']) ? $user_profile['role'] : 'N/A' ?>">
+                            <input type="hidden" name="profil_foto" value="<?= isset($user_profile['profil_foto']) ? $user_profile['profil_foto'] : 'default.jpg' ?>">
+                            <button type="submit" class="edit-btn">Edit Profil</button>
+                        </form>
                     </div>
 
                     <div class="profile-details">
@@ -173,14 +186,7 @@
 
         // Menyembunyikan popup ketika tombol "Tidak" diklik
         cancelLogout.addEventListener('click', () => {
-            popupOverlay.style.display = 'none'; // Menyembunyikan popup
-        });
-
-        // Menyembunyikan popup jika klik di luar popup
-        window.addEventListener('click', (event) => {
-            if (!popupOverlay.contains(event.target) && !logoutBtn.contains(event.target)) {
-                popupOverlay.style.display = 'none'; // Menyembunyikan popup
-            }
+            popupOverlay.style.display = 'none'; // Menyembunyikan popup overlay
         });
     </script>
 </body>

@@ -15,6 +15,8 @@ $routes->get('/home', 'Home::index');
 $routes->get('admin/profiladmin', 'ProfilAdminController::profilAdmin');
 $routes->get('admin/data_pengguna', 'DetailPenggunaController::index');
 $routes->get('admin/editprofil', 'EditProfilController::index');
+$routes->post('admin/editprofil', 'EditProfilController::editProfil');
+$routes->get('/editprofil/(:num)', 'EditProfilController::editProfil/$1');
 
 
 

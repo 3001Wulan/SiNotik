@@ -1,195 +1,821 @@
-INFO - 2025-01-14 02:28:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 02:29:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 02:29:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 02:30:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 02:30:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 02:30:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 02:38:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 02:41:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 02:42:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 02:43:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 02:47:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 02:48:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 02:49:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 02:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 02:50:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 02:51:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 02:52:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 02:52:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 02:56:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 02:56:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 02:58:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 02:59:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:00:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:04:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:06:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:06:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:07:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:14:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:16:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:17:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:17:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:18:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:20:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:20:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:22:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:22:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:25:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:25:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:26:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:26:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:26:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:27:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:29:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:30:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:31:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:31:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:31:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:31:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:32:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:32:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:32:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:38:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:45:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:47:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:48:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:49:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:50:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:54:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:55:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:55:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:56:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:57:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:57:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:57:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:57:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:58:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:58:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:59:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 03:59:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 04:02:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 04:04:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 04:04:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 04:04:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 04:05:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 04:06:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 04:07:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 04:07:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 04:07:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 04:13:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 04:14:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 04:17:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 04:25:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 04:26:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 04:28:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 04:28:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 04:30:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 04:33:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 04:34:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 04:35:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 04:44:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 04:46:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 04:48:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 04:49:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 04:52:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 04:55:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 04:56:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 04:56:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 04:57:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 04:59:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 05:01:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 05:07:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 05:08:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 05:08:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 05:09:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 05:14:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 05:16:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 05:17:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 05:19:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 05:20:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 05:21:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 05:21:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 05:24:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 05:33:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 05:37:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 05:39:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 05:43:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 05:44:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 06:25:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 06:26:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 06:35:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 06:36:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 06:40:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 06:41:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 06:46:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 06:48:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 06:49:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 06:51:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 06:59:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:01:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:01:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:03:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:03:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:04:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:05:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:06:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:06:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:08:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:15:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:16:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:21:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:23:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:24:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:24:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:27:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:27:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:27:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:28:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:29:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:32:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:35:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:36:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:40:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:40:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:41:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:42:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:42:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:43:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:43:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:50:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:53:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:53:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:54:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:54:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:55:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:56:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:56:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 07:59:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 08:01:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 08:02:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 08:03:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 08:04:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 08:04:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 08:05:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 08:05:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 08:06:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 08:06:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 08:07:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 08:16:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 08:19:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 08:21:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 08:22:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 08:22:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 08:23:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 08:26:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 08:28:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 08:29:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 08:30:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 08:30:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 08:30:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 08:32:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 08:32:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-01-14 08:51:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:14:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:14:06 --> Data yang akan diperbarui: Array
+(
+    [nama] => lala
+)
+
+INFO - 2025-01-14 14:14:06 --> Data sebelum pembaruan: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lili saja
+    [nip] => 123456780123456789
+    [email] => jurandariyurianidu@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => N/A
+    [jabatan] => 
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-14 13:03:04
+)
+
+INFO - 2025-01-14 14:14:06 --> Data yang akan dikirim: Array
+(
+    [nama] => lala
+)
+
+INFO - 2025-01-14 14:14:06 --> Data pengguna yang ada: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lili saja
+    [nip] => 123456780123456789
+    [email] => jurandariyurianidu@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => N/A
+    [jabatan] => 
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-14 13:03:04
+)
+
+INFO - 2025-01-14 14:14:06 --> Data yang akan diperbarui: Array
+(
+    [nama] => lala
+)
+
+ERROR - 2025-01-14 14:14:06 --> Terjadi kesalahan saat memperbarui profil pengguna dengan ID 9: There is no data to update.
+INFO - 2025-01-14 14:14:06 --> Data profil pengguna dengan ID 9 diperbarui. Perubahan: Nama: lili saja -> lala
+INFO - 2025-01-14 14:14:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:26:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:26:17 --> Data yang akan diperbarui: Array
+(
+    [nama] => lala
+)
+
+INFO - 2025-01-14 14:26:17 --> Data sebelum pembaruan: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lili saja
+    [nip] => 123456780123456789
+    [email] => jurandariyurianidu@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => N/A
+    [jabatan] => 
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-14 13:03:04
+)
+
+INFO - 2025-01-14 14:26:17 --> Data yang akan dikirim: Array
+(
+    [nama] => lala
+)
+
+INFO - 2025-01-14 14:26:17 --> Data pengguna yang ada: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lili saja
+    [nip] => 123456780123456789
+    [email] => jurandariyurianidu@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => N/A
+    [jabatan] => 
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-14 13:03:04
+)
+
+INFO - 2025-01-14 14:26:17 --> Data yang akan diperbarui: Array
+(
+    [nama] => lala
+)
+
+INFO - 2025-01-14 14:26:17 --> Berhasil memperbarui profil pengguna dengan ID 9. Perubahan: Array
+(
+    [nama] => lala
+)
+
+INFO - 2025-01-14 14:26:17 --> Data profil pengguna dengan ID 9 diperbarui. Perubahan: Nama: lili saja -> lala
+INFO - 2025-01-14 14:26:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:26:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:26:23 --> Data yang akan diperbarui: Array
+(
+)
+
+INFO - 2025-01-14 14:26:23 --> Data sebelum pembaruan: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lala
+    [nip] => 123456780123456789
+    [email] => jurandariyurianidu@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => N/A
+    [jabatan] => 
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-14 14:26:17
+)
+
+INFO - 2025-01-14 14:26:23 --> Data yang akan dikirim: Array
+(
+)
+
+INFO - 2025-01-14 14:26:23 --> Tidak ada perubahan data untuk profil pengguna dengan ID 9
+INFO - 2025-01-14 14:26:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:26:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:27:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:27:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:27:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:27:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-14 14:27:20 --> Login attempt with username: lili
+ERROR - 2025-01-14 14:27:20 --> Checking login for username: lili
+ERROR - 2025-01-14 14:27:20 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lala
+    [nip] => 123456780123456789
+    [email] => jurandariyurianidu@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => N/A
+    [jabatan] => 
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-14 14:26:17
+)
+
+ERROR - 2025-01-14 14:27:20 --> Password verify result for username lili: Success
+ERROR - 2025-01-14 14:27:20 --> Login success for username: lili
+INFO - 2025-01-14 14:27:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-14 14:27:20 --> User ID: 9
+DEBUG - 2025-01-14 14:27:20 --> Profile Picture: image.png
+DEBUG - 2025-01-14 14:27:20 --> User Name: lala
+DEBUG - 2025-01-14 14:27:20 --> User Role: admin
+INFO - 2025-01-14 14:27:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:27:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:27:25 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-14 14:27:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:28:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:28:06 --> Data yang akan diperbarui: Array
+(
+)
+
+INFO - 2025-01-14 14:28:06 --> Data sebelum pembaruan: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lala
+    [nip] => 123456780123456789
+    [email] => jurandariyurianidu@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => N/A
+    [jabatan] => 
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-14 14:26:17
+)
+
+INFO - 2025-01-14 14:28:06 --> Data yang akan dikirim: Array
+(
+)
+
+INFO - 2025-01-14 14:28:06 --> Tidak ada perubahan data untuk profil pengguna dengan ID 9
+INFO - 2025-01-14 14:28:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:29:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:29:04 --> Data yang akan diperbarui: Array
+(
+    [email] => lala@gmail.com
+    [alamat] => jalan gajah mada 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2006-06-06
+)
+
+INFO - 2025-01-14 14:29:04 --> Data sebelum pembaruan: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lala
+    [nip] => 123456780123456789
+    [email] => jurandariyurianidu@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => N/A
+    [jabatan] => 
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-14 14:26:17
+)
+
+INFO - 2025-01-14 14:29:04 --> Data yang akan dikirim: Array
+(
+    [email] => lala@gmail.com
+    [alamat] => jalan gajah mada 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2006-06-06
+)
+
+INFO - 2025-01-14 14:29:04 --> Data pengguna yang ada: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lala
+    [nip] => 123456780123456789
+    [email] => jurandariyurianidu@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => N/A
+    [jabatan] => 
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-14 14:26:17
+)
+
+INFO - 2025-01-14 14:29:04 --> Data yang akan diperbarui: Array
+(
+    [email] => lala@gmail.com
+    [alamat] => jalan gajah mada 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2006-06-06
+)
+
+ERROR - 2025-01-14 14:29:04 --> mysqli_sql_exception: Duplicate entry 'lala@gmail.com' for key 'email' in C:\xampp\htdocs\SiNotik\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\SiNotik\system\Database\MySQLi\Connection.php(312): mysqli->query('UPDATE `user` S...', 0)
+#1 C:\xampp\htdocs\SiNotik\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `user` S...')
+#2 C:\xampp\htdocs\SiNotik\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `user` S...')
+#3 C:\xampp\htdocs\SiNotik\system\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `user` S...', Array, false)
+#4 C:\xampp\htdocs\SiNotik\system\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\SiNotik\system\BaseModel.php(1028): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\SiNotik\system\Model.php(865): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\SiNotik\app\Models\UserModel.php(59): CodeIgniter\Model->update('9', Array)
+#8 C:\xampp\htdocs\SiNotik\app\Controllers\EditProfilController.php(95): App\Models\UserModel->updateUser('9', Array)
+#9 C:\xampp\htdocs\SiNotik\system\CodeIgniter.php(933): App\Controllers\EditProfilController->editProfil()
+#10 C:\xampp\htdocs\SiNotik\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EditProfilController))
+#11 C:\xampp\htdocs\SiNotik\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\SiNotik\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\SiNotik\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\SiNotik\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\xampp\htdocs\SiNotik\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2025-01-14 14:29:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'lala@gmail.com' for key 'email'
+[Method: POST, Route: admin/editprofil]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `user` SET `email` = :email:, `alamat` = :alamat:, `jabatan` = :jabatan:, `tanggal_lahir` = :tanggal_lahir:, `updated_at` = :updated_at:
+WHERE `user`.`user_id` IN :user.user_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Models\UserModel.php(59): CodeIgniter\Model->update('9', [...])
+ 6 APPPATH\Controllers\EditProfilController.php(95): App\Models\UserModel->updateUser('9', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EditProfilController->editProfil()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EditProfilController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+CRITICAL - 2025-01-14 14:29:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'lala@gmail.com' for key 'email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `user` SET `email` = \'lala@gmail.com\', `alamat` = \'jalan gajah mada \', `jabatan` = \'Sekretaris\', `tanggal_lahir` = \'2006-06-06\', `updated_at` = \'2025-01-14 14:29:04\'
+WHERE `user`.`user_id` IN (\'9\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `user` SET `email` = \'lala@gmail.com\', `alamat` = \'jalan gajah mada \', `jabatan` = \'Sekretaris\', `tanggal_lahir` = \'2006-06-06\', `updated_at` = \'2025-01-14 14:29:04\'
+WHERE `user`.`user_id` IN (\'9\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `user` SET `email` = :email:, `alamat` = :alamat:, `jabatan` = :jabatan:, `tanggal_lahir` = :tanggal_lahir:, `updated_at` = :updated_at:
+WHERE `user`.`user_id` IN :user.user_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Models\UserModel.php(59): CodeIgniter\Model->update('9', [...])
+ 8 APPPATH\Controllers\EditProfilController.php(95): App\Models\UserModel->updateUser('9', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EditProfilController->editProfil()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EditProfilController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+CRITICAL - 2025-01-14 14:29:04 --> [Caused by] mysqli_sql_exception: Duplicate entry 'lala@gmail.com' for key 'email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('UPDATE `user` SET `email` = \'lala@gmail.com\', `alamat` = \'jalan gajah mada \', `jabatan` = \'Sekretaris\', `tanggal_lahir` = \'2006-06-06\', `updated_at` = \'2025-01-14 14:29:04\'
+WHERE `user`.`user_id` IN (\'9\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `user` SET `email` = \'lala@gmail.com\', `alamat` = \'jalan gajah mada \', `jabatan` = \'Sekretaris\', `tanggal_lahir` = \'2006-06-06\', `updated_at` = \'2025-01-14 14:29:04\'
+WHERE `user`.`user_id` IN (\'9\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `user` SET `email` = \'lala@gmail.com\', `alamat` = \'jalan gajah mada \', `jabatan` = \'Sekretaris\', `tanggal_lahir` = \'2006-06-06\', `updated_at` = \'2025-01-14 14:29:04\'
+WHERE `user`.`user_id` IN (\'9\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `user` SET `email` = :email:, `alamat` = :alamat:, `jabatan` = :jabatan:, `tanggal_lahir` = :tanggal_lahir:, `updated_at` = :updated_at:
+WHERE `user`.`user_id` IN :user.user_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Models\UserModel.php(59): CodeIgniter\Model->update('9', [...])
+ 9 APPPATH\Controllers\EditProfilController.php(95): App\Models\UserModel->updateUser('9', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EditProfilController->editProfil()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EditProfilController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-01-14 14:29:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:29:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:29:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:29:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-14 14:29:36 --> Login attempt with username: lili
+ERROR - 2025-01-14 14:29:36 --> Checking login for username: lili
+ERROR - 2025-01-14 14:29:36 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lala
+    [nip] => 123456780123456789
+    [email] => jurandariyurianidu@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => N/A
+    [jabatan] => 
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-14 14:26:17
+)
+
+ERROR - 2025-01-14 14:29:37 --> Password verify result for username lili: Failure
+ERROR - 2025-01-14 14:29:37 --> Login failed for username: lili
+INFO - 2025-01-14 14:29:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:29:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:29:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-14 14:29:42 --> Login attempt with username: lili
+ERROR - 2025-01-14 14:29:42 --> Checking login for username: lili
+ERROR - 2025-01-14 14:29:42 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lala
+    [nip] => 123456780123456789
+    [email] => jurandariyurianidu@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => N/A
+    [jabatan] => 
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-14 14:26:17
+)
+
+ERROR - 2025-01-14 14:29:43 --> Password verify result for username lili: Success
+ERROR - 2025-01-14 14:29:43 --> Login success for username: lili
+INFO - 2025-01-14 14:29:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-14 14:29:43 --> User ID: 9
+DEBUG - 2025-01-14 14:29:43 --> Profile Picture: image.png
+DEBUG - 2025-01-14 14:29:43 --> User Name: lala
+DEBUG - 2025-01-14 14:29:43 --> User Role: admin
+INFO - 2025-01-14 14:29:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:29:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:29:46 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-14 14:29:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:29:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:29:58 --> Data yang akan diperbarui: Array
+(
+)
+
+INFO - 2025-01-14 14:29:58 --> Data sebelum pembaruan: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lala
+    [nip] => 123456780123456789
+    [email] => jurandariyurianidu@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => N/A
+    [jabatan] => 
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-14 14:26:17
+)
+
+INFO - 2025-01-14 14:29:58 --> Data yang akan dikirim: Array
+(
+)
+
+INFO - 2025-01-14 14:29:58 --> Tidak ada perubahan data untuk profil pengguna dengan ID 9
+INFO - 2025-01-14 14:29:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:30:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:30:50 --> Data yang akan diperbarui: Array
+(
+    [email] => lala10@gmail.com
+    [alamat] => jalan gajah mada 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-04
+)
+
+INFO - 2025-01-14 14:30:50 --> Data sebelum pembaruan: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lala
+    [nip] => 123456780123456789
+    [email] => jurandariyurianidu@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => N/A
+    [jabatan] => 
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-14 14:26:17
+)
+
+INFO - 2025-01-14 14:30:50 --> Data yang akan dikirim: Array
+(
+    [email] => lala10@gmail.com
+    [alamat] => jalan gajah mada 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-04
+)
+
+INFO - 2025-01-14 14:30:50 --> Data pengguna yang ada: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lala
+    [nip] => 123456780123456789
+    [email] => jurandariyurianidu@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => N/A
+    [jabatan] => 
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-14 14:26:17
+)
+
+INFO - 2025-01-14 14:30:50 --> Data yang akan diperbarui: Array
+(
+    [email] => lala10@gmail.com
+    [alamat] => jalan gajah mada 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-04
+)
+
+INFO - 2025-01-14 14:30:50 --> Berhasil memperbarui profil pengguna dengan ID 9. Perubahan: Array
+(
+    [email] => lala10@gmail.com
+    [alamat] => jalan gajah mada 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-04
+)
+
+INFO - 2025-01-14 14:30:50 --> Data profil pengguna dengan ID 9 diperbarui. Perubahan: Email: jurandariyurianidu@gmail.com -> lala10@gmail.com, Alamat: N/A -> jalan gajah mada , Jabatan:  -> Sekretaris, Tanggal Lahir:  -> 2003-07-04
+INFO - 2025-01-14 14:30:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:31:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:31:29 --> Data yang akan diperbarui: Array
+(
+)
+
+INFO - 2025-01-14 14:31:29 --> Data sebelum pembaruan: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lala
+    [nip] => 123456780123456789
+    [email] => lala10@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => jalan gajah mada 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-04
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-14 14:30:50
+)
+
+INFO - 2025-01-14 14:31:29 --> Data yang akan dikirim: Array
+(
+)
+
+INFO - 2025-01-14 14:31:29 --> Tidak ada perubahan data untuk profil pengguna dengan ID 9
+CRITICAL - 2025-01-14 14:31:29 --> ErrorException: Undefined variable $user_profile
+[Method: POST, Route: admin/editprofil]
+in APPPATH\Views\admin\profiladmin.php on line 46.
+ 1 APPPATH\Views\admin\profiladmin.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user_profile', 'C:\\xampp\\htdocs\\SiNotik\\app\\Views\\admin\\profiladmin.php', 46)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SiNotik\\app\\Views\\admin\\profiladmin.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/profiladmin', [], true)
+ 5 APPPATH\Controllers\EditProfilController.php(105): view('admin/profiladmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EditProfilController->editProfil()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EditProfilController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-01-14 14:32:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:32:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:33:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:33:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-14 14:33:06 --> Login attempt with username: lili
+ERROR - 2025-01-14 14:33:06 --> Checking login for username: lili
+ERROR - 2025-01-14 14:33:06 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lala
+    [nip] => 123456780123456789
+    [email] => lala10@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => jalan gajah mada 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-04
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-14 14:30:50
+)
+
+ERROR - 2025-01-14 14:33:06 --> Password verify result for username lili: Success
+ERROR - 2025-01-14 14:33:06 --> Login success for username: lili
+INFO - 2025-01-14 14:33:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-14 14:33:07 --> User ID: 9
+DEBUG - 2025-01-14 14:33:07 --> Profile Picture: image.png
+DEBUG - 2025-01-14 14:33:07 --> User Name: lala
+DEBUG - 2025-01-14 14:33:07 --> User Role: admin
+INFO - 2025-01-14 14:33:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:33:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:33:10 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-14 14:33:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:34:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:34:54 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-14 14:34:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:35:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:35:01 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-14 14:35:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:37:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:37:57 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-14 14:37:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:38:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:38:00 --> Data yang akan diperbarui: Array
+(
+)
+
+INFO - 2025-01-14 14:38:00 --> Data sebelum pembaruan: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lala
+    [nip] => 123456780123456789
+    [email] => lala10@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => jalan gajah mada 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-04
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-14 14:30:50
+)
+
+INFO - 2025-01-14 14:38:00 --> Data yang akan dikirim: Array
+(
+)
+
+INFO - 2025-01-14 14:38:00 --> Tidak ada perubahan data untuk profil pengguna dengan ID 9
+INFO - 2025-01-14 14:38:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:38:01 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-14 14:38:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:38:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:38:04 --> Data yang akan diperbarui: Array
+(
+)
+
+INFO - 2025-01-14 14:38:04 --> Data sebelum pembaruan: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lala
+    [nip] => 123456780123456789
+    [email] => lala10@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => jalan gajah mada 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-04
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-14 14:30:50
+)
+
+INFO - 2025-01-14 14:38:04 --> Data yang akan dikirim: Array
+(
+)
+
+INFO - 2025-01-14 14:38:04 --> Tidak ada perubahan data untuk profil pengguna dengan ID 9
+INFO - 2025-01-14 14:38:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:38:04 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-14 14:38:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:38:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:38:07 --> Data yang akan diperbarui: Array
+(
+)
+
+INFO - 2025-01-14 14:38:07 --> Data sebelum pembaruan: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lala
+    [nip] => 123456780123456789
+    [email] => lala10@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => jalan gajah mada 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-04
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-14 14:30:50
+)
+
+INFO - 2025-01-14 14:38:07 --> Data yang akan dikirim: Array
+(
+)
+
+INFO - 2025-01-14 14:38:07 --> Tidak ada perubahan data untuk profil pengguna dengan ID 9
+INFO - 2025-01-14 14:38:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:38:08 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-14 14:38:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:38:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:38:19 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-14 14:38:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:38:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:38:21 --> Data yang akan diperbarui: Array
+(
+)
+
+INFO - 2025-01-14 14:38:21 --> Data sebelum pembaruan: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lala
+    [nip] => 123456780123456789
+    [email] => lala10@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => jalan gajah mada 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-04
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-14 14:30:50
+)
+
+INFO - 2025-01-14 14:38:21 --> Data yang akan dikirim: Array
+(
+)
+
+INFO - 2025-01-14 14:38:21 --> Tidak ada perubahan data untuk profil pengguna dengan ID 9
+INFO - 2025-01-14 14:38:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:40:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:41:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:41:01 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-14 14:41:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:41:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:41:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:41:06 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-14 14:41:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:41:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:41:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:41:09 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-14 14:41:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:41:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:41:25 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-14 14:41:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:41:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:41:28 --> Data yang akan diperbarui: Array
+(
+)
+
+INFO - 2025-01-14 14:41:28 --> Data sebelum pembaruan: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lala
+    [nip] => 123456780123456789
+    [email] => lala10@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => jalan gajah mada 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-04
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-14 14:30:50
+)
+
+INFO - 2025-01-14 14:41:28 --> Data yang akan dikirim: Array
+(
+)
+
+INFO - 2025-01-14 14:41:28 --> Tidak ada perubahan data untuk profil pengguna dengan ID 9
+INFO - 2025-01-14 14:41:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:43:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:43:40 --> Data yang akan diperbarui: Array
+(
+)
+
+INFO - 2025-01-14 14:43:40 --> Data sebelum pembaruan: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lala
+    [nip] => 123456780123456789
+    [email] => lala10@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => jalan gajah mada 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-04
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-14 14:30:50
+)
+
+INFO - 2025-01-14 14:43:40 --> Data yang akan dikirim: Array
+(
+)
+
+INFO - 2025-01-14 14:43:40 --> Tidak ada perubahan data untuk profil pengguna dengan ID 9
+INFO - 2025-01-14 14:43:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:44:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:44:35 --> Data yang akan diperbarui: Array
+(
+)
+
+INFO - 2025-01-14 14:44:35 --> Data sebelum pembaruan: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lala
+    [nip] => 123456780123456789
+    [email] => lala10@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => jalan gajah mada 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-04
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-14 14:30:50
+)
+
+INFO - 2025-01-14 14:44:35 --> Data yang akan dikirim: Array
+(
+)
+
+INFO - 2025-01-14 14:44:35 --> Tidak ada perubahan data untuk profil pengguna dengan ID 9
+INFO - 2025-01-14 14:44:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
