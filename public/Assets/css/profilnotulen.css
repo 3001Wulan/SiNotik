@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #0288D1;
+    padding: 20px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+}
+
+/* Menu Items */
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+    color: black;
+    text-decoration: none;
+    margin: 8px 0;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.menu-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    filter: brightness(0);
+    transition: filter 0.3s;
+}
+
+.menu-item span {
+    display: inline-block;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    padding: 0 !important;
+}
+
+.menu-item-link {
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.menu-item-link img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    filter: brightness(0);
+    transition: filter 0.3s;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    z-index: 1;
+    margin-top: 30px;
+    margin-left: -165px;
+}
+
+.dropdown-separator {
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 4px 0;
+}
+
+.dropdown-item {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    /* Changed to make icons black by default */
+    filter: brightness(0);
+    transition: all 0.3s ease;
+}
+
+/* Hover States - Light Mode */
+.menu-item:hover,
+.menu-item-link:hover {
+    background-color: #01579B;
+    color: #ffffff !important;
+}
+
+.menu-item:hover img{
+    color: #121212;
+}
+.menu-item-link:hover img {
+    filter: brightness(0) invert(1) !important;
+}
+
+
+.dropdown-item:hover {
+    background-color: #01579B;
+    color: white !important;
+}
+
+.dropdown-item:hover img {
+    /* Changed to make icons white on hover */
+    filter: brightness(0) invert(1) !important;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.menu-item.active {
+    background-color: #ffffff;
+    color: #0288D1;
+}
+
+.separator {
+    border-bottom: 1px solid #ccc;
+    margin: 8px 0;
+}
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    background-color: #f5f5f5;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: white;
+}
+
+.theme-toggle img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-picture img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+/* Profile Content */
+.profile-content {
+    padding: 20px;
+}
+
+.profile-content h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.profile-container {
+    display: flex;
+    gap: 30px;
+}
+
+/* Profile Card */
+.profile-card {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    width: 300px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.avatar-container {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.avatar-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.edit-btn {
+    background: #0288D1;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 50px;
+}
+
+/* Profile Details */
+.profile-details {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1;
+}
+
+.detail-item {
+    margin-bottom: 20px;
+}
+
+.detail-item label {
+    display: block;
+    color: black;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.detail-item .value {
+    padding-bottom: 8px;
+    border-bottom: 1px solid black;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .sidebar {
+    background-color: #1e1e1e;
+}
+
+/* Dark Mode Menu Items */
+body.dark-mode .menu-item,
+body.dark-mode .menu-item-link {
+    color: #ffffff;
+}
+
+body.dark-mode .menu-item img{}
+body.dark-mode .menu-item-link img {
+    filter: brightness(0) invert(1);
+}
+body.dark-mode .menu-item:hover img{}
+body.dark-mode .menu-item-link:hover img {
+    filter: brightness(0) !important; /* Mengubah ikon menjadi hitam saat hover di dark mode */
+}
+/* Dark Mode Dropdown Items Default State */
+body.dark-mode .dropdown-item {
+    color: white;
+}
+
+body.dark-mode .dropdown-item img {
+    /* Icons start as white in dark mode */
+    filter: brightness(0) invert(1);
+}
+
+/* Hover States - Dark Mode */
+body.dark-mode .menu-item:hover,
+body.dark-mode .menu-item-link:hover {
+    background-color: #01579B;
+    color: rgb(0, 0, 0) !important;
+}
+
+body.dark-mode .menu-item:hover img {
+    color: #ffffff;
+}
+body.dark-mode .menu-item-link:hover img {
+    filter: brightness(0) !important;
+}
+
+/* Dark Mode Dropdown Items Hover */
+body.dark-mode .dropdown-item:hover {
+    background-color: #01579B;
+    color: black !important;
+}
+
+body.dark-mode .dropdown-item:hover img {
+    filter: brightness(0) !important;
+}
+
+/* Other Dark Mode Elements */
+body.dark-mode .dropdown-content {
+    background-color: #333;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .dropdown-separator {
+    background-color: #666;
+}
+
+body.dark-mode .main-content {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .header {
+    background-color: #333;
+}
+
+body.dark-mode .profile-card,
+body.dark-mode .profile-details {
+    background-color: #333;
+}
+
+body.dark-mode .detail-item label {
+    color: #ffffff;
+}
+
+body.dark-mode .profile-content h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .detail-item .value {
+    border-bottom: 1px solid #ffffff;
+}
+
+body.dark-mode .theme-toggle img {
+    filter: brightness(0) invert(1);
+}

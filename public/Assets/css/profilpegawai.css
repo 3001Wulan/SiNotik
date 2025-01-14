@@ -1,0 +1,302 @@
+.logo img {
+    width: 80px;
+    height: 80px;
+}
+
+/* Rest of the CSS file remains the same */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #0288D1;
+    padding: 20px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+    color: black;
+    text-decoration: none;
+    margin: 8px 0;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.menu-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px; 
+}
+
+.menu-item span {
+    display: inline-block;
+}
+
+/* Gaya saat hover dan aktif pada sidebar */
+.menu-item:hover {
+    background-color: #01579B; /* Warna latar belakang saat hover */
+    color: #ffffff; /* Warna teks saat hover */
+}
+
+.menu-item:hover img {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%); /* Ikon berubah warna saat hover */
+}
+
+.menu-item.active {
+    background-color: #ffffff; /* Latar belakang aktif */
+    color: #0288D1; /* Teks aktif */
+}
+
+.menu-item.active img {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%); /* Ikon aktif berwarna putih */
+}
+
+
+
+.separator {
+    border-bottom: 1px solid #ccc;
+    margin: 8px 0;
+}
+
+.main-content {
+    flex: 1;
+    background-color: #f5f5f5;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: white;
+}
+
+.theme-toggle img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-info img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.user-info .name {
+    font-weight: 500;
+}
+
+.user-info .role {
+    color: #666;
+}
+
+.profile-content {
+    padding: 20px;
+}
+
+.profile-content h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.profile-container {
+    display: flex;
+    gap: 30px;
+}
+
+.profile-card {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    width: 300px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.avatar-container {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.avatar-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.edit-btn {
+    background: #0288D1;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 50px;
+}
+
+.profile-details {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1;
+}
+
+.detail-item {
+    margin-bottom: 20px;
+}
+
+.detail-item label {
+    display: block;
+    color: black;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.detail-item .value {
+    padding-bottom: 8px;
+    border-bottom: 1px solid black;
+}
+
+/* Dark Mode Styles */
+/* Perbaikan Mode Gelap */
+/* Dark Mode Styles */
+/* Perbaikan Mode Gelap */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .sidebar {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .menu-item {
+    color: #ffffff; /* Warna teks menu */
+}
+
+body.dark-mode .menu-item img {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%); /* Ikon putih */
+}
+
+/* Saat menu-item dihover di mode gelap */
+body.dark-mode .menu-item:hover {
+    background-color: #333; /* Latar belakang hover */
+    color: #ffffff; /* Warna teks saat hover */
+}
+
+body.dark-mode .menu-item:hover img {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%); /* Ikon putih saat hover */
+}
+
+body.dark-mode .menu-item.active {
+    background-color: #333; /* Latar belakang aktif */
+    color: #ffffff; /* Warna teks aktif */
+}
+
+body.dark-mode .menu-item.active img {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%); /* Ikon aktif putih */
+}
+
+/* Khusus untuk teks dan ikon sidebar saat disentuh di mode gelap */
+body.dark-mode .menu-item.active span,
+body.dark-mode .menu-item.active img {
+    color: #0288D1; /* Teks aktif berwarna biru terang */
+    filter: invert(0%) sepia(0%) saturate(100%) hue-rotate(0deg) brightness(0%) contrast(100%); /* Ikon berubah menjadi biru terang */
+}
+
+body.dark-mode .menu-item:hover span,
+body.dark-mode .menu-item:hover img {
+    color: #0288D1; /* Teks dan ikon berubah menjadi biru terang saat hover */
+    filter: invert(0%) sepia(0%) saturate(100%) hue-rotate(0deg) brightness(0%) contrast(100%); /* Ikon berubah menjadi biru terang */
+}
+
+body.dark-mode .main-content {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .profile-card {
+    background-color: #333;
+}
+
+body.dark-mode .profile-details {
+    background-color: #333;
+}
+
+body.dark-mode .detail-item label {
+    color: #ffffff;
+}
+
+body.dark-mode .header {
+    background-color: #333; /* Samakan warna dengan kotak profil */
+}
+
+body.dark-mode .profile-content h2 {
+    color: #ffffff; /* Ubah warna teks menjadi putih */
+}
+
+body.dark-mode .theme-toggle img {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%); /* Ikon berubah menjadi putih */
+}
+.user-info {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.header-user-details {
+    display: flex;
+    flex-direction: column;
+    text-align: right; /* Mengatur teks sejajar ke kanan */
+}
+
+.header-user-name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.header-user-role {
+    font-size: 14px;
+    color: gray;
+}
