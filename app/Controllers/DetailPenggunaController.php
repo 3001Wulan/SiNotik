@@ -34,7 +34,7 @@ class DetailPenggunaController extends BaseController
     public function hapusData()
     {
         $request = \Config\Services::request();
-        $data = $request->getJSON(); // Mengambil data dari body
+        $data = $request->getJSON(); 
 
         if (isset($data->user_id)) {
             $user_id = $data->user_id;

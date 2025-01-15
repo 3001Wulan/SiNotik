@@ -607,3 +607,11 @@ body {
     .dark-mode .search-icon {
         filter: brightness(0) invert(1); 
     }
+    img {
+        width: 100px;
+        height: 100px;
+        overflow-clip-margin: content-box;
+        overflow: clip;
+    }
+    
+    

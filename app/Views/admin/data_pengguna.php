@@ -54,6 +54,7 @@ $current_page = 'data_pengguna';
                     <img src="<?= base_url('assets/images/profiles/' . $user_profile['profil_foto']) ?>" alt="User Photo" class="header-profile-img" id="profile-icon">
                 </div>
             </div>
+            
 
             <div class="page-title">
                 <h1>Data Pengguna</h1>
@@ -104,9 +105,9 @@ $current_page = 'data_pengguna';
                                     <td><?= $index + 1 ?></td>
                                     <td>
                                         <?php if (!empty($user['profil_foto'])): ?>
-                                            <img src="<?= base_url('assets/images/' . esc($user['profil_foto'])) ?>" alt="Foto Profil" class="profile-pic">
+                                            <img src="/assets/images/profiles/<?= $user['profil_foto'] ?>" alt="User Photo" class="header-profile-img" id="profile-icon">
                                         <?php else: ?>
-                                            <img src="<?= base_url('assets/images/default-profile.png') ?>" alt="Foto Profil" class="profile-pic">
+                                            <img src="<?= base_url('assets/images/delvaut.png') ?>" alt="Foto Profil" class="profile-pic">
                                         <?php endif; ?>
                                     </td>
                                     <td><?= esc($user['username']) ?></td>
@@ -225,6 +226,7 @@ $current_page = 'data_pengguna';
                 })
                 .then(response => response.json())
                 .then(data => {
+                    console.log(data);
                     if (data.success) {
                         selectedRow.remove(); // Hapus baris dari tabel
                         filteredData = Array.from(tableBody.getElementsByTagName('tr')); // Perbarui data
