@@ -2257,3 +2257,119 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SiNotik\\public\\index.php')
 INFO - 2025-01-15 04:47:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-15 13:04:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-15 13:04:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-15 13:04:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-15 13:04:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-15 13:04:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-15 13:04:42 --> Login attempt with username: lili
+ERROR - 2025-01-15 13:04:42 --> Checking login for username: lili
+ERROR - 2025-01-15 13:04:42 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => dada
+    [nip] => 123456780123456789
+    [email] => lala10@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => jalan 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-09
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-15 06:20:35
+)
+
+ERROR - 2025-01-15 13:04:42 --> Password verify result for username lili: Success
+ERROR - 2025-01-15 13:04:42 --> Login success for username: lili
+INFO - 2025-01-15 13:04:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 13:04:43 --> User ID: 9
+DEBUG - 2025-01-15 13:04:43 --> Profile Picture: image.png
+DEBUG - 2025-01-15 13:04:43 --> User Name: dada
+DEBUG - 2025-01-15 13:04:43 --> User Role: admin
+INFO - 2025-01-15 13:04:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-15 13:04:46 --> Mencoba mengambil pengguna dengan role notulensi
+INFO - 2025-01-15 13:04:46 --> Pengguna dengan role notulensi ditemukan: Array
+(
+    [0] => Array
+        (
+            [user_id] => 6
+            [username] => wulan
+            [nama] => wulandariyulianis
+            [nip] => 18679202938390
+            [email] => lala@gmail.com
+            [password] => $2y$10$QW2QpL2k9f5eBfqMjakx7eNCI3/XVLCO9a42jzNPjzvXpS8iFmqoK
+            [role] => notulensi
+            [Bidang] => Aptika
+            [profil_foto] => wulan.jpg
+
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 15:02:18
+            [updated_at] => 2025-01-15 12:27:35
+        )
+
+    [1] => Array
+        (
+            [user_id] => 15
+            [username] => cindy
+            [nama] => 
+            [nip] => 098765432234567890
+            [email] => cindy@gmail.com
+            [password] => $2y$10$KpMO4nSLugyuPlWtBw6.hOzO.nsUxSaZIDt6nyR3EiIh3MPKmgC9q
+            [role] => notulensi
+            [Bidang] => 
+            [profil_foto] => 
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-15 08:37:22
+            [updated_at] => 2025-01-15 15:37:57
+        )
+
+)
+
+INFO - 2025-01-15 13:04:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-15 13:04:46 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-15 13:04:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-15 13:04:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 13:04:55 --> User ID: 9
+DEBUG - 2025-01-15 13:04:55 --> Profile Picture: image.png
+DEBUG - 2025-01-15 13:04:55 --> User Name: dada
+DEBUG - 2025-01-15 13:04:55 --> User Role: admin
+INFO - 2025-01-15 13:04:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-15 13:04:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-15 13:04:58 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-15 13:05:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-15 13:05:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-15 13:05:12 --> Data yang akan diperbarui: Array
+(
+)
+
+INFO - 2025-01-15 13:05:12 --> Data sebelum pembaruan: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => dada
+    [nip] => 123456780123456789
+    [email] => lala10@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => jalan 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-09
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-15 06:20:35
+)
+
+INFO - 2025-01-15 13:05:12 --> Data yang akan dikirim: Array
+(
+)
+
+INFO - 2025-01-15 13:05:12 --> Tidak ada perubahan data untuk profil pengguna dengan ID 9
+INFO - 2025-01-15 13:05:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
