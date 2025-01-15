@@ -44,7 +44,7 @@
             <div class="user-info">
                 <div class="user-text">
                     <div class="user-name">Heni Yunida</div>
-                    <div class="user-role">Admin</div>
+                    <div class="user-role">Notulen</div>
                 </div>
                 <div class="user-avatar"></div>
             </div>
@@ -122,7 +122,7 @@
                     <div class="profile-field">
                         <div class="field-left">
                             <span class="field-label">Status</span>
-                            <span class="field-value">Admin</span>
+                            <span class="field-value">Notulen</span>
                         </div>
                         <i class="fas fa-edit edit-icon"></i>
                     </div>
