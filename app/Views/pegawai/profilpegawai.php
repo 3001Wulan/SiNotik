@@ -20,8 +20,8 @@
                 </a>
                 <div class="separator"></div>
                 <a href="data_pengguna" class="menu-item">
-                    <img src="<?= base_url('assets/images/datauser.png') ?>" alt="Data User Icon">
-                    <span>Data Pengguna</span>
+                    <img src="<?= base_url('assets/images/notulensi.png') ?>" alt="Data User Icon">
+                    <span>Notulensi</span>
                 </a>
                 <div class="separator"></div>
                 <a href="#" class="menu-item">

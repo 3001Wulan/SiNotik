@@ -18,9 +18,8 @@ $routes->get('admin/data_pengguna', 'DetailPenggunaController::index');
 $routes->get('admin/editprofil', 'EditProfilController::index');
 $routes->post('admin/editprofil', 'EditProfilController::editProfil');
 $routes->get('/editprofil/(:num)', 'EditProfilController::editProfil/$1');
-$routes->get('pegawai/editprofilpegawai', 'EditProfilPegawaiController::index');
-$routes->post('pegawai/editprofilpegawai', 'EditProfilPegawaiController::editProfil');
-$routes->post('pegawai/editprofilpegawai', 'EditProfilPegawaiController::editProfil');
+$routes->get('pegawai/editprofilpegawai', 'EditProfilController::index');
+$routes->post('pegawai/editprofilpegawai', 'EditProfilController::editProfil');
 $routes->get('pegawai/profilpegawai', 'ProfilPegawaiController::profilPegawai');
 
 
