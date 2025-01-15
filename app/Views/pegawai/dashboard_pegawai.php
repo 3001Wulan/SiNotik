@@ -14,39 +14,36 @@
             <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo" class="logo-img">
         </div>
         <ul class="menu">
-    <li class="menu-item active" data-link="<?= base_url('admin/dashboard_admin') ?>">
-        <img src="<?= base_url('assets/images/dashboard.png') ?>" alt="Dashboard" class="menu-icon">
-        <span class="menu-text">Dashboard</span>
-    </li>
-    <li class="menu-item active" data-link="<?= base_url('admin/data_pengguna') ?>">
-        <img src="<?= base_url('assets/images/codicon_book.png') ?>" alt="Data Pengguna" class="menu-icon">
-        <span class="menu-text">Notulensi</span>
-    </li>
-    <li class="menu-item" data-link="<?= base_url('admin/riwayat_notulensi') ?>">
-        <img src="<?= base_url('assets/images/icon_riwayat.png') ?>" alt="Riwayat Notulensi" class="menu-icon">
-        <span class="menu-text">Riwayat Notulensi</span>
-    </li>
-</ul>
+            <li class="menu-item active" data-link="<?= base_url('admin/dashboard_admin') ?>">
+                <img src="<?= base_url('assets/images/dashboard.png') ?>" alt="Dashboard" class="menu-icon">
+                <span class="menu-text">Dashboard</span>
+            </li>
+            <li class="menu-item active" data-link="<?= base_url('admin/data_pengguna') ?>">
+                <img src="<?= base_url('assets/images/codicon_book.png') ?>" alt="Data Pengguna" class="menu-icon">
+                <span class="menu-text">Notulensi</span>
+            </li>
+            <li class="menu-item" data-link="<?= base_url('admin/riwayat_notulensi') ?>">
+                <img src="<?= base_url('assets/images/icon_riwayat.png') ?>" alt="Riwayat Notulensi" class="menu-icon">
+                <span class="menu-text">Riwayat Notulensi</span>
+            </li>
+        </ul>
 
-<script>
-    // Mengambil semua elemen dengan class 'menu-item'
-    const menuItems = document.querySelectorAll('.menu-item');
+        <script>
+            const menuItems = document.querySelectorAll('.menu-item');
 
-    // Menambahkan event listener pada setiap item menu
-    menuItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const link = item.getAttribute('data-link'); // Mengambil nilai dari atribut data-link
-            if (link) {
-                window.location.href = link; // Mengarahkan ke halaman tujuan
-            }
-        });
-    });
-</script>
+            menuItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const link = item.getAttribute('data-link');
+                    if (link) {
+                        window.location.href = link;
+                    }
+                });
+            });
+        </script>
 
     </div>
 
     <div class="main-content">
-
         <div class="top-bar">
             <div class="brand-name"></div>
             <div class="theme-toggle">
@@ -61,7 +58,7 @@
                     <span class="profile-role"><?= $user_role ?></span>
                 </div>
                 <div class="dropdown-menu" id="dropdownMenu" style="display: none;">
-                    <a href="<?= base_url('admin/profiladmin') ?>" class="dropdown-item">
+                    <a href="<?= base_url('pegawai/profilpegawai') ?>" class="dropdown-item">
                         <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
                         Profil
                     </a>
@@ -73,14 +70,11 @@
             </div>
         </div>
 
-        <!-- Dashboard Title -->
         <div class="dashboard-title">
             <h2>Dashboard</h2>
         </div>
 
-        <!-- Statistics Section -->
         <div class="stats">
-            <!-- Total Pegawai -->
             <div class="stat-box">
                 <div class="stat-icon">
                     <img src="<?= base_url('assets/images/icon_pegawai.png') ?>" alt="Icon Pegawai">
@@ -91,7 +85,6 @@
                 </div>
             </div>
 
-            <!-- Total Notulensi -->
             <div class="stat-box">
                 <div class="stat-icon">
                     <img src="<?= base_url('assets/images/icon_notulensi.png') ?>" alt="Icon Notulensi">
@@ -114,10 +107,9 @@
         </div>
     </div>
 
-    <!-- Popup Logout -->
     <div class="popup-overlay" id="popupOverlay">
         <div class="popup">
-        <img src="<?= base_url('assets/images/logout_warning.png') ?>" alt="Logout Warning" class="popup-image">
+            <img src="<?= base_url('assets/images/logout_warning.png') ?>" alt="Logout Warning" class="popup-image">
             <h3>Apakah Anda yakin ingin logout?</h3>
             <div class="popup-buttons">
                 <button class="btn-yes" id="confirmLogout">Ya</button>
@@ -127,7 +119,6 @@
     </div>
 
     <script>
-        // Dropdown Menu
         const profileButton = document.getElementById('profileButton');
         const dropdownMenu = document.getElementById('dropdownMenu');
 
@@ -141,14 +132,13 @@
             }
         });
 
-        // Popup Logout
         const logoutLink = document.getElementById('logoutLink');
         const popupOverlay = document.getElementById('popupOverlay');
         const confirmLogout = document.getElementById('confirmLogout');
         const cancelLogout = document.getElementById('cancelLogout');
 
         logoutLink.addEventListener('click', (event) => {
-            event.preventDefault(); // Mencegah tautan langsung dijalankan
+            event.preventDefault();
             popupOverlay.style.display = 'block';
         });
 
@@ -160,81 +150,81 @@
             window.location.href = '<?= base_url('/') ?>';
         });
 
-        // Data dan Grafik Status Pegawai
-        var bidangLabels = <?= json_encode(array_column($jumlah_pegawai_per_bidang, 'Bidang')); ?>;
-        var bidangData = <?= json_encode(array_column($jumlah_pegawai_per_bidang, 'jumlah')); ?>;
+        const bidangLabels = <?= json_encode(array_column($jumlah_pegawai_per_bidang, 'Bidang')); ?>;
+        const bidangData = <?= json_encode(array_column($jumlah_pegawai_per_bidang, 'jumlah')); ?>;
 
-        var ctxStatus = document.getElementById('statusPegawaiChart').getContext('2d');
-        var statusPegawaiChart = new Chart(ctxStatus, {
+        const kategoriLabels = <?= json_encode(array_column($jumlah_notulensi_per_bidang, 'Bidang')); ?>;
+        const kategoriData = <?= json_encode(array_column($jumlah_notulensi_per_bidang, 'jumlah')); ?>;
+
+        const sharedColors = bidangLabels.map(() => `#${Math.floor(Math.random()*16777215).toString(16)}`);
+
+        const ctxStatus = document.getElementById('statusPegawaiChart').getContext('2d');
+        const statusPegawaiChart = new Chart(ctxStatus, {
             type: 'bar',
             data: {
                 labels: bidangLabels,
                 datasets: [{
                     label: 'Jumlah Pegawai',
                     data: bidangData,
-                    backgroundColor: '#4CAF50',
-                    borderColor: '#388E3C',
-                    borderWidth: 1
+                    backgroundColor: sharedColors,
+                    borderColor: sharedColors,
+                    borderWidth: 0
                 }]
             },
             options: {
                 responsive: true,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: sharedColors
+                        }
+                    }
+                },
                 scales: {
                     y: {
                         beginAtZero: true,
-                        title: { display: true, text: 'Jumlah Pegawai' }
+                        title: { display: true, text: 'Jumlah Pegawai' },
+                        grid: { display: false }
+                    },
+                    x: {
+                        grid: { display: false }
                     }
                 }
             }
         });
 
-        // Data dan Grafik Kategori Notulensi
-        var kategoriLabels = <?= json_encode(array_column($jumlah_notulensi_per_bidang, 'Bidang')); ?>;
-        var kategoriData = <?= json_encode(array_column($jumlah_notulensi_per_bidang, 'jumlah')); ?>;
-
-        var ctxKategori = document.getElementById('kategoriNotulensiChart').getContext('2d');
-        var kategoriNotulensiChart = new Chart(ctxKategori, {
+        const ctxKategori = document.getElementById('kategoriNotulensiChart').getContext('2d');
+        const kategoriNotulensiChart = new Chart(ctxKategori, {
             type: 'bar',
             data: {
                 labels: kategoriLabels,
                 datasets: [{
                     label: 'Jumlah Notulensi',
                     data: kategoriData,
-                    backgroundColor: '#2196F3',
-                    borderColor: '#1976D2',
-                    borderWidth: 1
+                    backgroundColor: sharedColors,
+                    borderColor: sharedColors,
+                    borderWidth: 0
                 }]
             },
             options: {
                 responsive: true,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: sharedColors
+                        }
+                    }
+                },
                 scales: {
                     y: {
                         beginAtZero: true,
-                        title: { display: true, text: 'Jumlah Notulensi' }
+                        title: { display: true, text: 'Jumlah Notulensi' },
+                        grid: { display: false }
+                    },
+                    x: {
+                        grid: { display: false }
                     }
                 }
-            }
-        });
-
-        // JavaScript untuk pengalihan tema terang/gelap
-        const themeToggle = document.querySelector('.theme-toggle');
-        const body = document.body;
-
-        const currentTheme = localStorage.getItem('theme');
-        if (currentTheme) {
-            body.classList.add(currentTheme);
-        } else {
-            body.classList.add('light-theme');
-        }
-
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-theme');
-            body.classList.toggle('light-theme');
-
-            if (body.classList.contains('dark-theme')) {
-                localStorage.setItem('theme', 'dark-theme');
-            } else {
-                localStorage.setItem('theme', 'light-theme');
             }
         });
     </script>

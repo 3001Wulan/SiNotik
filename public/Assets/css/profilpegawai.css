@@ -84,13 +84,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 30px;
+    padding: 15px 30px;
     background: white;
 }
 
 .theme-toggle img {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
 }
 
@@ -186,10 +186,7 @@
     border-bottom: 1px solid black;
 }
 
-/* Dark Mode Styles */
-/* Perbaikan Mode Gelap */
-/* Dark Mode Styles */
-/* Perbaikan Mode Gelap */
+
 body.dark-mode {
     background-color: #121212;
     color: #ffffff;
@@ -270,6 +267,13 @@ body.dark-mode .theme-toggle img {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    position: relative; /* Agar elemen yang berada di dalamnya bisa diposisikan dengan 'absolute' */
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .profile-header {
@@ -279,8 +283,8 @@ body.dark-mode .theme-toggle img {
 }
 
 .header-profile-img {
-    width: 50px;
-    height: 50px;
+    width: 200px; /* Memperbesar lebar gambar */
+    height: 100px; /* Memperbesar tinggi gambar */
     border-radius: 50%;
     object-fit: cover;
 }
@@ -288,7 +292,7 @@ body.dark-mode .theme-toggle img {
 .header-user-details {
     display: flex;
     flex-direction: column;
-    text-align: right; /* Mengatur teks sejajar ke kanan */
+    text-align: left; /* Mengatur teks ke kiri agar sejajar dengan foto */
 }
 
 .header-user-name {
@@ -299,4 +303,108 @@ body.dark-mode .theme-toggle img {
 .header-user-role {
     font-size: 14px;
     color: gray;
+}
+/* Styling untuk Dropdown Menu */
+.user-info {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #fff;
+    color: #333;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    z-index: 100;
+}
+
+.dropdown-item {
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* Untuk Dark Mode */
+body.dark-mode .dropdown-menu {
+    background-color: #333;
+    color: #ddd;
+}
+
+body.dark-mode .dropdown-item {
+    color: #ddd;
+}
+
+body.dark-mode .dropdown-item:hover {
+    background-color: #555;
+}
+.dropdown-item img {
+    width: 20px; /* Atur lebar gambar */
+    height: 20px; /* Atur tinggi gambar */
+    margin-right: 10px; /* Menambahkan sedikit jarak antara gambar dan teks */
+    vertical-align: middle; /* Menjaga agar gambar dan teks sejajar vertikal */
+}
+#popupOverlay {
+    display: none; /* Popup disembunyikan */
+    position: fixed;
+    top: 250px;
+    left: 550px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+
+.popup {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.popup h3 {
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.popup-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-yes {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-no {
+    background-color: #f44336;
+    color: white;
 }

@@ -160,81 +160,81 @@
             window.location.href = '<?= base_url('/') ?>';
         });
 
-        // Data dan Grafik Status Pegawai
-        var bidangLabels = <?= json_encode(array_column($jumlah_pegawai_per_bidang, 'Bidang')); ?>;
-        var bidangData = <?= json_encode(array_column($jumlah_pegawai_per_bidang, 'jumlah')); ?>;
+        const bidangLabels = <?= json_encode(array_column($jumlah_pegawai_per_bidang, 'Bidang')); ?>;
+        const bidangData = <?= json_encode(array_column($jumlah_pegawai_per_bidang, 'jumlah')); ?>;
 
-        var ctxStatus = document.getElementById('statusPegawaiChart').getContext('2d');
-        var statusPegawaiChart = new Chart(ctxStatus, {
+        const kategoriLabels = <?= json_encode(array_column($jumlah_notulensi_per_bidang, 'Bidang')); ?>;
+        const kategoriData = <?= json_encode(array_column($jumlah_notulensi_per_bidang, 'jumlah')); ?>;
+
+        const sharedColors = bidangLabels.map(() => `#${Math.floor(Math.random()*16777215).toString(16)}`);
+
+        const ctxStatus = document.getElementById('statusPegawaiChart').getContext('2d');
+        const statusPegawaiChart = new Chart(ctxStatus, {
             type: 'bar',
             data: {
                 labels: bidangLabels,
                 datasets: [{
                     label: 'Jumlah Pegawai',
                     data: bidangData,
-                    backgroundColor: '#4CAF50',
-                    borderColor: '#388E3C',
-                    borderWidth: 1
+                    backgroundColor: sharedColors,
+                    borderColor: sharedColors,
+                    borderWidth: 0
                 }]
             },
             options: {
                 responsive: true,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: sharedColors
+                        }
+                    }
+                },
                 scales: {
                     y: {
                         beginAtZero: true,
-                        title: { display: true, text: 'Jumlah Pegawai' }
+                        title: { display: true, text: 'Jumlah Pegawai' },
+                        grid: { display: false }
+                    },
+                    x: {
+                        grid: { display: false }
                     }
                 }
             }
         });
 
-        // Data dan Grafik Kategori Notulensi
-        var kategoriLabels = <?= json_encode(array_column($jumlah_notulensi_per_bidang, 'Bidang')); ?>;
-        var kategoriData = <?= json_encode(array_column($jumlah_notulensi_per_bidang, 'jumlah')); ?>;
-
-        var ctxKategori = document.getElementById('kategoriNotulensiChart').getContext('2d');
-        var kategoriNotulensiChart = new Chart(ctxKategori, {
+        const ctxKategori = document.getElementById('kategoriNotulensiChart').getContext('2d');
+        const kategoriNotulensiChart = new Chart(ctxKategori, {
             type: 'bar',
             data: {
                 labels: kategoriLabels,
                 datasets: [{
                     label: 'Jumlah Notulensi',
                     data: kategoriData,
-                    backgroundColor: '#2196F3',
-                    borderColor: '#1976D2',
-                    borderWidth: 1
+                    backgroundColor: sharedColors,
+                    borderColor: sharedColors,
+                    borderWidth: 0
                 }]
             },
             options: {
                 responsive: true,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: sharedColors
+                        }
+                    }
+                },
                 scales: {
                     y: {
                         beginAtZero: true,
-                        title: { display: true, text: 'Jumlah Notulensi' }
+                        title: { display: true, text: 'Jumlah Notulensi' },
+                        grid: { display: false }
+                    },
+                    x: {
+                        grid: { display: false }
                     }
                 }
-            }
-        });
-
-        // JavaScript untuk pengalihan tema terang/gelap
-        const themeToggle = document.querySelector('.theme-toggle');
-        const body = document.body;
-
-        const currentTheme = localStorage.getItem('theme');
-        if (currentTheme) {
-            body.classList.add(currentTheme);
-        } else {
-            body.classList.add('light-theme');
-        }
-
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-theme');
-            body.classList.toggle('light-theme');
-
-            if (body.classList.contains('dark-theme')) {
-                localStorage.setItem('theme', 'dark-theme');
-            } else {
-                localStorage.setItem('theme', 'light-theme');
             }
         });
     </script>
