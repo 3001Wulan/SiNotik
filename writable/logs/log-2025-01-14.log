@@ -819,3 +819,495 @@ INFO - 2025-01-14 14:44:35 --> Data yang akan dikirim: Array
 
 INFO - 2025-01-14 14:44:35 --> Tidak ada perubahan data untuk profil pengguna dengan ID 9
 INFO - 2025-01-14 14:44:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:46:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-14 14:46:45 --> User ID: 9
+DEBUG - 2025-01-14 14:46:45 --> Profile Picture: image.png
+DEBUG - 2025-01-14 14:46:45 --> User Name: lala
+DEBUG - 2025-01-14 14:46:45 --> User Role: admin
+INFO - 2025-01-14 14:46:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:46:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:46:53 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-14 14:46:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:50:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:50:32 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-14 14:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:51:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:51:15 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-14 14:51:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-14 14:51:21 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/data_pengguna.php"
+[Method: GET, Route: admin/data_pengguna]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/data_pengguna.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/data_pengguna', [], true)
+ 3 APPPATH\Controllers\DetailPenggunaController.php(9): view('admin/data_pengguna')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DetailPenggunaController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPenggunaController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-01-14 14:51:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:51:33 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-14 14:51:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:51:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-14 14:51:35 --> User ID: 9
+DEBUG - 2025-01-14 14:51:35 --> Profile Picture: image.png
+DEBUG - 2025-01-14 14:51:35 --> User Name: lala
+DEBUG - 2025-01-14 14:51:35 --> User Role: admin
+INFO - 2025-01-14 14:51:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-14 14:51:37 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/data_pengguna.php"
+[Method: GET, Route: admin/data_pengguna]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/data_pengguna.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/data_pengguna', [], true)
+ 3 APPPATH\Controllers\DetailPenggunaController.php(9): view('admin/data_pengguna')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DetailPenggunaController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPenggunaController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-01-14 14:52:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-14 14:54:26 --> Error: Class "App\Controllers\UserModel" not found
+[Method: GET, Route: admin/data_pengguna]
+in APPPATH\Controllers\DetailPenggunaController.php on line 9.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DetailPenggunaController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPenggunaController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-01-14 14:54:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:03:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:03:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:03:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:03:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-14 15:03:57 --> Login attempt with username: lili
+ERROR - 2025-01-14 15:04:02 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\SiNotik\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\SiNotik\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'sinotik', 3306, '', 0)
+#1 C:\xampp\htdocs\SiNotik\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\SiNotik\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\SiNotik\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\SiNotik\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\SiNotik\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\SiNotik\app\Models\AuthModel.php(16): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\SiNotik\app\Controllers\Auth.php(20): App\Models\AuthModel->checkLogin('lili')
+#8 C:\xampp\htdocs\SiNotik\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#9 C:\xampp\htdocs\SiNotik\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\xampp\htdocs\SiNotik\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SiNotik\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\SiNotik\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\SiNotik\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\SiNotik\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\SiNotik\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\SiNotik\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\SiNotik\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\SiNotik\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\SiNotik\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\SiNotik\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\SiNotik\app\Models\AuthModel.php(16): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\SiNotik\app\Controllers\Auth.php(20): App\Models\AuthModel->checkLogin('lili')
+#7 C:\xampp\htdocs\SiNotik\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#8 C:\xampp\htdocs\SiNotik\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\SiNotik\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\SiNotik\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\SiNotik\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\SiNotik\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\SiNotik\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-01-14 15:04:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\AuthModel.php(16): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Auth.php(20): App\Models\AuthModel->checkLogin('lili')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-01-14 15:04:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:04:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:04:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:04:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-14 15:04:31 --> Login attempt with username: lili
+ERROR - 2025-01-14 15:04:35 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\SiNotik\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\SiNotik\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'sinotik', 3306, '', 0)
+#1 C:\xampp\htdocs\SiNotik\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\SiNotik\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\SiNotik\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\SiNotik\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\SiNotik\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\SiNotik\app\Models\AuthModel.php(16): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\SiNotik\app\Controllers\Auth.php(20): App\Models\AuthModel->checkLogin('lili')
+#8 C:\xampp\htdocs\SiNotik\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#9 C:\xampp\htdocs\SiNotik\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\xampp\htdocs\SiNotik\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SiNotik\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\SiNotik\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\SiNotik\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\SiNotik\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\SiNotik\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\SiNotik\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\SiNotik\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\SiNotik\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\SiNotik\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\SiNotik\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\SiNotik\app\Models\AuthModel.php(16): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\SiNotik\app\Controllers\Auth.php(20): App\Models\AuthModel->checkLogin('lili')
+#7 C:\xampp\htdocs\SiNotik\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#8 C:\xampp\htdocs\SiNotik\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\SiNotik\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\SiNotik\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\SiNotik\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\SiNotik\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\SiNotik\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-01-14 15:04:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\AuthModel.php(16): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Auth.php(20): App\Models\AuthModel->checkLogin('lili')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-01-14 15:05:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-14 15:05:00 --> Login attempt with username: lili
+ERROR - 2025-01-14 15:05:01 --> Checking login for username: lili
+ERROR - 2025-01-14 15:05:01 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lala
+    [nip] => 123456780123456789
+    [email] => lala10@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => jalan gajah mada 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-04
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-14 14:30:50
+)
+
+ERROR - 2025-01-14 15:05:01 --> Password verify result for username lili: Success
+ERROR - 2025-01-14 15:05:01 --> Login success for username: lili
+INFO - 2025-01-14 15:05:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-14 15:05:01 --> User ID: 9
+DEBUG - 2025-01-14 15:05:01 --> Profile Picture: image.png
+DEBUG - 2025-01-14 15:05:01 --> User Name: lala
+DEBUG - 2025-01-14 15:05:01 --> User Role: admin
+INFO - 2025-01-14 15:05:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:05:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:07:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:14:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:15:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:15:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:15:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:15:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:15:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:16:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-14 15:16:57 --> Login attempt with username: fff
+ERROR - 2025-01-14 15:16:57 --> Checking login for username: fff
+ERROR - 2025-01-14 15:16:57 --> User data: 
+ERROR - 2025-01-14 15:16:57 --> User not found for username: fff
+INFO - 2025-01-14 15:16:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:16:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:17:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-14 15:17:08 --> Login attempt with username: fff
+ERROR - 2025-01-14 15:17:08 --> Checking login for username: fff
+ERROR - 2025-01-14 15:17:08 --> User data: 
+ERROR - 2025-01-14 15:17:08 --> User not found for username: fff
+INFO - 2025-01-14 15:17:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:17:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:17:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-14 15:17:22 --> Login attempt with username: lili
+ERROR - 2025-01-14 15:17:22 --> Checking login for username: lili
+ERROR - 2025-01-14 15:17:22 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lala
+    [nip] => 123456780123456789
+    [email] => lala10@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => jalan gajah mada 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-04
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-14 14:30:50
+)
+
+ERROR - 2025-01-14 15:17:22 --> Password verify result for username lili: Success
+ERROR - 2025-01-14 15:17:22 --> Login success for username: lili
+INFO - 2025-01-14 15:17:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-14 15:17:22 --> User ID: 9
+DEBUG - 2025-01-14 15:17:22 --> Profile Picture: image.png
+DEBUG - 2025-01-14 15:17:22 --> User Name: lala
+DEBUG - 2025-01-14 15:17:22 --> User Role: admin
+INFO - 2025-01-14 15:17:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:17:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:17:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-14 15:17:55 --> Login attempt with username: jaja
+ERROR - 2025-01-14 15:17:55 --> Checking login for username: jaja
+ERROR - 2025-01-14 15:17:55 --> User data: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => 
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => 
+    [profil_foto] => 
+    [alamat] => 
+    [jabatan] => 
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-13 07:53:10
+)
+
+ERROR - 2025-01-14 15:17:55 --> Password verify result for username jaja: Success
+ERROR - 2025-01-14 15:17:56 --> Login success for username: jaja
+INFO - 2025-01-14 15:22:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:22:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:22:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-14 15:22:42 --> Login attempt with username: jaja
+ERROR - 2025-01-14 15:22:42 --> Checking login for username: jaja
+ERROR - 2025-01-14 15:22:42 --> User data: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => 
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => 
+    [profil_foto] => 
+    [alamat] => 
+    [jabatan] => 
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-13 07:53:10
+)
+
+ERROR - 2025-01-14 15:22:42 --> Password verify result for username jaja: Failure
+ERROR - 2025-01-14 15:22:42 --> Login failed for username: jaja
+INFO - 2025-01-14 15:22:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:22:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:22:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-14 15:22:50 --> Login attempt with username: jaja
+ERROR - 2025-01-14 15:22:50 --> Checking login for username: jaja
+ERROR - 2025-01-14 15:22:50 --> User data: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => 
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => 
+    [profil_foto] => 
+    [alamat] => 
+    [jabatan] => 
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-13 07:53:10
+)
+
+ERROR - 2025-01-14 15:22:50 --> Password verify result for username jaja: Failure
+ERROR - 2025-01-14 15:22:50 --> Login failed for username: jaja
+INFO - 2025-01-14 15:22:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:22:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:23:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-14 15:23:01 --> Login attempt with username: register
+ERROR - 2025-01-14 15:23:01 --> Checking login for username: register
+ERROR - 2025-01-14 15:23:01 --> User data: Array
+(
+    [user_id] => 14
+    [username] => register
+    [nama] => 
+    [nip] => 123456788987654356
+    [email] => register@gmail.com
+    [password] => $2y$10$.uukRdu9Mvv6dlPtkcecoelGWi/VaQTlew7h0wIyIk7YqRJMd73Xy
+    [role] => pegawai
+    [Bidang] => 
+    [profil_foto] => 
+    [alamat] => 
+    [jabatan] => 
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 08:26:44
+    [updated_at] => 2025-01-13 08:26:44
+)
+
+ERROR - 2025-01-14 15:23:01 --> Password verify result for username register: Failure
+ERROR - 2025-01-14 15:23:01 --> Login failed for username: register
+INFO - 2025-01-14 15:23:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:23:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:23:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-14 15:23:16 --> Login attempt with username: lili
+ERROR - 2025-01-14 15:23:16 --> Checking login for username: lili
+ERROR - 2025-01-14 15:23:16 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lala
+    [nip] => 123456780123456789
+    [email] => lala10@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => jalan gajah mada 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-04
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-14 14:30:50
+)
+
+ERROR - 2025-01-14 15:23:16 --> Password verify result for username lili: Success
+ERROR - 2025-01-14 15:23:16 --> Login success for username: lili
+INFO - 2025-01-14 15:23:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-14 15:23:17 --> User ID: 9
+DEBUG - 2025-01-14 15:23:17 --> Profile Picture: image.png
+DEBUG - 2025-01-14 15:23:17 --> User Name: lala
+DEBUG - 2025-01-14 15:23:17 --> User Role: admin
+INFO - 2025-01-14 15:23:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:23:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:23:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:23:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-14 15:23:34 --> Login attempt with username: jaja
+ERROR - 2025-01-14 15:23:34 --> Checking login for username: jaja
+ERROR - 2025-01-14 15:23:34 --> User data: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => 
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => 
+    [profil_foto] => 
+    [alamat] => 
+    [jabatan] => 
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-13 07:53:10
+)
+
+ERROR - 2025-01-14 15:23:34 --> Password verify result for username jaja: Success
+ERROR - 2025-01-14 15:23:34 --> Login success for username: jaja
+INFO - 2025-01-14 15:24:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-14 15:24:12 --> Login attempt with username: jaja
+ERROR - 2025-01-14 15:24:12 --> Checking login for username: jaja
+ERROR - 2025-01-14 15:24:12 --> User data: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => 
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => 
+    [profil_foto] => 
+    [alamat] => 
+    [jabatan] => 
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-13 07:53:10
+)
+
+ERROR - 2025-01-14 15:24:12 --> Password verify result for username jaja: Success
+ERROR - 2025-01-14 15:24:12 --> Login success for username: jaja
+INFO - 2025-01-14 15:26:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:26:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:26:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-14 15:26:56 --> Login attempt with username: jaja
+ERROR - 2025-01-14 15:26:56 --> Checking login for username: jaja
+ERROR - 2025-01-14 15:26:56 --> User data: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => 
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => 
+    [profil_foto] => 
+    [alamat] => 
+    [jabatan] => 
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-13 07:53:10
+)
+
+ERROR - 2025-01-14 15:26:56 --> Password verify result for username jaja: Success
+ERROR - 2025-01-14 15:26:56 --> Login success for username: jaja
+INFO - 2025-01-14 15:27:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-14 15:27:51 --> User ID: 13
+DEBUG - 2025-01-14 15:27:51 --> Profile Picture: default.jpg
+DEBUG - 2025-01-14 15:27:51 --> User Name: Guest
+DEBUG - 2025-01-14 15:27:51 --> User Role: pegawai
+INFO - 2025-01-14 15:27:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:30:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-14 15:30:32 --> User ID: 13
+DEBUG - 2025-01-14 15:30:32 --> Profile Picture: default.jpg
+DEBUG - 2025-01-14 15:30:32 --> User Name: Guest
+DEBUG - 2025-01-14 15:30:32 --> User Role: pegawai
+INFO - 2025-01-14 15:30:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:30:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:30:39 --> User profile for ID 13 retrieved successfully.
+INFO - 2025-01-14 15:30:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-14 15:30:47 --> User ID: 13
+DEBUG - 2025-01-14 15:30:47 --> Profile Picture: default.jpg
+DEBUG - 2025-01-14 15:30:47 --> User Name: Guest
+DEBUG - 2025-01-14 15:30:47 --> User Role: pegawai
+INFO - 2025-01-14 15:30:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:30:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:30:54 --> User profile for ID 13 retrieved successfully.
+INFO - 2025-01-14 15:30:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

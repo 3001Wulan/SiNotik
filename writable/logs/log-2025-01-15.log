@@ -1,0 +1,131 @@
+INFO - 2025-01-15 01:46:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-15 01:46:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-15 01:46:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-15 01:46:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-15 01:46:29 --> Login attempt with username: lili
+ERROR - 2025-01-15 01:46:31 --> Checking login for username: lili
+ERROR - 2025-01-15 01:46:31 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lala
+    [nip] => 123456780123456789
+    [email] => lala10@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => jalan gajah mada 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-04
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-14 14:30:50
+)
+
+ERROR - 2025-01-15 01:46:32 --> Password verify result for username lili: Success
+ERROR - 2025-01-15 01:46:32 --> Login success for username: lili
+INFO - 2025-01-15 01:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-15 01:46:33 --> User ID: 9
+DEBUG - 2025-01-15 01:46:33 --> Profile Picture: image.png
+DEBUG - 2025-01-15 01:46:33 --> User Name: lala
+DEBUG - 2025-01-15 01:46:33 --> User Role: admin
+INFO - 2025-01-15 01:46:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-15 01:46:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-15 01:46:39 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-15 01:46:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-15 01:46:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-15 01:46:44 --> Data yang akan diperbarui: Array
+(
+)
+
+INFO - 2025-01-15 01:46:44 --> Data sebelum pembaruan: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lala
+    [nip] => 123456780123456789
+    [email] => lala10@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => jalan gajah mada 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-04
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-14 14:30:50
+)
+
+INFO - 2025-01-15 01:46:44 --> Data yang akan dikirim: Array
+(
+)
+
+INFO - 2025-01-15 01:46:44 --> Tidak ada perubahan data untuk profil pengguna dengan ID 9
+INFO - 2025-01-15 01:46:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-15 01:47:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-15 01:47:21 --> Data yang akan diperbarui: Array
+(
+    [nama] => ludin
+    [alamat] => jalan 
+    [tanggal_lahir] => 2003-07-09
+)
+
+INFO - 2025-01-15 01:47:21 --> Data sebelum pembaruan: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lala
+    [nip] => 123456780123456789
+    [email] => lala10@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => jalan gajah mada 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-04
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-14 14:30:50
+)
+
+INFO - 2025-01-15 01:47:21 --> Data yang akan dikirim: Array
+(
+    [nama] => ludin
+    [alamat] => jalan 
+    [tanggal_lahir] => 2003-07-09
+)
+
+INFO - 2025-01-15 01:47:21 --> Data pengguna yang ada: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lala
+    [nip] => 123456780123456789
+    [email] => lala10@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => jalan gajah mada 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-04
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-14 14:30:50
+)
+
+INFO - 2025-01-15 01:47:21 --> Data yang akan diperbarui: Array
+(
+    [nama] => ludin
+    [alamat] => jalan 
+    [tanggal_lahir] => 2003-07-09
+)
+
+INFO - 2025-01-15 01:47:21 --> Berhasil memperbarui profil pengguna dengan ID 9. Perubahan: Array
+(
+    [nama] => ludin
+    [alamat] => jalan 
+    [tanggal_lahir] => 2003-07-09
+)
+
+INFO - 2025-01-15 01:47:21 --> Data profil pengguna dengan ID 9 diperbarui. Perubahan: Nama: lala -> ludin, Alamat: jalan gajah mada  -> jalan , Tanggal Lahir: 2003-07-04 -> 2003-07-09
+INFO - 2025-01-15 01:47:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

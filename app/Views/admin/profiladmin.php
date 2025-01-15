@@ -127,8 +127,15 @@
                         </div>
                         <div class="detail-item">
                             <label>Password</label>
-                            <div class="value"><?= isset($user_profile['password']) ? $user_profile['password'] : 'N/A' ?></div>
+                        <div class="value">
+                        <?php 
+                            // Menghitung panjang password dan menampilkan bintang
+                            $passwordLength = isset($user_profile['password']) ? strlen($user_profile['password']) : 0;
+                            echo str_repeat('*', $passwordLength);
+                        ?>
                         </div>
+                        </div>
+
                         <div class="detail-item">
                             <label>Status</label>
                             <div class="value"><?= isset($user_profile['role']) ? $user_profile['role'] : 'N/A' ?></div>
