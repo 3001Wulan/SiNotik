@@ -2217,3 +2217,43 @@ INFO - 2025-01-15 04:02:16 --> Data yang akan dikirim: Array
 
 INFO - 2025-01-15 04:02:16 --> Tidak ada perubahan data untuk profil pengguna dengan ID 9
 INFO - 2025-01-15 04:02:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-15 04:45:15 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "pegawai/riwayatpegawai.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pegawai/riwayatpegawai.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pegawai/riwayatpegawai', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('pegawai/riwayatpegawai')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+CRITICAL - 2025-01-15 04:45:34 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "pegawai/riwayatpegawai.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pegawai/riwayatpegawai.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pegawai/riwayatpegawai', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('pegawai/riwayatpegawai')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+CRITICAL - 2025-01-15 04:45:41 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "pegawai/riwayatpegawai.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pegawai/riwayatpegawai.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pegawai/riwayatpegawai', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('pegawai/riwayatpegawai')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-01-15 04:47:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
