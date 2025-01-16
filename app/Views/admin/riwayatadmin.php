@@ -16,12 +16,12 @@
                 <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo">
             </div>
             <div class="menu">
-                <a href="#" class="menu-item">
+                <a href="dashboard_admin" class="menu-item">
                     <img src="<?= base_url('assets/images/dashboard.png') ?>" alt="Dashboard Icon">
                     <span>Dashboard</span>
                 </a>
                 <div class="separator"></div>
-                <a href="#" class="menu-item">
+                <a href="data_pengguna" class="menu-item">
                     <img src="<?= base_url('assets/images/datauser.png') ?>" alt="Data User Icon">
                     <span>Data Pengguna</span>
                 </a>

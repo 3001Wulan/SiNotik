@@ -8,7 +8,7 @@ class DataPenggunaModel extends Model
 {
     protected $table = 'user';
     protected $primaryKey = 'user_id';
-    protected $allowedFields = ['username','nama' , 'nip', 'email', 'password', 'role', 'profil_foto', 'alamat', 'jabatan', 'tanggallahir'];
+    protected $allowedFields = ['username', 'nama', 'nip', 'email', 'password', 'role', 'profil_foto', 'alamat', 'jabatan', 'tanggallahir'];
     protected $useTimestamps = true;
 
     // Mendapatkan semua pengguna berdasarkan role tertentu
@@ -23,6 +23,25 @@ class DataPenggunaModel extends Model
             log_message('error', 'Tidak ada pengguna ditemukan dengan role ' . $role);
         } else {
             log_message('info', 'Pengguna dengan role ' . $role . ' ditemukan: ' . print_r($users, true));
+        }
+
+        return $users;
+    }
+
+    // Mendapatkan semua pengguna berdasarkan dua role tertentu
+    public function getUsersByRoles($role1, $role2)
+    {
+        log_message('info', 'Mencoba mengambil pengguna dengan role ' . $role1 . ' dan ' . $role2);
+
+        // Mengambil data pengguna berdasarkan dua role
+        $users = $this->where('role', $role1)
+                      ->orWhere('role', $role2)
+                      ->findAll();
+
+        if (!$users) {
+            log_message('error', 'Tidak ada pengguna ditemukan dengan role ' . $role1 . ' atau ' . $role2);
+        } else {
+            log_message('info', 'Pengguna dengan role ' . $role1 . ' atau ' . $role2 . ' ditemukan: ' . print_r($users, true));
         }
 
         return $users;

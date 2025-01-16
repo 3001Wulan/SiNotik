@@ -22,7 +22,7 @@
                 <img src="<?= base_url('assets/images/icon_data.png') ?>" alt="Data Pengguna" class="menu-icon">
                 <span class="menu-text">Data Pengguna</span>
             </li>
-            <li class="menu-item" data-link="<?= base_url('admin/riwayat_notulensi') ?>">
+            <li class="menu-item" data-link="<?= base_url('admin/riwayatadmin') ?>">
                 <img src="<?= base_url('assets/images/icon_riwayat.png') ?>" alt="Riwayat Notulensi" class="menu-icon">
                 <span class="menu-text">Riwayat Notulensi</span>
             </li>

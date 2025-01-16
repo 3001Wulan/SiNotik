@@ -108,7 +108,6 @@
                         <h2>Status Pegawai</h2>
                     </div>
                     <div class="stat-icon">
-                        <!-- Status Chart will be inserted here -->
                         <canvas id="statusPegawaiChart"></canvas>
                     </div>
                 </div>
@@ -146,7 +145,6 @@
                 themeIcon.src = '<?= base_url("assets/images/moon.png") ?>';
             }
 
-            // Toggle the theme on icon click
             themeIcon.addEventListener('click', function () {
                 body.classList.toggle('dark-mode');
                 if (body.classList.contains('dark-mode')) {
@@ -158,7 +156,6 @@
                 }
             });
 
-            // Profile dropdown logic
             const profilePic = document.getElementById('profile-pic');
             const dropdownMenu = document.getElementById('profile-dropdown');
 
@@ -166,14 +163,12 @@
                 dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
             });
 
-            // Close profile dropdown if clicked outside
             window.addEventListener('click', function (e) {
                 if (!profilePic.contains(e.target) && !dropdownMenu.contains(e.target)) {
                     dropdownMenu.style.display = 'none';
                 }
             });
 
-            // Logout modal logic
             const logoutBtn = document.getElementById('logout-btn');
             const logoutModal = document.getElementById('logout-modal');
             const closeBtn = document.querySelector('.close-btn');
@@ -182,21 +177,20 @@
 
             logoutBtn.onclick = function () {
                 logoutModal.style.display = 'flex';
-            }
+            };
 
             closeBtn.onclick = function () {
                 logoutModal.style.display = 'none';
-            }
+            };
 
             cancelBtn.onclick = function () {
                 logoutModal.style.display = 'none';
-            }
+            };
 
             confirmBtn.onclick = function () {
-                window.location.href = 'logout.php';
-            }
+                window.location.href = '<?= base_url("home") ?>'; // Sesuaikan dengan URL beranda Anda
+            };
 
-            // Dynamic Chart.js Data
             const bidangLabels = <?= json_encode(array_column($jumlah_pegawai_per_bidang, 'Bidang')); ?>;
             const bidangData = <?= json_encode(array_column($jumlah_pegawai_per_bidang, 'jumlah')); ?>;
             const kategoriLabels = <?= json_encode(array_column($jumlah_notulensi_per_bidang, 'Bidang')); ?>;
@@ -204,7 +198,6 @@
 
             const sharedColors = bidangLabels.map(() => `#${Math.floor(Math.random()*16777215).toString(16)}`);
 
-            // Pegawai Chart
             const ctxStatus = document.getElementById('statusPegawaiChart').getContext('2d');
             new Chart(ctxStatus, {
                 type: 'bar',
@@ -227,7 +220,6 @@
                 }
             });
 
-            // Notulensi Chart
             const ctxKategori = document.getElementById('kategoriNotulensiChart').getContext('2d');
             new Chart(ctxKategori, {
                 type: 'bar',

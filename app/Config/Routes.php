@@ -24,6 +24,11 @@ $routes->post('pegawai/editprofilpegawai', 'EditProfilPegawaiController::editPro
 $routes->get('/editprofilpegawai/(:num)', 'EditProfilPegawaiController::editProfil/$1');
 $routes->get('pegawai/profilpegawai', 'ProfilPegawaiController::profilPegawai');
 $routes->post('DetailPenggunaController/hapusData', 'DetailPenggunaController::hapusData');
+$routes->get('admin/riwayatadmin', 'RiwayatAdminController::index');
+
+
+
+
 
 
 

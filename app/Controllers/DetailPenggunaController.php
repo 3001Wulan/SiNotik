@@ -9,13 +9,14 @@ class DetailPenggunaController extends BaseController
 {
     public function index()
     {
-
         $dataPenggunaModel = new DataPenggunaModel();
-        
-        $data['users'] = $dataPenggunaModel->getUsersByRole('notulensi');
+
+        // Mengambil pengguna dengan role "notulensi" dan "pegawai"
+        $data['users'] = $dataPenggunaModel->getUsersByRoles('notulensi', 'pegawai');
 
         $userModel = new UserModel();
-    
+
+        // Mengambil profil pengguna berdasarkan sesi user_id
         $user_id = session()->get('user_id');
         $user_profile = $userModel->find($user_id);
 
@@ -27,7 +28,7 @@ class DetailPenggunaController extends BaseController
         }
 
         $data['user_profile'] = $user_profile;
-        
+
         return view('admin/data_pengguna', $data);
     }
 
@@ -52,4 +53,3 @@ class DetailPenggunaController extends BaseController
         return $this->response->setJSON(['success' => false]);
     }
 }
-

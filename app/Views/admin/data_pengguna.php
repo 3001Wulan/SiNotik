@@ -33,7 +33,7 @@ $current_page = 'data_pengguna';
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="<?php echo ($current_page == 'riwayat_notulensi') ? 'active riwayat-notulensi' : 'inactive'; ?>">
+                    <a href="riwayatadmin" class="<?php echo ($current_page == 'riwayat_notulensi') ? 'active riwayat-notulensi' : 'inactive'; ?>">
                         <img src="<?php echo base_url('assets/images/riwayat_notulensi.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
                         Riwayat Notulensi
                     </a>
@@ -160,10 +160,11 @@ $current_page = 'data_pengguna';
             const deletePopup = document.getElementById('deletePopup');
             const confirmDelete = document.getElementById('confirmDelete');
             const cancelDelete = document.getElementById('cancelDelete');
+            const entriesDropdown = document.getElementById('entries');
 
             let selectedRow = null;
             let currentPage = 1;
-            const entriesPerPage = 10;
+            let entriesPerPage = 10;
             let filteredData = Array.from(tableBody.getElementsByTagName('tr'));
 
             // Fungsi untuk memperbarui tabel
@@ -189,6 +190,16 @@ $current_page = 'data_pengguna';
                 }
                 updateTable();
             }
+
+            // Event perubahan pada dropdown entries
+            entriesDropdown.addEventListener('change', (event) => {
+                const selectedValue = parseInt(event.target.value, 10);
+                if (!isNaN(selectedValue)) {
+                    entriesPerPage = selectedValue;
+                    currentPage = 1; // Reset ke halaman pertama
+                    updateTable();
+                }
+            });
 
             // Event klik tombol hapus
             tableBody.addEventListener('click', (event) => {
