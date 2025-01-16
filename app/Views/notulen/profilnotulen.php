@@ -72,6 +72,7 @@
                             <?php else: ?>
                                 <img src="<?= base_url('assets/images/delvaut.png') ?>" alt="Foto Profil" class="profile-img">
                             <?php endif; ?>
+                            
                         </div>
                         <!-- Tombol Edit Profil -->
                         <form action="editprofilnotulen" method="POST">
