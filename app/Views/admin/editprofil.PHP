@@ -38,23 +38,21 @@
     </div>
 
     <div class="header">
-        <div class="theme-toggle">
-            <img src="<?= base_url('assets/images/modegelap.png'); ?>" alt="Toggle Theme" id="theme-icon">  
-        </div>
-        <div class="user-info"></div>
-    </div>
-
-    <div class="main-content">
-        <header>
+        <div class="header-content">
+            <div class="theme-toggle">
+                <img src="<?= base_url('assets/images/moon.png'); ?>" alt="Toggle Theme" id="theme-icon" onclick="toggleTheme()">  
+            </div>
             <div class="user-info">
                 <div class="user-text">
                     <div class="user-name"><?= $nama ?? 'N/A' ?></div>
                     <div class="user-role"><?= $role ?? 'N/A' ?></div>
                 </div>
-                <img src="<?= base_url('assets/images/profiles/' . $profil_foto) ?>" alt="Foto Profil">
+                <img src="<?= base_url('assets/images/profiles/' . $profil_foto) ?>" alt="Foto Profil" class="user-avatar">
             </div>
-        </header>
+        </div>
+    </div>
 
+    <div class="main-content">
         <div class="profile-container">
             <h2>Edit Profil</h2>
             <div class="profile-content">
@@ -74,7 +72,6 @@
 
                 <div class="profile-details-box">
                     <form id="editProfileForm" action="" method="POST" enctype="multipart/form-data">
-                       
                         <div class="profile-field">
                             <div class="field-left">
                                 <span class="field-label">Nama</span>
@@ -179,6 +176,20 @@
             } else {
                 field.style.display = 'none';
                 span.style.display = 'block';
+            }
+        }
+
+        // Function to toggle dark/light mode
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById('theme-icon');
+            body.classList.toggle('dark-mode');
+
+            // Change the icon based on the theme
+            if (body.classList.contains('dark-mode')) {
+                themeIcon.src = "<?= base_url('assets/images/sun.png'); ?>"; // Light mode icon
+            } else {
+                themeIcon.src = "<?= base_url('assets/images/moon.png'); ?>"; // Dark mode icon
             }
         }
     </script>

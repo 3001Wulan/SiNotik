@@ -69,7 +69,7 @@
                             <input type="file" id="upload" class="upload-input">
                         </div>
                     </div>
-                    <button class="save-button">Simpan Perubahan</button>
+                    <button class="save-button" type="submit" form="editProfileForm">Simpan Perubahan</button>
                 </div>
 
                 <div class="profile-details-box">
