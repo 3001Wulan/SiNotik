@@ -60,11 +60,13 @@
                 <!-- User Profile -->
                 <div class="user-info">
                     <div class="profile-picture">
-                        <img src="<?= base_url('assets/images/default-avatar.png') ?>" alt="Profile Picture" id="profile-pic">
+                    <img src="<?= base_url('assets/images/' . $profile_picture) ?>" alt="Profile Picture" id="profile-pic">
                         <div class="dropdown-menu" id="profile-dropdown">
                             <div class="dropdown-item">
+                            <a href="<?= base_url('notulen/profilnotulen') ?>" class="dropdown-item">
                                 <img src="<?= base_url('assets/images/user.png') ?>" alt="Profil Icon">
                                 Profil
+                            </a>
                             </div>
                             <div class="dropdown-separator"></div>
                             <div class="dropdown-item" id="logout-btn">

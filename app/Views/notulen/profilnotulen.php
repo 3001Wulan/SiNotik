@@ -59,47 +59,74 @@
                 </div>
             </div>
 
+           
+            <!-- Profil Konten -->
             <div class="profile-content">
                 <h2>Profil</h2>
                 <div class="profile-container">
                     <div class="profile-card">
                         <div class="avatar-container">
-                            <img src="<?= base_url('assets/images/default-avatar.png') ?>" alt="Profile Picture">
+                            <!-- Menampilkan Foto Profil yang Ada -->
+                            <?php if (isset($user_profile['profil_foto']) && $user_profile['profil_foto']): ?>
+                                <img src="<?= base_url('assets/images/profiles/' . $user_profile['profil_foto']) ?>" alt="Foto Profil" class="profile-img">
+                            <?php else: ?>
+                                <img src="<?= base_url('assets/images/delvaut.png') ?>" alt="Foto Profil" class="profile-img">
+                            <?php endif; ?>
                         </div>
-                        <button class="edit-btn">Edit Profil</button>
+                        <!-- Tombol Edit Profil -->
+                        <form action="editprofilnotulen" method="POST">
+                            <input type="hidden" name="nama" value="<?= isset($user_profile['nama']) ? $user_profile['nama'] : 'N/A' ?>">
+                            <input type="hidden" name="nip" value="<?= isset($user_profile['nip']) ? $user_profile['nip'] : 'N/A' ?>">
+                            <input type="hidden" name="jabatan" value="<?= isset($user_profile['jabatan']) ? $user_profile['jabatan'] : 'N/A' ?>">
+                            <input type="hidden" name="alamat" value="<?= isset($user_profile['alamat']) ? $user_profile['alamat'] : 'N/A' ?>">
+                            <input type="hidden" name="tanggal_lahir" value="<?= isset($user_profile['tanggal_lahir']) ? $user_profile['tanggal_lahir'] : 'N/A' ?>">
+                            <input type="hidden" name="email" value="<?= isset($user_profile['email']) ? $user_profile['email'] : 'N/A' ?>">
+                            <input type="hidden" name="password" value="<?= isset($user_profile['password']) ? $user_profile['password'] : 'N/A' ?>">
+                            <input type="hidden" name="role" value="<?= isset($user_profile['role']) ? $user_profile['role'] : 'N/A' ?>">
+                            <input type="hidden" name="profil_foto" value="<?= isset($user_profile['profil_foto']) ? $user_profile['profil_foto'] : 'default.jpg' ?>">
+                            <button type="submit" class="edit-btn">Edit Profil</button>
+                        </form>
                     </div>
+
                     <div class="profile-details">
                         <div class="detail-item">
                             <label>Nama</label>
-                            <div class="value">Heni Yunida</div>
+                            <div class="value"><?= isset($user_profile['nama']) ? $user_profile['nama'] : 'N/A' ?></div>
                         </div>
                         <div class="detail-item">
                             <label>NIP</label>
-                            <div class="value">1234567890</div>
+                            <div class="value"><?= isset($user_profile['nip']) ? $user_profile['nip'] : 'N/A' ?></div>
                         </div>
                         <div class="detail-item">
                             <label>Jabatan</label>
-                            <div class="value">Staff</div>
+                            <div class="value"><?= isset($user_profile['jabatan']) ? $user_profile['jabatan'] : 'N/A' ?></div>
                         </div>
                         <div class="detail-item">
                             <label>Alamat</label>
-                            <div class="value">Solok Selatan</div>
+                            <div class="value"><?= isset($user_profile['alamat']) ? $user_profile['alamat'] : 'N/A' ?></div>
                         </div>
                         <div class="detail-item">
                             <label>Tanggal Lahir</label>
-                            <div class="value">10-10-2004</div>
+                            <div class="value"><?= isset($user_profile['tanggal_lahir']) ? $user_profile['tanggal_lahir'] : 'N/A' ?></div>
                         </div>
                         <div class="detail-item">
                             <label>Email</label>
-                            <div class="value">Heni@gmail.com</div>
+                            <div class="value"><?= isset($user_profile['email']) ? $user_profile['email'] : 'N/A' ?></div>
                         </div>
                         <div class="detail-item">
                             <label>Password</label>
-                            <div class="value">123</div>
+                        <div class="value">
+                        <?php 
+                            // Menghitung panjang password dan menampilkan bintang
+                            $passwordLength = isset($user_profile['password']) ? strlen($user_profile['password']) : 0;
+                            echo str_repeat('*', $passwordLength);
+                        ?>
                         </div>
+                        </div>
+
                         <div class="detail-item">
                             <label>Status</label>
-                            <div class="value">Admin</div>
+                            <div class="value"><?= isset($user_profile['role']) ? $user_profile['role'] : 'N/A' ?></div>
                         </div>
                     </div>
                 </div>

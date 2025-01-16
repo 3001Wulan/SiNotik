@@ -638,3 +638,37 @@ canvas {
         width: 100%; 
     }
 }
+.user-info {
+    display: flex;
+    justify-content: space-between; /* Menyebarkan elemen ke kiri dan kanan */
+    align-items: center;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+}
+
+.user-name {
+    font-weight: bold;
+}
+
+.user-role {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.profile-picture {
+    display: flex;
+    flex-direction: column; /* Agar gambar dan teks berada dalam kolom yang sama */
+    align-items: flex-end; /* Menempatkan gambar di sebelah kanan */
+}
+
+.profile-img {
+    width: 40px; /* Ukuran gambar profil */
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
