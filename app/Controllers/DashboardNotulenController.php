@@ -39,7 +39,7 @@ class DashboardNotulenController extends BaseController
         log_message('debug', 'User Name: ' . $user_name);
         log_message('debug', 'User Role: ' . $user_role);
 
-        return view('pegawai/dashboard_pegawai', [
+        return view('notulen/dashboard_notulen', [
             'total_pegawai' => $totalPegawai,
             'pegawai' => $pegawai,
             'jumlah_pegawai_per_bidang' => $jumlahPegawaiPerBidang,
