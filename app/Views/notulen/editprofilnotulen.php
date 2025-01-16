@@ -16,19 +16,19 @@
         </div>
         <ul class="menu">
             <li>
-                <a href="/dashboard.php" class="menu-item"> 
+            <a href="<?= base_url('notulen/dashboard_notulen'); ?>" class="menu-item">
                     <img src="/assets/images/dashboard.png" alt="Dashboard" class="menu-icon">
                     <span>Dashboard</span>
                 </a>
             </li>
             <li>
-                <a href="/datapengguna.php" class="menu-item">
+            <a href="<?= base_url('notulen/dashboard_pegawai'); ?>" class="menu-item">
                     <img src="/assets/images/Notulensi.png" alt="Notulensi" class="menu-icon">
                     <span>Notulensi</span>
                 </a>
             </li>
             <li>
-                <a href="/riwayatnotulensi.php" class="menu-item">
+            <a href="<?= base_url('notulen/riwayatnotulen'); ?>" class="menu-item">
                     <img src="/assets/images/riwayat.png" alt="Riwayat Notulensi" class="menu-icon">
                     <span>Riwayat Notulensi</span>
                 </a>
@@ -53,6 +53,7 @@
 
     <div class="main-content">
         <div class="profile-container">
+            <form id="editProfileForm" action="" method="POST" enctype="multipart/form-data">
             <h2>Edit Profil</h2>
             <div class="profile-content">
                 <div class="left-section">

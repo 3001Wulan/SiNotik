@@ -170,24 +170,26 @@ body {
 }
 
 .profile-image-container {
-    width: 160px;
-    height: 150px;
+    width: 160px; /* Ukuran kotak untuk gambar */
+    height: 160px; /* Ukuran kotak untuk gambar */
     margin-top: 60px;
+    position: relative;
 }
 
 .profile-image {
     width: 100%;
     height: 100%;
-    border-radius: 50%;
+    border-radius: 50%; /* Membuat gambar menjadi lingkaran */
     background-color: #e5e7eb;
     overflow: hidden;
     margin: 0;
+    object-fit: cover; /* Menyesuaikan gambar agar mengisi kotak */
 }
 
 .avatar-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Menyesuaikan gambar dalam lingkaran */
 }
 
 .upload-input {

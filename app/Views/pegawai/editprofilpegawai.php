@@ -54,6 +54,7 @@
 
     <div class="main-content">
         <div class="profile-container">
+            <form id="editProfileForm" action="" method="POST" enctype="multipart/form-data">
             <h2>Edit Profil</h2>
             <div class="profile-content">
                 <div class="left-section">

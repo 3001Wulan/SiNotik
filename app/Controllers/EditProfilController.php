@@ -29,7 +29,7 @@ class EditProfilController extends Controller
 
         if ($file && $file->isValid()) {
             $profil_foto = $file->getName(); 
-            $targetDir = WRITEPATH . 'uploads/images/';
+            $targetDir = FCPATH . 'Assets/images/profiles/';
 
             if (!is_dir($targetDir)) {
                 mkdir($targetDir, 0777, true);
