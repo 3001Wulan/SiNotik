@@ -25,3 +25,375 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 10 SYSTEMPATH\rewrite.php(44): require_once('D:\\SiNotik\\public\\index.php')
 INFO - 2025-01-16 02:42:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:47:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:48:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:48:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:51:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:51:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:51:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-16 04:51:52 --> Login attempt with username: jaja
+ERROR - 2025-01-16 04:51:53 --> Checking login for username: jaja
+ERROR - 2025-01-16 04:51:53 --> User data: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwoon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-16 03:00:17
+)
+
+ERROR - 2025-01-16 04:51:53 --> Password verify result for username jaja: Success
+ERROR - 2025-01-16 04:51:53 --> Login success for username: jaja
+INFO - 2025-01-16 04:51:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-16 04:51:53 --> User ID: 13
+DEBUG - 2025-01-16 04:51:53 --> Profile Picture: pegawai.png
+DEBUG - 2025-01-16 04:51:53 --> User Name: jungwoon
+DEBUG - 2025-01-16 04:51:53 --> User Role: pegawai
+INFO - 2025-01-16 04:51:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:51:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:51:57 --> User profile for ID 13 retrieved successfully.
+INFO - 2025-01-16 04:51:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:52:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:52:02 --> Data yang akan diperbarui: Array
+(
+    [alamat] => N/A
+)
+
+INFO - 2025-01-16 04:52:02 --> Data sebelum pembaruan: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwoon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-16 03:00:17
+)
+
+INFO - 2025-01-16 04:52:02 --> Data yang akan dikirim: Array
+(
+    [alamat] => N/A
+)
+
+INFO - 2025-01-16 04:52:02 --> Data pengguna yang ada: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwoon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-16 03:00:17
+)
+
+INFO - 2025-01-16 04:52:02 --> Tidak ada perubahan valid untuk pengguna ID 13. Pembaruan tidak diperlukan.
+INFO - 2025-01-16 04:52:02 --> Data profil pengguna dengan ID 13 diperbarui. Perubahan: Alamat:  -> N/A
+INFO - 2025-01-16 04:52:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:52:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:52:21 --> User profile for ID 13 retrieved successfully.
+INFO - 2025-01-16 04:52:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:52:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:52:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:52:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:52:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-16 04:52:43 --> Login attempt with username: lili
+ERROR - 2025-01-16 04:52:43 --> Checking login for username: lili
+ERROR - 2025-01-16 04:52:43 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => dada
+    [nip] => 123456780123456789
+    [email] => lala10@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => jalan 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-09
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-15 06:20:35
+)
+
+ERROR - 2025-01-16 04:52:43 --> Password verify result for username lili: Success
+ERROR - 2025-01-16 04:52:43 --> Login success for username: lili
+INFO - 2025-01-16 04:52:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-16 04:52:43 --> User ID: 9
+DEBUG - 2025-01-16 04:52:43 --> Profile Picture: image.png
+DEBUG - 2025-01-16 04:52:43 --> User Name: dada
+DEBUG - 2025-01-16 04:52:43 --> User Role: admin
+INFO - 2025-01-16 04:52:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:52:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:52:47 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-16 04:52:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:52:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:52:51 --> Data yang akan diperbarui: Array
+(
+)
+
+INFO - 2025-01-16 04:52:51 --> Data sebelum pembaruan: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => dada
+    [nip] => 123456780123456789
+    [email] => lala10@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => jalan 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-09
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-15 06:20:35
+)
+
+INFO - 2025-01-16 04:52:51 --> Data yang akan dikirim: Array
+(
+)
+
+INFO - 2025-01-16 04:52:51 --> Tidak ada perubahan data untuk profil pengguna dengan ID 9
+INFO - 2025-01-16 04:52:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:53:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:53:28 --> Data yang akan diperbarui: Array
+(
+)
+
+INFO - 2025-01-16 04:53:28 --> Data sebelum pembaruan: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => dada
+    [nip] => 123456780123456789
+    [email] => lala10@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => jalan 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-09
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-15 06:20:35
+)
+
+INFO - 2025-01-16 04:53:28 --> Data yang akan dikirim: Array
+(
+)
+
+INFO - 2025-01-16 04:53:28 --> Tidak ada perubahan data untuk profil pengguna dengan ID 9
+INFO - 2025-01-16 04:53:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:53:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:53:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:53:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:53:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-16 04:53:42 --> Login attempt with username: jaja
+ERROR - 2025-01-16 04:53:42 --> Checking login for username: jaja
+ERROR - 2025-01-16 04:53:42 --> User data: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwoon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-16 03:00:17
+)
+
+ERROR - 2025-01-16 04:53:42 --> Password verify result for username jaja: Failure
+ERROR - 2025-01-16 04:53:42 --> Login failed for username: jaja
+INFO - 2025-01-16 04:53:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:53:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:53:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-16 04:53:51 --> Login attempt with username: jaja
+ERROR - 2025-01-16 04:53:51 --> Checking login for username: jaja
+ERROR - 2025-01-16 04:53:51 --> User data: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwoon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-16 03:00:17
+)
+
+ERROR - 2025-01-16 04:53:51 --> Password verify result for username jaja: Success
+ERROR - 2025-01-16 04:53:51 --> Login success for username: jaja
+INFO - 2025-01-16 04:53:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-16 04:53:51 --> User ID: 13
+DEBUG - 2025-01-16 04:53:51 --> Profile Picture: pegawai.png
+DEBUG - 2025-01-16 04:53:51 --> User Name: jungwoon
+DEBUG - 2025-01-16 04:53:51 --> User Role: pegawai
+INFO - 2025-01-16 04:53:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:53:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:53:54 --> User profile for ID 13 retrieved successfully.
+INFO - 2025-01-16 04:53:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:53:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:53:59 --> Data yang akan diperbarui: Array
+(
+    [alamat] => N/A
+)
+
+INFO - 2025-01-16 04:53:59 --> Data sebelum pembaruan: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwoon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-16 03:00:17
+)
+
+INFO - 2025-01-16 04:53:59 --> Data yang akan dikirim: Array
+(
+    [alamat] => N/A
+)
+
+INFO - 2025-01-16 04:53:59 --> Data pengguna yang ada: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwoon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-16 03:00:17
+)
+
+INFO - 2025-01-16 04:53:59 --> Tidak ada perubahan valid untuk pengguna ID 13. Pembaruan tidak diperlukan.
+INFO - 2025-01-16 04:53:59 --> Data profil pengguna dengan ID 13 diperbarui. Perubahan: Alamat:  -> N/A
+INFO - 2025-01-16 04:54:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:54:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:54:58 --> Data yang akan diperbarui: Array
+(
+    [alamat] => N/A
+)
+
+INFO - 2025-01-16 04:54:58 --> Data sebelum pembaruan: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwoon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-16 03:00:17
+)
+
+INFO - 2025-01-16 04:54:58 --> Data yang akan dikirim: Array
+(
+    [alamat] => N/A
+)
+
+INFO - 2025-01-16 04:54:58 --> Data pengguna yang ada: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwoon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-16 03:00:17
+)
+
+INFO - 2025-01-16 04:54:58 --> Tidak ada perubahan valid untuk pengguna ID 13. Pembaruan tidak diperlukan.
+INFO - 2025-01-16 04:54:58 --> Data profil pengguna dengan ID 13 diperbarui. Perubahan: Alamat:  -> N/A
+INFO - 2025-01-16 04:54:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:55:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:55:05 --> User profile for ID 13 retrieved successfully.
+INFO - 2025-01-16 04:55:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:55:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:55:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:55:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-16 04:55:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-16 04:55:23 --> Login attempt with username: notulensi
+ERROR - 2025-01-16 04:55:23 --> Checking login for username: notulensi
+ERROR - 2025-01-16 04:55:23 --> User data: Array
+(
+    [user_id] => 26
+    [username] => notulensi
+    [nama] => 
+    [nip] => 345678909876789376
+    [email] => notulensi@gmail.com
+    [password] => $2y$10$ZhNj131GHHBnlqCvbB3.bOR13E/V13x3i1tumnFZPNg.YhqScDCnq
+    [role] => notulensi
+    [Bidang] => 
+    [profil_foto] => 
+    [alamat] => 
+    [jabatan] => 
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-16 02:36:45
+    [updated_at] => 2025-01-16 09:49:50
+)
+
+ERROR - 2025-01-16 04:55:23 --> Password verify result for username notulensi: Success
+ERROR - 2025-01-16 04:55:23 --> Login success for username: notulensi

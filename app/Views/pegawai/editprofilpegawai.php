@@ -23,8 +23,8 @@
             </li>
             <li>
                 <a href="/datapengguna.php" class="menu-item">
-                    <img src="/assets/images/datauser.png" alt="Data Pengguna" class="menu-icon">
-                    <span>Data Pengguna</span>
+                    <img src="/assets/images/notulensi.png" alt="Data Pengguna" class="menu-icon">
+                    <span>Notulensi</span>
                 </a>
             </li>
             <li>
@@ -43,10 +43,13 @@
             </div>
             <div class="user-info">
                 <div class="user-text">
-                    <div class="user-name">Heni Yunida</div>
-                    <div class="user-role">Pegawai</div>
+                    <div class="user-name"><?= $nama ?? 'N/A' ?></div>
+                    <div class="user-role"><?= $role ?? 'N/A' ?></div>
                 </div>
-                <div class="user-avatar"></div>
+                <div class="user-avatar">
+                    <img src="<?= base_url('assets/images/profiles/' . ($profil_foto ?? 'default-avatar.png')) ?>" 
+                    alt="User Avatar" class="avatar-img">
+                </div>
             </div>
         </div>
     </div>
@@ -59,7 +62,7 @@
                     <div class="profile-image-box">
                         <div class="profile-image-container">
                             <div class="profile-image">
-                                <img src="/assets/images/default-avatar.png" alt="Profile" class="avatar-img">
+                                <img src="<?= base_url('assets/images/profiles/' . ($profil_foto ?? 'default-avatar.png')) ?>" alt="Profile" class="avatar-img">
                             </div>
                         </div>
                         <div class="upload-container">
@@ -70,61 +73,84 @@
                 </div>
 
                 <div class="profile-details-box">
+                    <!-- Field for Nama -->
                     <div class="profile-field">
                         <div class="field-left">
                             <span class="field-label">Nama</span>
-                            <span class="field-value">Heni Yunida</span>
+                            <span id="nama-display" class="field-value"><?= $nama ?? 'N/A' ?></span>
+                            <input type="text" id="nama-input" value="<?= $nama ?? 'N/A' ?>" class="field-input" style="display:none;">
                         </div>
-                        <i class="fas fa-edit edit-icon"></i>
+                        <i class="fas fa-edit edit-icon" onclick="toggleEdit('nama-input', 'nama-display')"></i>
                     </div>
+
+                    <!-- Field for NIP -->
                     <div class="profile-field">
                         <div class="field-left">
                             <span class="field-label">NIP</span>
-                            <span class="field-value">1234567890</span>
+                            <span id="nip-display" class="field-value"><?= $nip ?? 'N/A' ?></span>
+                            <input type="text" id="nip-input" value="<?= $nip ?? 'N/A' ?>" class="field-input" style="display:none;">
                         </div>
-                        <i class="fas fa-edit edit-icon"></i>
+                        <i class="fas fa-edit edit-icon" onclick="toggleEdit('nip-input', 'nip-display')"></i>
                     </div>
+
+                    <!-- Field for Jabatan -->
                     <div class="profile-field">
                         <div class="field-left">
                             <span class="field-label">Jabatan</span>
-                            <span class="field-value">Staff</span>
+                            <span id="jabatan-display" class="field-value"><?= $jabatan ?? 'N/A' ?></span>
+                            <input type="text" id="jabatan-input" value="<?= $jabatan ?? 'N/A' ?>" class="field-input" style="display:none;">
                         </div>
-                        <i class="fas fa-edit edit-icon"></i>
+                        <i class="fas fa-edit edit-icon" onclick="toggleEdit('jabatan-input', 'jabatan-display')"></i>
                     </div>
+
+                    <!-- Field for Alamat -->
                     <div class="profile-field">
                         <div class="field-left">
                             <span class="field-label">Alamat</span>
-                            <span class="field-value">Solok Selatan</span>
+                            <span id="alamat-display" class="field-value"><?= $alamat ?? 'N/A' ?></span>
+                            <input type="text" id="alamat-input" value="<?= $alamat ?? 'N/A' ?>" class="field-input" style="display:none;">
                         </div>
-                        <i class="fas fa-edit edit-icon"></i>
+                        <i class="fas fa-edit edit-icon" onclick="toggleEdit('alamat-input', 'alamat-display')"></i>
                     </div>
+
+                    <!-- Field for Tanggal Lahir -->
                     <div class="profile-field">
                         <div class="field-left">
                             <span class="field-label">Tanggal Lahir</span>
-                            <span class="field-value">10/10/2004</span>
+                            <span id="tanggal_lahir-display" class="field-value"><?= $tanggal_lahir ?? 'N/A' ?></span>
+                            <input type="date" id="tanggal_lahir-input" value="<?= $tanggal_lahir ?? 'N/A' ?>" class="field-input" style="display:none;">
                         </div>
-                        <i class="fas fa-edit edit-icon"></i>
+                        <i class="fas fa-edit edit-icon" onclick="toggleEdit('tanggal_lahir-input', 'tanggal_lahir-display')"></i>
                     </div>
+
+                    <!-- Field for Email -->
                     <div class="profile-field">
                         <div class="field-left">
                             <span class="field-label">Email</span>
-                            <span class="field-value">heni@gmail.com</span>
+                            <span id="email-display" class="field-value"><?= $email ?? 'N/A' ?></span>
+                            <input type="email" id="email-input" value="<?= $email ?? 'N/A' ?>" class="field-input" style="display:none;">
                         </div>
-                        <i class="fas fa-edit edit-icon"></i>
+                        <i class="fas fa-edit edit-icon" onclick="toggleEdit('email-input', 'email-display')"></i>
                     </div>
+
+                    <!-- Field for Password -->
                     <div class="profile-field">
                         <div class="field-left">
                             <span class="field-label">Password</span>
-                            <span class="field-value">123</span>
+                            <span id="password-display" class="field-value">•••••••</span>
+                            <input type="password" id="password-input" value="•••••••" class="field-input" style="display:none;">
                         </div>
-                        <i class="fas fa-edit edit-icon"></i>
+                        <i class="fas fa-edit edit-icon" onclick="toggleEdit('password-input', 'password-display')"></i>
                     </div>
+
+                    <!-- Field for Status -->
                     <div class="profile-field">
                         <div class="field-left">
                             <span class="field-label">Status</span>
-                            <span class="field-value">Pegawai</span>
+                            <span id="status-display" class="field-value"><?= $role ?? 'N/A' ?></span>
+                            <input type="text" id="status-input" value="<?= $role ?? 'N/A' ?>" class="field-input" style="display:none;">
                         </div>
-                        <i class="fas fa-edit edit-icon"></i>
+                        <i class="fas fa-edit edit-icon" onclick="toggleEdit('status-input', 'status-display')"></i>
                     </div>
                 </div>
             </div>
@@ -145,17 +171,20 @@
                 themeIcon.src = "/assets/images/moon.png";
             }
         });
+
+        function toggleEdit(fieldId, spanId) {
+            var field = document.getElementById(fieldId);
+            var span = document.getElementById(spanId);
+
+            // Toggle between input and span visibility
+            if (field.style.display === 'none') {
+                field.style.display = 'block';
+                span.style.display = 'none';
+            } else {
+                field.style.display = 'none';
+                span.style.display = 'block';
+            }
+        }
     </script>
-    <script>
-    const menuItems = document.querySelectorAll('.menu-item');
-
-    menuItems.forEach(item => {
-        item.addEventListener('click', () => {
-            menuItems.forEach(i => i.classList.remove('active'));
-
-            item.classList.add('active');
-        });
-    });
-</script>
 </body>
 </html>

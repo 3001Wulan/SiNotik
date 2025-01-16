@@ -39,7 +39,7 @@ class Auth extends BaseController
                 } elseif ($user['role'] === 'pegawai') {
                     return redirect()->to('/pegawai/dashboard_pegawai');
                 } elseif ($user['role'] === 'notulen') {
-                    return redirect()->to('/notulen/dashboard');
+                    return redirect()->to('/notulen/dashboard_notulen');
                 } else {
                     // Arahkan ke halaman default jika role tidak dikenali
                     return redirect()->to('/default/dashboard');
