@@ -29,6 +29,8 @@ $routes->get('admin/riwayatadmin', 'RiwayatAdminController::index');
 $routes->get('notulen/editprofilnotulwn', 'EditProfilNotulenController::index');
 $routes->post('notulen/editprofilnotulen', 'EditProfilNotulenController::editProfil');
 $routes->get('/editprofilnotulen/(:num)', 'EditProfilNotulenController::editProfil/$1');
+$routes->get('admin/tambahpengguna', 'TambahPenggunaController::index');
+$routes->post('tambah-pengguna/simpan', 'TambahPenggunaController::simpan');
 
 
 

@@ -4,31 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambah Pengguna</title>
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/tambahpengguna.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/tambahpengguna.css'); ?>">
 </head>
 <body>
     <div class="container">
         <!-- Sidebar -->
         <div class="sidebar">
             <div class="logo">
-                <img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="Logo">
+                <img src="<?= base_url('assets/images/logo.png'); ?>" alt="Logo">
             </div>
             <ul>
                 <li class="dashboard">
-                    <a href="#" class="inactive">
-                        <img src="<?php echo base_url('assets/images/dashboard_admin.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
+                    <a href="dashboard_admin" class="inactive">
+                        <img src="<?= base_url('assets/images/dashboard_admin.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
                         Dashboard
                     </a>
                 </li>
                 <li class="active">
                     <a href="#" class="active">
-                        <img src="<?php echo base_url('assets/images/data_pengguna.png'); ?>" alt="Data Pengguna Icon" class="sidebar-icon">
+                        <img src="<?= base_url('assets/images/data_pengguna.png'); ?>" alt="Data Pengguna Icon" class="sidebar-icon">
                         Data Pengguna
                     </a>
                 </li>
                 <li class="riwayat-notulensi">
                     <a href="#" class="inactive">
-                        <img src="<?php echo base_url('assets/images/riwayat_notulensi.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
+                        <img src="<?= base_url('assets/images/riwayat_notulensi.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
                         Riwayat Notulensi
                     </a>
                 </li>
@@ -40,14 +40,14 @@
             <div class="top-bar">
                 <!-- Dark Mode Button -->
                 <div class="toggle-dark-mode">
-                    <img id="toggleDarkMode" src="<?php echo base_url('assets/images/moon.png'); ?>" alt="Dark Mode">
+                    <img id="toggleDarkMode" src="<?= base_url('assets/images/moon.png'); ?>" alt="Dark Mode">
                 </div>
 
                 <!-- User Profile -->
                 <div class="user-info">
                     <span>Heni Yunida</span>
                     <span>Admin</span>
-                    <img src="<?php echo base_url('assets/images/admin.png'); ?>" alt="Admin">
+                    <img src="<?= base_url('assets/images/admin.png'); ?>" alt="Admin">
                 </div>
             </div>
 
@@ -55,10 +55,10 @@
                 <h1>Tambah Pengguna</h1>
             </div>
             
-            <div class="forms-wrapper">
-                <!-- Form Data Pengguna (Kiri) -->
-                <div class="form-container">
-                    <form id="form-data-pengguna" action="#" method="post">
+            <form id="form-data-pengguna" action="<?= base_url('tambah-pengguna/simpan'); ?>" method="post" enctype="multipart/form-data">
+                <div class="forms-wrapper">
+                    <!-- Form Data Pengguna (Kiri) -->
+                    <div class="form-container">
                         <h2>Form Pengguna</h2>
                         <label for="username">Username</label>
                         <input type="text" id="username" name="username" placeholder="input username here" required>
@@ -80,13 +80,10 @@
 
                         <label for="jabatan">Jabatan</label>
                         <input type="text" id="jabatan" name="jabatan" placeholder="input jabatan here" required>
-                    </form>
-                </div>
+                    </div>
 
-                <!-- Form-container (Kanan) -->
-                <div class="forms-container">
                     <!-- Form Unggah Gambar -->
-                    <form id="form-unggah-gambar" action="#" method="post" enctype="multipart/form-data">
+                    <div class="forms-container">
                         <h2>Form Foto</h2>
                         <div class="upload-container">
                             <label for="photo" class="upload-label">Unggah Foto</label>
@@ -100,33 +97,31 @@
                         </div>
     
                         <p id="error-message" style="color: red; display: none;">Ukuran file tidak boleh lebih dari 5MB!</p>
-                    </form>
 
-                    <!-- Form Input Password -->
-                    <form id="form-password" action="#" method="post">
+                        <!-- Form Password -->
                         <h2>Form Password</h2>
                         <label for="password">Password</label>
                         <div class="input-container">
                             <input type="password" id="password" name="password" placeholder="input password here" required>
-                            <img src="<?php echo base_url('assets/images/Lock.png'); ?>" alt="Lock Icon" class="icon">
+                            <img src="<?= base_url('assets/images/Lock.png'); ?>" alt="Lock Icon" class="icon">
                         </div>
 
                         <label for="confirm-password">Confirm Password</label>
                         <div class="input-container">
                             <input type="password" id="confirm-password" name="confirm-password" placeholder="input password here" required>
-                            <img src="<?php echo base_url('assets/images/Lock.png'); ?>" alt="Lock Icon" class="icon">
+                            <img src="<?= base_url('assets/images/Lock.png'); ?>" alt="Lock Icon" class="icon">
                         </div>
-                    </form>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Button Simpan Perubahan -->
-            <div class="button-container">
-                <button type="submit" id="simpan-perubahan" class="submit-btn">
-                    Simpan Perubahan
-                    <img src="<?php echo base_url('assets/images/simpan.png'); ?>" alt="Save Icon" class="save-icon">
-                </button>
-            </div>
+                <!-- Button Simpan Perubahan -->
+                <div class="button-container">
+                    <button type="submit" id="simpan-perubahan" class="submit-btn">
+                        Simpan Perubahan
+                        <img src="<?= base_url('assets/images/simpan.png'); ?>" alt="Save Icon" class="save-icon">
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 
@@ -138,8 +133,8 @@
         toggleDarkModeButton.addEventListener('click', function () {
             body.classList.toggle('dark-mode');
             toggleDarkModeButton.src = body.classList.contains('dark-mode')
-                ? '<?php echo base_url("assets/images/sun.png"); ?>'
-                : '<?php echo base_url("assets/images/moon.png"); ?>';
+                ? '<?= base_url("assets/images/sun.png"); ?>'
+                : '<?= base_url("assets/images/moon.png"); ?>';
         });
 
         // Image Preview and Validation
@@ -152,7 +147,7 @@
             const file = event.target.files[0];
 
             if (file) {
-                // Validasi ukuran file
+               
                 if (file.size > 5 * 1024 * 1024) { // Maksimal 5MB
                     errorMessage.style.display = 'block';
                     photoInput.value = ''; // Kosongkan input file
@@ -161,12 +156,12 @@
                     errorMessage.style.display = 'none'; // Sembunyikan pesan error
                     const reader = new FileReader();
 
-                reader.onload = function (e) {
-                    previewImage.src = e.target.result;
-                    previewImage.style.display = 'block'; // Tampilkan gambar preview
-                };
+                    reader.onload = function (e) {
+                        previewImage.src = e.target.result;
+                        previewImage.style.display = 'block'; // Tampilkan gambar preview
+                    };
 
-                reader.readAsDataURL(file); // Membaca file dan menampilkan sebagai gambar
+                    reader.readAsDataURL(file); // Membaca file dan menampilkan sebagai gambar
                 }
             }
         });
@@ -175,7 +170,7 @@
         const passwordField = document.getElementById('password');
         const confirmPasswordField = document.getElementById('confirm-password');
 
-        document.getElementById('form-password').addEventListener('submit', function (e) {
+        document.getElementById('form-data-pengguna').addEventListener('submit', function (e) {
             if (passwordField.value !== confirmPasswordField.value) {
                 e.preventDefault();
                 alert('Password dan konfirmasi password tidak cocok!');

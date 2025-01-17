@@ -1,3 +1,1775 @@
 INFO - 2025-01-17 07:30:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-01-17 07:32:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-01-17 09:02:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:10:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:11:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:11:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:11:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:11:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:11:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:12:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-17 09:12:04 --> Login attempt with username: jaja
+ERROR - 2025-01-17 09:12:04 --> Checking login for username: jaja
+ERROR - 2025-01-17 09:12:04 --> User data: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-17 07:33:28
+)
+
+ERROR - 2025-01-17 09:12:04 --> Password verify result for username jaja: Success
+ERROR - 2025-01-17 09:12:04 --> Login success for username: jaja
+INFO - 2025-01-17 09:12:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-17 09:12:05 --> User ID: 13
+DEBUG - 2025-01-17 09:12:05 --> Profile Picture: pegawai.png
+DEBUG - 2025-01-17 09:12:05 --> User Name: jungwon
+DEBUG - 2025-01-17 09:12:05 --> User Role: pegawai
+INFO - 2025-01-17 09:12:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:12:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:12:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:12:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-17 09:12:17 --> Login attempt with username: lili
+ERROR - 2025-01-17 09:12:17 --> Checking login for username: lili
+ERROR - 2025-01-17 09:12:17 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => alhamdulillah
+    [nip] => 123456780123456789
+    [email] => bismillah@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => jalan 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-09
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-16 07:45:21
+)
+
+ERROR - 2025-01-17 09:12:17 --> Password verify result for username lili: Success
+ERROR - 2025-01-17 09:12:18 --> Login success for username: lili
+INFO - 2025-01-17 09:12:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-17 09:12:18 --> User ID: 9
+DEBUG - 2025-01-17 09:12:18 --> Profile Picture: image.png
+DEBUG - 2025-01-17 09:12:18 --> User Name: alhamdulillah
+DEBUG - 2025-01-17 09:12:18 --> User Role: admin
+INFO - 2025-01-17 09:12:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:13:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:13:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:13:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-17 09:13:13 --> Login attempt with username: coba
+ERROR - 2025-01-17 09:13:13 --> Checking login for username: coba
+ERROR - 2025-01-17 09:13:13 --> User data: Array
+(
+    [user_id] => 28
+    [username] => coba
+    [nama] => coba berhadiah
+    [nip] => 123456712345678901
+    [email] => coba@gmail.com
+    [password] => $2y$10$Tm3wwSiTONuV6ZwWrXULeub/4y..1v2ywEn5D20YFU0D/.Ggg2c2e
+    [role] => notulensi
+    [Bidang] => 
+    [profil_foto] => wulan.jpg
+    [alamat] => 
+    [jabatan] => 
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-16 15:29:28
+    [updated_at] => 2025-01-16 16:19:53
+)
+
+ERROR - 2025-01-17 09:13:13 --> Password verify result for username coba: Success
+ERROR - 2025-01-17 09:13:13 --> Login success for username: coba
+INFO - 2025-01-17 09:13:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-17 09:13:14 --> User ID: 28
+DEBUG - 2025-01-17 09:13:14 --> Profile Picture: wulan.jpg
+DEBUG - 2025-01-17 09:13:14 --> User Name: coba berhadiah
+DEBUG - 2025-01-17 09:13:14 --> User Role: notulensi
+INFO - 2025-01-17 09:13:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:13:21 --> Mencoba mengambil pengguna dengan role notulensi dan pegawai
+INFO - 2025-01-17 09:13:21 --> Pengguna dengan role notulensi atau pegawai ditemukan: Array
+(
+    [0] => Array
+        (
+            [user_id] => 3
+            [username] => admin
+            [nama] => John Doe
+            [nip] => 123456789
+            [email] => admin@example.com
+            [password] => $2y$10$vtl3rv1OaY3pW2hnmPpXoe1OzmxqdjvxJLl.7qZDvhjN8fQfo6Mhq
+
+
+            [role] => pegawai
+            [Bidang] => Statistik dan Persandian
+            [profil_foto] => profile1.jpg
+            [alamat] => Jl. Merdeka No. 123, Jakarta
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 22:02:06
+            [updated_at] => 2025-01-10 16:07:07
+        )
+
+    [1] => Array
+        (
+            [user_id] => 6
+            [username] => wulan
+            [nama] => wulandariyulianis
+            [nip] => 18679202938390
+            [email] => lala@gmail.com
+            [password] => $2y$10$QW2QpL2k9f5eBfqMjakx7eNCI3/XVLCO9a42jzNPjzvXpS8iFmqoK
+            [role] => notulensi
+            [Bidang] => Aptika
+            [profil_foto] => wulan.jpg
+
+
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 15:02:18
+            [updated_at] => 2025-01-15 21:18:55
+        )
+
+    [2] => Array
+        (
+            [user_id] => 7
+            [username] => lala
+            [nama] => lala
+
+            [nip] => 123456789123456789
+            [email] => lala1@gmail.com
+            [password] => $2y$10$tBSYxTpvfWjIlSkqSZ.7TeAQp2RvMqDg2J91d0vUGxaieUvPIv61a
+            [role] => notulensi
+            [Bidang] => Aptika
+            [profil_foto] => 
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 15:16:16
+            [updated_at] => 2025-01-15 21:48:23
+        )
+
+    [3] => Array
+        (
+            [user_id] => 13
+            [username] => jaja
+            [nama] => jungwon
+            [nip] => 123456788987654324
+            [email] => jaja@gmail.com
+            [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+            [role] => pegawai
+            [Bidang] => IKP
+            [profil_foto] => pegawai.png
+            [alamat] => 
+            [jabatan] => korea
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-13 07:53:10
+            [updated_at] => 2025-01-17 07:33:28
+        )
+
+    [4] => Array
+        (
+            [user_id] => 17
+            [username] => notulensi_user17
+            [nama] => Nama Notulensi 17
+            [nip] => 12345678917
+            [email] => notulensi_user17@example.com
+            [password] => password_enkripsi17
+            [role] => pegawai
+            [Bidang] => Administrasi
+            [profil_foto] => foto_profil17.jpg
+            [alamat] => Alamat Notulensi 17
+            [jabatan] => Notulensi
+            [tanggal_lahir] => 1997-07-17
+            [created_at] => 2025-01-16 09:28:25
+            [updated_at] => 2025-01-16 09:28:25
+        )
+
+    [5] => Array
+        (
+            [user_id] => 18
+            [username] => notulensi_user18
+            [nama] => Nama Notulensi 18
+            [nip] => 12345678918
+            [email] => notulensi_user18@example.com
+            [password] => password_enkripsi18
+            [role] => notulensi
+            [Bidang] => Administrasi
+            [profil_foto] => 
+            [alamat] => Alamat Notulensi 18
+            [jabatan] => Notulensi
+            [tanggal_lahir] => 1998-08-18
+            [created_at] => 2025-01-16 09:28:25
+            [updated_at] => 2025-01-17 00:16:49
+        )
+
+    [6] => Array
+        (
+            [user_id] => 19
+            [username] => notulensi_user19
+            [nama] => Nama Notulensi 19
+            [nip] => 12345678919
+            [email] => notulensi_user19@example.com
+            [password] => password_enkripsi19
+            [role] => notulensi
+            [Bidang] => Administrasi
+            [profil_foto] => foto_profil19.jpg
+            [alamat] => Alamat Notulensi 19
+            [jabatan] => Notulensi
+            [tanggal_lahir] => 1999-09-19
+            [created_at] => 2025-01-16 09:28:25
+            [updated_at] => 2025-01-16 09:28:25
+        )
+
+    [7] => Array
+        (
+            [user_id] => 26
+            [username] => notulensi
+            [nama] => alhamdulilla
+            [nip] => 345678909876789376
+            [email] => notulensi@gmail.com
+            [password] => $2y$10$ZhNj131GHHBnlqCvbB3.bOR13E/V13x3i1tumnFZPNg.YhqScDCnq
+            [role] => notulensi
+            [Bidang] => 
+            [profil_foto] => image.png
+
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-16 02:36:45
+            [updated_at] => 2025-01-16 15:11:16
+        )
+
+    [8] => Array
+        (
+            [user_id] => 28
+            [username] => coba
+            [nama] => coba berhadiah
+            [nip] => 123456712345678901
+            [email] => coba@gmail.com
+            [password] => $2y$10$Tm3wwSiTONuV6ZwWrXULeub/4y..1v2ywEn5D20YFU0D/.Ggg2c2e
+            [role] => notulensi
+            [Bidang] => 
+            [profil_foto] => wulan.jpg
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-16 15:29:28
+            [updated_at] => 2025-01-16 16:19:53
+        )
+
+    [9] => Array
+        (
+            [user_id] => 31
+            [username] => gaga
+            [nama] => gaga saja
+            [nip] => 123456788987654328
+            [email] => gaga@gmail.com
+            [password] => $2y$10$/HtaUBRXzH5kXy64dPTqUen3o4h/qVhJrMO8.KZpKyXQkzzHxA1om
+            [role] => notulensi
+            [Bidang] => IKP
+            [profil_foto] => 
+            [alamat] => 
+            [jabatan] => Sekretaris
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-17 09:00:17
+            [updated_at] => 2025-01-17 09:00:17
+        )
+
+)
+
+INFO - 2025-01-17 09:13:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:13:21 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-17 09:13:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:13:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:14:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:14:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:14:56 --> Mencoba mengambil pengguna dengan role notulensi dan pegawai
+INFO - 2025-01-17 09:14:56 --> Pengguna dengan role notulensi atau pegawai ditemukan: Array
+(
+    [0] => Array
+        (
+            [user_id] => 3
+            [username] => admin
+            [nama] => John Doe
+            [nip] => 123456789
+            [email] => admin@example.com
+            [password] => $2y$10$vtl3rv1OaY3pW2hnmPpXoe1OzmxqdjvxJLl.7qZDvhjN8fQfo6Mhq
+
+
+            [role] => pegawai
+            [Bidang] => Statistik dan Persandian
+            [profil_foto] => profile1.jpg
+            [alamat] => Jl. Merdeka No. 123, Jakarta
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 22:02:06
+            [updated_at] => 2025-01-10 16:07:07
+        )
+
+    [1] => Array
+        (
+            [user_id] => 6
+            [username] => wulan
+            [nama] => wulandariyulianis
+            [nip] => 18679202938390
+            [email] => lala@gmail.com
+            [password] => $2y$10$QW2QpL2k9f5eBfqMjakx7eNCI3/XVLCO9a42jzNPjzvXpS8iFmqoK
+            [role] => notulensi
+            [Bidang] => Aptika
+            [profil_foto] => wulan.jpg
+
+
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 15:02:18
+            [updated_at] => 2025-01-15 21:18:55
+        )
+
+    [2] => Array
+        (
+            [user_id] => 7
+            [username] => lala
+            [nama] => lala
+
+            [nip] => 123456789123456789
+            [email] => lala1@gmail.com
+            [password] => $2y$10$tBSYxTpvfWjIlSkqSZ.7TeAQp2RvMqDg2J91d0vUGxaieUvPIv61a
+            [role] => notulensi
+            [Bidang] => Aptika
+            [profil_foto] => 
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 15:16:16
+            [updated_at] => 2025-01-15 21:48:23
+        )
+
+    [3] => Array
+        (
+            [user_id] => 13
+            [username] => jaja
+            [nama] => jungwon
+            [nip] => 123456788987654324
+            [email] => jaja@gmail.com
+            [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+            [role] => pegawai
+            [Bidang] => IKP
+            [profil_foto] => pegawai.png
+            [alamat] => 
+            [jabatan] => korea
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-13 07:53:10
+            [updated_at] => 2025-01-17 07:33:28
+        )
+
+    [4] => Array
+        (
+            [user_id] => 17
+            [username] => notulensi_user17
+            [nama] => Nama Notulensi 17
+            [nip] => 12345678917
+            [email] => notulensi_user17@example.com
+            [password] => password_enkripsi17
+            [role] => pegawai
+            [Bidang] => Administrasi
+            [profil_foto] => foto_profil17.jpg
+            [alamat] => Alamat Notulensi 17
+            [jabatan] => Notulensi
+            [tanggal_lahir] => 1997-07-17
+            [created_at] => 2025-01-16 09:28:25
+            [updated_at] => 2025-01-16 09:28:25
+        )
+
+    [5] => Array
+        (
+            [user_id] => 18
+            [username] => notulensi_user18
+            [nama] => Nama Notulensi 18
+            [nip] => 12345678918
+            [email] => notulensi_user18@example.com
+            [password] => password_enkripsi18
+            [role] => notulensi
+            [Bidang] => Administrasi
+            [profil_foto] => 
+            [alamat] => Alamat Notulensi 18
+            [jabatan] => Notulensi
+            [tanggal_lahir] => 1998-08-18
+            [created_at] => 2025-01-16 09:28:25
+            [updated_at] => 2025-01-17 00:16:49
+        )
+
+    [6] => Array
+        (
+            [user_id] => 19
+            [username] => notulensi_user19
+            [nama] => Nama Notulensi 19
+            [nip] => 12345678919
+            [email] => notulensi_user19@example.com
+            [password] => password_enkripsi19
+            [role] => notulensi
+            [Bidang] => Administrasi
+            [profil_foto] => foto_profil19.jpg
+            [alamat] => Alamat Notulensi 19
+            [jabatan] => Notulensi
+            [tanggal_lahir] => 1999-09-19
+            [created_at] => 2025-01-16 09:28:25
+            [updated_at] => 2025-01-16 09:28:25
+        )
+
+    [7] => Array
+        (
+            [user_id] => 26
+            [username] => notulensi
+            [nama] => alhamdulilla
+            [nip] => 345678909876789376
+            [email] => notulensi@gmail.com
+            [password] => $2y$10$ZhNj131GHHBnlqCvbB3.bOR13E/V13x3i1tumnFZPNg.YhqScDCnq
+            [role] => notulensi
+            [Bidang] => 
+            [profil_foto] => image.png
+
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-16 02:36:45
+            [updated_at] => 2025-01-16 15:11:16
+        )
+
+    [8] => Array
+        (
+            [user_id] => 28
+            [username] => coba
+            [nama] => coba berhadiah
+            [nip] => 123456712345678901
+            [email] => coba@gmail.com
+            [password] => $2y$10$Tm3wwSiTONuV6ZwWrXULeub/4y..1v2ywEn5D20YFU0D/.Ggg2c2e
+            [role] => notulensi
+            [Bidang] => 
+            [profil_foto] => wulan.jpg
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-16 15:29:28
+            [updated_at] => 2025-01-16 16:19:53
+        )
+
+)
+
+INFO - 2025-01-17 09:14:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:14:56 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-17 09:14:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:15:32 --> Mencoba mengambil pengguna dengan role notulensi dan pegawai
+INFO - 2025-01-17 09:15:32 --> Pengguna dengan role notulensi atau pegawai ditemukan: Array
+(
+    [0] => Array
+        (
+            [user_id] => 3
+            [username] => admin
+            [nama] => John Doe
+            [nip] => 123456789
+            [email] => admin@example.com
+            [password] => $2y$10$vtl3rv1OaY3pW2hnmPpXoe1OzmxqdjvxJLl.7qZDvhjN8fQfo6Mhq
+
+
+            [role] => pegawai
+            [Bidang] => Statistik dan Persandian
+            [profil_foto] => profile1.jpg
+            [alamat] => Jl. Merdeka No. 123, Jakarta
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 22:02:06
+            [updated_at] => 2025-01-10 16:07:07
+        )
+
+    [1] => Array
+        (
+            [user_id] => 6
+            [username] => wulan
+            [nama] => wulandariyulianis
+            [nip] => 18679202938390
+            [email] => lala@gmail.com
+            [password] => $2y$10$QW2QpL2k9f5eBfqMjakx7eNCI3/XVLCO9a42jzNPjzvXpS8iFmqoK
+            [role] => notulensi
+            [Bidang] => Aptika
+            [profil_foto] => wulan.jpg
+
+
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 15:02:18
+            [updated_at] => 2025-01-15 21:18:55
+        )
+
+    [2] => Array
+        (
+            [user_id] => 7
+            [username] => lala
+            [nama] => lala
+
+            [nip] => 123456789123456789
+            [email] => lala1@gmail.com
+            [password] => $2y$10$tBSYxTpvfWjIlSkqSZ.7TeAQp2RvMqDg2J91d0vUGxaieUvPIv61a
+            [role] => notulensi
+            [Bidang] => Aptika
+            [profil_foto] => 
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 15:16:16
+            [updated_at] => 2025-01-15 21:48:23
+        )
+
+    [3] => Array
+        (
+            [user_id] => 13
+            [username] => jaja
+            [nama] => jungwon
+            [nip] => 123456788987654324
+            [email] => jaja@gmail.com
+            [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+            [role] => pegawai
+            [Bidang] => IKP
+            [profil_foto] => pegawai.png
+            [alamat] => 
+            [jabatan] => korea
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-13 07:53:10
+            [updated_at] => 2025-01-17 07:33:28
+        )
+
+    [4] => Array
+        (
+            [user_id] => 17
+            [username] => notulensi_user17
+            [nama] => Nama Notulensi 17
+            [nip] => 12345678917
+            [email] => notulensi_user17@example.com
+            [password] => password_enkripsi17
+            [role] => pegawai
+            [Bidang] => Administrasi
+            [profil_foto] => foto_profil17.jpg
+            [alamat] => Alamat Notulensi 17
+            [jabatan] => Notulensi
+            [tanggal_lahir] => 1997-07-17
+            [created_at] => 2025-01-16 09:28:25
+            [updated_at] => 2025-01-16 09:28:25
+        )
+
+    [5] => Array
+        (
+            [user_id] => 18
+            [username] => notulensi_user18
+            [nama] => Nama Notulensi 18
+            [nip] => 12345678918
+            [email] => notulensi_user18@example.com
+            [password] => password_enkripsi18
+            [role] => notulensi
+            [Bidang] => Administrasi
+            [profil_foto] => 
+            [alamat] => Alamat Notulensi 18
+            [jabatan] => Notulensi
+            [tanggal_lahir] => 1998-08-18
+            [created_at] => 2025-01-16 09:28:25
+            [updated_at] => 2025-01-17 00:16:49
+        )
+
+    [6] => Array
+        (
+            [user_id] => 19
+            [username] => notulensi_user19
+            [nama] => Nama Notulensi 19
+            [nip] => 12345678919
+            [email] => notulensi_user19@example.com
+            [password] => password_enkripsi19
+            [role] => notulensi
+            [Bidang] => Administrasi
+            [profil_foto] => foto_profil19.jpg
+            [alamat] => Alamat Notulensi 19
+            [jabatan] => Notulensi
+            [tanggal_lahir] => 1999-09-19
+            [created_at] => 2025-01-16 09:28:25
+            [updated_at] => 2025-01-16 09:28:25
+        )
+
+    [7] => Array
+        (
+            [user_id] => 26
+            [username] => notulensi
+            [nama] => alhamdulilla
+            [nip] => 345678909876789376
+            [email] => notulensi@gmail.com
+            [password] => $2y$10$ZhNj131GHHBnlqCvbB3.bOR13E/V13x3i1tumnFZPNg.YhqScDCnq
+            [role] => notulensi
+            [Bidang] => 
+            [profil_foto] => image.png
+
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-16 02:36:45
+            [updated_at] => 2025-01-16 15:11:16
+        )
+
+    [8] => Array
+        (
+            [user_id] => 28
+            [username] => coba
+            [nama] => coba berhadiah
+            [nip] => 123456712345678901
+            [email] => coba@gmail.com
+            [password] => $2y$10$Tm3wwSiTONuV6ZwWrXULeub/4y..1v2ywEn5D20YFU0D/.Ggg2c2e
+            [role] => notulensi
+            [Bidang] => 
+            [profil_foto] => wulan.jpg
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-16 15:29:28
+            [updated_at] => 2025-01-16 16:19:53
+        )
+
+)
+
+INFO - 2025-01-17 09:15:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:15:32 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-17 09:15:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:15:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:16:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:16:05 --> Mencoba mengambil pengguna dengan role notulensi dan pegawai
+INFO - 2025-01-17 09:16:05 --> Pengguna dengan role notulensi atau pegawai ditemukan: Array
+(
+    [0] => Array
+        (
+            [user_id] => 3
+            [username] => admin
+            [nama] => John Doe
+            [nip] => 123456789
+            [email] => admin@example.com
+            [password] => $2y$10$vtl3rv1OaY3pW2hnmPpXoe1OzmxqdjvxJLl.7qZDvhjN8fQfo6Mhq
+
+
+            [role] => pegawai
+            [Bidang] => Statistik dan Persandian
+            [profil_foto] => profile1.jpg
+            [alamat] => Jl. Merdeka No. 123, Jakarta
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 22:02:06
+            [updated_at] => 2025-01-10 16:07:07
+        )
+
+    [1] => Array
+        (
+            [user_id] => 6
+            [username] => wulan
+            [nama] => wulandariyulianis
+            [nip] => 18679202938390
+            [email] => lala@gmail.com
+            [password] => $2y$10$QW2QpL2k9f5eBfqMjakx7eNCI3/XVLCO9a42jzNPjzvXpS8iFmqoK
+            [role] => notulensi
+            [Bidang] => Aptika
+            [profil_foto] => wulan.jpg
+
+
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 15:02:18
+            [updated_at] => 2025-01-15 21:18:55
+        )
+
+    [2] => Array
+        (
+            [user_id] => 7
+            [username] => lala
+            [nama] => lala
+
+            [nip] => 123456789123456789
+            [email] => lala1@gmail.com
+            [password] => $2y$10$tBSYxTpvfWjIlSkqSZ.7TeAQp2RvMqDg2J91d0vUGxaieUvPIv61a
+            [role] => notulensi
+            [Bidang] => Aptika
+            [profil_foto] => 
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 15:16:16
+            [updated_at] => 2025-01-15 21:48:23
+        )
+
+    [3] => Array
+        (
+            [user_id] => 13
+            [username] => jaja
+            [nama] => jungwon
+            [nip] => 123456788987654324
+            [email] => jaja@gmail.com
+            [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+            [role] => pegawai
+            [Bidang] => IKP
+            [profil_foto] => pegawai.png
+            [alamat] => 
+            [jabatan] => korea
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-13 07:53:10
+            [updated_at] => 2025-01-17 07:33:28
+        )
+
+    [4] => Array
+        (
+            [user_id] => 17
+            [username] => notulensi_user17
+            [nama] => Nama Notulensi 17
+            [nip] => 12345678917
+            [email] => notulensi_user17@example.com
+            [password] => password_enkripsi17
+            [role] => pegawai
+            [Bidang] => Administrasi
+            [profil_foto] => foto_profil17.jpg
+            [alamat] => Alamat Notulensi 17
+            [jabatan] => Notulensi
+            [tanggal_lahir] => 1997-07-17
+            [created_at] => 2025-01-16 09:28:25
+            [updated_at] => 2025-01-16 09:28:25
+        )
+
+    [5] => Array
+        (
+            [user_id] => 18
+            [username] => notulensi_user18
+            [nama] => Nama Notulensi 18
+            [nip] => 12345678918
+            [email] => notulensi_user18@example.com
+            [password] => password_enkripsi18
+            [role] => notulensi
+            [Bidang] => Administrasi
+            [profil_foto] => 
+            [alamat] => Alamat Notulensi 18
+            [jabatan] => Notulensi
+            [tanggal_lahir] => 1998-08-18
+            [created_at] => 2025-01-16 09:28:25
+            [updated_at] => 2025-01-17 00:16:49
+        )
+
+    [6] => Array
+        (
+            [user_id] => 19
+            [username] => notulensi_user19
+            [nama] => Nama Notulensi 19
+            [nip] => 12345678919
+            [email] => notulensi_user19@example.com
+            [password] => password_enkripsi19
+            [role] => notulensi
+            [Bidang] => Administrasi
+            [profil_foto] => foto_profil19.jpg
+            [alamat] => Alamat Notulensi 19
+            [jabatan] => Notulensi
+            [tanggal_lahir] => 1999-09-19
+            [created_at] => 2025-01-16 09:28:25
+            [updated_at] => 2025-01-16 09:28:25
+        )
+
+    [7] => Array
+        (
+            [user_id] => 26
+            [username] => notulensi
+            [nama] => alhamdulilla
+            [nip] => 345678909876789376
+            [email] => notulensi@gmail.com
+            [password] => $2y$10$ZhNj131GHHBnlqCvbB3.bOR13E/V13x3i1tumnFZPNg.YhqScDCnq
+            [role] => notulensi
+            [Bidang] => 
+            [profil_foto] => image.png
+
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-16 02:36:45
+            [updated_at] => 2025-01-16 15:11:16
+        )
+
+    [8] => Array
+        (
+            [user_id] => 28
+            [username] => coba
+            [nama] => coba berhadiah
+            [nip] => 123456712345678901
+            [email] => coba@gmail.com
+            [password] => $2y$10$Tm3wwSiTONuV6ZwWrXULeub/4y..1v2ywEn5D20YFU0D/.Ggg2c2e
+            [role] => notulensi
+            [Bidang] => 
+            [profil_foto] => wulan.jpg
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-16 15:29:28
+            [updated_at] => 2025-01-16 16:19:53
+        )
+
+)
+
+INFO - 2025-01-17 09:16:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:16:05 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-17 09:16:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:17:14 --> Mencoba mengambil pengguna dengan role notulensi dan pegawai
+INFO - 2025-01-17 09:17:14 --> Pengguna dengan role notulensi atau pegawai ditemukan: Array
+(
+    [0] => Array
+        (
+            [user_id] => 3
+            [username] => admin
+            [nama] => John Doe
+            [nip] => 123456789
+            [email] => admin@example.com
+            [password] => $2y$10$vtl3rv1OaY3pW2hnmPpXoe1OzmxqdjvxJLl.7qZDvhjN8fQfo6Mhq
+
+
+            [role] => pegawai
+            [Bidang] => Statistik dan Persandian
+            [profil_foto] => profile1.jpg
+            [alamat] => Jl. Merdeka No. 123, Jakarta
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 22:02:06
+            [updated_at] => 2025-01-10 16:07:07
+        )
+
+    [1] => Array
+        (
+            [user_id] => 6
+            [username] => wulan
+            [nama] => wulandariyulianis
+            [nip] => 18679202938390
+            [email] => lala@gmail.com
+            [password] => $2y$10$QW2QpL2k9f5eBfqMjakx7eNCI3/XVLCO9a42jzNPjzvXpS8iFmqoK
+            [role] => notulensi
+            [Bidang] => Aptika
+            [profil_foto] => wulan.jpg
+
+
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 15:02:18
+            [updated_at] => 2025-01-15 21:18:55
+        )
+
+    [2] => Array
+        (
+            [user_id] => 7
+            [username] => lala
+            [nama] => lala
+
+            [nip] => 123456789123456789
+            [email] => lala1@gmail.com
+            [password] => $2y$10$tBSYxTpvfWjIlSkqSZ.7TeAQp2RvMqDg2J91d0vUGxaieUvPIv61a
+            [role] => notulensi
+            [Bidang] => Aptika
+            [profil_foto] => 
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 15:16:16
+            [updated_at] => 2025-01-15 21:48:23
+        )
+
+    [3] => Array
+        (
+            [user_id] => 13
+            [username] => jaja
+            [nama] => jungwon
+            [nip] => 123456788987654324
+            [email] => jaja@gmail.com
+            [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+            [role] => pegawai
+            [Bidang] => IKP
+            [profil_foto] => pegawai.png
+            [alamat] => 
+            [jabatan] => korea
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-13 07:53:10
+            [updated_at] => 2025-01-17 07:33:28
+        )
+
+    [4] => Array
+        (
+            [user_id] => 17
+            [username] => notulensi_user17
+            [nama] => Nama Notulensi 17
+            [nip] => 12345678917
+            [email] => notulensi_user17@example.com
+            [password] => password_enkripsi17
+            [role] => pegawai
+            [Bidang] => Administrasi
+            [profil_foto] => foto_profil17.jpg
+            [alamat] => Alamat Notulensi 17
+            [jabatan] => Notulensi
+            [tanggal_lahir] => 1997-07-17
+            [created_at] => 2025-01-16 09:28:25
+            [updated_at] => 2025-01-16 09:28:25
+        )
+
+    [5] => Array
+        (
+            [user_id] => 18
+            [username] => notulensi_user18
+            [nama] => Nama Notulensi 18
+            [nip] => 12345678918
+            [email] => notulensi_user18@example.com
+            [password] => password_enkripsi18
+            [role] => notulensi
+            [Bidang] => Administrasi
+            [profil_foto] => 
+            [alamat] => Alamat Notulensi 18
+            [jabatan] => Notulensi
+            [tanggal_lahir] => 1998-08-18
+            [created_at] => 2025-01-16 09:28:25
+            [updated_at] => 2025-01-17 00:16:49
+        )
+
+    [6] => Array
+        (
+            [user_id] => 19
+            [username] => notulensi_user19
+            [nama] => Nama Notulensi 19
+            [nip] => 12345678919
+            [email] => notulensi_user19@example.com
+            [password] => password_enkripsi19
+            [role] => notulensi
+            [Bidang] => Administrasi
+            [profil_foto] => foto_profil19.jpg
+            [alamat] => Alamat Notulensi 19
+            [jabatan] => Notulensi
+            [tanggal_lahir] => 1999-09-19
+            [created_at] => 2025-01-16 09:28:25
+            [updated_at] => 2025-01-16 09:28:25
+        )
+
+    [7] => Array
+        (
+            [user_id] => 26
+            [username] => notulensi
+            [nama] => alhamdulilla
+            [nip] => 345678909876789376
+            [email] => notulensi@gmail.com
+            [password] => $2y$10$ZhNj131GHHBnlqCvbB3.bOR13E/V13x3i1tumnFZPNg.YhqScDCnq
+            [role] => notulensi
+            [Bidang] => 
+            [profil_foto] => image.png
+
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-16 02:36:45
+            [updated_at] => 2025-01-16 15:11:16
+        )
+
+    [8] => Array
+        (
+            [user_id] => 28
+            [username] => coba
+            [nama] => coba berhadiah
+            [nip] => 123456712345678901
+            [email] => coba@gmail.com
+            [password] => $2y$10$Tm3wwSiTONuV6ZwWrXULeub/4y..1v2ywEn5D20YFU0D/.Ggg2c2e
+            [role] => notulensi
+            [Bidang] => 
+            [profil_foto] => wulan.jpg
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-16 15:29:28
+            [updated_at] => 2025-01-16 16:19:53
+        )
+
+)
+
+INFO - 2025-01-17 09:17:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:17:14 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-17 09:17:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:17:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:17:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:17:31 --> Mencoba mengambil pengguna dengan role notulensi dan pegawai
+INFO - 2025-01-17 09:17:31 --> Pengguna dengan role notulensi atau pegawai ditemukan: Array
+(
+    [0] => Array
+        (
+            [user_id] => 3
+            [username] => admin
+            [nama] => John Doe
+            [nip] => 123456789
+            [email] => admin@example.com
+            [password] => $2y$10$vtl3rv1OaY3pW2hnmPpXoe1OzmxqdjvxJLl.7qZDvhjN8fQfo6Mhq
+
+
+            [role] => pegawai
+            [Bidang] => Statistik dan Persandian
+            [profil_foto] => profile1.jpg
+            [alamat] => Jl. Merdeka No. 123, Jakarta
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 22:02:06
+            [updated_at] => 2025-01-10 16:07:07
+        )
+
+    [1] => Array
+        (
+            [user_id] => 6
+            [username] => wulan
+            [nama] => wulandariyulianis
+            [nip] => 18679202938390
+            [email] => lala@gmail.com
+            [password] => $2y$10$QW2QpL2k9f5eBfqMjakx7eNCI3/XVLCO9a42jzNPjzvXpS8iFmqoK
+            [role] => notulensi
+            [Bidang] => Aptika
+            [profil_foto] => wulan.jpg
+
+
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 15:02:18
+            [updated_at] => 2025-01-15 21:18:55
+        )
+
+    [2] => Array
+        (
+            [user_id] => 7
+            [username] => lala
+            [nama] => lala
+
+            [nip] => 123456789123456789
+            [email] => lala1@gmail.com
+            [password] => $2y$10$tBSYxTpvfWjIlSkqSZ.7TeAQp2RvMqDg2J91d0vUGxaieUvPIv61a
+            [role] => notulensi
+            [Bidang] => Aptika
+            [profil_foto] => 
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 15:16:16
+            [updated_at] => 2025-01-15 21:48:23
+        )
+
+    [3] => Array
+        (
+            [user_id] => 13
+            [username] => jaja
+            [nama] => jungwon
+            [nip] => 123456788987654324
+            [email] => jaja@gmail.com
+            [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+            [role] => pegawai
+            [Bidang] => IKP
+            [profil_foto] => pegawai.png
+            [alamat] => 
+            [jabatan] => korea
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-13 07:53:10
+            [updated_at] => 2025-01-17 07:33:28
+        )
+
+    [4] => Array
+        (
+            [user_id] => 17
+            [username] => notulensi_user17
+            [nama] => Nama Notulensi 17
+            [nip] => 12345678917
+            [email] => notulensi_user17@example.com
+            [password] => password_enkripsi17
+            [role] => pegawai
+            [Bidang] => Administrasi
+            [profil_foto] => foto_profil17.jpg
+            [alamat] => Alamat Notulensi 17
+            [jabatan] => Notulensi
+            [tanggal_lahir] => 1997-07-17
+            [created_at] => 2025-01-16 09:28:25
+            [updated_at] => 2025-01-16 09:28:25
+        )
+
+    [5] => Array
+        (
+            [user_id] => 18
+            [username] => notulensi_user18
+            [nama] => Nama Notulensi 18
+            [nip] => 12345678918
+            [email] => notulensi_user18@example.com
+            [password] => password_enkripsi18
+            [role] => notulensi
+            [Bidang] => Administrasi
+            [profil_foto] => 
+            [alamat] => Alamat Notulensi 18
+            [jabatan] => Notulensi
+            [tanggal_lahir] => 1998-08-18
+            [created_at] => 2025-01-16 09:28:25
+            [updated_at] => 2025-01-17 00:16:49
+        )
+
+    [6] => Array
+        (
+            [user_id] => 19
+            [username] => notulensi_user19
+            [nama] => Nama Notulensi 19
+            [nip] => 12345678919
+            [email] => notulensi_user19@example.com
+            [password] => password_enkripsi19
+            [role] => notulensi
+            [Bidang] => Administrasi
+            [profil_foto] => foto_profil19.jpg
+            [alamat] => Alamat Notulensi 19
+            [jabatan] => Notulensi
+            [tanggal_lahir] => 1999-09-19
+            [created_at] => 2025-01-16 09:28:25
+            [updated_at] => 2025-01-16 09:28:25
+        )
+
+    [7] => Array
+        (
+            [user_id] => 26
+            [username] => notulensi
+            [nama] => alhamdulilla
+            [nip] => 345678909876789376
+            [email] => notulensi@gmail.com
+            [password] => $2y$10$ZhNj131GHHBnlqCvbB3.bOR13E/V13x3i1tumnFZPNg.YhqScDCnq
+            [role] => notulensi
+            [Bidang] => 
+            [profil_foto] => image.png
+
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-16 02:36:45
+            [updated_at] => 2025-01-16 15:11:16
+        )
+
+    [8] => Array
+        (
+            [user_id] => 28
+            [username] => coba
+            [nama] => coba berhadiah
+            [nip] => 123456712345678901
+            [email] => coba@gmail.com
+            [password] => $2y$10$Tm3wwSiTONuV6ZwWrXULeub/4y..1v2ywEn5D20YFU0D/.Ggg2c2e
+            [role] => notulensi
+            [Bidang] => 
+            [profil_foto] => wulan.jpg
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-16 15:29:28
+            [updated_at] => 2025-01-16 16:19:53
+        )
+
+)
+
+INFO - 2025-01-17 09:17:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:17:31 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-17 09:17:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:25:58 --> Mencoba mengambil pengguna dengan role notulensi dan pegawai
+INFO - 2025-01-17 09:25:58 --> Pengguna dengan role notulensi atau pegawai ditemukan: Array
+(
+    [0] => Array
+        (
+            [user_id] => 3
+            [username] => admin
+            [nama] => John Doe
+            [nip] => 123456789
+            [email] => admin@example.com
+            [password] => $2y$10$vtl3rv1OaY3pW2hnmPpXoe1OzmxqdjvxJLl.7qZDvhjN8fQfo6Mhq
+
+
+            [role] => pegawai
+            [Bidang] => Statistik dan Persandian
+            [profil_foto] => profile1.jpg
+            [alamat] => Jl. Merdeka No. 123, Jakarta
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 22:02:06
+            [updated_at] => 2025-01-10 16:07:07
+        )
+
+    [1] => Array
+        (
+            [user_id] => 6
+            [username] => wulan
+            [nama] => wulandariyulianis
+            [nip] => 18679202938390
+            [email] => lala@gmail.com
+            [password] => $2y$10$QW2QpL2k9f5eBfqMjakx7eNCI3/XVLCO9a42jzNPjzvXpS8iFmqoK
+            [role] => notulensi
+            [Bidang] => Aptika
+            [profil_foto] => wulan.jpg
+
+
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 15:02:18
+            [updated_at] => 2025-01-15 21:18:55
+        )
+
+    [2] => Array
+        (
+            [user_id] => 7
+            [username] => lala
+            [nama] => lala
+
+            [nip] => 123456789123456789
+            [email] => lala1@gmail.com
+            [password] => $2y$10$tBSYxTpvfWjIlSkqSZ.7TeAQp2RvMqDg2J91d0vUGxaieUvPIv61a
+            [role] => notulensi
+            [Bidang] => Aptika
+            [profil_foto] => 
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 15:16:16
+            [updated_at] => 2025-01-15 21:48:23
+        )
+
+    [3] => Array
+        (
+            [user_id] => 13
+            [username] => jaja
+            [nama] => jungwon
+            [nip] => 123456788987654324
+            [email] => jaja@gmail.com
+            [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+            [role] => pegawai
+            [Bidang] => IKP
+            [profil_foto] => pegawai.png
+            [alamat] => 
+            [jabatan] => korea
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-13 07:53:10
+            [updated_at] => 2025-01-17 07:33:28
+        )
+
+    [4] => Array
+        (
+            [user_id] => 17
+            [username] => notulensi_user17
+            [nama] => Nama Notulensi 17
+            [nip] => 12345678917
+            [email] => notulensi_user17@example.com
+            [password] => password_enkripsi17
+            [role] => pegawai
+            [Bidang] => Administrasi
+            [profil_foto] => foto_profil17.jpg
+            [alamat] => Alamat Notulensi 17
+            [jabatan] => Notulensi
+            [tanggal_lahir] => 1997-07-17
+            [created_at] => 2025-01-16 09:28:25
+            [updated_at] => 2025-01-16 09:28:25
+        )
+
+    [5] => Array
+        (
+            [user_id] => 18
+            [username] => notulensi_user18
+            [nama] => Nama Notulensi 18
+            [nip] => 12345678918
+            [email] => notulensi_user18@example.com
+            [password] => password_enkripsi18
+            [role] => notulensi
+            [Bidang] => Administrasi
+            [profil_foto] => 
+            [alamat] => Alamat Notulensi 18
+            [jabatan] => Notulensi
+            [tanggal_lahir] => 1998-08-18
+            [created_at] => 2025-01-16 09:28:25
+            [updated_at] => 2025-01-17 00:16:49
+        )
+
+    [6] => Array
+        (
+            [user_id] => 19
+            [username] => notulensi_user19
+            [nama] => Nama Notulensi 19
+            [nip] => 12345678919
+            [email] => notulensi_user19@example.com
+            [password] => password_enkripsi19
+            [role] => notulensi
+            [Bidang] => Administrasi
+            [profil_foto] => foto_profil19.jpg
+            [alamat] => Alamat Notulensi 19
+            [jabatan] => Notulensi
+            [tanggal_lahir] => 1999-09-19
+            [created_at] => 2025-01-16 09:28:25
+            [updated_at] => 2025-01-16 09:28:25
+        )
+
+    [7] => Array
+        (
+            [user_id] => 26
+            [username] => notulensi
+            [nama] => alhamdulilla
+            [nip] => 345678909876789376
+            [email] => notulensi@gmail.com
+            [password] => $2y$10$ZhNj131GHHBnlqCvbB3.bOR13E/V13x3i1tumnFZPNg.YhqScDCnq
+            [role] => notulensi
+            [Bidang] => 
+            [profil_foto] => image.png
+
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-16 02:36:45
+            [updated_at] => 2025-01-16 15:11:16
+        )
+
+    [8] => Array
+        (
+            [user_id] => 28
+            [username] => coba
+            [nama] => coba berhadiah
+            [nip] => 123456712345678901
+            [email] => coba@gmail.com
+            [password] => $2y$10$Tm3wwSiTONuV6ZwWrXULeub/4y..1v2ywEn5D20YFU0D/.Ggg2c2e
+            [role] => notulensi
+            [Bidang] => 
+            [profil_foto] => wulan.jpg
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-16 15:29:28
+            [updated_at] => 2025-01-16 16:19:53
+        )
+
+)
+
+INFO - 2025-01-17 09:25:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:25:59 --> User profile for ID  retrieved successfully.
+CRITICAL - 2025-01-17 09:25:59 --> ErrorException: Undefined array key "profil_foto"
+[Method: GET, Route: admin/data_pengguna]
+in APPPATH\Views\admin\data_pengguna.php on line 54.
+ 1 APPPATH\Views\admin\data_pengguna.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "profil_foto"', 'D:\\xampp\\htdocs\\SiNotik\\app\\Views\\admin\\data_pengguna.php', 54)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xampp\\htdocs\\SiNotik\\app\\Views\\admin\\data_pengguna.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/data_pengguna', [], true)
+ 5 APPPATH\Controllers\DetailPenggunaController.php(32): view('admin/data_pengguna', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DetailPenggunaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPenggunaController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-01-17 09:26:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:26:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:26:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:26:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-17 09:26:15 --> Login attempt with username: lili
+ERROR - 2025-01-17 09:26:15 --> Checking login for username: lili
+ERROR - 2025-01-17 09:26:15 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => alhamdulillah
+    [nip] => 123456780123456789
+    [email] => bismillah@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => jalan 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-09
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-16 07:45:21
+)
+
+ERROR - 2025-01-17 09:26:15 --> Password verify result for username lili: Success
+ERROR - 2025-01-17 09:26:15 --> Login success for username: lili
+INFO - 2025-01-17 09:26:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-17 09:26:15 --> User ID: 9
+DEBUG - 2025-01-17 09:26:15 --> Profile Picture: image.png
+DEBUG - 2025-01-17 09:26:15 --> User Name: alhamdulillah
+DEBUG - 2025-01-17 09:26:15 --> User Role: admin
+INFO - 2025-01-17 09:26:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:26:19 --> Mencoba mengambil pengguna dengan role notulensi dan pegawai
+INFO - 2025-01-17 09:26:19 --> Pengguna dengan role notulensi atau pegawai ditemukan: Array
+(
+    [0] => Array
+        (
+            [user_id] => 3
+            [username] => admin
+            [nama] => John Doe
+            [nip] => 123456789
+            [email] => admin@example.com
+            [password] => $2y$10$vtl3rv1OaY3pW2hnmPpXoe1OzmxqdjvxJLl.7qZDvhjN8fQfo6Mhq
+
+
+            [role] => pegawai
+            [Bidang] => Statistik dan Persandian
+            [profil_foto] => profile1.jpg
+            [alamat] => Jl. Merdeka No. 123, Jakarta
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 22:02:06
+            [updated_at] => 2025-01-10 16:07:07
+        )
+
+    [1] => Array
+        (
+            [user_id] => 6
+            [username] => wulan
+            [nama] => wulandariyulianis
+            [nip] => 18679202938390
+            [email] => lala@gmail.com
+            [password] => $2y$10$QW2QpL2k9f5eBfqMjakx7eNCI3/XVLCO9a42jzNPjzvXpS8iFmqoK
+            [role] => notulensi
+            [Bidang] => Aptika
+            [profil_foto] => wulan.jpg
+
+
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 15:02:18
+            [updated_at] => 2025-01-15 21:18:55
+        )
+
+    [2] => Array
+        (
+            [user_id] => 7
+            [username] => lala
+            [nama] => lala
+
+            [nip] => 123456789123456789
+            [email] => lala1@gmail.com
+            [password] => $2y$10$tBSYxTpvfWjIlSkqSZ.7TeAQp2RvMqDg2J91d0vUGxaieUvPIv61a
+            [role] => notulensi
+            [Bidang] => Aptika
+            [profil_foto] => 
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 15:16:16
+            [updated_at] => 2025-01-15 21:48:23
+        )
+
+    [3] => Array
+        (
+            [user_id] => 13
+            [username] => jaja
+            [nama] => jungwon
+            [nip] => 123456788987654324
+            [email] => jaja@gmail.com
+            [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+            [role] => pegawai
+            [Bidang] => IKP
+            [profil_foto] => pegawai.png
+            [alamat] => 
+            [jabatan] => korea
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-13 07:53:10
+            [updated_at] => 2025-01-17 07:33:28
+        )
+
+    [4] => Array
+        (
+            [user_id] => 17
+            [username] => notulensi_user17
+            [nama] => Nama Notulensi 17
+            [nip] => 12345678917
+            [email] => notulensi_user17@example.com
+            [password] => password_enkripsi17
+            [role] => pegawai
+            [Bidang] => Administrasi
+            [profil_foto] => foto_profil17.jpg
+            [alamat] => Alamat Notulensi 17
+            [jabatan] => Notulensi
+            [tanggal_lahir] => 1997-07-17
+            [created_at] => 2025-01-16 09:28:25
+            [updated_at] => 2025-01-16 09:28:25
+        )
+
+    [5] => Array
+        (
+            [user_id] => 18
+            [username] => notulensi_user18
+            [nama] => Nama Notulensi 18
+            [nip] => 12345678918
+            [email] => notulensi_user18@example.com
+            [password] => password_enkripsi18
+            [role] => notulensi
+            [Bidang] => Administrasi
+            [profil_foto] => 
+            [alamat] => Alamat Notulensi 18
+            [jabatan] => Notulensi
+            [tanggal_lahir] => 1998-08-18
+            [created_at] => 2025-01-16 09:28:25
+            [updated_at] => 2025-01-17 00:16:49
+        )
+
+    [6] => Array
+        (
+            [user_id] => 19
+            [username] => notulensi_user19
+            [nama] => Nama Notulensi 19
+            [nip] => 12345678919
+            [email] => notulensi_user19@example.com
+            [password] => password_enkripsi19
+            [role] => notulensi
+            [Bidang] => Administrasi
+            [profil_foto] => foto_profil19.jpg
+            [alamat] => Alamat Notulensi 19
+            [jabatan] => Notulensi
+            [tanggal_lahir] => 1999-09-19
+            [created_at] => 2025-01-16 09:28:25
+            [updated_at] => 2025-01-16 09:28:25
+        )
+
+    [7] => Array
+        (
+            [user_id] => 26
+            [username] => notulensi
+            [nama] => alhamdulilla
+            [nip] => 345678909876789376
+            [email] => notulensi@gmail.com
+            [password] => $2y$10$ZhNj131GHHBnlqCvbB3.bOR13E/V13x3i1tumnFZPNg.YhqScDCnq
+            [role] => notulensi
+            [Bidang] => 
+            [profil_foto] => image.png
+
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-16 02:36:45
+            [updated_at] => 2025-01-16 15:11:16
+        )
+
+    [8] => Array
+        (
+            [user_id] => 28
+            [username] => coba
+            [nama] => coba berhadiah
+            [nip] => 123456712345678901
+            [email] => coba@gmail.com
+            [password] => $2y$10$Tm3wwSiTONuV6ZwWrXULeub/4y..1v2ywEn5D20YFU0D/.Ggg2c2e
+            [role] => notulensi
+            [Bidang] => 
+            [profil_foto] => wulan.jpg
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-16 15:29:28
+            [updated_at] => 2025-01-16 16:19:53
+        )
+
+)
+
+INFO - 2025-01-17 09:26:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:26:19 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-17 09:26:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:26:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:26:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:26:42 --> Mencoba mengambil pengguna dengan role notulensi dan pegawai
+INFO - 2025-01-17 09:26:42 --> Pengguna dengan role notulensi atau pegawai ditemukan: Array
+(
+    [0] => Array
+        (
+            [user_id] => 3
+            [username] => admin
+            [nama] => John Doe
+            [nip] => 123456789
+            [email] => admin@example.com
+            [password] => $2y$10$vtl3rv1OaY3pW2hnmPpXoe1OzmxqdjvxJLl.7qZDvhjN8fQfo6Mhq
+
+
+            [role] => pegawai
+            [Bidang] => Statistik dan Persandian
+            [profil_foto] => profile1.jpg
+            [alamat] => Jl. Merdeka No. 123, Jakarta
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 22:02:06
+            [updated_at] => 2025-01-10 16:07:07
+        )
+
+    [1] => Array
+        (
+            [user_id] => 6
+            [username] => wulan
+            [nama] => wulandariyulianis
+            [nip] => 18679202938390
+            [email] => lala@gmail.com
+            [password] => $2y$10$QW2QpL2k9f5eBfqMjakx7eNCI3/XVLCO9a42jzNPjzvXpS8iFmqoK
+            [role] => notulensi
+            [Bidang] => Aptika
+            [profil_foto] => wulan.jpg
+
+
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 15:02:18
+            [updated_at] => 2025-01-15 21:18:55
+        )
+
+    [2] => Array
+        (
+            [user_id] => 7
+            [username] => lala
+            [nama] => lala
+
+            [nip] => 123456789123456789
+            [email] => lala1@gmail.com
+            [password] => $2y$10$tBSYxTpvfWjIlSkqSZ.7TeAQp2RvMqDg2J91d0vUGxaieUvPIv61a
+            [role] => notulensi
+            [Bidang] => Aptika
+            [profil_foto] => 
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 15:16:16
+            [updated_at] => 2025-01-15 21:48:23
+        )
+
+    [3] => Array
+        (
+            [user_id] => 13
+            [username] => jaja
+            [nama] => jungwon
+            [nip] => 123456788987654324
+            [email] => jaja@gmail.com
+            [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+            [role] => pegawai
+            [Bidang] => IKP
+            [profil_foto] => pegawai.png
+            [alamat] => 
+            [jabatan] => korea
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-13 07:53:10
+            [updated_at] => 2025-01-17 07:33:28
+        )
+
+    [4] => Array
+        (
+            [user_id] => 17
+            [username] => notulensi_user17
+            [nama] => Nama Notulensi 17
+            [nip] => 12345678917
+            [email] => notulensi_user17@example.com
+            [password] => password_enkripsi17
+            [role] => pegawai
+            [Bidang] => Administrasi
+            [profil_foto] => foto_profil17.jpg
+            [alamat] => Alamat Notulensi 17
+            [jabatan] => Notulensi
+            [tanggal_lahir] => 1997-07-17
+            [created_at] => 2025-01-16 09:28:25
+            [updated_at] => 2025-01-16 09:28:25
+        )
+
+    [5] => Array
+        (
+            [user_id] => 18
+            [username] => notulensi_user18
+            [nama] => Nama Notulensi 18
+            [nip] => 12345678918
+            [email] => notulensi_user18@example.com
+            [password] => password_enkripsi18
+            [role] => notulensi
+            [Bidang] => Administrasi
+            [profil_foto] => 
+            [alamat] => Alamat Notulensi 18
+            [jabatan] => Notulensi
+            [tanggal_lahir] => 1998-08-18
+            [created_at] => 2025-01-16 09:28:25
+            [updated_at] => 2025-01-17 00:16:49
+        )
+
+    [6] => Array
+        (
+            [user_id] => 19
+            [username] => notulensi_user19
+            [nama] => Nama Notulensi 19
+            [nip] => 12345678919
+            [email] => notulensi_user19@example.com
+            [password] => password_enkripsi19
+            [role] => notulensi
+            [Bidang] => Administrasi
+            [profil_foto] => foto_profil19.jpg
+            [alamat] => Alamat Notulensi 19
+            [jabatan] => Notulensi
+            [tanggal_lahir] => 1999-09-19
+            [created_at] => 2025-01-16 09:28:25
+            [updated_at] => 2025-01-16 09:28:25
+        )
+
+    [7] => Array
+        (
+            [user_id] => 26
+            [username] => notulensi
+            [nama] => alhamdulilla
+            [nip] => 345678909876789376
+            [email] => notulensi@gmail.com
+            [password] => $2y$10$ZhNj131GHHBnlqCvbB3.bOR13E/V13x3i1tumnFZPNg.YhqScDCnq
+            [role] => notulensi
+            [Bidang] => 
+            [profil_foto] => image.png
+
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-16 02:36:45
+            [updated_at] => 2025-01-16 15:11:16
+        )
+
+    [8] => Array
+        (
+            [user_id] => 28
+            [username] => coba
+            [nama] => coba berhadiah
+            [nip] => 123456712345678901
+            [email] => coba@gmail.com
+            [password] => $2y$10$Tm3wwSiTONuV6ZwWrXULeub/4y..1v2ywEn5D20YFU0D/.Ggg2c2e
+            [role] => notulensi
+            [Bidang] => 
+            [profil_foto] => wulan.jpg
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-16 15:29:28
+            [updated_at] => 2025-01-16 16:19:53
+        )
+
+    [9] => Array
+        (
+            [user_id] => 32
+            [username] => dadang
+            [nama] => dadang harjo
+            [nip] => 098765432234567892
+            [email] => dadang@gmail.com
+            [password] => $2y$10$FKo1RqxUsHWcoWzbk5ZZae9C4Al32xjQuyf99kyXR4CMMYtDOyMVC
+            [role] => notulensi
+            [Bidang] => IKP
+            [profil_foto] => 
+            [alamat] => 
+            [jabatan] => Sekretaris
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-17 09:26:42
+            [updated_at] => 2025-01-17 09:26:42
+        )
+
+)
+
+INFO - 2025-01-17 09:26:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 09:26:42 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-17 09:26:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

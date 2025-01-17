@@ -101,7 +101,7 @@
                         <p><?= $total_notulensi ?> Data</p>
                     </div>
                     <div class="stat-icon">
-                        <img src="<?= base_url('assets/images/notulensi.png') ?>" alt="Icon Pegawai">
+                        <img src="<?= base_url('assets/images/icon_notulensi.png') ?>" alt="Icon Pegawai">
                     </div>
                 </div>
 

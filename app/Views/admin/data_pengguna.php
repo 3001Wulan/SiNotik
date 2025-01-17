@@ -59,10 +59,10 @@ $current_page = 'data_pengguna';
             <div class="page-title">
                 <h1>Data Pengguna</h1>
                 <div class="button-container">
-                    <button class="btn-add">
+                    <a href="<?php echo site_url('admin/tambahpengguna'); ?>" class="btn-add">
                         Tambah Data
                         <img src="<?php echo base_url('assets/images/plus.png'); ?>" alt="Tambah Icon" class="btn-icon">
-                    </button>
+                    </a>
                 </div>
             </div>
 
