@@ -1,0 +1,172 @@
+body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #1e3c72, #4e73df, #7a9fff);
+        color: #333;
+    }
+    
+    .about-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    h1 {
+        margin-bottom: 20px;
+        font-size: 2.5em;
+        color: #fff;
+        display: inline-block;
+        letter-spacing: 2px;
+        text-shadow: 3px 3px 10px rgba(0, 0, 0, 1.0);
+    }
+    
+    h1 span {
+        display: inline-block;
+        animation: wave 1.5s ease-in-out infinite;
+    }
+    
+    h1 span:nth-child(1) {
+        animation-delay: 0s;
+    }
+    h1 span:nth-child(2) {
+        animation-delay: 0.1s;
+    }
+    h1 span:nth-child(3) {
+        animation-delay: 0.2s;
+    }
+    h1 span:nth-child(4) {
+        animation-delay: 0.3s;
+    }
+    h1 span:nth-child(5) {
+        animation-delay: 0.4s;
+    }
+
+    h1 span:nth-child(6) {
+        animation-delay: 0.5s;
+    }
+
+    h1 span:nth-child(7) {
+        animation-delay: 0.6s;
+    }
+
+    h1 span:nth-child(8) {
+        animation-delay: 0.7s;
+    }
+    
+    @keyframes wave {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-15px); 
+        }
+    }
+    
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0); 
+        }
+        50% {
+            transform: translateY(-10px); 
+        }
+    }
+    
+    .profile-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        perspective: 1500px;
+    }
+    
+    .profile-card {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 1.5);
+        overflow: hidden;
+        width: 300px;
+        text-align: left;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        animation: float 3s ease-in-out infinite; 
+        transform-style: preserve-3d;
+        transform: rotateY(10deg);
+    }
+    
+    .profile-card:hover {
+        animation: none; 
+        transform: translateY(-20px) rotateY(0deg); 
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 1.0);
+        background: linear-gradient(135deg, #4e73df, #1e90ff); 
+        color: #fff; 
+        cursor: pointer;
+    }
+    
+    .card-image img {
+        width: 100%; 
+        height: 250px; 
+        object-fit: cover; 
+        object-position: top; 
+        border-radius: 8px 8px 0 0; 
+    }
+    
+    .card-content {
+        padding: 15px;
+    }
+    
+    .card-content h2 {
+        font-size: 1.5em;
+        font-weight: bolder;
+        margin: 0;
+        color: #1e3c72;
+        transition: color 0.3s ease; 
+    }
+    
+    .card-content h3 {
+        font-size: 1.0em;
+        margin: 5px 0;
+        color: #4e73df;
+        transition: color 0.3s ease; 
+    }
+    
+    .card-content p {
+        font-size: 1em;
+        color: #7a9fff;
+        line-height: 1.5;
+        transition: color 0.3s ease; 
+    }
+    
+    .profile-card:hover h2,
+    .profile-card:hover h3,
+    .profile-card:hover p {
+        color: #fff; 
+    }
+
+    .social-media {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .instagram-link {
+        text-decoration: none;
+        color: #1e3c72;
+        font-weight: bold;
+        font-size: 1em;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: color 0.3s ease;
+    }
+
+    .instagram-link:hover {
+        color: #4e73df;
+    }
+    
+    .instagram-icon {
+        width: 20px;
+        height: 20px;
+    }
+    
