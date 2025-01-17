@@ -22,11 +22,11 @@
                         <div class="profile-cards">
                                 <?php
                                         $team = [
-                                                ["name" => "Cindy Arwinda Putri", "role" => "Programmer", "description" => "Developing efficient and reliable code to ensure smooth application performance.", "photo" => "assets/images/CINDY_.jpg", "instagram" => "cdyawd"],
-                                                ["name" => "Wulandari Yulianis", "role" => "Project Manager", "description" => "Leading the team with exceptional project management skills.", "photo" => "assets/images/WULAN_.jpg", "instagram" => "wulan_0407"],
-                                                ["name" => "Intan Salma Denaidy", "role" => "System Analyst", "description" => "Analyzing systems in depth to find optimal solutions for every project.", "photo" => "assets/images/INTAN_.jpg", "instagram" => "intansalma__"],
-                                                ["name" => "Heni Yunida", "role" => "UI/UX Designer", "description" => "Creating visually appealing and user-friendly designs.", "photo" => "assets/images/HENI_.jpg", "instagram" => "heniyunidaa"],
-                                                ["name" => "Sistri Mahira", "role" => "DB Administrator", "description" => "Managing and optimizing databases to ensure maximum performance and data security.", "photo" => "assets/images/MAHIRA_.jpg", "instagram" => "sistrmahira"],
+                                                ["name" => "Cindy Arwinda Putri", "role" => "Programmer", "description" => "Misterius kayak hitam, hangat kayak coklat, dan seindah bunga daisy 🖤🤎🌼.", "photo" => "assets/images/CINDY_.jpg", "instagram" => "cdyawd"],
+                                                ["name" => "Wulandari Yulianis", "role" => "Project Manager", "description" => "No drama, just Wulan bringing all the chill, green vibes 💚🍃.", "photo" => "assets/images/WULAN_.jpg", "instagram" => "wulan_0407"],
+                                                ["name" => "Intan Salma Denaidy", "role" => "System Analyst", "description" => "With pink energy and tulip charm—Intan membawa warna dan keceriaan di setiap langkahnya 💖🌷.", "photo" => "assets/images/INTAN_.jpg", "instagram" => "intansalma__"],
+                                                ["name" => "Heni Yunida", "role" => "UI/UX Designer", "description" => "Putih itu lebih dari sekadar warna—it's Heni’s true essence 🤍🌷.", "photo" => "assets/images/HENI_.jpg", "instagram" => "heniyunidaa"],
+                                                ["name" => "Sistri Mahira", "role" => "DB Administrator", "description" => "Mahira si pecinta kupu-kupu. Fly high, stay cute, just like her vibes 🦋✨.", "photo" => "assets/images/MAHIRA_.jpg", "instagram" => "sistrmahira"],
                                         ];
 
                                         foreach ($team as $member) {

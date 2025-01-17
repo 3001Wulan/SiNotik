@@ -30,6 +30,7 @@ header {
     width: 150px;
     height: auto;
     margin-top: 80px;
+    animation: float 2s ease-in-out infinite;
 }
 
 #logo-text {
@@ -37,20 +38,22 @@ header {
     margin-top: -40px;
     color: #fff;
     font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Tambahkan efek bayangan pada teks */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 nav {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 20px; 
+    left: 530%;
+    z-index: 100; 
 }
 
 nav a {
-    margin: 0 10px;
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
@@ -61,7 +64,8 @@ h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+    animation: float 2s ease-in-out infinite; 
 }
 
 p {
@@ -70,23 +74,35 @@ p {
     font-weight: lighter;
     line-height: 1.4;
     color: #a6a6a6;               
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9); 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1.0);
     margin-bottom: 20px;
+    animation: float 2s ease-in-out infinite;
 }
-
 
 .login-btn {
     padding: 10px 20px;
     font-size: 1rem;
     color: #d9d9d9;
-    background-color: #025299;
+    background-color: #292A6E;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
     transition: background-color 0.3s;
+    animation: float 2s ease-in-out infinite;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+    transform: scale(1.1);
 }
 
 .login-btn:hover {
-    background-color: #0056b3;
+    background-color: #0085C5;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }

@@ -1,5 +1,4 @@
 <?php
-// Save this as an HTML file and link it with a separate CSS file for styling.
 ?>
 
 <!DOCTYPE html>
@@ -13,15 +12,18 @@
 </head>
 <body>
     <header>
-    <img id="logo" src="assets/images/logo.png" alt="SiNotik Logo">
+        <img id="logo" src="assets/images/logo.png" alt="SiNotik Logo">
+        <nav>
+            <a href="about.php" class="about-link">About</a>
+        </nav>
     </header>
 
     <div class="container">
         <h1>Welcome to SiNotik</h1>
         <p>
-    Optimalkan pencatatan rapat dengan cepat dan akurat. SiNotik menghadirkan kemudahan <br>
-    dalam dokumentasi dan pengelolaan hasil rapat, memastikan transparansi dan efisiensi <br>
-    di setiap pertemuan.
+            Optimalkan pencatatan rapat dengan cepat dan akurat. SiNotik menghadirkan kemudahan <br>
+            dalam dokumentasi dan pengelolaan hasil rapat, memastikan transparansi dan efisiensi <br>
+            di setiap pertemuan.
         </p>
         <a href="<?= base_url('login') ?>" class="login-btn">Login</a>
     </div>
