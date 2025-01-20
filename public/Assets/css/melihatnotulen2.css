@@ -1,0 +1,894 @@
+  /* assets/css/notulensi.css */
+  :root {
+    --primary-color: #0088cc;
+    --sidebar-bg: #ffffff;
+    --main-bg: #f5f5f5;
+    --text-color: #333333;
+    --hover-color: #005580;
+    --border-color: #e0e0e0;
+}
+
+[class~="dark-mode"] {
+    --primary-color: #555555;
+    --sidebar-bg: #444444;
+    --main-bg: #1a1a1a;
+    --text-color: #ffffff;
+    --hover-color: #555555;
+    --border-color: #444444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--main-bg);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #0288D1;
+    padding: 20px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+}
+
+.entries-select-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.entries-select-container .iinput-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.entries-select {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    width: 70px;
+}
+
+.dark-mode .entries-select {
+    background-color: #333;
+    color: white;
+    border-color: #444;
+}
+/* Menu item styles */
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+    color: black;
+    text-decoration: none;
+    margin: 8px 0;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.menu-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    transition: 0.3s;
+    filter: brightness(0); /* Makes icon black by default */
+}
+
+.menu-item span {
+    color: black; /* Default black color */
+    transition: 0.3s;
+}
+
+/* Separator style */
+.separator {
+    border-bottom: 1px solid black;
+    margin: 8px 0;
+}
+
+/* Light Mode Hover Styles */
+.light-mode .menu-item:hover {
+    background-color: #01579B;
+}
+
+.light-mode .menu-item:hover span {
+    color: white !important;
+}
+
+.light-mode .menu-item:hover img {
+    filter: brightness(0) invert(1) !important; /* Changes icon to white */
+}
+
+/* Dark Mode Styles */
+.dark-mode .menu-item {
+    color: white;
+}
+
+.dark-mode .menu-item img {
+    filter: brightness(0) invert(1); /* White icons for dark mode */
+}
+
+.dark-mode .menu-item span {
+    color: white;
+}
+
+/* Dark Mode Hover Styles */
+.dark-mode .menu-item:hover {
+    background-color: #555555;
+}
+
+.dark-mode .menu-item:hover span {
+    color: black !important;
+}
+
+.dark-mode .menu-item:hover img {
+    filter: brightness(0) !important; /* Changes to black on hover */
+}
+
+.dark-mode .page-number{
+    color: white;
+}
+
+.separator {
+    border-bottom: 1px solid black(255, 255, 255, 0.1);
+    margin: 8px 0;
+}
+
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: var(--sidebar-bg);
+    margin: -20px -20px 70px -20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Theme Toggle Styles */
+.theme-toggle {
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    background: transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    width: 41px;
+    height: 41px;
+}
+
+.theme-icon {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
+}
+
+
+
+/* Show/hide icons based on theme */
+.moon-icon {
+    opacity: 1;
+}
+
+.sun-icon {
+    opacity: 0;
+}
+
+/* Dark mode specific styles */
+.dark-mode .moon-icon {
+    opacity: 0;
+}
+
+.dark-mode .sun-icon {
+    opacity: 1;
+}
+
+/* Content Section */
+.content {
+    padding: 20px;
+    background-color: var(--sidebar-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
+    position: relative;
+}
+
+.content h1 {
+    font-size: 20px;
+    margin-top: -65px;
+    margin-bottom: 50px;
+    margin-left: -20px;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.dropdown select {
+    padding: 8px 15px;
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+}
+
+/* Search box styles */
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.search-box input {
+    padding: 8px 15px;
+    width: 200px;
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+    outline: none;
+    padding-right: 40px;
+}
+
+.search-box button {
+    background: none;
+    border: none;
+    margin-left: -40px;
+    padding: 8px;
+    cursor: pointer;
+    color: black;
+}
+
+.search-box button:hover {
+    color: #374151;
+}
+
+.search-box button i {
+    font-size: 16px;
+}
+
+/* Dark mode adjustments */
+.dark-mode .search-box input {
+    background-color: #333;
+    border-color: #444;
+    color: white;
+}
+
+.dark-mode .search-box button {
+    color: #ffffff;
+}
+
+.dark-mode .search-box button:hover {
+    color: #E5E7EB;
+}
+
+/* Pagination container */
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0;
+    margin-top: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+
+/* Base styles for all pagination elements */
+.btn-prev,
+.btn-next,
+.page-number {
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    font-size: 14px;
+    background-color: white;
+    padding: 0 16px;
+}
+
+/* Previous button */
+.btn-prev {
+    border-radius: 20px 0 0 20px;
+    border-right: none;
+    color: black;
+    font-style: italic;
+}
+
+/* Next button */
+.btn-next {
+    border-radius: 0 20px 20px 0;
+    border-left: none;
+    color: black;
+    font-style: italic;
+}
+
+/* Page number */
+.page-number {
+    background-color: #3B82F6;
+    color: white;
+    border: 1px solid #3B82F6;
+    min-width: 38px;
+    padding: 0 10px;
+}
+
+/* Hover states */
+.btn-prev:hover:not(:disabled),
+.btn-next:hover:not(:disabled) {
+    background-color: #F8FAFC;
+}
+
+/* Disabled state */
+.btn-prev:disabled,
+.btn-next:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Dark mode adjustments */
+.dark-mode .btn-prev,
+.dark-mode .btn-next {
+    background-color: #333;
+    border-color: #444;
+    color: #94A3B8;
+}
+
+.dark-mode .page-number {
+    background-color: #1a1a1a;
+    border-color: #1a1a1a;
+}
+
+.dark-mode .btn-prev:hover:not(:disabled),
+.dark-mode .btn-next:hover:not(:disabled) {
+    background-color: #334155;
+}
+
+/* Table Styles */
+.table-wrapper {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 2px solid #eee;
+    font-weight: bold;
+    color: #333;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.btn-detail {
+    background-color: #0288D1;
+    color: black;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn-more {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    width: 20px;
+    top: 50px;
+}
+
+.btn-more img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px; 
+}
+
+.dark-mode.btn-more {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    width: 20px;
+    top: 50px;
+}
+
+.dark-mode.btn-more img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px; 
+}
+
+/* Dark Mode Specific Styles */
+body.dark-mode {
+    background-color: var(--main-bg);
+}
+
+body.dark-mode .sidebar {
+    background-color: #333333;
+}
+
+body.dark-mode .menu-item {
+    color: white;
+}
+
+body.dark-mode .menu-item img {
+    filter: brightness(0) invert(1);
+}
+
+body.dark-mode .menu-item:hover {
+    background-color: #555555;
+    color: black;
+}
+
+body.dark-mode .menu-item:hover img {
+    filter: brightness(0);
+}
+
+body.dark-mode .theme-toggle img {
+    filter: brightness(0) invert(1);
+}
+
+.dark-mode .table-wrapper {
+    background-color: #333;
+}
+
+.dark-mode table th {
+    color: #fff;
+    border-bottom: 2px solid #444;
+}
+
+.dark-mode table td {
+    color: #fff;
+    border-bottom: 1px solid #444;
+}
+
+/* Table styles for better visibility */
+.table-wrapper {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+
+
+/* Button container style */
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Detail button style */
+.btn-detail {
+    background-color: #0288D1;
+    color: white;
+    border: none;
+    padding: 6px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 32px;
+    line-height: 20px;
+}
+
+.btn-detail:hover {
+    background-color: #01579B;
+}
+
+.dark-mode .btn-detail {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 6px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 32px;
+    line-height: 20px;
+}
+/* Comment button style */
+.btn-comment {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    width: 32px;
+    border-radius: 4px;
+    color: #ffffff;
+    transition: background-color 0.3s;
+}
+
+.btn-comment:hover {
+    background-color: #e0e0e0;
+}
+
+.btn-comment img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Dark mode styles */
+.dark-mode .btn-comment:hover {
+    background-color: #444;
+}
+
+.dark-mode.btn-comment {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    width: 32px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.dark-mode.btn-comment:hover {
+    background-color: #e0e0e0;
+}
+
+.dark-mode.btn-comment img {
+    width: 20px;
+    height: 20px;
+    color: #ffffff;
+}
+
+.btn-comment img {
+    filter: none; /* Default color for light mode */
+    transition: filter 0.3s ease;
+}
+
+/* Dark mode comment icon */
+.dark-mode .btn-comment img {
+    filter: brightness(0) invert(1); /* Makes the icon white */
+}
+
+/* Comment modal styles */
+.comment-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment-modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+}
+
+.dark-mode .comment-modal-content {
+    background-color: #333;
+    color: white;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.comment-header h2 {
+    margin: 0;
+}
+
+.close-comment {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+.dark-mode .close-comment {
+    color: #fff;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.comment-form textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.comment-form button {
+    background-color: #0288D1;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.dark-mode .comment-form button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.dark-mode .comment-form textarea {
+    background-color: #444;
+    color: white;
+    border-color: #555;
+}
+
+/* Menu item styles */
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+    color: black;
+    text-decoration: none;
+    margin: 8px 0;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.menu-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    filter: brightness(0);
+    transition: filter 0.3s;
+}
+
+.menu-item span {
+    display: inline-block;
+}
+
+/* Separator style */
+
+/* Dropdown Styles - tambahkan di bagian yang sesuai */
+.dropdown {
+    position: relative;
+    padding: 0 !important;
+}
+
+.menu-item-link {
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.menu-item-link img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    filter: brightness(0);
+    transition: filter 0.3s;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    z-index: 1;
+    margin-top: 30px;
+    margin-left: -165px;
+}
+
+.dropdown-separator {
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 4px 0;
+}
+
+.dropdown-item {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    filter: brightness(0);
+    transition: all 0.3s ease;
+}
+
+/* Hover effects */
+.menu-item:hover,
+.menu-item-link:hover {
+    background-color: #01579B;
+    color: #ffffff !important;
+}
+
+.menu-item:hover img{
+    color: #121212;
+}
+.menu-item-link:hover img {
+    filter: brightness(0) invert(1) !important;
+}
+
+
+.dropdown-item:hover {
+    background-color: #01579B;
+    color: white !important;
+}
+
+.dropdown-item:hover img {
+    /* Changed to make icons white on hover */
+    filter: brightness(0) invert(1) !important;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.menu-item.active {
+    background-color: #ffffff;
+    color: #0288D1;
+}
+
+.separator {
+    border-bottom: 1px solid #ccc;
+    margin: 8px 0;
+}
+
+/* Dark mode styles untuk dropdown */
+body.dark-mode .dropdown-content {
+    background-color: #333;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .dropdown-separator {
+    background-color: #666;
+}
+
+body.dark-mode .menu-item,
+body.dark-mode .menu-item-link {
+    color: #ffffff;
+}
+
+body.dark-mode .menu-item img{}
+body.dark-mode .menu-item-link img {
+    filter: brightness(0) invert(1);
+}
+body.dark-mode .menu-item:hover img{}
+body.dark-mode .menu-item-link:hover img {
+    filter: brightness(0) !important; /* Mengubah ikon menjadi hitam saat hover di dark mode */
+}
+
+body.dark-mode .dropdown-item {
+    color: white;
+}
+
+body.dark-mode .dropdown-item img {
+    /* Icons start as white in dark mode */
+    filter: brightness(0) invert(1);
+}
+
+
+
+body.dark-mode .menu-item:hover,
+body.dark-mode .menu-item-link:hover {
+    background-color: #555555;
+    color: rgb(0, 0, 0) !important;
+}
+
+body.dark-mode .menu-item:hover img {
+    color: #ffffff;
+}
+body.dark-mode .menu-item-link:hover img {
+    filter: brightness(0) !important;
+}
+
+
+body.dark-mode .dropdown-item:hover {
+    background-color: #555555;
+    color: black !important;
+}
+
+body.dark-mode .dropdown-item:hover img,
+body.dark-mode .menu-item-link:hover img {
+    filter: brightness(0) !important;
+}
+
+body.dark-mode .dropdown-item:hover {
+    background-color: #555555;
+    color: black !important;
+}
+
+body.dark-mode .dropdown-item:hover img {
+    filter: brightness(0) !important;
+}
+
+/* Other Dark Mode Elements */
+body.dark-mode .dropdown-content {
+    background-color: #333;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .dropdown-separator {
+    background-color: #666;
+}
