@@ -38,7 +38,7 @@ class TambahPenggunaController extends Controller
         $file = $this->request->getFile('photo');
         if ($file->isValid() && !$file->hasMoved()) {
             $newName = $file->getRandomName();
-            $file->move(WRITEPATH . 'uploads/', $newName);
+            $file->move(WRITEPATH . 'assets/images/profiles/', $newName);
         } else {
             return redirect()->back()->withInput()->with('error', 'Terjadi kesalahan saat mengunggah foto.');
         }

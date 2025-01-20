@@ -31,6 +31,16 @@ $routes->post('notulen/editprofilnotulen', 'EditProfilNotulenController::editPro
 $routes->get('/editprofilnotulen/(:num)', 'EditProfilNotulenController::editProfil/$1');
 $routes->get('admin/tambahpengguna', 'TambahPenggunaController::index');
 $routes->post('tambah-pengguna/simpan', 'TambahPenggunaController::simpan');
+$routes->get('detailpengguna/(:num)', 'DetailPenggunaControllers::detailPengguna/$1');
+$routes->get('DetailPenggunaControllers/(:num)', 'DetailPenggunaControllers::index/$1');
+$routes->get('/notulen/buatnotulen', 'NotulenController::create');
+$routes->post('notulen/simpan', 'NotulenController::simpan');
+$routes->get('/notulen/melihatnotulen', 'MelihatNotulenController::lihat');
+
+
+
+
+
 
 
 

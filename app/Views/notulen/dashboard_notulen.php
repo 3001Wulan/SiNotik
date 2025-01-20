@@ -29,12 +29,12 @@
                         <span>Notulensi</span>
                     </a>
                     <div class="dropdown-content">
-                        <a href="#" class="dropdown-item">
+                        <a href="melihatnotulen" class="dropdown-item">
                             <img src="<?= base_url('assets/images/buat.png') ?>" alt="Daftar Notulensi Icon">
                             <span>Daftar Notulensi</span>
                         </a>
                         <div class="dropdown-separator"></div>
-                        <a href="#" class="dropdown-item">
+                        <a href="buatnotulen" class="dropdown-item">
                             <img src="<?= base_url('assets/images/edit.png') ?>" alt="Buat Notulensi Icon">
                             <span>Buat Notulensi</span>
                         </a>

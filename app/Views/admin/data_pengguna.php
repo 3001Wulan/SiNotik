@@ -54,7 +54,6 @@ $current_page = 'data_pengguna';
                     <img src="<?= base_url('assets/images/profiles/' . $user_profile['profil_foto']) ?>" alt="User Photo" class="header-profile-img" id="profile-icon">
                 </div>
             </div>
-            
 
             <div class="page-title">
                 <h1>Data Pengguna</h1>
@@ -101,7 +100,7 @@ $current_page = 'data_pengguna';
                     <tbody>
                         <?php if (!empty($users)): ?>
                             <?php foreach ($users as $index => $user): ?>
-                                <tr data-user-id="<?= esc($user['user_id']) ?>">
+                                <tr data-user-id="<?= esc($user['user_id']) ?>" class="clickable-row" data-href="<?= site_url('DetailPenggunaControllers/' . esc($user['user_id'])) ?>">
                                     <td><?= $index + 1 ?></td>
                                     <td>
                                         <?php if (!empty($user['profil_foto'])): ?>
@@ -208,6 +207,12 @@ $current_page = 'data_pengguna';
                     selectedRow = event.target.closest('tr');
                     deletePopup.style.display = 'flex';
                 }
+
+                // Klik di luar aksi (seperti pada baris data) akan mengarahkan ke halaman detail
+                const clickedRow = event.target.closest('tr');
+                if (clickedRow && !event.target.closest('.btn-edit') && !event.target.closest('.btn-delete')) {
+                    window.location.href = clickedRow.dataset.href;
+                }
             });
 
             // Tombol batal hapus
@@ -259,11 +264,36 @@ $current_page = 'data_pengguna';
             const toggleDarkMode = document.getElementById('toggleDarkMode');
             toggleDarkMode.addEventListener('click', () => {
                 document.body.classList.toggle('dark-mode');
-                toggleDarkMode.src = document.body.classList.contains('dark-mode') ? 
-                    '<?php echo base_url('assets/images/sun.png'); ?>' : 
-                    '<?php echo base_url('assets/images/moon.png'); ?>';
             });
         });
+
+        function searchTable() {
+    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    const table = document.getElementById('dataTable');
+    const rows = table.getElementsByTagName('tr');
+    const tableBody = table.getElementsByTagName('tbody')[0];
+
+    // Jika kolom pencarian kosong, tampilkan data asli (semua baris)
+    if (!searchTerm) {
+        filteredData = Array.from(rows); // Mengatur kembali filteredData ke semua baris asli
+        updateTable(); // Perbarui tabel tanpa filter
+        return;
+    }
+
+    const filteredRows = Array.from(rows).filter(row => {
+        const cells = row.getElementsByTagName('td');
+        const nameCell = cells[2]; // Kolom "Nama User" biasanya ada di index ke-2 (dimulai dari 0)
+        return nameCell && nameCell.textContent.toLowerCase().includes(searchTerm); 
+    });
+
+    tableBody.innerHTML = ''; 
+    filteredRows.forEach(row => tableBody.appendChild(row));
+
+    filteredData = filteredRows;  
+    currentPage = 1;  
+    updateTable(); 
+}
+
     </script>
 </body>
 

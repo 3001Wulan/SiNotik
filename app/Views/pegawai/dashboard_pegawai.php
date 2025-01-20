@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Admin</title>
+    <title>Dashboard Pegawai</title>
     <link rel="stylesheet" href="<?= base_url('assets/css/dashboard_admin.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/popup_logout.css') ?>">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -14,7 +14,7 @@
             <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo" class="logo-img">
         </div>
         <ul class="menu">
-            <li class="menu-item active" data-link="<?= base_url('admin/dashboard_admin') ?>">
+            <li class="menu-item active" data-link="<?= base_url('pegawai/dashboard_pegawai') ?>">
                 <img src="<?= base_url('assets/images/dashboard.png') ?>" alt="Dashboard" class="menu-icon">
                 <span class="menu-text">Dashboard</span>
             </li>
@@ -22,7 +22,7 @@
                 <img src="<?= base_url('assets/images/codicon_book.png') ?>" alt="Data Pengguna" class="menu-icon">
                 <span class="menu-text">Notulensi</span>
             </li>
-            <li class="menu-item" data-link="<?= base_url('admin/riwayat_notulensi') ?>">
+            <li class="menu-item" data-link="<?= base_url('pegawai/riwayatpegawai') ?>">
                 <img src="<?= base_url('assets/images/icon_riwayat.png') ?>" alt="Riwayat Notulensi" class="menu-icon">
                 <span class="menu-text">Riwayat Notulensi</span>
             </li>

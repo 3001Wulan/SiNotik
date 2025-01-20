@@ -21,7 +21,7 @@
                     </a>
                 </li>
                 <li class="active">
-                    <a href="#" class="active">
+                    <a href="data_pengguna" class="active">
                         <img src="<?= base_url('assets/images/data_pengguna.png'); ?>" alt="Data Pengguna Icon" class="sidebar-icon">
                         Data Pengguna
                     </a>
