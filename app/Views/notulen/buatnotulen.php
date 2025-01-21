@@ -20,17 +20,17 @@
                 </a>
                 <div class="separator"></div>
                 <div class="menu-item dropdown">
-                    <a href="#" class="menu-item-link">
+                    <a href="dashboard_notulen" class="dropdown-item">
                         <img src="<?= base_url('assets/images/notulensi.png') ?>" alt="Data User Icon">
                         <span>Notulensi</span>
                     </a>
                     <div class="dropdown-content">
-                        <a href="#" class="dropdown-item">
+                            <a href="melihatnotulen" class="dropdown-item">
                             <img src="<?= base_url('assets/images/buat.png') ?>" alt="Daftar Notulensi Icon">
                             <span>Daftar Notulensi</span>
                         </a>
                         <div class="dropdown-separator"></div>
-                        <a href="#" class="dropdown-item">
+                        <a href="buatnotulen" class="dropdown-item">
                             <img src="<?= base_url('assets/images/edit.png') ?>" alt="Buat Notulensi Icon">
                             <span>Buat Notulensi</span>
                         </a>
@@ -52,7 +52,11 @@
 
                 <div class="user-info">
                     <div class="profile-picture">
-                        <img src="<?= base_url('assets/images/default-avatar.png') ?>" alt="Profile Picture" id="profile-pic">
+                        <img src="<?= base_url('assets/images/profiles/' . ($profil_foto ? $profil_foto : 'delvaut.png')) ?>" alt="Profile Picture" id="profile-pic">
+                        <div class="profile-info">
+                            <p class="profile-name"><?= $nama ?></p> <!-- Nama Pengguna -->
+                            <p class="profile-role"><?= $role ?></p> <!-- Role Pengguna -->
+                    </div>
                         <div class="dropdown-menu" id="profile-dropdown">
                             <div class="dropdown-item">
                                 <img src="<?= base_url('assets/images/profil.png') ?>" alt="Icon Notulensi">

@@ -2,11 +2,18 @@
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
+use App\Models\NotulensiModel;
 
 class MelihatNotulenController extends Controller
 {
     public function lihat()
     {
-        return view('notulen/melihatnotulen');
+        // Memuat model NotulensiModel
+        $model = new NotulensiModel();
+
+        // Mengambil data notulensi
+        $data['notulensi'] = $model->getAllNotulensi();
+
+        return view('notulen/melihatnotulen', $data);
     }
 }

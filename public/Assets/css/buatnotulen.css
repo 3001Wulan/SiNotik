@@ -278,16 +278,6 @@ body {
 .dark-mode .profile-container {
     gap: 30px;
 }
-
-.profile-content {
-    padding: 20px;
-}
-
-.profile-container {
-    display: flex;
-    gap: 40px;
-}
-
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -591,5 +581,35 @@ input {
     font-weight: normal; 
     font-style: italic; 
 }
+.profile-container {
+    display: flex;
+    align-items: center;
+}
 
+#profile-pic {
+    width: 50px; /* Atur ukuran gambar sesuai kebutuhan */
+    height: 50px;
+    border-radius: 50%; /* Membuat gambar berbentuk lingkaran */
+    margin-right: 10px; /* Memberikan jarak antara gambar dan teks */
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column; 
+}
+
+.profile-name {
+    font-size: 16px; /* Ukuran font untuk nama */
+    font-weight: bold; /* Memberikan ketebalan pada nama */
+    margin: 0;
+    margin-left: -130px;
+    margin-top: -50px;
+}
+
+.profile-role {
+    font-size: 14px; /* Ukuran font untuk role */
+    color: #888; /* Memberikan warna lebih ringan pada role */
+    margin: 0;
+    margin-left: -125px;
+}
 

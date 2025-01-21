@@ -9,8 +9,24 @@ class TambahPenggunaController extends Controller
 {
     public function index()
     {
-        // Menampilkan view form tambah pengguna
-        return view('admin/tambahpengguna');
+        // Mengambil user_id dari sesi
+        $session = session();
+        $user_id = $session->get('user_id');
+
+        // Memastikan user_id ada dalam sesi
+        if ($user_id) {
+            // Ambil data pengguna berdasarkan user_id
+            $PenggunaModel = new PenggunaModel();
+            $user = $PenggunaModel->find($user_id);
+
+            // Menyediakan data pengguna untuk ditampilkan pada view
+            return view('admin/tambahpengguna', [
+                'user' => $user,  // Data pengguna (nama, role, profil foto)
+            ]);
+        } else {
+            // Jika user_id tidak ada dalam sesi, redirect ke halaman login
+            return redirect()->to('/login');
+        }
     }
 
     public function simpan()

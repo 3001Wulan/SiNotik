@@ -14,7 +14,7 @@
     <header>
         <img id="logo" src="assets/images/logo.png" alt="SiNotik Logo">
         <nav>
-            <a href="about.php" class="about-link">About</a>
+            <a href="about" class="about-link">About</a>
         </nav>
     </header>
 

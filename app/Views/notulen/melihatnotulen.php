@@ -7,9 +7,6 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/melihatnotulen.css') ?>">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <style>
-        
-    </style>
 </head>
 <body class="light-mode">
     <div class="container">
@@ -24,7 +21,7 @@
                     <span>Dashboard</span>
                 </a>
                 <div class="separator"></div>
-                <div class="dropdown"> <!-- Tambahkan wrapper dropdown -->
+                <div class="dropdown"> 
                 <a href="#" class="menu-item-link">
                     <img src="<?= base_url('assets/images/notulensi.png') ?>" alt="Data User Icon">
                     <span>Notulensi</span>
@@ -97,76 +94,28 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Pembinaan Tugas</td>
-                                <td>APTIKA</td>
-                                <td>05/02/2025</td>
-                                <td>
-                                    <div class="action-buttons">
-                                        <button class="btn-detail" onclick="viewDetails(this)">Lihat</button>
-                                        <button class="btn-comment" onclick="showCommentModal(this)">
-                                            <img src="<?= base_url('assets/images/komen.png') ?>" alt="Comment">
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Rapat bulanan</td>
-                                <td>IKP</td>
-                                <td>02/02/2025</td>
-                                <td>
-                                    <div class="action-buttons">
-                                        <button class="btn-detail" onclick="viewDetails(this)">Lihat</button>
-                                        <button class="btn-comment" onclick="showCommentModal(this)">
-                                            <img src="<?= base_url('assets/images/komen.png') ?>" alt="Comment">
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Rapat rutin</td>
-                                <td>IKP</td>
-                                <td>02/02/2025</td>
-                                <td>
-                                    <div class="action-buttons">
-                                        <button class="btn-detail" onclick="viewDetails(this)">Lihat</button>
-                                        <button class="btn-comment" onclick="showCommentModal(this)">
-                                            <img src="<?= base_url('assets/images/komen.png') ?>" alt="Comment">
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>Rapat Tahunan</td>
-                                <td>Statistik & Persandian</td>
-                                <td>02/2/2025</td>
-                                <td>
-                                    <div class="action-buttons">
-                                        <button class="btn-detail" onclick="viewDetails(this)">Lihat</button>
-                                        <button class="btn-comment" onclick="showCommentModal(this)">
-                                            <img src="<?= base_url('assets/images/komen.png') ?>" alt="Comment">
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>Agenda Wajib</td>
-                                <td>Statistik & Persandian</td>
-                                <td>05/02/2025</td>
-                                <td>
-                                    <div class="action-buttons">
-                                        <button class="btn-detail" onclick="viewDetails(this)">Lihat</button>
-                                        <button class="btn-comment" onclick="showCommentModal(this)">
-                                            <img src="<?= base_url('assets/images/komen.png') ?>" alt="Comment">
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
+                            <?php if (empty($notulensi)): ?>
+                                <tr>
+                                    <td colspan="5">Tidak ada data notulensi tersedia.</td>
+                                </tr>
+                            <?php else: ?>
+                                <?php foreach ($notulensi as $index => $notulen): ?>
+                                    <tr>
+                                        <td><?= $index + 1 ?></td>
+                                        <td><?= esc($notulen['judul']) ?></td>
+                                        <td><?= esc($notulen['Bidang']) ?></td>
+                                        <td><?= esc($notulen['tanggal_dibuat']) ?></td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button class="btn-detail" onclick="viewDetails(this)">Lihat</button>
+                                                <button class="btn-comment" onclick="showCommentModal(this)">
+                                                    <img src="<?= base_url('assets/images/komen.png') ?>" alt="Comment">
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
                         </tbody>
                     </table>
                 </div>
@@ -193,7 +142,6 @@
             </div>
         </div>
     </div>
-
     <script>
        document.addEventListener('DOMContentLoaded', function() {
     // Initialize variables

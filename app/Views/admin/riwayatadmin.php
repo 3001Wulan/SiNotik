@@ -146,214 +146,71 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Sample data for demonstration
-            let notulensData = [
-                { no: 1, tanggal: '2024-12-06', bidang: 'IKP', judul: 'Rapat xyz', notulen: 'Heni Yunida', isi: 'xxxxx', dokumentasi: '/api/placeholder/50/50' },
-                { no: 2, tanggal: '2024-12-12', bidang: 'APTIKA', judul: 'Rapat xyz', notulen: 'Wulandari', isi: 'xxxxx', dokumentasi: '/api/placeholder/50/50' },
-                { no: 3, tanggal: '2024-12-21', bidang: 'Statistik & Persandian', judul: 'Rapat xyz', notulen: 'Cindy Arwinda', isi: 'xxxxx', dokumentasi: '/api/placeholder/50/50' },
-                { no: 4, tanggal: '2024-12-27', bidang: 'Statistik & Persandian', judul: 'Rapat xyz', notulen: 'Intan Salma', isi: 'xxxxx', dokumentasi: '/api/placeholder/50/50' },
-                { no: 5, tanggal: '2025-01-06', bidang: 'APTIKA', judul: 'Rapat xyz', notulen: 'Sistri Mahira', isi: 'xxxxx', dokumentasi: '/api/placeholder/50/50' }
-            ];
-
+            // Ambil data dari controller (pastikan server mengirim data dalam format JSON)
+            let notulenData = <?= json_encode($notulensi); ?>;  // Data dari controller
             let currentEntries = 5; // Default entries value
-            let filteredData = [...notulensData];
+            let filteredData = [...notulenData];
 
-            // Tambahkan HTML untuk modal di dalam body
-    const modalHtml = `
-        <div id="deleteModal" class="modal" style="display: none;">
-            <div class="modal-content">
-                <div class="modal-icon">
-                    <i class="fas fa-exclamation-circle"></i>
-                </div>
-                <h3 class="modal-title">Hapus Data Ini?</h3>
-                <div class="modal-buttons">
-                    <button class="modal-btn confirm-btn" onclick="confirmDelete()">Iya</button>
-                    <button class="modal-btn cancel-btn" onclick="closeModal()">Tidak</button>
-                </div>
-            </div>
-        </div>
-    `;
-    document.body.insertAdjacentHTML('beforeend', modalHtml);
             let deleteId = null;
-             // Fungsi untuk menampilkan modal
-                window.showDeleteModal = function(no) {
-                    deleteId = no;
-                    const modal = document.getElementById('deleteModal');
-                    modal.style.display = 'flex';
-                };
-
-                // Fungsi untuk menutup modal
-                window.closeModal = function() {
-                    const modal = document.getElementById('deleteModal');
-                    modal.style.display = 'none';
-                    deleteId = null;
-                };
-
-                // Fungsi untuk mengkonfirmasi penghapusan
-                window.confirmDelete = function() {
-                    if (deleteId !== null) {
-                        notulensData = notulensData.filter(item => item.no !== deleteId);
-                        filteredData = filteredData.filter(item => item.no !== deleteId);
-                        updateTable();
-                        closeModal();
-                    }
-                };
-
-
-            function deleteRecord(no) {
-                if (confirm('Apakah Anda yakin ingin menghapus data ini?')) {
-                    // Remove from notulensData
-                    notulensData = notulensData.filter(item => item.no !== no);
-                    // Update filtered data
-                    filteredData = filteredData.filter(item => item.no !== no);
-                    // Refresh the table
-                    updateTable();
-                }
-            }
-
-            // Make deleteRecord function globally accessible
-            window.deleteRecord = deleteRecord;
             
-            // Theme toggle functionality
-            const themeToggle = document.querySelector('.theme-toggle');
-            const body = document.body;
-            
-            themeToggle.addEventListener('click', function() {
-                body.classList.toggle('light-mode');
-                body.classList.toggle('dark-mode');
-            });
+            // Tambahkan HTML untuk modal di dalam body
+            const modalHtml = ` 
+                <div id="deleteModal" class="modal" style="display: none;">
+                    <div class="modal-content">
+                        <div class="modal-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <h3 class="modal-title">Hapus Data Ini?</h3>
+                        <div class="modal-buttons">
+                            <button class="modal-btn confirm-btn" onclick="confirmDelete()">Iya</button>
+                            <button class="modal-btn cancel-btn" onclick="closeModal()">Tidak</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.body.insertAdjacentHTML('beforeend', modalHtml);
 
-            // Date picker initialization
-            const initDatePicker = (selector, iconContainer) => {
-                const picker = flatpickr(selector, {
-                    dateFormat: "Y-m-d",
-                    locale: "id",
-                    allowInput: true,
-                    clickOpens: false
-                });
-
-                iconContainer.addEventListener('click', () => {
-                    picker.open();
-                });
+            // Fungsi untuk menampilkan modal
+            window.showDeleteModal = function(no) {
+                deleteId = no;
+                const modal = document.getElementById('deleteModal');
+                modal.style.display = 'flex';
             };
 
-            // Initialize date pickers
-            const startDateIcon = document.querySelector('.datepicker1').nextElementSibling;
-            const endDateIcon = document.querySelector('.datepicker').nextElementSibling;
-            initDatePicker(".datepicker1", startDateIcon);
-            initDatePicker(".datepicker", endDateIcon);
+            // Fungsi untuk menutup modal
+            window.closeModal = function() {
+                const modal = document.getElementById('deleteModal');
+                modal.style.display = 'none';
+                deleteId = null;
+            };
 
-            // Category functionality
-            const categorySelect = document.querySelector('.category-select');
-            const categoryIcon = categorySelect.nextElementSibling;
-            const categories = ['APTIKA', 'IKP', 'Statistik & Persandian'];
-            let categoryPopup = document.createElement('div');
-            categoryPopup.className = 'category-popup';
-            
-            categories.forEach(category => {
-                const option = document.createElement('div');
-                option.className = 'category-option';
-                option.textContent = category;
-                option.onclick = function() {
-                    categorySelect.value = category;
-                    categoryPopup.style.display = 'none';
-                };
-                categoryPopup.appendChild(option);
-            });
-            
-            document.body.appendChild(categoryPopup);
-            
-            categoryIcon.addEventListener('click', function(e) {
-                const rect = categorySelect.getBoundingClientRect();
-                categoryPopup.style.top = `${rect.bottom + window.scrollY}px`;
-                categoryPopup.style.left = `${rect.left + window.scrollX}px`;
-                categoryPopup.style.minWidth = `${rect.width}px`;
-                categoryPopup.style.display = categoryPopup.style.display === 'block' ? 'none' : 'block';
-                e.stopPropagation();
-            });
-
-            // Search functionality
-            const searchInput = document.querySelector('.search-input');
-            const searchIcon = document.querySelector('.search .iicon-container');
-
-            searchIcon.addEventListener('click', function() {
-                filterAndDisplayData();
-            });
-
-            searchInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    filterAndDisplayData();
+            // Fungsi untuk mengkonfirmasi penghapusan
+            window.confirmDelete = function() {
+                if (deleteId !== null) {
+                    filteredData = filteredData.filter(item => item.no !== deleteId);
+                    updateTable();
+                    closeModal();
                 }
-            });
+            };
 
-            // Filter button functionality
-            const filterBtn = document.querySelector('.filter-btn');
-            filterBtn.addEventListener('click', function() {
-                const entriesSelect = document.getElementById('entries');
-                currentEntries = parseInt(entriesSelect.value);
-                filterAndDisplayData();
-            });
-
-            // PDF export functionality
-            const pdfBtn = document.querySelector('.pdf-btn');
-            pdfBtn.addEventListener('click', function() {
-                generatePDF();
-            });
-
-            // Function to filter and display data
-            function filterAndDisplayData() {
-                const startDate = document.querySelector('.datepicker1').value;
-                const endDate = document.querySelector('.datepicker').value;
-                const category = categorySelect.value.toLowerCase();
-                const searchTerm = searchInput.value.toLowerCase().trim();
-
-                filteredData = notulensData.filter(item => {
-                    const dateMatch = (!startDate || item.tanggal >= startDate) && 
-                                    (!endDate || item.tanggal <= endDate);
-                    
-                    // Enhanced search functionality
-                    const searchMatch = !searchTerm || 
-                        Object.values(item).some(val => {
-                            const strVal = String(val).toLowerCase();
-                            return strVal.includes(searchTerm);
-                        });
-                    
-                    const categoryMatch = !category || 
-                        item.bidang.toLowerCase().includes(category);
-
-                    return dateMatch && searchMatch && categoryMatch;
-                });
-
-                updateTable();
-            }
-
-            // Function to update table
+            // Fungsi untuk mengupdate tabel
             function updateTable() {
                 const tbody = document.querySelector('.data-table tbody');
-                tbody.innerHTML = '';
+                tbody.innerHTML = ''; // Clear existing rows
 
-                if (filteredData.length === 0) {
-                    const row = document.createElement('tr');
+                filteredData.forEach((data, index) => {
+                    let row = document.createElement('tr');
                     row.innerHTML = `
-                        <td colspan="8" style="text-align: center;">Tidak ada data yang ditampilkan</td>
-                    `;
-                    tbody.appendChild(row);
-                    return;
-                }
-
-                filteredData.slice(0, currentEntries).forEach(item => {
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td>${item.no}</td>
-                        <td>${formatDate(item.tanggal)}</td>
-                        <td>${item.bidang}</td>
-                        <td>${item.judul}</td>
-                        <td>${item.notulen}</td>
-                        <td>${item.isi}</td>
-                        <td><img src="${item.dokumentasi}" alt="dokumentasi" class="doc-image"></td>
+                        <td>${index + 1}</td>
+                        <td>${data.tanggal_dibuat}</td>
+                        <td>${data.Bidang}</td>
+                        <td>${data.judul}</td>
+                        <td>${data.notulen}</td>
+                        <td>${data.isi}</td>
+                        <td><img src="<?= base_url('assets/images/')?>${data.dokumentasi}" alt="Dokumentasi" class="doc-img"></td>
                         <td>
-                            <div class="delete-btn" onclick="showDeleteModal(${item.no})">
-                                <img src="<?= base_url('assets/images/hapus.png') ?>" alt="Delete Icon">
+                            <button class="delete-btn" onclick="showDeleteModal(${data.no})">
+                                <img src="<?= base_url('assets/images/hapus.png') ?>" alt="Hapus Icon">
                             </button>
                         </td>
                     `;
@@ -361,63 +218,8 @@
                 });
             }
 
-            // Function to format date
-            function formatDate(dateStr) {
-                const date = new Date(dateStr);
-                return date.toLocaleDateString('id-ID', {
-                    day: '2-digit',
-                    month: '2-digit',
-                    year: 'numeric'
-                });
-            }
-
-            // Function to generate PDF
-            function generatePDF() {
-                const docDefinition = {
-                    content: [
-                        { text: 'Riwayat Notulensi', style: 'header' },
-                        {
-                            table: {
-                                headerRows: 1,
-                                body: [
-                                    ['No', 'Tanggal', 'Judul', 'Notulen', 'Isi'],
-                                    ...filteredData.map(item => [
-                                        item.no,
-                                        formatDate(item.tanggal),
-                                        item.judul,
-                                        item.notulen,
-                                        item.isi
-                                    ])
-                                ]
-                            }
-                        }
-                    ],
-                    styles: {
-                        header: {
-                            fontSize: 18,
-                            bold: true,
-                            margin: [0, 0, 0, 10]
-                        }
-                    }
-                };
-
-                console.log('Generating PDF with data:', docDefinition);
-                alert('PDF generation triggered. Implementation needed with actual PDF library.');
-            }
-
-            // Close category popup when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!categoryPopup.contains(e.target)) {
-                    categoryPopup.style.display = 'none';
-                }
-            });
-
-            // Initial table display with default 5 entries
-            updateTable();
+            updateTable(); // Memperbarui tabel setelah data diinisialisasi
         });
-
-        
     </script>
-    
 </body>
 </html>

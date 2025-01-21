@@ -22,7 +22,7 @@ $current_page = 'data_pengguna';
             <ul>
                 <li>
                     <a href="dashboard_admin" class="<?php echo ($current_page == 'dashboard') ? 'active dashboard' : 'inactive'; ?>">
-                        <img src="<?php echo base_url('assets/images/dashboard_admin.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
+                        <img src="<?php echo base_url('assets/images/dashboard.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
                         Dashboard
                     </a>
                 </li>
@@ -171,147 +171,176 @@ $current_page = 'data_pengguna';
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const tableBody = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
-            const deletePopup = document.getElementById('deletePopup');
-            const confirmDelete = document.getElementById('confirmDelete');
-            const cancelDelete = document.getElementById('cancelDelete');
-            const entriesDropdown = document.getElementById('entries');
+    document.addEventListener('DOMContentLoaded', () => {
+        const tableBody = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
+        const deletePopup = document.getElementById('deletePopup');
+        const confirmDelete = document.getElementById('confirmDelete');
+        const cancelDelete = document.getElementById('cancelDelete');
+        const entriesDropdown = document.getElementById('entries');
+        const searchInput = document.getElementById('searchInput');
+        const previousBtn = document.getElementById('previousBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const pageNumber = document.getElementById('pageNumber');
+        const toggleDarkMode = document.getElementById('toggleDarkMode');
 
-            let selectedRow = null;
-            let currentPage = 1;
-            let entriesPerPage = 10;
-            let filteredData = Array.from(tableBody.getElementsByTagName('tr'));
+        let selectedRow = null;
+        let currentPage = 1;
+        let entriesPerPage = 10; // Default entries per page
+        let allData = Array.from(tableBody.getElementsByTagName('tr')); // Original data in the table
+        let filteredData = [...allData]; // Filtered data for search or other actions
 
-            // Fungsi untuk memperbarui tabel
-            function updateTable() {
-                const startIndex = (currentPage - 1) * entriesPerPage;
-                const endIndex = startIndex + entriesPerPage;
+        // Function to update the table display
+        function updateTable() {
+            const startIndex = (currentPage - 1) * entriesPerPage;
+            const endIndex = startIndex + entriesPerPage;
 
-                filteredData.forEach((row, index) => {
-                    row.style.display = index >= startIndex && index < endIndex ? '' : 'none';
-                });
+            if (entriesPerPage === 0) {
+                // Show all data when "Select" is chosen (entriesPerPage = 0)
+                filteredData.forEach(row => row.style.display = '');
+                previousBtn.style.display = 'none';
+                nextBtn.style.display = 'none';
+                pageNumber.textContent = 1; // Display page number as 1
+            } else {
+                allData.forEach(row => (row.style.display = 'none')); // Hide all rows first
+                filteredData.slice(startIndex, endIndex).forEach(row => (row.style.display = '')); // Show only rows for current page
 
-                document.getElementById('previousBtn').style.display = currentPage > 1 ? 'inline-block' : 'none';
-                document.getElementById('nextBtn').style.display = currentPage * entriesPerPage < filteredData.length ? 'inline-block' : 'none';
-                document.getElementById('pageNumber').textContent = currentPage;
+                // Show or hide navigation buttons
+                previousBtn.style.display = currentPage > 1 ? 'inline-block' : 'none';
+                nextBtn.style.display = currentPage * entriesPerPage < filteredData.length ? 'inline-block' : 'none';
+
+                // Update the page number
+                pageNumber.textContent = currentPage;
             }
+        }
 
-            // Fungsi navigasi halaman
-            function navigatePage(direction) {
-                if (direction === 'prev' && currentPage > 1) {
-                    currentPage--;
-                } else if (direction === 'next' && currentPage * entriesPerPage < filteredData.length) {
-                    currentPage++;
-                }
-                updateTable();
+        // Function to navigate pages
+        function navigatePage(direction) {
+            if (direction === 'prev' && currentPage > 1) {
+                currentPage--;
+            } else if (direction === 'next' && currentPage * entriesPerPage < filteredData.length) {
+                currentPage++;
             }
-
-            // Event perubahan pada dropdown entries
-            entriesDropdown.addEventListener('change', (event) => {
-                const selectedValue = parseInt(event.target.value, 10);
-                if (!isNaN(selectedValue)) {
-                    entriesPerPage = selectedValue;
-                    currentPage = 1; // Reset ke halaman pertama
-                    updateTable();
-                }
-            });
-
-            // Event klik tombol hapus
-            tableBody.addEventListener('click', (event) => {
-                if (event.target.closest('.btn-delete')) {
-                    event.preventDefault();
-                    selectedRow = event.target.closest('tr');
-                    deletePopup.style.display = 'flex';
-                }
-
-                // Klik di luar aksi (seperti pada baris data) akan mengarahkan ke halaman detail
-                const clickedRow = event.target.closest('tr');
-                if (clickedRow && !event.target.closest('.btn-edit') && !event.target.closest('.btn-delete')) {
-                    window.location.href = clickedRow.dataset.href;
-                }
-            });
-
-            // Tombol batal hapus
-            cancelDelete.addEventListener('click', () => {
-                deletePopup.style.display = 'none';
-                selectedRow = null;
-            });
-
-            // Tombol konfirmasi hapus
-            confirmDelete.addEventListener('click', () => {
-                if (selectedRow) {
-                    const userId = selectedRow.dataset.userId; // Ambil ID pengguna
-                    deleteUser(userId); // Kirim permintaan ke backend untuk menghapus data
-                }
-                deletePopup.style.display = 'none';
-                selectedRow = null;
-            });
-
-            // Fungsi untuk menghapus data melalui AJAX
-            function deleteUser(userId) {
-                fetch('<?php echo site_url('DetailPenggunaController/hapusData'); ?>', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ user_id: userId }) // Kirim ID pengguna untuk dihapus
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data);
-                    if (data.success) {
-                        selectedRow.remove(); // Hapus baris dari tabel
-                        filteredData = Array.from(tableBody.getElementsByTagName('tr')); // Perbarui data
-                        updateTable();
-                    } else {
-                        alert('Terjadi kesalahan saat menghapus data');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('Terjadi kesalahan');
-                });
-            }
-
-            // Inisialisasi tabel saat halaman dimuat
             updateTable();
+        }
 
-            // Event klik untuk toggle dark mode
-            const toggleDarkMode = document.getElementById('toggleDarkMode');
-            toggleDarkMode.addEventListener('click', () => {
-                document.body.classList.toggle('dark-mode');
+        // Function to search the table
+        function searchTable() {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+
+            if (!searchTerm) {
+                filteredData = [...allData]; // Show all data if search is empty
+            } else {
+                filteredData = allData.filter(row => {
+                    const cells = row.getElementsByTagName('td');
+                    const nameCell = cells[2]; // "Nama User" column is usually at index 2
+                    return nameCell && nameCell.textContent.toLowerCase().includes(searchTerm);
+                });
+            }
+
+            currentPage = 1; // Reset to the first page after search
+            updateTable();
+        }
+
+        // Function to delete user data
+        function deleteUser(userId) {
+            fetch('<?php echo site_url('DetailPenggunaController/hapusData'); ?>', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ user_id: userId })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    selectedRow.remove(); 
+                    allData = Array.from(tableBody.getElementsByTagName('tr')); 
+                    filteredData = [...allData]; 
+
+                    if (currentPage > 1 && (currentPage - 1) * entriesPerPage >= filteredData.length) {
+                        currentPage--;
+                    }
+
+                    updateTable();
+                } else {
+                    alert('Terjadi kesalahan saat menghapus data');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Data berhasil dihapus');
             });
+        }
+
+        // Event listener for row click
+        tableBody.addEventListener('click', (event) => {
+            const clickedRow = event.target.closest('tr');
+
+            if (!clickedRow) return;
+
+            // Delete button click
+            if (event.target.closest('.btn-delete')) {
+                event.preventDefault();
+                selectedRow = clickedRow;
+                deletePopup.style.display = 'flex';
+                return;
+            }
+
+            // Clicking other rows (navigate to detail page)
+            if (!event.target.closest('.btn-edit') && !event.target.closest('.btn-delete')) {
+                window.location.href = clickedRow.dataset.href;
+            }
         });
 
-        function searchTable() {
-    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-    const table = document.getElementById('dataTable');
-    const rows = table.getElementsByTagName('tr');
-    const tableBody = table.getElementsByTagName('tbody')[0];
+        // Cancel delete button
+        cancelDelete.addEventListener('click', () => {
+            deletePopup.style.display = 'none';
+            selectedRow = null;
+        });
 
-    // Jika kolom pencarian kosong, tampilkan data asli (semua baris)
-    if (!searchTerm) {
-        filteredData = Array.from(rows); // Mengatur kembali filteredData ke semua baris asli
-        updateTable(); // Perbarui tabel tanpa filter
-        return;
-    }
+        // Confirm delete button
+        confirmDelete.addEventListener('click', () => {
+            if (selectedRow) {
+                const userId = selectedRow.dataset.userId;
+                deleteUser(userId);
+            }
+            deletePopup.style.display = 'none';
+            selectedRow = null;
+        });
 
-    const filteredRows = Array.from(rows).filter(row => {
-        const cells = row.getElementsByTagName('td');
-        const nameCell = cells[2]; // Kolom "Nama User" biasanya ada di index ke-2 (dimulai dari 0)
-        return nameCell && nameCell.textContent.toLowerCase().includes(searchTerm); 
+        // Change entries per page dropdown
+        entriesDropdown.addEventListener('change', (event) => {
+            const selectedValue = parseInt(event.target.value, 10);
+
+            // If "Select" is chosen, set entriesPerPage to 0 (show all rows)
+            if (selectedValue === 0) {
+                entriesPerPage = 0; // Show all data
+                filteredData = [...allData]; // All data is visible
+            } else if (!isNaN(selectedValue)) {
+                entriesPerPage = selectedValue; // Set entries per page
+                currentPage = 1; // Reset to the first page
+            }
+
+            updateTable();
+        });
+
+        // Event listener for search input
+        searchInput.addEventListener('input', searchTable);
+
+        // Pagination buttons
+        previousBtn.addEventListener('click', () => navigatePage('prev'));
+        nextBtn.addEventListener('click', () => navigatePage('next'));
+
+        // Dark mode toggle
+        toggleDarkMode.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+
+        // Initialize the table on page load
+        updateTable();
     });
+</script>
 
-    tableBody.innerHTML = ''; 
-    filteredRows.forEach(row => tableBody.appendChild(row));
-
-    filteredData = filteredRows;  
-    currentPage = 1;  
-    updateTable(); 
-}
-
-    </script>
 </body>
 
 </html>
