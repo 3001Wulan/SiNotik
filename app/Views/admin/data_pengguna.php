@@ -28,13 +28,13 @@ $current_page = 'data_pengguna';
                 </li>
                 <li>
                     <a href="#" class="<?php echo ($current_page == 'data_pengguna') ? 'active' : 'inactive'; ?>">
-                        <img src="<?php echo base_url('assets/images/data_pengguna.png'); ?>" alt="Data Pengguna Icon" class="sidebar-icon">
+                        <img src="<?php echo base_url('assets/images/datapengguna.png'); ?>" alt="Data Pengguna Icon" class="sidebar-icon">
                         Data Pengguna
                     </a>
                 </li>
                 <li>
                     <a href="riwayatadmin" class="<?php echo ($current_page == 'riwayat_notulensi') ? 'active riwayat-notulensi' : 'inactive'; ?>">
-                        <img src="<?php echo base_url('assets/images/riwayat_notulensi.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
+                        <img src="<?php echo base_url('assets/images/riwayatnotulensi.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
                         Riwayat Notulensi
                     </a>
                 </li>
@@ -44,19 +44,32 @@ $current_page = 'data_pengguna';
         <!-- Content Area -->
         <div class="content">
             <div class="top-bar">
+                <!-- Mode -->
                 <div class="toggle-dark-mode">
                     <img id="toggleDarkMode" src="<?php echo base_url('assets/images/moon.png'); ?>" alt="Dark Mode">
                 </div>
 
+                <!-- Profil -->
                 <div class="user-info">
-                    <span class="user-name"><?php echo isset($user_profile['nama']) ? $user_profile['nama'] : 'Nama Tidak Ditemukan'; ?></span>
-                    <span class="user-role"><?php echo isset($user_profile['role']) ? ucfirst($user_profile['role']) : 'Role Tidak Ditemukan'; ?></span>
-                    <img src="<?= base_url('assets/images/profiles/' . $user_profile['profil_foto']) ?>" alt="User Photo" class="header-profile-img" id="profile-icon">
+                    <div class="user-text">
+                        <div class="user-name">
+                            <span><?php echo isset($user_profile['nama']) ? $user_profile['nama'] : 'Nama Tidak Ditemukan'; ?></span>
+                        </div>
+                        <div class="user-role">
+                            <span><?php echo isset($user_profile['role']) ? ucfirst($user_profile['role']) : 'Role Tidak Ditemukan'; ?></span>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="<?= base_url('assets/images/profiles/' . $user_profile['profil_foto']) ?>" alt="User Photo" class="header-profile-img" id="profile-icon">
+                    </div>
                 </div>
             </div>
 
+            <!-- Page Tittle -->
             <div class="page-title">
                 <h1>Data Pengguna</h1>
+
+                <!-- Tambah Pengguna -->
                 <div class="button-container">
                     <a href="<?php echo site_url('admin/tambahpengguna'); ?>" class="btn-add">
                         Tambah Data
@@ -65,8 +78,10 @@ $current_page = 'data_pengguna';
                 </div>
             </div>
 
+            <!-- Tabel Pengguna -->
             <div class="table-container">
                 <div class="search-container">
+                    <!-- Entries Data -->
                     <div class="show-entries">
                         <label for="entries" class="show-label">Show</label>
                         <select id="entries" name="entries">
@@ -79,12 +94,14 @@ $current_page = 'data_pengguna';
                         <span class="entries-text">entries</span>
                     </div>
 
+                    <!-- Search -->
                     <div class="search-box">
                         <input type="text" id="searchInput" placeholder="Search here" onkeyup="searchTable()">
                         <img src="<?php echo base_url('assets/images/search.png'); ?>" alt="Search Icon" class="search-icon">
                     </div>
                 </div>
 
+                <!-- Data Pengguna -->
                 <table id="dataTable">
                     <thead>
                         <tr>

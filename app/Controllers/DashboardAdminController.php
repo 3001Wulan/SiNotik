@@ -48,7 +48,8 @@ class DashboardAdminController extends BaseController
             'jumlah_notulensi_per_bidang' => $jumlahNotulensiPerBidang,
             'profile_picture' => $profile_picture,  
             'user_name' => $user_name,              
-            'user_role' => $user_role               
+            'user_role' => $user_role,
+            'current_page' => 'dashboard'               
         ]);
     }
 }
