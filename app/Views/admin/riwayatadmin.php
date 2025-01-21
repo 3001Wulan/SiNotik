@@ -192,6 +192,133 @@
                     closeModal();
                 }
             };
+            function deleteRecord(no) {
+                if (confirm('Apakah Anda yakin ingin menghapus data ini?')) {
+                    // Remove from notulensData
+                    notulensData = notulensData.filter(item => item.no !== no);
+                    // Update filtered data
+                    filteredData = filteredData.filter(item => item.no !== no);
+                    // Refresh the table
+                    updateTable();
+                }
+            }
+
+            // Make deleteRecord function globally accessible
+            window.deleteRecord = deleteRecord;
+            
+            // Theme toggle functionality
+            const themeToggle = document.querySelector('.theme-toggle');
+            const body = document.body;
+            
+            themeToggle.addEventListener('click', function() {
+                body.classList.toggle('light-mode');
+                body.classList.toggle('dark-mode');
+            });
+
+            // Date picker initialization
+            const initDatePicker = (selector, iconContainer) => {
+                const picker = flatpickr(selector, {
+                    dateFormat: "Y-m-d",
+                    locale: "id",
+                    allowInput: true,
+                    clickOpens: false
+                });
+
+                iconContainer.addEventListener('click', () => {
+                    picker.open();
+                });
+            };
+
+            // Initialize date pickers
+            const startDateIcon = document.querySelector('.datepicker1').nextElementSibling;
+            const endDateIcon = document.querySelector('.datepicker').nextElementSibling;
+            initDatePicker(".datepicker1", startDateIcon);
+            initDatePicker(".datepicker", endDateIcon);
+
+            // Category functionality
+            const categorySelect = document.querySelector('.category-select');
+            const categoryIcon = categorySelect.nextElementSibling;
+            const categories = ['APTIKA', 'IKP', 'Statistik & Persandian'];
+            let categoryPopup = document.createElement('div');
+            categoryPopup.className = 'category-popup';
+            
+            categories.forEach(category => {
+                const option = document.createElement('div');
+                option.className = 'category-option';
+                option.textContent = category;
+                option.onclick = function() {
+                    categorySelect.value = category;
+                    categoryPopup.style.display = 'none';
+                };
+                categoryPopup.appendChild(option);
+            });
+            
+            document.body.appendChild(categoryPopup);
+            
+            categoryIcon.addEventListener('click', function(e) {
+                const rect = categorySelect.getBoundingClientRect();
+                categoryPopup.style.top = `${rect.bottom + window.scrollY}px`;
+                categoryPopup.style.left = `${rect.left + window.scrollX}px`;
+                categoryPopup.style.minWidth = `${rect.width}px`;
+                categoryPopup.style.display = categoryPopup.style.display === 'block' ? 'none' : 'block';
+                e.stopPropagation();
+            });
+
+            // Search functionality
+            const searchInput = document.querySelector('.search-input');
+            const searchIcon = document.querySelector('.search .iicon-container');
+
+            searchIcon.addEventListener('click', function() {
+                filterAndDisplayData();
+            });
+
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    filterAndDisplayData();
+                }
+            });
+
+            // Filter button functionality
+            const filterBtn = document.querySelector('.filter-btn');
+            filterBtn.addEventListener('click', function() {
+                const entriesSelect = document.getElementById('entries');
+                currentEntries = parseInt(entriesSelect.value);
+                filterAndDisplayData();
+            });
+
+            // PDF export functionality
+            const pdfBtn = document.querySelector('.pdf-btn');
+            pdfBtn.addEventListener('click', function() {
+                generatePDF();
+            });
+
+            // Function to filter and display data
+            function filterAndDisplayData() {
+                const startDate = document.querySelector('.datepicker1').value;
+                const endDate = document.querySelector('.datepicker').value;
+                const category = categorySelect.value.toLowerCase();
+                const searchTerm = searchInput.value.toLowerCase().trim();
+
+                filteredData = notulensData.filter(item => {
+                    const dateMatch = (!startDate || item.tanggal >= startDate) && 
+                                    (!endDate || item.tanggal <= endDate);
+                    
+                    // Enhanced search functionality
+                    const searchMatch = !searchTerm || 
+                        Object.values(item).some(val => {
+                            const strVal = String(val).toLowerCase();
+                            return strVal.includes(searchTerm);
+                        });
+                    
+                    const categoryMatch = !category || 
+                        item.bidang.toLowerCase().includes(category);
+
+                    return dateMatch && searchMatch && categoryMatch;
+                });
+
+                updateTable();
+            }
+            
 
             // Fungsi untuk mengupdate tabel
             function updateTable() {
@@ -205,9 +332,12 @@
                         <td>${data.tanggal_dibuat}</td>
                         <td>${data.Bidang}</td>
                         <td>${data.judul}</td>
-                        <td>${data.notulen}</td>
+                        <td>${data.user_name}</td>
                         <td>${data.isi}</td>
-                        <td><img src="<?= base_url('assets/images/')?>${data.dokumentasi}" alt="Dokumentasi" class="doc-img"></td>
+                        <td>
+                        <div style="width: 150px; height: 150px; overflow: hidden; border: 1px solid #ccc;">
+                            <img src="<?= base_url('uploads/') ?>${data.foto_dokumentasi}" alt="Dokumentasi" class="doc-img">
+                        </div>
                         <td>
                             <button class="delete-btn" onclick="showDeleteModal(${data.no})">
                                 <img src="<?= base_url('assets/images/hapus.png') ?>" alt="Hapus Icon">
@@ -220,6 +350,7 @@
 
             updateTable(); // Memperbarui tabel setelah data diinisialisasi
         });
+    
     </script>
 </body>
 </html>

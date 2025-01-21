@@ -37,6 +37,8 @@ $routes->get('/notulen/buatnotulen', 'NotulenController::create');
 $routes->post('notulen/simpan', 'NotulenController::simpan');
 $routes->get('/notulen/melihatnotulen', 'MelihatNotulenController::lihat');
 $routes->get('/about', 'AboutController::about');
+$routes->get('uploads/(:any)', 'FileController::getFile/$1');
+
 
 
 
