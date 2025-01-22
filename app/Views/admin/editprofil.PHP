@@ -48,10 +48,10 @@
                     <div class="user-role"><?= $role ?? 'N/A' ?></div>
                 </div>
                 <img src="<?= base_url('assets/images/profiles/' . $profil_foto) ?>" alt="Foto Profil" class="user-avatar">
-            </div>
+            </div>     
         </div>
     </div>
-
+    
     <div class="main-content">
         <div class="profile-container">
             <form id="editProfileForm" action="" method="POST" enctype="multipart/form-data">
@@ -68,8 +68,9 @@
                             <input type="file" name="profil_foto" id="upload" class="upload-input">
                         </div>
                     </div>
-                    <button class="save-button" type="submit" form="editProfileForm">Simpan Perubahan</button>
+                    <button class="save-button" type="submit" form="editProfileForm">Simpan Perubahan</button> 
                 </div>
+                
 
                 <div class="profile-details-box">
                     <form id="editProfileForm" action="" method="POST" enctype="multipart/form-data">
@@ -139,7 +140,6 @@
                             </div>
                         </div>
 
-                        <!-- Password -->
                         <div class="profile-field">
                             <div class="field-left">
                                 <span class="field-label">Password</span>
@@ -180,19 +180,21 @@
             }
         }
 
-        // Function to toggle dark/light mode
-        function toggleTheme() {
-            const body = document.body;
-            const themeIcon = document.getElementById('theme-icon');
-            body.classList.toggle('dark-mode');
 
-            // Change the icon based on the theme
-            if (body.classList.contains('dark-mode')) {
-                themeIcon.src = "<?= base_url('assets/images/sun.png'); ?>"; // Light mode icon
-            } else {
-                themeIcon.src = "<?= base_url('assets/images/moon.png'); ?>"; // Dark mode icon
-            }
-        }
+function toggleTheme() {
+    const body = document.body;
+    const themeIcon = document.getElementById('theme-icon');
+    body.classList.toggle('dark-mode');
+
+ 
+    if (body.classList.contains('dark-mode')) {
+        themeIcon.src = "<?= base_url('assets/images/sun.png'); ?>"; 
+        themeIcon.classList.add('sun-icon'); 
+    } else {
+        themeIcon.src = "<?= base_url('assets/images/moon.png'); ?>"; 
+        themeIcon.classList.remove('sun-icon'); 
+    }
+}
     </script>
 </body>
 </html>
