@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Pegawai</title>
-    <link rel="stylesheet" href="<?= base_url('assets/css/dashboard_admin.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('assets/css/popup_logout.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/dashboard_pegawai.css') ?>">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="light-theme">
