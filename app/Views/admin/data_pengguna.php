@@ -131,7 +131,7 @@ $current_page = 'data_pengguna';
                                     <td><?= esc($user['email']) ?></td>
                                     <td><?= esc($user['role']) ?></td>
                                     <td>
-                                        <a href="#" class="btn-edit">
+                                        <a href="ubahdatapengguna" class="btn-edit">
                                             <img src="<?= base_url('assets/images/edit.png') ?>" alt="Icon Edit" class="btn-icon">
                                         </a>
                                         <a href="#" class="btn-delete">

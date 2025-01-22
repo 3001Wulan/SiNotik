@@ -1,0 +1,460 @@
+INFO - 2025-01-22 02:10:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-22 02:10:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-22 02:10:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-22 02:10:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-22 02:10:36 --> Login attempt with username: lili
+ERROR - 2025-01-22 02:10:41 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\xampp\htdocs\SiNotik\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 D:\xampp\htdocs\SiNotik\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'sinotik', 3306, '', 0)
+#1 D:\xampp\htdocs\SiNotik\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\SiNotik\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\SiNotik\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\SiNotik\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\SiNotik\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 D:\xampp\htdocs\SiNotik\app\Models\AuthModel.php(16): CodeIgniter\BaseModel->first()
+#7 D:\xampp\htdocs\SiNotik\app\Controllers\Auth.php(20): App\Models\AuthModel->checkLogin('lili')
+#8 D:\xampp\htdocs\SiNotik\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#9 D:\xampp\htdocs\SiNotik\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 D:\xampp\htdocs\SiNotik\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\SiNotik\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 D:\xampp\htdocs\SiNotik\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\xampp\htdocs\SiNotik\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 D:\xampp\htdocs\SiNotik\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\xampp\htdocs\SiNotik\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\xampp\htdocs\SiNotik\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\SiNotik\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\SiNotik\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\SiNotik\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\SiNotik\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 D:\xampp\htdocs\SiNotik\app\Models\AuthModel.php(16): CodeIgniter\BaseModel->first()
+#6 D:\xampp\htdocs\SiNotik\app\Controllers\Auth.php(20): App\Models\AuthModel->checkLogin('lili')
+#7 D:\xampp\htdocs\SiNotik\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#8 D:\xampp\htdocs\SiNotik\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 D:\xampp\htdocs\SiNotik\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\SiNotik\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\SiNotik\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\xampp\htdocs\SiNotik\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\xampp\htdocs\SiNotik\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-01-22 02:10:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\AuthModel.php(16): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Auth.php(20): App\Models\AuthModel->checkLogin('lili')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-01-22 02:10:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-22 02:10:57 --> Login attempt with username: lili
+ERROR - 2025-01-22 02:10:57 --> Checking login for username: lili
+ERROR - 2025-01-22 02:10:57 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => alhamdulillah
+    [nip] => 123456780123456789
+    [email] => bismillah@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => jalan 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-09
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-16 07:45:21
+)
+
+ERROR - 2025-01-22 02:10:57 --> Password verify result for username lili: Success
+ERROR - 2025-01-22 02:10:57 --> Login success for username: lili
+INFO - 2025-01-22 02:10:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-22 02:10:57 --> User ID: 9
+DEBUG - 2025-01-22 02:10:57 --> Profile Picture: image.png
+DEBUG - 2025-01-22 02:10:57 --> User Name: alhamdulillah
+DEBUG - 2025-01-22 02:10:57 --> User Role: admin
+INFO - 2025-01-22 02:10:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-22 02:11:01 --> Mencoba mengambil pengguna dengan role notulensi dan pegawai
+INFO - 2025-01-22 02:11:01 --> Pengguna dengan role notulensi atau pegawai ditemukan: Array
+(
+    [0] => Array
+        (
+            [user_id] => 3
+            [username] => admin
+            [nama] => John Doe
+            [nip] => 123456789
+            [email] => admin@example.com
+            [password] => $2y$10$vtl3rv1OaY3pW2hnmPpXoe1OzmxqdjvxJLl.7qZDvhjN8fQfo6Mhq
+
+
+            [role] => pegawai
+            [Bidang] => Statistik dan Persandian
+            [profil_foto] => profile1.jpg
+            [alamat] => Jl. Merdeka No. 123, Jakarta
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 22:02:06
+            [updated_at] => 2025-01-10 16:07:07
+        )
+
+    [1] => Array
+        (
+            [user_id] => 6
+            [username] => wulan
+            [nama] => wulandariyulianis
+            [nip] => 18679202938390
+            [email] => lala@gmail.com
+            [password] => $2y$10$QW2QpL2k9f5eBfqMjakx7eNCI3/XVLCO9a42jzNPjzvXpS8iFmqoK
+            [role] => notulensi
+            [Bidang] => Aptika
+            [profil_foto] => pegawai.png
+
+
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 15:02:18
+            [updated_at] => 2025-01-21 12:53:44
+        )
+
+    [2] => Array
+        (
+            [user_id] => 7
+            [username] => lala
+            [nama] => lala
+
+            [nip] => 123456789123456789
+            [email] => lala1@gmail.com
+            [password] => $2y$10$tBSYxTpvfWjIlSkqSZ.7TeAQp2RvMqDg2J91d0vUGxaieUvPIv61a
+            [role] => notulensi
+            [Bidang] => Aptika
+            [profil_foto] => 
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 15:16:16
+            [updated_at] => 2025-01-15 21:48:23
+        )
+
+    [3] => Array
+        (
+            [user_id] => 13
+            [username] => jaja
+            [nama] => jungwon
+            [nip] => 123456788987654324
+            [email] => jaja@gmail.com
+            [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+            [role] => pegawai
+            [Bidang] => IKP
+            [profil_foto] => pegawai.png
+            [alamat] => 
+            [jabatan] => korea
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-13 07:53:10
+            [updated_at] => 2025-01-17 07:33:28
+        )
+
+    [4] => Array
+        (
+            [user_id] => 18
+            [username] => notulensi_user18
+            [nama] => Nama Notulensi 18
+            [nip] => 12345678918
+            [email] => notulensi_user18@example.com
+            [password] => password_enkripsi18
+            [role] => notulensi
+            [Bidang] => Administrasi
+            [profil_foto] => 
+            [alamat] => Alamat Notulensi 18
+            [jabatan] => Notulensi
+            [tanggal_lahir] => 1998-08-18
+            [created_at] => 2025-01-16 09:28:25
+            [updated_at] => 2025-01-17 00:16:49
+        )
+
+    [5] => Array
+        (
+            [user_id] => 26
+            [username] => notulensi
+            [nama] => alhamdulilla
+            [nip] => 345678909876789376
+            [email] => notulensi@gmail.com
+            [password] => $2y$10$ZhNj131GHHBnlqCvbB3.bOR13E/V13x3i1tumnFZPNg.YhqScDCnq
+            [role] => notulensi
+            [Bidang] => 
+            [profil_foto] => image.png
+
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-16 02:36:45
+            [updated_at] => 2025-01-16 15:11:16
+        )
+
+    [6] => Array
+        (
+            [user_id] => 32
+            [username] => dadang
+            [nama] => dadang harjo
+            [nip] => 098765432234567892
+            [email] => dadang@gmail.com
+            [password] => $2y$10$FKo1RqxUsHWcoWzbk5ZZae9C4Al32xjQuyf99kyXR4CMMYtDOyMVC
+            [role] => notulensi
+            [Bidang] => IKP
+            [profil_foto] => wulan.jpg
+            [alamat] => 
+            [jabatan] => Sekretaris
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-17 09:26:42
+            [updated_at] => 2025-01-21 11:06:28
+        )
+
+    [7] => Array
+        (
+            [user_id] => 38
+            [username] => rereng
+            [nama] => rereng saja
+            [nip] => 123456788987653847
+            [email] => rereng@gmail.com
+            [password] => $2y$10$jjN96rd2z9.qnK.E.5/8WugPbyEvPOlANFb3Or/CS5Nelp9lTK2a.
+            [role] => pegawai
+            [Bidang] => Aptika
+            [profil_foto] => wulan.jpg
+
+            [alamat] => 
+            [jabatan] => Sekretaris
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-20 08:33:37
+            [updated_at] => 2025-01-21 12:54:41
+        )
+
+    [8] => Array
+        (
+            [user_id] => 39
+            [username] => sakang
+            [nama] => sakang saja
+            [nip] => 123456788987654439
+            [email] => sakang@gmail.com
+            [password] => $2y$10$l879mKIRAjfZCba.v1lia.vmn0E1HMHVsnWOqcG1R6Rgh9SFu2arG
+            [role] => notulensi
+            [Bidang] => IKP
+            [profil_foto] => 
+            [alamat] => 
+            [jabatan] => Sekretaris
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-21 05:06:20
+            [updated_at] => 2025-01-21 05:06:20
+        )
+
+    [9] => Array
+        (
+            [user_id] => 40
+            [username] => cindy
+            [nama] => cindy arwinda putry
+            [nip] => 123456788987654259
+            [email] => cindy@gmail.com
+            [password] => $2y$10$fFtsHB1wzUtGMaBUM0/c3uv.EFy0QXZgTj6.q2gKaPtCdUVYHNMqG
+            [role] => notulensi
+            [Bidang] => IKP
+            [profil_foto] => 
+            [alamat] => 
+            [jabatan] => Sekretaris
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-21 05:07:14
+            [updated_at] => 2025-01-21 05:07:14
+        )
+
+    [10] => Array
+        (
+            [user_id] => 42
+            [username] => intan 
+            [nama] => intan salma denaidy
+            [nip] => 123456788987654092
+            [email] => intan@gmail.com
+            [password] => $2y$10$tPuhHlRshxG3GNF6Uhds0eb/DmYvMe25/E4J/9pWGqEtdliUchL7e
+            [role] => notulensi
+            [Bidang] => IKP
+            [profil_foto] => 
+            [alamat] => 
+            [jabatan] => Sekretaris
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-21 14:49:09
+            [updated_at] => 2025-01-21 14:49:09
+        )
+
+)
+
+INFO - 2025-01-22 02:11:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-22 02:11:01 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-22 02:11:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-22 02:11:04 --> Data notulensi berhasil ditampilkan: Array
+(
+    [0] => Array
+        (
+            [notulensi_id] => 17
+            [user_id] => 32
+            [judul] => alala
+            [partisipan] => skkks
+            [agenda] => skdnjk
+            [isi] => amaa
+            [Bidang] => Aptika
+            [tanggal_dibuat] => 2025-01-21
+            [riwayat_id] => 17
+            [dokumentasi_id] => 1
+            [foto_dokumentasi] => 1737433053_30d4a24a6731de0c676c.png
+            [user_name] => dadang harjo
+        )
+
+    [1] => Array
+        (
+            [notulensi_id] => 18
+            [user_id] => 32
+            [judul] => percobaan
+            [partisipan] => kwwwwwwwwwwwwww
+            [agenda] => aaaaaaaaa
+            [isi] => wkkkkkkkkkkkkkkkk
+            [Bidang] => IKP
+            [tanggal_dibuat] => 2025-01-21
+            [riwayat_id] => 18
+            [dokumentasi_id] => 2
+            [foto_dokumentasi] => 1737441931_0b631fabdd322dbda8e2.jpg
+            [user_name] => dadang harjo
+        )
+
+)
+
+INFO - 2025-01-22 02:11:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-22 02:11:12 --> Data notulensi berhasil ditampilkan: Array
+(
+    [0] => Array
+        (
+            [notulensi_id] => 17
+            [user_id] => 32
+            [judul] => alala
+            [partisipan] => skkks
+            [agenda] => skdnjk
+            [isi] => amaa
+            [Bidang] => Aptika
+            [tanggal_dibuat] => 2025-01-21
+            [riwayat_id] => 17
+            [dokumentasi_id] => 1
+            [foto_dokumentasi] => 1737433053_30d4a24a6731de0c676c.png
+            [user_name] => dadang harjo
+        )
+
+    [1] => Array
+        (
+            [notulensi_id] => 18
+            [user_id] => 32
+            [judul] => percobaan
+            [partisipan] => kwwwwwwwwwwwwww
+            [agenda] => aaaaaaaaa
+            [isi] => wkkkkkkkkkkkkkkkk
+            [Bidang] => IKP
+            [tanggal_dibuat] => 2025-01-21
+            [riwayat_id] => 18
+            [dokumentasi_id] => 2
+            [foto_dokumentasi] => 1737441931_0b631fabdd322dbda8e2.jpg
+            [user_name] => dadang harjo
+        )
+
+)
+
+INFO - 2025-01-22 02:11:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-22 02:14:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-22 02:14:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-22 02:14:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-22 02:14:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-22 02:14:41 --> Login attempt with username: dadang
+ERROR - 2025-01-22 02:14:41 --> Checking login for username: dadang
+ERROR - 2025-01-22 02:14:41 --> User data: Array
+(
+    [user_id] => 32
+    [username] => dadang
+    [nama] => dadang harjo
+    [nip] => 098765432234567892
+    [email] => dadang@gmail.com
+    [password] => $2y$10$FKo1RqxUsHWcoWzbk5ZZae9C4Al32xjQuyf99kyXR4CMMYtDOyMVC
+    [role] => notulensi
+    [Bidang] => IKP
+    [profil_foto] => wulan.jpg
+    [alamat] => 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-17 09:26:42
+    [updated_at] => 2025-01-21 11:06:28
+)
+
+ERROR - 2025-01-22 02:14:42 --> Password verify result for username dadang: Success
+ERROR - 2025-01-22 02:14:42 --> Login success for username: dadang
+INFO - 2025-01-22 02:14:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-22 02:14:42 --> User ID: 32
+DEBUG - 2025-01-22 02:14:42 --> Profile Picture: wulan.jpg
+DEBUG - 2025-01-22 02:14:42 --> User Name: dadang harjo
+DEBUG - 2025-01-22 02:14:42 --> User Role: notulensi
+INFO - 2025-01-22 02:14:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-22 02:14:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-22 02:15:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-22 02:15:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-22 02:15:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-22 02:15:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-22 02:15:08 --> Login attempt with username: jaja
+ERROR - 2025-01-22 02:15:08 --> Checking login for username: jaja
+ERROR - 2025-01-22 02:15:08 --> User data: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-17 07:33:28
+)
+
+ERROR - 2025-01-22 02:15:08 --> Password verify result for username jaja: Success
+ERROR - 2025-01-22 02:15:08 --> Login success for username: jaja
+INFO - 2025-01-22 02:15:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-22 02:15:08 --> User ID: 13
+DEBUG - 2025-01-22 02:15:08 --> Profile Picture: pegawai.png
+DEBUG - 2025-01-22 02:15:08 --> User Name: jungwon
+DEBUG - 2025-01-22 02:15:08 --> User Role: pegawai
+INFO - 2025-01-22 02:15:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-22 02:15:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-22 02:15:52 --> User ID: 13
+DEBUG - 2025-01-22 02:15:52 --> Profile Picture: pegawai.png
+DEBUG - 2025-01-22 02:15:52 --> User Name: jungwon
+DEBUG - 2025-01-22 02:15:52 --> User Role: pegawai
+INFO - 2025-01-22 02:15:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-22 02:17:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-22 02:17:40 --> User ID: 13
+DEBUG - 2025-01-22 02:17:40 --> Profile Picture: pegawai.png
+DEBUG - 2025-01-22 02:17:40 --> User Name: jungwon
+DEBUG - 2025-01-22 02:17:40 --> User Role: pegawai
+INFO - 2025-01-22 02:17:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-22 02:17:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-22 02:17:55 --> User ID: 9
+DEBUG - 2025-01-22 02:17:55 --> Profile Picture: image.png
+DEBUG - 2025-01-22 02:17:55 --> User Name: alhamdulillah
+DEBUG - 2025-01-22 02:17:55 --> User Role: admin
+INFO - 2025-01-22 02:17:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
