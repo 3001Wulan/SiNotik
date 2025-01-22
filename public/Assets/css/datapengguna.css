@@ -209,7 +209,7 @@ body {
     font-size: 16px;
     font-weight: bolder;
     font-family: sans-serif;
-    background-color: #292A6E;
+    background-color: #025299;
     color: #fff;
     border: none;
     border-radius: 10px;
@@ -375,8 +375,8 @@ a, .btn-edit, .btn-delete {
 }
 
 .btn-edit img, .btn-delete img {
-    width: 24px; /* Ukuran ikon edit */
-    height: 24px; /* Ukuran ikon hapus */
+    width: 24px; 
+    height: 24px; 
     display: block;
 }
 
@@ -385,17 +385,17 @@ a, .btn-edit, .btn-delete {
 }
 
 .popup {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: rgba(0, 0, 0, 0.5);
-display: flex;
-justify-content: center;
-align-items: center;
-z-index: 1000;
-}
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    }
 
 .popup-content {
     background: #fff;
