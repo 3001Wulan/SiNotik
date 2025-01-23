@@ -142,6 +142,18 @@
                 </div>
             </form>
         </div>
+        
+        <!-- Popup Logout -->
+        <div class="popup-overlay" id="popupOverlay">
+            <div class="popup">
+                <img src="<?= base_url('assets/images/logout_warning.png') ?>" alt="Logout Warning" class="popup-image">
+                <h3>Anda ingin logout?</h3>
+                <div class="popup-buttons">
+                    <button class="btn-yes" id="confirmLogout">Ya</button>
+                    <button class="btn-no" id="cancelLogout">Tidak</button>
+                </div>
+            </div>
+        </div> 
     </div>
 
     <script>
@@ -209,6 +221,25 @@
         // Menyembunyikan dropdown menu jika klik di luar area dropdown
         window.addEventListener('click', () => {
             dropdownMenu.classList.remove('show');
+        });
+
+        // Popup Logout
+        const logoutLink = document.getElementById('logoutLink');
+        const popupOverlay = document.getElementById('popupOverlay');
+        const confirmLogout = document.getElementById('confirmLogout');
+        const cancelLogout = document.getElementById('cancelLogout');
+
+        logoutLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            popupOverlay.style.display = 'block';
+        });
+
+        cancelLogout.addEventListener('click', () => {
+            popupOverlay.style.display = 'none';
+        });
+
+        confirmLogout.addEventListener('click', () => {
+            window.location.href = '<?= base_url('/') ?>';
         });
     </script>
 </body>

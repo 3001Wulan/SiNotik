@@ -491,6 +491,89 @@ input::placeholder {
     margin-left: 8px;
 }
 
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    margin-left: 700px;
+}
+
+.popup {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+.popup-img {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 10px;
+    display: block;
+}
+
+.popup h3 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-style: italic;
+    color: #333;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.btn-yes {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 25%; 
+    background-color: #025299; 
+    color: white;
+    font-weight: bolder;
+    margin-left: 50px;
+}
+
+.btn-no {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 25%; 
+    background-color: #025299; 
+    color: white;
+    font-weight: bolder;
+    margin-right: 50px;
+}
+
+.btn-yes:hover {
+    background-color: #0085C5;
+    transform: scale(1.1);
+}
+
+.btn-no:hover {
+    background-color: #e53935;
+    transform: scale(1.1);
+}
+
 .dark-mode {
     background-color: #222;
     color: #fff;
@@ -624,4 +707,28 @@ input::placeholder {
 
 .dark-mode .icon {
     filter: brightness(0) invert(1);
+}
+
+.dark-mode .popup {
+    background-color: #555;
+    color: #fff;
+}
+
+.dark-mode .popup h3 {
+    color : #ddd;
+}
+
+.dark-mode .popup-buttons .btn-yes,
+.dark-mode .popup-buttons .btn-no {
+    background-color: #777;
+    color: #fff;
+    font-weight: bolder;
+}
+
+.dark-mode .popup-buttons .btn-yes:hover {
+    background-color: #0085C5;
+}
+
+.dark-mode .popup-buttons .btn-no:hover {
+    background-color: #e53935;
 }

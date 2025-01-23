@@ -416,10 +416,12 @@ body {
 
 .btn-yes:hover {
     background-color: #0085C5;
+    transform: scale(1.1);
 }
 
 .btn-no:hover {
     background-color: #e53935;
+    transform: scale(1.1);
 }
 
 .dark-mode {
