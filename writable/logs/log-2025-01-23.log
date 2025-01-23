@@ -168,3 +168,255 @@ INFO - 2025-01-23 03:23:44 --> Data notulensi berhasil ditampilkan: Array
 )
 
 INFO - 2025-01-23 03:23:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 04:10:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 04:10:44 --> User profile for ID  retrieved successfully.
+CRITICAL - 2025-01-23 04:10:44 --> ErrorException: Undefined array key "profil_foto"
+[Method: GET, Route: admin/profiladmin]
+in APPPATH\Views\admin\profiladmin.php on line 57.
+ 1 APPPATH\Views\admin\profiladmin.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "profil_foto"', 'C:\\xampp\\htdocs\\SiNotik\\app\\Views\\admin\\profiladmin.php', 57)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SiNotik\\app\\Views\\admin\\profiladmin.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/profiladmin', [], true)
+ 5 APPPATH\Controllers\ProfilAdminController.php(23): view('admin/profiladmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProfilAdminController->profilAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfilAdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-01-23 04:12:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 04:12:14 --> User profile for ID  retrieved successfully.
+CRITICAL - 2025-01-23 04:12:14 --> ErrorException: Undefined array key "profil_foto"
+[Method: GET, Route: admin/profiladmin]
+in APPPATH\Views\admin\profiladmin.php on line 57.
+ 1 APPPATH\Views\admin\profiladmin.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "profil_foto"', 'C:\\xampp\\htdocs\\SiNotik\\app\\Views\\admin\\profiladmin.php', 57)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SiNotik\\app\\Views\\admin\\profiladmin.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/profiladmin', [], true)
+ 5 APPPATH\Controllers\ProfilAdminController.php(23): view('admin/profiladmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProfilAdminController->profilAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfilAdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-01-23 04:12:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 04:13:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 04:13:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 04:13:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-23 04:13:11 --> Login attempt with username: lili
+ERROR - 2025-01-23 04:13:11 --> Checking login for username: lili
+ERROR - 2025-01-23 04:13:11 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => alhamdulillah
+    [nip] => 123456780123456789
+    [email] => bismillah@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => jalan 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-09
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-16 07:45:21
+)
+
+ERROR - 2025-01-23 04:13:11 --> Password verify result for username lili: Success
+ERROR - 2025-01-23 04:13:11 --> Login success for username: lili
+INFO - 2025-01-23 04:13:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-23 04:13:11 --> User ID: 9
+DEBUG - 2025-01-23 04:13:11 --> Profile Picture: image.png
+DEBUG - 2025-01-23 04:13:11 --> User Name: alhamdulillah
+DEBUG - 2025-01-23 04:13:11 --> User Role: admin
+INFO - 2025-01-23 04:13:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 04:13:20 --> Mencoba mengambil pengguna dengan role notulensi dan pegawai
+INFO - 2025-01-23 04:13:20 --> Pengguna dengan role notulensi atau pegawai ditemukan: Array
+(
+    [0] => Array
+        (
+            [user_id] => 3
+            [username] => admin
+            [nama] => John Doe
+            [nip] => 123456789
+            [email] => admin@example.com
+            [password] => $2y$10$vtl3rv1OaY3pW2hnmPpXoe1OzmxqdjvxJLl.7qZDvhjN8fQfo6Mhq
+
+
+            [role] => pegawai
+            [Bidang] => Statistik dan Persandian
+            [profil_foto] => profile1.jpg
+            [alamat] => Jl. Merdeka No. 123, Jakarta
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 22:02:06
+            [updated_at] => 2025-01-10 16:07:07
+        )
+
+    [1] => Array
+        (
+            [user_id] => 6
+            [username] => wulan
+            [nama] => wulandariyulianis
+            [nip] => 18679202938390
+            [email] => lala@gmail.com
+            [password] => $2y$10$QW2QpL2k9f5eBfqMjakx7eNCI3/XVLCO9a42jzNPjzvXpS8iFmqoK
+            [role] => notulensi
+            [Bidang] => Aptika
+            [profil_foto] => pegawai.png
+
+
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 15:02:18
+            [updated_at] => 2025-01-21 12:53:44
+        )
+
+    [2] => Array
+        (
+            [user_id] => 7
+            [username] => lala
+            [nama] => lala
+
+            [nip] => 123456789123456789
+            [email] => lala1@gmail.com
+            [password] => $2y$10$tBSYxTpvfWjIlSkqSZ.7TeAQp2RvMqDg2J91d0vUGxaieUvPIv61a
+            [role] => notulensi
+            [Bidang] => Aptika
+            [profil_foto] => 
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 15:16:16
+            [updated_at] => 2025-01-15 21:48:23
+        )
+
+    [3] => Array
+        (
+            [user_id] => 13
+            [username] => jaja
+            [nama] => jungwon
+            [nip] => 123456788987654324
+            [email] => jaja@gmail.com
+            [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+            [role] => pegawai
+            [Bidang] => IKP
+            [profil_foto] => pegawai.png
+            [alamat] => 
+            [jabatan] => korea
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-13 07:53:10
+            [updated_at] => 2025-01-17 07:33:28
+        )
+
+    [4] => Array
+        (
+            [user_id] => 18
+            [username] => notulensi_user18
+            [nama] => Nama Notulensi 18
+            [nip] => 12345678918
+            [email] => notulensi_user18@example.com
+            [password] => password_enkripsi18
+            [role] => notulensi
+            [Bidang] => Administrasi
+            [profil_foto] => 
+            [alamat] => Alamat Notulensi 18
+            [jabatan] => Notulensi
+            [tanggal_lahir] => 1998-08-18
+            [created_at] => 2025-01-16 09:28:25
+            [updated_at] => 2025-01-17 00:16:49
+        )
+
+    [5] => Array
+        (
+            [user_id] => 26
+            [username] => notulensi
+            [nama] => alhamdulilla
+            [nip] => 345678909876789376
+            [email] => notulensi@gmail.com
+            [password] => $2y$10$ZhNj131GHHBnlqCvbB3.bOR13E/V13x3i1tumnFZPNg.YhqScDCnq
+            [role] => notulensi
+            [Bidang] => 
+            [profil_foto] => image.png
+
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-16 02:36:45
+            [updated_at] => 2025-01-16 15:11:16
+        )
+
+    [6] => Array
+        (
+            [user_id] => 32
+            [username] => dadang
+            [nama] => dadang harjo
+            [nip] => 098765432234567892
+            [email] => dadang@gmail.com
+            [password] => $2y$10$FKo1RqxUsHWcoWzbk5ZZae9C4Al32xjQuyf99kyXR4CMMYtDOyMVC
+            [role] => notulensi
+            [Bidang] => IKP
+            [profil_foto] => wulan.jpg
+            [alamat] => 
+            [jabatan] => Sekretaris
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-17 09:26:42
+            [updated_at] => 2025-01-21 11:06:28
+        )
+
+    [7] => Array
+        (
+            [user_id] => 38
+            [username] => rereng
+            [nama] => rereng saja
+            [nip] => 123456788987653847
+            [email] => rereng@gmail.com
+            [password] => $2y$10$jjN96rd2z9.qnK.E.5/8WugPbyEvPOlANFb3Or/CS5Nelp9lTK2a.
+            [role] => pegawai
+            [Bidang] => Aptika
+            [profil_foto] => wulan.jpg
+
+            [alamat] => 
+            [jabatan] => Sekretaris
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-20 08:33:37
+            [updated_at] => 2025-01-21 12:54:41
+        )
+
+    [8] => Array
+        (
+            [user_id] => 40
+            [username] => cindy
+            [nama] => cindy arwinda putry
+            [nip] => 123456788987654259
+            [email] => cindy@gmail.com
+            [password] => $2y$10$fFtsHB1wzUtGMaBUM0/c3uv.EFy0QXZgTj6.q2gKaPtCdUVYHNMqG
+            [role] => notulensi
+            [Bidang] => IKP
+            [profil_foto] => 
+            [alamat] => 
+            [jabatan] => Sekretaris
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-21 05:07:14
+            [updated_at] => 2025-01-21 05:07:14
+        )
+
+)
+
+INFO - 2025-01-23 04:13:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 04:13:20 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-23 04:13:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 04:13:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-23 04:13:28 --> User ID: 9
+DEBUG - 2025-01-23 04:13:28 --> Profile Picture: image.png
+DEBUG - 2025-01-23 04:13:28 --> User Name: alhamdulillah
+DEBUG - 2025-01-23 04:13:28 --> User Role: admin
+INFO - 2025-01-23 04:13:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 04:13:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 04:13:34 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-01-23 04:13:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

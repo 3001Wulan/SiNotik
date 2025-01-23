@@ -62,6 +62,17 @@ $current_page = 'data_pengguna';
                     <div>
                         <img src="<?= base_url('assets/images/profiles/' . $user_profile['profil_foto']) ?>" alt="User Photo" class="header-profile-img" id="profile-icon">
                     </div>
+                    <!-- Dropdown Menu -->
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="<?= base_url('admin/profiladmin') ?>" class="dropdown-item">
+                            <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
+                            Profil
+                        </a>
+                        <a href="#" class="dropdown-item" id="logoutLink">
+                            <img src="<?= base_url('assets/images/icon_logout.png') ?>" alt="Logout" class="dropdown-icon">
+                            Logout
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -331,13 +342,34 @@ $current_page = 'data_pengguna';
         previousBtn.addEventListener('click', () => navigatePage('prev'));
         nextBtn.addEventListener('click', () => navigatePage('next'));
 
-        // Dark mode toggle
-        toggleDarkMode.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
+        // Toggle Dark Mode
+        const toggleDarkModeButton = document.getElementById('toggleDarkMode');
+        const body = document.body;
+
+        toggleDarkModeButton.addEventListener('click', function () {
+            body.classList.toggle('dark-mode');
+            toggleDarkModeButton.src = body.classList.contains('dark-mode')
+                ? '<?= base_url("assets/images/sun.png"); ?>'
+                : '<?= base_url("assets/images/moon.png"); ?>';
         });
 
         // Initialize the table on page load
         updateTable();
+
+        // JavaScript untuk Dropdown Menu
+        const profileIcon = document.getElementById('profile-icon');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        // Toggle dropdown menu saat foto profil diklik
+        profileIcon.addEventListener('click', (event) => {
+            event.stopPropagation(); // Mencegah event bubbling
+            dropdownMenu.classList.toggle('show');
+        });
+
+        // Menyembunyikan dropdown menu jika klik di luar area dropdown
+        window.addEventListener('click', () => {
+            dropdownMenu.classList.remove('show');
+        });
     });
 </script>
 

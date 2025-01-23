@@ -177,6 +177,53 @@ body {
     border-radius: 50%;
 }
 
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    z-index: 100;
+}
+
+.dropdown-menu .dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bolder;
+    border-radius: 10px;
+}
+
+.dropdown-menu .dropdown-item .dropdown-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    color: white;
+    background-color: #025299;
+    border-bottom: 1px solid #025299;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    padding: 15px 10px;
+    font-size: 1.1em;
+}
+
+.dropdown-menu .dropdown-item:hover .dropdown-icon {
+    filter: brightness(0) invert(1);
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
 .page-title {
     display: flex;
     justify-content: space-between; 
@@ -220,6 +267,7 @@ body {
 
 .btn-add:hover {
     background-color: #0085C5;
+    transform: scale(1.1);
 }
 
 .btn-icon {
@@ -442,23 +490,25 @@ a, .btn-edit, .btn-delete {
 }
 
 .btn-yes {
-    background-color: #292A6E; 
+    background-color: #025299; 
     color: white;
     font-weight: bolder;
 }
 
 .btn-yes:hover {
     background-color: #0085C5;
+    transform: scale(1.1);
 }
 
 .btn-no {
-    background-color: #292A6E; 
+    background-color: #025299; 
     color: white;
     font-weight: bolder;
 }
 
 .btn-no:hover {
     background-color: #e53935; 
+    transform: scale(1.1);
 }
 
 .dark-mode {
@@ -507,6 +557,25 @@ a, .btn-edit, .btn-delete {
 
 .dark-mode .top-bar .user-info .user-role {
     color: white;
+}
+
+.dark-mode .dropdown-menu {
+    background-color: #777;
+    border: 1px solid #555;
+    color: #ddd;
+}
+
+.dark-mode .dropdown-menu .dropdown-item:hover {
+    background-color: #999;
+    color: #fff;
+}
+
+.dark-mode .dropdown-menu .dropdown-item {
+    color: #ddd;
+}
+
+.dark-mode .dropdown-menu .dropdown-item .dropdown-icon {
+    filter: brightness(0) invert(1);
 }
 
 .dark-mode .table-container {

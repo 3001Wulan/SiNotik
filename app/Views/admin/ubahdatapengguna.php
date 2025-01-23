@@ -16,19 +16,19 @@
             <ul>
                 <li class="dashboard">
                     <a href="#" class="inactive">
-                        <img src="<?php echo base_url('assets/images/dashboard_admin.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
+                        <img src="<?php echo base_url('assets/images/dashboard.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
                         Dashboard
                     </a>
                 </li>
                 <li class="active">
                     <a href="#" class="active">
-                        <img src="<?php echo base_url('assets/images/data_pengguna.png'); ?>" alt="Data Pengguna Icon" class="sidebar-icon">
+                        <img src="<?php echo base_url('assets/images/datapengguna.png'); ?>" alt="Data Pengguna Icon" class="sidebar-icon">
                         Data Pengguna
                     </a>
                 </li>
                 <li class="riwayat-notulensi">
                     <a href="#" class="inactive">
-                        <img src="<?php echo base_url('assets/images/riwayat_notulensi.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
+                        <img src="<?php echo base_url('assets/images/riwayatnotulensi.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
                         Riwayat Notulensi
                     </a>
                 </li>
@@ -43,11 +43,30 @@
                     <img id="toggleDarkMode" src="<?php echo base_url('assets/images/moon.png'); ?>" alt="Dark Mode">
                 </div>
 
-                <!-- User Profile -->
+                <!-- Profil -->
                 <div class="user-info">
-                    <span>Heni Yunida</span>
-                    <span>Admin</span>
-                    <img src="<?php echo base_url('assets/images/admin.png'); ?>" alt="Admin">
+                    <div class="user-text">
+                        <div class="user-name">
+                            <span><?php echo isset($user_profile['nama']) ? $user_profile['nama'] : 'Nama Tidak Ditemukan'; ?></span>
+                        </div>
+                        <div class="user-role">
+                            <span><?php echo isset($user_profile['role']) ? ucfirst($user_profile['role']) : 'Role Tidak Ditemukan'; ?></span>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="<?= base_url('assets/images/jungwon.png'); ?>" alt="Admin">
+                    </div>
+                    <!-- Dropdown Menu -->
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="<?= base_url('admin/profiladmin') ?>" class="dropdown-item">
+                            <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
+                            Profil
+                        </a>
+                        <a href="#" class="dropdown-item" id="logoutLink">
+                            <img src="<?= base_url('assets/images/icon_logout.png') ?>" alt="Logout" class="dropdown-icon">
+                            Logout
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -180,6 +199,21 @@
                 e.preventDefault();
                 alert('Password dan konfirmasi password tidak cocok!');
             }
+        });
+
+        // JavaScript untuk Dropdown Menu
+        const profileIcon = document.getElementById('profile-icon');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        // Toggle dropdown menu saat foto profil diklik
+        profileIcon.addEventListener('click', (event) => {
+            event.stopPropagation(); // Mencegah event bubbling
+            dropdownMenu.classList.toggle('show');
+        });
+
+        // Menyembunyikan dropdown menu jika klik di luar area dropdown
+        window.addEventListener('click', () => {
+            dropdownMenu.classList.remove('show');
         });
     </script>
 </body>
