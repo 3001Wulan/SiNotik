@@ -15,19 +15,19 @@
             </div>
             <ul>
                 <li class="dashboard">
-                    <a href="#" class="inactive">
+                    <a href="dashboard_admin" class="inactive">
                         <img src="<?php echo base_url('assets/images/dashboard.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
                         Dashboard
                     </a>
                 </li>
                 <li class="active">
-                    <a href="#" class="active">
+                    <a href="data_pengguna" class="active">
                         <img src="<?php echo base_url('assets/images/datapengguna.png'); ?>" alt="Data Pengguna Icon" class="sidebar-icon">
                         Data Pengguna
                     </a>
                 </li>
                 <li class="riwayat-notulensi">
-                    <a href="#" class="inactive">
+                    <a href="riwayatadmin" class="inactive">
                         <img src="<?php echo base_url('assets/images/riwayatnotulensi.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
                         Riwayat Notulensi
                     </a>
@@ -147,7 +147,7 @@
                 </button>
             </div>
         </div>
-        
+
         <!-- Popup Logout -->
         <div class="popup-overlay" id="popupOverlay">
             <div class="popup">

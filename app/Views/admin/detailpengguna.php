@@ -16,22 +16,22 @@
 
             <ul>
                 <li class="dashboard">
-                    <a href="#" class="inactive">
-                        <img src="<?php echo base_url('assets/images/dashboard_admin.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
+                    <a href="dashboard_admin" class="inactive">
+                        <img src="<?php echo base_url('assets/images/dashboard.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
                         Dashboard
                     </a>
                 </li>
 
                 <li class="active">
-                    <a href="#" class="active">
-                        <img src="<?php echo base_url('assets/images/data_pengguna.png'); ?>" alt="Data Pengguna Icon" class="sidebar-icon">
+                    <a href="data_pengguna" class="active">
+                        <img src="<?php echo base_url('assets/images/datapengguna.png'); ?>" alt="Data Pengguna Icon" class="sidebar-icon">
                         Data Pengguna
                     </a>
                 </li>
 
                 <li class="riwayat-notulensi">
-                    <a href="#" class="inactive">
-                        <img src="<?php echo base_url('assets/images/riwayat_notulensi.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
+                    <a href="riwayatadmin" class="inactive">
+                        <img src="<?php echo base_url('assets/images/riwayatnotulensi.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
                         Riwayat Notulensi
                     </a>
                 </li>
@@ -136,7 +136,7 @@
                 <button class="back-button" onclick="window.history.back();">Kembali</button>
             </div>  
         </div>
-         
+
         <!-- Popup Logout -->
         <div class="popup-overlay" id="popupOverlay">
             <div class="popup">
