@@ -137,18 +137,59 @@ body {
     color: gray;
 }
 
-.user-avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 140px; 
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px; 
+    overflow: hidden; 
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 14px; 
+    text-decoration: none;
+    display: flex;
+    align-items: center; 
+}
+
+.dropdown-content a .dropdown-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px; 
+}
+
+.dropdown-content a:hover {
+    background-color: #025299;
+}
+body.dark-mode .dropdown-content a:hover {
+    background-color: #444444;
+
+}
+.dropdown.open .dropdown-content {
+    display: block;
+}
 .avatar-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
 
 .main-content {
     width: calc(100% - 256px);
@@ -184,41 +225,36 @@ body {
     gap: 16px;
     width: 300px;
 }
-
 .profile-image-box {
-    margin-top: 50px;
+    margin-top: 40px;
+    width: 250px;
+    height: 350px;
     background-color: white;
-    padding: 55px;
+    padding: 50px;
     border-radius: 10px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 17px;
+    margin-left: 20px; 
 }
+
 .profile-image-container {
-    width: 200px;
-    height: 200px;
-    margin-top: 10px;        
-    margin-bottom: 20px;      
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-image img {
+    width: 170px; 
+    height: 170px;
     border-radius: 50%; 
-    overflow: hidden; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    background-color: #f0f0f0; 
-    position: relative;      
-    top: -10px;              
 }
-
-.profile-image-container img {
-    width: 200px; 
-    height: 200px; 
-    object-fit: cover; 
-    object-position: center; 
+.upload-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
-
-
 .avatar-img {
     width: 100%;
     height: 100%;
@@ -262,7 +298,6 @@ body {
     font-weight: bold; 
 }
 
-
 .field-value-input {
     border: none;
     box-shadow: none;
@@ -274,13 +309,11 @@ body {
 body.dark-mode .field-value-input {
     color: white;
 }
-
 .edit-icon {
 
     cursor: pointer;
     font-size: 16px;
 }
-
 .save-button {
     padding: 8px 20px;
     background-color: #025299; 
@@ -301,7 +334,48 @@ body.dark-mode .field-value-input {
 .save-button:hover {
     background-color: #0085C5;
 }
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 9999; 
+    display: none; 
+}
 
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 300px; 
+    padding: 25px 40px; 
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+    text-align: center;
+}
+
+.Info-text {
+    font-style: italic; 
+}
+.Info-img {
+    width: 90px; 
+    height: auto; 
+    margin-bottom: 10px; 
+}
+
+body.dark-mode .popup {
+    background-color: #444444; 
+    color: white; 
+}
+
+body.dark-mode .Info-text {
+    color: white; 
+}
 body.dark-mode .save-button {
     background-color: #444444; 
     color: white; 

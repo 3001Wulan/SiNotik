@@ -37,20 +37,31 @@
         </ul>
     </div>
 
-    <div class="header">
-        <div class="header-content">
-            <div class="theme-toggle">
-                <img src="<?= base_url('assets/images/moon.png'); ?>" alt="Toggle Theme" id="theme-icon" onclick="toggleTheme()">  
-            </div>
-            <div class="user-info">
-                <div class="user-text">
-                    <div class="user-name"><?= $nama ?? 'N/A' ?></div>
-                    <div class="user-role"><?= $role ?? 'N/A' ?></div>
-                </div>
-                <img src="<?= base_url('assets/images/profiles/' . $profil_foto) ?>" alt="Foto Profil" class="user-avatar">
-            </div>     
+    <div class="header"> 
+    <div class="header-content">
+        <div class="theme-toggle">
+            <img src="<?= base_url('assets/images/moon.png'); ?>" alt="Toggle Theme" id="theme-icon" onclick="toggleTheme()">  
         </div>
+        <div class="user-info">
+            <div class="user-text">
+                <div class="user-name"><?= $nama ?? 'N/A' ?></div>
+                <div class="user-role"><?= $role ?? 'N/A' ?></div>
+            </div>
+            <div class="dropdown">
+                <img src="<?= base_url('assets/images/profiles/' . $profil_foto) ?>" alt="Foto Profil" class="user-avatar" id="profile-img">
+                <div class="dropdown-content">
+                <a href="/profile">
+                        <img src="<?= base_url('assets/images/profil.png'); ?>" alt="Profile Icon" class="dropdown-icon"> Profil
+                    </a>
+                    <a href="/logout">
+                        <img src="<?= base_url('assets/images/logout.png'); ?>" alt="Logout Icon" class="dropdown-icon"> Logout
+                    </a>
+                </div>
+            </div>
+        </div>     
     </div>
+</div>
+
     
     <div class="main-content">
         <div class="profile-container">
@@ -59,18 +70,23 @@
             <div class="profile-content">
                 <div class="left-section">
                     <div class="profile-image-box">
-                        <div class="profile-image-container">
-                            <div class="profile-image">
-                                <img src="<?= base_url('assets/images/profiles/' . $profil_foto) ?>" alt="Foto Profil">
-                            </div>
-                        </div>
-                        <div class="upload-container">
-                            <input type="file" name="profil_foto" id="upload" class="upload-input">
-                        </div>
+                    <div class="profile-image-container">
+             <div class="profile-image">
+        <img src="<?= base_url('assets/images/profiles/' . $profil_foto) ?>" alt="Foto Profil" id="profileImage">
+     </div>
+        </div>
+<div class="upload-container">
+    <input type="file" name="profil_foto" id="upload" class="upload-input" accept="image/*">
+</div>
+
                     </div>
                     <button class="save-button" type="submit" form="editProfileForm">Simpan Perubahan</button> 
                 </div>
-                
+                <div class="popup-overlay"></div>
+<div class="popup" id="successPopup" style="display: none;">
+<img src="<?= base_url('assets/images/Info.png'); ?>" alt="Logo" class="Info-img">
+<p class="Info-text">Perubahan Berhasil Disimpan!</p>
+</div>
 
                 <div class="profile-details-box">
                     <form id="editProfileForm" action="" method="POST" enctype="multipart/form-data">
@@ -168,6 +184,20 @@
     </div>
 
     <script>
+     document.querySelector(".save-button").addEventListener("click", function (e) {
+        e.preventDefault(); 
+
+        const popup = document.getElementById("successPopup");
+        const overlay = document.querySelector(".popup-overlay");
+        popup.style.display = "block";
+        overlay.style.display = "block";
+
+        setTimeout(function () {
+            popup.style.display = "none";
+            overlay.style.display = "none";
+        }, 1000); 
+    });
+
         function toggleEdit(fieldId, spanId) {
             var field = document.getElementById(fieldId);
             var span = document.getElementById(spanId);
@@ -179,6 +209,33 @@
                 span.style.display = 'block';
             }
         }
+        document.getElementById('upload').addEventListener('change', function (e) {
+    const file = e.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        
+      
+        reader.onload = function (event) {
+            const profileImage = document.getElementById('profileImage');
+            profileImage.src = event.target.result; 
+        };
+
+        reader.readAsDataURL(file); 
+    }
+});
+// Menangani klik pada gambar profil
+document.getElementById('profile-img').addEventListener('click', function() {
+    const dropdown = document.querySelector('.dropdown');
+    dropdown.classList.toggle('open');
+});
+
+// Menutup dropdown jika klik di luar area dropdown
+window.addEventListener('click', function(event) {
+    const dropdown = document.querySelector('.dropdown');
+    if (!dropdown.contains(event.target)) {
+        dropdown.classList.remove('open');
+    }
+});
 
 
 function toggleTheme() {
