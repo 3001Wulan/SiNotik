@@ -22,29 +22,29 @@
                 </a>
                 <div class="separator"></div>
                 <div class="dropdown"> 
-                <a href="#" class="menu-item-link">
-                    <img src="<?= base_url('assets/images/notulensi.png') ?>" alt="Data User Icon">
-                    <span>Notulensi</span>
-                </a>
-                <div class="dropdown-content">
-                    <a href="#" class="dropdown-item">
-                        <img src="<?= base_url('assets/images/buat.png') ?>" alt="Daftar Notulensi Icon">
-                        <span>Daftar Notulensi</span>
+                    <a href="#" class="menu-item-link">
+                        <img src="<?= base_url('assets/images/notulensi.png') ?>" alt="Data User Icon">
+                        <span>Notulensi</span>
                     </a>
-                    <div class="dropdown-separator"></div>
-                    <a href="#" class="dropdown-item">
-                        <img src="<?= base_url('assets/images/edit.png') ?>" alt="Buat Notulensi Icon">
-                        <span>Buat Notulensi</span>
-                    </a>
+                    <div class="dropdown-content">
+                        <a href="#" class="dropdown-item">
+                            <img src="<?= base_url('assets/images/buat.png') ?>" alt="Daftar Notulensi Icon">
+                            <span>Daftar Notulensi</span>
+                        </a>
+                        <div class="dropdown-separator"></div>
+                        <a href="#" class="dropdown-item">
+                            <img src="<?= base_url('assets/images/edit.png') ?>" alt="Buat Notulensi Icon">
+                            <span>Buat Notulensi</span>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="separator"></div>
-            <a href="#" class="menu-item-link">
-                <img src="<?= base_url('assets/images/riwayat.png') ?>" alt="History Icon">
-                <span>Riwayat Notulensi</span>
-            </a>
-        </div>        
-    </div>
+                <div class="separator"></div>
+                <a href="#" class="menu-item-link">
+                    <img src="<?= base_url('assets/images/riwayat.png') ?>" alt="History Icon">
+                    <span>Riwayat Notulensi</span>
+                </a>
+            </div>        
+        </div>
 
         <!-- Main Content -->
         <div class="main-content">
@@ -79,6 +79,18 @@
                         <button type="button">
                             <i class="fas fa-search"></i>
                         </button>
+                    </div>
+
+                    <!-- Show Entries Dropdown -->
+                    <div class="show-entries">
+                        <label for="entries">Show:</label>
+                        <select id="entries" name="entries">
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                        </select>
+                        <label for="entries">Entries</label>
                     </div>
                 </div>
 
@@ -142,9 +154,9 @@
             </div>
         </div>
     </div>
+
     <script>
-       document.addEventListener('DOMContentLoaded', function() {
-    // Initialize variables
+document.addEventListener('DOMContentLoaded', function() {
     const body = document.body;
     const moonIcon = document.querySelector('.moon-icon');
     const sunIcon = document.querySelector('.sun-icon');
@@ -153,14 +165,16 @@
     const searchButton = document.querySelector('.search-box button');
     const tableRows = document.querySelectorAll('table tbody tr');
     const categories = ['APTIKA', 'IKP', 'Statistik & Persandian'];
-    
+    let itemsPerPage = 5;
+    let currentPage = 1; // Initialize current page
+
     // Reset to light mode on page load
     localStorage.setItem('theme', 'light-mode');
     body.classList.remove('dark-mode');
     body.classList.add('light-mode');
     moonIcon.style.opacity = '1';
     sunIcon.style.opacity = '0';
-    
+
     // Create category popup
     let categoryPopup = document.createElement('div');
     categoryPopup.className = 'category-popup';
@@ -170,15 +184,15 @@
         option.className = 'category-option';
         option.textContent = category;
         option.onclick = function() {
-            categorySelect.value = category;
-            categoryPopup.style.display = 'none';
-            filterAndDisplayData();
+            categorySelect.value = category; // Set the selected category to the select dropdown
+            categoryPopup.style.display = 'none'; // Hide the popup after selection
+            filterAndDisplayData(); // Filter and display data based on the selected category
         };
         categoryPopup.appendChild(option);
     });
     
     document.body.appendChild(categoryPopup);
-    
+
     // Category popup toggle
     const categoryIcon = document.querySelector('.iicon-container');
     categoryIcon.addEventListener('click', function(e) {
@@ -190,6 +204,54 @@
         e.stopPropagation();
     });
 
+    function filterAndDisplayData() {
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    const selectedCategory = categorySelect.value.toLowerCase().trim();
+
+    const visibleRows = Array.from(tableRows).filter(row => {
+        const cells = row.getElementsByTagName('td');
+        const topik = cells[1].textContent.toLowerCase().trim();
+        const bidang = cells[2].textContent.toLowerCase().trim();
+
+        const searchMatch = topik.includes(searchTerm) || bidang.includes(searchTerm);
+        const categoryMatch = selectedCategory === '' || bidang.toLowerCase() === selectedCategory;
+
+        return searchMatch && categoryMatch;
+    });
+
+    // Debugging
+    console.log('Visible Rows:', visibleRows);
+    
+    // Update pagination and display logic
+    totalPages = Math.ceil(visibleRows.length / itemsPerPage);
+    // Reset to first page when filtering
+
+    // Debugging
+    console.log('Total Pages:', totalPages);
+    console.log('Current Page:', currentPage);
+
+    updateTable(visibleRows);
+}
+
+    // Update table display based on visible rows
+    function updateTable(visibleRows) {
+        // Hide all rows first
+        tableRows.forEach(row => row.style.display = 'none');
+
+        // Show only the visible rows
+        const start = (currentPage - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+
+        visibleRows.forEach((row, index) => {
+            row.style.display = index >= start && index < end ? '' : 'none';
+        });
+
+        // Update pagination controls
+        pageNumber.textContent = `${currentPage} of ${totalPages}`;
+        prevButton.disabled = currentPage === 1;
+        nextButton.disabled = currentPage === totalPages || totalPages === 0;
+    }
+
     // View Details Function
     window.viewDetails = function(button) {
         const row = button.closest('tr');
@@ -200,10 +262,7 @@
             tanggal: cells[3].textContent
         };
         
-        // Here you can implement your view details logic
         console.log('Viewing details for:', data);
-        // For example, redirect to a detail page:
-        // window.location.href = `/notulensi/detail/${id}`;
     };
 
     // Comment Modal Functions
@@ -230,7 +289,7 @@
             return;
         }
 
-        // Here you can implement the comment submission logic
+        // Add your AJAX call here to save the comment
         const data = {
             topik: currentRow.cells[1].textContent,
             bidang: currentRow.cells[2].textContent,
@@ -239,36 +298,37 @@
         };
         
         console.log('Submitting comment:', data);
-        // Add your AJAX call here to save the comment
-        
         closeCommentModal();
     };
 
-    // Search functionality
-    searchButton.addEventListener('click', function() {
+    // Show Entries dropdown change event
+    document.getElementById('entries').addEventListener('change', function() {
+        itemsPerPage = parseInt(this.value);
         filterAndDisplayData();
     });
 
-    // Filter and Display Function
-    function filterAndDisplayData() {
-        const searchTerm = searchInput.value.toLowerCase();
-        const selectedCategory = categorySelect.value.toLowerCase();
-        
-        tableRows.forEach(row => {
-            const cells = row.getElementsByTagName('td');
-            const topik = cells[1].textContent.toLowerCase();
-            const bidang = cells[2].textContent.toLowerCase();
-            
-            const searchMatch = topik.includes(searchTerm) || bidang.includes(searchTerm);
-            const categoryMatch = !selectedCategory || bidang.toLowerCase().includes(selectedCategory);
-            
-            row.style.display = searchMatch && categoryMatch ? '' : 'none';
-        });
+    // Pagination
+    let totalPages = Math.ceil(tableRows.length / itemsPerPage);
+    
+    const prevButton = document.querySelector('.btn-prev');
+    const nextButton = document.querySelector('.btn-next');
+    const pageNumber = document.querySelector('.page-number');
 
-        // Reset to first page when filtering
-        currentPage = 1;
-        updateTable();
+    // Pagination event listeners
+    prevButton.addEventListener('click', function() {
+        if (currentPage > 1) {
+            currentPage--;
+            filterAndDisplayData();
+        }
+    });
+
+    nextButton.addEventListener('click', function() {
+    
+    if (currentPage < totalPages) {
+        currentPage++;
+        filterAndDisplayData(); // Panggil fungsi untuk memperbarui tampilan
     }
+});
 
     // Theme handling
     const themeToggle = document.querySelector('.theme-toggle');
@@ -287,51 +347,6 @@
         }
     });
 
-    // Pagination
-    const itemsPerPage = 5;
-    let currentPage = 1;
-    let totalPages = Math.ceil(tableRows.length / itemsPerPage);
-    
-    const prevButton = document.querySelector('.btn-prev');
-    const nextButton = document.querySelector('.btn-next');
-    const pageNumber = document.querySelector('.page-number');
-
-    function updateTable() {
-        const visibleRows = Array.from(tableRows).filter(row => row.style.display !== 'none');
-        const start = (currentPage - 1) * itemsPerPage;
-        const end = start + itemsPerPage;
-        
-        totalPages = Math.ceil(visibleRows.length / itemsPerPage);
-        
-        visibleRows.forEach((row, index) => {
-            if (index >= start && index < end) {
-                row.style.display = '';
-            } else {
-                row.style.display = 'none';
-            }
-        });
-
-        // Update pagination controls
-        pageNumber.textContent = `${currentPage} of ${totalPages}`;
-        prevButton.disabled = currentPage === 1;
-        nextButton.disabled = currentPage === totalPages || totalPages === 0;
-    }
-
-    // Pagination event listeners
-    prevButton.addEventListener('click', function() {
-        if (currentPage > 1) {
-            currentPage--;
-            updateTable();
-        }
-    });
-
-    nextButton.addEventListener('click', function() {
-        if (currentPage < totalPages) {
-            currentPage++;
-            updateTable();
-        }
-    });
-
     // Close modal when clicking outside
     window.onclick = function(event) {
         if (event.target.className === 'comment-modal') {
@@ -343,8 +358,19 @@
     };
 
     // Initial table setup
-    updateTable();
+    filterAndDisplayData();
+
+    // Event listener for search input to trigger the filter
+    searchInput.addEventListener('input', function() {
+        filterAndDisplayData();
+    });
+
+    // Event listener for search button to trigger the filter
+    searchButton.addEventListener('click', function() {
+        filterAndDisplayData();
+    });
 });
-    </script>
+</script>
+
 </body>
 </html>

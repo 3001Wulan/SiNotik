@@ -122,9 +122,10 @@
             <th>No</th>
             <th>Tanggal</th>
             <th>Bidang</th>
-            <th>Judul</th>
+            <th>Agenda</th>
             <th>Notulen</th>
-            <th>Isi</th>
+            <th>Partisipan</th>
+            <th>Hasil Pembahasan </th>
             <th>Dokumentasi</th>
             <th>Aksi</th>
         </tr>
@@ -159,7 +160,6 @@
         let filteredData = [...notulenData];
         let deleteId = null;
 
-        // Modal functions
         window.showDeleteModal = function (no) {
             deleteId = no;
             document.getElementById('deleteModal').style.display = 'flex';
@@ -195,7 +195,6 @@
             }
         };
 
-        // Update table function
         function updateTable() {
             const tbody = document.querySelector('.data-table tbody');
             tbody.innerHTML = '';
@@ -207,6 +206,7 @@
                     <td>${data.Bidang}</td>
                     <td>${data.judul}</td>
                     <td>${data.user_name}</td>
+                    <td>${data.partisipan}</td> 
                     <td>${data.isi}</td>
                     <td>
                         <div style="width: 150px; height: 150px; overflow: hidden; border: 1px solid #ccc;">
@@ -225,7 +225,6 @@
 
         updateTable();
 
-        // Initialize date pickers
         const initDatePicker = (selector, iconContainer) => {
             const picker = flatpickr(selector, {
                 dateFormat: "Y-m-d",
@@ -244,7 +243,6 @@
         initDatePicker(".datepicker1", startDateIcon);
         initDatePicker(".datepicker", endDateIcon);
 
-        // Category selector
         const categorySelect = document.querySelector('.category-select');
         const categoryIcon = categorySelect.nextElementSibling;
         const categories = ['APTIKA', 'IKP', 'Statistik & Persandian'];
@@ -273,7 +271,7 @@
             e.stopPropagation();
         });
 
-        // Search filter
+        
         const searchInput = document.querySelector('.search-input');
         const searchIcon = document.querySelector('.search .iicon-container');
 
@@ -327,39 +325,39 @@
             const table = document.querySelector('.data-table');
             const rows = table.querySelectorAll('tr');
 
-            const headers = ['No', 'Tanggal', 'Bidang', 'Judul', 'Notulen', 'Isi', 'Dokumentasi'];
+            const headers = ['No', 'Tanggal', 'Bidang', 'Judul', 'Notulen', 'Partisipan','Isi', 'Dokumentasi'];
             const tableData = [];
             const imagePromises = [];
 
             rows.forEach((row, rowIndex) => {
                 const cells = row.querySelectorAll('th, td');
                 const rowData = Array.from(cells).map(cell => cell.textContent.trim());
-                if (rowIndex > 0) { // Skip header row
-                    rowData.pop(); // Remove last cell (Dokumentasi) temporarily
+                if (rowIndex > 0) { 
+                    rowData.pop(); 
                     tableData.push(rowData);
 
-                    const imgCell = row.cells[6]; // Dokumentasi column
+                    const imgCell = row.cells[7]; 
                     const img = imgCell.querySelector('img');
                     if (img) {
                         console.log(`Image found in row ${rowIndex}, processing...`);
+
                         imagePromises.push(
                             getImageBase64(img)
                                 .then(base64Img => {
-                                    tableData[rowIndex - 1].push(base64Img); // Add base64 image to row
+                                    tableData[rowIndex - 1].push(base64Img); 
                                 })
                                 .catch(err => {
                                     console.error(`Error processing image in row ${rowIndex}:`, err);
-                                    tableData[rowIndex - 1].push(''); // Fallback to empty
+                                    tableData[rowIndex - 1].push(''); 
                                 })
                         );
                     } else {
                         console.log(`No image found in row ${rowIndex}`);
-                        tableData[rowIndex - 1].push(''); // Fallback to empty
+                        tableData[rowIndex - 1].push(''); 
                     }
                 }
             });
 
-            // Wait for all image promises to resolve
             Promise.all(imagePromises).then(() => {
                 console.log("All images processed, generating PDF...");
 
@@ -367,10 +365,10 @@
                     head: [headers],
                     body: tableData,
                     startY: 20,
-                    margin: { top: 20, bottom: 20, left: 10, right: 10 },
+                    margin: { top: 10, bottom: 10, left: 10, right: 10 },
                     theme: 'grid',
                     didDrawPage: function () {
-                        doc.text('Riwayat Notulensi', 14, 15);
+                        doc.text('Riwayat Notulensi', 12, 15);
                     },
                     styles: {
                         overflow: 'linebreak',
@@ -378,14 +376,15 @@
                         cellPadding: 5,
                     },
                     didDrawCell: function (data) {
-                        if (data.column.index === 6 && data.row.index > 0) {
-                            const imageBase64 = tableData[data.row.index - 1][data.column.index];
+                        console.log(`Processing row ${data.row.index}, column ${data.column.index}`);
+                        if (data.column.index === 7 && data.row.index > 0) {
+                            const imageBase64 = tableData[data.row.index][data.column.index + 1];
                             console.log(`Processing image for row ${data.row.index}:`, imageBase64);
                             if (imageBase64) {
-                                const imgWidth = 40;
-                                const imgHeight = 30;
-                                const imgX = data.cell.x + 1;
-                                const imgY = data.cell.y + 1;
+                                const imgWidth = 25;
+                                const imgHeight = 15;
+                                const imgX = data.cell.x + data.cell.width / 2 - imgWidth / 2;
+                                const imgY = data.cell.y + (data.cell.height - imgHeight) / 2;
                                 console.log(`Menambahkan gambar ke PDF di posisi (${imgX}, ${imgY})`);
                                 doc.addImage(imageBase64, 'PNG', data.cell.x + 1, data.cell.y + 1, imgWidth, imgHeight);
 
@@ -397,20 +396,18 @@
                     },
                 });
 
-                // Save PDF
                 doc.save('data-notulen.pdf');
             }).catch(error => {
                 console.error('Error processing images before generating PDF:', error);
             });
         });
 
-        // Function to convert image to base64
         const getImageBase64 = (img) => {
             return new Promise((resolve, reject) => {
                 const canvas = document.createElement('canvas');
                 const ctx = canvas.getContext('2d');
                 const image = new Image();
-                image.crossOrigin = 'anonymous'; // Handle CORS issue
+                image.crossOrigin = 'anonymous'; 
                 image.src = img.src;
 
                 image.onload = () => {
