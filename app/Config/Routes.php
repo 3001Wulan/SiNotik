@@ -39,6 +39,9 @@ $routes->get('/notulen/melihatnotulen', 'MelihatNotulenController::lihat');
 $routes->get('/about', 'AboutController::about');
 $routes->get('uploads/(:any)', 'FileController::getFile/$1');
 $routes->get('admin/ubahdatapengguna', 'UbahDataController::ubahDataPengguna');
+$routes->delete('RiwayatAdminController/delete/(:segment)', 'RiwayatAdminController::delete/$1');
+$routes->get('/pegawai/melihatpegawai', 'MelihatNotulenpegawaiController::lihat');
+
 
 
 

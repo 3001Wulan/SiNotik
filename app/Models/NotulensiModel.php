@@ -71,9 +71,25 @@ class NotulensiModel extends Model
             $dbConnection = \Config\Database::connect();
             log_message('debug', 'Koneksi database berhasil.');
 
+            // Insert data ke tabel notulensi
             if ($this->insert($data)) {
+                $notulensiId = $this->getInsertID(); // Mendapatkan ID terakhir yang dimasukkan
                 log_message('info', 'Data berhasil dimasukkan ke dalam tabel notulensi. Data: ' . json_encode($data));
-                return true;
+
+                // Masukkan notulensi_id ke tabel riwayatnotulensi
+                $riwayatNotulensiData = [
+                    'notulensi_id' => $notulensiId
+                ];
+
+                $riwayatNotulensiTable = $db->table('riwayatnotulensi');
+
+                if ($riwayatNotulensiTable->insert($riwayatNotulensiData)) {
+                    log_message('info', 'Data berhasil dimasukkan ke tabel riwayatnotulensi. Data: ' . json_encode($riwayatNotulensiData));
+                    return true;
+                } else {
+                    log_message('error', 'Gagal memasukkan data ke tabel riwayatnotulensi.');
+                    return false;
+                }
             } else {
                 log_message('error', 'Gagal memasukkan data ke dalam tabel notulensi. Error: ' . json_encode($this->errors()));
                 return false;

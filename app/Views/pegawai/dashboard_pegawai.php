@@ -17,7 +17,7 @@
                 <img src="<?= base_url('assets/images/dashboard.png') ?>" alt="Dashboard" class="menu-icon">
                 <span class="menu-text">Dashboard</span>
             </li>
-            <li class="menu-item active" data-link="<?= base_url('admin/data_pengguna') ?>">
+            <li class="menu-item active" data-link="<?= base_url('pegawai/melihatpegawai') ?>">
                 <img src="<?= base_url('assets/images/codicon_book.png') ?>" alt="Data Pengguna" class="menu-icon">
                 <span class="menu-text">Notulensi</span>
             </li>

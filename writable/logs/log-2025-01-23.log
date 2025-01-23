@@ -1,0 +1,170 @@
+INFO - 2025-01-23 03:22:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 03:22:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 03:22:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 03:22:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 03:22:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-23 03:22:48 --> Login attempt with username: lili
+ERROR - 2025-01-23 03:22:49 --> Checking login for username: lili
+ERROR - 2025-01-23 03:22:49 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => alhamdulillah
+    [nip] => 123456780123456789
+    [email] => bismillah@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => jalan 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-09
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-16 07:45:21
+)
+
+ERROR - 2025-01-23 03:22:49 --> Password verify result for username lili: Failure
+ERROR - 2025-01-23 03:22:49 --> Login failed for username: lili
+INFO - 2025-01-23 03:22:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 03:22:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 03:22:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-23 03:22:54 --> Login attempt with username: lili
+ERROR - 2025-01-23 03:22:54 --> Checking login for username: lili
+ERROR - 2025-01-23 03:22:54 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => alhamdulillah
+    [nip] => 123456780123456789
+    [email] => bismillah@gmail.com
+    [password] => $2y$10$VOHOtZEaMBJvPLDT6v5/2uXNDqowMBRRYCjIGJtTPqb41gpCwVLI6
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => image.png
+    [alamat] => jalan 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-09
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-01-16 07:45:21
+)
+
+ERROR - 2025-01-23 03:22:54 --> Password verify result for username lili: Success
+ERROR - 2025-01-23 03:22:54 --> Login success for username: lili
+INFO - 2025-01-23 03:22:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-23 03:22:55 --> User ID: 9
+DEBUG - 2025-01-23 03:22:55 --> Profile Picture: image.png
+DEBUG - 2025-01-23 03:22:55 --> User Name: alhamdulillah
+DEBUG - 2025-01-23 03:22:55 --> User Role: admin
+INFO - 2025-01-23 03:22:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 03:23:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 03:23:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 03:23:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-23 03:23:06 --> Login attempt with username: dadang
+ERROR - 2025-01-23 03:23:06 --> Checking login for username: dadang
+ERROR - 2025-01-23 03:23:06 --> User data: Array
+(
+    [user_id] => 32
+    [username] => dadang
+    [nama] => dadang harjo
+    [nip] => 098765432234567892
+    [email] => dadang@gmail.com
+    [password] => $2y$10$FKo1RqxUsHWcoWzbk5ZZae9C4Al32xjQuyf99kyXR4CMMYtDOyMVC
+    [role] => notulensi
+    [Bidang] => IKP
+    [profil_foto] => wulan.jpg
+    [alamat] => 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-17 09:26:42
+    [updated_at] => 2025-01-21 11:06:28
+)
+
+ERROR - 2025-01-23 03:23:07 --> Password verify result for username dadang: Success
+ERROR - 2025-01-23 03:23:07 --> Login success for username: dadang
+INFO - 2025-01-23 03:23:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-23 03:23:07 --> User ID: 32
+DEBUG - 2025-01-23 03:23:07 --> Profile Picture: wulan.jpg
+DEBUG - 2025-01-23 03:23:07 --> User Name: dadang harjo
+DEBUG - 2025-01-23 03:23:07 --> User Role: notulensi
+INFO - 2025-01-23 03:23:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 03:23:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 03:23:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 03:23:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-23 03:23:37 --> Data yang akan disimpan: {"judul":"lala","agenda":"ddd","tanggal_dibuat":"2025-01-23","tanggal":"2025-01-23","partisipan":"kdkkd","upload":"1737602617_76a013c1434405cb2d87.jpg","user_id":"32","isi":"ejje","bidang":"IKP"}
+DEBUG - 2025-01-23 03:23:37 --> Koneksi database berhasil.
+INFO - 2025-01-23 03:23:37 --> Data berhasil dimasukkan ke dalam tabel notulensi. Data: {"judul":"lala","agenda":"ddd","tanggal_dibuat":"2025-01-23","tanggal":"2025-01-23","partisipan":"kdkkd","upload":"1737602617_76a013c1434405cb2d87.jpg","user_id":"32","isi":"ejje","bidang":"IKP"}
+INFO - 2025-01-23 03:23:37 --> Data berhasil dimasukkan ke tabel riwayatnotulensi. Data: {"notulensi_id":32}
+INFO - 2025-01-23 03:23:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-23 03:23:44 --> Data notulensi berhasil ditampilkan: Array
+(
+    [0] => Array
+        (
+            [notulensi_id] => 17
+            [user_id] => 32
+            [judul] => alala
+            [partisipan] => skkks
+            [agenda] => skdnjk
+            [isi] => amaa
+            [Bidang] => Aptika
+            [tanggal_dibuat] => 2025-01-21
+            [riwayat_id] => 17
+            [dokumentasi_id] => 1
+            [foto_dokumentasi] => 1737433053_30d4a24a6731de0c676c.png
+            [user_name] => dadang harjo
+        )
+
+    [1] => Array
+        (
+            [notulensi_id] => 29
+            [user_id] => 32
+            [judul] => pemilihan jodoh terbaik untuk cindy
+            [partisipan] => 1.wulan
+2.heni
+3.intan
+4.mahira
+            [agenda] => 1. ktiteria jodoh cindy
+2. alterfantif jodoh cind
+            [isi] => belum menemukan karena lagi dibogor sudah rindu
+            [Bidang] => IKP
+            [tanggal_dibuat] => 2025-01-22
+            [riwayat_id] => 29
+            [dokumentasi_id] => 12
+            [foto_dokumentasi] => 1737527174_5ea251670dabbf17b632.jpg
+            [user_name] => dadang harjo
+        )
+
+    [2] => Array
+        (
+            [notulensi_id] => 31
+            [user_id] => 32
+            [judul] => qq
+            [partisipan] => qqqqqqqqqqqqq
+            [agenda] => qqqqqqqqqqqq
+            [isi] => qqqqqqqqqqqqqqqqqq
+            [Bidang] => IKP
+            [tanggal_dibuat] => 2025-01-22
+            [riwayat_id] => 31
+            [dokumentasi_id] => 14
+            [foto_dokumentasi] => 1737557344_9763e1adf34ac1669890.png
+            [user_name] => dadang harjo
+        )
+
+    [3] => Array
+        (
+            [notulensi_id] => 32
+            [user_id] => 32
+            [judul] => lala
+            [partisipan] => kdkkd
+            [agenda] => ddd
+            [isi] => ejje
+            [Bidang] => IKP
+            [tanggal_dibuat] => 2025-01-23
+            [riwayat_id] => 32
+            [dokumentasi_id] => 15
+            [foto_dokumentasi] => 1737602617_76a013c1434405cb2d87.jpg
+            [user_name] => dadang harjo
+        )
+
+)
+
+INFO - 2025-01-23 03:23:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

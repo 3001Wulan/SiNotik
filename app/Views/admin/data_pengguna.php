@@ -268,7 +268,7 @@ $current_page = 'data_pengguna';
             })
             .catch(error => {
                 console.error('Error:', error);
-                alert('Data berhasil dihapus');
+                window.location.reload();
             });
         }
 
