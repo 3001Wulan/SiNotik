@@ -91,7 +91,7 @@
                     <div class="button-container filter-container">
     <button class="filter-btn">
         Filter
-        <div class="icon-container">
+        <div class="icon-containerr">
             <img src="<?= base_url('assets/images/cari.png') ?>" alt="Filter Icon">
         </div>
     </button>
@@ -137,7 +137,7 @@
 <div id="deleteModal" class="modal" style="display: none;">
     <div class="modal-content">
         <div class="modal-icon">
-            <i class="fas fa-exclamation-circle"></i>
+            <img src="<?= base_url('assets/images/Info.png') ?>" alt="Info Icon">
         </div>
         <h3 class="modal-title">Hapus Data Ini?</h3>
         <div class="modal-buttons">
@@ -224,6 +224,14 @@
         }
 
         updateTable();
+
+        const themeToggle = document.querySelector('.theme-toggle');
+            const body = document.body;
+            
+            themeToggle.addEventListener('click', function() {
+                body.classList.toggle('light-mode');
+                body.classList.toggle('dark-mode');
+            });
 
         const initDatePicker = (selector, iconContainer) => {
             const picker = flatpickr(selector, {
@@ -354,7 +362,6 @@
                     } else {
                         console.log(`No image found in row ${rowIndex}`);
                         tableData[rowIndex - 1].push(''); 
-
                     }
                 }
             });
@@ -378,7 +385,7 @@
                     },
                     didDrawCell: function (data) {
                         console.log(`Processing row ${data.row.index}, column ${data.column.index}`);
-                        if (data.column.index === 7 && data.row.index >=0) {
+                        if (data.column.index === 7 && data.row.index > 0) {
                             const imageBase64 = tableData[data.row.index][data.column.index + 1];
                             console.log(`Processing image for row ${data.row.index}:`, imageBase64);
                             if (imageBase64) {
