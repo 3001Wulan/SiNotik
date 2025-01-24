@@ -174,26 +174,22 @@
             }
         });
 
-        // JavaScript untuk Popup Logout
         const logoutBtn = document.getElementById('logoutBtn');
         const popupOverlay = document.getElementById('popupOverlay');
         const confirmLogout = document.getElementById('confirmLogout');
         const cancelLogout = document.getElementById('cancelLogout');
 
-        // Menampilkan popup konfirmasi logout
         logoutBtn.addEventListener('click', (event) => {
-            event.preventDefault(); // Mencegah link logout berfungsi langsung
-            popupOverlay.style.display = 'block'; // Menampilkan popup overlay
+            event.preventDefault(); 
+            popupOverlay.style.display = 'block'; 
         });
 
-        // Menyelesaikan logout ketika tombol "Ya" diklik
         confirmLogout.addEventListener('click', () => {
-            window.location.href = '/'; // Ganti dengan halaman logout atau proses logout
+            window.location.href = '/'; 
         });
 
-        // Menyembunyikan popup ketika tombol "Tidak" diklik
         cancelLogout.addEventListener('click', () => {
-            popupOverlay.style.display = 'none'; // Menyembunyikan popup overlay
+            popupOverlay.style.display = 'none'; 
         });
     </script>
 </body>

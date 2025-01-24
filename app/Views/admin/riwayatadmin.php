@@ -354,6 +354,7 @@
                     } else {
                         console.log(`No image found in row ${rowIndex}`);
                         tableData[rowIndex - 1].push(''); 
+
                     }
                 }
             });
@@ -377,7 +378,7 @@
                     },
                     didDrawCell: function (data) {
                         console.log(`Processing row ${data.row.index}, column ${data.column.index}`);
-                        if (data.column.index === 7 && data.row.index > 0) {
+                        if (data.column.index === 7 && data.row.index >=0) {
                             const imageBase64 = tableData[data.row.index][data.column.index + 1];
                             console.log(`Processing image for row ${data.row.index}:`, imageBase64);
                             if (imageBase64) {

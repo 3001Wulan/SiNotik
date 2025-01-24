@@ -787,3 +787,32 @@ body.dark-mode .theme-toggle img {
     color: white;
     border-color: #555;
 }
+.user-details {
+    display: flex; /* Mengatur elemen dalam satu baris */
+    align-items: center; /* Menyusun elemen secara vertikal sejajar */
+    gap: 15px; /* Jarak antara teks dan gambar */
+    flex-direction: row-reverse; /* Membalik urutan elemen sehingga foto di sebelah kanan */
+}
+
+.profile-img {
+    width: 60px;  /* Ukuran gambar profil */
+    height: 60px;
+    border-radius: 50%;  /* Membuat gambar menjadi lingkaran */
+    object-fit: cover;  /* Menyesuaikan gambar agar pas dalam lingkaran */
+}
+
+.user-text {
+    display: flex;
+    flex-direction: column; /* Menyusun nama dan role secara vertikal */
+    justify-content: center; /* Menjaga agar nama dan role sejajar secara vertikal */
+}
+
+.user-name {
+    font-size: 1.1em; /* Ukuran font nama lebih besar */
+    font-weight: bold; /* Nama lebih tebal */
+}
+
+.user-role {
+    font-size: 0.9em; /* Ukuran font role lebih kecil */
+    color: #888; /* Warna abu-abu untuk role */
+}

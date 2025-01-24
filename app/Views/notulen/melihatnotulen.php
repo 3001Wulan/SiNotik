@@ -6,7 +6,7 @@
     <title>Daftar Notulensi</title>
     <link rel="stylesheet" href="<?= base_url('assets/css/melihatnotulen.css') ?>">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
 </head>
 <body class="light-mode">
     <div class="container">
@@ -54,10 +54,20 @@
                     <img src="<?= base_url('assets/images/sun.png') ?>" alt="Sun" class="theme-icon sun-icon">
                 </div>
                 <div class="user-info">
-                    <img src="<?= base_url('assets/images/profile.jpg') ?>" alt="Profile" class="profile-img">
+                    <!-- User details with profile image and role -->
+                    <div class="user-details">
+                        <?php
+                        // Cek apakah ada gambar profil, jika tidak, tampilkan gambar default
+                            $profilePic = $user['profil_foto'] ? base_url('assets/images/profiles/' . $user['profil_foto']) : base_url('assets/images/profiles/delvaut.png');
+                        ?>
+                        <img src="<?= $profilePic ?>" alt="Profile" class="profile-img">
+                        <div class="user-text">
+                            <p class="user-name"><?= esc($user['nama']); ?></p>
+                            <p class="user-role"><?= esc($user['role']); ?></p>
+                        </div>
+                    </div>
                 </div>
             </div>
-
             <!-- Content Area -->
             <div class="content">
                 <h1>Daftar Notulensi</h1>
@@ -119,7 +129,7 @@
                                         <td><?= esc($notulen['tanggal_dibuat']) ?></td>
                                         <td>
                                             <div class="action-buttons">
-                                                <button class="btn-detail" onclick="viewDetails(this)">Lihat</button>
+                                                <button class="btn-detail" onclick="viewDetails(this, <?= esc($notulen['notulensi_id']) ?>)">Lihat</button>
                                                 <button class="btn-comment" onclick="showCommentModal(this)">
                                                     <img src="<?= base_url('assets/images/komen.png') ?>" alt="Comment">
                                                 </button>
@@ -205,33 +215,33 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function filterAndDisplayData() {
-    const searchTerm = searchInput.value.toLowerCase().trim();
-    const selectedCategory = categorySelect.value.toLowerCase().trim();
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        const selectedCategory = categorySelect.value.toLowerCase().trim();
 
-    const visibleRows = Array.from(tableRows).filter(row => {
-        const cells = row.getElementsByTagName('td');
-        const topik = cells[1].textContent.toLowerCase().trim();
-        const bidang = cells[2].textContent.toLowerCase().trim();
+        const visibleRows = Array.from(tableRows).filter(row => {
+            const cells = row.getElementsByTagName('td');
+            const topik = cells[1].textContent.toLowerCase().trim();
+            const bidang = cells[2].textContent.toLowerCase().trim();
 
-        const searchMatch = topik.includes(searchTerm) || bidang.includes(searchTerm);
-        const categoryMatch = selectedCategory === '' || bidang.toLowerCase() === selectedCategory;
+            const searchMatch = topik.includes(searchTerm) || bidang.includes(searchTerm);
+            const categoryMatch = selectedCategory === '' || bidang.toLowerCase() === selectedCategory;
 
-        return searchMatch && categoryMatch;
-    });
+            return searchMatch && categoryMatch;
+        });
 
-    // Debugging
-    console.log('Visible Rows:', visibleRows);
-    
-    // Update pagination and display logic
-    totalPages = Math.ceil(visibleRows.length / itemsPerPage);
-    // Reset to first page when filtering
+        // Debugging
+        console.log('Visible Rows:', visibleRows);
+        
+        // Update pagination and display logic
+        totalPages = Math.ceil(visibleRows.length / itemsPerPage);
+        // Reset to first page when filtering
 
-    // Debugging
-    console.log('Total Pages:', totalPages);
-    console.log('Current Page:', currentPage);
+        // Debugging
+        console.log('Total Pages:', totalPages);
+        console.log('Current Page:', currentPage);
 
-    updateTable(visibleRows);
-}
+        updateTable(visibleRows);
+    }
 
     // Update table display based on visible rows
     function updateTable(visibleRows) {
@@ -253,16 +263,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // View Details Function
-    window.viewDetails = function(button) {
-        const row = button.closest('tr');
-        const cells = row.getElementsByTagName('td');
-        const data = {
-            topik: cells[1].textContent,
-            bidang: cells[2].textContent,
-            tanggal: cells[3].textContent
-        };
-        
-        console.log('Viewing details for:', data);
+    window.viewDetails = function(button, notulensiId) {
+        // Arahkan ke halaman detail notulensi
+        window.location.href = `<?= base_url('notulensi/feedbacknotulen/') ?>${notulensiId}`;
     };
 
     // Comment Modal Functions
@@ -323,12 +326,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     nextButton.addEventListener('click', function() {
-    
-    if (currentPage < totalPages) {
-        currentPage++;
-        filterAndDisplayData(); // Panggil fungsi untuk memperbarui tampilan
-    }
-});
+        if (currentPage < totalPages) {
+            currentPage++;
+            filterAndDisplayData(); // Panggil fungsi untuk memperbarui tampilan
+        }
+    });
 
     // Theme handling
     const themeToggle = document.querySelector('.theme-toggle');
