@@ -123,7 +123,7 @@ body, html {
         width: 94%;
         margin-left: 30px;
         padding: 15px;
-        border: 1px solid #292A6E;
+        border: 1px solid #025299;
         border-radius: 10px;
         font-size: 14px;
         color: #333;
@@ -179,7 +179,7 @@ body, html {
     }
     
     .dropdown-item:hover {
-        background-color: #292A6E !important;
+        background-color: #025299 !important;
         color: white !important;
         font-weight: bolder !important;
     }
@@ -201,5 +201,6 @@ body, html {
 }
 
 .btn:hover {
-    background: #3e9bff;
+    background: #0085C5;
+    transform: scale(1.1);
 }

@@ -113,7 +113,8 @@ body {
     }
     
     .btn-login:hover {
-        background: #3e9bff;
+        background: #0085C5;
+        transform: scale(1.1);
     }
     
     .register-link {
