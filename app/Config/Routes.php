@@ -42,7 +42,7 @@ $routes->get('admin/ubahdatapengguna', 'UbahDataController::ubahDataPengguna');
 $routes->delete('RiwayatAdminController/delete/(:segment)', 'RiwayatAdminController::delete/$1');
 $routes->get('/pegawai/melihatpegawai', 'MelihatNotulenpegawaiController::lihat');
 $routes->get('notulensi/feedbacknotulen/(:num)', 'FeedbackNotulenController::feedbacknotulen/$1');
-
+$routes->get('pegawai/riwayatpegawai', 'RiwayatPegawaiController::index');
 
 
 
