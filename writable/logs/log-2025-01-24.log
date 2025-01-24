@@ -300,3 +300,437 @@ INFO - 2025-01-24 07:53:34 --> Data notulensi berhasil ditampilkan: Array
 )
 
 INFO - 2025-01-24 07:53:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-24 07:57:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-24 07:57:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-24 07:57:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-24 07:57:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-24 07:57:36 --> Login attempt with username: jaja
+ERROR - 2025-01-24 07:57:36 --> Checking login for username: jaja
+ERROR - 2025-01-24 07:57:36 --> User data: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-17 07:33:28
+)
+
+ERROR - 2025-01-24 07:57:36 --> Password verify result for username jaja: Success
+ERROR - 2025-01-24 07:57:36 --> Login success for username: jaja
+INFO - 2025-01-24 07:57:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-24 07:57:37 --> User ID: 13
+DEBUG - 2025-01-24 07:57:37 --> Profile Picture: pegawai.png
+DEBUG - 2025-01-24 07:57:37 --> User Name: jungwon
+DEBUG - 2025-01-24 07:57:37 --> User Role: pegawai
+INFO - 2025-01-24 07:57:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-24 07:57:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-24 07:57:43 --> Data pengguna ditemukan: user_id = 13
+INFO - 2025-01-24 07:57:43 --> Data notulensi berhasil ditampilkan: Array
+(
+    [0] => Array
+        (
+            [notulensi_id] => 17
+            [user_id] => 32
+            [judul] => alala
+            [partisipan] => skkks
+            [agenda] => skdnjk
+            [isi] => amaa
+            [Bidang] => Aptika
+            [tanggal_dibuat] => 2025-01-21
+            [riwayat_id] => 17
+            [dokumentasi_id] => 1
+            [foto_dokumentasi] => 1737433053_30d4a24a6731de0c676c.png
+            [user_name] => dadang harjo
+        )
+
+    [1] => Array
+        (
+            [notulensi_id] => 18
+            [user_id] => 32
+            [judul] => percobaan
+            [partisipan] => kwwwwwwwwwwwwww
+            [agenda] => aaaaaaaaa
+            [isi] => wkkkkkkkkkkkkkkkk
+            [Bidang] => IKP
+            [tanggal_dibuat] => 2025-01-21
+            [riwayat_id] => 18
+            [dokumentasi_id] => 2
+            [foto_dokumentasi] => 1737441931_0b631fabdd322dbda8e2.jpg
+            [user_name] => dadang harjo
+        )
+
+)
+
+INFO - 2025-01-24 07:57:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-24 07:57:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-24 07:57:52 --> Data pengguna ditemukan: user_id = 13
+INFO - 2025-01-24 07:57:52 --> Data notulensi berhasil ditampilkan: Array
+(
+    [0] => Array
+        (
+            [notulensi_id] => 17
+            [user_id] => 32
+            [judul] => alala
+            [partisipan] => skkks
+            [agenda] => skdnjk
+            [isi] => amaa
+            [Bidang] => Aptika
+            [tanggal_dibuat] => 2025-01-21
+            [riwayat_id] => 17
+            [dokumentasi_id] => 1
+            [foto_dokumentasi] => 1737433053_30d4a24a6731de0c676c.png
+            [user_name] => dadang harjo
+        )
+
+    [1] => Array
+        (
+            [notulensi_id] => 18
+            [user_id] => 32
+            [judul] => percobaan
+            [partisipan] => kwwwwwwwwwwwwww
+            [agenda] => aaaaaaaaa
+            [isi] => wkkkkkkkkkkkkkkkk
+            [Bidang] => IKP
+            [tanggal_dibuat] => 2025-01-21
+            [riwayat_id] => 18
+            [dokumentasi_id] => 2
+            [foto_dokumentasi] => 1737441931_0b631fabdd322dbda8e2.jpg
+            [user_name] => dadang harjo
+        )
+
+)
+
+INFO - 2025-01-24 07:57:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-24 07:57:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-24 07:57:58 --> User ID: 13
+DEBUG - 2025-01-24 07:57:58 --> Profile Picture: pegawai.png
+DEBUG - 2025-01-24 07:57:58 --> User Name: jungwon
+DEBUG - 2025-01-24 07:57:58 --> User Role: pegawai
+INFO - 2025-01-24 07:57:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-24 08:00:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-24 08:00:01 --> User ID: 13
+DEBUG - 2025-01-24 08:00:01 --> Profile Picture: pegawai.png
+DEBUG - 2025-01-24 08:00:01 --> User Name: jungwon
+DEBUG - 2025-01-24 08:00:01 --> User Role: pegawai
+INFO - 2025-01-24 08:00:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-24 08:00:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-24 08:00:02 --> Data pengguna ditemukan: user_id = 13
+INFO - 2025-01-24 08:00:02 --> Data notulensi berhasil ditampilkan: Array
+(
+    [0] => Array
+        (
+            [notulensi_id] => 17
+            [user_id] => 32
+            [judul] => alala
+            [partisipan] => skkks
+            [agenda] => skdnjk
+            [isi] => amaa
+            [Bidang] => Aptika
+            [tanggal_dibuat] => 2025-01-21
+            [riwayat_id] => 17
+            [dokumentasi_id] => 1
+            [foto_dokumentasi] => 1737433053_30d4a24a6731de0c676c.png
+            [user_name] => dadang harjo
+        )
+
+    [1] => Array
+        (
+            [notulensi_id] => 18
+            [user_id] => 32
+            [judul] => percobaan
+            [partisipan] => kwwwwwwwwwwwwww
+            [agenda] => aaaaaaaaa
+            [isi] => wkkkkkkkkkkkkkkkk
+            [Bidang] => IKP
+            [tanggal_dibuat] => 2025-01-21
+            [riwayat_id] => 18
+            [dokumentasi_id] => 2
+            [foto_dokumentasi] => 1737441931_0b631fabdd322dbda8e2.jpg
+            [user_name] => dadang harjo
+        )
+
+)
+
+INFO - 2025-01-24 08:00:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-24 08:00:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-24 08:00:48 --> Data pengguna ditemukan: user_id = 13
+INFO - 2025-01-24 08:00:48 --> Data notulensi berhasil ditampilkan: Array
+(
+    [0] => Array
+        (
+            [notulensi_id] => 17
+            [user_id] => 32
+            [judul] => alala
+            [partisipan] => skkks
+            [agenda] => skdnjk
+            [isi] => amaa
+            [Bidang] => Aptika
+            [tanggal_dibuat] => 2025-01-21
+            [riwayat_id] => 17
+            [dokumentasi_id] => 1
+            [foto_dokumentasi] => 1737433053_30d4a24a6731de0c676c.png
+            [user_name] => dadang harjo
+        )
+
+    [1] => Array
+        (
+            [notulensi_id] => 18
+            [user_id] => 32
+            [judul] => percobaan
+            [partisipan] => kwwwwwwwwwwwwww
+            [agenda] => aaaaaaaaa
+            [isi] => wkkkkkkkkkkkkkkkk
+            [Bidang] => IKP
+            [tanggal_dibuat] => 2025-01-21
+            [riwayat_id] => 18
+            [dokumentasi_id] => 2
+            [foto_dokumentasi] => 1737441931_0b631fabdd322dbda8e2.jpg
+            [user_name] => dadang harjo
+        )
+
+)
+
+INFO - 2025-01-24 08:00:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-24 08:01:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-24 08:01:44 --> Data pengguna ditemukan: user_id = 13
+INFO - 2025-01-24 08:01:44 --> Data notulensi berhasil ditampilkan: Array
+(
+    [0] => Array
+        (
+            [notulensi_id] => 17
+            [user_id] => 32
+            [judul] => alala
+            [partisipan] => skkks
+            [agenda] => skdnjk
+            [isi] => amaa
+            [Bidang] => Aptika
+            [tanggal_dibuat] => 2025-01-21
+            [riwayat_id] => 17
+            [dokumentasi_id] => 1
+            [foto_dokumentasi] => 1737433053_30d4a24a6731de0c676c.png
+            [user_name] => dadang harjo
+        )
+
+    [1] => Array
+        (
+            [notulensi_id] => 18
+            [user_id] => 32
+            [judul] => percobaan
+            [partisipan] => kwwwwwwwwwwwwww
+            [agenda] => aaaaaaaaa
+            [isi] => wkkkkkkkkkkkkkkkk
+            [Bidang] => IKP
+            [tanggal_dibuat] => 2025-01-21
+            [riwayat_id] => 18
+            [dokumentasi_id] => 2
+            [foto_dokumentasi] => 1737441931_0b631fabdd322dbda8e2.jpg
+            [user_name] => dadang harjo
+        )
+
+)
+
+INFO - 2025-01-24 08:01:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-24 08:05:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-24 08:05:23 --> Data pengguna ditemukan: user_id = 13
+INFO - 2025-01-24 08:05:23 --> Data notulensi berhasil ditampilkan: Array
+(
+    [0] => Array
+        (
+            [notulensi_id] => 17
+            [user_id] => 32
+            [judul] => alala
+            [partisipan] => skkks
+            [agenda] => skdnjk
+            [isi] => amaa
+            [Bidang] => Aptika
+            [tanggal_dibuat] => 2025-01-21
+            [riwayat_id] => 17
+            [dokumentasi_id] => 1
+            [foto_dokumentasi] => 1737433053_30d4a24a6731de0c676c.png
+            [user_name] => dadang harjo
+        )
+
+    [1] => Array
+        (
+            [notulensi_id] => 18
+            [user_id] => 32
+            [judul] => percobaan
+            [partisipan] => kwwwwwwwwwwwwww
+            [agenda] => aaaaaaaaa
+            [isi] => wkkkkkkkkkkkkkkkk
+            [Bidang] => IKP
+            [tanggal_dibuat] => 2025-01-21
+            [riwayat_id] => 18
+            [dokumentasi_id] => 2
+            [foto_dokumentasi] => 1737441931_0b631fabdd322dbda8e2.jpg
+            [user_name] => dadang harjo
+        )
+
+)
+
+INFO - 2025-01-24 08:05:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-24 08:06:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-24 08:06:13 --> Data pengguna ditemukan: user_id = 13
+INFO - 2025-01-24 08:06:13 --> Data notulensi berhasil ditampilkan: Array
+(
+    [0] => Array
+        (
+            [notulensi_id] => 17
+            [user_id] => 32
+            [judul] => alala
+            [partisipan] => skkks
+            [agenda] => skdnjk
+            [isi] => amaa
+            [Bidang] => Aptika
+            [tanggal_dibuat] => 2025-01-21
+            [riwayat_id] => 17
+            [dokumentasi_id] => 1
+            [foto_dokumentasi] => 1737433053_30d4a24a6731de0c676c.png
+            [user_name] => dadang harjo
+        )
+
+    [1] => Array
+        (
+            [notulensi_id] => 18
+            [user_id] => 32
+            [judul] => percobaan
+            [partisipan] => kwwwwwwwwwwwwww
+            [agenda] => aaaaaaaaa
+            [isi] => wkkkkkkkkkkkkkkkk
+            [Bidang] => IKP
+            [tanggal_dibuat] => 2025-01-21
+            [riwayat_id] => 18
+            [dokumentasi_id] => 2
+            [foto_dokumentasi] => 1737441931_0b631fabdd322dbda8e2.jpg
+            [user_name] => dadang harjo
+        )
+
+)
+
+INFO - 2025-01-24 08:06:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-24 08:08:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-24 08:08:16 --> Data pengguna ditemukan: user_id = 13
+INFO - 2025-01-24 08:08:16 --> Data notulensi berhasil ditampilkan: Array
+(
+    [0] => Array
+        (
+            [notulensi_id] => 17
+            [user_id] => 32
+            [judul] => alala
+            [partisipan] => skkks
+            [agenda] => skdnjk
+            [isi] => amaa
+            [Bidang] => Aptika
+            [tanggal_dibuat] => 2025-01-21
+            [riwayat_id] => 17
+            [dokumentasi_id] => 1
+            [foto_dokumentasi] => 1737433053_30d4a24a6731de0c676c.png
+            [user_name] => dadang harjo
+        )
+
+    [1] => Array
+        (
+            [notulensi_id] => 18
+            [user_id] => 32
+            [judul] => percobaan
+            [partisipan] => kwwwwwwwwwwwwww
+            [agenda] => aaaaaaaaa
+            [isi] => wkkkkkkkkkkkkkkkk
+            [Bidang] => IKP
+            [tanggal_dibuat] => 2025-01-21
+            [riwayat_id] => 18
+            [dokumentasi_id] => 2
+            [foto_dokumentasi] => 1737441931_0b631fabdd322dbda8e2.jpg
+            [user_name] => dadang harjo
+        )
+
+)
+
+INFO - 2025-01-24 08:08:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-24 08:09:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-24 08:09:02 --> Data pengguna ditemukan: user_id = 13
+INFO - 2025-01-24 08:09:02 --> Data notulensi berhasil ditampilkan: Array
+(
+    [0] => Array
+        (
+            [notulensi_id] => 17
+            [user_id] => 32
+            [judul] => alala
+            [partisipan] => skkks
+            [agenda] => skdnjk
+            [isi] => amaa
+            [Bidang] => Aptika
+            [tanggal_dibuat] => 2025-01-21
+            [riwayat_id] => 17
+            [dokumentasi_id] => 1
+            [foto_dokumentasi] => 1737433053_30d4a24a6731de0c676c.png
+            [user_name] => dadang harjo
+        )
+
+    [1] => Array
+        (
+            [notulensi_id] => 18
+            [user_id] => 32
+            [judul] => percobaan
+            [partisipan] => kwwwwwwwwwwwwww
+            [agenda] => aaaaaaaaa
+            [isi] => wkkkkkkkkkkkkkkkk
+            [Bidang] => IKP
+            [tanggal_dibuat] => 2025-01-21
+            [riwayat_id] => 18
+            [dokumentasi_id] => 2
+            [foto_dokumentasi] => 1737441931_0b631fabdd322dbda8e2.jpg
+            [user_name] => dadang harjo
+        )
+
+)
+
+INFO - 2025-01-24 08:09:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-24 08:18:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-24 08:18:43 --> Data pengguna ditemukan: user_id = 13
+INFO - 2025-01-24 08:18:43 --> Data notulensi berhasil ditampilkan: Array
+(
+    [0] => Array
+        (
+            [notulensi_id] => 17
+            [user_id] => 32
+            [judul] => alala
+            [partisipan] => skkks
+            [agenda] => skdnjk
+            [isi] => amaa
+            [Bidang] => Aptika
+            [tanggal_dibuat] => 2025-01-21
+            [riwayat_id] => 17
+            [dokumentasi_id] => 1
+            [foto_dokumentasi] => 1737433053_30d4a24a6731de0c676c.png
+            [user_name] => dadang harjo
+        )
+
+    [1] => Array
+        (
+            [notulensi_id] => 18
+            [user_id] => 32
+            [judul] => percobaan
+            [partisipan] => kwwwwwwwwwwwwww
+            [agenda] => aaaaaaaaa
+            [isi] => wkkkkkkkkkkkkkkkk
+            [Bidang] => IKP
+            [tanggal_dibuat] => 2025-01-21
+            [riwayat_id] => 18
+            [dokumentasi_id] => 2
+            [foto_dokumentasi] => 1737441931_0b631fabdd322dbda8e2.jpg
+            [user_name] => dadang harjo
+        )
+
+)
+
+INFO - 2025-01-24 08:18:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

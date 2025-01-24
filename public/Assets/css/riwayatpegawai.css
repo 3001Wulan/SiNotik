@@ -156,6 +156,10 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+body.dark-mode .header {
+    background-color: #444444;
+}
+
 /* Theme Toggle Styles */
 .theme-toggle {
     cursor: pointer;
@@ -200,6 +204,15 @@ body {
 .content {
     padding: 20px;
     background-color: var(--sidebar-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
+    position: relative;
+}
+
+.dark-mode .content {
+    padding: 20px;
+    background-color: #333;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-top: 60px;
@@ -344,6 +357,20 @@ h2 {
     border-bottom-right-radius: 3px;
 }
 
+.dark-mode .icon-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
 .iicon-container {
     position: absolute;
     right: 0;
@@ -358,6 +385,20 @@ h2 {
     border-bottom-right-radius: 3px;
 }
 
+.dark-mode .iicon-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
 .icon-containerr {
     position: absolute;
     right: 0;
@@ -368,6 +409,20 @@ h2 {
     align-items: center;
     justify-content: center;
     background-color: #292A6E;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.dark-mode .icon-containerr {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
 }
@@ -405,6 +460,39 @@ h2 {
     align-items: center;
     padding: 0 15px;
     background-color: #ce1e1e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    position: relative;
+    justify-content: space-between;
+    margin-top: 30px;
+    
+}
+
+.dark-mode .filter-btn{
+    width: 130px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    position: relative;
+    justify-content: space-between;
+    margin-top: 30px;
+} 
+
+.dark-mode .pdf-btn {
+    width: 155px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    background-color: #1a1a1a;
     color: white;
     border: none;
     border-radius: 4px;
