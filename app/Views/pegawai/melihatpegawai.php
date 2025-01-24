@@ -17,17 +17,17 @@
                 <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo">
             </div> 
             <div class="menu">
-                <a href="#" class="menu-item">
+                <a href="dashboard_pegawai" class="menu-item">
                     <img src="<?= base_url('assets/images/dashboard.png') ?>" alt="Dashboard Icon">
                     <span>Dashboard</span>
                 </a>
                 <div class="separator"></div>
-                <a href="#" class="menu-item">
+                <a href="melihatpegawai" class="menu-item">
                     <img src="<?= base_url('assets/images/notulensi.png') ?>" alt="Data User Icon">
                     <span>Notulensi</span>
                 </a>
                 <div class="separator"></div>
-                <a href="#" class="menu-item">
+                <a href="riwayatpegawai" class="menu-item">
                     <img src="<?= base_url('assets/images/riwayat.png') ?>" alt="History Icon">
                     <span>Riwayat Notulensi</span>
                 </a>
