@@ -4,19 +4,16 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-
 body {
     display: flex;
     flex-wrap: wrap;
     min-height: 100vh;
     background-color: #f1f5f9;
 }
-
-/* Sidebar */
 .sidebar {
     width: 256px;
     background-color: #0085C5;
-    padding: 10px 20px;  /* Mengurangi padding */
+    padding: 10px 20px;  
     height: 100vh;
     position: fixed;
     left: 0;
@@ -24,69 +21,56 @@ body {
     flex-direction: column;
     justify-content: flex-start;
 }
-
-/* Logo */
 .sidebar .logo {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 70%;
     height: 100px;
-    margin-bottom: 30px;  /* Mengurangi margin */
+    margin-bottom: 30px; 
     padding: 0 20px;
     box-sizing: border-box;
 }
-
 .sidebar .logo img {
     max-width: 100%;
     height: auto;
     object-fit: contain;
 }
-
-/* Menu */
 .menu {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Mengurangi jarak antar menu */
+    gap: 10px; 
 }
-
-/* Menu item */
 .menu-item {
     display: flex;
     align-items: center;
-    padding: 8px 16px;  /* Mengurangi padding */
-    margin-bottom: 6px;  /* Mengurangi margin */
+    padding: 8px 16px;  
+    margin-bottom: 6px;  
     color: black;
     cursor: pointer;
     border-radius: 8px;
     text-decoration: none;
 }
-
 .menu-item:first-child {
     margin-top: 0;
 }
-
 .menu-icon {
-    width: 20px;  /* Mengurangi ukuran ikon */
+    width: 20px;  
     height: 20px;
-    margin-right: 10px;  /* Mengurangi jarak antara ikon dan teks */
+    margin-right: 10px;  
 }
-
 .menu-item.active {
     background-color: #005a88;
     color: #fff;
     font-weight: bold;
 }
-
 .menu-item:hover {
     background-color: #006c9e;
     color: #fff;
 }
-
-/* Header */
 .header {
     width: calc(100% - 256px);
     margin-left: 256px;
@@ -100,63 +84,73 @@ body {
     justify-content: flex-end;
     padding: 16px 24px;
 }
-
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
-
-/* Theme Toggle */
 .theme-toggle {
     cursor: pointer;
     display: flex;
     align-items: center;
 }
-
 .theme-toggle img {
     width: 24px;
     height: 24px;
 }
-
-/* User Info */
 .user-info {
     display: flex;
     align-items: center;
     gap: 10px;
     justify-content: flex-end;
 }
-
 .user-text {
     display: flex;
     flex-direction: column;
     text-align: right;
 }
-
 .user-name {
     font-size: 1.2rem;
     font-weight: bold;
 }
-
 .user-role {
     font-size: 1rem;
     color: gray;
 }
-
-.user-avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
-
-.avatar-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 140px; 
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px; 
+    overflow: hidden; 
 }
-
-/* Main Content */
+.dropdown-content a {
+    color: black;
+    padding: 10px 14px; 
+    text-decoration: none;
+    display: flex;
+    align-items: center; 
+}
+.dropdown-content a .dropdown-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px; 
+}
+.dropdown-content a:hover {
+    background-color: #025299;
+}
+.dropdown.open .dropdown-content {
+    display: block;
+}
 .main-content {
     width: calc(100% - 256px);
     margin-left: 256px;
@@ -164,32 +158,25 @@ body {
     padding: 24px;
     background-color: #f1f5f9;
 }
-
-/* Profile */
 .profile-container {
     max-width: 1200px;
     margin: 0 auto;
 }
-
 .profile-container h2 {
     font-size: 20px;
     margin-bottom: 24px;
     color: #333;
 }
-
-/* Profile Content */
 .profile-content {
     display: flex;
     gap: 24px;
 }
-
 .left-section {
     display: flex;
     flex-direction: column;
     gap: 16px;
     width: 300px;
 }
-
 .profile-image-box {
     margin-top: 50px;
     background-color: white;
@@ -201,13 +188,6 @@ body {
     align-items: center;
     gap: 16px;
 }
-
-.profile-image-container {
-    width: 160px;
-    height: 150px;
-    margin-top: 60px;
-}
-
 .profile-image {
     width: 100%;
     height: 100%;
@@ -216,18 +196,10 @@ body {
     overflow: hidden;
     margin: 0;
 }
-
-.avatar-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 .upload-input {
     width: 100%;
     font-size: 12px;
 }
-
 .profile-details-box {
     flex: 1;
     background-color: white;
@@ -235,7 +207,6 @@ body {
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
-
 .profile-field {
     display: flex;
     justify-content: space-between;
@@ -243,29 +214,24 @@ body {
     padding: 12px 0;
     border-bottom: 1px solid #e5e7eb;
 }
-
 .field-left {
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
-
 .field-label {
     font-size: 12px;
     color: #666;
 }
-
 .field-value {
     font-size: 14px;
     color: #333;
 }
-
 .edit-icon {
     color: #0085C5;
     cursor: pointer;
     font-size: 16px;
 }
-
 .save-button {
     padding: 12px 24px;
     background-color: #0085C5;
@@ -277,66 +243,9 @@ body {
     width: 100%;
     transition: background-color 0.2s;
 }
-
 .save-button:hover {
     background-color: #006c9e;
 }
-
-body.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-}
-
-body.dark-mode .sidebar {
-    background-color: #1e1e1e;
-}
-
-body.dark-mode .header {
-    background-color: #1e1e1e;
-    border-bottom-color: #333;
-}
-
-body.dark-mode .profile-image-box,
-body.dark-mode .profile-details-box {
-    background-color: #1e1e1e;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-body.dark-mode .profile-field {
-    border-bottom-color: #333;
-}
-
-body.dark-mode .field-label {
-    color: #888;
-}
-
-body.dark-mode .field-value {
-    color: #fff;
-}
-
-body.dark-mode .user-name {
-    color: #fff;
-}
-
-body.dark-mode .user-role {
-    color: #888;
-}
-
-body.dark-mode .menu-item {
-    color: #fff;
-}
-
-body.dark-mode .profile-container h2 {
-    color: #fff;
-}
-
-body.dark-mode .main-content,
-body.dark-mode .header,
-body.dark-mode .sidebar {
-    background-color: #121212;
-    color: #ffffff;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .sidebar {

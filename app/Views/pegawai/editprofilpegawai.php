@@ -6,7 +6,8 @@
     <title>Edit Profil</title>
     <link rel="stylesheet" href="<?= base_url('assets/css/editprofil.css'); ?>">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+
 </head>
 <body>
     <div class="sidebar">
@@ -37,20 +38,30 @@
         </ul>
     </div>
 
-    <div class="header">
-        <div class="header-content">
-            <div class="theme-toggle">
-                <img src="<?= base_url('assets/images/moon.png'); ?>" alt="Toggle Theme" id="theme-icon" onclick="toggleTheme()">  
-            </div>
-            <div class="user-info">
-                <div class="user-text">
-                    <div class="user-name"><?= $nama ?? 'N/A' ?></div>
-                    <div class="user-role"><?= $role ?? 'N/A' ?></div>
-                </div>
-                <img src="<?= base_url('assets/images/profiles/' . $profil_foto) ?>" alt="Foto Profil" class="user-avatar">
-            </div>
+    <div class="header"> 
+    <div class="header-content">
+        <div class="theme-toggle">
+            <img src="<?= base_url('assets/images/moon.png'); ?>" alt="Toggle Theme" id="theme-icon" onclick="toggleTheme()">  
         </div>
+        <div class="user-info">
+            <div class="user-text">
+                <div class="user-name"><?= $nama ?? 'N/A' ?></div>
+                <div class="user-role"><?= $role ?? 'N/A' ?></div>
+            </div>
+            <div class="dropdown">
+                <img src="<?= base_url('assets/images/profiles/' . $profil_foto) ?>" alt="Foto Profil" class="user-avatar" id="profile-img">
+                <div class="dropdown-content">
+                <a href="/profile">
+                        <img src="<?= base_url('assets/images/profil.png'); ?>" alt="Profile Icon" class="dropdown-icon"> Profil
+                    </a>
+                    <a href="/logout">
+                        <img src="<?= base_url('assets/images/logout.png'); ?>" alt="Logout Icon" class="dropdown-icon"> Logout
+                    </a>
+                </div>
+            </div>
+        </div>     
     </div>
+</div>
 
     <div class="main-content">
         <div class="profile-container">
@@ -139,7 +150,6 @@
                             </div>
                         </div>
 
-                        <!-- Password -->
                         <div class="profile-field">
                             <div class="field-left">
                                 <span class="field-label">Password</span>
@@ -160,15 +170,10 @@
                             <div class="edit-icon">
                                 <i class="fas fa-edit" onclick="toggleEdit('roleField', 'statusSpan')"></i>
                             </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
+            
     <script>
-        function toggleEdit(fieldId, spanId) {
+   // Edit nama
+     function toggleEdit(fieldId, spanId) {
             var field = document.getElementById(fieldId);
             var span = document.getElementById(spanId);
             if (field.style.display === 'none') {
@@ -180,19 +185,19 @@
             }
         }
 
-        // Function to toggle dark/light mode
-        function toggleTheme() {
-            const body = document.body;
-            const themeIcon = document.getElementById('theme-icon');
-            body.classList.toggle('dark-mode');
+   // Menangani klik pada gambar profil
+document.getElementById('profile-img').addEventListener('click', function() {
+    const dropdown = document.querySelector('.dropdown');
+    dropdown.classList.toggle('open');
+});
 
-            // Change the icon based on the theme
-            if (body.classList.contains('dark-mode')) {
-                themeIcon.src = "<?= base_url('assets/images/sun.png'); ?>"; // Light mode icon
-            } else {
-                themeIcon.src = "<?= base_url('assets/images/moon.png'); ?>"; // Dark mode icon
-            }
-        }
+window.addEventListener('click', function(event) {
+    const dropdown = document.querySelector('.dropdown');
+    if (!dropdown.contains(event.target)) {
+        dropdown.classList.remove('open');
+    }
+});
+
     </script>
 </body>
 </html>
