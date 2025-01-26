@@ -846,3 +846,32 @@ body.dark-mode .data-table th {
     object-fit: contain; 
     border-radius: 5px; 
 }
+.user-details {
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    flex-direction: row-reverse; 
+}
+
+.profile-img {
+    width: 60px;  
+    height: 60px;
+    border-radius: 50%;  
+    object-fit: cover;  
+}
+
+.user-text {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+}
+
+.user-name {
+    font-size: 1.1em; 
+    font-weight: bold; 
+}
+
+.user-role {
+    font-size: 0.9em; 
+    color: #888; 
+}

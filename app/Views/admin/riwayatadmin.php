@@ -42,7 +42,18 @@
                     <img src="<?= base_url('assets/images/sun.png') ?>" alt="Sun" class="theme-icon sun-icon">
                 </div>
                 <div class="user-info">
-                    <img src="<?= base_url('assets/images/profile.jpg') ?>" alt="Profile" class="profile-img">
+                    <!-- User details with profile image and role -->
+                    <div class="user-details">
+                        <?php
+                        // Cek apakah ada gambar profil, jika tidak, tampilkan gambar default
+                            $profilePic = $pengguna['profil_foto'] ? base_url('assets/images/profiles/' . $pengguna['profil_foto']) : base_url('assets/images/profiles/delvaut.png');
+                        ?>
+                        <img src="<?= $profilePic ?>" alt="Profile" class="profile-img">
+                        <div class="user-text">
+                            <p class="user-name"><?= esc($pengguna['nama']); ?></p>
+                            <p class="user-role"><?= esc($pengguna['role']); ?></p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
