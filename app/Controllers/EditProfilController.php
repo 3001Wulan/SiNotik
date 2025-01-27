@@ -27,7 +27,9 @@ class EditProfilController extends Controller
         $file = $this->request->getFile('profil_foto');
         $profil_foto = $user['profil_foto']; 
 
+        $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
         if ($file && $file->isValid()) {
+            log_message('info', 'File ditemukan. Nama file: ' . $file->getName());
             $profil_foto = $file->getName(); 
             $targetDir = FCPATH . 'Assets/images/profiles/';
 

@@ -50,14 +50,14 @@
                 <div class="user-info">
                     <div class="user-text">
                         <div class="user-name">
-                            <span><?php echo isset($user_profile['nama']) ? $user_profile['nama'] : 'Nama Tidak Ditemukan'; ?></span>
+                            <span><?= session()->get('nama') ? session()->get('nama') : 'Nama Tidak Ditemukan'; ?></span>
                         </div>
                         <div class="user-role">
-                            <span><?php echo isset($user_profile['role']) ? ucfirst($user_profile['role']) : 'Role Tidak Ditemukan'; ?></span>
+                            <span><?= session()->get('role') ? ucfirst(session()->get('role')) : 'Role Tidak Ditemukan'; ?></span>
                         </div>
                     </div>
                     <div>
-                        <img src="<?= base_url('assets/images/profiles/' . $user_profile['profil_foto']) ?>" alt="User Photo" class="header-profile-img" id="profile-icon">
+                        <img src="<?= base_url('assets/images/profiles/' . (file_exists('assets/images/profiles/' . session()->get('profil_foto')) ? session()->get('profil_foto') : 'delvaut.png')) ?>" alt="User Photo" class="header-profile-img" id="profile-icon">
                     </div>
                     <!-- Dropdown Menu -->
                     <div class="dropdown-menu" id="dropdownMenu">
@@ -83,7 +83,8 @@
                 <div class="profile-card">
                     <div class="avatar-container">
                     <!-- Menampilkan Foto Profil yang Ada -->
-                    <img src="<?= base_url('assets/images/profiles/' . $user_profile['profil_foto']) ?>" alt="User Photo" class="header-profile-img" id="profile-icon">
+                        <img src="<?= base_url('assets/images/profiles/' . (!empty($user_profile['profil_foto']) ? $user_profile['profil_foto'] : 'delvaut.png')) ?>" alt="User Photo" class="header-profile-img" id="profile-icon">
+
                     </div>
                 </div>
 

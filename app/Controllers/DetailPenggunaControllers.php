@@ -18,7 +18,6 @@ class DetailPenggunaControllers extends BaseController
     public function index($user_id = null)
     {
         if ($user_id === null) {
-            // Mengambil user_id dari session
             $user_id = $this->session->get('user_id');
             if (!$user_id) {
                 log_message('error', 'User not logged in or session expired.');
@@ -28,50 +27,38 @@ class DetailPenggunaControllers extends BaseController
 
         log_message('info', 'Attempting to retrieve user profile for user with ID: ' . $user_id);
 
-        // Mencari data pengguna berdasarkan user_id
         $user_profile = $this->userModel->find($user_id);
-
-        // Mengecek apakah pengguna ditemukan
         if ($user_profile) {
             log_message('info', 'User profile for ID ' . $user_id . ' retrieved successfully.');
 
             // Menambahkan log untuk memeriksa data yang akan dikirim ke view
             log_message('info', 'User profile data: ' . print_r($user_profile, true));
 
-            // Menghapus suffix '__' dari nama file profil foto jika ada
             $profil_foto = str_replace('__', '', $user_profile['profil_foto']);
 
-            // Menambahkan data yang sudah diperbaiki ke array $data
             $data['user_profile'] = $user_profile;
-            $data['user_profile']['profil_foto'] = $profil_foto;  // Menggantikan nama file yang ada dengan nama yang telah dibersihkan
+            $data['user_profile']['profil_foto'] = $profil_foto;  
             
-            // Mengirim data pengguna ke view
             return view('admin/detailpengguna', $data);
         } else {
             log_message('error', 'User profile with ID ' . $user_id . ' not found.');
-            // Jika pengguna tidak ditemukan, menampilkan halaman error
             throw new \CodeIgniter\Exceptions\PageNotFoundException("Pengguna dengan ID $user_id tidak ditemukan.");
         }
     }
 
-    // Method untuk menghapus data pengguna
     public function hapusData()
     {
         log_message('info', 'Attempting to delete user data.');
 
-        // Mengambil data request JSON
         $request = \Config\Services::request();
         $data = $request->getJSON(); 
 
-        // Mengecek apakah user_id ada di data request
         if (isset($data->user_id)) {
             $user_id = $data->user_id;
             log_message('info', 'Attempting to delete user with ID: ' . $user_id);
 
-            // Menghapus data pengguna berdasarkan user_id
             $result = $this->userModel->delete($user_id);
 
-            // Mengirimkan respon JSON apakah penghapusan berhasil atau gagal
             if ($result) {
                 log_message('info', 'User with ID ' . $user_id . ' successfully deleted.');
                 return $this->response->setJSON(['success' => true]);
@@ -80,8 +67,6 @@ class DetailPenggunaControllers extends BaseController
                 return $this->response->setJSON(['success' => false]);
             }
         }
-
-        // Jika tidak ada user_id pada request, mengirimkan respon gagal
         log_message('error', 'No user_id provided in the delete request.');
         return $this->response->setJSON(['success' => false]);
     }

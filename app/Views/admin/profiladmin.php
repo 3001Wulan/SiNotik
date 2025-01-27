@@ -161,17 +161,14 @@
     </div>
 
     <script>
-    // JavaScript untuk Dropdown Menu
     const profileIcon = document.getElementById('profile-icon');
     const dropdownMenu = document.getElementById('dropdownMenu');
 
-    // Toggle dropdown menu saat foto profil diklik
     profileIcon.addEventListener('click', (event) => {
-        event.stopPropagation(); // Mencegah event bubbling
+        event.stopPropagation(); 
         dropdownMenu.classList.toggle('show');
     });
 
-    // Menyembunyikan dropdown menu jika klik di luar area dropdown
     window.addEventListener('click', () => {
         dropdownMenu.classList.remove('show');
     });
@@ -195,17 +192,30 @@
 
     // Menyembunyikan popup ketika tombol "Tidak" diklik
     cancelLogout.addEventListener('click', () => {
-        popupOverlay.style.display = 'none'; // Menyembunyikan popup overlay
+        popupOverlay.style.display = 'none'; 
     });
 
-        // Menangani pengaturan tema gelap
-        const toggleDarkMode = document.getElementById('toggleDarkMode');
-            toggleDarkMode.addEventListener('click', () => {
-                document.body.classList.toggle('dark-mode');
-                toggleDarkMode.src = document.body.classList.contains('dark-mode') ? 
-                    '<?php echo base_url('assets/images/sun.png'); ?>' : 
-                    '<?php echo base_url('assets/images/moon.png'); ?>';
-            });
+    toggleDarkMode.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const darkModeEnabled = document.body.classList.contains('dark-mode');
+    localStorage.setItem('darkMode', darkModeEnabled);
+
+    toggleDarkMode.src = darkModeEnabled ? 
+        '<?php echo base_url('assets/images/sun.png'); ?>' : 
+        '<?php echo base_url('assets/images/moon.png'); ?>';
+});
+            window.addEventListener('DOMContentLoaded', () => {
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+
+    if (isDarkMode) {
+        document.body.classList.add('dark-mode');
+        toggleDarkMode.src = '<?php echo base_url('assets/images/sun.png'); ?>';
+    } else {
+        toggleDarkMode.src = '<?php echo base_url('assets/images/moon.png'); ?>';
+    }
+});
+
     </script>
 </body>
 </html>

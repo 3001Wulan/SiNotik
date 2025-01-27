@@ -50,7 +50,7 @@
             </div>
             <div class="profile-container">
                 <div class="profile" id="profileButton">
-                    <img src="<?= base_url('assets/images/profiles/' . $profile_picture) ?>" alt="Profile Picture" class="profile-img">
+                    <img src="<?= base_url('assets/images/profiles/' . (file_exists('assets/images/profiles/' . $profile_picture) ? $profile_picture : 'delvaut.png')) ?>" alt="Profile Picture" class="profile-img">
                 </div>
                 <div class="profile-info">
                     <span class="profile-name"><?= $user_name ?></span>

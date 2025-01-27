@@ -36,7 +36,6 @@
             </ul>
         </div>
 
-        <!-- Content Area -->
         <div class="content">
             <div class="top-bar">
                 <!-- Dark Mode Button -->
@@ -67,13 +66,13 @@
                 </div>
             </div>
 
-            <!-- Page Tittle -->
             <div class="page-title">
                 <h1>Edit Profil</h1>
             </div>
 
             <div class="profile-container">
                 <div class="profile-image-box">
+                    <form id="editProfileForm" action="" method="POST" enctype="multipart/form-data">
                     <div class="profile-image-container">
                         <div class="profile-image">
                             <img src="<?= base_url('assets/images/profiles/' . $profil_foto) ?>" alt="Foto Profil" id="profileImage">
@@ -86,7 +85,6 @@
                 </div>
                 
                 <div class="profile-details-box">
-                    <form id="editProfileForm" action="" method="POST" enctype="multipart/form-data">
                         <div class="profile-field">
                             <div class="field-left">
                                 <span class="field-label">Nama</span>
@@ -156,11 +154,11 @@
                         <div class="profile-field">
                             <div class="field-left">
                                 <span class="field-label">Password</span>
-                                <span class="field-value" id="passwordSpan"><?= $password ?? 'N/A' ?></span>
+                                <span class="field-value" id="passwordSpan"><?= !empty($password) ? str_repeat('*', strlen($password)) : '*****' ?></span>
                                 <input type="password" name="password" value="<?= $password ?? 'N/A' ?>" class="field-value-input" id="passwordField" style="display:none;">
                             </div>
                             <div class="edit-icon">
-                                <i class="fas fa-edit" onclick="toggleEdit('passwordField', 'passwordSpan')"></i>
+                                <i class="fas fa-edit" onclick="redirectToEditPage()"></i>
                             </div>
                         </div>
 
@@ -207,7 +205,6 @@
             }
         }
 
-    //Perubahan Foto Profil
     document.getElementById('upload').addEventListener('change', function (e) {
         const file = e.target.files[0];
         if (file) {
@@ -220,33 +217,27 @@
         }
     });
 
-    // Toggle Dark Mode
-    const toggleDarkModeButton = document.getElementById('toggleDarkMode');
-        const body = document.body;
+    toggleDarkMode.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const darkModeEnabled = document.body.classList.contains('dark-mode');
+    localStorage.setItem('darkMode', darkModeEnabled);
 
-        toggleDarkModeButton.addEventListener('click', function () {
-            body.classList.toggle('dark-mode');
-            toggleDarkModeButton.src = body.classList.contains('dark-mode')
-                ? '<?php echo base_url("assets/images/sun.png"); ?>'
-                : '<?php echo base_url("assets/images/moon.png"); ?>';
-        });
+    toggleDarkMode.src = darkModeEnabled ? 
+        '<?php echo base_url('assets/images/sun.png'); ?>' : 
+        '<?php echo base_url('assets/images/moon.png'); ?>';
+});
 
-        // JavaScript untuk Dropdown Menu
         const profileIcon = document.getElementById('profile-img');
         const dropdownMenu = document.getElementById('dropdownMenu');
 
-        // Toggle dropdown menu saat foto profil diklik
         profileIcon.addEventListener('click', (event) => {
-            event.stopPropagation(); // Mencegah event bubbling
+            event.stopPropagation(); 
             dropdownMenu.classList.toggle('show');
         });
-
-        // Menyembunyikan dropdown menu jika klik di luar area dropdown
         window.addEventListener('click', () => {
             dropdownMenu.classList.remove('show');
         });
 
-        // Popup Logout
         const logoutLink = document.getElementById('logoutLink');
         const popupOverlay = document.getElementById('popupOverlay');
         const confirmLogout = document.getElementById('confirmLogout');
@@ -264,6 +255,21 @@
         confirmLogout.addEventListener('click', () => {
             window.location.href = '<?= base_url('/') ?>';
         });
+
+        function redirectToEditPage() {
+        window.location.href = 'ubahpassword';  
+        }
+        window.addEventListener('DOMContentLoaded', () => {
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+    if (isDarkMode) {
+        document.body.classList.add('dark-mode');
+        toggleDarkMode.src = '<?php echo base_url('assets/images/sun.png'); ?>';
+    } else {
+        toggleDarkMode.src = '<?php echo base_url('assets/images/moon.png'); ?>';
+    }
+});
+
     </script>
 </body>
 </html>

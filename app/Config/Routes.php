@@ -43,6 +43,7 @@ $routes->delete('RiwayatAdminController/delete/(:segment)', 'RiwayatAdminControl
 $routes->get('/pegawai/melihatpegawai', 'MelihatNotulenpegawaiController::lihat');
 $routes->get('notulensi/feedbacknotulen/(:num)', 'FeedbackNotulenController::feedbacknotulen/$1');
 $routes->get('pegawai/riwayatpegawai', 'RiwayatPegawaiController::index');
+$routes->get('admin/ubahpassword', 'UbahPasswordController::ubah');
 
 
 

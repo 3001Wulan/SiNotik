@@ -33,7 +33,6 @@
             </div>
         </div>
 
-        <!-- Main Content -->
         <div class="main-content">
             <div class="header">
                 <div class="theme-toggle">
@@ -41,41 +40,49 @@
                     <img src="<?= base_url('assets/images/sun.png') ?>" alt="Sun" class="theme-icon sun-icon">
                 </div>
                 <div class="user-info">
-                    <img src="<?= base_url('assets/images/profile.jpg') ?>" alt="Profile" class="profile-img">
+                    <!-- User details with profile image and role -->
+                    <div class="user-details">
+                        <?php
+                        // Cek apakah ada gambar profil, jika tidak, tampilkan gambar default
+                            $profilePic = $pengguna['profil_foto'] ? base_url('assets/images/profiles/' . $pengguna['profil_foto']) : base_url('assets/images/profiles/delvaut.png');
+                        ?>
+                        <img src="<?= $profilePic ?>" alt="Profile" class="profile-img">
+                        <div class="user-text">
+                            <p class="user-name"><?= esc($pengguna['nama']); ?></p>
+                            <p class="user-role"><?= esc($pengguna['role']); ?></p>
+                        </div>
+                    </div>
                 </div>
             </div>
-           
+
             <div class="content">
                 <h2>Riwayat Notulensi</h2>
 
                 <div class="filters">
-                    <!-- Date Range -->
                     <div class="date-range">
                         <div class="iinput-container">
                             <input type="text" class="datepicker1" placeholder="Tanggal Awal">
                             <div class="iicon-container">
-                                <img src="<?= base_url('assets/images/calender.png') ?>" alt="tanggal awal">
+                                <img src="<?= base_url('assets/images/calender.png') ?>" alt="Tanggal Awal">
                             </div>
                         </div>
                         <div class="iinput-container">
                             <input type="text" class="datepicker" placeholder="Tanggal Akhir">
                             <div class="iicon-container">
-                                <img src="<?= base_url('assets/images/calender.png') ?>" alt="Dashboard Icon">
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Category -->
-                    <div class="category-select-container">
-                        <div class="iinput-container">
-                            <input type="text" class="category-select" placeholder="Kategori" readonly>
-                            <div class="iicon-container">
-                                <img src="<?= base_url('assets/images/down.png') ?>" alt="Dashboard Icon">
+                                <img src="<?= base_url('assets/images/calender.png') ?>" alt="Tanggal Akhir">
                             </div>
                         </div>
                     </div>
 
-                    <!-- Show Entries -->
+                    <div class="category-select-container">
+                        <div class="iinput-container">
+                            <input type="text" class="category-select" placeholder="Kategori" readonly>
+                            <div class="iicon-container">
+                                <img src="<?= base_url('assets/images/down.png') ?>" alt="Kategori Icon">
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="entries-select">
                         <label for="entries">Show</label>
                         <select id="entries">
@@ -89,76 +96,87 @@
                         </select>
                         <span>entries</span>
                     </div>
-                    
-                    <!-- Filter Button -->
-                    <div class="button-container filter-container">
-                        <button class="filter-btn">
-                            Filter
-                            <div class="icon-containerr">
-                                <img src="<?= base_url('assets/images/cari.png') ?>" alt="Dashboard Icon">
-                            </div>
-                        </button>
-                    </div>
-                    
-                    <!-- PDF Button -->
-                    <div class="button-container pdf-container">
-                        <button class="pdf-btn">
-                            Cetak PDF
-                            <div class="icon-container">
-                                <img src="<?= base_url('assets/images/pdf.png') ?>" alt="Dashboard Icon">
-                            </div>
-                        </button>
-                    </div>
-                    
-                    <!-- Search -->
-                    <div class="search">
-                        <div class="iinput-container">
-                            <input type="text" placeholder="Search here..." class="search-input">
-                            <div class="iicon-container">
-                                <img src="<?= base_url('assets/images/cari.png') ?>" alt="Dashboard Icon">
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>Tanggal</th>
-                            <th>Bidang</th>
-                            <th>Judul</th>
-                            <th>Notulen</th>
-                            <th>Isi</th>
-                            <th>Dokumentasi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Table content will be dynamically populated -->
-                    </tbody>
-                </table>
-            </div>
+                    <div class="button-container filter-container">
+    <button class="filter-btn">
+        Filter
+        <div class="icon-containerr">
+            <img src="<?= base_url('assets/images/cari.png') ?>" alt="Filter Icon">
+        </div>
+    </button>
+</div>
+
+<div class="button-container pdf-container">
+    <button class="pdf-btn">
+        Cetak PDF
+        <div class="icon-container">
+            <img src="<?= base_url('assets/images/pdf.png') ?>" alt="PDF Icon">
+        </div>
+    </button>
+</div>
+
+<div class="search">
+    <div class="iinput-container">
+        <input type="text" placeholder="Search here..." class="search-input">
+        <div class="iicon-container">
+            <img src="<?= base_url('assets/images/cari.png') ?>" alt="Search Icon">
         </div>
     </div>
+</div>
+</div>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Sample data for demonstration
-            let notulensData = [
-                { no: 1, tanggal: '2024-12-06', bidang: 'IKP', judul: 'Rapat xyz', notulen: 'Heni Yunida', isi: 'xxxxx', dokumentasi: '/api/placeholder/50/50' },
-                { no: 2, tanggal: '2024-12-12', bidang: 'APTIKA', judul: 'Rapat xyz', notulen: 'Wulandari', isi: 'xxxxx', dokumentasi: '/api/placeholder/50/50' },
-                { no: 3, tanggal: '2024-12-21', bidang: 'Statistik & Persandian', judul: 'Rapat xyz', notulen: 'Cindy Arwinda', isi: 'xxxxx', dokumentasi: '/api/placeholder/50/50' },
-                { no: 4, tanggal: '2024-12-27', bidang: 'Statistik & Persandian', judul: 'Rapat xyz', notulen: 'Intan Salma', isi: 'xxxxx', dokumentasi: '/api/placeholder/50/50' },
-                { no: 5, tanggal: '2025-01-06', bidang: 'APTIKA', judul: 'Rapat xyz', notulen: 'Sistri Mahira', isi: 'xxxxx', dokumentasi: '/api/placeholder/50/50' }
-            ];
+<table class="data-table">
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Tanggal</th>
+            <th>Bidang</th>
+            <th>Agenda</th>
+            <th>Notulen</th>
+            <th>Partisipan</th>
+            <th>Hasil Pembahasan </th>
+            <th>Dokumentasi</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
 
-            let currentEntries = 5; // Default entries value
-            let filteredData = [...notulensData];
-            
-            // Theme toggle functionality
-            const themeToggle = document.querySelector('.theme-toggle');
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        let notulenData = <?= json_encode($notulensi); ?>;
+        let currentEntries = 5;
+        let filteredData = [...notulenData];
+
+        function updateTable() {
+            const tbody = document.querySelector('.data-table tbody');
+            tbody.innerHTML = '';
+            filteredData.slice(0, currentEntries).forEach((data, index) => {
+                let row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${index + 1}</td>
+                    <td>${data.tanggal_dibuat}</td>
+                    <td>${data.Bidang}</td>
+                    <td>${data.judul}</td>
+                    <td>${data.user_name}</td>
+                    <td>${data.partisipan}</td> 
+                    <td>${data.isi}</td>
+                    <td>
+                        <div style="width: 150px; height: 150px; overflow: hidden; border: 1px solid #ccc;">
+                            <img src="<?= base_url('uploads/') ?>${data.foto_dokumentasi}" alt="Dokumentasi" class="doc-img">
+                        </div>
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        updateTable();
+
+        const themeToggle = document.querySelector('.theme-toggle');
             const body = document.body;
             
             themeToggle.addEventListener('click', function() {
@@ -166,193 +184,207 @@
                 body.classList.toggle('dark-mode');
             });
 
-            // Date picker initialization
-            const initDatePicker = (selector, iconContainer) => {
-                const picker = flatpickr(selector, {
-                    dateFormat: "Y-m-d",
-                    locale: "id",
-                    allowInput: true,
-                    clickOpens: false
-                });
+        const initDatePicker = (selector, iconContainer) => {
+            const picker = flatpickr(selector, {
+                dateFormat: "Y-m-d",
+                locale: "id",
+                allowInput: true,
+                clickOpens: false
+            });
 
-                iconContainer.addEventListener('click', () => {
-                    picker.open();
-                });
+            iconContainer.addEventListener('click', () => {
+                picker.open();
+            });
+        };
+
+        const startDateIcon = document.querySelector('.datepicker1').nextElementSibling;
+        const endDateIcon = document.querySelector('.datepicker').nextElementSibling;
+        initDatePicker(".datepicker1", startDateIcon);
+        initDatePicker(".datepicker", endDateIcon);
+
+        const categorySelect = document.querySelector('.category-select');
+        const categoryIcon = categorySelect.nextElementSibling;
+        const categories = ['APTIKA', 'IKP', 'Statistik & Persandian'];
+        let categoryPopup = document.createElement('div');
+        categoryPopup.className = 'category-popup';
+
+        categories.forEach(category => {
+            const option = document.createElement('div');
+            option.className = 'category-option';
+            option.textContent = category;
+            option.onclick = function () {
+                categorySelect.value = category;
+                categoryPopup.style.display = 'none';
             };
+            categoryPopup.appendChild(option);
+        });
 
-            // Initialize date pickers
-            const startDateIcon = document.querySelector('.datepicker1').nextElementSibling;
-            const endDateIcon = document.querySelector('.datepicker').nextElementSibling;
-            initDatePicker(".datepicker1", startDateIcon);
-            initDatePicker(".datepicker", endDateIcon);
+        document.body.appendChild(categoryPopup);
 
-            // Category functionality
-            const categorySelect = document.querySelector('.category-select');
-            const categoryIcon = categorySelect.nextElementSibling;
-            const categories = ['APTIKA', 'IKP', 'Statistik & Persandian'];
-            let categoryPopup = document.createElement('div');
-            categoryPopup.className = 'category-popup';
-            
-            categories.forEach(category => {
-                const option = document.createElement('div');
-                option.className = 'category-option';
-                option.textContent = category;
-                option.onclick = function() {
-                    categorySelect.value = category;
-                    categoryPopup.style.display = 'none';
-                };
-                categoryPopup.appendChild(option);
-            });
-            
-            document.body.appendChild(categoryPopup);
-            
-            categoryIcon.addEventListener('click', function(e) {
-                const rect = categorySelect.getBoundingClientRect();
-                categoryPopup.style.top = `${rect.bottom + window.scrollY}px`;
-                categoryPopup.style.left = `${rect.left + window.scrollX}px`;
-                categoryPopup.style.minWidth = `${rect.width}px`;
-                categoryPopup.style.display = categoryPopup.style.display === 'block' ? 'none' : 'block';
-                e.stopPropagation();
-            });
+        categoryIcon.addEventListener('click', function (e) {
+            const rect = categorySelect.getBoundingClientRect();
+            categoryPopup.style.top = `${rect.bottom + window.scrollY}px`;
+            categoryPopup.style.left = `${rect.left + window.scrollX}px`;
+            categoryPopup.style.minWidth = `${rect.width}px`;
+            categoryPopup.style.display = categoryPopup.style.display === 'block' ? 'none' : 'block';
+            e.stopPropagation();
+        });
 
-            // Search functionality
-            const searchInput = document.querySelector('.search-input');
-            const searchIcon = document.querySelector('.search .iicon-container');
+        
+        const searchInput = document.querySelector('.search-input');
+        const searchIcon = document.querySelector('.search .iicon-container');
 
-            searchIcon.addEventListener('click', function() {
+        searchIcon.addEventListener('click', function () {
+            filterAndDisplayData();
+        });
+
+        searchInput.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
                 filterAndDisplayData();
+            }
+        });
+
+        const filterBtn = document.querySelector('.filter-btn');
+        filterBtn.addEventListener('click', function () {
+            const entriesSelect = document.getElementById('entries');
+            currentEntries = parseInt(entriesSelect.value);
+            filterAndDisplayData();
+        });
+
+        function filterAndDisplayData() {
+            const startDate = document.querySelector('.datepicker1').value;
+            const endDate = document.querySelector('.datepicker').value;
+            const category = categorySelect.value.toLowerCase();
+            const searchTerm = searchInput.value.toLowerCase().trim();
+
+            filteredData = notulenData.filter(item => {
+                const dateMatch = (!startDate || item.tanggal_dibuat >= startDate) &&
+                    (!endDate || item.tanggal_dibuat <= endDate);
+
+                const searchMatch = !searchTerm ||
+                    Object.values(item).some(val => {
+                        const strVal = String(val).toLowerCase();
+                        return strVal.includes(searchTerm);
+                    });
+
+                const categoryMatch = !category ||
+                    item.Bidang.toLowerCase().includes(category);
+
+                return dateMatch && searchMatch && categoryMatch;
             });
 
-            searchInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    filterAndDisplayData();
+            updateTable();
+        }
+
+        const { jsPDF } = window.jspdf;
+
+        const pdfBtn = document.querySelector('.pdf-btn');
+        pdfBtn.addEventListener('click', function () {
+            const doc = new jsPDF();
+            const table = document.querySelector('.data-table');
+            const rows = table.querySelectorAll('tr');
+
+            const headers = ['No', 'Tanggal', 'Bidang', 'Judul', 'Notulen', 'Partisipan','Isi', 'Dokumentasi'];
+            const tableData = [];
+            const imagePromises = [];
+
+            rows.forEach((row, rowIndex) => {
+                const cells = row.querySelectorAll('th, td');
+                const rowData = Array.from(cells).map(cell => cell.textContent.trim());
+                if (rowIndex > 0) { 
+                    rowData.pop(); 
+                    tableData.push(rowData);
+
+                    const imgCell = row.cells[6]; 
+                    const img = imgCell.querySelector('img');
+                    if (img) {
+                        console.log(`Image found in row ${rowIndex}, processing...`);
+
+                        imagePromises.push(
+                            getImageBase64(img)
+                                .then(base64Img => {
+                                    tableData[rowIndex - 1].push(base64Img); 
+                                })
+                                .catch(err => {
+                                    console.error(`Error processing image in row ${rowIndex}:`, err);
+                                    tableData[rowIndex - 1].push(''); 
+                                })
+                        );
+                    } else {
+                        console.log(`No image found in row ${rowIndex}`);
+                        tableData[rowIndex - 1].push(''); 
+                    }
                 }
             });
 
-            // Filter button functionality
-            const filterBtn = document.querySelector('.filter-btn');
-            filterBtn.addEventListener('click', function() {
-                const entriesSelect = document.getElementById('entries');
-                currentEntries = parseInt(entriesSelect.value);
-                filterAndDisplayData();
-            });
+            Promise.all(imagePromises).then(() => {
+                console.log("All images processed, generating PDF...");
 
-            // PDF export functionality
-            const pdfBtn = document.querySelector('.pdf-btn');
-            pdfBtn.addEventListener('click', function() {
-                generatePDF();
-            });
+                doc.autoTable({
+                    head: [headers],
+                    body: tableData,
+                    startY: 20,
+                    margin: { top: 10, bottom: 10, left: 10, right: 10 },
+                    theme: 'grid',
+                    didDrawPage: function () {
+                        doc.text('Riwayat Notulensi', 12, 15);
+                    },
+                    styles: {
+                        overflow: 'linebreak',
+                        fontSize: 10,
+                        cellPadding: 5,
+                    },
+                    didDrawCell: function (data) {
+                        console.log(`Processing row ${data.row.index}, column ${data.column.index}`);
+                        if (data.column.index === 8 && data.row.index > 0) {
+                            const imageBase64 = tableData[data.row.index][data.column.index + 1];
+                            console.log(`Processing image for row ${data.row.index}:`, imageBase64);
+                            if (imageBase64) {
+                                const imgWidth = 25;
+                                const imgHeight = 15;
+                                const imgX = data.cell.x + data.cell.width / 2 - imgWidth / 2;
+                                const imgY = data.cell.y + (data.cell.height - imgHeight) / 2;
+                                console.log(`Menambahkan gambar ke PDF di posisi (${imgX}, ${imgY})`);
+                                doc.addImage(imageBase64, 'PNG', data.cell.x + 1, data.cell.y + 1, imgWidth, imgHeight);
 
-            // Function to filter and display data
-            function filterAndDisplayData() {
-                const startDate = document.querySelector('.datepicker1').value;
-                const endDate = document.querySelector('.datepicker').value;
-                const category = categorySelect.value.toLowerCase();
-                const searchTerm = searchInput.value.toLowerCase().trim();
+                            }else{
+                                console.log(`Tidak ada gambar untuk baris ${data.row.index}`);
 
-                filteredData = notulensData.filter(item => {
-                    const dateMatch = (!startDate || item.tanggal >= startDate) && 
-                                    (!endDate || item.tanggal <= endDate);
-                    
-                    // Enhanced search functionality
-                    const searchMatch = !searchTerm || 
-                        Object.values(item).some(val => {
-                            const strVal = String(val).toLowerCase();
-                            return strVal.includes(searchTerm);
-                        });
-                    
-                    const categoryMatch = !category || 
-                        item.bidang.toLowerCase().includes(category);
-
-                    return dateMatch && searchMatch && categoryMatch;
-                });
-
-                updateTable();
-            }
-
-            // Function to update table
-            function updateTable() {
-                const tbody = document.querySelector('.data-table tbody');
-                tbody.innerHTML = '';
-
-                if (filteredData.length === 0) {
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td colspan="7" style="text-align: center;">Tidak ada data yang ditampilkan</td>
-                    `;
-                    tbody.appendChild(row);
-                    return;
-                }
-
-                filteredData.slice(0, currentEntries).forEach(item => {
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td>${item.no}</td>
-                        <td>${formatDate(item.tanggal)}</td>
-                        <td>${item.bidang}</td>
-                        <td>${item.judul}</td>
-                        <td>${item.notulen}</td>
-                        <td>${item.isi}</td>
-                        <td><img src="${item.dokumentasi}" alt="dokumentasi" class="doc-image"></td>
-                    `;
-                    tbody.appendChild(row);
-                });
-            }
-
-            // Function to format date
-            function formatDate(dateStr) {
-                const date = new Date(dateStr);
-                return date.toLocaleDateString('id-ID', {
-                    day: '2-digit',
-                    month: '2-digit',
-                    year: 'numeric'
-                });
-            }
-
-            // Function to generate PDF
-            function generatePDF() {
-                const docDefinition = {
-                    content: [
-                        { text: 'Riwayat Notulensi', style: 'header' },
-                        {
-                            table: {
-                                headerRows: 1,
-                                body: [
-                                    ['No', 'Tanggal', 'Judul', 'Notulen', 'Isi'],
-                                    ...filteredData.map(item => [
-                                        item.no,
-                                        formatDate(item.tanggal),
-                                        item.judul,
-                                        item.notulen,
-                                        item.isi
-                                    ])
-                                ]
                             }
                         }
-                    ],
-                    styles: {
-                        header: {
-                            fontSize: 18,
-                            bold: true,
-                            margin: [0, 0, 0, 10]
-                        }
-                    }
+                    },
+                });
+
+                doc.save('data-notulen.pdf');
+            }).catch(error => {
+                console.error('Error processing images before generating PDF:', error);
+            });
+        });
+
+        const getImageBase64 = (img) => {
+            return new Promise((resolve, reject) => {
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                const image = new Image();
+                image.crossOrigin = 'anonymous'; 
+                image.src = img.src;
+
+                image.onload = () => {
+                    canvas.width = image.width;
+                    canvas.height = image.height;
+                    ctx.drawImage(image, 0, 0);
+                    const dataUrl = canvas.toDataURL('image/png');
+                    console.log('Image converted to base64 successfully.');
+                    resolve(dataUrl);
                 };
 
-                console.log('Generating PDF with data:', docDefinition);
-                alert('PDF generation triggered. Implementation needed with actual PDF library.');
-            }
-
-            // Close category popup when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!categoryPopup.contains(e.target)) {
-                    categoryPopup.style.display = 'none';
-                }
+                image.onerror = (err) => {
+                    console.error("Error loading image:", err);
+                    reject(err);
+                };
             });
-
-            // Initial table display with default 5 entries
-            updateTable();
-        });
-    </script>
+        };
+    });
+</script>
 </body>
 </html>

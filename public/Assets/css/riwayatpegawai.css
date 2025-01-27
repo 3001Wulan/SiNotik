@@ -8,12 +8,12 @@
 }
 
 [class~="dark-mode"] {
-    --primary-color: #00a3cc;
-    --sidebar-bg: #333333;
+    --primary-color: #555555;
+    --sidebar-bg: #444444;
     --main-bg: #1a1a1a;
     --text-color: #ffffff;
-    --hover-color: #00b8e6;
-    --border-color: #333333;
+    --hover-color: #555555;
+    --border-color: #444444;
 }
 
 * {
@@ -124,7 +124,7 @@ body {
 
 /* Dark Mode Hover Styles */
 .dark-mode .menu-item:hover {
-    background-color: #0288D1;
+    background-color: #555555;
 }
 
 .dark-mode .menu-item:hover span {
@@ -182,6 +182,8 @@ body.dark-mode .header {
     transition: opacity 0.3s ease;
 }
 
+
+
 /* Show/hide icons based on theme */
 .moon-icon {
     opacity: 1;
@@ -204,15 +206,6 @@ body.dark-mode .header {
 .content {
     padding: 20px;
     background-color: var(--sidebar-bg);
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 60px;
-    position: relative;
-}
-
-.dark-mode .content {
-    padding: 20px;
-    background-color: #333;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-top: 60px;
@@ -366,7 +359,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
+    background-color:black;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
 }
@@ -436,6 +429,7 @@ h2 {
     color: white;
     font-size: 14px;
 }
+
 /* Buttons */
 .filter-btn{
     width: 130px;
@@ -624,7 +618,7 @@ body.dark-mode .menu-item img {
 }
 
 body.dark-mode .menu-item:hover {
-    background-color: #0288D1;
+    background-color: #555555;
     color: black;
 }
 
@@ -654,10 +648,17 @@ body.dark-mode .iinput-container input {
     color: white;
 }
 
-
 body.dark-mode .data-table th {
     background-color: #2d2d2d;
     color: white;
+}
+
+.dark-mode .delete-btn img {
+    filter: brightness(0) invert(1); /* Ubah warna ikon menjadi putih */
+}
+
+.dark-mode .delete-btn img:hover {
+    filter: brightness(0); /* Kembali ke hitam saat hover */
 }
 
 /* Responsive Design */
@@ -727,6 +728,12 @@ body.dark-mode .data-table th {
     object-fit: contain;
 }
 
+.modal-icon{
+    width: 120px;
+    height: 120px;
+    display: block;
+    margin: 0 auto 10px;
+}
 .close {
     position: absolute;
     top: 15px;
@@ -735,4 +742,136 @@ body.dark-mode .data-table th {
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
+}
+
+.delete-btn {
+    background: none; 
+    border: none;    
+    padding: 0;      
+    cursor: pointer;  
+  }
+
+  .delete-btn img {
+    width: 24px; 
+    height: 24px;
+  }
+
+.delete-btn img:hover {
+    filter: brightness(0) invert(1);
+}
+
+.data-table td:last-child {
+    text-align: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    width: 100%;
+}
+
+.dark-mode .modal-content {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    width: 100%;
+}
+
+.modal-icon {
+    color: #0099ff;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.modal-title {
+    margin: 0 0 25px 0;
+    color: #333;
+    font-size: 20px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.modal-btn {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.confirm-btn {
+    background-color: #025299;
+    color: white;
+}
+
+.dark-mode .confirm-btn {
+    background-color: #666666;
+    color: white;
+}
+
+.confirm-btn:hover {
+    background-color: #0085C5;
+}
+
+.cancel-btn {
+    background-color: #025299;
+    color: #ffffff;
+}
+
+.dark-mode .cancel-btn {
+    background-color: #666666;
+    color: #ffffff;
+}
+
+.cancel-btn:hover {
+    background-color: #e53935;
+}
+.doc-img {
+    max-width: 100%; 
+    max-height: 100%; 
+    width: auto; 
+    height: auto; 
+    object-fit: contain; 
+    border-radius: 5px; 
+}
+.user-details {
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    flex-direction: row-reverse; 
+}
+
+.profile-img {
+    width: 60px;  
+    height: 60px;
+    border-radius: 50%;  
+    object-fit: cover;  
+}
+
+.user-text {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+}
+
+.user-name {
+    font-size: 1.1em; 
+    font-weight: bold; 
+}
+
+.user-role {
+    font-size: 0.9em; 
+    color: #888; 
 }
