@@ -6,6 +6,7 @@
     <title>Buat Notulen</title>
     <link rel="stylesheet" href="<?= base_url('assets/css/buatnotulen.css') ?>">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <script src="https://cdn.tiny.cloud/1/kzhu1y29ebiqcpgqhegcnqpvqwp8c1wgqwxr311nobkkj4e2/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 </head>
 <body>
     <div class="container">
@@ -54,8 +55,8 @@
                     <div class="profile-picture">
                         <img src="<?= base_url('assets/images/profiles/' . ($profil_foto ? $profil_foto : 'delvaut.png')) ?>" alt="Profile Picture" id="profile-pic">
                         <div class="profile-info">
-                            <p class="profile-name"><?= $nama ?></p> <!-- Nama Pengguna -->
-                            <p class="profile-role"><?= $role ?></p> <!-- Role Pengguna -->
+                            <p class="profile-name"><?= $nama ?></p> 
+                            <p class="profile-role"><?= $role ?></p> 
                     </div>
                         <div class="dropdown-menu" id="profile-dropdown">
                             <div class="dropdown-item">
@@ -139,6 +140,37 @@
                     localStorage.setItem('theme', 'light');
                 }
             });
+            tinymce.init({
+    selector: '#pembahasan',
+    plugins: 'lists link image table code',
+    toolbar: 'undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist | link image table | code',
+    height: 300,
+    images_upload_url: '/upload-image',  // URL server yang menerima file gambar
+    automatic_uploads: true,  // Aktifkan pengunggahan otomatis
+    images_upload_base_path: '/upload/', // Base path untuk gambar yang di-upload
+    file_picker_types: 'image', // Menampilkan hanya opsi gambar saat memilih file
+    file_picker_callback: function (callback, value, meta) {
+        // Fungsi ini digunakan untuk memilih gambar dari perangkat
+        var input = document.createElement('input');
+        input.type = 'file';
+        input.accept = 'image/*';
+        input.onchange = function () {
+            var file = input.files[0];
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                // Kirim gambar ke TinyMCE
+                callback(e.target.result, { alt: file.name });
+            };
+            reader.readAsDataURL(file);
+        };
+        input.click();
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Tema dan Dropdown Logic
+});
+
 
             const profilePic = document.getElementById('profile-pic');
             const dropdownMenu = document.getElementById('profile-dropdown');

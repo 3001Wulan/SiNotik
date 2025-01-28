@@ -226,36 +226,19 @@ body {
 }
 
 .forms-wrapper {
-    display: flex;
-    gap: 40px;
-
-}
-
-.form-container {
-    flex-basis: 70%; 
-    max-width: 100%;
-    margin-left: 20px;
-    width: 500px;
-    margin-right: 20px;
-}
-
-.forms-container {
-    display: flex;
-    flex-direction: column; 
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto auto; 
     gap: 20px; 
-    flex-basis: 35%; 
-    margin-left: 20px;
-    width: 300px;
-    margin-right: 40px;
+    padding: 20px
+
 }
 
-#form-data-pengguna {
-    background-color: #fff; 
-    max-width: 100%;
-    width: 100%;
-    border-radius: 15px; 
+.form-container, .forms-container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    background-color: #ffff;
 }
 
 #form-data-pengguna h2 {
@@ -264,6 +247,21 @@ body {
     color: #B0B0B0; 
     margin-top: 5px; 
     margin-bottom: 30px;
+}
+
+.form-container {
+    grid-column: 1; 
+    grid-row: 1 / 3;
+}
+
+.form-foto {
+    grid-column: 2; 
+    grid-row: 1; 
+}
+
+.form-password {
+    grid-column: 2; 
+    grid-row: 2; 
 }
 
 #form-data-pengguna label {
@@ -465,7 +463,7 @@ input::placeholder {
 .submit-btn {
     position: absolute;
     right: 20px; 
-    bottom: 0; 
+    bottom: -40px; 
     background-color: #025299;
     color: #fff;
     font-size: 16px;
@@ -648,14 +646,27 @@ input::placeholder {
 .toggle-dark-mode img:hover {
     filter: brightness(0.8);
 }
+.dark-mode .form-container,
+.dark-mode .form-foto,
+.dark-mode .form-password {
+    background-color: #292929; 
+    color: #ffffff; 
+    border: 1px solid #444; 
+}
 
-.dark-mode #form-data-pengguna,
-.dark-mode #form-unggah-gambar,
-.dark-mode #form-password {
-    background-color: #333;
-    color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+.dark-mode input,
+.dark-mode label {
+    color: #ffffff; 
+    background-color: #444; 
+    border: 1px solid #666; 
+}
+
+.dark-mode input::placeholder {
+    color: #bbb; 
+}
+
+.dark-mode .file-size-info {
+    color: #ff8c8c;
 }
 
 .dark-mode #form-data-pengguna label,

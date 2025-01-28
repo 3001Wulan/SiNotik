@@ -131,7 +131,7 @@ $current_page = 'data_pengguna';
                                     <td><?= esc($user['email']) ?></td>
                                     <td><?= esc($user['role']) ?></td>
                                     <td>
-                                        <a href="ubahdatapengguna" class="btn-edit">
+                                        <a href="#" class="btn-edit" data-user-id="<?= esc($user['user_id']) ?>">
                                             <img src="<?= base_url('assets/images/edit.png') ?>" alt="Icon Edit" class="btn-icon">
                                         </a>
                                         <a href="#" class="btn-delete">
@@ -273,24 +273,32 @@ $current_page = 'data_pengguna';
         }
 
         // Event listener for row click
-        tableBody.addEventListener('click', (event) => {
-            const clickedRow = event.target.closest('tr');
+tableBody.addEventListener('click', (event) => {
+    const clickedRow = event.target.closest('tr');
 
-            if (!clickedRow) return;
+    if (!clickedRow) return;
 
-            // Delete button click
-            if (event.target.closest('.btn-delete')) {
-                event.preventDefault();
-                selectedRow = clickedRow;
-                deletePopup.style.display = 'flex';
-                return;
-            }
+    // Delete button click
+    if (event.target.closest('.btn-delete')) {
+        event.preventDefault();
+        selectedRow = clickedRow;
+        deletePopup.style.display = 'flex';
+        return;
+    }
 
-            // Clicking other rows (navigate to detail page)
-            if (!event.target.closest('.btn-edit') && !event.target.closest('.btn-delete')) {
-                window.location.href = clickedRow.dataset.href;
-            }
-        });
+    // Edit button click
+    if (event.target.closest('.btn-edit')) {
+        event.preventDefault();
+        const userId = clickedRow.dataset.userId; // Ambil ID pengguna dari data-user-id
+        window.location.href = `<?php echo site_url('admin/ubahdatapengguna/'); ?>${userId}`; // Arahkan ke halaman edit dengan ID pengguna
+        return;
+    }
+
+    // Clicking other rows (navigate to detail page)
+    if (!event.target.closest('.btn-edit') && !event.target.closest('.btn-delete')) {
+        window.location.href = clickedRow.dataset.href;
+    }
+});
 
         // Cancel delete button
         cancelDelete.addEventListener('click', () => {

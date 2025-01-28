@@ -47,14 +47,14 @@
                 <div class="user-info">
                     <div class="user-text">
                         <div class="user-name">
-                            <span><?php echo isset($user_profile['nama']) ? $user_profile['nama'] : 'Nama Tidak Ditemukan'; ?></span>
+                            <span><?php echo isset($user['nama']) ? $user['nama'] : 'Nama Tidak Ditemukan'; ?></span>
                         </div>
                         <div class="user-role">
-                            <span><?php echo isset($user_profile['role']) ? ucfirst($user_profile['role']) : 'Role Tidak Ditemukan'; ?></span>
+                            <span><?php echo isset($user['role']) ? ucfirst($user['role']) : 'Role Tidak Ditemukan'; ?></span>
                         </div>
                     </div>
                     <div>
-                        <img src="<?= base_url('assets/images/jungwon.png'); ?>" alt="Admin">
+                    <img src="<?= base_url('assets/images/profiles/' . $user['profil_foto']) ?>" alt="User Photo" class="header-profile-img" id="profile-icon">
                     </div>
                     <!-- Dropdown Menu -->
                     <div class="dropdown-menu" id="dropdownMenu">
@@ -74,74 +74,74 @@
                 <h1>Tambah Pengguna</h1>
             </div>
             
-            <form id="form-data-pengguna" action="<?= base_url('tambah-pengguna/simpan'); ?>" method="post" enctype="multipart/form-data">
-                <div class="forms-wrapper">
-                    <!-- Form Data Pengguna (Kiri) -->
-                    <div class="form-container">
-                        <h2>Form Pengguna</h2>
-                        <label for="username">Username</label>
-                        <input type="text" id="username" name="username" placeholder="input username here" required>
+<form id="form-data-pengguna" action="<?= base_url('tambah-pengguna/simpan'); ?>" method="post" enctype="multipart/form-data">
+    <div class="forms-wrapper">
+        <!-- Form Data Pengguna (Kiri) -->
+        <div class="form-container">
+            <h2>Form Pengguna</h2>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Input username here" required>
 
-                        <label for="nama">Nama Lengkap</label>
-                        <input type="text" id="nama" name="nama" placeholder="input full name here" required>
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" name="nama" placeholder="Input full name here" required>
 
-                        <label for="nip">NIP</label>
-                        <input type="text" id="nip" name="nip" placeholder="input NIP here" required>
+            <label for="nip">NIP</label>
+            <input type="text" id="nip" name="nip" placeholder="Input NIP here" required>
 
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="input email here" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Input email here" required>
 
-                        <label for="status">Status</label>
-                        <input type="text" id="status" name="status" placeholder="input status here" required>
+            <label for="status">Status</label>
+            <input type="text" id="status" name="status" placeholder="Input status here" required>
 
-                        <label for="bidang">Bidang</label>
-                        <input type="text" id="bidang" name="bidang" placeholder="input bidang here" required>
+            <label for="bidang">Bidang</label>
+            <input type="text" id="bidang" name="bidang" placeholder="Input bidang here" required>
 
-                        <label for="jabatan">Jabatan</label>
-                        <input type="text" id="jabatan" name="jabatan" placeholder="input jabatan here" required>
-                    </div>
-
-                    <!-- Form Unggah Gambar -->
-                    <div class="forms-container">
-                        <h2>Form Foto</h2>
-                        <div class="upload-container">
-                            <label for="photo" class="upload-label">Unggah Foto</label>
-                            <span class="file-size-info">(ukuran file maksimal 5MB!)</span>
-                        </div>
-                        <input type="file" id="photo" name="photo" accept="image/*" required>
-    
-                        <!-- Kotak untuk Preview Gambar (tetap ada sebelum gambar diunggah) -->
-                        <div id="preview-container">
-                            <img id="previewImage" alt="Preview">
-                        </div>
-    
-                        <p id="error-message" style="color: red; display: none;">Ukuran file tidak boleh lebih dari 5MB!</p>
-
-                        <!-- Form Password -->
-                        <h2>Form Password</h2>
-                        <label for="password">Password</label>
-                        <div class="input-container">
-                            <input type="password" id="password" name="password" placeholder="input password here" required>
-                            <img src="<?= base_url('assets/images/Lock.png'); ?>" alt="Lock Icon" class="icon">
-                        </div>
-
-                        <label for="confirm-password">Confirm Password</label>
-                        <div class="input-container">
-                            <input type="password" id="confirm-password" name="confirm-password" placeholder="input password here" required>
-                            <img src="<?= base_url('assets/images/Lock.png'); ?>" alt="Lock Icon" class="icon">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Button Simpan Perubahan -->
-                <div class="button-container">
-                    <button type="submit" id="simpan-perubahan" class="submit-btn">
-                        Simpan Perubahan
-                        <img src="<?= base_url('assets/images/simpan.png'); ?>" alt="Save Icon" class="save-icon">
-                    </button>
-                </div>
-            </form>
+            <label for="jabatan">Jabatan</label>
+            <input type="text" id="jabatan" name="jabatan" placeholder="Input jabatan here" required>
         </div>
+
+        <!-- Form Foto -->
+        <div class="form-foto forms-container">
+            <h2>Form Foto</h2>
+            <div class="upload-container">
+                <label for="photo" class="upload-label">Unggah Foto</label>
+                <span class="file-size-info">(Ukuran file maksimal 5MB!)</span>
+            </div>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+
+            <div id="preview-container">
+                <img id="previewImage" alt="Preview">
+            </div>
+
+            <p id="error-message" style="color: red; display: none;">Ukuran file tidak boleh lebih dari 5MB!</p>
+        </div>
+
+        <!-- Form Password -->
+        <div class="form-password forms-container">
+            <h2>Form Password</h2>
+            <label for="password">Password</label>
+            <div class="input-container">
+                <input type="password" id="password" name="password" placeholder="Input password here" required>
+                <img src="<?= base_url('assets/images/Lock.png'); ?>" alt="Lock Icon" class="icon">
+            </div>
+
+            <label for="confirm-password">Confirm Password</label>
+            <div class="input-container">
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Input password here" required>
+                <img src="<?= base_url('assets/images/Lock.png'); ?>" alt="Lock Icon" class="icon">
+            </div>
+        </div>
+    </div>
+
+    <!-- Button Simpan Perubahan -->
+    <div class="button-container">
+        <button type="submit" id="simpan-perubahan" class="submit-btn">
+            Simpan Perubahan
+            <img src="<?= base_url('assets/images/simpan.png'); ?>" alt="Save Icon" class="save-icon">
+        </button>
+    </div>
+</form>
 
         <!-- Popup Logout -->
         <div class="popup-overlay" id="popupOverlay">

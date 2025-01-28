@@ -81,4 +81,25 @@ class Auth extends BaseController
         log_message('info', 'User Data: ' . print_r($userData, true));
         return view('admin/detailpengguna', $userData);
     }
+
+    public function ubahdatapengguna()
+    {
+        $session = session();
+
+        // Pastikan pengguna sudah login
+        if (!$session->get('logged_in')) {
+            return redirect()->to('/login');
+        }
+
+        $userData = [
+            'user_id' => $session->get('user_id'),
+            'nama' => $session->get('nama'),
+            'email' => $session->get('email'),
+            'role' => $session->get('role'),
+            'profil_foto' => $session->get('profil_foto')
+        ];
+
+        log_message('info', 'User Data for Update: ' . print_r($userData, true));
+        return view('admin/ubahdatapengguna', $userData);
+    }
 }

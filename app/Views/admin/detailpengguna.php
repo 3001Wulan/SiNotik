@@ -102,7 +102,7 @@
 
                     <div class="detail-item">
                         <label>Nama Lengkap</label>
-                        <div class="value"><?= isset($user_profile['name']) ? esc($user_profile['nama']) : 'N/A' ?></div>
+                        <div class="value"><?= isset($user_profile['nama']) ? esc($user_profile['nama']) : 'N/A' ?></div>
                     </div>
 
                     <div class="detail-item">
