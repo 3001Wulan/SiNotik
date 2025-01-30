@@ -354,8 +354,6 @@ body {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     position: relative; 
     margin-top: 10px;
-    overflow-y: auto;
-    max-height: 40%;
 }
 
 .table-container h1 {
@@ -363,7 +361,7 @@ body {
 }
 
 .data-table-wrapper {
-    max-height: 450px; 
+    max-height: 430px; 
     overflow-y: auto; 
 }
 

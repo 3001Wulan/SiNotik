@@ -65,15 +65,16 @@ $current_page = 'data_pengguna';
                 </div>
             </div>
             
-            <div class="dropdown-menu" id="dropdownMenu" style="display: none;">
+            <!-- Dropdown Menu -->
+            <div class="dropdown-menu" id="dropdownMenu">
                 <a href="<?= base_url('admin/profiladmin') ?>" class="dropdown-item">
                     <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
                     Profil
                 </a>
-                <a href="#" class="dropdown-item" id="logoutLink">
-                    <img src="<?= base_url('assets/images/icon_logout.png') ?>" alt="Logout" class="dropdown-icon">
-                    Logout
-                </a>
+                    <a href="#" class="dropdown-item" id="logoutLink">
+                        <img src="<?= base_url('assets/images/icon_logout.png') ?>" alt="Logout" class="dropdown-icon">
+                        Logout
+                    </a>
             </div>
 
             <!-- Popup khusus untuk logout -->
