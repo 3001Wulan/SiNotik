@@ -42,11 +42,13 @@ $routes->get('admin/ubahdatapengguna', 'UbahDataController::ubahDataPengguna');
 $routes->get('admin/ubahdatapengguna/(:num)', 'UbahDataController::ubahDataPengguna/$1');
 $routes->delete('RiwayatAdminController/delete/(:segment)', 'RiwayatAdminController::delete/$1');
 $routes->get('/pegawai/melihatpegawai', 'MelihatNotulenpegawaiController::lihat');
-$routes->get('notulensi/feedbacknotulen/(:num)', 'FeedbackNotulenController::feedbacknotulen/$1');
+$routes->get('notulensi/lihatnotulen/(:num)', 'LihatNotulenController::lihatnotulen/$1');
 $routes->get('pegawai/riwayatpegawai', 'RiwayatPegawaiController::index');
 $routes->get('admin/ubahpassword', 'UbahPasswordController::ubah');
 $routes->post('UbahPasswordController/ubah', 'UbahPasswordController::ubah');
 $routes->post('admin/ubahdatapengguna/(:num)/update', 'UbahDataController::updatePengguna/$1');
+$routes->post('UbahPasswordController/ubah', 'UbahPasswordController::ubah');
+
 
 
 

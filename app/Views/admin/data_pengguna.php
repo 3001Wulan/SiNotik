@@ -64,6 +64,28 @@ $current_page = 'data_pengguna';
                     </div>
                 </div>
             </div>
+            <div class="dropdown-menu" id="dropdownMenu" style="display: none;">
+    <a href="<?= base_url('admin/profiladmin') ?>" class="dropdown-item">
+        <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
+        Profil
+    </a>
+    <a href="#" class="dropdown-item" id="logoutLink">
+        <img src="<?= base_url('assets/images/icon_logout.png') ?>" alt="Logout" class="dropdown-icon">
+        Logout
+    </a>
+</div>
+
+<!-- Popup khusus untuk logout -->
+<div class="logout-popup-overlay" id="logoutPopupOverlay" style="display: none;">
+    <div class="logout-popup">
+        <img src="<?= base_url('assets/images/logout_warning.png') ?>" alt="Logout Warning" class="logout-popup-image">
+        <h3>Anda ingin logout?</h3>
+        <div class="logout-popup-buttons">
+            <button class="btn-logout-yes" id="confirmLogout">Ya</button>
+            <button class="btn-logout-no" id="cancelLogout">Tidak</button>
+        </div>
+    </div>
+</div>
 
             <!-- Page Tittle -->
             <div class="page-title">
@@ -350,6 +372,39 @@ tableBody.addEventListener('click', (event) => {
         // Initialize the table on page load
         updateTable();
     });
+    const profileIcon = document.getElementById('profile-icon');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+
+    profileIcon.addEventListener('click', function() {
+        if (dropdownMenu.style.display === 'none' || dropdownMenu.style.display === '') {
+            dropdownMenu.style.display = 'block';
+        } else {
+            dropdownMenu.style.display = 'none';
+        }
+    });
+
+    document.getElementById('logoutLink').addEventListener('click', function() {
+       
+    });
+    const logoutLink = document.getElementById('logoutLink');
+const logoutPopupOverlay = document.getElementById('logoutPopupOverlay'); 
+const confirmLogout = document.getElementById('confirmLogout'); 
+const cancelLogout = document.getElementById('cancelLogout'); 
+
+logoutLink.addEventListener('click', function (e) {
+    e.preventDefault(); 
+    logoutPopupOverlay.style.display = 'flex'; 
+});
+
+confirmLogout.addEventListener('click', function () {
+    window.location.href = '<?= base_url("home") ?>'; 
+    logoutPopupOverlay.style.display = 'none'; 
+});
+
+cancelLogout.addEventListener('click', function () {
+    logoutPopupOverlay.style.display = 'none'; 
+});
+
 </script>
 
 </body>

@@ -45,6 +45,65 @@ class NotulensiModel extends Model
         return $this->findAll();  // Mengambil semua data dari tabel notulensi
     }
 
+    // Fungsi untuk mendapatkan data notulensi berdasarkan notulensi_id
+    public function getNotulensiById($notulensi_id)
+    {
+        return $this->where('notulensi_id', $notulensi_id)->first();  // Mengambil data berdasarkan notulensi_id
+    }
+    
+    public function getNotulensiByUserId($userId)
+    {
+        return $this->where('user_id', $userId)->first(); // Get the first matching row
+    }
+
+    // Fungsi untuk memperbarui data notulensi berdasarkan notulensi_id
+    public function updateNotulensi($notulensi_id, array $data)
+    {
+        if (!$this->validate($data)) {
+            log_message('error', 'Validasi gagal: ' . json_encode($this->validation->getErrors()));
+            return false;
+        }
+
+        // Cek apakah notulensi_id ada
+        $notulensi = $this->find($notulensi_id);
+        if (!$notulensi) {
+            log_message('error', 'Notulensi dengan ID ' . $notulensi_id . ' tidak ditemukan.');
+            return false;
+        }
+
+        // Melakukan update
+        return $this->update($notulensi_id, $data);
+    }
+
+    // Fungsi untuk menghapus data notulensi berdasarkan notulensi_id
+    public function deleteNotulensi($notulensi_id)
+    {
+        // Cek apakah notulensi_id ada
+        $notulensi = $this->find($notulensi_id);
+        if (!$notulensi) {
+            log_message('error', 'Notulensi dengan ID ' . $notulensi_id . ' tidak ditemukan.');
+            return false;
+        }
+
+        // Menghapus data
+        return $this->delete($notulensi_id);
+    }
+
+    // Fungsi untuk mengambil notulensi dengan dokumentasi terkait (relasi antar tabel)
+    public function getNotulensiWithDokumentasi($notulensi_id)
+    {
+        $db = \Config\Database::connect();
+        $builder = $db->table('notulensi');
+        
+        // Bergabung dengan tabel dokumentasi
+        $builder->select('notulensi.*, dokumentasi.*');
+        $builder->join('dokumentasi', 'dokumentasi.notulensi_id = notulensi.notulensi_id', 'left');
+        $builder->where('notulensi.notulensi_id', $notulensi_id);
+
+        // Menjalankan query dan mengembalikan hasilnya
+        return $builder->get()->getRowArray(); // Mengambil data satu baris sebagai array
+    }
+
     // Fungsi untuk menyimpan data dengan validasi dan logging
     public function insertWithLog(array $data)
     {

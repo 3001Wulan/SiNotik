@@ -265,7 +265,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // View Details Function
     window.viewDetails = function(button, notulensiId) {
         // Arahkan ke halaman detail notulensi
-        window.location.href = `<?= base_url('notulensi/feedbacknotulen/') ?>${notulensiId}`;
+        window.location.href = `<?= base_url('notulensi/lihatnotulen/') ?>${notulensiId}`;
     };
 
     // Comment Modal Functions

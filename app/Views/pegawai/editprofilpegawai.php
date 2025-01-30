@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Profil</title>
-    <link rel="stylesheet" href="<?= base_url('assets/css/editprofil.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/editprofilpegawai.css'); ?>">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
 
@@ -72,7 +72,7 @@
                     <div class="profile-image-box">
                         <div class="profile-image-container">
                             <div class="profile-image">
-                                <img src="<?= base_url('assets/images/profiles/' . $profil_foto) ?>" alt="Foto Profil">
+                            <img src="<?= base_url('assets/images/profiles/' . $profil_foto) ?>" alt="Foto Profil" class="user-avatar" id="profileImage">
                             </div>
                         </div>
                         <div class="upload-container">
@@ -185,18 +185,17 @@
             }
         }
 
-   // Menangani klik pada gambar profil
-document.getElementById('profile-img').addEventListener('click', function() {
-    const dropdown = document.querySelector('.dropdown');
-    dropdown.classList.toggle('open');
-});
-
-window.addEventListener('click', function(event) {
-    const dropdown = document.querySelector('.dropdown');
-    if (!dropdown.contains(event.target)) {
-        dropdown.classList.remove('open');
-    }
-});
+        document.getElementById('upload').addEventListener('change', function (e) {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+                reader.onload = function (event) {
+                    const profileImage = document.getElementById('profileImage');
+                    profileImage.src = event.target.result; 
+                };
+                reader.readAsDataURL(file); 
+        }
+    });
 
     </script>
 </body>
