@@ -149,41 +149,42 @@
                     </div>
                 </div>
 
-                <div class="data-table-container">
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>Tanggal</th>
-                                <th>Bidang</th>
-                                <th>Agenda</th>
-                                <th>Notulen</t>
-                                <th>Partisipan</th>
-                                <th>Hasil Pembahasan </th>
-                                <th>Dokumentasi</t>
-                                <th>Aksi</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
-                </div>
+<div class="data-table-container">
+<table class="data-table">
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Tanggal</th>
+            <th>Bidang</th>
+            <th>Agenda</th>
+            <th>Notulen</th>
+            <th>Partisipan</th>
+            <th>Hasil Pembahasan </th>
+            <th>Dokumentasi</th>
+            <th>Aksi</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    </tbody>
+</table>
+</div>
 
-                <div id="deleteModal" class="modal" style="display: none;">
-                    <div class="modal-content">
-                        <div class="modal-icon">
-                            <img src="<?= base_url('assets/images/Info.png') ?>" alt="Info Icon">
-                        </div>
-                        <h3 class="modal-title">Hapus Data Ini?</h3>
-                        <div class="modal-buttons">
-                            <button class="modal-btn confirm-btn" onclick="confirmDelete()">Iya</button>
-                            <button class="modal-btn cancel-btn" onclick="closeModal()">Tidak</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div id="deleteModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <div class="modal-icon">
+            <img src="<?= base_url('assets/images/Info.png') ?>" alt="Info Icon">
+        </div>
+        <h3 class="modal-title">Hapus Data Ini?</h3>
+        <div class="modal-buttons">
+            <button class="modal-btn confirm-btn" onclick="confirmDelete()">Iya</button>
+            <button class="modal-btn cancel-btn" onclick="closeModal()">Tidak</button>
         </div>
     </div>
+</div>
+</div>
+</div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
