@@ -4,74 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Profil</title>
-    <link rel="stylesheet" href="/assets/css/editprofilnotulen.css">
+    <link rel="stylesheet" href="<?= base_url('assets/css/editprofilnotulen.css'); ?>">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
 </head>
 <body>
-    <div class="sidebar">
-        <div class="logo">
-            <div class="logo-circle">
-                <img src="/assets/images/logo.png" alt="Logo" class="logo-img">
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo">
             </div>
+            <ul>
+                <li>
+                    <a href="dashboard_admin" class="inactive">
+                        <img src="<?php echo base_url('assets/images/dashboard.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
+                        Dashboard
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="inactive dropdown-toggle">
+                        <img src="<?php echo base_url('assets/images/notulensi.png'); ?>" alt="Data Pengguna Icon" class="sidebar-icon">
+                        Notulensi
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="daftarnotulensi" class="dropdown-subitem">
+                            <img src="<?php echo base_url('assets/images/buat.png'); ?>" alt="Daftar Notulensi Icon">
+                            Daftar Notulensi
+                        </a>
+                        <div class="dropdown-separator"></div>
+                        <a href="buatnotulensi" class="dropdown-subitem">
+                            <img src="<?php echo base_url('assets/images/edit.png'); ?>" alt="Buat Notulensi Icon">
+                            Buat Notulensi
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <a href="riwayatnotulensi" class="inactive">
+                        <img src="<?php echo base_url('assets/images/riwayatnotulensi.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
+                        Riwayat Notulensi
+                    </a>
+                </li>
+            </ul>
         </div>
-        <ul class="menu">
-            <li>
-            <a href="<?= base_url('notulen/dashboard_notulen'); ?>" class="menu-item">
-                    <img src="/assets/images/dashboard.png" alt="Dashboard" class="menu-icon">
-                    <span>Dashboard</span>
-                </a>
-            </li>
-            <li>
-            <a href="<?= base_url('notulen/dashboard_pegawai'); ?>" class="menu-item">
-                    <img src="/assets/images/Notulensi.png" alt="Notulensi" class="menu-icon">
-                    <span>Notulensi</span>
-                </a>
-            </li>
-            <li>
-            <a href="<?= base_url('notulen/riwayatnotulen'); ?>" class="menu-item">
-                    <img src="/assets/images/riwayat.png" alt="Riwayat Notulensi" class="menu-icon">
-                    <span>Riwayat Notulensi</span>
-                </a>
-            </li>
-        </ul>
-    </div>
 
-    <div class="header">
-        <div class="header-content">
-            <div class="theme-toggle">
-                <img src="<?= base_url('assets/images/moon.png'); ?>" alt="Toggle Theme" id="theme-icon" onclick="toggleTheme()">  
-            </div>
-            <div class="user-info">
-                <div class="user-text">
-                    <div class="user-name"><?= $nama ?? 'N/A' ?></div>
-                    <div class="user-role"><?= $role ?? 'N/A' ?></div>
+        <div class="content">
+            <div class="top-bar">
+                <!-- Dark Mode Button -->
+                <div class="toggle-dark-mode">
+                    <img id="toggleDarkMode" src="<?php echo base_url('assets/images/moon.png'); ?>" alt="Dark Mode">
                 </div>
-                <img src="<?= base_url('assets/images/profiles/' . $profil_foto) ?>" alt="Foto Profil" class="user-avatar">
-            </div>
-        </div>
-    </div>
 
-    <div class="main-content">
-        <div class="profile-container">
-            <form id="editProfileForm" action="" method="POST" enctype="multipart/form-data">
-            <h2>Edit Profil</h2>
-            <div class="profile-content">
-                <div class="left-section">
-                    <div class="profile-image-box">
-                        <div class="profile-image-container">
-                            <div class="profile-image">
-                                <img src="<?= base_url('assets/images/profiles/' . $profil_foto) ?>" alt="Foto Profil">
-                            </div>
-                        </div>
-                        <div class="upload-container">
-                            <input type="file" name="profil_foto" id="upload" class="upload-input">
+                <!-- Profile Info and Dropdown -->
+                <div class="user-info">
+                    <div class="user-text">
+                        <div class="user-name"><?= $nama ?? 'N/A' ?></div>
+                        <div class="user-role"><?= $role ?? 'N/A' ?></div>
+                    </div>
+
+                    <div><img src="<?= base_url('assets/images/profiles/' . $profil_foto) ?>" alt="Foto Profil" class="user-avatar" id="profile-img"></div>
+
+                    <!-- Dropdown Menu -->
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="<?= base_url('admin/profiladmin') ?>" class="dropdown-item">
+                            <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
+                            Profil
+                        </a>
+                        <a href="#" class="dropdown-item" id="logoutLink">
+                            <img src="<?= base_url('assets/images/icon_logout.png') ?>" alt="Logout" class="dropdown-icon">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-title">
+                <h1>Edit Profil</h1>
+            </div>
+
+            <div class="profile-container">
+                <div class="profile-image-box">
+                    <form id="editProfileForm" action="" method="POST" enctype="multipart/form-data">
+                    <div class="profile-image-container">
+                        <div class="profile-image">
+                            <img src="<?= base_url('assets/images/profiles/' . $profil_foto) ?>" alt="Foto Profil" id="profileImage">
                         </div>
                     </div>
-                    <button class="save-button" type="submit" form="editProfileForm">Simpan Perubahan</button>
-                </div>
 
+                    <div class="upload-container">
+                        <input type="file" name="profil_foto" id="upload" class="upload-input" accept="image/*">
+                    </div>
+                </div>
+                
                 <div class="profile-details-box">
-                    <form id="editProfileForm" action="" method="POST" enctype="multipart/form-data">
                         <div class="profile-field">
                             <div class="field-left">
                                 <span class="field-label">Nama</span>
@@ -138,15 +162,14 @@
                             </div>
                         </div>
 
-                        <!-- Password -->
                         <div class="profile-field">
                             <div class="field-left">
                                 <span class="field-label">Password</span>
-                                <span class="field-value" id="passwordSpan"><?= $password ?? 'N/A' ?></span>
+                                <span class="field-value" id="passwordSpan"><?= !empty($password) ? str_repeat('', strlen($password)) : '' ?></span>
                                 <input type="password" name="password" value="<?= $password ?? 'N/A' ?>" class="field-value-input" id="passwordField" style="display:none;">
                             </div>
                             <div class="edit-icon">
-                                <i class="fas fa-edit" onclick="toggleEdit('passwordField', 'passwordSpan')"></i>
+                                <i class="fas fa-edit" onclick="redirectToEditPage()"></i>
                             </div>
                         </div>
 
@@ -163,11 +186,25 @@
                     </form>
                 </div>
             </div>
+            <button class="save-button" type="submit" form="editProfileForm">Simpan Perubahan</button> 
+        </div>
+
+        <!-- Popup Logout -->
+        <div class="popup-overlay" id="popupOverlay">
+            <div class="popup">
+                <img src="<?= base_url('assets/images/logout_warning.png') ?>" alt="Logout Warning" class="popup-image">
+                <h3>Anda ingin logout?</h3>
+                <div class="popup-buttons">
+                    <button class="btn-yes" id="confirmLogout">Ya</button>
+                    <button class="btn-no" id="cancelLogout">Tidak</button>
+                </div>
+            </div>
         </div>
     </div>
 
     <script>
-        function toggleEdit(fieldId, spanId) {
+    //Perubahan Data
+     function toggleEdit(fieldId, spanId) {
             var field = document.getElementById(fieldId);
             var span = document.getElementById(spanId);
             if (field.style.display === 'none') {
@@ -179,19 +216,71 @@
             }
         }
 
-        // Function to toggle dark/light mode
-        function toggleTheme() {
-            const body = document.body;
-            const themeIcon = document.getElementById('theme-icon');
-            body.classList.toggle('dark-mode');
-
-            // Change the icon based on the theme
-            if (body.classList.contains('dark-mode')) {
-                themeIcon.src = "<?= base_url('assets/images/sun.png'); ?>"; // Light mode icon
-            } else {
-                themeIcon.src = "<?= base_url('assets/images/moon.png'); ?>"; // Dark mode icon
-            }
+    document.getElementById('upload').addEventListener('change', function (e) {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+                reader.onload = function (event) {
+                    const profileImage = document.getElementById('profileImage');
+                    profileImage.src = event.target.result; 
+                };
+                reader.readAsDataURL(file); 
         }
+    });
+
+    toggleDarkMode.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const darkModeEnabled = document.body.classList.contains('dark-mode');
+    localStorage.setItem('darkMode', darkModeEnabled);
+
+    toggleDarkMode.src = darkModeEnabled ? 
+        '<?php echo base_url('assets/images/sun.png'); ?>' : 
+        '<?php echo base_url('assets/images/moon.png'); ?>';
+});
+
+        const profileIcon = document.getElementById('profile-img');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        profileIcon.addEventListener('click', (event) => {
+            event.stopPropagation(); 
+            dropdownMenu.classList.toggle('show');
+        });
+        window.addEventListener('click', () => {
+            dropdownMenu.classList.remove('show');
+        });
+
+        const logoutLink = document.getElementById('logoutLink');
+        const popupOverlay = document.getElementById('popupOverlay');
+        const confirmLogout = document.getElementById('confirmLogout');
+        const cancelLogout = document.getElementById('cancelLogout');
+
+        logoutLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            popupOverlay.style.display = 'block';
+        });
+
+        cancelLogout.addEventListener('click', () => {
+            popupOverlay.style.display = 'none';
+        });
+
+        confirmLogout.addEventListener('click', () => {
+            window.location.href = '<?= base_url('/') ?>';
+        });
+
+        function redirectToEditPage() {
+        window.location.href = 'ubahpassword';  
+        }
+        window.addEventListener('DOMContentLoaded', () => {
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+    if (isDarkMode) {
+        document.body.classList.add('dark-mode');
+        toggleDarkMode.src = '<?php echo base_url('assets/images/sun.png'); ?>';
+    } else {
+        toggleDarkMode.src = '<?php echo base_url('assets/images/moon.png'); ?>';
+    }
+});
+
     </script>
 </body>
 </html>
