@@ -157,13 +157,15 @@
                                 <th>Tanggal</th>
                                 <th>Bidang</th>
                                 <th>Agenda</th>
-                                <th>Notulen</th>
+                                <th>Notulen</t>
                                 <th>Partisipan</th>
-                                <th>Hasil Pembahasan</th>
-                                <th>Dokumentasi</th>
+                                <th>Hasil Pembahasan </th>
+                                <th>Dokumentasi</t>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
+                        <tbody>
+                        </tbody>
                     </table>
                 </div>
 
@@ -172,340 +174,338 @@
                         <div class="modal-icon">
                             <img src="<?= base_url('assets/images/Info.png') ?>" alt="Info Icon">
                         </div>
-
                         <h3 class="modal-title">Hapus Data Ini?</h3>
-
                         <div class="modal-buttons">
-                            <button class="modal-btn confirm-btn" onclick="confirmDelete()">Iya</button>    
+                            <button class="modal-btn confirm-btn" onclick="confirmDelete()">Iya</button>
                             <button class="modal-btn cancel-btn" onclick="closeModal()">Tidak</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            let notulenData = <?= json_encode($notulensi); ?>;
-            let currentEntries = 5;
-            let filteredData = [...notulenData];
-            let deleteId = null;
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        let notulenData = <?= json_encode($notulensi); ?>;
+        let currentEntries = 5;
+        let filteredData = [...notulenData];
+        let deleteId = null;
 
-            window.showDeleteModal = function (no) {
-                deleteId = no;
-                document.getElementById('deleteModal').style.display = 'flex';
-            };
+        window.showDeleteModal = function (no) {
+            deleteId = no;
+            document.getElementById('deleteModal').style.display = 'flex';
+        };
 
-            window.closeModal = function () {
-                document.getElementById('deleteModal').style.display = 'none';
-                deleteId = null;
-            };
+        window.closeModal = function () {
+            document.getElementById('deleteModal').style.display = 'none';
+            deleteId = null;
+        };
 
-            window.confirmDelete = function () {
-                if (deleteId !== null) {
-                    fetch(`/RiwayatAdminController/delete/${deleteId}`, {
-                        method: 'DELETE',
-                        headers: { 'Content-Type': 'application/json' }
-                    })
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.success) {
-                            filteredData = filteredData.filter(item => item.notulensi_id !== deleteId);
-                            updateTable();
-                            closeModal();
-                            window.location.reload();
-                        } else {
-                            alert('Gagal menghapus data.');
-                            window.location.reload();
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                        alert('Terjadi kesalahan saat menghapus data.');
-                    });
-                }
-            };
-
-            function updateTable() {
-                const tbody = document.querySelector('.data-table tbody');
-                tbody.innerHTML = '';
-                filteredData.slice(0, currentEntries).forEach((data, index) => {
-                    let row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td>${index + 1}</td>
-                        <td>${data.tanggal_dibuat}</td>
-                        <td>${data.Bidang}</td>
-                        <td>${data.judul}</td>
-                        <td>${data.user_name}</td>
-                        <td>${data.partisipan}</td> 
-                        <td>${data.isi}</td>
-                        <td>
-                            <div style="width: 150px; height: 150px; overflow: hidden; border: 1px solid #ccc;">
-                                <img src="<?= base_url('uploads/') ?>${data.foto_dokumentasi}" alt="Dokumentasi" class="doc-img">
-                            </div>
-                        </td>
-                        <td>
-                            <button class="delete-btn" onclick="showDeleteModal(${data.notulensi_id})">
-                                <img src="<?= base_url('assets/images/hapus.png') ?>" alt="Hapus Icon">
-                            </button>
-                        </td>
-                    `;
-                    tbody.appendChild(row);
+        window.confirmDelete = function () {
+            if (deleteId !== null) {
+                fetch(`/RiwayatAdminController/delete/${deleteId}`, {
+                    method: 'DELETE',
+                    headers: { 'Content-Type': 'application/json' }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        filteredData = filteredData.filter(item => item.notulensi_id !== deleteId);
+                        updateTable();
+                        closeModal();
+                        window.location.reload();
+                    } else {
+                        alert('Gagal menghapus data.');
+                        window.location.reload();
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Terjadi kesalahan saat menghapus data.');
                 });
             }
+        };
 
-            updateTable();
+        function updateTable() {
+            const tbody = document.querySelector('.data-table tbody');
+            tbody.innerHTML = '';
+            filteredData.slice(0, currentEntries).forEach((data, index) => {
+                let row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${index + 1}</td>
+                    <td>${data.tanggal_dibuat}</td>
+                    <td>${data.Bidang}</td>
+                    <td>${data.judul}</td>
+                    <td>${data.user_name}</td>
+                    <td>${data.partisipan}</td> 
+                    <td>${data.isi}</td>
+                    <td>
+                        <div style="width: 150px; height: 150px; overflow: hidden; border: 1px solid #ccc;">
+                            <img src="<?= base_url('uploads/') ?>${data.foto_dokumentasi}" alt="Dokumentasi" class="doc-img">
+                        </div>
+                    </td>
+                    <td>
+                        <button class="delete-btn" onclick="showDeleteModal(${data.notulensi_id})">
+                            <img src="<?= base_url('assets/images/hapus.png') ?>" alt="Hapus Icon">
+                        </button>
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
 
-            const initDatePicker = (selector, iconContainer) => {
-                const picker = flatpickr(selector, {
-                    dateFormat: "Y-m-d",
-                    locale: "id",
-                    allowInput: true,
-                    clickOpens: false
-                });
+        updateTable();
 
-                iconContainer.addEventListener('click', () => {
-                    picker.open();
-                });
+        const initDatePicker = (selector, iconContainer) => {
+            const picker = flatpickr(selector, {
+                dateFormat: "Y-m-d",
+                locale: "id",
+                allowInput: true,
+                clickOpens: false
+            });
+
+            iconContainer.addEventListener('click', () => {
+                picker.open();
+            });
+        };
+
+        const startDateIcon = document.querySelector('.datepicker1').nextElementSibling;
+        const endDateIcon = document.querySelector('.datepicker').nextElementSibling;
+        initDatePicker(".datepicker1", startDateIcon);
+        initDatePicker(".datepicker", endDateIcon);
+
+        const categorySelect = document.querySelector('.category-select');
+        const categoryIcon = categorySelect.nextElementSibling;
+        const categories = ['APTIKA', 'IKP', 'Statistik & Persandian'];
+        let categoryPopup = document.createElement('div');
+        categoryPopup.className = 'category-popup';
+
+        categories.forEach(category => {
+            const option = document.createElement('div');
+            option.className = 'category-option';
+            option.textContent = category;
+            option.onclick = function () {
+                categorySelect.value = category;
+                categoryPopup.style.display = 'none';
             };
+            categoryPopup.appendChild(option);
+        });
 
-            const startDateIcon = document.querySelector('.datepicker1').nextElementSibling;
-            const endDateIcon = document.querySelector('.datepicker').nextElementSibling;
-            initDatePicker(".datepicker1", startDateIcon);
-            initDatePicker(".datepicker", endDateIcon);
+        document.body.appendChild(categoryPopup);
 
-            const categorySelect = document.querySelector('.category-select');
-            const categoryIcon = categorySelect.nextElementSibling;
-            const categories = ['APTIKA', 'IKP', 'Statistik & Persandian'];
-            let categoryPopup = document.createElement('div');
-            categoryPopup.className = 'category-popup';
-
-            categories.forEach(category => {
-                const option = document.createElement('div');
-                option.className = 'category-option';
-                option.textContent = category;
-                option.onclick = function () {
-                    categorySelect.value = category;
-                    categoryPopup.style.display = 'none';
-                };
-                categoryPopup.appendChild(option);
-            });
-
-            document.body.appendChild(categoryPopup);
-
-            categoryIcon.addEventListener('click', function (e) {
-                const rect = categorySelect.getBoundingClientRect();
-                categoryPopup.style.top = `${rect.bottom + window.scrollY}px`;
-                categoryPopup.style.left = `${rect.left + window.scrollX}px`;
-                categoryPopup.style.minWidth = `${rect.width}px`;
-                categoryPopup.style.display = categoryPopup.style.display === 'block' ? 'none' : 'block';
-                e.stopPropagation();
-            });
+        categoryIcon.addEventListener('click', function (e) {
+            const rect = categorySelect.getBoundingClientRect();
+            categoryPopup.style.top = `${rect.bottom + window.scrollY}px`;
+            categoryPopup.style.left = `${rect.left + window.scrollX}px`;
+            categoryPopup.style.minWidth = `${rect.width}px`;
+            categoryPopup.style.display = categoryPopup.style.display === 'block' ? 'none' : 'block';
+            e.stopPropagation();
+        });
 
         
-            const searchInput = document.querySelector('.search-input');
-            const searchIcon = document.querySelector('.search .iicon-container');
+        const searchInput = document.querySelector('.search-input');
+        const searchIcon = document.querySelector('.search .iicon-container');
 
-            searchIcon.addEventListener('click', function () {
+        searchIcon.addEventListener('click', function () {
+            filterAndDisplayData();
+        });
+
+        searchInput.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
                 filterAndDisplayData();
+            }
+        });
+
+        const filterBtn = document.querySelector('.filter-btn');
+        filterBtn.addEventListener('click', function () {
+            const entriesSelect = document.getElementById('entries');
+            currentEntries = parseInt(entriesSelect.value);
+            filterAndDisplayData();
+        });
+
+        function filterAndDisplayData() {
+            const startDate = document.querySelector('.datepicker1').value;
+            const endDate = document.querySelector('.datepicker').value;
+            const category = categorySelect.value.toLowerCase();
+            const searchTerm = searchInput.value.toLowerCase().trim();
+
+            filteredData = notulenData.filter(item => {
+                const dateMatch = (!startDate || item.tanggal_dibuat >= startDate) &&
+                    (!endDate || item.tanggal_dibuat <= endDate);
+
+                const searchMatch = !searchTerm ||
+                    Object.values(item).some(val => {
+                        const strVal = String(val).toLowerCase();
+                        return strVal.includes(searchTerm);
+                    });
+
+                const categoryMatch = !category ||
+                    item.Bidang.toLowerCase().includes(category);
+
+                return dateMatch && searchMatch && categoryMatch;
             });
 
-            searchInput.addEventListener('keypress', function (e) {
-                if (e.key === 'Enter') {
-                    filterAndDisplayData();
+            updateTable();
+        }
+
+        const { jsPDF } = window.jspdf;
+
+        const pdfBtn = document.querySelector('.pdf-btn');
+        pdfBtn.addEventListener('click', function () {
+            const doc = new jsPDF();
+            const table = document.querySelector('.data-table');
+            const rows = table.querySelectorAll('tr');
+
+            const headers = ['No', 'Tanggal', 'Bidang', 'Judul', 'Notulen', 'Partisipan','Isi', 'Dokumentasi'];
+            const tableData = [];
+            const imagePromises = [];
+
+            rows.forEach((row, rowIndex) => {
+                const cells = row.querySelectorAll('th, td');
+                const rowData = Array.from(cells).map(cell => cell.textContent.trim());
+                if (rowIndex > 0) { 
+                    rowData.pop(); 
+                    tableData.push(rowData);
+
+                    const imgCell = row.cells[7]; 
+                    const img = imgCell.querySelector('img');
+                    if (img) {
+                        console.log(`Image found in row ${rowIndex}, processing...`);
+
+                        imagePromises.push(
+                            getImageBase64(img)
+                                .then(base64Img => {
+                                    tableData[rowIndex - 1].push(base64Img); 
+                                })
+                                .catch(err => {
+                                    console.error(`Error processing image in row ${rowIndex}:`, err);
+                                    tableData[rowIndex - 1].push(''); 
+                                })
+                        );
+                    } else {
+                        console.log(`No image found in row ${rowIndex}`);
+                        tableData[rowIndex - 1].push(''); 
+                    }
                 }
             });
 
-            const filterBtn = document.querySelector('.filter-btn');
-            filterBtn.addEventListener('click', function () {
-                const entriesSelect = document.getElementById('entries');
-                currentEntries = parseInt(entriesSelect.value);
-                filterAndDisplayData();
-            });
+            Promise.all(imagePromises).then(() => {
+                console.log("All images processed, generating PDF...");
 
-            function filterAndDisplayData() {
-                const startDate = document.querySelector('.datepicker1').value;
-                const endDate = document.querySelector('.datepicker').value;
-                const category = categorySelect.value.toLowerCase();
-                const searchTerm = searchInput.value.toLowerCase().trim();
+                doc.autoTable({
+                    head: [headers],
+                    body: tableData,
+                    startY: 20,
+                    margin: { top: 10, bottom: 10, left: 10, right: 10 },
+                    theme: 'grid',
+                    didDrawPage: function () {
+                        doc.text('Riwayat Notulensi', 12, 15);
+                    },
+                    styles: {
+                        overflow: 'linebreak',
+                        fontSize: 10,
+                        cellPadding: 5,
+                    },
+                    didDrawCell: function (data) {
+                        console.log(`Processing row ${data.row.index}, column ${data.column.index}`);
+                        if (data.column.index === 7 && data.row.index > 0) {
+                            const imageBase64 = tableData[data.row.index][data.column.index + 1];
+                            console.log(`Processing image for row ${data.row.index}:`, imageBase64);
+                            if (imageBase64) {
+                                const imgWidth = 25;
+                                const imgHeight = 15;
+                                const imgX = data.cell.x + data.cell.width / 2 - imgWidth / 2;
+                                const imgY = data.cell.y + (data.cell.height - imgHeight) / 2;
+                                console.log(`Menambahkan gambar ke PDF di posisi (${imgX}, ${imgY})`);
+                                doc.addImage(imageBase64, 'PNG', data.cell.x + 1, data.cell.y + 1, imgWidth, imgHeight);
 
-                filteredData = notulenData.filter(item => {
-                    const dateMatch = (!startDate || item.tanggal_dibuat >= startDate) &&
-                        (!endDate || item.tanggal_dibuat <= endDate);
+                            }else{
+                                console.log(`Tidak ada gambar untuk baris ${data.row.index}`);
 
-                    const searchMatch = !searchTerm ||
-                        Object.values(item).some(val => {
-                            const strVal = String(val).toLowerCase();
-                            return strVal.includes(searchTerm);
-                        });
-
-                    const categoryMatch = !category ||
-                        item.Bidang.toLowerCase().includes(category);
-
-                    return dateMatch && searchMatch && categoryMatch;
-                });
-
-                updateTable();
-            }
-
-            const { jsPDF } = window.jspdf;
-
-            const pdfBtn = document.querySelector('.pdf-btn');
-            pdfBtn.addEventListener('click', function () {
-                const doc = new jsPDF();
-                const table = document.querySelector('.data-table');
-                const rows = table.querySelectorAll('tr');
-
-                const headers = ['No', 'Tanggal', 'Bidang', 'Judul', 'Notulen', 'Partisipan','Isi', 'Dokumentasi'];
-                const tableData = [];
-                const imagePromises = [];
-
-                rows.forEach((row, rowIndex) => {
-                    const cells = row.querySelectorAll('th, td');
-                    const rowData = Array.from(cells).map(cell => cell.textContent.trim());
-                    if (rowIndex > 0) { 
-                        rowData.pop(); 
-                        tableData.push(rowData);
-
-                        const imgCell = row.cells[7]; 
-                        const img = imgCell.querySelector('img');
-                        if (img) {
-                            console.log(`Image found in row ${rowIndex}, processing...`);
-
-                            imagePromises.push(
-                                getImageBase64(img)
-                                    .then(base64Img => {
-                                        tableData[rowIndex - 1].push(base64Img); 
-                                    })
-                                    .catch(err => {
-                                        console.error(`Error processing image in row ${rowIndex}:`, err);
-                                        tableData[rowIndex - 1].push(''); 
-                                    })
-                            );
-                        } else {
-                            console.log(`No image found in row ${rowIndex}`);
-                            tableData[rowIndex - 1].push(''); 
-                        }
-                    }
-                });
-
-                Promise.all(imagePromises).then(() => {
-                    console.log("All images processed, generating PDF...");
-
-                    doc.autoTable({
-                        head: [headers],
-                        body: tableData,
-                        startY: 20,
-                        margin: { top: 10, bottom: 10, left: 10, right: 10 },
-                        theme: 'grid',
-                        didDrawPage: function () {
-                            doc.text('Riwayat Notulensi', 12, 15);
-                        },
-
-                        styles: {
-                            overflow: 'linebreak',
-                            fontSize: 10,
-                            cellPadding: 5,
-                        },
-
-                        didDrawCell: function (data) {
-                            console.log(`Processing row ${data.row.index}, column ${data.column.index}`);
-                                if (data.column.index === 7 && data.row.index > 0) {
-                                const imageBase64 = tableData[data.row.index][data.column.index + 1];
-                                console.log(`Processing image for row ${data.row.index}:`, imageBase64);
-                                if (imageBase64) {
-                                    const imgWidth = 25;
-                                    const imgHeight = 15;
-                                    const imgX = data.cell.x + data.cell.width / 2 - imgWidth / 2;
-                                    const imgY = data.cell.y + (data.cell.height - imgHeight) / 2;
-                                    console.log(`Menambahkan gambar ke PDF di posisi (${imgX}, ${imgY})`);
-                                    doc.addImage(imageBase64, 'PNG', data.cell.x + 1, data.cell.y + 1, imgWidth, imgHeight);
-
-                                }else{
-                                    console.log(`Tidak ada gambar untuk baris ${data.row.index}`);
-                                }
                             }
-                        },
-                    });
-
-                    doc.save('data-notulen.pdf');
-                }).catch(error => {
-                    console.error('Error processing images before generating PDF:', error);
+                        }
+                    },
                 });
-            });
 
-            const getImageBase64 = (img) => {
-                return new Promise((resolve, reject) => {
-                    const canvas = document.createElement('canvas');
-                    const ctx = canvas.getContext('2d');
-                    const image = new Image();
-                    image.crossOrigin = 'anonymous'; 
-                    image.src = img.src;
-
-                    image.onload = () => {
-                        canvas.width = image.width;
-                        canvas.height = image.height;
-                        ctx.drawImage(image, 0, 0);
-                        const dataUrl = canvas.toDataURL('image/png');
-                        console.log('Image converted to base64 successfully.');
-                        resolve(dataUrl);
-                    };
-
-                    image.onerror = (err) => {
-                        console.error("Error loading image:", err);
-                        reject(err);
-                    };
-                });
-            };
-
-            // JavaScript untuk Dropdown Menu
-            const profileIcon = document.getElementById('profile-img');
-            const dropdownMenu = document.getElementById('dropdownMenu');
-
-            // Toggle dropdown menu saat foto profil diklik
-            profileIcon.addEventListener('click', (event) => {
-                event.stopPropagation(); // Mencegah event bubbling
-                dropdownMenu.classList.toggle('show');
-            });
-
-            // Menyembunyikan dropdown menu jika klik di luar area dropdown
-            window.addEventListener('click', () => {
-                dropdownMenu.classList.remove('show');
-            });
-
-            // Popup Logout
-            const logoutLink = document.getElementById('logoutLink');
-            const popupOverlay = document.getElementById('popupOverlay');
-            const confirmLogout = document.getElementById('confirmLogout');
-            const cancelLogout = document.getElementById('cancelLogout');
-
-            logoutLink.addEventListener('click', (event) => {
-                event.preventDefault();
-                popupOverlay.style.display = 'block';
-            });
-
-            cancelLogout.addEventListener('click', () => {
-                popupOverlay.style.display = 'none';
-            });
-
-            confirmLogout.addEventListener('click', () => {
-                window.location.href = '<?= base_url('/') ?>';
-            });
-
-            // Toggle Dark Mode
-            const toggleDarkModeButton = document.getElementById('toggleDarkMode');
-            const body = document.body;
-
-            toggleDarkModeButton.addEventListener('click', function () {
-                body.classList.toggle('dark-mode');
-                toggleDarkModeButton.src = body.classList.contains('dark-mode')
-                    ? '<?php echo base_url("assets/images/sun.png"); ?>'
-                    : '<?php echo base_url("assets/images/moon.png"); ?>';
+                doc.save('data-notulen.pdf');
+            }).catch(error => {
+                console.error('Error processing images before generating PDF:', error);
             });
         });
-    </script>
+
+        const getImageBase64 = (img) => {
+            return new Promise((resolve, reject) => {
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                const image = new Image();
+                image.crossOrigin = 'anonymous'; 
+                image.src = img.src;
+
+                image.onload = () => {
+                    canvas.width = image.width;
+                    canvas.height = image.height;
+                    ctx.drawImage(image, 0, 0);
+                    const dataUrl = canvas.toDataURL('image/png');
+                    console.log('Image converted to base64 successfully.');
+                    resolve(dataUrl);
+                };
+
+                image.onerror = (err) => {
+                    console.error("Error loading image:", err);
+                    reject(err);
+                };
+            });
+        };
+
+        // JavaScript untuk Dropdown Menu
+        const profileIcon = document.getElementById('profile-img');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        // Toggle dropdown menu saat foto profil diklik
+        profileIcon.addEventListener('click', (event) => {
+            event.stopPropagation(); // Mencegah event bubbling
+            dropdownMenu.classList.toggle('show');
+        });
+
+        // Menyembunyikan dropdown menu jika klik di luar area dropdown
+        window.addEventListener('click', () => {
+            dropdownMenu.classList.remove('show');
+        });
+
+        // Popup Logout
+        const logoutLink = document.getElementById('logoutLink');
+        const popupOverlay = document.getElementById('popupOverlay');
+        const confirmLogout = document.getElementById('confirmLogout');
+        const cancelLogout = document.getElementById('cancelLogout');
+
+        logoutLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            popupOverlay.style.display = 'block';
+        });
+
+        cancelLogout.addEventListener('click', () => {
+            popupOverlay.style.display = 'none';
+        });
+
+        confirmLogout.addEventListener('click', () => {
+            window.location.href = '<?= base_url('/') ?>';
+        });
+
+        // Toggle Dark Mode
+        const toggleDarkModeButton = document.getElementById('toggleDarkMode');
+        const body = document.body;
+
+        toggleDarkModeButton.addEventListener('click', function () {
+            body.classList.toggle('dark-mode');
+            toggleDarkModeButton.src = body.classList.contains('dark-mode')
+                ? '<?php echo base_url("assets/images/sun.png"); ?>'
+                : '<?php echo base_url("assets/images/moon.png"); ?>';
+        });
+    });
+</script>
 </body>
 </html>
