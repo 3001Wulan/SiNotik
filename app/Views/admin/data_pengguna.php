@@ -64,28 +64,29 @@ $current_page = 'data_pengguna';
                     </div>
                 </div>
             </div>
+            
             <div class="dropdown-menu" id="dropdownMenu" style="display: none;">
-    <a href="<?= base_url('admin/profiladmin') ?>" class="dropdown-item">
-        <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
-        Profil
-    </a>
-    <a href="#" class="dropdown-item" id="logoutLink">
-        <img src="<?= base_url('assets/images/icon_logout.png') ?>" alt="Logout" class="dropdown-icon">
-        Logout
-    </a>
-</div>
+                <a href="<?= base_url('admin/profiladmin') ?>" class="dropdown-item">
+                    <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
+                    Profil
+                </a>
+                <a href="#" class="dropdown-item" id="logoutLink">
+                    <img src="<?= base_url('assets/images/icon_logout.png') ?>" alt="Logout" class="dropdown-icon">
+                    Logout
+                </a>
+            </div>
 
-<!-- Popup khusus untuk logout -->
-<div class="logout-popup-overlay" id="logoutPopupOverlay" style="display: none;">
-    <div class="logout-popup">
-        <img src="<?= base_url('assets/images/logout_warning.png') ?>" alt="Logout Warning" class="logout-popup-image">
-        <h3>Anda ingin logout?</h3>
-        <div class="logout-popup-buttons">
-            <button class="btn-logout-yes" id="confirmLogout">Ya</button>
-            <button class="btn-logout-no" id="cancelLogout">Tidak</button>
-        </div>
-    </div>
-</div>
+            <!-- Popup khusus untuk logout -->
+            <div class="logout-popup-overlay" id="logoutPopupOverlay" style="display: none;">
+                <div class="logout-popup">
+                    <img src="<?= base_url('assets/images/logout_warning.png') ?>" alt="Logout Warning" class="logout-popup-image">
+                    <h3>Anda ingin logout?</h3>
+                    <div class="logout-popup-buttons">
+                        <button class="btn-logout-yes" id="confirmLogout">Ya</button>
+                        <button class="btn-logout-no" id="cancelLogout">Tidak</button>
+                    </div>
+                </div>
+            </div>
 
             <!-- Page Tittle -->
             <div class="page-title">
@@ -124,51 +125,53 @@ $current_page = 'data_pengguna';
                 </div>
 
                 <!-- Data Pengguna -->
-                <table id="dataTable">
-                    <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>Foto Profil</th>
-                            <th>Nama User</th>
-                            <th>NIP</th>
-                            <th>Email</th>
-                            <th>Status</th>
-                            <th>Aksi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php if (!empty($users)): ?>
-                            <?php foreach ($users as $index => $user): ?>
-                                <tr data-user-id="<?= esc($user['user_id']) ?>" class="clickable-row" data-href="<?= site_url('DetailPenggunaControllers/' . esc($user['user_id'])) ?>">
-                                    <td><?= $index + 1 ?></td>
-                                    <td>
-                                        <?php if (!empty($user['profil_foto'])): ?>
-                                            <img src="/assets/images/profiles/<?= $user['profil_foto'] ?>" alt="User Photo" class="header-profile-img" id="profile-icon">
-                                        <?php else: ?>
-                                            <img src="<?= base_url('assets/images/delvaut.png') ?>" alt="Foto Profil" class="profile-pic">
-                                        <?php endif; ?>
-                                    </td>
-                                    <td><?= esc($user['username']) ?></td>
-                                    <td><?= esc($user['nip']) ?></td>
-                                    <td><?= esc($user['email']) ?></td>
-                                    <td><?= esc($user['role']) ?></td>
-                                    <td>
-                                        <a href="#" class="btn-edit" data-user-id="<?= esc($user['user_id']) ?>">
-                                            <img src="<?= base_url('assets/images/edit.png') ?>" alt="Icon Edit" class="btn-icon">
-                                        </a>
-                                        <a href="#" class="btn-delete">
-                                            <img src="<?= base_url('assets/images/hapus.png') ?>" alt="Icon Hapus" class="btn-icon">
-                                        </a>
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
-                        <?php else: ?>
+                <div class="data-table-wrapper">
+                    <table id="dataTable">
+                        <thead>
                             <tr>
-                                <td colspan="7" style="text-align: center;">Data Pengguna Tidak Tersedia</td>
+                                <th>No</th>
+                                <th>Foto Profil</th>
+                                <th>Nama User</th>
+                                <th>NIP</th>
+                                <th>Email</th>
+                                <th>Status</th>
+                                <th>Aksi</th>
                             </tr>
-                        <?php endif; ?>
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            <?php if (!empty($users)): ?>
+                                <?php foreach ($users as $index => $user): ?>
+                                    <tr data-user-id="<?= esc($user['user_id']) ?>" class="clickable-row" data-href="<?= site_url('DetailPenggunaControllers/' . esc($user['user_id'])) ?>">
+                                        <td><?= $index + 1 ?></td>
+                                        <td>
+                                            <?php if (!empty($user['profil_foto'])): ?>
+                                                <img src="/assets/images/profiles/<?= $user['profil_foto'] ?>" alt="User Photo" class="header-profile-img" id="profile-icon">
+                                            <?php else: ?>
+                                                <img src="<?= base_url('assets/images/delvaut.png') ?>" alt="Foto Profil" class="profile-pic">
+                                            <?php endif; ?>
+                                        </td>
+                                        <td><?= esc($user['username']) ?></td>
+                                        <td><?= esc($user['nip']) ?></td>
+                                        <td><?= esc($user['email']) ?></td>
+                                        <td><?= esc($user['role']) ?></td>
+                                        <td>
+                                            <a href="#" class="btn-edit" data-user-id="<?= esc($user['user_id']) ?>">
+                                                <img src="<?= base_url('assets/images/edit.png') ?>" alt="Icon Edit" class="btn-icon">
+                                            </a>
+                                            <a href="#" class="btn-delete">
+                                                <img src="<?= base_url('assets/images/hapus.png') ?>" alt="Icon Hapus" class="btn-icon">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            <?php else: ?>
+                                <tr>
+                                    <td colspan="7" style="text-align: center;">Data Pengguna Tidak Tersedia</td>
+                                </tr>
+                            <?php endif; ?>
+                        </tbody>
+                    </table>
+                </div>
 
                 <!-- Pagination -->
                 <div class="pagination">
@@ -207,9 +210,9 @@ $current_page = 'data_pengguna';
 
         let selectedRow = null;
         let currentPage = 1;
-        let entriesPerPage = 10; // Default entries per page
-        let allData = Array.from(tableBody.getElementsByTagName('tr')); // Original data in the table
-        let filteredData = [...allData]; // Filtered data for search or other actions
+        let entriesPerPage = 10; 
+        let allData = Array.from(tableBody.getElementsByTagName('tr')); 
+        let filteredData = [...allData]; 
 
         // Function to update the table display
         function updateTable() {
@@ -217,14 +220,13 @@ $current_page = 'data_pengguna';
             const endIndex = startIndex + entriesPerPage;
 
             if (entriesPerPage === 0) {
-                // Show all data when "Select" is chosen (entriesPerPage = 0)
                 filteredData.forEach(row => row.style.display = '');
                 previousBtn.style.display = 'none';
                 nextBtn.style.display = 'none';
-                pageNumber.textContent = 1; // Display page number as 1
+                pageNumber.textContent = 1; 
             } else {
-                allData.forEach(row => (row.style.display = 'none')); // Hide all rows first
-                filteredData.slice(startIndex, endIndex).forEach(row => (row.style.display = '')); // Show only rows for current page
+                allData.forEach(row => (row.style.display = 'none')); 
+                filteredData.slice(startIndex, endIndex).forEach(row => (row.style.display = '')); \
 
                 // Show or hide navigation buttons
                 previousBtn.style.display = currentPage > 1 ? 'inline-block' : 'none';
@@ -250,16 +252,16 @@ $current_page = 'data_pengguna';
             const searchTerm = searchInput.value.toLowerCase().trim();
 
             if (!searchTerm) {
-                filteredData = [...allData]; // Show all data if search is empty
+                filteredData = [...allData]; 
             } else {
                 filteredData = allData.filter(row => {
                     const cells = row.getElementsByTagName('td');
-                    const nameCell = cells[2]; // "Nama User" column is usually at index 2
+                    const nameCell = cells[2]; 
                     return nameCell && nameCell.textContent.toLowerCase().includes(searchTerm);
                 });
             }
 
-            currentPage = 1; // Reset to the first page after search
+            currentPage = 1; 
             updateTable();
         }
 
@@ -295,32 +297,31 @@ $current_page = 'data_pengguna';
         }
 
         // Event listener for row click
-tableBody.addEventListener('click', (event) => {
-    const clickedRow = event.target.closest('tr');
+        tableBody.addEventListener('click', (event) => {
+            const clickedRow = event.target.closest('tr');
 
-    if (!clickedRow) return;
+            if (!clickedRow) return;
 
-    // Delete button click
-    if (event.target.closest('.btn-delete')) {
-        event.preventDefault();
-        selectedRow = clickedRow;
-        deletePopup.style.display = 'flex';
-        return;
-    }
+            // Delete button click
+            if (event.target.closest('.btn-delete')) {
+                event.preventDefault();
+                selectedRow = clickedRow;
+                deletePopup.style.display = 'flex';
+                return;
+            }
 
-    // Edit button click
-    if (event.target.closest('.btn-edit')) {
-        event.preventDefault();
-        const userId = clickedRow.dataset.userId; // Ambil ID pengguna dari data-user-id
-        window.location.href = `<?php echo site_url('admin/ubahdatapengguna/'); ?>${userId}`; // Arahkan ke halaman edit dengan ID pengguna
-        return;
-    }
+        // Edit button click
+        if (event.target.closest('.btn-edit')) {
+            event.preventDefault();
+            const userId = clickedRow.dataset.userId; 
+            window.location.href = `<?php echo site_url('admin/ubahdatapengguna/'); ?>${userId}`; 
+            return;
+        }
 
-    // Clicking other rows (navigate to detail page)
-    if (!event.target.closest('.btn-edit') && !event.target.closest('.btn-delete')) {
-        window.location.href = clickedRow.dataset.href;
-    }
-});
+            if (!event.target.closest('.btn-edit') && !event.target.closest('.btn-delete')) {
+            window.location.href = clickedRow.dataset.href;
+            }
+    });
 
         // Cancel delete button
         cancelDelete.addEventListener('click', () => {
@@ -342,13 +343,12 @@ tableBody.addEventListener('click', (event) => {
         entriesDropdown.addEventListener('change', (event) => {
             const selectedValue = parseInt(event.target.value, 10);
 
-            // If "Select" is chosen, set entriesPerPage to 0 (show all rows)
             if (selectedValue === 0) {
-                entriesPerPage = 0; // Show all data
-                filteredData = [...allData]; // All data is visible
+                entriesPerPage = 0; 
+                filteredData = [...allData]; 
             } else if (!isNaN(selectedValue)) {
-                entriesPerPage = selectedValue; // Set entries per page
-                currentPage = 1; // Reset to the first page
+                entriesPerPage = selectedValue; 
+                currentPage = 1; 
             }
 
             updateTable();
@@ -369,44 +369,41 @@ tableBody.addEventListener('click', (event) => {
                 : '<?php echo base_url('assets/images/moon.png'); ?>';
         });
 
-        // Initialize the table on page load
         updateTable();
     });
-    const profileIcon = document.getElementById('profile-icon');
-    const dropdownMenu = document.getElementById('dropdownMenu');
 
-    profileIcon.addEventListener('click', function() {
-        if (dropdownMenu.style.display === 'none' || dropdownMenu.style.display === '') {
-            dropdownMenu.style.display = 'block';
-        } else {
-            dropdownMenu.style.display = 'none';
-        }
-    });
+        const profileIcon = document.getElementById('profile-icon');
+        const dropdownMenu = document.getElementById('dropdownMenu');
 
-    document.getElementById('logoutLink').addEventListener('click', function() {
-       
-    });
-    const logoutLink = document.getElementById('logoutLink');
-const logoutPopupOverlay = document.getElementById('logoutPopupOverlay'); 
-const confirmLogout = document.getElementById('confirmLogout'); 
-const cancelLogout = document.getElementById('cancelLogout'); 
+        profileIcon.addEventListener('click', function() {
+            if (dropdownMenu.style.display === 'none' || dropdownMenu.style.display === '') {
+                dropdownMenu.style.display = 'block';
+            } else {
+                dropdownMenu.style.display = 'none';
+            }
+        });
 
-logoutLink.addEventListener('click', function (e) {
-    e.preventDefault(); 
-    logoutPopupOverlay.style.display = 'flex'; 
-});
+        document.getElementById('logoutLink').addEventListener('click', function() {
+       });
 
-confirmLogout.addEventListener('click', function () {
-    window.location.href = '<?= base_url("home") ?>'; 
-    logoutPopupOverlay.style.display = 'none'; 
-});
+        const logoutLink = document.getElementById('logoutLink');
+        const logoutPopupOverlay = document.getElementById('logoutPopupOverlay'); 
+        const confirmLogout = document.getElementById('confirmLogout'); 
+        const cancelLogout = document.getElementById('cancelLogout'); 
 
-cancelLogout.addEventListener('click', function () {
-    logoutPopupOverlay.style.display = 'none'; 
-});
+            logoutLink.addEventListener('click', function (e) {
+            e.preventDefault(); 
+            logoutPopupOverlay.style.display = 'flex'; 
+        });
 
-</script>
+        confirmLogout.addEventListener('click', function () {
+            window.location.href = '<?= base_url("home") ?>'; 
+            logoutPopupOverlay.style.display = 'none'; 
+        });
 
+        cancelLogout.addEventListener('click', function () {
+            logoutPopupOverlay.style.display = 'none'; 
+        });
+    </script>
 </body>
-
 </html>

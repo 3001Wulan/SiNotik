@@ -28,6 +28,8 @@ class RiwayatAdminController extends BaseController
 
         $data['notulensi'] = $this->riwayatModel->getNotulensWithIsi($user_id);
         $data['pengguna'] = $pengguna; 
+        $data['current_page'] = 'riwayat_notulensi';
+
 
         if (empty($data['notulensi'])) {
             log_message('error', 'Data notulensi gagal ditampilkan.');

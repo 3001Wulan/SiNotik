@@ -91,12 +91,12 @@ p {
     transition: background-color 0.3s;
     animation: float 2s ease-in-out infinite;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
-    transform: scale(1.1);
 }
 
 .login-btn:hover {
     background-color: #0085C5;
-    transform: scale(1.1);
+    transform: scale(2.1);
+    font-size: 18px;
 }
 
 @keyframes float {

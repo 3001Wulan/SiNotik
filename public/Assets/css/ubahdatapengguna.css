@@ -567,11 +567,13 @@ input::placeholder {
 .btn-yes:hover {
     background-color: #0085C5;
     transform: scale(1.1);
+    font-size: 16px;
 }
 
 .btn-no:hover {
     background-color: #e53935;
     transform: scale(1.1);
+    font-size: 16px;
 }
 
 .dark-mode {
