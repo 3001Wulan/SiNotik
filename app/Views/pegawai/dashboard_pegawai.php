@@ -7,117 +7,130 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/dashboard_pegawai.css') ?>">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body class="light-theme">
-    <div class="sidebar">
-        <div class="logo">
-            <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo" class="logo-img">
-        </div>
-        <ul class="menu">
-            <li class="menu-item active" data-link="<?= base_url('pegawai/dashboard_pegawai') ?>">
-                <img src="<?= base_url('assets/images/dashboard.png') ?>" alt="Dashboard" class="menu-icon">
-                <span class="menu-text">Dashboard</span>
-            </li>
-            <li class="menu-item active" data-link="<?= base_url('pegawai/melihatpegawai') ?>">
-                <img src="<?= base_url('assets/images/codicon_book.png') ?>" alt="Data Pengguna" class="menu-icon">
-                <span class="menu-text">Notulensi</span>
-            </li>
-            <li class="menu-item" data-link="<?= base_url('pegawai/riwayatpegawai') ?>">
-                <img src="<?= base_url('assets/images/icon_riwayat.png') ?>" alt="Riwayat Notulensi" class="menu-icon">
-                <span class="menu-text">Riwayat Notulensi</span>
-            </li>
-        </ul>
-
-        <script>
-            const menuItems = document.querySelectorAll('.menu-item');
-
-            menuItems.forEach(item => {
-                item.addEventListener('click', () => {
-                    const link = item.getAttribute('data-link');
-                    if (link) {
-                        window.location.href = link;
-                    }
-                });
-            });
-        </script>
-
-    </div>
-
-    <div class="main-content">
-        <div class="top-bar">
-            <div class="brand-name"></div>
-            <div class="theme-toggle">
-                <img src="<?= base_url('assets/images/cahaya.png') ?>" alt="Theme Toggle" class="theme-icon">
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="Logo" class="logo-img">
             </div>
-            <div class="profile-container">
-                <div class="profile" id="profileButton">
-                    <img src="<?= base_url('assets/images/profiles/' . (file_exists('assets/images/profiles/' . $profile_picture) ? $profile_picture : 'delvaut.png')) ?>" alt="Profile Picture" class="profile-img">
-                </div>
-                <div class="profile-info">
-                    <span class="profile-name"><?= $user_name ?></span>
-                    <span class="profile-role"><?= $user_role ?></span>
-                </div>
-                <div class="dropdown-menu" id="dropdownMenu" style="display: none;">
-                    <a href="<?= base_url('pegawai/profilpegawai') ?>" class="dropdown-item">
-                        <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
-                        Profil
+            <ul>
+                <li>
+                    <a href="#" class="<?php echo ($current_page == 'dashboard') ? 'active dashboard' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/dashboard.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
+                        Dashboard
                     </a>
-                    <a href="#" class="dropdown-item" id="logoutLink">
-                        <img src="<?= base_url('assets/images/icon_logout.png') ?>" alt="Logout" class="dropdown-icon">
-                        Logout
+                </li>
+                <li>
+                    <a href="melihatpegawai" class="<?php echo ($current_page == 'melihat_pegawai') ? 'active data-pengguna ' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/codicon_book.png'); ?>" alt="Notulensi Icon" class="sidebar-icon">
+                        Notulensi
                     </a>
+                </li>
+                <li>
+                    <a href="riwayatpegawai" class="<?php echo ($current_page == 'riwayat_pegawai') ? 'active riwayat-notulensi' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/riwayatnotulensi.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
+                        Riwayat Notulensi
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Content Area -->
+        <div class="content">
+            <div class="top-bar">
+                <!-- Mode -->
+                <div class="toggle-dark-mode">
+                    <img id="toggleDarkMode" src="<?php echo base_url('assets/images/moon.png'); ?>" alt="Dark Mode">
+                </div>
+
+                <div class="profile-container">
+                    <div class="profile" id="profileButton">
+                        <img src="<?= base_url('assets/images/profiles/' . (file_exists('assets/images/profiles/' . $profile_picture) ? $profile_picture : 'delvaut.png')) ?>" alt="Profile Picture" class="profile-img">
+                    </div>
+
+                    <div class="profile-info">
+                        <span class="profile-name"><?= $user_name ?></span>
+                        <span class="profile-role"><?= $user_role ?></span>
+                    </div>
+
+                    <div class="dropdown-menu" id="dropdownMenu" style="display: none;">
+                        <a href="<?= base_url('pegawai/profilpegawai') ?>" class="dropdown-item">
+                            <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
+                            Profil
+                        </a>
+                        <a href="#" class="dropdown-item" id="logoutLink">
+                            <img src="<?= base_url('assets/images/icon_logout.png') ?>" alt="Logout" class="dropdown-icon">
+                            Logout
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="dashboard-title">
-            <h2>Dashboard</h2>
-        </div>
+            <!-- Page Tittle -->
+            <div class="page-title">
+                <h1>Dashboard</h1>
+            </div>
 
+        <!-- Statistics Section -->
         <div class="stats">
-            <div class="stat-box">
-                <div class="stat-icon">
-                    <img src="<?= base_url('assets/images/icon_pegawai.png') ?>" alt="Icon Pegawai">
+                <div class="stat-box">
+                    <div class="stat-icon">
+                        <img src="<?= base_url('assets/images/icon_pegawai.png') ?>" alt="Icon Pegawai">
+                    </div>
+                    <div class="stat-text">
+                        <h3>TOTAL PEGAWAI</h3>
+                        <p><?= $total_pegawai ?> Pegawai</p>
+                    </div>
                 </div>
-                <div class="stat-text">
-                    <h3>Total Pegawai</h3>
-                    <p><?= $total_pegawai ?> Pegawai</p>
-                </div>
-            </div>
 
-            <div class="stat-box">
-                <div class="stat-icon">
-                    <img src="<?= base_url('assets/images/icon_notulensi.png') ?>" alt="Icon Notulensi">
+                <div class="stat-box">
+                    <div class="stat-icon">
+                        <img src="<?= base_url('assets/images/icon_notulensi.png') ?>" alt="Icon Notulensi">
+                    </div>
+                    <div class="stat-text">
+                        <h3>TOTAL NOTULENSI</h3>
+                        <p><?= $total_notulensi ?> Data</p>
+                    </div>
                 </div>
-                <div class="stat-text">
-                    <h3>Total Notulensi</h3>
-                    <p><?= $total_notulensi ?> Data</p>
+
+                <div class="stat-status">
+                    <h3>STATUS PEGAWAI</h3>
+                    <canvas id="statusPegawaiChart"></canvas>
                 </div>
-            </div>
 
-            <div class="stat-status">
-                <h3>Status Pegawai</h3>
-                <canvas id="statusPegawaiChart"></canvas>
-            </div>
-
-            <div class="stat-notulensi">
-                <h3>Kategori Notulensi Perbidang</h3>
-                <canvas id="kategoriNotulensiChart"></canvas>
+                <div class="stat-notulensi">
+                    <h3>KATEGORI NOTULENSI PERBIDANG</h3>
+                    <canvas id="kategoriNotulensiChart"></canvas>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="popup-overlay" id="popupOverlay">
-        <div class="popup">
-            <img src="<?= base_url('assets/images/logout_warning.png') ?>" alt="Logout Warning" class="popup-image">
-            <h3>Apakah Anda yakin ingin logout?</h3>
-            <div class="popup-buttons">
-                <button class="btn-yes" id="confirmLogout">Ya</button>
-                <button class="btn-no" id="cancelLogout">Tidak</button>
+        <!-- Popup Logout -->
+        <div class="popup-overlay" id="popupOverlay">
+            <div class="popup">
+                <img src="<?= base_url('assets/images/logout_warning.png') ?>" alt="Logout Warning" class="popup-image">
+                <h3>Anda ingin logout?</h3>
+                <div class="popup-buttons">
+                    <button class="btn-yes" id="confirmLogout">Ya</button>
+                    <button class="btn-no" id="cancelLogout">Tidak</button>
+                </div>
             </div>
         </div>
     </div>
 
     <script>
+        // Handle menu item navigation
+        document.querySelectorAll('.menu-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const link = item.getAttribute('data-link');
+                if (link) {
+                    window.location.href = link;
+                }
+            });
+        });
+
+        // Dropdown Menu
         const profileButton = document.getElementById('profileButton');
         const dropdownMenu = document.getElementById('dropdownMenu');
 
@@ -131,6 +144,7 @@
             }
         });
 
+        // Popup Logout
         const logoutLink = document.getElementById('logoutLink');
         const popupOverlay = document.getElementById('popupOverlay');
         const confirmLogout = document.getElementById('confirmLogout');
@@ -149,6 +163,7 @@
             window.location.href = '<?= base_url('/') ?>';
         });
 
+        // Chart.js Data (Dynamic)
         const bidangLabels = <?= json_encode(array_column($jumlah_pegawai_per_bidang, 'Bidang')); ?>;
         const bidangData = <?= json_encode(array_column($jumlah_pegawai_per_bidang, 'jumlah')); ?>;
 
@@ -157,8 +172,9 @@
 
         const sharedColors = bidangLabels.map(() => `#${Math.floor(Math.random()*16777215).toString(16)}`);
 
+        // Pegawai Chart
         const ctxStatus = document.getElementById('statusPegawaiChart').getContext('2d');
-        const statusPegawaiChart = new Chart(ctxStatus, {
+        new Chart(ctxStatus, {
             type: 'bar',
             data: {
                 labels: bidangLabels,
@@ -172,28 +188,16 @@
             },
             options: {
                 responsive: true,
-                plugins: {
-                    legend: {
-                        labels: {
-                            color: sharedColors
-                        }
-                    }
-                },
                 scales: {
-                    y: {
-                        beginAtZero: true,
-                        title: { display: true, text: 'Jumlah Pegawai' },
-                        grid: { display: false }
-                    },
-                    x: {
-                        grid: { display: false }
-                    }
+                    y: { beginAtZero: true, title: { display: true, text: 'Jumlah Pegawai' }, grid: { display: false } },
+                    x: { grid: { display: false } }
                 }
             }
         });
 
+        // Notulensi Chart
         const ctxKategori = document.getElementById('kategoriNotulensiChart').getContext('2d');
-        const kategoriNotulensiChart = new Chart(ctxKategori, {
+        new Chart(ctxKategori, {
             type: 'bar',
             data: {
                 labels: kategoriLabels,
@@ -207,23 +211,30 @@
             },
             options: {
                 responsive: true,
-                plugins: {
-                    legend: {
-                        labels: {
-                            color: sharedColors
-                        }
-                    }
-                },
                 scales: {
-                    y: {
-                        beginAtZero: true,
-                        title: { display: true, text: 'Jumlah Notulensi' },
-                        grid: { display: false }
-                    },
-                    x: {
-                        grid: { display: false }
-                    }
+                    y: { beginAtZero: true, title: { display: true, text: 'Jumlah Notulensi' }, grid: { display: false } },
+                    x: { grid: { display: false } }
                 }
+            }
+        });
+
+        toggleDarkMode.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const darkModeEnabled = document.body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', darkModeEnabled);
+
+        toggleDarkMode.src = darkModeEnabled ? 
+            '<?php echo base_url('assets/images/sun.png'); ?>' : 
+            '<?php echo base_url('assets/images/moon.png'); ?>';
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const isDarkMode = localStorage.getItem('darkMode') === 'true';
+            if (isDarkMode) {
+                document.body.classList.add('dark-mode');
+                toggleDarkMode.src = '<?php echo base_url('assets/images/sun.png'); ?>';
+            } else {
+                toggleDarkMode.src = '<?php echo base_url('assets/images/moon.png'); ?>';
             }
         });
     </script>

@@ -6,84 +6,85 @@
     <title>Edit Profil</title>
     <link rel="stylesheet" href="<?= base_url('assets/css/editprofilpegawai.css'); ?>">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
-
+    
 </head>
 <body>
-    <div class="sidebar">
-        <div class="logo">
-            <div class="logo-circle">
-                <img src="<?= base_url('assets/images/logo.png'); ?>" alt="Logo" class="logo-img">
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo">
             </div>
+            <ul>
+                <li>
+                    <a href="dashboard_pegawai" class="inactive">
+                        <img src="<?php echo base_url('assets/images/dashboard.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="melihatpegawai" class="inactive">
+                        <img src="<?php echo base_url('assets/images/codicon_book.png'); ?>" alt="Notulensi Icon" class="sidebar-icon">
+                        Notulensi
+                    </a>
+                </li>
+                <li>
+                    <a href="riwayatpegawai" class="inactive">
+                        <img src="<?php echo base_url('assets/images/riwayatnotulensi.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
+                        Riwayat Notulensi
+                    </a>
+                </li>
+            </ul>
         </div>
-        <ul class="menu">
-            <li>
-                <a href="<?= base_url('pegawai/dashboard_pegawai'); ?>" class="menu-item">
-                    <img src="<?= base_url('assets/images/dashboard.png'); ?>" alt="Dashboard" class="menu-icon">
-                    <span>Dashboard</span>
-                </a>
-            </li>
-            <li>
-                <a href="<?= base_url('admin/data_pengguna'); ?>" class="menu-item">
-                    <img src="<?= base_url('assets/images/notulensi.png'); ?>" alt="Data Pengguna" class="menu-icon">
-                    <span>Notulensi</span>
-                </a>
-            </li>
-            <li>
-                <a href="<?= base_url('riwayat'); ?>" class="menu-item">
-                    <img src="<?= base_url('assets/images/riwayat.png'); ?>" alt="Riwayat Notulensi" class="menu-icon">
-                    <span>Riwayat Notulensi</span>
-                </a>
-            </li>
-        </ul>
-    </div>
 
-    <div class="header"> 
-    <div class="header-content">
-        <div class="theme-toggle">
-            <img src="<?= base_url('assets/images/moon.png'); ?>" alt="Toggle Theme" id="theme-icon" onclick="toggleTheme()">  
-        </div>
-        <div class="user-info">
-            <div class="user-text">
-                <div class="user-name"><?= $nama ?? 'N/A' ?></div>
-                <div class="user-role"><?= $role ?? 'N/A' ?></div>
-            </div>
-            <div class="dropdown">
-                <img src="<?= base_url('assets/images/profiles/' . $profil_foto) ?>" alt="Foto Profil" class="user-avatar" id="profile-img">
-                <div class="dropdown-content">
-                <a href="/profile">
-                        <img src="<?= base_url('assets/images/profil.png'); ?>" alt="Profile Icon" class="dropdown-icon"> Profil
-                    </a>
-                    <a href="/logout">
-                        <img src="<?= base_url('assets/images/logout.png'); ?>" alt="Logout Icon" class="dropdown-icon"> Logout
-                    </a>
+        <div class="content">
+            <div class="top-bar">
+                <!-- Dark Mode Button -->
+                <div class="toggle-dark-mode">
+                    <img id="toggleDarkMode" src="<?php echo base_url('assets/images/moon.png'); ?>" alt="Dark Mode">
+                </div>
+
+                <!-- Profile Info and Dropdown -->
+                <div class="user-info">
+                    <div class="user-text">
+                        <div class="user-name"><?= $nama ?? 'N/A' ?></div>
+                        <div class="user-role"><?= $role ?? 'N/A' ?></div>
+                    </div>
+
+                    <div><img src="<?= base_url('assets/images/profiles/' . $profil_foto) ?>" alt="Foto Profil" class="user-avatar" id="profile-img"></div>
+
+                    <!-- Dropdown Menu -->
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="<?= base_url('admin/profiladmin') ?>" class="dropdown-item">
+                            <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
+                            Profil
+                        </a>
+                        <a href="#" class="dropdown-item" id="logoutLink">
+                            <img src="<?= base_url('assets/images/icon_logout.png') ?>" alt="Logout" class="dropdown-icon">
+                            Logout
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>     
-    </div>
-</div>
 
-    <div class="main-content">
-        <div class="profile-container">
-            <form id="editProfileForm" action="" method="POST" enctype="multipart/form-data">
-            <h2>Edit Profil</h2>
-            <div class="profile-content">
-                <div class="left-section">
-                    <div class="profile-image-box">
-                        <div class="profile-image-container">
-                            <div class="profile-image">
-                            <img src="<?= base_url('assets/images/profiles/' . $profil_foto) ?>" alt="Foto Profil" class="user-avatar" id="profileImage">
-                            </div>
-                        </div>
-                        <div class="upload-container">
-                            <input type="file" name="profil_foto" id="upload" class="upload-input">
+            <div class="page-title">
+                <h1>Edit Profil</h1>
+            </div>
+
+            <div class="profile-container">
+                <div class="profile-image-box">
+                    <form id="editProfileForm" action="" method="POST" enctype="multipart/form-data">
+                    <div class="profile-image-container">
+                        <div class="profile-image">
+                            <img src="<?= base_url('assets/images/profiles/' . $profil_foto) ?>" alt="Foto Profil" id="profileImage">
                         </div>
                     </div>
-                    <button class="save-button" type="submit" form="editProfileForm">Simpan Perubahan</button>
-                </div>
 
+                    <div class="upload-container">
+                        <input type="file" name="profil_foto" id="upload" class="upload-input" accept="image/*">
+                    </div>
+                </div>
+                
                 <div class="profile-details-box">
-                    <form id="editProfileForm" action="" method="POST" enctype="multipart/form-data">
                         <div class="profile-field">
                             <div class="field-left">
                                 <span class="field-label">Nama</span>
@@ -153,11 +154,11 @@
                         <div class="profile-field">
                             <div class="field-left">
                                 <span class="field-label">Password</span>
-                                <span class="field-value" id="passwordSpan"><?= $password ?? 'N/A' ?></span>
+                                <span class="field-value" id="passwordSpan"><?= !empty($password) ? str_repeat('*', strlen($password)) : '*****' ?></span>
                                 <input type="password" name="password" value="<?= $password ?? 'N/A' ?>" class="field-value-input" id="passwordField" style="display:none;">
                             </div>
                             <div class="edit-icon">
-                                <i class="fas fa-edit" onclick="toggleEdit('passwordField', 'passwordSpan')"></i>
+                                <i class="fas fa-edit" onclick="redirectToEditPage()"></i>
                             </div>
                         </div>
 
@@ -170,9 +171,28 @@
                             <div class="edit-icon">
                                 <i class="fas fa-edit" onclick="toggleEdit('roleField', 'statusSpan')"></i>
                             </div>
-            
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <button class="save-button" type="submit" form="editProfileForm">Simpan Perubahan</button> 
+        </div>
+
+        <!-- Popup Logout -->
+        <div class="popup-overlay" id="popupOverlay">
+            <div class="popup">
+                <img src="<?= base_url('assets/images/logout_warning.png') ?>" alt="Logout Warning" class="popup-image">
+                <h3>Anda ingin logout?</h3>
+                <div class="popup-buttons">
+                    <button class="btn-yes" id="confirmLogout">Ya</button>
+                    <button class="btn-no" id="cancelLogout">Tidak</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
-   // Edit nama
+    //Perubahan Data
      function toggleEdit(fieldId, spanId) {
             var field = document.getElementById(fieldId);
             var span = document.getElementById(spanId);
@@ -185,7 +205,7 @@
             }
         }
 
-        document.getElementById('upload').addEventListener('change', function (e) {
+    document.getElementById('upload').addEventListener('change', function (e) {
         const file = e.target.files[0];
         if (file) {
             const reader = new FileReader();
@@ -196,6 +216,59 @@
                 reader.readAsDataURL(file); 
         }
     });
+
+    toggleDarkMode.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const darkModeEnabled = document.body.classList.contains('dark-mode');
+    localStorage.setItem('darkMode', darkModeEnabled);
+
+    toggleDarkMode.src = darkModeEnabled ? 
+        '<?php echo base_url('assets/images/sun.png'); ?>' : 
+        '<?php echo base_url('assets/images/moon.png'); ?>';
+});
+
+        const profileIcon = document.getElementById('profile-img');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        profileIcon.addEventListener('click', (event) => {
+            event.stopPropagation(); 
+            dropdownMenu.classList.toggle('show');
+        });
+        window.addEventListener('click', () => {
+            dropdownMenu.classList.remove('show');
+        });
+
+        const logoutLink = document.getElementById('logoutLink');
+        const popupOverlay = document.getElementById('popupOverlay');
+        const confirmLogout = document.getElementById('confirmLogout');
+        const cancelLogout = document.getElementById('cancelLogout');
+
+        logoutLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            popupOverlay.style.display = 'block';
+        });
+
+        cancelLogout.addEventListener('click', () => {
+            popupOverlay.style.display = 'none';
+        });
+
+        confirmLogout.addEventListener('click', () => {
+            window.location.href = '<?= base_url('/') ?>';
+        });
+
+        function redirectToEditPage() {
+        window.location.href = 'ubahpassword';  
+        }
+        window.addEventListener('DOMContentLoaded', () => {
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+    if (isDarkMode) {
+        document.body.classList.add('dark-mode');
+        toggleDarkMode.src = '<?php echo base_url('assets/images/sun.png'); ?>';
+    } else {
+        toggleDarkMode.src = '<?php echo base_url('assets/images/moon.png'); ?>';
+    }
+});
 
     </script>
 </body>
