@@ -22,13 +22,13 @@
                     </a>
                 </li>
                 <li>
-                    <a href="melihatpegawai" class="<?php echo ($current_page == 'melihat_pegawai') ? 'active data-pengguna ' : 'inactive'; ?>">
+                    <a href="melihatpegawai" class="<?php echo ($current_page == 'melihat_pegawai') ? 'active notulensi-pegawai ' : 'inactive'; ?>">
                         <img src="<?php echo base_url('assets/images/codicon_book.png'); ?>" alt="Notulensi Icon" class="sidebar-icon">
                         Notulensi
                     </a>
                 </li>
                 <li>
-                    <a href="riwayatpegawai" class="<?php echo ($current_page == 'riwayat_pegawai') ? 'active riwayat-notulensi' : 'inactive'; ?>">
+                    <a href="riwayatpegawai" class="<?php echo ($current_page == 'riwayat_notulensi') ? 'active riwayat-notulensi' : 'inactive'; ?>">
                         <img src="<?php echo base_url('assets/images/riwayatnotulensi.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
                         Riwayat Notulensi
                     </a>

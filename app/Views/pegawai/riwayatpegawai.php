@@ -4,60 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Riwayat Notulensi</title>
+
+    <!-- External CSS for the page -->
     <link rel="stylesheet" href="<?= base_url('assets/css/riwayatpegawai.css') ?>">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
-<body class="light-mode">
+<body>
     <div class="container">
-        <!-- Sidebar -->
+        <!-- Sidebar Section -->
         <div class="sidebar">
             <div class="logo">
-                <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo">
+                <!-- Logo Image -->
+                <img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="Logo">
             </div>
-            <div class="menu">
-                <a href="#" class="menu-item">
-                    <img src="<?= base_url('assets/images/dashboard.png') ?>" alt="Dashboard Icon">
-                    <span>Dashboard</span>
-                </a>
-                <div class="separator"></div>
-                <a href="#" class="menu-item">
-                    <img src="<?= base_url('assets/images/notulensi.png') ?>" alt="Data User Icon">
-                    <span>Notulensi</span>
-                </a>
-                <div class="separator"></div>
-                <a href="#" class="menu-item">
-                    <img src="<?= base_url('assets/images/riwayat.png') ?>" alt="History Icon">
-                    <span>Riwayat Notulensi</span>
-                </a>
-            </div>
+            <!-- Sidebar Menu Links -->
+            <ul>
+                <li>
+                    <a href="dashboard_pegawai" class="<?php echo ($current_page == 'dashboard') ? 'active dashboard' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/dashboard.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="melihatpegawai" class="<?php echo ($current_page == 'melihat_pegawai') ? 'active notulensi-pegawai' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/codicon_book.png'); ?>" alt="Data Pengguna Icon" class="sidebar-icon">
+                        Notulensi
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="<?php echo ($current_page == 'riwayat_notulensi') ? 'active riwayat-notulensi' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/riwayatnotulensi.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
+                        Riwayat Notulensi
+                    </a>
+                </li>
+            </ul>
         </div>
 
-        <div class="main-content">
-            <div class="header">
-                <div class="theme-toggle">
-                    <img src="<?= base_url('assets/images/bulan.png') ?>" alt="Moon" class="theme-icon moon-icon">
-                    <img src="<?= base_url('assets/images/sun.png') ?>" alt="Sun" class="theme-icon sun-icon">
+        <!-- Main Content Section -->
+        <div class="content">
+            <div class="top-bar">
+                <!-- Dark Mode Toggle -->
+                <div class="toggle-dark-mode">
+                    <img id="toggleDarkMode" src="<?php echo base_url('assets/images/moon.png'); ?>" alt="Dark Mode">
                 </div>
+                
+                <!-- User Info Section -->
                 <div class="user-info">
-                    <!-- User details with profile image and role -->
-                    <div class="user-details">
-                        <?php
-                        // Cek apakah ada gambar profil, jika tidak, tampilkan gambar default
-                            $profilePic = $pengguna['profil_foto'] ? base_url('assets/images/profiles/' . $pengguna['profil_foto']) : base_url('assets/images/profiles/delvaut.png');
-                        ?>
-                        <img src="<?= $profilePic ?>" alt="Profile" class="profile-img">
-                        <div class="user-text">
-                            <p class="user-name"><?= esc($pengguna['nama']); ?></p>
-                            <p class="user-role"><?= esc($pengguna['role']); ?></p>
+                    <div class="user-text">
+                        <div class="user-name">
+                            <span><?php echo isset($pengguna['nama']) ? $pengguna['nama'] : 'Nama Tidak Ditemukan'; ?></span>
+                        </div>                            
+                        <div class="user-role">
+                            <span><?php echo isset($pengguna['role']) ? ucfirst($pengguna['role']) : 'Role Tidak Ditemukan'; ?></span>
                         </div>
+                    </div>
+                    <div>
+                        <img src="<?= base_url('assets/images/profiles/' . $pengguna['profil_foto']) ?>" alt="Profile" class="profile-img" id="profile-icon">
+                    </div>
+
+                    <!-- Profile Dropdown Menu -->
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="<?= base_url('admin/profiladmin') ?>" class="dropdown-item">
+                            <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
+                            Profil
+                        </a>
+                        <a href="#" class="dropdown-item" id="logoutLink">
+                            <img src="<?= base_url('assets/images/icon_logout.png') ?>" alt="Logout" class="dropdown-icon">
+                            Logout
+                        </a>
                     </div>
                 </div>
             </div>
+           
+            <!-- Page Title -->
+            <div class="page-title">
+                <h1>Riwayat Notulensi</h1>
+            </div>
 
-            <div class="content">
-                <h2>Riwayat Notulensi</h2>
-
+            <div class="riwayat-container">
+                <!-- Filter Section -->
                 <div class="filters">
                     <div class="date-range">
                         <div class="iinput-container">
@@ -86,61 +112,78 @@
                     <div class="entries-select">
                         <label for="entries">Show</label>
                         <select id="entries">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="5" selected>5</option>
+                            <option value="" selected>Select</option>
+                            <option value="5">5</option>
                             <option value="10">10</option>
-                            <option value="25">25</option>
-                            <option value="50">50</option>
-                            <option value="100">100</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
                         </select>
                         <span>entries</span>
                     </div>
 
                     <div class="button-container filter-container">
-    <button class="filter-btn">
-        Filter
-        <div class="icon-containerr">
-            <img src="<?= base_url('assets/images/cari.png') ?>" alt="Filter Icon">
-        </div>
-    </button>
-</div>
+                        <button class="filter-btn">
+                            Filter
+                            <div class="icon-containerr">
+                                <img src="<?= base_url('assets/images/cari.png') ?>" alt="Filter Icon">
+                            </div>
+                        </button>
+                    </div>
 
-<div class="button-container pdf-container">
-    <button class="pdf-btn">
-        Cetak PDF
-        <div class="icon-container">
-            <img src="<?= base_url('assets/images/pdf.png') ?>" alt="PDF Icon">
-        </div>
-    </button>
-</div>
+                    <div class="button-container pdf-container">
+                        <button class="pdf-btn">
+                            Cetak PDF
+                            <div class="icon-container">
+                                <img src="<?= base_url('assets/images/pdf.png') ?>" alt="PDF Icon">
+                            </div>
+                        </button>
+                    </div>
 
-<div class="search">
-    <div class="iinput-container">
-        <input type="text" placeholder="Search here..." class="search-input">
-        <div class="iicon-container">
-            <img src="<?= base_url('assets/images/cari.png') ?>" alt="Search Icon">
+                    <div class="search">
+                        <div class="iinput-container">
+                            <input type="text" placeholder="Search here..." class="search-input">
+                            <div class="iicon-container">
+                                <img src="<?= base_url('assets/images/cari.png') ?>" alt="Search Icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="data-table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Tanggal</th>
+                                <th>Bidang</th>
+                                <th>Agenda</th>
+                                <th>Notulen</th>
+                                <th>Partisipan</th>
+                                <th>Hasil Pembahasan </th>
+                                <th>Dokumentasi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="deleteModal" class="modal" style="display: none;">
+                    <div class="modal-content">
+                        <div class="modal-icon">
+                            <img src="<?= base_url('assets/images/Info.png') ?>" alt="Info Icon">
+                        </div>
+                        <h3 class="modal-title">Hapus Data Ini?</h3>
+                        <div class="modal-buttons">
+                            <button class="modal-btn confirm-btn" onclick="confirmDelete()">Iya</button>
+                            <button class="modal-btn cancel-btn" onclick="closeModal()">Tidak</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-</div>
-
-<table class="data-table">
-    <thead>
-        <tr>
-            <th>No</th>
-            <th>Tanggal</th>
-            <th>Bidang</th>
-            <th>Agenda</th>
-            <th>Notulen</th>
-            <th>Partisipan</th>
-            <th>Hasil Pembahasan </th>
-            <th>Dokumentasi</th>
-        </tr>
-    </thead>
-    <tbody>
-    </tbody>
-</table>
 
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -150,6 +193,42 @@
         let notulenData = <?= json_encode($notulensi); ?>;
         let currentEntries = 5;
         let filteredData = [...notulenData];
+        let deleteId = null;
+
+        window.showDeleteModal = function (no) {
+            deleteId = no;
+            document.getElementById('deleteModal').style.display = 'flex';
+        };
+
+        window.closeModal = function () {
+            document.getElementById('deleteModal').style.display = 'none';
+            deleteId = null;
+        };
+
+        window.confirmDelete = function () {
+            if (deleteId !== null) {
+                fetch(`/RiwayatAdminController/delete/${deleteId}`, {
+                    method: 'DELETE',
+                    headers: { 'Content-Type': 'application/json' }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        filteredData = filteredData.filter(item => item.notulensi_id !== deleteId);
+                        updateTable();
+                        closeModal();
+                        window.location.reload();
+                    } else {
+                        alert('Gagal menghapus data.');
+                        window.location.reload();
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Terjadi kesalahan saat menghapus data.');
+                });
+            }
+        };
 
         function updateTable() {
             const tbody = document.querySelector('.data-table tbody');
@@ -175,14 +254,6 @@
         }
 
         updateTable();
-
-        const themeToggle = document.querySelector('.theme-toggle');
-            const body = document.body;
-            
-            themeToggle.addEventListener('click', function() {
-                body.classList.toggle('light-mode');
-                body.classList.toggle('dark-mode');
-            });
 
         const initDatePicker = (selector, iconContainer) => {
             const picker = flatpickr(selector, {
@@ -295,7 +366,7 @@
                     rowData.pop(); 
                     tableData.push(rowData);
 
-                    const imgCell = row.cells[6]; 
+                    const imgCell = row.cells[7]; 
                     const img = imgCell.querySelector('img');
                     if (img) {
                         console.log(`Image found in row ${rowIndex}, processing...`);
@@ -336,7 +407,7 @@
                     },
                     didDrawCell: function (data) {
                         console.log(`Processing row ${data.row.index}, column ${data.column.index}`);
-                        if (data.column.index === 8 && data.row.index > 0) {
+                        if (data.column.index === 7 && data.row.index > 0) {
                             const imageBase64 = tableData[data.row.index][data.column.index + 1];
                             console.log(`Processing image for row ${data.row.index}:`, imageBase64);
                             if (imageBase64) {
@@ -384,6 +455,51 @@
                 };
             });
         };
+
+        // JavaScript untuk Dropdown Menu
+        const profileIcon = document.getElementById('profile-img');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        // Toggle dropdown menu saat foto profil diklik
+        profileIcon.addEventListener('click', (event) => {
+            event.stopPropagation(); // Mencegah event bubbling
+            dropdownMenu.classList.toggle('show');
+        });
+
+        // Menyembunyikan dropdown menu jika klik di luar area dropdown
+        window.addEventListener('click', () => {
+            dropdownMenu.classList.remove('show');
+        });
+
+        // Popup Logout
+        const logoutLink = document.getElementById('logoutLink');
+        const popupOverlay = document.getElementById('popupOverlay');
+        const confirmLogout = document.getElementById('confirmLogout');
+        const cancelLogout = document.getElementById('cancelLogout');
+
+        logoutLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            popupOverlay.style.display = 'block';
+        });
+
+        cancelLogout.addEventListener('click', () => {
+            popupOverlay.style.display = 'none';
+        });
+
+        confirmLogout.addEventListener('click', () => {
+            window.location.href = '<?= base_url('/') ?>';
+        });
+
+        // Toggle Dark Mode
+        const toggleDarkModeButton = document.getElementById('toggleDarkMode');
+        const body = document.body;
+
+        toggleDarkModeButton.addEventListener('click', function () {
+            body.classList.toggle('dark-mode');
+            toggleDarkModeButton.src = body.classList.contains('dark-mode')
+                ? '<?php echo base_url("assets/images/sun.png"); ?>'
+                : '<?php echo base_url("assets/images/moon.png"); ?>';
+        });
     });
 </script>
 </body>
