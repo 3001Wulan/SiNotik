@@ -102,4 +102,31 @@ class Auth extends BaseController
         log_message('info', 'User Data for Update: ' . print_r($userData, true));
         return view('admin/ubahdatapengguna', $userData);
     }
+    public function detailnotulen()
+{
+    $session = session();
+
+    // Pastikan pengguna sudah login
+    if (!$session->get('logged_in')) {
+        return redirect()->to('/login');
+    }
+
+    // Mendapatkan foto profil atau menggunakan default jika tidak ada
+    $profil_foto = $session->get('profil_foto') ? $session->get('profil_foto') : 'delvaut.png';
+
+    // Menyiapkan data pengguna untuk dikirim ke view
+    $userData = [
+        'user_id' => $session->get('user_id'),
+        'nama' => $session->get('nama'),
+        'email' => $session->get('email'),
+        'role' => $session->get('role'),
+        'profil_foto' => $profil_foto
+    ];
+
+    log_message('info', 'User Data for Notulensi: ' . print_r($userData, true));
+
+    // Mengirim data pengguna ke view notulen/detailnotulen
+    return view('notulen/detailnotulen', $userData);
+}
+
 }

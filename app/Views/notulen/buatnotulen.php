@@ -82,131 +82,151 @@
                     </div>
                 </div>
             </div>
-
             <div class="dashboard-title">
-                <h2>Buat Notulensi</h2>
-            </div>
+    <h2>Buat Notulensi</h2>
+</div>
 
-            <div class="form-container">
-                <div class="stat-box">
-                    <form action="<?= base_url('notulen/simpan') ?>" method="POST" enctype="multipart/form-data">
-                        <label for="judul" class="label-judul">Judul</label><br>
-                        <input type="text" id="judul" name="judul" class="input-judul" placeholder=""><br><br>
+<div class="form-container">
+    <div class="stat-box">
+        <form action="<?= base_url('notulen/simpan') ?>" method="POST" enctype="multipart/form-data">
+            <label for="judul" class="label-judul">Judul</label>
+            <input type="text" id="judul" name="judul" class="input-judul" placeholder="">
 
-                        <label for="agenda" class="label-agenda">Agenda</label><br>
-                        <textarea id="agenda" name="agenda" class="textarea-agenda" placeholder=""></textarea><br><br>
+            <label for="agenda" class="label-agenda">Agenda</label>
+            <textarea id="agenda" name="agenda" class="textarea-agenda" placeholder=""></textarea>
 
-                        <label for="tanggal" class="label-tanggal">Tanggal</label><br>
-                        <input type="date" id="tanggal" name="tanggal" class="input-tanggal" 
-                               min="2010-01-01" max="2030-12-31"><br><br>
+            <label for="tanggal" class="label-tanggal">Tanggal</label>
+            <input type="date" id="tanggal" name="tanggal" class="input-tanggal" min="2010-01-01" max="2030-12-31">
 
-                        <label for="partisipan" class="label-partisipan">Partisipan</label><br>
-                        <textarea id="partisipan" name="partisipan" class="textarea-partisipan" placeholder=""></textarea><br><br>
-                </div>
-
-                <div class="stat-box-2">
-                        <label for="pembahasan" class="label-pembahasan">Pembahasan</label><br>
-                        <textarea id="pembahasan" name="pembahasan" class="textarea-pembahasan" placeholder=""></textarea><br><br>
-
-                        <label for="upload" class="upload-label">Upload Dokumentasi (<span>file maks 5 MB</span>)</label><br>
-                        <input type="file" id="upload" name="upload"><br><br>
-
-                        <button type="submit">Simpan</button>
-                    </form>
-                </div>
-            </div>
-        </div>
+            <label for="partisipan" class="label-partisipan">Partisipan</label>
+            <textarea id="partisipan" name="partisipan" class="textarea-partisipan" placeholder=""></textarea>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const themeIcon = document.getElementById('theme-icon');
-            const body = document.body;
+    <div class="stat-box-2">
+        <div class="textarea-container">
+            <textarea id="pembahasan" name="pembahasan" class="textarea-pembahasan" placeholder=""></textarea>
+            <button type="button" id="speech-btn" class="mic-button">
+                <img src="<?= base_url('assets/images/microphone.png') ?>" alt="Voice" class="mic-icon">
+            </button>
+        </div>
 
-            if (localStorage.getItem('theme') === 'dark') {
-                body.classList.add('dark-mode');
-                themeIcon.src = '<?= base_url("assets/images/sun.png") ?>';
-            } else {
-                themeIcon.src = '<?= base_url("assets/images/moon.png") ?>';
+        <label for="upload" class="upload-label">Upload Dokumentasi (<span>file maks 5 MB</span>)</label>
+        <input type="file" id="upload" name="upload">
+
+        <button type="submit">Simpan</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const themeIcon = document.getElementById('theme-icon');
+        const body = document.body;
+
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            themeIcon.src = '<?= base_url("assets/images/sun.png") ?>';
+        } else {
+            themeIcon.src = '<?= base_url("assets/images/moon.png") ?>';
+        }
+
+        themeIcon.addEventListener('click', function () {
+            body.classList.toggle('dark-mode');
+            const isDark = body.classList.contains('dark-mode');
+            themeIcon.src = isDark ? '<?= base_url("assets/images/sun.png") ?>' : '<?= base_url("assets/images/moon.png") ?>';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+
+        tinymce.init({
+            selector: '#pembahasan',
+            plugins: 'lists link image table code',
+            toolbar: 'undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist | link image table | code | speechToText',
+            height: 300,
+            setup: function (editor) {
+                editor.ui.registry.addButton('speechToText', {
+                    text: '',
+                    tooltip: 'Gunakan suara untuk mengetik',
+                    icon: 'microphone',
+                    onAction: function () {
+                        startSpeechToText(editor);
+                    }
+                });
+            }
+        });
+
+        function startSpeechToText(editor) {
+            if (!('webkitSpeechRecognition' in window)) {
+                alert("Browser tidak mendukung Speech Recognition.");
+                return;
             }
 
-            themeIcon.addEventListener('click', function () {
-                body.classList.toggle('dark-mode');
-                if (body.classList.contains('dark-mode')) {
-                    themeIcon.src = '<?= base_url("assets/images/sun.png") ?>';
-                    localStorage.setItem('theme', 'dark');
-                } else {
-                    themeIcon.src = '<?= base_url("assets/images/moon.png") ?>';
-                    localStorage.setItem('theme', 'light');
-                }
-            });
-            tinymce.init({
-    selector: '#pembahasan',
-    plugins: 'lists link image table code',
-    toolbar: 'undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist | link image table | code',
-    height: 300,
-    images_upload_url: '/upload-image',  // URL server yang menerima file gambar
-    automatic_uploads: true,  // Aktifkan pengunggahan otomatis
-    images_upload_base_path: '/upload/', // Base path untuk gambar yang di-upload
-    file_picker_types: 'image', // Menampilkan hanya opsi gambar saat memilih file
-    file_picker_callback: function (callback, value, meta) {
-        // Fungsi ini digunakan untuk memilih gambar dari perangkat
-        var input = document.createElement('input');
-        input.type = 'file';
-        input.accept = 'image/*';
-        input.onchange = function () {
-            var file = input.files[0];
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                // Kirim gambar ke TinyMCE
-                callback(e.target.result, { alt: file.name });
+            const recognition = new webkitSpeechRecognition();
+            recognition.lang = 'id-ID';
+            recognition.continuous = false;
+            recognition.interimResults = false;
+            
+            recognition.start();
+
+            recognition.onresult = function (event) {
+                const text = event.results[0][0].transcript;
+                editor.insertContent(text);
             };
-            reader.readAsDataURL(file);
-        };
-        input.click();
-    }
-});
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Tema dan Dropdown Logic
-});
+            recognition.onerror = function (event) {
+                console.error("Speech recognition error:", event.error);
+                alert("Terjadi kesalahan saat mendengarkan.");
+            };
+        }
 
-
-            const profilePic = document.getElementById('profile-pic');
-            const dropdownMenu = document.getElementById('profile-dropdown');
-
-            profilePic.addEventListener('click', function () {
-                dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
-            });
-
-            window.addEventListener('click', function (e) {
-                if (!profilePic.contains(e.target) && !dropdownMenu.contains(e.target)) {
-                    dropdownMenu.style.display = 'none';
-                }
-
-                const logoutBtn = document.getElementById('logout-btn');
-                const logoutModal = document.getElementById('logout-modal');
-                const closeBtn = document.querySelector('.close-btn');
-                const cancelBtn = document.querySelector('.cancel-logout');
-                const confirmBtn = document.querySelector('.confirm-logout');
-
-                logoutBtn.onclick = function() {
-                    logoutModal.style.display = 'flex';
-                };
-
-                closeBtn.onclick = function() {
-                    logoutModal.style.display = 'none';
-                };
-
-                cancelBtn.onclick = function() {
-                    logoutModal.style.display = 'none';
-                };
-
-                confirmBtn.onclick = function() {
-                    window.location.href = 'logout.php'; 
-                };
-            });
+        document.getElementById('speech-btn').addEventListener('click', function () {
+            startSpeechToText(tinymce.get('pembahasan'));
         });
-    </script>
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+        const speechBtn = document.getElementById('speech-btn');
+        const micIcon = speechBtn.querySelector('img');
+        let recognition;
+        let isListening = false;
+
+        if ('webkitSpeechRecognition' in window) {
+            recognition = new webkitSpeechRecognition();
+            recognition.lang = 'id-ID';
+            recognition.continuous = false;
+            recognition.interimResults = false;
+
+            recognition.onstart = function () {
+                isListening = true;
+                micIcon.src = '<?= base_url("assets/images/microphoneaktif.png") ?>';
+                speechBtn.classList.add('listening');
+            };
+
+            recognition.onend = function () {
+                isListening = false;
+                micIcon.src = '<?= base_url("assets/images/microphone.png") ?>';
+                speechBtn.classList.remove('listening');
+            };
+
+            recognition.onresult = function (event) {
+                const text = event.results[0][0].transcript;
+                tinymce.get('pembahasan').insertContent(text);
+            };
+
+            recognition.onerror = function (event) {
+                alert("Terjadi kesalahan saat mendengarkan.");
+                isListening = false;
+                micIcon.src = '<?= base_url("assets/images/microphone.png") ?>';
+                speechBtn.classList.remove('listening');
+            };
+        }
+
+        speechBtn.addEventListener('click', function () {
+            if (isListening) {
+                recognition.stop();
+            } else {
+                recognition.start();
+            }
+        });
+    });
+</script>
 </body>
 </html>

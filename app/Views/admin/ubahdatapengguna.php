@@ -35,169 +35,183 @@
             </ul>
         </div>
 
-        <!-- Content Area -->
         <div class="content">
-            <div class="top-bar">
-                <!-- Dark Mode Button -->
-                <div class="toggle-dark-mode">
-                    <img id="toggleDarkMode" src="<?php echo base_url('assets/images/moon.png'); ?>" alt="Dark Mode">
-                </div>
+    <div class="top-bar">
+        <!-- Dark Mode Button -->
+        <div class="toggle-dark-mode">
+            <img id="toggleDarkMode" src="<?php echo base_url('assets/images/moon.png'); ?>" alt="Dark Mode">
+        </div>
 
-                <!-- Profil -->
-                <div class="user-info">
-                    <div class="user-text">
-                        <div class="user-name">
-                            <span><?= session()->get('nama') ? session()->get('nama') : 'Nama Tidak Ditemukan'; ?></span>
-                        </div>
-                        <div class="user-role">
-                            <span><?= session()->get('role') ? ucfirst(session()->get('role')) : 'Role Tidak Ditemukan'; ?></span>
-                        </div>
-                    </div>
-                    <div>
-                        <img src="<?= base_url('assets/images/profiles/' . (file_exists('assets/images/profiles/' . session()->get('profil_foto')) ? session()->get('profil_foto') : 'delvaut.png')) ?>" alt="User Photo" class="header-profile-img" id="profile-icon">
-                    </div>
-                    <!-- Dropdown Menu -->
-                    <div class="dropdown-menu" id="dropdownMenu">
-                        <a href="<?= base_url('admin/profiladmin') ?>" class="dropdown-item">
-                            <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
-                            Profil
-                        </a>
-                        <a href="#" class="dropdown-item" id="logoutLink">
-                            <img src="<?= base_url('assets/images/icon_logout.png') ?>" alt="Logout" class="dropdown-icon">
-                            Logout
-                        </a>
-                    </div>
+        <!-- Profil -->
+        <div class="user-info">
+            <div class="user-text">
+                <div class="user-name">
+                    <span><?= session()->get('nama') ? session()->get('nama') : 'Nama Tidak Ditemukan'; ?></span>
+                </div>
+                <div class="user-role">
+                    <span><?= session()->get('role') ? ucfirst(session()->get('role')) : 'Role Tidak Ditemukan'; ?></span>
                 </div>
             </div>
-
-            <div class="page-title">
-    <h1>Ubah Data Pengguna</h1>
-</div>
-
-<div class="forms-wrapper">
-    <!-- Form (Kiri) -->
-    <div class="forms-container">
-        <!-- Form Unggah Gambar -->
-        <form id="form-unggah-gambar" action="<?= site_url('admin/ubahdatapengguna/'.$user['user_id'].'/update') ?>" method="post" enctype="multipart/form-data">
-            <?= csrf_field() ?>
-            <h2>Form Foto</h2>
-            <div class="upload-container">
-                <label for="photo" class="upload-label">Unggah Foto</label>
-                <span class="file-size-info">(ukuran file maksimal 5MB!)</span>
+            <div>
+                <img src="<?= base_url('assets/images/profiles/' . (file_exists('assets/images/profiles/' . session()->get('profil_foto')) ? session()->get('profil_foto') : 'delvaut.png')) ?>" alt="User Photo" class="header-profile-img" id="profile-icon">
             </div>
-            <input type="file" id="photo" name="photo" accept="image/*">
-    
-            <!-- Kotak untuk Preview Gambar -->
-            <div id="preview-container">
-                <img id="previewImage" alt="Preview">
+            <!-- Dropdown Menu -->
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a href="<?= base_url('admin/profiladmin') ?>" class="dropdown-item">
+                    <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
+                    Profil
+                </a>
+                <a href="#" class="dropdown-item" id="logoutLink">
+                    <img src="<?= base_url('assets/images/icon_logout.png') ?>" alt="Logout" class="dropdown-icon">
+                    Logout
+                </a>
             </div>
-    
-            <p id="error-message" style="color: red; display: none;">Ukuran file tidak boleh lebih dari 5MB!</p>
-        </form>
-
-        <!-- Form Input Password -->
-        <form id="form-password" action="<?= site_url('admin/ubahdatapengguna/'.$user['user_id'].'/update') ?>" method="post">
-            <?= csrf_field() ?>
-            <h2>Form Password</h2>
-            <label for="password">Password</label>
-            <div class="input-container">
-                <input type="password" id="password" name="password" placeholder="input password here">
-                <img src="<?php echo base_url('assets/images/Lock.png'); ?>" alt="Lock Icon" class="icon">
-            </div>
-
-            <label for="confirm-password">Confirm Password</label>
-            <div class="input-container">
-                <input type="password" id="confirm-password" name="confirm-password" placeholder="input password here">
-                <img src="<?php echo base_url('assets/images/Lock.png'); ?>" alt="Lock Icon" class="icon">
-            </div>
-        </form>
+        </div>
     </div>
 
-    <!-- Form (Kanan) -->
-    <div class="form-container">
-        <form id="form-data-pengguna" action="<?= site_url('admin/ubahdatapengguna/'.$user['user_id'].'/update') ?>" method="post">
-            <?= csrf_field() ?>
-            <h2>Form Pengguna</h2>
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" value="<?= old('username', $user['username']) ?>" placeholder="input username here" required>
-
-            <label for="nama">Nama Lengkap</label>
-            <input type="text" id="nama" name="nama" value="<?= old('nama', $user['nama']) ?>" placeholder="input full name here" required>
-
-            <label for="nip">NIP</label>
-            <input type="text" id="nip" name="nip" value="<?= old('nip', $user['nip']) ?>" placeholder="input NIP here" required>
-
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" value="<?= old('email', $user['email']) ?>" placeholder="input email here" required>
-
-            <label for="status">Status</label>
-            <input type="text" id="status" name="status" value="<?= old('status', $user['role']) ?>" placeholder="input status here" required>
-
-            <label for="bidang">Bidang</label>
-            <input type="text" id="bidang" name="bidang" value="<?= old('bidang', $user['Bidang']) ?>" placeholder="input bidang here" required>
-
-            <label for="jabatan">Jabatan</label>
-            <input type="text" id="jabatan" name="jabatan" value="<?= old('jabatan', $user['jabatan']) ?>" placeholder="input jabatan here" required>
-        </form>
+    <div class="page-title">
+        <h1>Ubah Data Pengguna</h1>
     </div>
-</div>
 
-<!-- Button Simpan Perubahan -->
-<div class="button-container">
-    <button type="button" id="simpan-perubahan" class="submit-btn">
-        Simpan Perubahan
-        <img src="<?php echo base_url('assets/images/simpan.png'); ?>" alt="Save Icon" class="save-icon">
-    </button>
-</div>
-
-        <!-- Popup Logout -->
-        <div class="popup-overlay" id="popupOverlay">
-            <div class="popup">
-                <img src="<?= base_url('assets/images/logout_warning.png') ?>" alt="Logout Warning" class="popup-image">
-                <h3>Anda ingin logout?</h3>
-                <div class="popup-buttons">
-                    <button class="btn-yes" id="confirmLogout">Ya</button>
-                    <button class="btn-no" id="cancelLogout">Tidak</button>
+    <div class="forms-wrapper">
+        <!-- Form (Kiri) -->
+        <div class="forms-container">
+            <!-- Form Unggah Gambar -->
+            <form id="form-unggah-gambar" action="<?= site_url('admin/ubahdatapengguna/'.$user['user_id'].'/update') ?>" method="post" enctype="multipart/form-data">
+                <?= csrf_field() ?>
+                <h2>Form Foto</h2>
+                <div class="upload-container">
+                    <label for="photo" class="upload-label">Unggah Foto</label>
+                    <span class="file-size-info">(ukuran file maksimal 5MB!)</span>
                 </div>
-            </div>
-        </div> 
+                <input type="file" id="photo" name="photo" accept="image/*">
+        
+                <!-- Kotak untuk Preview Gambar -->
+                <div id="preview-container">
+                    <img id="previewImage" alt="Preview">
+                </div>
+        
+                <p id="error-message" style="color: red; display: none;">Ukuran file tidak boleh lebih dari 5MB!</p>
+            </form>
+
+            <!-- Form Input Password -->
+            <form id="form-password" action="<?= site_url('admin/ubahdatapengguna/'.$user['user_id'].'/update') ?>" method="post">
+                <?= csrf_field() ?>
+                <h2>Form Password</h2>
+                <label for="password">Password</label>
+                <div class="input-container">
+                    <input type="password" id="password" name="password" placeholder="input password here">
+                    <img src="<?php echo base_url('assets/images/Lock.png'); ?>" alt="Lock Icon" class="icon">
+                </div>
+
+                <label for="confirm-password">Confirm Password</label>
+                <div class="input-container">
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="input password here">
+                    <img src="<?php echo base_url('assets/images/Lock.png'); ?>" alt="Lock Icon" class="icon">
+                </div>
+            </form>
+        </div>
+
+        <!-- Form (Kanan) -->
+        <div class="form-container">
+            <form id="form-data-pengguna" action="<?= site_url('admin/ubahdatapengguna/'.$user['user_id'].'/update') ?>" method="post">
+                <?= csrf_field() ?>
+                <h2>Form Pengguna</h2>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" value="<?= old('username', $user['username']) ?>" placeholder="input username here" required>
+
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" name="nama" value="<?= old('nama', $user['nama']) ?>" placeholder="input full name here" required>
+
+                <label for="nip">NIP</label>
+                <input type="text" id="nip" name="nip" value="<?= old('nip', $user['nip']) ?>" placeholder="input NIP here" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" value="<?= old('email', $user['email']) ?>" placeholder="input email here" required>
+
+                <label for="status">Status</label>
+                <input type="text" id="status" name="status" value="<?= old('status', $user['role']) ?>" placeholder="input status here" required>
+
+                <label for="bidang">Bidang</label>
+                <input type="text" id="bidang" name="bidang" value="<?= old('bidang', $user['Bidang']) ?>" placeholder="input bidang here" required>
+
+                <label for="jabatan">Jabatan</label>
+                <input type="text" id="jabatan" name="jabatan" value="<?= old('jabatan', $user['jabatan']) ?>" placeholder="input jabatan here" required>
+            </form>
+        </div>
     </div>
 
-    <script>
-        document.getElementById('simpan-perubahan').addEventListener('click', function() {
-        // Menambahkan validasi foto jika diperlukan
+    <!-- Button Simpan Perubahan -->
+    <div class="button-container">
+        <button type="button" id="simpan-perubahan" class="submit-btn">
+            Simpan Perubahan
+            <img src="<?php echo base_url('assets/images/simpan.png'); ?>" alt="Save Icon" class="save-icon">
+        </button>
+    </div>
+
+    <!-- Popup Logout -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup">
+            <img src="<?= base_url('assets/images/logout_warning.png') ?>" alt="Logout Warning" class="popup-image">
+            <h3>Anda ingin logout?</h3>
+            <div class="popup-buttons">
+                <button class="btn-yes" id="confirmLogout">Ya</button>
+                <button class="btn-no" id="cancelLogout">Tidak</button>
+            </div>
+        </div>
+    </div> 
+</div>
+
+<script>
+    // Mengirim data formulir dengan AJAX
+    document.getElementById('simpan-perubahan').addEventListener('click', function() {
+        var formData = new FormData();
+        
+        // Menambahkan data form foto
         var fileInput = document.getElementById('photo');
-        var errorMessage = document.getElementById('error-message');
-        var form1 = document.getElementById('form-unggah-gambar');
-        var form2 = document.getElementById('form-password');
-        var form3 = document.getElementById('form-data-pengguna');
-
-        // Validasi ukuran file foto
-        if (fileInput.files[0] && fileInput.files[0].size > 5 * 1024 * 1024) {
-            errorMessage.style.display = 'block';
-            return; // Mencegah pengiriman form jika file terlalu besar
-        } else {
-            errorMessage.style.display = 'none';
+        if (fileInput.files[0]) {
+            formData.append('photo', fileInput.files[0]);
         }
 
-        // Mengirimkan semua form
-        form1.submit();
-        form2.submit();
-        form3.submit();
+        // Menambahkan data form password
+        formData.append('password', document.getElementById('password').value);
+        formData.append('confirm-password', document.getElementById('confirm-password').value);
+
+        // Menambahkan data form pengguna
+        formData.append('username', document.getElementById('username').value);
+        formData.append('nama', document.getElementById('nama').value);
+        formData.append('nip', document.getElementById('nip').value);
+        formData.append('email', document.getElementById('email').value);
+        formData.append('status', document.getElementById('status').value);
+        formData.append('bidang', document.getElementById('bidang').value);
+        formData.append('jabatan', document.getElementById('jabatan').value);
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '<?= site_url('admin/ubahdatapengguna/'.$user['user_id'].'/update') ?>', true);
+
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                alert('Data berhasil diperbarui!');
+            } else {
+                alert('Gagal memperbarui data.');
+            }
+        };
+
+        xhr.send(formData);
     });
-        // Toggle Dark Mode
-        const toggleDarkModeButton = document.getElementById('toggleDarkMode');
-        const body = document.body;
 
-        toggleDarkModeButton.addEventListener('click', function () {
-            body.classList.toggle('dark-mode');
-            toggleDarkModeButton.src = body.classList.contains('dark-mode')
-                ? '<?php echo base_url("assets/images/sun.png"); ?>'
-                : '<?php echo base_url("assets/images/moon.png"); ?>';
-        });
+    // Toggle Dark Mode
+    const toggleDarkModeButton = document.getElementById('toggleDarkMode');
+    const body = document.body;
 
-        // Image Preview and Validation
-        const photoInput = document.getElementById('photo');
+    toggleDarkModeButton.addEventListener('click', function () {
+        body.classList.toggle('dark-mode');
+        toggleDarkModeButton.src = body.classList.contains('dark-mode')
+            ? '<?php echo base_url("assets/images/sun.png"); ?>'
+            : '<?php echo base_url("assets/images/moon.png"); ?>';
+    });
+
+    const photoInput = document.getElementById('photo');
         const previewImage = document.getElementById('previewImage');
         const previewContainer = document.getElementById('preview-container');
         const errorMessage = document.getElementById('error-message');
@@ -224,51 +238,7 @@
                 }
             }
         });
+</script>
 
-        // Password Validation
-        const passwordField = document.getElementById('password');
-        const confirmPasswordField = document.getElementById('confirm-password');
-
-        document.getElementById('form-password').addEventListener('submit', function (e) {
-            if (passwordField.value !== confirmPasswordField.value) {
-                e.preventDefault();
-                alert('Password dan konfirmasi password tidak cocok!');
-            }
-        });
-
-        // JavaScript untuk Dropdown Menu
-        const profileIcon = document.getElementById('profile-icon');
-        const dropdownMenu = document.getElementById('dropdownMenu');
-
-        // Toggle dropdown menu saat foto profil diklik
-        profileIcon.addEventListener('click', (event) => {
-            event.stopPropagation(); // Mencegah event bubbling
-            dropdownMenu.classList.toggle('show');
-        });
-
-        // Menyembunyikan dropdown menu jika klik di luar area dropdown
-        window.addEventListener('click', () => {
-            dropdownMenu.classList.remove('show');
-        });
-
-        // Popup Logout
-        const logoutLink = document.getElementById('logoutLink');
-        const popupOverlay = document.getElementById('popupOverlay');
-        const confirmLogout = document.getElementById('confirmLogout');
-        const cancelLogout = document.getElementById('cancelLogout');
-
-        logoutLink.addEventListener('click', (event) => {
-            event.preventDefault();
-            popupOverlay.style.display = 'block';
-        });
-
-        cancelLogout.addEventListener('click', () => {
-            popupOverlay.style.display = 'none';
-        });
-
-        confirmLogout.addEventListener('click', () => {
-            window.location.href = '<?= base_url('/') ?>';
-        });
-    </script>
 </body>
 </html>

@@ -60,7 +60,7 @@ $current_page = 'data_pengguna';
                         </div>
                     </div>
                     <div>
-                        <img src="<?= base_url('assets/images/profiles/' . $user_profile['profil_foto']) ?>" alt="User Photo" class="header-profile-img" id="profile-icon">
+                        <img src="<?= base_url('assets/images/profiles/' . $user_profile['profil_foto']) ?>" alt="User  Photo" class="header-profile-img" id="profile-icon">
                     </div>
                 </div>
             </div>
@@ -71,10 +71,10 @@ $current_page = 'data_pengguna';
                     <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
                     Profil
                 </a>
-                    <a href="#" class="dropdown-item" id="logoutLink">
-                        <img src="<?= base_url('assets/images/icon_logout.png') ?>" alt="Logout" class="dropdown-icon">
-                        Logout
-                    </a>
+                <a href="#" class="dropdown-item" id="logoutLink">
+                    <img src="<?= base_url('assets/images/icon_logout.png') ?>" alt="Logout" class="dropdown-icon">
+                    Logout
+                </a>
             </div>
 
             <!-- Popup khusus untuk logout -->
@@ -89,7 +89,7 @@ $current_page = 'data_pengguna';
                 </div>
             </div>
 
-            <!-- Page Tittle -->
+            <!-- Page Title -->
             <div class="page-title">
                 <h1>Data Pengguna</h1>
 
@@ -146,7 +146,7 @@ $current_page = 'data_pengguna';
                                         <td><?= $index + 1 ?></td>
                                         <td>
                                             <?php if (!empty($user['profil_foto'])): ?>
-                                                <img src="/assets/images/profiles/<?= $user['profil_foto'] ?>" alt="User Photo" class="header-profile-img" id="profile-icon">
+                                                <img src="/assets/images/profiles/<?= esc($user['profil_foto']) ?>" alt="User  Photo" class="header-profile-img" id="profile-icon">
                                             <?php else: ?>
                                                 <img src="<?= base_url('assets/images/delvaut.png') ?>" alt="Foto Profil" class="profile-pic">
                                             <?php endif; ?>
@@ -227,7 +227,7 @@ $current_page = 'data_pengguna';
                 pageNumber.textContent = 1; 
             } else {
                 allData.forEach(row => (row.style.display = 'none')); 
-                filteredData.slice(startIndex, endIndex).forEach(row => (row.style.display = '')); \
+                filteredData.slice(startIndex, endIndex).forEach(row => (row.style.display = '')); 
 
                 // Show or hide navigation buttons
                 previousBtn.style.display = currentPage > 1 ? 'inline-block' : 'none';
@@ -267,7 +267,7 @@ $current_page = 'data_pengguna';
         }
 
         // Function to delete user data
-        function deleteUser(userId) {
+        function deleteUser (userId) {
             fetch('<?php echo site_url('DetailPenggunaController/hapusData'); ?>', {
                 method: 'POST',
                 headers: {
@@ -311,18 +311,18 @@ $current_page = 'data_pengguna';
                 return;
             }
 
-        // Edit button click
-        if (event.target.closest('.btn-edit')) {
-            event.preventDefault();
-            const userId = clickedRow.dataset.userId; 
-            window.location.href = `<?php echo site_url('admin/ubahdatapengguna/'); ?>${userId}`; 
-            return;
-        }
+            // Edit button click
+            if (event.target.closest('.btn-edit')) {
+                event.preventDefault();
+                const userId = clickedRow.dataset.userId; 
+                window.location.href = `<?php echo site_url('admin/ubahdatapengguna/'); ?>${userId}`; 
+                return;
+            }
 
             if (!event.target.closest('.btn-edit') && !event.target.closest('.btn-delete')) {
-            window.location.href = clickedRow.dataset.href;
+                window.location.href = clickedRow.dataset.href;
             }
-    });
+        });
 
         // Cancel delete button
         cancelDelete.addEventListener('click', () => {
@@ -334,7 +334,7 @@ $current_page = 'data_pengguna';
         confirmDelete.addEventListener('click', () => {
             if (selectedRow) {
                 const userId = selectedRow.dataset.userId;
-                deleteUser(userId);
+                deleteUser (userId);
             }
             deletePopup.style.display = 'none';
             selectedRow = null;
@@ -373,38 +373,35 @@ $current_page = 'data_pengguna';
         updateTable();
     });
 
-        const profileIcon = document.getElementById('profile-icon');
-        const dropdownMenu = document.getElementById('dropdownMenu');
+    const profileIcon = document.getElementById('profile-icon');
+    const dropdownMenu = document.getElementById('dropdownMenu');
 
-        profileIcon.addEventListener('click', function() {
-            if (dropdownMenu.style.display === 'none' || dropdownMenu.style.display === '') {
-                dropdownMenu.style.display = 'block';
-            } else {
-                dropdownMenu.style.display = 'none';
-            }
-        });
+    profileIcon.addEventListener('click', function() {
+        if (dropdownMenu.style.display === 'none' || dropdownMenu.style.display === '') {
+            dropdownMenu.style.display = 'block';
+        } else {
+            dropdownMenu.style.display = 'none';
+        }
+    });
 
-        document.getElementById('logoutLink').addEventListener('click', function() {
-       });
+    const logoutLink = document.getElementById('logoutLink');
+    const logoutPopupOverlay = document.getElementById('logoutPopupOverlay'); 
+    const confirmLogout = document.getElementById('confirmLogout'); 
+    const cancelLogout = document.getElementById('cancelLogout'); 
 
-        const logoutLink = document.getElementById('logoutLink');
-        const logoutPopupOverlay = document.getElementById('logoutPopupOverlay'); 
-        const confirmLogout = document.getElementById('confirmLogout'); 
-        const cancelLogout = document.getElementById('cancelLogout'); 
+    logoutLink.addEventListener('click', function (e) {
+        e.preventDefault(); 
+        logoutPopupOverlay.style.display = 'flex'; 
+    });
 
-            logoutLink.addEventListener('click', function (e) {
-            e.preventDefault(); 
-            logoutPopupOverlay.style.display = 'flex'; 
-        });
+    confirmLogout.addEventListener('click', function () {
+        window.location.href = '<?= base_url("home") ?>'; 
+        logoutPopupOverlay.style.display = 'none'; 
+    });
 
-        confirmLogout.addEventListener('click', function () {
-            window.location.href = '<?= base_url("home") ?>'; 
-            logoutPopupOverlay.style.display = 'none'; 
-        });
-
-        cancelLogout.addEventListener('click', function () {
-            logoutPopupOverlay.style.display = 'none'; 
-        });
+    cancelLogout.addEventListener('click', function () {
+        logoutPopupOverlay.style.display = 'none'; 
+    });
     </script>
 </body>
 </html>

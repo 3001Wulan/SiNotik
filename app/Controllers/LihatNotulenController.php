@@ -28,6 +28,7 @@ class LihatNotulenController extends BaseController
                 'agenda' => $agenda,  
                 'agendaIsi' => $agendaIsi,  
                 'dokumentasi' => $dokumentasi,
+                'current_page' => 'notulensi'
             ];
     
             $allNotulensi = $notulensiModel->findAll(); 
