@@ -734,3 +734,113 @@ input::placeholder {
 .dark-mode .popup-buttons .btn-no:hover {
     background-color: #e53935;
 }
+.logout-popup-image {
+    height: 120px;
+    display: block;
+    margin: 0 auto 10px; 
+}
+.logout-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logout-popup {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    width: 100%;
+}
+
+.logout-popup h3 {
+    font-size: 25px;
+    color: #333;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.logout-popup-buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-logout-yes {
+    background-color: #025299;
+    color: white;
+}
+
+.btn-logout-yes:hover {
+    background-color: #0085C5;
+    transform: scale(1.1);
+}
+
+.btn-logout-no {
+    background-color: #025299; 
+    color: white;
+    font-weight: bolder;
+}
+
+.btn-logout-no:hover {
+    background-color: #e53935; 
+    transform: scale(1.1);
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    z-index: 100;
+}
+
+.dropdown-menu .dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bolder;
+    border-radius: 10px;
+}
+
+.dropdown-menu .dropdown-item .dropdown-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    color: white;
+    background-color: #025299;
+    border-bottom: 1px solid #025299;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    padding: 15px 10px;
+    font-size: 1.1em;
+}
+
+.dropdown-menu .dropdown-item:hover .dropdown-icon {
+    filter: brightness(0) invert(1);
+}
+
+.dropdown-menu.show {
+    display: block;
+}

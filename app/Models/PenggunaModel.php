@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use CodeIgniter\Model;
-use CodeIgniter\Log\Logger;
 
 class PenggunaModel extends Model
 {
@@ -12,7 +11,7 @@ class PenggunaModel extends Model
     protected $allowedFields = ['username', 'nama', 'nip', 'email', 'role', 'bidang', 'jabatan', 'profil_foto', 'password'];
     protected $useTimestamps = true;
 
-    // Fungsi untuk mengambil pengguna berdasarkan user_id
+    // Fungsi untuk mengambil data pengguna berdasarkan user_id
     public function getUserById($user_id)
     {
         $user = $this->where('user_id', $user_id)->first();
@@ -26,14 +25,20 @@ class PenggunaModel extends Model
         return $user;
     }
 
+    // Fungsi untuk update foto profil
+    public function updateProfilePhoto($user_id, $photoName)
+    {
+        log_message('debug', "Memperbarui foto profil pengguna ID: $user_id dengan nama file: $photoName");
+
+        return $this->update($user_id, ['profil_foto' => $photoName]);
+    }
+
     // Fungsi untuk memverifikasi password
     public function verifyPassword($user_id, $password)
     {
-        // Ambil data pengguna berdasarkan user_id
         $user = $this->where('user_id', $user_id)->first();
 
         if ($user) {
-            // Verifikasi password menggunakan password_verify (memeriksa hash)
             return password_verify($password, $user['password']);
         }
 
@@ -43,10 +48,8 @@ class PenggunaModel extends Model
     // Fungsi untuk memperbarui password
     public function updatePassword($user_id, $newPassword)
     {
-        // Hash password baru
         $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
 
-        // Update password di database
         return $this->update($user_id, ['password' => $hashedPassword]);
     }
 }

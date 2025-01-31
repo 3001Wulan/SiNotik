@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\PenggunaModel;
+use CodeIgniter\Controller;
 
 class UbahDataController extends BaseController
 {
@@ -13,7 +14,7 @@ class UbahDataController extends BaseController
         }
 
         $model = new PenggunaModel();
-        $data['user'] = $model->find($id); 
+        $data['user'] = $model->find($id);
 
         if (!$data['user']) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Pengguna tidak ditemukan');
@@ -24,18 +25,19 @@ class UbahDataController extends BaseController
 
     public function updatePengguna($id)
 {
+    $model = new PenggunaModel();
     $input = $this->request->getPost();
 
-    // Log data input yang diterima
     log_message('debug', 'Data input: ' . print_r($input, true));
 
-    // Validasi password jika ada input password
-    if (isset($input['password']) && isset($input['confirm-password'])) {
+    // Validasi password jika diinput
+    if (!empty($input['password']) && isset($input['confirm-password'])) {
         if ($input['password'] !== $input['confirm-password']) {
-            return redirect()->to("admin/ubahdatapengguna/$id")->withInput()->with('error', 'Password dan konfirmasi password tidak cocok');
+            return redirect()->to("admin/ubahdatapengguna/$id")->withInput()->with('error', 'Password dan konfirmasi tidak cocok');
         }
     }
 
+    // Aturan validasi
     $rules = [
         'username' => 'required|min_length[3]',
         'nama' => 'required|min_length[3]',
@@ -46,72 +48,63 @@ class UbahDataController extends BaseController
         'jabatan' => 'required',
     ];
 
-    // Hanya validasi field yang ada
-    if (isset($input['username']) && !$this->validate(['username' => $rules['username']])) {
-        return redirect()->to("admin/ubahdatapengguna/$id")->withInput()->with('errors', $this->validator->getErrors());
-    }
-    if (isset($input['nama']) && !$this->validate(['nama' => $rules['nama']])) {
+    // Validasi input
+    if (!$this->validate($rules)) {
         return redirect()->to("admin/ubahdatapengguna/$id")->withInput()->with('errors', $this->validator->getErrors());
     }
 
-    // Update data pengguna
-    $model = new PenggunaModel();
-    $data = [];
-
-    if (isset($input['username'])) {
-        $data['username'] = $input['username'];
-    }
-    if (isset($input['nama'])) {
-        $data['nama'] = $input['nama'];
-    }
-    if (isset($input['nip'])) {
-        $data['nip'] = $input['nip'];
-    }
-    if (isset($input['email'])) {
-        $data['email'] = $input['email'];
-    }
-    if (isset($input['status'])) {
-        $data['status'] = $input['status'];
-    }
-    if (isset($input['bidang'])) {
-        $data['bidang'] = $input['bidang'];
-    }
-    if (isset($input['jabatan'])) {
-        $data['jabatan'] = $input['jabatan'];
-    }
+    // Siapkan data untuk update
+    $data = [
+        'username' => $input['username'],
+        'nama' => $input['nama'],
+        'nip' => $input['nip'],
+        'email' => $input['email'],
+        'status' => $input['status'],
+        'bidang' => $input['bidang'],
+        'jabatan' => $input['jabatan'],
+    ];
 
     // Jika password diubah
-    if (isset($input['password']) && !empty($input['password'])) {
+    if (!empty($input['password'])) {
         $data['password'] = password_hash($input['password'], PASSWORD_DEFAULT);
     }
 
-    // Update data pengguna di database
-    if (!empty($data)) {
-        log_message('debug', 'Data yang akan diperbarui: ' . print_r($data, true));
-        $model->update($id, $data);
-    }
+    // Update data pengguna
+    log_message('debug', 'Data yang akan diperbarui: ' . print_r($data, true));
+    $model->update($id, $data);
 
-    // Menghandle upload foto jika ada
+    // **Upload Foto Profil**
     $photo = $this->request->getFile('photo');
     if ($photo && $photo->isValid() && !$photo->hasMoved()) {
-        // Log foto yang diterima
-        log_message('debug', 'Foto yang diterima: ' . $photo->getName() . ' dengan ukuran: ' . $photo->getSize());
+        // **Validasi ukuran dan ekstensi**
+        $maxSize = 5 * 1024 * 1024; // 5MB
+        $allowedExtensions = ['jpeg', 'jpg', 'png'];
+        $fileExtension = $photo->getExtension();
 
-        if ($photo->getSize() <= 5 * 1024 * 1024) { // Maksimal 5MB
-            // Pindahkan foto ke folder 'uploads'
-            $photo->move('assets/images/profiles', $photo->getName());
+        if ($photo->getSize() > $maxSize) {
+            return redirect()->to("admin/ubahdatapengguna/$id")->withInput()->with('error', 'Ukuran file maksimal 5MB');
+        }
 
-            // Update path foto di database
-            $model->update($id, ['photo' => $photo->getName()]);
+        if (!in_array($fileExtension, $allowedExtensions)) {
+            return redirect()->to("admin/ubahdatapengguna/$id")->withInput()->with('error', 'Format file tidak valid! Hanya diperbolehkan JPEG, JPG, atau PNG');
+        }
+
+        // Jika validasi berhasil, simpan file
+        $newName = $photo->getRandomName();
+        $photo->move('assets/images/profiles', $newName);
+
+        log_message('debug', "Foto berhasil diupload dengan nama: $newName");
+
+        // Update kolom `profil_foto` di database
+        if ($model->updateProfilePhoto($id, $newName)) {
+            log_message('debug', "Foto profil berhasil diperbarui di database untuk user_id: $id");
         } else {
-            return redirect()->to("admin/ubahdatapengguna/$id")->with('error', 'Ukuran foto terlalu besar');
+            log_message('error', "Gagal memperbarui foto profil di database untuk user_id: $id");
         }
     }
-
-    // Log jika proses berhasil
-    log_message('debug', 'Data pengguna berhasil diperbarui untuk ID: ' . $id);
 
     return redirect()->to('admin/data_pengguna')->with('message', 'Data pengguna berhasil diperbarui');
 }
 
-}    
+    
+}

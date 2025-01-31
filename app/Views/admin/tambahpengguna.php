@@ -157,16 +157,25 @@
     </div>
 
     <script>
-        // Toggle Dark Mode
-        const toggleDarkModeButton = document.getElementById('toggleDarkMode');
-        const body = document.body;
+          toggleDarkMode.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const darkModeEnabled = document.body.classList.contains('dark-mode');
+    localStorage.setItem('darkMode', darkModeEnabled);
 
-        toggleDarkModeButton.addEventListener('click', function () {
-            body.classList.toggle('dark-mode');
-            toggleDarkModeButton.src = body.classList.contains('dark-mode')
-                ? '<?= base_url("assets/images/sun.png"); ?>'
-                : '<?= base_url("assets/images/moon.png"); ?>';
-        });
+    toggleDarkMode.src = darkModeEnabled ? 
+        '<?php echo base_url('assets/images/sun.png'); ?>' : 
+        '<?php echo base_url('assets/images/moon.png'); ?>';
+});
+window.addEventListener('DOMContentLoaded', () => {
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+    if (isDarkMode) {
+        document.body.classList.add('dark-mode');
+        toggleDarkMode.src = '<?php echo base_url('assets/images/sun.png'); ?>';
+    } else {
+        toggleDarkMode.src = '<?php echo base_url('assets/images/moon.png'); ?>';
+    }
+});
+
 
         // Image Preview and Validation
         const photoInput = document.getElementById('photo');
