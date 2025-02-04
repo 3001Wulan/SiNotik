@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
     <link rel="stylesheet" href="<?= base_url('assets/css/profilnotulen.css') ?>">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+   
+
 </head>
 <body>
     <div class="container">
-        <!-- Sidebar -->
         <div class="sidebar">
             <div class="logo">
                 <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo">
@@ -20,7 +20,7 @@
                     <span>Dashboard</span>
                 </a>
                 <div class="separator"></div>
-                <!-- Modified Notulensi menu item with dropdown and icons -->
+               
                 <div class="menu-item dropdown">
                     <a href="#" class="menu-item-link">
                         <img src="<?= base_url('assets/images/notulensi.png') ?>" alt="Data User Icon">
@@ -46,27 +46,48 @@
             </div>
         </div>
 
-        <!-- Main Content -->
+ 
         <div class="main-content">
             <div class="header">
                 <div class="theme-toggle">
-                    <img src="<?= base_url('assets/images/bulan.png') ?>" alt="Toggle Theme" id="theme-icon">
+                    <img src="<?= base_url('assets/images/moon.png') ?>" alt="Toggle Theme" id="theme-icon">
                 </div>
                 <div class="user-info">
-                    <div class="profile-picture">
-                        <img src="<?= base_url('assets/images/default-avatar.png') ?>" alt="Profile Picture">
-                    </div>
-                </div>
-            </div>
+              <div class="profile-header" onclick="toggleDropdown()">
+                <img src="<?= base_url('assets/images/default-avatar.png') ?>" alt="Profile Picture">
+               </div>
 
-           
-            <!-- Profil Konten -->
+     <!-- Dropdown Menu -->
+<div class="dropdown-menu" id="profileDropdown">
+    <a href="<?= base_url('profile') ?>">
+        <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon"> Profil
+    </a>
+    <a href="#" id="logoutLink">
+        <img src="<?= base_url('assets/images/icon_logout.png') ?>" alt="Logout" class="dropdown-icon"> Logout
+    </a>
+   </div>
+  </div>
+</div>
+
+
+<!-- Popup Overlay -->
+<div class="popup-overlay" id="popupOverlay">
+    <div class="popup">
+        <img src="<?= base_url('assets/images/logout_warning.png') ?>" alt="Logout Warning" class="popup-image">
+        <h3> Anda  ingin logout?</h3>
+        <div class="popup-buttons">
+            <button class="btn-yes" id="confirmLogout">Ya</button>
+            <button class="btn-no" id="cancelLogout">Tidak</button>
+        </div>
+    </div>
+</div>
+
             <div class="profile-content">
                 <h2>Profil</h2>
                 <div class="profile-container">
                     <div class="profile-card">
                         <div class="avatar-container">
-                            <!-- Menampilkan Foto Profil yang Ada -->
+                      
                             <?php if (isset($user_profile['profil_foto']) && $user_profile['profil_foto']): ?>
                                 <img src="<?= base_url('assets/images/profiles/' . $user_profile['profil_foto']) ?>" alt="Foto Profil" class="profile-img">
                             <?php else: ?>
@@ -74,7 +95,6 @@
                             <?php endif; ?>
                             
                         </div>
-                        <!-- Tombol Edit Profil -->
                         <form action="editprofilnotulen" method="POST">
                             <input type="hidden" name="nama" value="<?= isset($user_profile['nama']) ? $user_profile['nama'] : 'N/A' ?>">
                             <input type="hidden" name="nip" value="<?= isset($user_profile['nip']) ? $user_profile['nip'] : 'N/A' ?>">
@@ -118,7 +138,6 @@
                             <label>Password</label>
                         <div class="value">
                         <?php 
-                            // Menghitung panjang password dan menampilkan bintang
                             $passwordLength = isset($user_profile['password']) ? strlen($user_profile['password']) : 0;
                             echo str_repeat('*', $passwordLength);
                         ?>
@@ -129,26 +148,55 @@
                             <label>Status</label>
                             <div class="value"><?= isset($user_profile['role']) ? $user_profile['role'] : 'N/A' ?></div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+         
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const themeIcon = document.getElementById('theme-icon');
-            const body = document.body;
-
-            themeIcon.addEventListener('click', function () {
-                body.classList.toggle('dark-mode');
-                if (body.classList.contains('dark-mode')) {
-                    themeIcon.src = '<?= base_url("assets/images/modegelap.png") ?>';
-                } else {
-                    themeIcon.src = '<?= base_url("assets/images/bulan.png") ?>';
-                }
-            });
+              const themeIcon = document.getElementById('theme-icon');
+        themeIcon.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                themeIcon.src = "<?= base_url('assets/images/sun.png') ?>";
+            } else {
+                themeIcon.src = "<?= base_url('assets/images/moon.png') ?>";
+            }
         });
+        function toggleDropdown() {
+        var dropdown = document.getElementById("profileDropdown");
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    }
+
+    document.addEventListener("click", function(event) {
+        var dropdown = document.getElementById("profileDropdown");
+        var profileHeader = document.querySelector(".profile-header");
+        
+        if (!profileHeader.contains(event.target)) {
+            dropdown.style.display = "none";
+        }
+    });
+// Ambil elemen popup dan tombol
+var popupOverlay = document.getElementById("popupOverlay");
+var logoutLink = document.getElementById("logoutLink");
+var confirmLogout = document.getElementById("confirmLogout");
+var cancelLogout = document.getElementById("cancelLogout");
+
+
+logoutLink.onclick = function(e) {
+    e.preventDefault();  
+    popupOverlay.style.display = "block";  
+}
+
+confirmLogout.onclick = function() {
+    window.location.href = "<?= base_url('logout') ?>";  
+}
+
+cancelLogout.onclick = function() {
+    popupOverlay.style.display = "none";  
+}
+
+window.onclick = function(event) {
+    if (event.target == popupOverlay) {
+        popupOverlay.style.display = "none";  
+    }
+}
     </script>
 </body>
 </html>
