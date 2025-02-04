@@ -1,5 +1,5 @@
- /* assets/css/notulensi.css */
- :root {
+
+:root {
     --primary-color: #0088cc;
     --sidebar-bg: #ffffff;
     --main-bg: #f5f5f5;
@@ -33,28 +33,359 @@ body {
 
 .container {
     display: flex;
-    min-height: 100vh;
+    min-height: 100vh; 
+    overflow-x: hidden;
 }
 
-/* Sidebar Styles */
 .sidebar {
-    width: 250px;
-    background-color: #0288D1;
-    padding: 20px;
-}
-
-.logo {
+    width: 300px;
+    background-color: #0085C5;
+    color: white;
+    min-height: 100%; 
+    padding: 30px 20px;
+    transition: background-color 0.3s;
     display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
+    flex-direction: column; 
+    outline: hidden;
 }
 
-.logo img {
-    width: 100px;
-    height: 100px;
+.sidebar .logo img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    margin-top: 30px;
 }
 
-/* Category Select Styles */
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 12px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    margin-bottom: 5px;
+    font-weight: bolder;
+    transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.sidebar ul li a.active,
+.sidebar ul li a.dashboard,
+.sidebar ul li a.riwayat-notulensi {
+    font-weight: bold !important;
+}
+
+.sidebar ul li a.inactive {
+    border-bottom: 1px solid #00000080;
+}
+
+.sidebar ul li a.inactive:hover {
+    color: white;
+    background-color: #025299;
+    border-bottom: 1px solid #025299;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    padding: 15px 10px;
+    font-size: 1.1em;
+}
+
+.sidebar ul li a.inactive:hover .sidebar-icon {
+    filter: brightness(0) invert(1);
+}
+
+.sidebar ul li a.active {
+    background-color: #025299;
+    color: white;
+    border-bottom: none;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    padding: 15px 10px;
+    font-size: 1.1em;
+}
+
+.sidebar ul li a.active .sidebar-icon {
+    filter: brightness(0) invert(1);
+}
+
+.dark-mode .sidebar {
+    background-color: #333333;
+}
+
+.dark-mode .sidebar ul li a {
+    color: black;
+}
+
+.dark-mode .sidebar ul li a.active {
+    background-color: #444444;
+    color: #fff;
+}
+
+.dark-mode .sidebar ul li a.inactive:hover {
+    background-color: #555555; 
+    border-bottom: 1px solid #444444; 
+    color: #fff; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+    padding: 15px 10px;
+    font-size: 1.1em;
+}
+
+.dark-mode .sidebar ul li a.inactive:hover .sidebar-icon {
+    filter: brightness(0) invert(1); 
+}
+
+.dark-mode .sidebar .sidebar-icon {
+    filter: brightness(0.7);
+}
+
+.notulensi-menu {
+    position: relative;
+}
+
+.notulensi-menu a img {
+    filter: brightness(0); /* Hitam di mode terang sebelum hover */
+    transition: filter 0.3s ease;
+}
+
+.notulensi-menu:hover a img,
+.notulensi-menu:focus-within a img {
+    filter: brightness(0)  !important; /* Putih saat hover */
+}
+
+.notulensi-menu {
+    position: relative;
+}
+
+.notulensi-menu a img {
+    filter: brightness(0) ;
+    transition: filter 0.3s ease;
+}
+
+
+
+.popup-menu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    z-index: 1;
+    margin-top: 30px;
+    margin-left: -165px;
+}
+
+.dark-mode .popup-menu {
+    background: #2c2c2c;
+}
+
+.popup-item {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.popup-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    filter: brightness(0) !important;
+    transition: all 0.3s ease;
+}
+
+
+.dark-mode .popup-item {
+    color: #fff;
+}
+
+.popup-item:hover {
+    background-color: #0D47A1; 
+    color: white !important;
+}
+
+.popup-item:hover img {
+    filter: brightness(0) invert(1) !important;
+}
+
+.dark-mode .popup-item:hover {
+    background-color: #3c3c3c; 
+}
+
+.sidebar .notulensi-menu .popup-menu .popup-item {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.sidebar .notulensi-menu .popup-menu .popup-item:hover {
+    background-color: #0D47A1 !important;
+    color: white !important;
+}
+
+.sidebar .notulensi-menu .popup-menu .popup-item:hover img {
+    filter: brightness(0) invert(1) !important;
+}
+
+.dark-mode .sidebar .notulensi-menu .popup-menu .popup-item {
+    color: #fff;
+}
+
+.dark-mode .sidebar .notulensi-menu .popup-menu .popup-item:hover {
+    background-color: #3c3c3c !important;
+    color: white !important;
+}
+
+.popup-item:hover {
+    background-color: #0D47A1 !important;
+    color: white !important;
+}
+
+.dark-mode .popup-item:hover {
+    background-color: #333 !important;
+}
+
+.notulensi-menu {
+    position: relative;
+}
+
+.notulensi-menu:hover > a,
+.notulensi-menu > a:hover,
+.notulensi-menu:hover > a.inactive {
+    background-color: #007bff;
+    color: white;
+}
+
+.popup-menu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    z-index: 1000;
+    min-width: 200px;
+}
+
+.popup-item {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.popup-item:hover {
+    background-color: #025299;
+    color: #ffffff;
+}
+
+.notulensi-menu:has(.popup-menu[style*="display: block"]) > a {
+    background-color: #025299;
+    color: white;
+}
+.notulensi-menu:has(.popup-menu[style*="display: block"]) > a img {
+    filter: brightness(0) invert(1);  /* Membuat icon menjadi putih */
+}
+
+.dark-mode .notulensi-menu:has(.popup-menu[style*="display: block"]) > a{
+    background-color: #3c3c3c;
+    color: white !important;
+}
+
+.dark-mode .notulensi-menu:has(.popup-menu[style*="display: block"]) > a img {
+    filter: brightness(0) invert(1);  
+}
+
+.notulensi-menu > a:has(+ .popup-menu[style*="display: block"]) .sidebar-icon {
+    filter: brightness(0) invert(1) !important;
+}
+
+.dark-mode .notulensi-menu > a:has(+ .popup-menu[style*="display: block"]) .sidebar-icon {
+    filter: brightness(0) invert(1) !important;
+}
+
+.dark-mode .popup-menu {
+    background-color: #2c2c2c;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .popup-item {
+    color: #fff;
+}
+
+.dark-mode .popup-item:hover {
+    background-color: #3c3c3c;
+    color: white;
+}
+
+.notulensi-menu {
+    position: relative;
+}
+
+.notulensi-menu:hover > a,
+.notulensi-menu > a:hover,
+.notulensi-menu:hover > a.inactive {
+    background-color: #025299;
+    color: white;
+}
+
+.popup-menu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    z-index: 1;
+    margin-top: 40px;
+    margin-left: -205px;
+}
+
+.popup-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.dark-mode .popup-menu {
+    background-color: #2c2c2c;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .popup-item {
+    color: #fff;
+}
+
+.dark-mode .popup-item:hover {
+    background-color: #3c3c3c;
+    color: #025299;
+}
+
+.notulensi-menu:hover .popup-menu {
+    display: block;
+}
+
+
 .category-select-container {
     position: relative;
     width: 200px;
@@ -72,7 +403,7 @@ body {
     border-radius: 4px;
     background-color: white;
     cursor: pointer;
-    padding-right: 40px; /* Space for the icon */
+    padding-right: 40px; 
 }
 
 .iicon-container {
@@ -109,10 +440,10 @@ body {
 .iicon-container img {
     width: 20px;
     height: 20px;
-    filter: brightness(0) invert(1); /* Makes the icon white */
+    filter: brightness(0) invert(1); 
 }
 
-/* Popup Styles */
+
 .category-option {
     padding: 10px 15px;
     cursor: pointer;
@@ -136,7 +467,8 @@ body {
     border-bottom: 1px solid #ffffff;
 }
 
-/* Dark Mode Styles */
+
+
 .dark-mode .category-select {
     background-color: #333;
     color: white;
@@ -148,8 +480,7 @@ body {
     border-color: #444;
 }
 
-/* Dropdown Styles - tambahkan di bagian yang sesuai */
-/* Dropdown styles */
+
 
 .dark-mode .page-number{
     color: white;
@@ -161,7 +492,7 @@ body {
 }
 
 
-/* Main Content Styles */
+
 .main-content {
     flex: 1;
     padding: 20px;
@@ -174,11 +505,17 @@ body {
     padding: 20px 30px;
     background: var(--sidebar-bg);
     margin: -20px -20px 70px -20px;
+    width: 104%;
+    height: 80px;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: -20px;
+    transition: background-color 0.3s, color 0.3s;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 
-/* Theme Toggle Styles */
+
 .theme-toggle {
     cursor: pointer;
     padding: 8px;
@@ -202,7 +539,7 @@ body {
 
 
 
-/* Show/hide icons based on theme */
+
 .moon-icon {
     opacity: 1;
 }
@@ -211,7 +548,7 @@ body {
     opacity: 0;
 }
 
-/* Dark mode specific styles */
+
 .dark-mode .moon-icon {
     opacity: 0;
 }
@@ -220,7 +557,7 @@ body {
     opacity: 1;
 }
 
-/* Content Section */
+
 .content {
     padding: 20px;
     background-color: var(--sidebar-bg);
@@ -231,7 +568,7 @@ body {
 }
 
 .content h1 {
-    font-size: 20px;
+    font-size: 2em;
     margin-top: -65px;
     margin-bottom: 50px;
     margin-left: -20px;
@@ -251,7 +588,7 @@ body {
     background-color: white;
 }
 
-/* Search box styles */
+
 .search-box {
     display: flex;
     align-items: center;
@@ -284,7 +621,7 @@ body {
     font-size: 16px;
 }
 
-/* Dark mode adjustments */
+
 .dark-mode .search-box input {
     background-color: #333;
     border-color: #444;
@@ -299,7 +636,7 @@ body {
     color: #E5E7EB;
 }
 
-/* Pagination container */
+
 .pagination {
     display: flex;
     justify-content: flex-end;
@@ -310,7 +647,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* Base styles for all pagination elements */
+
 .btn-prev,
 .btn-next,
 .page-number {
@@ -324,7 +661,7 @@ body {
     padding: 0 16px;
 }
 
-/* Previous button */
+
 .btn-prev {
     border-radius: 20px 0 0 20px;
     border-right: none;
@@ -332,7 +669,7 @@ body {
     font-style: italic;
 }
 
-/* Next button */
+
 .btn-next {
     border-radius: 0 20px 20px 0;
     border-left: none;
@@ -340,7 +677,7 @@ body {
     font-style: italic;
 }
 
-/* Page number */
+
 .page-number {
     background-color: #3B82F6;
     color: white;
@@ -349,20 +686,20 @@ body {
     padding: 0 10px;
 }
 
-/* Hover states */
+
 .btn-prev:hover:not(:disabled),
 .btn-next:hover:not(:disabled) {
     background-color: #F8FAFC;
 }
 
-/* Disabled state */
+
 .btn-prev:disabled,
 .btn-next:disabled {
     opacity: 0.5;
     cursor: not-allowed;
 }
 
-/* Dark mode adjustments */
+
 .dark-mode .btn-prev,
 .dark-mode .btn-next {
     background-color: #333;
@@ -380,7 +717,7 @@ body {
     background-color: #334155;
 }
 
-/* Table Styles */
+
 .table-wrapper {
     background-color: white;
     border-radius: 8px;
@@ -437,7 +774,7 @@ td {
     margin-right: 10px; 
 }
 
-/* Dark Mode Specific Styles */
+
 body.dark-mode {
     background-color: var(--main-bg);
 }
@@ -457,7 +794,7 @@ body.dark-mode .theme-toggle img {
     top: 30px;
 }
 
-/* Category Popup */
+
 .category-popup {
     display: none;
     position: absolute;
@@ -516,20 +853,20 @@ body.dark-mode .theme-toggle img {
     border-bottom: 1px solid #444;
 }
 
-/* Table styles for better visibility */
+
 .table-wrapper {
     margin-top: 20px;
     overflow-x: auto;
 }
 
-/* Button container style */
+
 .action-buttons {
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-/* Detail button style */
+
 .btn-detail {
     background-color: #0288D1;
     color: white;
@@ -558,162 +895,6 @@ body.dark-mode .theme-toggle img {
     background-color: #01579B;
 }
 
-/* Comment button style */
-.btn-comment {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 32px;
-    width: 32px;
-    border-radius: 4px;
-    color: #ffffff;
-    transition: background-color 0.3s;
-}
-
-.btn-comment:hover {
-    background-color: #e0e0e0;
-}
-
-.btn-comment img {
-    width: 20px;
-    height: 20px;
-}
-
-/* Dark mode styles */
-.dark-mode .btn-comment:hover {
-    background-color: #444;
-}
-
-.dark-mode.btn-comment {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 32px;
-    width: 32px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-
-.dark-mode.btn-comment:hover {
-    background-color: #e0e0e0;
-}
-
-.dark-mode.btn-comment img {
-    width: 20px;
-    height: 20px;
-    color: #ffffff;
-}
-
-.btn-comment img {
-    filter: none; /* Default color for light mode */
-    transition: filter 0.3s ease;
-}
-
-/* Dark mode comment icon */
-.dark-mode .btn-comment img {
-    filter: brightness(0) invert(1); /* Makes the icon white */
-}
-
-/* Comment modal styles */
-.comment-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-}
-
-.comment-modal-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 500px;
-}
-
-.dark-mode .comment-modal-content {
-    background-color: #333;
-    color: white;
-}
-
-.comment-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.comment-header h2 {
-    margin: 0;
-}
-
-.close-comment {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #666;
-}
-
-.dark-mode .close-comment {
-    color: #fff;
-}
-
-.comment-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.comment-form textarea {
-    width: 100%;
-    min-height: 100px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    resize: vertical;
-}
-
-.comment-form button {
-    background-color: #0288D1;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    align-self: flex-end;
-}
-
-.dark-mode .comment-form button {
-    background-color: #444;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    align-self: flex-end;
-}
-
-.dark-mode .comment-form textarea {
-    background-color: #444;
-    color: white;
-    border-color: #555;
-}
-
-/* Menu item styles */
 .menu-item {
     display: flex;
     align-items: center;
@@ -737,7 +918,7 @@ body.dark-mode .theme-toggle img {
     display: inline-block;
 }
 
-/* Separator style */
+
 
 /* Dropdown Styles - tambahkan di bagian yang sesuai */
 .dropdown {
@@ -938,11 +1119,136 @@ body.dark-mode .dropdown-separator {
 }
 
 .user-name {
-    font-size: 1.1em; /* Ukuran font nama lebih besar */
-    font-weight: bold; /* Nama lebih tebal */
+    font-size: 1.1em; 
+    font-weight: bold; 
 }
 
 .user-role {
-    font-size: 0.9em; /* Ukuran font role lebih kecil */
-    color: #888; /* Warna abu-abu untuk role */
+    font-size: 0.9em; 
+    color: #888; 
+}
+
+
+/* Tambahkan/ubah aturan berikut */
+.dark-mode .sidebar ul li a {
+    color: black !important; /* Memastikan teks berwarna putih di mode gelap */
+}
+
+.dark-mode .sidebar ul li a:hover {
+    color: white !important; /* Memastikan teks berwarna putih di mode gelap */
+}
+
+.dark-mode .sidebar ul li a.inactive {
+    color: black;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Untuk mode terang */
+.popup-item {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.popup-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    filter: brightness(0); /* Icon hitam di mode terang */
+    transition: all 0.3s ease;
+}
+
+.popup-item:hover {
+    background-color: #0D47A1;
+    color: white !important;
+}
+
+.popup-item:hover img {
+    filter: brightness(0) invert(1) !important; /* Icon putih saat hover */
+}
+
+/* Untuk mode gelap */
+.dark-mode .popup-item {
+    color: black;
+}
+
+.dark-mode .popup-item img {
+    filter: brightness(0) invert(1); /* Icon putih di mode gelap */
+}
+
+.dark-mode .popup-item:hover {
+    background-color: #3c3c3c;
+}
+
+.dark-mode .popup-item:hover img {
+    filter: brightness(0) invert(1) !important; /* Memastikan icon tetap putih saat hover di mode gelap */
+}
+
+
+/* Aturan dasar untuk icon */
+.sidebar ul li a .sidebar-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    transition: filter 0.3s;
+    filter: brightness(0); /* Icon hitam di mode terang */
+}
+
+/* Mode gelap - aturan dasar */
+.dark-mode .sidebar ul li a .sidebar-icon {
+    filter: brightness(0) !important; /
+}
+
+/* Hover di mode terang */
+.sidebar ul li a:hover .sidebar-icon {
+    filter: brightness(0) invert(1); /* Icon putih saat hover di mode terang */
+}
+
+/* Hover di mode gelap - PERBAIKAN */
+.dark-mode .sidebar ul li a:hover .sidebar-icon {
+    filter: brightness(0) invert(1) !important; /* Tetap putih saat hover di mode gelap */
+}
+
+.popup-menu .popup-item img {
+    filter: brightness(0); /* Icon putih */
+}
+
+.popup-menu .popup-item:hover img {
+    filter: brightness(0) invert(1) !important; /* Tetap putih saat hover */
+}
+
+/* Popup menu di mode gelap */
+.dark-mode .popup-menu .popup-item img {
+    filter: brightness(0) invert(1); /* Icon putih */
+}
+
+/* Hover untuk popup menu di mode gelap - PERBAIKAN */
+.dark-mode .popup-menu .popup-item:hover img {
+    filter: brightness(0) invert(1) !important; /* Tetap putih saat hover */
+}
+
+/* Active state */
+.dark-mode .sidebar ul li a.active .sidebar-icon {
+    filter: brightness(0) invert(1) !important;
+}
+
+/* Inactive hover di mode gelap - PERBAIKAN */
+.dark-mode .sidebar ul li a.inactive:hover .sidebar-icon {
+    filter: brightness(0) ;
+}
+
+.dark-mode .popup-menu {
+    background-color: #333; /* Warna latar belakang abu-abu gelap */
+    color: #f0f0f0; /* Warna teks terang untuk keterbacaan */
+}
+
+.dark-mode .popup-menu a {
+    color: #f0f0f0; /* Pastikan tautan terlihat di mode gelap */
+}
+
+.dark-mode .popup-menu :hover {
+    background-color: #444; /* Abu-abu sedikit lebih terang saat dihover */
 }

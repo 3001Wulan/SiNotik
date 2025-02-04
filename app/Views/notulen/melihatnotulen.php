@@ -13,39 +13,41 @@
         <!-- Sidebar -->
         <div class="sidebar">
             <div class="logo">
-                <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo">
+                <img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="Logo">
             </div>
-            <div class="menu">
-                <a href="#" class="menu-item-link">
-                    <img src="<?= base_url('assets/images/dashboard.png') ?>" alt="Dashboard Icon">
-                    <span>Dashboard</span>
+            <ul>
+            <li>
+                <a href="dashboard_admin" class="<?php echo (isset($current_page) && $current_page == 'dashboard') ? 'active dashboard' : 'inactive'; ?>">
+                    <img src="<?php echo base_url('assets/images/dashboard.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
+                    Dashboard
                 </a>
-                <div class="separator"></div>
-                <div class="dropdown"> 
-                    <a href="#" class="menu-item-link">
-                        <img src="<?= base_url('assets/images/notulensi.png') ?>" alt="Data User Icon">
-                        <span>Notulensi</span>
+            </li>
+            <li class="notulensi-menu">
+            <a href="#" class="<?php echo ($current_page == 'data_pengguna') ? 'active' : 'inactive'; ?>">
+                <img src="<?php echo base_url('assets/images/notulensi.png'); ?>" alt="Data Pengguna Icon" class="sidebar-icon">
+                Notulensi
+                </a>
+                <div class="popup-menu">
+                <a href="daftar-notulensi" class="popup-item">
+                    <img src="<?= base_url('assets/images/buat.png') ?>" alt="List Icon" class="sidebar-icon">
+                    Daftar Notulensi
+                </a>
+                <a href="buat-notulensi" class="popup-item">
+                    <img src="<?= base_url('assets/images/edit.png') ?>" alt="Create Icon" class="sidebar-icon">
+                    Buat Notulensi
+                </a>
+            </div>
+                </li>
+                </li>
+                <li>
+                    <a href="riwayatadmin" class="<?php echo ($current_page == 'riwayat_notulensi') ? 'active riwayat-notulensi' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/riwayatnotulensi.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
+                        Riwayat Notulensi
                     </a>
-                    <div class="dropdown-content">
-                        <a href="#" class="dropdown-item">
-                            <img src="<?= base_url('assets/images/buat.png') ?>" alt="Daftar Notulensi Icon">
-                            <span>Daftar Notulensi</span>
-                        </a>
-                        <div class="dropdown-separator"></div>
-                        <a href="#" class="dropdown-item">
-                            <img src="<?= base_url('assets/images/edit.png') ?>" alt="Buat Notulensi Icon">
-                            <span>Buat Notulensi</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="separator"></div>
-                <a href="#" class="menu-item-link">
-                    <img src="<?= base_url('assets/images/riwayat.png') ?>" alt="History Icon">
-                    <span>Riwayat Notulensi</span>
-                </a>
-            </div>        
+                </li>
+            </ul>
         </div>
-
+                   
         <!-- Main Content -->
         <div class="main-content">
             <div class="header">
@@ -130,9 +132,7 @@
                                         <td>
                                             <div class="action-buttons">
                                                 <button class="btn-detail" onclick="viewDetails(this, <?= esc($notulen['notulensi_id']) ?>)">Lihat</button>
-                                                <button class="btn-comment" onclick="showCommentModal(this)">
-                                                    <img src="<?= base_url('assets/images/komen.png') ?>" alt="Comment">
-                                                </button>
+                                            </button>
                                             </div>
                                         </td>
                                     </tr>
@@ -151,20 +151,6 @@
         </div>
     </div>
 
-    <!-- Comment Modal -->
-    <div id="commentModal" class="comment-modal">
-        <div class="comment-modal-content">
-            <div class="comment-header">
-                <h2>Add Comment</h2>
-                <button class="close-comment" onclick="closeCommentModal()">&times;</button>
-            </div>
-            <div class="comment-form">
-                <textarea id="commentText" placeholder="Enter your comment..."></textarea>
-                <button onclick="submitComment()">Submit</button>
-            </div>
-        </div>
-    </div>
-
     <script>
 document.addEventListener('DOMContentLoaded', function() {
     const body = document.body;
@@ -174,9 +160,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.querySelector('.search-box input');
     const searchButton = document.querySelector('.search-box button');
     const tableRows = document.querySelectorAll('table tbody tr');
-    const categories = ['APTIKA', 'IKP', 'Statistik & Persandian'];
+    const categories = ['APTIKA', 'IKP', 'Statistik dan Persandian'];
     let itemsPerPage = 5;
     let currentPage = 1; // Initialize current page
+
+    // Notulensi Menu Popup Handling
+    const notulensiMenu = document.querySelector('.notulensi-menu');
+    if (notulensiMenu) {
+        notulensiMenu.addEventListener('mouseenter', function() {
+            const popupMenu = this.querySelector('.popup-menu');
+            if (popupMenu) {
+                popupMenu.style.display = 'block';
+            }
+        });
+
+        notulensiMenu.addEventListener('mouseleave', function() {
+            const popupMenu = this.querySelector('.popup-menu');
+            if (popupMenu) {
+                popupMenu.style.display = 'none';
+            }
+        });
+    }
 
     // Reset to light mode on page load
     localStorage.setItem('theme', 'light-mode');
@@ -265,43 +269,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // View Details Function
     window.viewDetails = function(button, notulensiId) {
         // Arahkan ke halaman detail notulensi
-        window.location.href = `<?= base_url('notulensi/lihatnotulen/') ?>${notulensiId}`;
-    };
-
-    // Comment Modal Functions
-    let currentRow = null;
-
-    window.showCommentModal = function(button) {
-        const modal = document.getElementById('commentModal');
-        currentRow = button.closest('tr');
-        modal.style.display = 'flex';
-        document.getElementById('commentText').focus();
-    };
-
-    window.closeCommentModal = function() {
-        const modal = document.getElementById('commentModal');
-        modal.style.display = 'none';
-        document.getElementById('commentText').value = '';
-        currentRow = null;
-    };
-
-    window.submitComment = function() {
-        const commentText = document.getElementById('commentText').value;
-        if (commentText.trim() === '') {
-            alert('Please enter a comment');
-            return;
-        }
-
-        // Add your AJAX call here to save the comment
-        const data = {
-            topik: currentRow.cells[1].textContent,
-            bidang: currentRow.cells[2].textContent,
-            tanggal: currentRow.cells[3].textContent,
-            comment: commentText
-        };
-        
-        console.log('Submitting comment:', data);
-        closeCommentModal();
+        window.location.href = `<?= base_url('notulensi/feedbacknotulen/') ?>${notulensiId}`;
     };
 
     // Show Entries dropdown change event
@@ -328,7 +296,7 @@ document.addEventListener('DOMContentLoaded', function() {
     nextButton.addEventListener('click', function() {
         if (currentPage < totalPages) {
             currentPage++;
-            filterAndDisplayData(); // Panggil fungsi untuk memperbarui tampilan
+            filterAndDisplayData();
         }
     });
 
@@ -349,13 +317,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Close modal when clicking outside
+    // Close modal and popups when clicking outside
     window.onclick = function(event) {
-        if (event.target.className === 'comment-modal') {
-            closeCommentModal();
-        }
+        // Close category popup
         if (!categoryPopup.contains(event.target) && !categorySelect.contains(event.target)) {
             categoryPopup.style.display = 'none';
+        }
+        // Close notulensi popup
+        if (notulensiMenu && !notulensiMenu.contains(event.target)) {
+            const popupMenu = notulensiMenu.querySelector('.popup-menu');
+            if (popupMenu) {
+                popupMenu.style.display = 'none';
+            }
         }
     };
 
