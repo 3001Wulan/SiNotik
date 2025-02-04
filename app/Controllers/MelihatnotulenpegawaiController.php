@@ -41,6 +41,8 @@ class MelihatNotulenPegawaiController extends Controller
         // Menyertakan data pengguna dalam tampilan (misalnya untuk menampilkan informasi pengguna di halaman)
         $data['user'] = $userData;
 
+        $data['current_page'] = 'melihat_pegawai';
+
         return view('pegawai/melihatpegawai', $data);  // Mengirimkan data ke tampilan
     }
 }

@@ -9,58 +9,79 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="<?= base_url('assets/css/user-info.css') ?>"> <!-- Menyertakan file CSS terpisah -->
 </head>
-<body class="light-mode">
+<body>
     <div class="container">
-        <!-- Sidebar -->
+        <!-- Sidebar Section -->
         <div class="sidebar">
             <div class="logo">
-                <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo">
-            </div> 
-            <div class="menu">
-                <a href="dashboard_pegawai" class="menu-item">
-                    <img src="<?= base_url('assets/images/dashboard.png') ?>" alt="Dashboard Icon">
-                    <span>Dashboard</span>
-                </a>
-                <div class="separator"></div>
-                <a href="melihatpegawai" class="menu-item">
-                    <img src="<?= base_url('assets/images/notulensi.png') ?>" alt="Data User Icon">
-                    <span>Notulensi</span>
-                </a>
-                <div class="separator"></div>
-                <a href="riwayatpegawai" class="menu-item">
-                    <img src="<?= base_url('assets/images/riwayat.png') ?>" alt="History Icon">
-                    <span>Riwayat Notulensi</span>
-                </a>
+                <!-- Logo Image -->
+                <img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="Logo">
             </div>
+            <!-- Sidebar Menu Links -->
+            <ul>
+                <li>
+                    <a href="dashboard_pegawai" class="<?php echo ($current_page == 'dashboard') ? 'active dashboard' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/dashboard.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="melihatpegawai" class="<?php echo ($current_page == 'melihat_pegawai') ? 'active notulensi-pegawai' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/codicon_book.png'); ?>" alt="Data Pengguna Icon" class="sidebar-icon">
+                        Notulensi
+                    </a>
+                </li>
+                <li>
+                    <a href="riwayatpegawai" class="<?php echo ($current_page == 'riwayat_notulensi') ? 'active riwayat-notulensi' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/riwayatnotulensi.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
+                        Riwayat Notulensi
+                    </a>
+                </li>
+            </ul>
         </div>
 
-        <!-- Main Content -->
-        <div class="main-content">
-            <div class="header">
-                <div class="theme-toggle">
-                    <img src="<?= base_url('assets/images/bulan.png') ?>" alt="Moon" class="theme-icon moon-icon">
-                    <img src="<?= base_url('assets/images/sun.png') ?>" alt="Sun" class="theme-icon sun-icon">
+       <!-- Main Content Section -->
+       <div class="main-content">
+            <div class="top-bar">
+                <!-- Dark Mode Toggle -->
+                <div class="toggle-dark-mode">
+                    <img id="toggleDarkMode" src="<?php echo base_url('assets/images/moon.png'); ?>" alt="Dark Mode">
                 </div>
+
+                <!-- User Info Section -->
                 <div class="user-info">
-                    <!-- User details with profile image and role -->
-                    <div class="user-details">
-                        <?php
-                        // Cek apakah ada gambar profil, jika tidak, tampilkan gambar default
-                            $profilePic = $user['profil_foto'] ? base_url('assets/images/profiles/' . $user['profil_foto']) : base_url('assets/images/profiles/delvaut.png');
-                        ?>
-                        <img src="<?= $profilePic ?>" alt="Profile" class="profile-img">
-                        <div class="user-text">
-                            <p class="user-name"><?= esc($user['nama']); ?></p>
-                            <p class="user-role"><?= esc($user['role']); ?></p>
+                    <div class="user-text">
+                        <div class="user-name">
+                            <span><?php echo isset($user['nama']) ? $user['nama'] : 'Nama Tidak Ditemukan'; ?></span>
+                        </div>                            
+                        <div class="user-role">
+                            <span><?php echo isset($user['role']) ? ucfirst($user['role']) : 'Role Tidak Ditemukan'; ?></span>
                         </div>
+                    </div>
+                    <div>
+                        <img src="<?= base_url('assets/images/profiles/' . $user['profil_foto']) ?>" alt="Profile" class="profile-img" id="profile-icon">
+                    </div>
+
+                    <!-- Profile Dropdown Menu -->
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="<?= base_url('admin/profiladmin') ?>" class="dropdown-item">
+                            <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
+                            Profil
+                        </a>
+                        <a href="#" class="dropdown-item" id="logoutLink">
+                            <img src="<?= base_url('assets/images/icon_logout.png') ?>" alt="Logout" class="dropdown-icon">
+                            Logout
+                        </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Content Area -->
-            <div class="content">
+           <!-- Page Title -->
+           <div class="page-title">
                 <h1>Daftar Notulensi</h1>
-
+            </div>
+             
+            <div class="content">
                 <div class="filters">
                     <!-- Category Selection -->
                     <div class="category-select-container">
@@ -119,9 +140,7 @@
                                         <td>
                                             <div class="action-buttons">
                                                 <button class="btn-detail" onclick="viewDetails(this, <?= esc($notulen['notulensi_id']) ?>)">Lihat</button>
-                                                <button class="btn-comment" onclick="showCommentModal(this)">
-                                                    <img src="<?= base_url('assets/images/komen.png') ?>" alt="Comment">
-                                                </button>
+                                            </button>
                                             </div>
                                         </td>
                                     </tr>
@@ -136,20 +155,6 @@
                     <span class="page-number">1</span>
                     <button class="btn-next">Next</button>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Comment Modal -->
-    <div id="commentModal" class="comment-modal">
-        <div class="comment-modal-content">
-            <div class="comment-header">
-                <h2>Add Comment</h2>
-                <button class="close-comment" onclick="closeCommentModal()">&times;</button>
-            </div>
-            <div class="comment-form">
-                <textarea id="commentText" placeholder="Enter your comment..."></textarea>
-                <button onclick="submitComment()">Submit</button>
             </div>
         </div>
     </div>
@@ -254,7 +259,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // View Details Function
     window.viewDetails = function(button, notulensiId) {
         // Arahkan ke halaman detail notulensi
-        window.location.href = `<?= base_url('notulensi/lihatnotulen/') ?>${notulensiId}`;
+        window.location.href = `<?= base_url('notulensi/feedbacknotulen/') ?>${notulensiId}`;
     };
 
     // Comment Modal Functions
