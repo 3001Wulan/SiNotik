@@ -57,7 +57,6 @@ body {
     margin-top: 30px;
 }
 
-
 .sidebar ul {
     list-style-type: none;
     padding: 0;
@@ -144,82 +143,20 @@ body {
     filter: brightness(0.7);
 }
 
+.sidebar ul li a .sidebar-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    transition: filter 0.3s;
+    filter: brightness(0);
+}
+
+.dark-mode .sidebar ul li a:hover .sidebar-icon {
+    filter: brightness(0) invert(1) !important; 
+}
+
 .notulensi-menu {
     position: relative;
-}
-
-.notulensi-menu a img {
-    filter: brightness(0); /* Hitam di mode terang sebelum hover */
-    transition: filter 0.3s ease;
-}
-
-.notulensi-menu:hover a img,
-.notulensi-menu:focus-within a img {
-    filter: brightness(0)  !important; /* Putih saat hover */
-}
-
-.notulensi-menu {
-    position: relative;
-}
-
-.notulensi-menu a img {
-    filter: brightness(0) ;
-    transition: filter 0.3s ease;
-}
-
-
-
-.popup-menu {
-    display: none;
-    position: absolute;
-    left: 100%;
-    top: 0;
-    background-color: white;
-    min-width: 200px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    border-radius: 5px;
-    z-index: 1;
-    margin-top: 30px;
-    margin-left: -165px;
-}
-
-.dark-mode .popup-menu {
-    background: #2c2c2c;
-}
-
-.popup-item {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    transition: all 0.3s ease;
-}
-
-.popup-item img {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-    filter: brightness(0) !important;
-    transition: all 0.3s ease;
-}
-
-
-.dark-mode .popup-item {
-    color: #fff;
-}
-
-.popup-item:hover {
-    background-color: #0D47A1; 
-    color: white !important;
-}
-
-.popup-item:hover img {
-    filter: brightness(0) invert(1) !important;
-}
-
-.dark-mode .popup-item:hover {
-    background-color: #3c3c3c; 
 }
 
 .sidebar .notulensi-menu .popup-menu .popup-item {
@@ -231,75 +168,14 @@ body {
     transition: all 0.3s ease;
 }
 
-.sidebar .notulensi-menu .popup-menu .popup-item:hover {
-    background-color: #0D47A1 !important;
-    color: white !important;
-}
-
-.sidebar .notulensi-menu .popup-menu .popup-item:hover img {
-    filter: brightness(0) invert(1) !important;
-}
-
-.dark-mode .sidebar .notulensi-menu .popup-menu .popup-item {
-    color: #fff;
-}
-
 .dark-mode .sidebar .notulensi-menu .popup-menu .popup-item:hover {
     background-color: #3c3c3c !important;
     color: white !important;
 }
 
-.popup-item:hover {
-    background-color: #0D47A1 !important;
-    color: white !important;
-}
-
-.dark-mode .popup-item:hover {
-    background-color: #333 !important;
-}
-
-.notulensi-menu {
-    position: relative;
-}
-
-.notulensi-menu:hover > a,
-.notulensi-menu > a:hover,
-.notulensi-menu:hover > a.inactive {
-    background-color: #007bff;
-    color: white;
-}
-
-.popup-menu {
-    display: none;
-    position: absolute;
-    left: 100%;
-    top: 0;
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    z-index: 1000;
-    min-width: 200px;
-}
-
-.popup-item {
-    display: block;
-    padding: 10px 15px;
-    color: #333;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-.popup-item:hover {
-    background-color: #025299;
-    color: #ffffff;
-}
-
 .notulensi-menu:has(.popup-menu[style*="display: block"]) > a {
     background-color: #025299;
     color: white;
-}
-.notulensi-menu:has(.popup-menu[style*="display: block"]) > a img {
-    filter: brightness(0) invert(1);  /* Membuat icon menjadi putih */
 }
 
 .dark-mode .notulensi-menu:has(.popup-menu[style*="display: block"]) > a{
@@ -307,42 +183,10 @@ body {
     color: white !important;
 }
 
-.dark-mode .notulensi-menu:has(.popup-menu[style*="display: block"]) > a img {
-    filter: brightness(0) invert(1);  
-}
-
 .notulensi-menu > a:has(+ .popup-menu[style*="display: block"]) .sidebar-icon {
     filter: brightness(0) invert(1) !important;
 }
 
-.dark-mode .notulensi-menu > a:has(+ .popup-menu[style*="display: block"]) .sidebar-icon {
-    filter: brightness(0) invert(1) !important;
-}
-
-.dark-mode .popup-menu {
-    background-color: #2c2c2c;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
-}
-
-.dark-mode .popup-item {
-    color: #fff;
-}
-
-.dark-mode .popup-item:hover {
-    background-color: #3c3c3c;
-    color: white;
-}
-
-.notulensi-menu {
-    position: relative;
-}
-
-.notulensi-menu:hover > a,
-.notulensi-menu > a:hover,
-.notulensi-menu:hover > a.inactive {
-    background-color: #025299;
-    color: white;
-}
 
 .popup-menu {
     display: none;
@@ -358,52 +202,46 @@ body {
     margin-left: -205px;
 }
 
-.popup-item {
-    display: flex;
-    align-items: center;
-    padding: 10px 15px;
-    color: #333;
-    text-decoration: none;
-    transition: background-color 0.3s;
+.popup-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    filter: brightness(0); 
+    transition: all 0.3s ease;
+}
+
+.popup-item:hover {
+    background-color: #0D47A1;
+    color: white !important;
+}
+
+.popup-item:hover img {
+    filter: brightness(0) invert(1) !important; 
 }
 
 .dark-mode .popup-menu {
-    background-color: #2c2c2c;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    background: #2c2c2c;
 }
 
 .dark-mode .popup-item {
-    color: #fff;
+    color: black;
+}
+
+.dark-mode .popup-item img {
+    filter: brightness(0) invert(1); 
 }
 
 .dark-mode .popup-item:hover {
     background-color: #3c3c3c;
-    color: #025299;
 }
 
-.notulensi-menu:hover .popup-menu {
-    display: block;
-}
-
-
-.category-select-container {
-    position: relative;
-    width: 200px;
+.dark-mode .popup-item:hover img {
+    filter: brightness(0) invert(1) !important; 
 }
 
 .iinput-container {
     position: relative;
     width: 100%;
-}
-
-.category-select {
-    width: 100%;
-    padding: 8px 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: white;
-    cursor: pointer;
-    padding-right: 40px; 
 }
 
 .iicon-container {
@@ -443,6 +281,20 @@ body {
     filter: brightness(0) invert(1); 
 }
 
+.category-select {
+    width: 100%;
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    padding-right: 40px; 
+}
+
+.category-select-container {
+    position: relative;
+    width: 200px;
+}
 
 .category-option {
     padding: 10px 15px;
@@ -467,8 +319,6 @@ body {
     border-bottom: 1px solid #ffffff;
 }
 
-
-
 .dark-mode .category-select {
     background-color: #333;
     color: white;
@@ -480,8 +330,6 @@ body {
     border-color: #444;
 }
 
-
-
 .dark-mode .page-number{
     color: white;
 }
@@ -490,8 +338,6 @@ body {
     border-bottom: 1px solid black(255, 255, 255, 0.1);
     margin: 8px 0;
 }
-
-
 
 .main-content {
     flex: 1;
@@ -514,8 +360,6 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-
-
 .theme-toggle {
     cursor: pointer;
     padding: 8px;
@@ -536,9 +380,6 @@ body {
     transform: translate(-50%, -50%);
     transition: opacity 0.3s ease;
 }
-
-
-
 
 .moon-icon {
     opacity: 1;
@@ -580,19 +421,12 @@ body {
     margin-bottom: 20px;
 }
 
-.dropdown select {
-    padding: 8px 15px;
-    width: 200px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: white;
-}
-
-
 .search-box {
     display: flex;
     align-items: center;
+    position: relative; /* Tambahkan ini */
     gap: 0;
+    margin-left: -10px;
 }
 
 .search-box input {
@@ -605,9 +439,10 @@ body {
 }
 
 .search-box button {
+    position: absolute; /* Tambahkan ini */
+    right: 5px; /* Tambahkan ini */
     background: none;
     border: none;
-    margin-left: -40px;
     padding: 8px;
     cursor: pointer;
     color: black;
@@ -620,8 +455,6 @@ body {
 .search-box button i {
     font-size: 16px;
 }
-
-
 .dark-mode .search-box input {
     background-color: #333;
     border-color: #444;
@@ -636,7 +469,6 @@ body {
     color: #E5E7EB;
 }
 
-
 .pagination {
     display: flex;
     justify-content: flex-end;
@@ -646,7 +478,6 @@ body {
     padding-right: 20px;
     margin-bottom: 20px;
 }
-
 
 .btn-prev,
 .btn-next,
@@ -661,7 +492,6 @@ body {
     padding: 0 16px;
 }
 
-
 .btn-prev {
     border-radius: 20px 0 0 20px;
     border-right: none;
@@ -669,14 +499,12 @@ body {
     font-style: italic;
 }
 
-
 .btn-next {
     border-radius: 0 20px 20px 0;
     border-left: none;
     color: black;
     font-style: italic;
 }
-
 
 .page-number {
     background-color: #3B82F6;
@@ -686,19 +514,11 @@ body {
     padding: 0 10px;
 }
 
-
-.btn-prev:hover:not(:disabled),
-.btn-next:hover:not(:disabled) {
-    background-color: #F8FAFC;
-}
-
-
 .btn-prev:disabled,
 .btn-next:disabled {
     opacity: 0.5;
     cursor: not-allowed;
 }
-
 
 .dark-mode .btn-prev,
 .dark-mode .btn-next {
@@ -710,11 +530,6 @@ body {
 .dark-mode .page-number {
     background-color: #1a1a1a;
     border-color: #1a1a1a;
-}
-
-.dark-mode .btn-prev:hover:not(:disabled),
-.dark-mode .btn-next:hover:not(:disabled) {
-    background-color: #334155;
 }
 
 
@@ -774,7 +589,6 @@ td {
     margin-right: 10px; 
 }
 
-
 body.dark-mode {
     background-color: var(--main-bg);
 }
@@ -793,7 +607,6 @@ body.dark-mode .theme-toggle img {
     left: 300px;
     top: 30px;
 }
-
 
 .category-popup {
     display: none;
@@ -853,19 +666,16 @@ body.dark-mode .theme-toggle img {
     border-bottom: 1px solid #444;
 }
 
-
 .table-wrapper {
     margin-top: 20px;
     overflow-x: auto;
 }
-
 
 .action-buttons {
     display: flex;
     align-items: center;
     gap: 8px;
 }
-
 
 .btn-detail {
     background-color: #0288D1;
@@ -895,227 +705,24 @@ body.dark-mode .theme-toggle img {
     background-color: #01579B;
 }
 
-.menu-item {
-    display: flex;
-    align-items: center;
-    padding: 6px 12px;
-    color: black;
-    text-decoration: none;
-    margin: 8px 0;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.menu-item img {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-    filter: brightness(0);
-    transition: filter 0.3s;
-}
-
-.menu-item span {
-    display: inline-block;
-}
-
-
-
-/* Dropdown Styles - tambahkan di bagian yang sesuai */
-.dropdown {
-    position: relative;
-    padding: 0 !important;
-}
-
-.menu-item-link {
-    display: flex;
-    align-items: center;
-    padding: 6px 12px;
-    color: black;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: 0.3s;
-    width: 100%;
-}
-
-.menu-item-link img {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-    filter: brightness(0);
-    transition: filter 0.3s;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    left: 100%;
-    top: 0;
-    background-color: white;
-    min-width: 200px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    border-radius: 5px;
-    z-index: 1;
-    margin-top: 30px;
-    margin-left: -165px;
-}
-
-.dropdown-separator {
-    height: 1px;
-    background-color: #e0e0e0;
-    margin: 4px 0;
-}
-
-.dropdown-item {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    transition: all 0.3s ease;
-}
-
-.dropdown-item img {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-    filter: brightness(0);
-    transition: all 0.3s ease;
-}
-
-/* Hover effects */
-.menu-item:hover,
-.menu-item-link:hover {
-    background-color: #01579B;
-    color: #ffffff !important;
-}
-
-.menu-item:hover img{
-    color: #121212;
-}
-.menu-item-link:hover img {
-    filter: brightness(0) invert(1) !important;
-}
-
-
-.dropdown-item:hover {
-    background-color: #01579B;
-    color: white !important;
-}
-
-.dropdown-item:hover img {
-    /* Changed to make icons white on hover */
-    filter: brightness(0) invert(1) !important;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.menu-item.active {
-    background-color: #ffffff;
-    color: #0288D1;
-}
-
-.separator {
-    border-bottom: 1px solid #ccc;
-    margin: 8px 0;
-}
-
-/* Dark mode styles untuk dropdown */
-body.dark-mode .dropdown-content {
-    background-color: #333;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-}
-
-body.dark-mode .dropdown-separator {
-    background-color: #666;
-}
-
-body.dark-mode .menu-item,
-body.dark-mode .menu-item-link {
-    color: #ffffff;
-}
-
-body.dark-mode .menu-item img{}
-body.dark-mode .menu-item-link img {
-    filter: brightness(0) invert(1);
-}
-body.dark-mode .menu-item:hover img{}
-body.dark-mode .menu-item-link:hover img {
-    filter: brightness(0) !important; /* Mengubah ikon menjadi hitam saat hover di dark mode */
-}
-
-body.dark-mode .dropdown-item {
-    color: white;
-}
-
-body.dark-mode .dropdown-item img {
-    /* Icons start as white in dark mode */
-    filter: brightness(0) invert(1);
-}
-
-
-
-body.dark-mode .menu-item:hover,
-body.dark-mode .menu-item-link:hover {
-    background-color: #555555;
-    color: rgb(0, 0, 0) !important;
-}
-
-body.dark-mode .menu-item:hover img {
-    color: #ffffff;
-}
-body.dark-mode .menu-item-link:hover img {
-    filter: brightness(0) !important;
-}
-
-
-body.dark-mode .dropdown-item:hover {
-    background-color: #555555;
-    color: black !important;
-}
-
-body.dark-mode .dropdown-item:hover img,
-body.dark-mode .menu-item-link:hover img {
-    filter: brightness(0) !important;
-}
-
-body.dark-mode .dropdown-item:hover {
-    background-color: #555555;
-    color: black !important;
-}
-
-body.dark-mode .dropdown-item:hover img {
-    filter: brightness(0) !important;
-}
-
-/* Other Dark Mode Elements */
-body.dark-mode .dropdown-content {
-    background-color: #333;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-}
-
-body.dark-mode .dropdown-separator {
-    background-color: #666;
-}
 .user-details {
-    display: flex; /* Mengatur elemen dalam satu baris */
-    align-items: center; /* Menyusun elemen secara vertikal sejajar */
-    gap: 15px; /* Jarak antara teks dan gambar */
-    flex-direction: row-reverse; /* Membalik urutan elemen sehingga foto di sebelah kanan */
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    flex-direction: row-reverse; 
 }
 
 .profile-img {
-    width: 60px;  /* Ukuran gambar profil */
+    width: 60px;  
     height: 60px;
-    border-radius: 50%;  /* Membuat gambar menjadi lingkaran */
-    object-fit: cover;  /* Menyesuaikan gambar agar pas dalam lingkaran */
+    border-radius: 50%;  
+    object-fit: cover; 
 }
 
 .user-text {
     display: flex;
-    flex-direction: column; /* Menyusun nama dan role secara vertikal */
-    justify-content: center; /* Menjaga agar nama dan role sejajar secara vertikal */
+    flex-direction: column; 
+    justify-content: center; 
 }
 
 .user-name {
@@ -1129,126 +736,40 @@ body.dark-mode .dropdown-separator {
 }
 
 
-/* Tambahkan/ubah aturan berikut */
-.dark-mode .sidebar ul li a {
-    color: black !important; /* Memastikan teks berwarna putih di mode gelap */
-}
 
-.dark-mode .sidebar ul li a:hover {
-    color: white !important; /* Memastikan teks berwarna putih di mode gelap */
-}
-
-.dark-mode .sidebar ul li a.inactive {
-    color: black;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* Untuk mode terang */
-.popup-item {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
+.show-entries {
+    flex: 0 0 auto;
     display: flex;
     align-items: center;
-    transition: all 0.3s ease;
+    gap: 5px;
+    margin-right: 600px; /* Menggeser show entries ke kiri */
 }
 
-.popup-item img {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-    filter: brightness(0); /* Icon hitam di mode terang */
-    transition: all 0.3s ease;
+.show-entries select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 7px 20px;
+    font-size: 14px;
+    border-radius: 15px;
+    border: 1px solid #292A6E;
+    background: transparent;
+    color: #292A6E;
+    cursor: pointer;
+    text-align: center;  
 }
 
-.popup-item:hover {
-    background-color: #0D47A1;
-    color: white !important;
+.show-entries select:focus {
+    text-align: center; 
 }
 
-.popup-item:hover img {
-    filter: brightness(0) invert(1) !important; /* Icon putih saat hover */
+.dark-mode .show-entries select {
+    background-color: #555555;
+    color: #fff;
+    border: 1px solid #444444;
 }
 
-/* Untuk mode gelap */
-.dark-mode .popup-item {
-    color: black;
-}
-
-.dark-mode .popup-item img {
-    filter: brightness(0) invert(1); /* Icon putih di mode gelap */
-}
-
-.dark-mode .popup-item:hover {
-    background-color: #3c3c3c;
-}
-
-.dark-mode .popup-item:hover img {
-    filter: brightness(0) invert(1) !important; /* Memastikan icon tetap putih saat hover di mode gelap */
-}
-
-
-/* Aturan dasar untuk icon */
-.sidebar ul li a .sidebar-icon {
-    width: 30px;
-    height: 30px;
-    margin-right: 15px;
-    transition: filter 0.3s;
-    filter: brightness(0); /* Icon hitam di mode terang */
-}
-
-/* Mode gelap - aturan dasar */
-.dark-mode .sidebar ul li a .sidebar-icon {
-    filter: brightness(0) !important; /
-}
-
-/* Hover di mode terang */
-.sidebar ul li a:hover .sidebar-icon {
-    filter: brightness(0) invert(1); /* Icon putih saat hover di mode terang */
-}
-
-/* Hover di mode gelap - PERBAIKAN */
-.dark-mode .sidebar ul li a:hover .sidebar-icon {
-    filter: brightness(0) invert(1) !important; /* Tetap putih saat hover di mode gelap */
-}
-
-.popup-menu .popup-item img {
-    filter: brightness(0); /* Icon putih */
-}
-
-.popup-menu .popup-item:hover img {
-    filter: brightness(0) invert(1) !important; /* Tetap putih saat hover */
-}
-
-/* Popup menu di mode gelap */
-.dark-mode .popup-menu .popup-item img {
-    filter: brightness(0) invert(1); /* Icon putih */
-}
-
-/* Hover untuk popup menu di mode gelap - PERBAIKAN */
-.dark-mode .popup-menu .popup-item:hover img {
-    filter: brightness(0) invert(1) !important; /* Tetap putih saat hover */
-}
-
-/* Active state */
-.dark-mode .sidebar ul li a.active .sidebar-icon {
-    filter: brightness(0) invert(1) !important;
-}
-
-/* Inactive hover di mode gelap - PERBAIKAN */
-.dark-mode .sidebar ul li a.inactive:hover .sidebar-icon {
-    filter: brightness(0) ;
-}
-
-.dark-mode .popup-menu {
-    background-color: #333; /* Warna latar belakang abu-abu gelap */
-    color: #f0f0f0; /* Warna teks terang untuk keterbacaan */
-}
-
-.dark-mode .popup-menu a {
-    color: #f0f0f0; /* Pastikan tautan terlihat di mode gelap */
-}
-
-.dark-mode .popup-menu :hover {
-    background-color: #444; /* Abu-abu sedikit lebih terang saat dihover */
+.dark-mode .show-entries select:focus {
+    color: #fff;
+    background-color: #666666;
 }

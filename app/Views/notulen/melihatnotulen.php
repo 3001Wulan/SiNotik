@@ -97,6 +97,7 @@
                     <div class="show-entries">
                         <label for="entries">Show:</label>
                         <select id="entries" name="entries">
+                            <option value="">Select</option>
                             <option value="5">5</option>
                             <option value="10">10</option>
                             <option value="15">15</option>
