@@ -76,6 +76,16 @@
                     </div>
                 </div>
             </div>
+            <div class="logout-popup-overlay" id="logoutPopupOverlay" style="display: none;">
+                <div class="logout-popup">
+                    <img src="<?= base_url('assets/images/logout_warning.png') ?>" alt="Logout Warning" class="logout-popup-image">
+                    <h3>Anda ingin logout?</h3>
+                    <div class="logout-popup-buttons">
+                        <button class="btn-logout-yes" id="confirmLogout">Ya</button>
+                        <button class="btn-logout-no" id="cancelLogout">Tidak</button>
+                    </div>
+                </div>
+            </div>
            
             <!-- Page Title -->
             <div class="page-title">
@@ -457,7 +467,7 @@
         };
 
         // JavaScript untuk Dropdown Menu
-        const profileIcon = document.getElementById('profile-img');
+        const profileIcon = document.getElementById('profile-icon');
         const dropdownMenu = document.getElementById('dropdownMenu');
 
         // Toggle dropdown menu saat foto profil diklik
@@ -490,17 +500,52 @@
             window.location.href = '<?= base_url('/') ?>';
         });
 
-        // Toggle Dark Mode
-        const toggleDarkModeButton = document.getElementById('toggleDarkMode');
-        const body = document.body;
-
         toggleDarkModeButton.addEventListener('click', function () {
-            body.classList.toggle('dark-mode');
-            toggleDarkModeButton.src = body.classList.contains('dark-mode')
-                ? '<?php echo base_url("assets/images/sun.png"); ?>'
-                : '<?php echo base_url("assets/images/moon.png"); ?>';
-        });
+    body.classList.toggle('dark-mode');
+    console.log('Dark mode toggled: ', body.classList.contains('dark-mode'));  // Periksa kelas dark-mode
+    toggleDarkModeButton.src = body.classList.contains('dark-mode')
+        ? '<?= base_url("assets/images/sun.png"); ?>'
+        : '<?= base_url("assets/images/moon.png"); ?>';
+});
+
     });
+    const logoutLink = document.getElementById('logoutLink');
+    const logoutPopupOverlay = document.getElementById('logoutPopupOverlay'); 
+    const confirmLogout = document.getElementById('confirmLogout'); 
+    const cancelLogout = document.getElementById('cancelLogout'); 
+
+    logoutLink.addEventListener('click', function (e) {
+        e.preventDefault(); 
+        logoutPopupOverlay.style.display = 'flex'; 
+    });
+
+    confirmLogout.addEventListener('click', function () {
+        window.location.href = '<?= base_url("home") ?>'; 
+        logoutPopupOverlay.style.display = 'none'; 
+    });
+
+    cancelLogout.addEventListener('click', function () {
+        logoutPopupOverlay.style.display = 'none'; 
+    });
+    toggleDarkMode.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const darkModeEnabled = document.body.classList.contains('dark-mode');
+    localStorage.setItem('darkMode', darkModeEnabled);
+
+    toggleDarkMode.src = darkModeEnabled ? 
+        '<?php echo base_url('assets/images/sun.png'); ?>' : 
+        '<?php echo base_url('assets/images/moon.png'); ?>';
+});
+window.addEventListener('DOMContentLoaded', () => {
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+    if (isDarkMode) {
+        document.body.classList.add('dark-mode');
+        toggleDarkMode.src = '<?php echo base_url('assets/images/sun.png'); ?>';
+    } else {
+        toggleDarkMode.src = '<?php echo base_url('assets/images/moon.png'); ?>';
+    }
+});
+
 </script>
 </body>
 </html>

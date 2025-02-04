@@ -141,22 +141,22 @@ body {
 .user-text {
     display: flex;
     flex-direction: column; 
-    margin-right: 5px; 
+    margin-right: 10px; 
 }
 
 .user-name {
     font-weight: bold;
     font-size: 18px;
-    text-align: right;  
-    margin-right: 10px;
+    text-align: center;  
+    margin-left: -150px;
     margin-bottom: 5px; 
 }
 
 .user-role {
     font-size: 16px;
     color: #444;
-    text-align: right; 
-    margin-right: 10px;
+    text-align: center; 
+    margin-left: -80px;
 }
 
 .user-info img {
@@ -422,6 +422,12 @@ body {
     max-height: 450px;
 }
 
+.data-table thead tr {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
 .data-table {
     width: 100%;
     border-collapse: collapse;
@@ -535,22 +541,6 @@ body {
     cursor: pointer;
 }
 
-.delete-btn {
-    background: none; 
-    border: none;    
-    padding: 0;      
-    cursor: pointer;  
-  }
-
-  .delete-btn img {
-    width: 24px; 
-    height: 24px;
-  }
-
-.delete-btn img:hover {
-    filter: brightness(0) invert(0.5);
-}
-
 .modal-title {
     margin: 0 0 25px 0;
     color: #333;
@@ -591,86 +581,6 @@ body {
 .cancel-btn:hover {
     background-color: #e53935;
     transform: scale(1.1);
-}
-
-#popupOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-    margin-left: 700px;
-}
-
-.popup {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 12px;
-    width: 320px;
-    text-align: center;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-    position: relative;
-    transform: translateY(-50%);
-    top: 50%;
-}
-
-.popup-img {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 10px;
-    display: block;
-}
-
-.popup h3 {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    font-size: 25px;
-    font-style: italic;
-    color: #333;
-}
-
-.popup-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 40px;
-}
-
-.popup-buttons button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    width: 25%; 
-}
-
-.btn-yes {
-    background-color: #025299; 
-    color: white;
-    font-weight: bolder;
-}
-
-.btn-yes:hover {
-    background-color: #0085C5;
-    transform: scale(1.1);
-    font-size: 16px;
-}
-
-.btn-no {
-    background-color: #025299; 
-    color: white;
-    font-weight: bolder;
-}
-
-.btn-no:hover {
-    background-color: #e53935; 
-    transform: scale(1.1);
-    font-size: 16px;
 }
 
 .dark-mode {
@@ -940,4 +850,68 @@ body {
 html, body {
     height: 100%;
     overflow: hidden; 
+}
+.logout-popup-image {
+    height: 120px;
+    display: block;
+    margin: 0 auto 10px; 
+}
+.logout-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logout-popup {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    width: 100%;
+}
+
+.logout-popup h3 {
+    font-size: 25px;
+    color: #333;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.logout-popup-buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-logout-yes {
+    background-color: #025299;
+    color: white;
+}
+
+.btn-logout-yes:hover {
+    background-color: #0085C5;
+    transform: scale(1.1);
+}
+
+.btn-logout-no {
+    background-color: #025299; 
+    color: white;
+    font-weight: bolder;
+}
+
+.btn-logout-no:hover {
+    background-color: #e53935; 
+    transform: scale(1.1);
 }

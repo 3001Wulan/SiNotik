@@ -288,7 +288,7 @@ body {
     width: 100%; 
     height: 570px; /* Ini akan menetapkan tinggi tetap */
     max-width: 1200px; 
-    min-height: 570px; 
+    min-height: 650px; 
     margin-left: -250px;
 }
 
@@ -466,10 +466,10 @@ body.dark-mode .comment-box::placeholder {
 }
 
 .documentation-images img {
-    width: 100%;  /* Menyesuaikan dengan lebar kontainer */
-    max-width: 400px;  /* Membatasi lebar gambar agar tidak terlalu besar */
-    height: 300px;  /* Menetapkan tinggi tetap untuk gambar */
-    object-fit: contain;  /* Menyesuaikan gambar di dalam ukuran tanpa terpotong */
+    width: 100%; 
+    max-width: 400px;  
+    height: 300px;  
+    object-fit: contain;  
     border: 2px solid #ccc;
     border-radius: 12px;
     padding: 10px;
@@ -481,7 +481,7 @@ body.dark-mode .comment-box::placeholder {
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    margin-top: 20px;  /* Menambahkan jarak atas agar judul tidak terlalu dekat dengan atas halaman */
+    margin-top: 20px;  
     margin-left: 30px;  
     font-size: 18px;
 }
@@ -495,12 +495,12 @@ body.dark-mode .comment-box::placeholder {
 }
 
 .main-content {
-    width: calc(100% - 100px);
-    margin-left: 300px;  
-    margin-top: 10px;  
+    width: calc(100% - 50px);
+    margin-left: 250px;  
+    margin-top: -25px;  
     padding: 24px;  
+    height: 100%;
 }
-
 
 .outer-blue-background {
     display: flex;
@@ -523,7 +523,7 @@ body.dark-mode .comment-box::placeholder {
 
 .agenda-section {
     width: 600px; 
-    height: 500px; 
+    height: 550px; 
     border: 2px solid #ccc;
     border-radius: 12px;
     padding: 10px;
@@ -652,21 +652,3 @@ body.dark-mode .comment-box::placeholder {
     transform: scale(1.3);
 }
 
-.comment-button-container {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.comment-button-container button {
-    background-color: #28a745;
-    padding: 10px 20px;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.comment-button-container button:hover {
-    background-color: #218838;
-}

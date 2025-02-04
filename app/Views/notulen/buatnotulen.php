@@ -15,7 +15,7 @@
                 <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo">
             </div>
             <div class="menu">
-                <a href="Dashboard_notulen" class="menu-item-link">
+                <a href="dashboard_notulen" class="menu-item-link">
                     <img src="<?= base_url('assets/images/dashboard.png') ?>" alt="Dashboard Icon">
                     <span>Dashboard</span>
                 </a>

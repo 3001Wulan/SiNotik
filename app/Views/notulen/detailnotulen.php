@@ -50,7 +50,7 @@
             </ul>
         </div>
 
-        <!-- Content Area -->
+        <!-- Area Konten -->
         <div class="content">
             <div class="top-bar">
                 <!-- Mode -->
@@ -74,12 +74,12 @@
                 </div>
             </div>
 
-            <!-- Page Title -->
+            <!-- Judul Halaman -->
             <div class="page-title">
                 <h2><?= esc($notulensi['judul']) ?></h2>
             </div>
 
-            <!-- Main Content -->
+            <!-- Konten Utama -->
             <div class="main-content">
                 <div class="outer-blue-background">
                     <div class="left-blue"></div> <!-- Bagian kiri berwarna biru -->
@@ -119,132 +119,137 @@
                                     </div>
                                     <button class="download-button" id="downloadButton">Unduh</button>
                                 </div>
-                                <div class="comment-section">
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- Akhir Konten Utama -->
+
+                <!-- Bagian Komentar dipindahkan ke bawah -->
+                <div class="comment-section">
                     <button id="commentButton" class="comment-icon">
                         <i class="fas fa-comment"></i> Komentar
                     </button>
                 </div>
+
+                <!-- Pop-up untuk Komentar -->
+                <div id="commentPopup" class="comment-popup" style="display: none;">
+                    <div class="popup-content">
+                        <span class="close-popup" id="closePopup">&times;</span>
+                        <h3>Komentar</h3>
+                        
+                        <!-- Daftar komentar -->
+                        <div id="commentList">
+                            <!-- Contoh komentar -->
+                            <div class="comment-item">
+                                <img src="https://via.placeholder.com/40" alt="Profile" class="comment-avatar">
+                                <div class="comment-body">
+                                    <strong class="comment-name">John Doe</strong>
+                                    <p class="comment-text">Ini adalah contoh komentar!</p>
+                                </div>
+                            </div>
+                            
+                            <div class="comment-item">
+                                <img src="https://via.placeholder.com/40" alt="Profile" class="comment-avatar">
+                                <div class="comment-body">
+                                    <strong class="comment-name">Jane Smith</strong>
+                                    <p class="comment-text">Terima kasih atas informasinya!</p>
+                                </div>
                             </div>
                         </div>
+
+                        <!-- Input komentar baru -->
+                        <div class="comment-input-container">
+                            <img src="https://via.placeholder.com/40" alt="Profile" class="comment-avatar">
+                            <textarea id="newComment" placeholder="Tulis komentar..."></textarea>
+                            <!-- Tombol Emoji -->
+                            <button type="button" id="emojiButton">😊</button>
+
+                            <!-- Pemilih Emoji -->
+                            <div id="emojiPicker" class="emoji-picker" style="display: none;">
+                                <span class="emoji" data-emoji="😊">😊</span>
+                                <span class="emoji" data-emoji="😂">😂</span>
+                                <span class="emoji" data-emoji="😍">😍</span>
+                                <span class="emoji" data-emoji="😢">😢</span>
+                                <span class="emoji" data-emoji="👍">👍</span>
+                                <span class="emoji" data-emoji="😎">😎</span>
+                                <span class="emoji" data-emoji="💡">💡</span>
+                            </div>
+                        </div>
+                        <button id="submitComment">Kirim</button>
                     </div>
-                </div> <!-- End of Main Content -->
-
-       <!-- Pop-up untuk Komentar -->
-<div id="commentPopup" class="comment-popup" style="display: none;">
-    <div class="popup-content">
-        <span class="close-popup" id="closePopup">&times;</span>
-        <h3>Komentar</h3>
-        
-        <!-- Daftar komentar -->
-        <div id="commentList">
-            <!-- Contoh komentar -->
-            <div class="comment-item">
-                <img src="https://via.placeholder.com/40" alt="Profile" class="comment-avatar">
-                <div class="comment-body">
-                    <strong class="comment-name">John Doe</strong>
-                    <p class="comment-text">Ini adalah contoh komentar!</p>
-                </div>
-            </div>
-            
-            <div class="comment-item">
-                <img src="https://via.placeholder.com/40" alt="Profile" class="comment-avatar">
-                <div class="comment-body">
-                    <strong class="comment-name">Jane Smith</strong>
-                    <p class="comment-text">Terima kasih atas informasinya!</p>
                 </div>
             </div>
         </div>
-
-        <!-- Input komentar baru -->
-        <div class="comment-input-container">
-            <img src="https://via.placeholder.com/40" alt="Profile" class="comment-avatar">
-            <textarea id="newComment" placeholder="Tulis komentar..."></textarea>
-            <!-- Emoji Button -->
-            <button type="button" id="emojiButton">😊</button>
-
-            <!-- Emoji Picker -->
-            <div id="emojiPicker" class="emoji-picker" style="display: none;">
-                <span class="emoji" data-emoji="😊">😊</span>
-                <span class="emoji" data-emoji="😂">😂</span>
-                <span class="emoji" data-emoji="😍">😍</span>
-                <span class="emoji" data-emoji="😢">😢</span>
-                <span class="emoji" data-emoji="👍">👍</span>
-                <span class="emoji" data-emoji="😎">😎</span>
-                <span class="emoji" data-emoji="💡">💡</span>
-            </div>
-        </div>
-        <button id="submitComment">Kirim</button>
     </div>
-</div>
 
-        <script>
-            
-            document.addEventListener('DOMContentLoaded', function() {
-                const themeIcon = document.getElementById('toggleDarkMode');
-                const body = document.body;
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeIcon = document.getElementById('toggleDarkMode');
+            const body = document.body;
 
-                // Check for saved theme preference
-                if (localStorage.getItem('theme') === 'dark') {
-                    body.classList.add('dark-mode');
+            // Cek preferensi tema yang disimpan
+            if (localStorage.getItem('theme') === 'dark') {
+                body.classList.add('dark-mode');
+                themeIcon.src = '<?= base_url('assets/images/sun.png') ?>';
+            }
+
+            themeIcon.addEventListener('click', () => {
+                body.classList.toggle('dark-mode');
+                if (body.classList.contains('dark-mode')) {
                     themeIcon.src = '<?= base_url('assets/images/sun.png') ?>';
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    themeIcon.src = '<?= base_url('assets/images/moon.png') ?>';
+                    localStorage.setItem('theme', 'light');
                 }
-
-                themeIcon.addEventListener('click', () => {
-                    body.classList.toggle('dark-mode');
-                    if (body.classList.contains('dark-mode')) {
-                        themeIcon.src = '<?= base_url('assets/images/sun.png') ?>';
-                        localStorage.setItem('theme', 'dark');
-                    } else {
-                        themeIcon.src = '<?= base_url('assets/images/moon.png') ?>';
-                        localStorage.setItem('theme', 'light');
-                    }
-                });
-
-                // Komentar Pop-up
-                const commentButton = document.getElementById('commentButton');
-                const commentPopup = document.getElementById('commentPopup');
-                const closePopup = document.getElementById('closePopup');
-                const submitComment = document.getElementById('submitComment');
-                const newComment = document.getElementById('newComment');
-                const commentList = document.getElementById('commentList');
-                const emojiButton = document.getElementById('emojiButton');
-                const emojiPicker = document.getElementById('emojiPicker');
-
-                // Menampilkan pop-up komentar
-                commentButton.addEventListener('click', () => {
-                    commentPopup.style.display = 'flex';
-                });
-
-                // Menutup pop-up komentar
-                closePopup.addEventListener('click', () => {
-                    commentPopup.style.display = 'none';
-                });
-
-                // Menambahkan komentar baru
-                submitComment.addEventListener('click', () => {
-                    const commentText = newComment.value.trim();
-                    if (commentText) {
-                        const commentItem = document.createElement('div');
-                        commentItem.textContent = commentText;
-                        commentList.appendChild(commentItem);
-                        newComment.value = ''; // Clear the input field
-                    }
-                });
-
-                // Menampilkan dan menyembunyikan emoji picker
-                emojiButton.addEventListener('click', () => {
-                    emojiPicker.style.display = emojiPicker.style.display === 'none' || emojiPicker.style.display === '' ? 'block' : 'none';
-                });
-
-                // Menambahkan emoji ke komentar
-                emojiPicker.addEventListener('click', (event) => {
-                    if (event.target.classList.contains('emoji')) {
-                        const emoji = event.target.dataset.emoji;
-                        newComment.value += emoji; // Append emoji to the comment input field
-                    }
-                });
             });
-        </script>
-    </div>
+
+            // Pop-up Komentar
+            const commentButton = document.getElementById('commentButton');
+            const commentPopup = document.getElementById('commentPopup');
+            const closePopup = document.getElementById('closePopup');
+            const submitComment = document.getElementById('submitComment');
+            const newComment = document.getElementById('newComment');
+            const commentList = document.getElementById('commentList');
+            const emojiButton = document.getElementById('emojiButton');
+            const emojiPicker = document.getElementById('emojiPicker');
+
+            commentButton.addEventListener('click', () => {
+                commentPopup.style.display = 'flex';
+            });
+
+            closePopup.addEventListener('click', () => {
+                commentPopup.style.display = 'none';
+            });
+
+            submitComment.addEventListener('click', () => {
+                const commentText = newComment.value.trim();
+                if (commentText) {
+                    const commentItem = document.createElement('div');
+                    commentItem.classList.add('comment-item');
+                    commentItem.innerHTML = `
+                        <img src="https://via.placeholder.com/40" alt="Profile" class="comment-avatar">
+                        <div class="comment-body">
+                            <strong class="comment-name">Anda</strong>
+                            <p class="comment-text">${commentText}</p>
+                        </div>
+                    `;
+                    commentList.appendChild(commentItem);
+                    newComment.value = ''; 
+                }
+            });
+
+            emojiButton.addEventListener('click', () => {
+                emojiPicker.style.display = emojiPicker.style.display === 'none' || emojiPicker.style.display === '' ? 'block' : 'none';
+            });
+
+            emojiPicker.addEventListener('click', (event) => {
+                if (event.target.classList.contains('emoji')) {
+                    const emoji = event.target.dataset.emoji;
+                    newComment.value += emoji; 
+                }
+            });
+        });
+    </script>
 </body>
 </html>

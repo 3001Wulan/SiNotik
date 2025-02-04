@@ -48,8 +48,9 @@ $routes->get('admin/ubahpassword', 'UbahPasswordController::ubah');
 $routes->post('UbahPasswordController/ubah', 'UbahPasswordController::ubah');
 $routes->post('admin/ubahdatapengguna/(:num)/update', 'UbahDataController::updatePengguna/$1');
 $routes->post('UbahPasswordController/ubah', 'UbahPasswordController::ubah');
-
-
+$routes->get('assets/images/profiles/(:any)', function() {
+    return redirect()->to(base_url('/'));
+});
 
 
 
