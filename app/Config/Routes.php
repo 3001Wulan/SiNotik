@@ -44,6 +44,7 @@ $routes->delete('RiwayatAdminController/delete/(:segment)', 'RiwayatAdminControl
 $routes->get('/pegawai/melihatpegawai', 'MelihatNotulenpegawaiController::lihat');
 $routes->get('notulensi/lihatnotulen/(:num)', 'LihatNotulenController::lihatnotulen/$1');
 $routes->get('pegawai/riwayatpegawai', 'RiwayatPegawaiController::index');
+$routes->get('notulen/riwayatnotulen', 'RiwayatNotulenController::index');
 $routes->get('admin/ubahpassword', 'UbahPasswordController::ubah');
 $routes->post('UbahPasswordController/ubah', 'UbahPasswordController::ubah');
 $routes->post('admin/ubahdatapengguna/(:num)/update', 'UbahDataController::updatePengguna/$1');

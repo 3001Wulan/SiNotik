@@ -8,6 +8,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="<?= base_url('assets/css/user-info.css') ?>">
+    
 </head>
 <body>
     <div class="container">
@@ -159,13 +160,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const tableRows = document.querySelectorAll('table tbody tr');
     const categories = ['APTIKA', 'IKP', 'Statistik & Persandian'];
     let itemsPerPage = 5;
-    let currentPage = 1;
+    let currentPage = 1; // Deklarasikan currentPage di sini
     let totalPages = 0; // Initialize totalPages
 
-    // Reset to light mode on page load
-    localStorage.setItem('theme', 'light-mode');
-    body.classList.remove('dark-mode');
-    body.classList.add('light-mode');
+    // Cek tema yang disimpan di localStorage
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        body.classList.remove('light-mode', 'dark-mode');
+        body.classList.add(savedTheme);
+    } else {
+        // Default ke light mode
+        body.classList.add('light-mode');
+    }
 
     // Create category popup
     let categoryPopup = document.createElement('div');
@@ -212,7 +218,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         totalPages = Math.ceil(visibleRows.length / itemsPerPage);
-        currentPage = 1; // Reset to first page when filtering
         updateTable(visibleRows);
     }
 
@@ -246,21 +251,22 @@ document.addEventListener('DOMContentLoaded', function() {
     prevButton.addEventListener('click', function() {
         if (currentPage > 1) {
             currentPage--;
-            filterAndDisplayData();
+            filterAndDisplayData(); // Panggil fungsi untuk memperbarui tampilan
         }
     });
 
     nextButton.addEventListener('click', function() {
         if (currentPage < totalPages) {
             currentPage++;
-            filterAndDisplayData();
+            filterAndDisplayData(); // Panggil fungsi untuk memperbarui tampilan
         }
     });
 
     moonIcon.addEventListener('click', function() {
         body.classList.toggle('dark-mode');
         body.classList.toggle('light-mode');
-        
+
+        // Simpan tema yang dipilih ke localStorage
         if (body.classList.contains('dark-mode')) {
             localStorage.setItem('theme', 'dark-mode');
         } else {
