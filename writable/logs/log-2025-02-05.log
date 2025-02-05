@@ -1,0 +1,1663 @@
+INFO - 2025-02-05 03:55:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 03:55:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 03:55:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 03:55:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-05 03:55:26 --> Login attempt with username: lili
+ERROR - 2025-02-05 03:55:26 --> Checking login for username: lili
+ERROR - 2025-02-05 03:55:26 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => lann
+    [nip] => 123456780123456789
+    [email] => bismillah@gmail.com
+    [password] => $2y$10$GNfd6zIA4kK/7vX47gN7eepuS.AXjm5tSpBgx7YvxRDjgGubdAS0K
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => 7 (1).jpg
+    [alamat] => jalan  saja
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-09
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-02-04 14:38:54
+)
+
+ERROR - 2025-02-05 03:55:26 --> Password verify result for username lili: Success
+ERROR - 2025-02-05 03:55:26 --> Login success for username: lili
+INFO - 2025-02-05 03:55:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 03:55:26 --> User ID: 9
+DEBUG - 2025-02-05 03:55:26 --> Profile Picture: 7 (1).jpg
+DEBUG - 2025-02-05 03:55:27 --> User Name: lann
+DEBUG - 2025-02-05 03:55:27 --> User Role: admin
+INFO - 2025-02-05 03:55:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 03:55:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 03:55:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 03:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 03:55:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-05 03:55:40 --> Login attempt with username: jaja
+ERROR - 2025-02-05 03:55:40 --> Checking login for username: jaja
+ERROR - 2025-02-05 03:55:40 --> User data: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-31 05:12:25
+)
+
+ERROR - 2025-02-05 03:55:40 --> Password verify result for username jaja: Success
+ERROR - 2025-02-05 03:55:40 --> Login success for username: jaja
+INFO - 2025-02-05 03:55:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 03:55:40 --> User ID: 13
+DEBUG - 2025-02-05 03:55:40 --> Profile Picture: pegawai.png
+DEBUG - 2025-02-05 03:55:40 --> User Name: jungwon
+DEBUG - 2025-02-05 03:55:40 --> User Role: pegawai
+INFO - 2025-02-05 03:55:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 03:59:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 03:59:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 03:59:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 04:00:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 04:00:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-05 04:00:05 --> Login attempt with username: jaja
+ERROR - 2025-02-05 04:00:05 --> Checking login for username: jaja
+ERROR - 2025-02-05 04:00:05 --> User data: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-31 05:12:25
+)
+
+ERROR - 2025-02-05 04:00:05 --> Password verify result for username jaja: Success
+ERROR - 2025-02-05 04:00:05 --> Login success for username: jaja
+INFO - 2025-02-05 04:00:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 04:00:06 --> User ID: 13
+DEBUG - 2025-02-05 04:00:06 --> Profile Picture: pegawai.png
+DEBUG - 2025-02-05 04:00:06 --> User Name: jungwon
+DEBUG - 2025-02-05 04:00:06 --> User Role: pegawai
+INFO - 2025-02-05 04:00:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 04:00:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 04:00:08 --> Data pengguna ditemukan: user_id = 13
+INFO - 2025-02-05 04:00:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 04:00:11 --> Feedback data for notulensi_id 1: Array
+(
+    [0] => Array
+        (
+            [feedback_id] => 4
+            [notulensi_id] => 1
+            [isi] => lala
+            [tanggal_feedback] => 2025-02-05
+            [user_id] => 13
+            [created_at] => 2025-02-05 09:35:28
+            [user_nama] => jungwon
+            [profil_foto] => pegawai.png
+        )
+
+)
+
+INFO - 2025-02-05 04:00:11 --> Data yang dikirim ke view: Array
+(
+    [id] => 1
+    [notulensi] => Array
+        (
+            [notulensi_id] => 1
+            [user_id] => 3
+            [judul] => Rapat Koordinasi Aptika
+            [partisipan] => 
+            [agenda] => 1. kakka
+            [isi] => Pembahasan rencana digitalisasi layanan publik.
+            [Bidang] => Aptika
+            [tanggal_dibuat] => 2025-01-10
+        )
+
+    [agenda] => Array
+        (
+            [0] => 1. kakka
+        )
+
+    [agendaIsi] => Array
+        (
+            [0] => Pembahasan rencana digitalisasi layanan publik.
+        )
+
+    [dokumentasi] => Array
+        (
+        )
+
+    [current_page] => notulensi
+    [allNotulensi] => Array
+        (
+            [0] => Array
+                (
+                    [notulensi_id] => 1
+                    [user_id] => 3
+                    [judul] => Rapat Koordinasi Aptika
+                    [partisipan] => 
+                    [agenda] => 1. kakka
+                    [isi] => Pembahasan rencana digitalisasi layanan publik.
+                    [Bidang] => Aptika
+                    [tanggal_dibuat] => 2025-01-10
+                )
+
+            [1] => Array
+                (
+                    [notulensi_id] => 2
+                    [user_id] => 6
+                    [judul] => Strategi Komunikasi Publik
+                    [partisipan] => 
+                    [agenda] => 
+                    [isi] => Menyusun pedoman komunikasi yang lebih efektif.
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-08
+                )
+
+            [2] => Array
+                (
+                    [notulensi_id] => 3
+                    [user_id] => 7
+                    [judul] => Pengembangan Statistik
+                    [partisipan] => 
+                    [agenda] => 
+                    [isi] => Diskusi terkait pengumpulan data statistik terbaru.
+                    [Bidang] => Statistik dan Persandian
+                    [tanggal_dibuat] => 2025-01-09
+                )
+
+            [3] => Array
+                (
+                    [notulensi_id] => 6
+                    [user_id] => 3
+                    [judul] => Infrastruktur TIK
+                    [partisipan] => 
+                    [agenda] => 
+                    [isi] => Pengembangan infrastruktur untuk mendukung program Aptika.
+                    [Bidang] => Aptika
+                    [tanggal_dibuat] => 2025-01-10
+                )
+
+            [4] => Array
+                (
+                    [notulensi_id] => 7
+                    [user_id] => 6
+                    [judul] => Kampanye Publikasi Digital
+                    [partisipan] => 
+                    [agenda] => 
+                    [isi] => Strategi kampanye melalui media sosial dan digital.
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-06
+                )
+
+            [5] => Array
+                (
+                    [notulensi_id] => 10
+                    [user_id] => 9
+                    [judul] => Sosialisasi Layanan Publik
+                    [partisipan] => 
+                    [agenda] => 
+                    [isi] => Peningkatan pemahaman layanan publik berbasis Aptika.
+                    [Bidang] => Aptika
+                    [tanggal_dibuat] => 2025-01-11
+                )
+
+            [6] => Array
+                (
+                    [notulensi_id] => 14
+                    [user_id] => 32
+                    [judul] => jsjm
+                    [partisipan] => sdi;wy
+                    [agenda] => sngdlk
+                    [isi] => dhd
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-21
+                )
+
+            [7] => Array
+                (
+                    [notulensi_id] => 15
+                    [user_id] => 32
+                    [judul] => rapat wajib
+                    [partisipan] => lala
+lili
+lulu
+
+                    [agenda] => 1.agenda wajib
+2.pelaporan progress
+                    [isi] => dadadadadaddadaddadadd
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-21
+                )
+
+            [8] => Array
+                (
+                    [notulensi_id] => 16
+                    [user_id] => 32
+                    [judul] => rapat saja
+                    [partisipan] => kwkkwkk
+                    [agenda] => 1.lala
+2.lala
+dkkd
+                    [isi] => wkkkw
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-21
+                )
+
+            [9] => Array
+                (
+                    [notulensi_id] => 19
+                    [user_id] => 32
+                    [judul] => lala
+                    [partisipan] => jejjq
+                    [agenda] => dnbn
+                    [isi] => nnsn
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-21
+                )
+
+            [10] => Array
+                (
+                    [notulensi_id] => 24
+                    [user_id] => 32
+                    [judul] => rapat saja
+                    [partisipan] => skmskldl
+                    [agenda] => 1.
+2.
+
+                    [isi] => qwwwwwwwwwwwwwwww
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-22
+                )
+
+            [11] => Array
+                (
+                    [notulensi_id] => 27
+                    [user_id] => 32
+                    [judul] => rapat saja
+                    [partisipan] => nskdlld
+                    [agenda] => lalak
+                    [isi] => ajjjjj
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-22
+                )
+
+            [12] => Array
+                (
+                    [notulensi_id] => 29
+                    [user_id] => 32
+                    [judul] => pemilihan jodoh terbaik untuk cindy
+                    [partisipan] => 1.wulan
+2.heni
+3.intan
+4.mahira
+                    [agenda] => 1. ktiteria jodoh cindy
+2. alterfantif jodoh cind
+                    [isi] => belum menemukan karena lagi dibogor sudah rindu
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-22
+                )
+
+            [13] => Array
+                (
+                    [notulensi_id] => 32
+                    [user_id] => 32
+                    [judul] => lala
+                    [partisipan] => kdkkd
+                    [agenda] => ddd
+                    [isi] => ejje
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-23
+                )
+
+            [14] => Array
+                (
+                    [notulensi_id] => 35
+                    [user_id] => 32
+                    [judul] => duri duri damn
+                    [partisipan] => mm
+                    [agenda] => mm
+                    [isi] => <p>nnnnnnnnnnn</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-27
+                )
+
+            [15] => Array
+                (
+                    [notulensi_id] => 38
+                    [user_id] => 32
+                    [judul] => duri duri damn
+                    [partisipan] => jjjj
+                    [agenda] => kkk
+                    [isi] => <p>kkk</p>
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-31
+                )
+
+            [16] => Array
+                (
+                    [notulensi_id] => 39
+                    [user_id] => 32
+                    [judul] => mencoba saja
+                    [partisipan] => jjj
+                    [agenda] => alalalal
+                    [isi] => <p>kakka</p>
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-31
+                )
+
+            [17] => Array
+                (
+                    [notulensi_id] => 40
+                    [user_id] => 32
+                    [judul] => mencoba saja
+                    [partisipan] => mmm
+                    [agenda] => nnn
+                    [isi] => <p>mmmmmm</p>
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-02-04
+                )
+
+            [18] => Array
+                (
+                    [notulensi_id] => 41
+                    [user_id] => 32
+                    [judul] => eeee
+                    [partisipan] => eee
+                    [agenda] => eee
+                    [isi] => <p>nsnnnnm</p>
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-02-04
+                )
+
+        )
+
+    [allDokumentasi] => Array
+        (
+            [0] => Array
+                (
+                    [dokumentasi_id] => 7
+                    [notulensi_id] => 24
+                    [foto_dokumentasi] => 1737522296_e30de4811cd8fff7bfcc.png
+                )
+
+            [1] => Array
+                (
+                    [dokumentasi_id] => 10
+                    [notulensi_id] => 27
+                    [foto_dokumentasi] => 1737524818_ba551a20c47b9344245b.png
+                )
+
+            [2] => Array
+                (
+                    [dokumentasi_id] => 12
+                    [notulensi_id] => 29
+                    [foto_dokumentasi] => 1737527174_5ea251670dabbf17b632.jpg
+                )
+
+            [3] => Array
+                (
+                    [dokumentasi_id] => 15
+                    [notulensi_id] => 32
+                    [foto_dokumentasi] => 1737602617_76a013c1434405cb2d87.jpg
+                )
+
+            [4] => Array
+                (
+                    [dokumentasi_id] => 18
+                    [notulensi_id] => 35
+                    [foto_dokumentasi] => 1738000425_bc512c9b9867d4013bda.png
+                )
+
+            [5] => Array
+                (
+                    [dokumentasi_id] => 25
+                    [notulensi_id] => 38
+                    [foto_dokumentasi] => 1738294229_f561f8b6ce6e43bf5bac.png
+                )
+
+            [6] => Array
+                (
+                    [dokumentasi_id] => 26
+                    [notulensi_id] => 39
+                    [foto_dokumentasi] => 1738311648_88f2f9f8cdd7142bd710.jpg
+                )
+
+            [7] => Array
+                (
+                    [dokumentasi_id] => 27
+                    [notulensi_id] => 40
+                    [foto_dokumentasi] => 1738639811_c77c73b619c9833b6332.jpg
+                )
+
+            [8] => Array
+                (
+                    [dokumentasi_id] => 28
+                    [notulensi_id] => 41
+                    [foto_dokumentasi] => 1738645604_c24285f55da2efaa1afd.png
+                )
+
+        )
+
+    [feedbacks] => Array
+        (
+            [0] => Array
+                (
+                    [feedback_id] => 4
+                    [notulensi_id] => 1
+                    [isi] => lala
+                    [tanggal_feedback] => 2025-02-05
+                    [user_id] => 13
+                    [created_at] => 2025-02-05 09:35:28
+                    [user_nama] => jungwon
+                    [profil_foto] => pegawai.png
+                )
+
+        )
+
+)
+
+INFO - 2025-02-05 04:00:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 04:00:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 04:00:48 --> Feedback data for notulensi_id 1: Array
+(
+    [0] => Array
+        (
+            [feedback_id] => 4
+            [notulensi_id] => 1
+            [isi] => lala
+            [tanggal_feedback] => 2025-02-05
+            [user_id] => 13
+            [created_at] => 2025-02-05 09:35:28
+            [user_nama] => jungwon
+            [profil_foto] => pegawai.png
+        )
+
+)
+
+INFO - 2025-02-05 04:00:48 --> Data yang dikirim ke view: Array
+(
+    [id] => 1
+    [notulensi] => Array
+        (
+            [notulensi_id] => 1
+            [user_id] => 3
+            [judul] => Rapat Koordinasi Aptika
+            [partisipan] => 
+            [agenda] => 1. kakka
+            [isi] => Pembahasan rencana digitalisasi layanan publik.
+            [Bidang] => Aptika
+            [tanggal_dibuat] => 2025-01-10
+        )
+
+    [agenda] => Array
+        (
+            [0] => 1. kakka
+        )
+
+    [agendaIsi] => Array
+        (
+            [0] => Pembahasan rencana digitalisasi layanan publik.
+        )
+
+    [dokumentasi] => Array
+        (
+        )
+
+    [current_page] => notulensi
+    [allNotulensi] => Array
+        (
+            [0] => Array
+                (
+                    [notulensi_id] => 1
+                    [user_id] => 3
+                    [judul] => Rapat Koordinasi Aptika
+                    [partisipan] => 
+                    [agenda] => 1. kakka
+                    [isi] => Pembahasan rencana digitalisasi layanan publik.
+                    [Bidang] => Aptika
+                    [tanggal_dibuat] => 2025-01-10
+                )
+
+            [1] => Array
+                (
+                    [notulensi_id] => 2
+                    [user_id] => 6
+                    [judul] => Strategi Komunikasi Publik
+                    [partisipan] => 
+                    [agenda] => 
+                    [isi] => Menyusun pedoman komunikasi yang lebih efektif.
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-08
+                )
+
+            [2] => Array
+                (
+                    [notulensi_id] => 3
+                    [user_id] => 7
+                    [judul] => Pengembangan Statistik
+                    [partisipan] => 
+                    [agenda] => 
+                    [isi] => Diskusi terkait pengumpulan data statistik terbaru.
+                    [Bidang] => Statistik dan Persandian
+                    [tanggal_dibuat] => 2025-01-09
+                )
+
+            [3] => Array
+                (
+                    [notulensi_id] => 6
+                    [user_id] => 3
+                    [judul] => Infrastruktur TIK
+                    [partisipan] => 
+                    [agenda] => 
+                    [isi] => Pengembangan infrastruktur untuk mendukung program Aptika.
+                    [Bidang] => Aptika
+                    [tanggal_dibuat] => 2025-01-10
+                )
+
+            [4] => Array
+                (
+                    [notulensi_id] => 7
+                    [user_id] => 6
+                    [judul] => Kampanye Publikasi Digital
+                    [partisipan] => 
+                    [agenda] => 
+                    [isi] => Strategi kampanye melalui media sosial dan digital.
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-06
+                )
+
+            [5] => Array
+                (
+                    [notulensi_id] => 10
+                    [user_id] => 9
+                    [judul] => Sosialisasi Layanan Publik
+                    [partisipan] => 
+                    [agenda] => 
+                    [isi] => Peningkatan pemahaman layanan publik berbasis Aptika.
+                    [Bidang] => Aptika
+                    [tanggal_dibuat] => 2025-01-11
+                )
+
+            [6] => Array
+                (
+                    [notulensi_id] => 14
+                    [user_id] => 32
+                    [judul] => jsjm
+                    [partisipan] => sdi;wy
+                    [agenda] => sngdlk
+                    [isi] => dhd
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-21
+                )
+
+            [7] => Array
+                (
+                    [notulensi_id] => 15
+                    [user_id] => 32
+                    [judul] => rapat wajib
+                    [partisipan] => lala
+lili
+lulu
+
+                    [agenda] => 1.agenda wajib
+2.pelaporan progress
+                    [isi] => dadadadadaddadaddadadd
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-21
+                )
+
+            [8] => Array
+                (
+                    [notulensi_id] => 16
+                    [user_id] => 32
+                    [judul] => rapat saja
+                    [partisipan] => kwkkwkk
+                    [agenda] => 1.lala
+2.lala
+dkkd
+                    [isi] => wkkkw
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-21
+                )
+
+            [9] => Array
+                (
+                    [notulensi_id] => 19
+                    [user_id] => 32
+                    [judul] => lala
+                    [partisipan] => jejjq
+                    [agenda] => dnbn
+                    [isi] => nnsn
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-21
+                )
+
+            [10] => Array
+                (
+                    [notulensi_id] => 24
+                    [user_id] => 32
+                    [judul] => rapat saja
+                    [partisipan] => skmskldl
+                    [agenda] => 1.
+2.
+
+                    [isi] => qwwwwwwwwwwwwwwww
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-22
+                )
+
+            [11] => Array
+                (
+                    [notulensi_id] => 27
+                    [user_id] => 32
+                    [judul] => rapat saja
+                    [partisipan] => nskdlld
+                    [agenda] => lalak
+                    [isi] => ajjjjj
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-22
+                )
+
+            [12] => Array
+                (
+                    [notulensi_id] => 29
+                    [user_id] => 32
+                    [judul] => pemilihan jodoh terbaik untuk cindy
+                    [partisipan] => 1.wulan
+2.heni
+3.intan
+4.mahira
+                    [agenda] => 1. ktiteria jodoh cindy
+2. alterfantif jodoh cind
+                    [isi] => belum menemukan karena lagi dibogor sudah rindu
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-22
+                )
+
+            [13] => Array
+                (
+                    [notulensi_id] => 32
+                    [user_id] => 32
+                    [judul] => lala
+                    [partisipan] => kdkkd
+                    [agenda] => ddd
+                    [isi] => ejje
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-23
+                )
+
+            [14] => Array
+                (
+                    [notulensi_id] => 35
+                    [user_id] => 32
+                    [judul] => duri duri damn
+                    [partisipan] => mm
+                    [agenda] => mm
+                    [isi] => <p>nnnnnnnnnnn</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-27
+                )
+
+            [15] => Array
+                (
+                    [notulensi_id] => 38
+                    [user_id] => 32
+                    [judul] => duri duri damn
+                    [partisipan] => jjjj
+                    [agenda] => kkk
+                    [isi] => <p>kkk</p>
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-31
+                )
+
+            [16] => Array
+                (
+                    [notulensi_id] => 39
+                    [user_id] => 32
+                    [judul] => mencoba saja
+                    [partisipan] => jjj
+                    [agenda] => alalalal
+                    [isi] => <p>kakka</p>
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-31
+                )
+
+            [17] => Array
+                (
+                    [notulensi_id] => 40
+                    [user_id] => 32
+                    [judul] => mencoba saja
+                    [partisipan] => mmm
+                    [agenda] => nnn
+                    [isi] => <p>mmmmmm</p>
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-02-04
+                )
+
+            [18] => Array
+                (
+                    [notulensi_id] => 41
+                    [user_id] => 32
+                    [judul] => eeee
+                    [partisipan] => eee
+                    [agenda] => eee
+                    [isi] => <p>nsnnnnm</p>
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-02-04
+                )
+
+        )
+
+    [allDokumentasi] => Array
+        (
+            [0] => Array
+                (
+                    [dokumentasi_id] => 7
+                    [notulensi_id] => 24
+                    [foto_dokumentasi] => 1737522296_e30de4811cd8fff7bfcc.png
+                )
+
+            [1] => Array
+                (
+                    [dokumentasi_id] => 10
+                    [notulensi_id] => 27
+                    [foto_dokumentasi] => 1737524818_ba551a20c47b9344245b.png
+                )
+
+            [2] => Array
+                (
+                    [dokumentasi_id] => 12
+                    [notulensi_id] => 29
+                    [foto_dokumentasi] => 1737527174_5ea251670dabbf17b632.jpg
+                )
+
+            [3] => Array
+                (
+                    [dokumentasi_id] => 15
+                    [notulensi_id] => 32
+                    [foto_dokumentasi] => 1737602617_76a013c1434405cb2d87.jpg
+                )
+
+            [4] => Array
+                (
+                    [dokumentasi_id] => 18
+                    [notulensi_id] => 35
+                    [foto_dokumentasi] => 1738000425_bc512c9b9867d4013bda.png
+                )
+
+            [5] => Array
+                (
+                    [dokumentasi_id] => 25
+                    [notulensi_id] => 38
+                    [foto_dokumentasi] => 1738294229_f561f8b6ce6e43bf5bac.png
+                )
+
+            [6] => Array
+                (
+                    [dokumentasi_id] => 26
+                    [notulensi_id] => 39
+                    [foto_dokumentasi] => 1738311648_88f2f9f8cdd7142bd710.jpg
+                )
+
+            [7] => Array
+                (
+                    [dokumentasi_id] => 27
+                    [notulensi_id] => 40
+                    [foto_dokumentasi] => 1738639811_c77c73b619c9833b6332.jpg
+                )
+
+            [8] => Array
+                (
+                    [dokumentasi_id] => 28
+                    [notulensi_id] => 41
+                    [foto_dokumentasi] => 1738645604_c24285f55da2efaa1afd.png
+                )
+
+        )
+
+    [feedbacks] => Array
+        (
+            [0] => Array
+                (
+                    [feedback_id] => 4
+                    [notulensi_id] => 1
+                    [isi] => lala
+                    [tanggal_feedback] => 2025-02-05
+                    [user_id] => 13
+                    [created_at] => 2025-02-05 09:35:28
+                    [user_nama] => jungwon
+                    [profil_foto] => pegawai.png
+                )
+
+        )
+
+)
+
+INFO - 2025-02-05 04:00:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 04:00:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 04:00:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 04:01:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 04:01:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 04:01:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-05 04:01:08 --> Login attempt with username: dadang
+ERROR - 2025-02-05 04:01:08 --> Checking login for username: dadang
+ERROR - 2025-02-05 04:01:08 --> User data: Array
+(
+    [user_id] => 32
+    [username] => dadang
+    [nama] => cindy arwinda 
+    [nip] => 098765432234567892
+    [email] => dadang@gmail.com
+    [password] => $2y$10$FKo1RqxUsHWcoWzbk5ZZae9C4Al32xjQuyf99kyXR4CMMYtDOyMVC
+    [role] => notulensi
+    [Bidang] => IKP
+    [profil_foto] => 2.jpg
+    [alamat] => 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-17 09:26:42
+    [updated_at] => 2025-01-30 15:15:46
+)
+
+ERROR - 2025-02-05 04:01:08 --> Password verify result for username dadang: Failure
+ERROR - 2025-02-05 04:01:08 --> Login failed for username: dadang
+INFO - 2025-02-05 04:01:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 04:01:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 04:01:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-05 04:01:14 --> Login attempt with username: dadang
+ERROR - 2025-02-05 04:01:14 --> Checking login for username: dadang
+ERROR - 2025-02-05 04:01:14 --> User data: Array
+(
+    [user_id] => 32
+    [username] => dadang
+    [nama] => cindy arwinda 
+    [nip] => 098765432234567892
+    [email] => dadang@gmail.com
+    [password] => $2y$10$FKo1RqxUsHWcoWzbk5ZZae9C4Al32xjQuyf99kyXR4CMMYtDOyMVC
+    [role] => notulensi
+    [Bidang] => IKP
+    [profil_foto] => 2.jpg
+    [alamat] => 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-17 09:26:42
+    [updated_at] => 2025-01-30 15:15:46
+)
+
+ERROR - 2025-02-05 04:01:14 --> Password verify result for username dadang: Success
+ERROR - 2025-02-05 04:01:14 --> Login success for username: dadang
+INFO - 2025-02-05 04:01:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 04:01:15 --> User ID: 32
+DEBUG - 2025-02-05 04:01:15 --> Profile Picture: 2.jpg
+DEBUG - 2025-02-05 04:01:15 --> User Name: cindy arwinda 
+DEBUG - 2025-02-05 04:01:15 --> User Role: notulensi
+INFO - 2025-02-05 04:01:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 04:01:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 04:01:17 --> Data pengguna ditemukan: user_id = 32
+INFO - 2025-02-05 04:01:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 04:01:21 --> Feedback data for notulensi_id 1: Array
+(
+    [0] => Array
+        (
+            [feedback_id] => 4
+            [notulensi_id] => 1
+            [isi] => lala
+            [tanggal_feedback] => 2025-02-05
+            [user_id] => 13
+            [created_at] => 2025-02-05 09:35:28
+            [user_nama] => jungwon
+            [profil_foto] => pegawai.png
+        )
+
+)
+
+INFO - 2025-02-05 04:01:21 --> Data yang dikirim ke view: Array
+(
+    [id] => 1
+    [notulensi] => Array
+        (
+            [notulensi_id] => 1
+            [user_id] => 3
+            [judul] => Rapat Koordinasi Aptika
+            [partisipan] => 
+            [agenda] => 1. kakka
+            [isi] => Pembahasan rencana digitalisasi layanan publik.
+            [Bidang] => Aptika
+            [tanggal_dibuat] => 2025-01-10
+        )
+
+    [agenda] => Array
+        (
+            [0] => 1. kakka
+        )
+
+    [agendaIsi] => Array
+        (
+            [0] => Pembahasan rencana digitalisasi layanan publik.
+        )
+
+    [dokumentasi] => Array
+        (
+        )
+
+    [current_page] => notulensi
+    [allNotulensi] => Array
+        (
+            [0] => Array
+                (
+                    [notulensi_id] => 1
+                    [user_id] => 3
+                    [judul] => Rapat Koordinasi Aptika
+                    [partisipan] => 
+                    [agenda] => 1. kakka
+                    [isi] => Pembahasan rencana digitalisasi layanan publik.
+                    [Bidang] => Aptika
+                    [tanggal_dibuat] => 2025-01-10
+                )
+
+            [1] => Array
+                (
+                    [notulensi_id] => 2
+                    [user_id] => 6
+                    [judul] => Strategi Komunikasi Publik
+                    [partisipan] => 
+                    [agenda] => 
+                    [isi] => Menyusun pedoman komunikasi yang lebih efektif.
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-08
+                )
+
+            [2] => Array
+                (
+                    [notulensi_id] => 3
+                    [user_id] => 7
+                    [judul] => Pengembangan Statistik
+                    [partisipan] => 
+                    [agenda] => 
+                    [isi] => Diskusi terkait pengumpulan data statistik terbaru.
+                    [Bidang] => Statistik dan Persandian
+                    [tanggal_dibuat] => 2025-01-09
+                )
+
+            [3] => Array
+                (
+                    [notulensi_id] => 6
+                    [user_id] => 3
+                    [judul] => Infrastruktur TIK
+                    [partisipan] => 
+                    [agenda] => 
+                    [isi] => Pengembangan infrastruktur untuk mendukung program Aptika.
+                    [Bidang] => Aptika
+                    [tanggal_dibuat] => 2025-01-10
+                )
+
+            [4] => Array
+                (
+                    [notulensi_id] => 7
+                    [user_id] => 6
+                    [judul] => Kampanye Publikasi Digital
+                    [partisipan] => 
+                    [agenda] => 
+                    [isi] => Strategi kampanye melalui media sosial dan digital.
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-06
+                )
+
+            [5] => Array
+                (
+                    [notulensi_id] => 10
+                    [user_id] => 9
+                    [judul] => Sosialisasi Layanan Publik
+                    [partisipan] => 
+                    [agenda] => 
+                    [isi] => Peningkatan pemahaman layanan publik berbasis Aptika.
+                    [Bidang] => Aptika
+                    [tanggal_dibuat] => 2025-01-11
+                )
+
+            [6] => Array
+                (
+                    [notulensi_id] => 14
+                    [user_id] => 32
+                    [judul] => jsjm
+                    [partisipan] => sdi;wy
+                    [agenda] => sngdlk
+                    [isi] => dhd
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-21
+                )
+
+            [7] => Array
+                (
+                    [notulensi_id] => 15
+                    [user_id] => 32
+                    [judul] => rapat wajib
+                    [partisipan] => lala
+lili
+lulu
+
+                    [agenda] => 1.agenda wajib
+2.pelaporan progress
+                    [isi] => dadadadadaddadaddadadd
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-21
+                )
+
+            [8] => Array
+                (
+                    [notulensi_id] => 16
+                    [user_id] => 32
+                    [judul] => rapat saja
+                    [partisipan] => kwkkwkk
+                    [agenda] => 1.lala
+2.lala
+dkkd
+                    [isi] => wkkkw
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-21
+                )
+
+            [9] => Array
+                (
+                    [notulensi_id] => 19
+                    [user_id] => 32
+                    [judul] => lala
+                    [partisipan] => jejjq
+                    [agenda] => dnbn
+                    [isi] => nnsn
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-21
+                )
+
+            [10] => Array
+                (
+                    [notulensi_id] => 24
+                    [user_id] => 32
+                    [judul] => rapat saja
+                    [partisipan] => skmskldl
+                    [agenda] => 1.
+2.
+
+                    [isi] => qwwwwwwwwwwwwwwww
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-22
+                )
+
+            [11] => Array
+                (
+                    [notulensi_id] => 27
+                    [user_id] => 32
+                    [judul] => rapat saja
+                    [partisipan] => nskdlld
+                    [agenda] => lalak
+                    [isi] => ajjjjj
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-22
+                )
+
+            [12] => Array
+                (
+                    [notulensi_id] => 29
+                    [user_id] => 32
+                    [judul] => pemilihan jodoh terbaik untuk cindy
+                    [partisipan] => 1.wulan
+2.heni
+3.intan
+4.mahira
+                    [agenda] => 1. ktiteria jodoh cindy
+2. alterfantif jodoh cind
+                    [isi] => belum menemukan karena lagi dibogor sudah rindu
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-22
+                )
+
+            [13] => Array
+                (
+                    [notulensi_id] => 32
+                    [user_id] => 32
+                    [judul] => lala
+                    [partisipan] => kdkkd
+                    [agenda] => ddd
+                    [isi] => ejje
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-23
+                )
+
+            [14] => Array
+                (
+                    [notulensi_id] => 35
+                    [user_id] => 32
+                    [judul] => duri duri damn
+                    [partisipan] => mm
+                    [agenda] => mm
+                    [isi] => <p>nnnnnnnnnnn</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-27
+                )
+
+            [15] => Array
+                (
+                    [notulensi_id] => 38
+                    [user_id] => 32
+                    [judul] => duri duri damn
+                    [partisipan] => jjjj
+                    [agenda] => kkk
+                    [isi] => <p>kkk</p>
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-31
+                )
+
+            [16] => Array
+                (
+                    [notulensi_id] => 39
+                    [user_id] => 32
+                    [judul] => mencoba saja
+                    [partisipan] => jjj
+                    [agenda] => alalalal
+                    [isi] => <p>kakka</p>
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-31
+                )
+
+            [17] => Array
+                (
+                    [notulensi_id] => 40
+                    [user_id] => 32
+                    [judul] => mencoba saja
+                    [partisipan] => mmm
+                    [agenda] => nnn
+                    [isi] => <p>mmmmmm</p>
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-02-04
+                )
+
+            [18] => Array
+                (
+                    [notulensi_id] => 41
+                    [user_id] => 32
+                    [judul] => eeee
+                    [partisipan] => eee
+                    [agenda] => eee
+                    [isi] => <p>nsnnnnm</p>
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-02-04
+                )
+
+        )
+
+    [allDokumentasi] => Array
+        (
+            [0] => Array
+                (
+                    [dokumentasi_id] => 7
+                    [notulensi_id] => 24
+                    [foto_dokumentasi] => 1737522296_e30de4811cd8fff7bfcc.png
+                )
+
+            [1] => Array
+                (
+                    [dokumentasi_id] => 10
+                    [notulensi_id] => 27
+                    [foto_dokumentasi] => 1737524818_ba551a20c47b9344245b.png
+                )
+
+            [2] => Array
+                (
+                    [dokumentasi_id] => 12
+                    [notulensi_id] => 29
+                    [foto_dokumentasi] => 1737527174_5ea251670dabbf17b632.jpg
+                )
+
+            [3] => Array
+                (
+                    [dokumentasi_id] => 15
+                    [notulensi_id] => 32
+                    [foto_dokumentasi] => 1737602617_76a013c1434405cb2d87.jpg
+                )
+
+            [4] => Array
+                (
+                    [dokumentasi_id] => 18
+                    [notulensi_id] => 35
+                    [foto_dokumentasi] => 1738000425_bc512c9b9867d4013bda.png
+                )
+
+            [5] => Array
+                (
+                    [dokumentasi_id] => 25
+                    [notulensi_id] => 38
+                    [foto_dokumentasi] => 1738294229_f561f8b6ce6e43bf5bac.png
+                )
+
+            [6] => Array
+                (
+                    [dokumentasi_id] => 26
+                    [notulensi_id] => 39
+                    [foto_dokumentasi] => 1738311648_88f2f9f8cdd7142bd710.jpg
+                )
+
+            [7] => Array
+                (
+                    [dokumentasi_id] => 27
+                    [notulensi_id] => 40
+                    [foto_dokumentasi] => 1738639811_c77c73b619c9833b6332.jpg
+                )
+
+            [8] => Array
+                (
+                    [dokumentasi_id] => 28
+                    [notulensi_id] => 41
+                    [foto_dokumentasi] => 1738645604_c24285f55da2efaa1afd.png
+                )
+
+        )
+
+    [feedbacks] => Array
+        (
+            [0] => Array
+                (
+                    [feedback_id] => 4
+                    [notulensi_id] => 1
+                    [isi] => lala
+                    [tanggal_feedback] => 2025-02-05
+                    [user_id] => 13
+                    [created_at] => 2025-02-05 09:35:28
+                    [user_nama] => jungwon
+                    [profil_foto] => pegawai.png
+                )
+
+        )
+
+)
+
+INFO - 2025-02-05 04:01:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 04:01:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 04:01:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 04:01:29 --> Data pengguna ditemukan: user_id = 32
+INFO - 2025-02-05 04:01:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 04:01:31 --> Feedback data for notulensi_id 3: Array
+(
+)
+
+INFO - 2025-02-05 04:01:31 --> Data yang dikirim ke view: Array
+(
+    [id] => 3
+    [notulensi] => Array
+        (
+            [notulensi_id] => 3
+            [user_id] => 7
+            [judul] => Pengembangan Statistik
+            [partisipan] => 
+            [agenda] => 
+            [isi] => Diskusi terkait pengumpulan data statistik terbaru.
+            [Bidang] => Statistik dan Persandian
+            [tanggal_dibuat] => 2025-01-09
+        )
+
+    [agenda] => Array
+        (
+            [0] => 
+        )
+
+    [agendaIsi] => Array
+        (
+            [0] => Diskusi terkait pengumpulan data statistik terbaru.
+        )
+
+    [dokumentasi] => Array
+        (
+        )
+
+    [current_page] => notulensi
+    [allNotulensi] => Array
+        (
+            [0] => Array
+                (
+                    [notulensi_id] => 1
+                    [user_id] => 3
+                    [judul] => Rapat Koordinasi Aptika
+                    [partisipan] => 
+                    [agenda] => 1. kakka
+                    [isi] => Pembahasan rencana digitalisasi layanan publik.
+                    [Bidang] => Aptika
+                    [tanggal_dibuat] => 2025-01-10
+                )
+
+            [1] => Array
+                (
+                    [notulensi_id] => 2
+                    [user_id] => 6
+                    [judul] => Strategi Komunikasi Publik
+                    [partisipan] => 
+                    [agenda] => 
+                    [isi] => Menyusun pedoman komunikasi yang lebih efektif.
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-08
+                )
+
+            [2] => Array
+                (
+                    [notulensi_id] => 3
+                    [user_id] => 7
+                    [judul] => Pengembangan Statistik
+                    [partisipan] => 
+                    [agenda] => 
+                    [isi] => Diskusi terkait pengumpulan data statistik terbaru.
+                    [Bidang] => Statistik dan Persandian
+                    [tanggal_dibuat] => 2025-01-09
+                )
+
+            [3] => Array
+                (
+                    [notulensi_id] => 6
+                    [user_id] => 3
+                    [judul] => Infrastruktur TIK
+                    [partisipan] => 
+                    [agenda] => 
+                    [isi] => Pengembangan infrastruktur untuk mendukung program Aptika.
+                    [Bidang] => Aptika
+                    [tanggal_dibuat] => 2025-01-10
+                )
+
+            [4] => Array
+                (
+                    [notulensi_id] => 7
+                    [user_id] => 6
+                    [judul] => Kampanye Publikasi Digital
+                    [partisipan] => 
+                    [agenda] => 
+                    [isi] => Strategi kampanye melalui media sosial dan digital.
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-06
+                )
+
+            [5] => Array
+                (
+                    [notulensi_id] => 10
+                    [user_id] => 9
+                    [judul] => Sosialisasi Layanan Publik
+                    [partisipan] => 
+                    [agenda] => 
+                    [isi] => Peningkatan pemahaman layanan publik berbasis Aptika.
+                    [Bidang] => Aptika
+                    [tanggal_dibuat] => 2025-01-11
+                )
+
+            [6] => Array
+                (
+                    [notulensi_id] => 14
+                    [user_id] => 32
+                    [judul] => jsjm
+                    [partisipan] => sdi;wy
+                    [agenda] => sngdlk
+                    [isi] => dhd
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-21
+                )
+
+            [7] => Array
+                (
+                    [notulensi_id] => 15
+                    [user_id] => 32
+                    [judul] => rapat wajib
+                    [partisipan] => lala
+lili
+lulu
+
+                    [agenda] => 1.agenda wajib
+2.pelaporan progress
+                    [isi] => dadadadadaddadaddadadd
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-21
+                )
+
+            [8] => Array
+                (
+                    [notulensi_id] => 16
+                    [user_id] => 32
+                    [judul] => rapat saja
+                    [partisipan] => kwkkwkk
+                    [agenda] => 1.lala
+2.lala
+dkkd
+                    [isi] => wkkkw
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-21
+                )
+
+            [9] => Array
+                (
+                    [notulensi_id] => 19
+                    [user_id] => 32
+                    [judul] => lala
+                    [partisipan] => jejjq
+                    [agenda] => dnbn
+                    [isi] => nnsn
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-21
+                )
+
+            [10] => Array
+                (
+                    [notulensi_id] => 24
+                    [user_id] => 32
+                    [judul] => rapat saja
+                    [partisipan] => skmskldl
+                    [agenda] => 1.
+2.
+
+                    [isi] => qwwwwwwwwwwwwwwww
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-22
+                )
+
+            [11] => Array
+                (
+                    [notulensi_id] => 27
+                    [user_id] => 32
+                    [judul] => rapat saja
+                    [partisipan] => nskdlld
+                    [agenda] => lalak
+                    [isi] => ajjjjj
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-22
+                )
+
+            [12] => Array
+                (
+                    [notulensi_id] => 29
+                    [user_id] => 32
+                    [judul] => pemilihan jodoh terbaik untuk cindy
+                    [partisipan] => 1.wulan
+2.heni
+3.intan
+4.mahira
+                    [agenda] => 1. ktiteria jodoh cindy
+2. alterfantif jodoh cind
+                    [isi] => belum menemukan karena lagi dibogor sudah rindu
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-22
+                )
+
+            [13] => Array
+                (
+                    [notulensi_id] => 32
+                    [user_id] => 32
+                    [judul] => lala
+                    [partisipan] => kdkkd
+                    [agenda] => ddd
+                    [isi] => ejje
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-23
+                )
+
+            [14] => Array
+                (
+                    [notulensi_id] => 35
+                    [user_id] => 32
+                    [judul] => duri duri damn
+                    [partisipan] => mm
+                    [agenda] => mm
+                    [isi] => <p>nnnnnnnnnnn</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-27
+                )
+
+            [15] => Array
+                (
+                    [notulensi_id] => 38
+                    [user_id] => 32
+                    [judul] => duri duri damn
+                    [partisipan] => jjjj
+                    [agenda] => kkk
+                    [isi] => <p>kkk</p>
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-31
+                )
+
+            [16] => Array
+                (
+                    [notulensi_id] => 39
+                    [user_id] => 32
+                    [judul] => mencoba saja
+                    [partisipan] => jjj
+                    [agenda] => alalalal
+                    [isi] => <p>kakka</p>
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-01-31
+                )
+
+            [17] => Array
+                (
+                    [notulensi_id] => 40
+                    [user_id] => 32
+                    [judul] => mencoba saja
+                    [partisipan] => mmm
+                    [agenda] => nnn
+                    [isi] => <p>mmmmmm</p>
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-02-04
+                )
+
+            [18] => Array
+                (
+                    [notulensi_id] => 41
+                    [user_id] => 32
+                    [judul] => eeee
+                    [partisipan] => eee
+                    [agenda] => eee
+                    [isi] => <p>nsnnnnm</p>
+                    [Bidang] => IKP
+                    [tanggal_dibuat] => 2025-02-04
+                )
+
+        )
+
+    [allDokumentasi] => Array
+        (
+            [0] => Array
+                (
+                    [dokumentasi_id] => 7
+                    [notulensi_id] => 24
+                    [foto_dokumentasi] => 1737522296_e30de4811cd8fff7bfcc.png
+                )
+
+            [1] => Array
+                (
+                    [dokumentasi_id] => 10
+                    [notulensi_id] => 27
+                    [foto_dokumentasi] => 1737524818_ba551a20c47b9344245b.png
+                )
+
+            [2] => Array
+                (
+                    [dokumentasi_id] => 12
+                    [notulensi_id] => 29
+                    [foto_dokumentasi] => 1737527174_5ea251670dabbf17b632.jpg
+                )
+
+            [3] => Array
+                (
+                    [dokumentasi_id] => 15
+                    [notulensi_id] => 32
+                    [foto_dokumentasi] => 1737602617_76a013c1434405cb2d87.jpg
+                )
+
+            [4] => Array
+                (
+                    [dokumentasi_id] => 18
+                    [notulensi_id] => 35
+                    [foto_dokumentasi] => 1738000425_bc512c9b9867d4013bda.png
+                )
+
+            [5] => Array
+                (
+                    [dokumentasi_id] => 25
+                    [notulensi_id] => 38
+                    [foto_dokumentasi] => 1738294229_f561f8b6ce6e43bf5bac.png
+                )
+
+            [6] => Array
+                (
+                    [dokumentasi_id] => 26
+                    [notulensi_id] => 39
+                    [foto_dokumentasi] => 1738311648_88f2f9f8cdd7142bd710.jpg
+                )
+
+            [7] => Array
+                (
+                    [dokumentasi_id] => 27
+                    [notulensi_id] => 40
+                    [foto_dokumentasi] => 1738639811_c77c73b619c9833b6332.jpg
+                )
+
+            [8] => Array
+                (
+                    [dokumentasi_id] => 28
+                    [notulensi_id] => 41
+                    [foto_dokumentasi] => 1738645604_c24285f55da2efaa1afd.png
+                )
+
+        )
+
+    [feedbacks] => Array
+        (
+        )
+
+)
+
+INFO - 2025-02-05 04:01:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 04:01:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

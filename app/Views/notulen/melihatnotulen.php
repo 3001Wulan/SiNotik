@@ -32,7 +32,7 @@
                     <img src="<?= base_url('assets/images/buat.png') ?>" alt="List Icon" class="sidebar-icon">
                     Daftar Notulensi
                 </a>
-                <a href="buat-notulensi" class="popup-item">
+                <a href="buatnotulen" class="popup-item">
                     <img src="<?= base_url('assets/images/edit.png') ?>" alt="Create Icon" class="sidebar-icon">
                     Buat Notulensi
                 </a>
@@ -97,7 +97,6 @@
                     <div class="show-entries">
                         <label for="entries">Show:</label>
                         <select id="entries" name="entries">
-                            <option value="">Select</option>
                             <option value="5">5</option>
                             <option value="10">10</option>
                             <option value="15">15</option>
@@ -270,7 +269,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // View Details Function
     window.viewDetails = function(button, notulensiId) {
         // Arahkan ke halaman detail notulensi
-        window.location.href = `<?= base_url('notulensi/feedbacknotulen/') ?>${notulensiId}`;
+        window.location.href = `<?= base_url('notulensi/lihatnotulen/') ?>${notulensiId}`;
     };
 
     // Show Entries dropdown change event

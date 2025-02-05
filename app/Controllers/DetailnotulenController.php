@@ -7,7 +7,7 @@ use App\Models\DokumentasiModel;
 use App\Models\FeedbackModel;
 use CodeIgniter\Exceptions\PageNotFoundException;
 
-class LihatNotulenController extends BaseController
+class DetailnotulenController extends BaseController
 {
     public function lihatnotulen($id = null)
     {
@@ -43,7 +43,7 @@ class LihatNotulenController extends BaseController
 
         log_message('info', 'Data yang dikirim ke view: ' . print_r($data, true));
         
-        return view('notulen/detailnotulen', $data);
+        return view('pegawai/detailnotulen', $data);
     }
 
     public function saveFeedback()

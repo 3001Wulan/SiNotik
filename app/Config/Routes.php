@@ -51,9 +51,11 @@ $routes->post('UbahPasswordController/ubah', 'UbahPasswordController::ubah');
 $routes->get('assets/images/profiles/(:any)', function() {
     return redirect()->to(base_url('/'));
 });
+$routes->post('save-feedback', 'LihatNotulenController::saveFeedback');
+$routes->post('lihatnotulen/saveFeedback', 'LihatNotulenController::saveFeedback');
 
-
-
+$routes->get('pegawai/lihatnotulen/(:num)', 'DetailnotulenController::lihatnotulen/$1');
+$routes->post('lihatnotulen/saveFeedback', 'DetailnotulenController::saveFeedback');
 
 
 

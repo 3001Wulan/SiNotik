@@ -24,16 +24,10 @@
         </li>
         <!-- Menu Notulensi dengan dropdown yang muncul saat hover -->
         <li class="notulensi-menu">
-          <a href="daftar-notulensi" class="<?php echo ($current_page == 'data_pengguna') ? 'active' : 'active'; ?>">
+          <a href="daftar-notulensi" class="<?php echo ($current_page == '') ? 'active' : 'active'; ?>">
             <img src="<?php echo base_url('assets/images/notulensi.png'); ?>" alt="Notulensi Icon" class="sidebar-icon">
             Notulensi
           </a>
-          <!-- Dropdown Submenu -->
-          <div class="popup-menu">
-            <a href="daftar-notulensi" class="popup-item <?php echo ($current_page == 'daftar_notulensi') ? 'active' : 'inactive'; ?>">Daftar Notulensi</a>
-            <a href="buat-notulensi" class="popup-item <?php echo ($current_page == 'buat_notulensi') ? 'active' : 'inactive'; ?>">Buat Notulensi</a>
-          </div>
-        </li>
         <li>
           <a href="riwayatadmin" class="<?php echo ($current_page == 'riwayat_notulensi') ? 'active riwayat-notulensi' : 'inactive'; ?>">
             <img src="<?php echo base_url('assets/images/riwayatnotulensi.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
