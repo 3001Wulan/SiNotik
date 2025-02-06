@@ -27,7 +27,7 @@ $current_page = 'data_pengguna';
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="<?php echo ($current_page == 'data_pengguna') ? 'active' : 'inactive'; ?>">
+                    <a href="data-pengguna" class="<?php echo ($current_page == 'data_pengguna') ? 'active' : 'inactive'; ?>">
                         <img src="<?php echo base_url('assets/images/datapengguna.png'); ?>" alt="Data Pengguna Icon" class="sidebar-icon">
                         Data Pengguna
                     </a>
@@ -154,7 +154,11 @@ $current_page = 'data_pengguna';
                                         <td><?= esc($user['username']) ?></td>
                                         <td><?= esc($user['nip']) ?></td>
                                         <td><?= esc($user['email']) ?></td>
-                                        <td><?= esc($user['role']) ?></td>
+                                        <td>
+                                            <span class="status-box <?= strtolower(esc($user['role'])) ?>">
+                                                <?= esc($user['role']) ?>
+                                            </span>
+                                        </td>
                                         <td>
                                             <a href="#" class="btn-edit" data-user-id="<?= esc($user['user_id']) ?>">
                                                 <img src="<?= base_url('assets/images/edit.png') ?>" alt="Icon Edit" class="btn-icon">

@@ -13,6 +13,7 @@ body {
 
 .sidebar {
     width: 250px;
+    min-width: 250px;
     background-color: #0085C5;
     color: white;
     min-height: 100%; 
@@ -104,7 +105,9 @@ body {
     align-items: center;
     margin-bottom: 30px;
     background-color: #fff;
-    width: 104%;
+    width: 100%;
+    max-width: 1300px;
+    width: 1285px;
     height: 80px;
     margin-left: -20px;
     margin-right: -20px;
@@ -140,22 +143,22 @@ body {
 .user-text {
     display: flex;
     flex-direction: column; 
-    margin-right: 10px; 
+    margin-right: 5px; 
 }
 
 .user-name {
     font-weight: bold;
     font-size: 18px;
-    text-align: center;  
-    margin-left: -150px;
-    margin-bottom: 5px; 
+    text-align: right;  
+    margin-right: 10px;
+    margin-bottom: 5px;
 }
 
 .user-role {
     font-size: 16px;
     color: #444;
-    text-align: center; 
-    margin-left: -100px;
+    text-align: right; 
+    margin-right: 10px;
 }
 
 .user-info img {
@@ -219,7 +222,7 @@ body {
 }
 
 .page-title h1 {
-    font-size: 40px;
+    font-size: 35px;
     font-weight: bolder;
     font-style: italic;
     color: #443F3F;
@@ -229,16 +232,17 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr; 
     grid-template-rows: auto auto; 
-    gap: 20px; 
-    padding: 20px
-
+    gap: 20px;
 }
 
-.form-container, .forms-container {
-    border: 1px solid #ddd;
-    border-radius: 8px;
+.form-container {
+    border-radius: 15px;
     padding: 20px;
-    background-color: #ffff;
+    background-color: #fff;
+    max-width: 100%;
+    width: 720px;
+    margin-left: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 #form-data-pengguna h2 {
@@ -256,12 +260,57 @@ body {
 
 .form-foto {
     grid-column: 2; 
-    grid-row: 1; 
+    grid-row: 1;
+    background-color: #fff;
+    max-width: 100%;
+    width: 380px;
+    max-height: 100%;
+    height: 330px;
+    margin-left: 20px;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-foto h2 {
+    font-size: 14px; 
+    font-style: italic; 
+    color: #B0B0B0; 
+    margin-top: 5px; 
+    margin-bottom: 30px;
 }
 
 .form-password {
     grid-column: 2; 
     grid-row: 2; 
+    background-color: #fff; 
+    max-width: 100%;
+    width: 380px;
+    max-height: 100%;
+    height: 280px;
+    margin-top: -60px;
+    margin-left: 20px;
+    border-radius: 15px; 
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-password h2 {
+    font-size: 14px; 
+    font-style: italic; 
+    color: #B0B0B0; 
+    margin-top: 5px; 
+    margin-bottom: 30px;
+}
+
+.form-password label {
+    display: flex; 
+    margin-bottom: 10px; 
+    margin-left: 35px;
+    font-size: 16px; 
+    color: black; 
+    font-style: italic;
+    font-family: sans-serif;
 }
 
 #form-data-pengguna label {
@@ -276,44 +325,6 @@ body {
 
 #form-data-pengguna input {
     margin-bottom: 25px; 
-}
-
-#form-unggah-gambar {
-    background-color: #fff; 
-    max-width: 100%;
-    width: 450px;
-    border-radius: 15px; 
-    padding: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-}
-
-#form-unggah-gambar h2 {
-    font-size: 14px; 
-    font-style: italic; 
-    color: #B0B0B0; 
-    margin-top: 5px; 
-    margin-bottom: 30px;
-}
-
-#form-unggah-gambar label {
-    display: flex; 
-    margin-bottom: 10px; 
-    margin-left: 35px;
-    font-size: 16px; 
-    color: black; 
-    font-style: italic;
-    font-family: sans-serif;
-}
-
-#form-unggah-gambar input {
-    margin-bottom: 25px; 
-    width: 95%;
-    margin-left: 10px;
-    padding: 10px;
-    border: 1px solid #292A6E;
-    border-radius: 15px;
-    font-size: 14px;
-    box-sizing: border-box;
 }
 
 .upload-container {
@@ -356,37 +367,6 @@ body {
     max-height: 100%;
     object-fit: cover; 
     display: none; 
-}
-
-#form-password {
-    background-color: #fff; 
-    max-width: 100%;
-    width: 450px;
-    border-radius: 15px; 
-    padding: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-}
-
-#form-password h2 {
-    font-size: 14px; 
-    font-style: italic; 
-    color: #B0B0B0; 
-    margin-top: 5px; 
-    margin-bottom: 30px;
-}
-
-#form-password label {
-    display: flex; 
-    margin-bottom: 10px; 
-    margin-left: 35px;
-    font-size: 16px; 
-    color: black; 
-    font-style: italic;
-    font-family: sans-serif;
-}
-
-#form-password input {
-    margin-bottom: 25px; 
 }
 
 .input-container {
@@ -457,12 +437,12 @@ input::placeholder {
 
 .button-container {
     position: relative; 
-    margin-top: -10px; 
+    margin-top: -40px; 
 }
 
 .submit-btn {
     position: absolute;
-    right: 20px; 
+    right: 25px; 
     bottom: -40px; 
     background-color: #025299;
     color: #fff;
@@ -476,6 +456,7 @@ input::placeholder {
     display: flex;
     align-items: center; 
     justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .submit-btn:hover {

@@ -22,7 +22,7 @@
                     </a>
                 </li>
 
-                <li class="active">
+                <li class="data_pengguna">
                     <a href="data_pengguna" class="active">
                         <img src="<?php echo base_url('assets/images/datapengguna.png'); ?>" alt="Data Pengguna Icon" class="sidebar-icon">
                         Data Pengguna

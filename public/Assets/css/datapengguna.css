@@ -386,6 +386,17 @@ table th {
     background-color: #0085C5;
 }
 
+.status-box {
+    padding: 5px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+}
+.admin { background-color: #FFF83C; color: white; }
+.notulensi { background-color: #3C80FF; }
+.pegawai { background-color: #4DF111; }
+
 .pagination {
     display: flex;
     justify-content: flex-end;  
