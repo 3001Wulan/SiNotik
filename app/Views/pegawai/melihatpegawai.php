@@ -60,7 +60,7 @@
                     </div>
 
                     <div class="dropdown-menu" id="dropdownMenu">
-                        <a href="<?= base_url('admin/profiladmin') ?>" class="dropdown-item">
+                        <a href="<?= base_url('pegawai/profilpegawai') ?>" class="dropdown-item">
                             <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
                             Profil
                         </a>
@@ -88,21 +88,22 @@
                     </div>
 
                     <div class="search-box">
-                        <input type="text" placeholder="Search here...">
+                        <input type="text" placeholder="Search here">
                         <button type="button">
                             <i class="fas fa-search"></i>
                         </button>
                     </div>
 
                     <div class="show-entries">
-                        <label for="entries">Show:</label>
+                        <label for="entries">Show</label>
                         <select id="entries" name="entries">
+                            <option value="">Select</option>
                             <option value="5">5</option>
                             <option value="10">10</option>
                             <option value="15">15</option>
                             <option value="20">20</option>
                         </select>
-                        <label for="entries">Entries</label>
+                        <span class="entries-text">entries</span>
                     </div>
                 </div>
 
@@ -145,6 +146,18 @@
                     <button class="btn-prev" disabled>Previous</button>
                     <span class="page-number">1</span>
                     <button class="btn-next">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popup Logout -->
+        <div class="popup-overlay" id="popupOverlay">
+            <div class="popup">
+                <img src="<?= base_url('assets/images/logout_warning.png') ?>" alt="Logout Warning" class="popup-image">
+                <h3>Anda ingin logout?</h3>
+                <div class="popup-buttons">
+                    <button class="btn-yes" id="confirmLogout">Ya</button>
+                    <button class="btn-no" id="cancelLogout">Tidak</button>
                 </div>
             </div>
         </div>
@@ -288,6 +301,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
     searchButton.addEventListener('click', function() {
         filterAndDisplayData();
+    });
+
+    const profileIcon = document.getElementById('profile-icon');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+
+    profileIcon.addEventListener('click', (event) => {
+        event.stopPropagation(); 
+        dropdownMenu.classList.toggle('show');
+    });
+
+    window.addEventListener('click', () => {
+        dropdownMenu.classList.remove('show');
+    });
+
+    // JavaScript untuk Popup Logout
+    const logoutLink = document.getElementById('logoutLink'); // Perbaikan ID
+    const popupOverlay = document.getElementById('popupOverlay');
+    const confirmLogout = document.getElementById('confirmLogout');
+    const cancelLogout = document.getElementById('cancelLogout');
+
+    // Menampilkan popup konfirmasi logout
+    logoutLink.addEventListener('click', (event) => {
+        event.preventDefault(); // Mencegah link logout berfungsi langsung
+        popupOverlay.style.display = 'block'; // Menampilkan popup overlay
+    });
+
+    // Menyelesaikan logout ketika tombol "Ya" diklik
+    confirmLogout.addEventListener('click', () => {
+        window.location.href = '/'; // Ganti dengan halaman logout atau proses logout
+    });
+
+    // Menyembunyikan popup ketika tombol "Tidak" diklik
+    cancelLogout.addEventListener('click', () => {
+        popupOverlay.style.display = 'none'; 
     });
 });
 </script>

@@ -65,7 +65,7 @@
 
                     <!-- Profile Dropdown Menu -->
                     <div class="dropdown-menu" id="dropdownMenu">
-                        <a href="<?= base_url('admin/profiladmin') ?>" class="dropdown-item">
+                        <a href="<?= base_url('pegawai/profilpegawai') ?>" class="dropdown-item">
                             <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
                             Profil
                         </a>
@@ -76,6 +76,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="logout-popup-overlay" id="logoutPopupOverlay" style="display: none;">
                 <div class="logout-popup">
                     <img src="<?= base_url('assets/images/logout_warning.png') ?>" alt="Logout Warning" class="logout-popup-image">
@@ -480,33 +481,6 @@
         window.addEventListener('click', () => {
             dropdownMenu.classList.remove('show');
         });
-
-        // Popup Logout
-        const logoutLink = document.getElementById('logoutLink');
-        const popupOverlay = document.getElementById('popupOverlay');
-        const confirmLogout = document.getElementById('confirmLogout');
-        const cancelLogout = document.getElementById('cancelLogout');
-
-        logoutLink.addEventListener('click', (event) => {
-            event.preventDefault();
-            popupOverlay.style.display = 'block';
-        });
-
-        cancelLogout.addEventListener('click', () => {
-            popupOverlay.style.display = 'none';
-        });
-
-        confirmLogout.addEventListener('click', () => {
-            window.location.href = '<?= base_url('/') ?>';
-        });
-
-        toggleDarkModeButton.addEventListener('click', function () {
-    body.classList.toggle('dark-mode');
-    console.log('Dark mode toggled: ', body.classList.contains('dark-mode'));  // Periksa kelas dark-mode
-    toggleDarkModeButton.src = body.classList.contains('dark-mode')
-        ? '<?= base_url("assets/images/sun.png"); ?>'
-        : '<?= base_url("assets/images/moon.png"); ?>';
-});
 
     });
     const logoutLink = document.getElementById('logoutLink');
