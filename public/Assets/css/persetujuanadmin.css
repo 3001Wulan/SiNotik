@@ -1,0 +1,1204 @@
+
+:root {
+    --primary-color: #0088cc;
+    --sidebar-bg: #ffffff;
+    --main-bg: #f5f5f5;
+    --text-color: #333333;
+    --hover-color: #005580;
+    --border-color: #e0e0e0;
+}
+
+[class~="dark-mode"] {
+    --primary-color: #555555;
+    --sidebar-bg: #444444;
+    --main-bg: #1a1a1a;
+    --text-color: #ffffff;
+    --hover-color: #555555;
+    --border-color: #444444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--main-bg);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh; 
+    overflow-x: hidden;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: #0085C5;
+    color: white;
+    min-height: 100%; 
+    padding: 30px 20px;
+    transition: background-color 0.3s;
+    display: flex;
+    flex-direction: column; 
+    outline: hidden;
+}
+
+.sidebar .logo img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+.iinput-container {
+    position: relative;
+    width: 100%;
+}
+
+.iicon-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0D47A1;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    cursor: pointer;
+}
+
+.dark-mode .iicon-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1a1a;
+    border-color: #333;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    cursor: pointer;
+}
+
+.iicon-container img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1); 
+}
+
+.category-select {
+    width: 100%;
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    padding-right: 40px; 
+}
+
+.category-select-container {
+    position: relative;
+    width: 200px;
+}
+
+.category-option {
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: white;
+    color: white;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.category-option:last-child {
+    border-bottom: none;
+}
+
+.category-option:hover {
+    background-color: #333333;
+}
+
+.dark-mode .category-option {
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: #333333;
+    border-bottom: 1px solid #ffffff;
+}
+
+.dark-mode .category-select {
+    background-color: #333;
+    color: white;
+    border-color: #444;
+}
+
+.dark-mode .category-popup {
+    background-color: #333;
+    border-color: #444;
+}
+
+.dark-mode .page-number{
+    color: white;
+}
+
+.separator {
+    border-bottom: 1px solid black(255, 255, 255, 0.1);
+    margin: 8px 0;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: var(--sidebar-bg);
+    margin: -20px -20px 70px -20px;
+    width: 104%;
+    height: 80px;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: -20px;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle {
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    background: transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    width: 41px;
+    height: 41px;
+}
+
+.theme-icon {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
+}
+
+.moon-icon {
+    opacity: 1;
+}
+
+.sun-icon {
+    opacity: 0;
+}
+
+
+.dark-mode .moon-icon {
+    opacity: 0;
+}
+
+.dark-mode .sun-icon {
+    opacity: 1;
+}
+
+
+.content {
+    padding: 20px;
+    background-color: var(--sidebar-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
+    position: relative;
+}
+
+.content h1 {
+    font-size: 2em;
+    margin-top: -65px;
+    margin-bottom: 50px;
+    margin-left: -20px;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    position: relative; /* Tambahkan ini */
+    gap: 0;
+    margin-left: -10px;
+}
+
+.search-box input {
+    padding: 8px 15px;
+    width: 200px;
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+    outline: none;
+    padding-right: 40px;
+}
+
+.search-box button {
+    position: absolute; /* Tambahkan ini */
+    right: 5px; /* Tambahkan ini */
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    color: black;
+}
+
+.search-box button:hover {
+    color: #374151;
+}
+
+.search-box button i {
+    font-size: 16px;
+}
+.dark-mode .search-box input {
+    background-color: #333;
+    border-color: #444;
+    color: white;
+}
+
+.dark-mode .search-box button {
+    color: #ffffff;
+}
+
+.dark-mode .search-box button:hover {
+    color: #E5E7EB;
+}
+
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0;
+    margin-top: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+
+.btn-prev,
+.btn-next,
+.page-number {
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    font-size: 14px;
+    background-color: white;
+    padding: 0 16px;
+}
+
+.btn-prev {
+    border-radius: 20px 0 0 20px;
+    border-right: none;
+    color: black;
+    font-style: italic;
+}
+
+.btn-next {
+    border-radius: 0 20px 20px 0;
+    border-left: none;
+    color: black;
+    font-style: italic;
+}
+
+.page-number {
+    background-color: #3B82F6;
+    color: white;
+    border: 1px solid #3B82F6;
+    min-width: 38px;
+    padding: 0 10px;
+}
+
+.btn-prev:disabled,
+.btn-next:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.dark-mode .btn-prev,
+.dark-mode .btn-next {
+    background-color: #333;
+    border-color: #444;
+    color: #94A3B8;
+}
+
+.dark-mode .page-number {
+    background-color: #1a1a1a;
+    border-color: #1a1a1a;
+}
+
+
+.table-wrapper {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 2px solid #eee;
+    font-weight: bold;
+    color: #333;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.btn-more {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    width: 20px;
+    top: 50px;
+}
+
+.btn-more img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px; 
+}
+
+.dark-mode.btn-more {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    width: 20px;
+    top: 50px;
+}
+
+.dark-mode.btn-more img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px; 
+}
+
+body.dark-mode {
+    background-color: var(--main-bg);
+}
+
+body.dark-mode .sidebar {
+    background-color: #333333;
+}
+
+body.dark-mode .theme-toggle img {
+    filter: brightness(0) invert(1);
+}
+
+* Category Select */
+.category-select-container {
+    position: absolute;
+    left: 300px;
+    top: 30px;
+}
+
+.category-popup {
+    display: none;
+    position: absolute;
+    background-color: var(--sidebar-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+    
+}
+
+.category-popup .category-option {
+    right: px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.category-popup .category-option:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.dark-mode.category-popup {
+    display: none;
+    position: absolute;
+    background-color: var(--sidebar-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px pink;
+    z-index: 1000;
+    
+}
+
+.dark-mode.category-popup .category-option {
+    right: px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.dark-mode.category-popup .category-option:hover {
+    background-color: var(--primary-color);
+    color: black;
+}
+
+.dark-mode .table-wrapper {
+    background-color: #333;
+}
+
+.dark-mode table th {
+    color: #fff;
+    border-bottom: 2px solid #444;
+}
+
+.dark-mode table td {
+    color: #fff;
+    border-bottom: 1px solid #444;
+}
+
+.table-wrapper {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-detail {
+    background-color: #0288D1;
+    color: white;
+    border: none;
+    padding: 6px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 32px;
+    line-height: 20px;
+}
+
+.dark-mode .btn-detail {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 6px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 32px;
+    line-height: 20px;
+}
+
+.btn-detail:hover {
+    background-color: #01579B;
+}
+
+.user-details {
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    flex-direction: row-reverse; 
+}
+
+.profile-img {
+    width: 60px;  
+    height: 60px;
+    border-radius: 50%;  
+    object-fit: cover; 
+}
+
+.user-text {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+}
+
+.user-name {
+    font-size: 1.1em; 
+    font-weight: bold; 
+}
+
+.user-role {
+    font-size: 0.9em; 
+    color: #888; 
+}
+
+
+
+.show-entries {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 600px; /* Menggeser show entries ke kiri */
+}
+
+.show-entries select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 7px 20px;
+    font-size: 14px;
+    border-radius: 15px;
+    border: 1px solid #292A6E;
+    background: transparent;
+    color: #292A6E;
+    cursor: pointer;
+    text-align: center;  
+}
+
+.show-entries select:focus {
+    text-align: center; 
+}
+
+.dark-mode .show-entries select {
+    background-color: #555555;
+    color: #fff;
+    border: 1px solid #444444;
+}
+
+.dark-mode .show-entries select:focus {
+    color: #fff;
+    background-color: #666666;
+}
+
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+    color: black;
+    text-decoration: none;
+    margin: 8px 0;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.menu-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px; 
+}
+
+.menu-item span {
+    display: inline-block;
+}
+
+/* Gaya saat hover dan aktif pada sidebar */
+.menu-item:hover {
+    background-color: #01579B; /* Warna latar belakang saat hover */
+    color: #ffffff; /* Warna teks saat hover */
+}
+
+.menu-item:hover img {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%); /* Ikon berubah warna saat hover */
+}
+
+.menu-item.active {
+    background-color: #ffffff; /* Latar belakang aktif */
+    color: #0288D1; /* Teks aktif */
+}
+
+.menu-item.active img {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%); /* Ikon aktif berwarna putih */
+}
+
+.separator {
+    border-bottom: 1px solid #ccc;
+    margin: 8px 0;
+}
+
+
+body.dark-mode {
+    background-color: var(--main-bg);
+}
+
+body.dark-mode .sidebar {
+    background-color: #333333;
+}
+
+body.dark-mode .theme-toggle img {
+    filter: brightness(0) invert(1);
+}
+
+body.dark-mode .menu-item {
+    color: black; /* Warna teks menu */
+}
+
+body.dark-mode .menu-item img {
+    filter: brightness(0) /* Ikon putih */
+}
+
+/* Saat menu-item dihover di mode gelap */
+body.dark-mode .menu-item:hover {
+    background-color: #555555; /* Latar belakang hover */
+    color: #ffffff; /* Warna teks saat hover */
+}
+
+body.dark-mode .menu-item:hover img {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%); /* Ikon putih saat hover */
+}
+
+body.dark-mode .menu-item.active {
+    background-color: #333; /* Latar belakang aktif */
+    color: #ffffff; /* Warna teks aktif */
+}
+
+body.dark-mode .menu-item.active img {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%); /* Ikon aktif putih */
+}
+
+
+/* Table styles without borders */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+    table-layout: fixed; /* Memastikan lebar kolom konsisten */
+}
+
+/* Header dan Cell styling */
+table th,
+table td {
+    padding: 16px; /* Menyamakan padding untuk semua cell */
+    text-align: center;
+    vertical-align: middle;
+    border: none;
+    white-space: nowrap; /* Mencegah text wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Menambahkan ellipsis untuk text yang terlalu panjang */
+}
+
+/* Mengatur lebar spesifik untuk setiap kolom */
+table th:nth-child(1), 
+table td:nth-child(1) {
+    width: 8%; /* Kolom No */
+}
+
+table th:nth-child(2), 
+table td:nth-child(2) {
+    width: 15%; /* Kolom Tanggal */
+}
+
+table th:nth-child(3), 
+table td:nth-child(3) {
+    width: 25%; /* Kolom Lokasi */
+}
+
+table th:nth-child(4), 
+table td:nth-child(4) {
+    width: 20%; /* Kolom Judul */
+}
+
+table th:nth-child(5), 
+table td:nth-child(5) {
+    width: 20%; /* Kolom Agenda */
+}
+
+table th:last-child,
+table td:last-child {
+    width: 12%; /* Kolom Aksi */
+}
+
+/* Header styling */
+table thead tr {
+    border-bottom: 1px solid #e0e0e0;
+    height: 50px; /* Menetapkan tinggi baris header */
+}
+
+/* Body row styling */
+table tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+    height: 50px; /* Menetapkan tinggi baris yang sama */
+}
+
+table tbody tr:last-child {
+    border-bottom: none;
+}
+
+/* Action Buttons Container */
+.action-buttons {
+    display: flex;
+    gap: 12px; /* Menyesuaikan jarak antar button */
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Button Styles */
+.btn-approve, 
+.btn-reject {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px; /* Menyamakan ukuran button */
+    height: 36px;
+    padding: 8px;
+    border-radius: 4px;
+    background: none;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-approve img, 
+.btn-reject img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* Hover effects */
+.btn-approve:hover {
+    background-color: rgba(76, 175, 80, 0.1);
+    transform: scale(1.1);
+}
+
+.btn-reject:hover {
+    background-color: rgba(244, 67, 54, 0.1);
+    transform: scale(1.1);
+}
+
+
+/* Base styling for menu item with submenu */
+.menu-item-with-submenu {
+    position: relative;
+    cursor: pointer;
+}
+
+/* Submenu popup styling */
+.submenu-popup {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+/* Menu item styling when submenu is active */
+.menu-item-with-submenu:has(.submenu-popup[style*="display: block"]) > a,
+.menu-item-with-submenu > a:hover {
+    background-color: #025299;
+    color: white !important;
+}
+
+/* Dark mode styling for active submenu */
+.dark-mode .menu-item-with-submenu:has(.submenu-popup[style*="display: block"]) > a,
+.dark-mode .menu-item-with-submenu > a:hover {
+    background-color: #3c3c3c;
+    color: white !important;
+}
+
+/* Icon color for active/hovered menu item */
+.menu-item-with-submenu:has(.submenu-popup[style*="display: block"]) > a img,
+.menu-item-with-submenu > a:hover img {
+    filter: brightness(0) invert(1) !important;
+}
+
+/* Submenu item styling */
+.menu-item-with-submenu .submenu-popup .submenu-item {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+/* Hover state for submenu items - light mode */
+.menu-item-with-submenu .submenu-popup .submenu-item:hover {
+    background-color: #025299;
+    color: white;
+}
+
+/* Hover state for submenu items - dark mode */
+.dark-mode .menu-item-with-submenu .submenu-popup .submenu-item:hover {
+    background-color: #3c3c3c;
+    color: white;
+}
+
+/* Keep parent menu item styled when submenu is being hovered */
+.menu-item-with-submenu:has(.submenu-popup:hover) > a {
+    background-color: #025299;
+    color: white !important;
+}
+
+/* Keep parent menu icon white when submenu is being hovered */
+.menu-item-with-submenu:has(.submenu-popup:hover) > a img {
+    filter: brightness(0) invert(1) !important;
+}
+
+/* Dark mode - Keep parent menu styled when submenu is being hovered */
+.dark-mode .menu-item-with-submenu:has(.submenu-popup:hover) > a {
+    background-color: #3c3c3c;
+    color: white !important;
+}
+
+/* Style untuk menu item yang sedang aktif - mode terang */
+.menu-item-with-submenu.active > a,
+.menu-item.active {
+    background-color: #025299;
+    color: white !important;
+}
+
+/* Style untuk icon saat menu aktif - mode terang */
+.menu-item-with-submenu.active > a img,
+.menu-item.active img {
+    filter: brightness(0) invert(1) !important;
+}
+
+/* Style untuk menu item yang sedang aktif - mode gelap */
+.dark-mode .menu-item-with-submenu.active > a,
+.dark-mode .menu-item.active {
+    background-color: #3c3c3c;
+    color: white !important;
+}
+
+/* Style untuk icon saat menu aktif - mode gelap */
+.dark-mode .menu-item-with-submenu.active > a img,
+.dark-mode .menu-item.active img {
+    filter: brightness(0) invert(1) !important;
+}
+
+/* Mempertahankan style saat hover di submenu jika menu parent aktif */
+.menu-item-with-submenu.active:has(.submenu-popup[style*="display: block"]) > a {
+    background-color: #025299;
+    color: white !important;
+}
+
+.dark-mode .menu-item-with-submenu.active:has(.submenu-popup[style*="display: block"]) > a {
+    background-color: #3c3c3c;
+    color: white !important;
+}
+
+
+
+
+
+
+
+
+/* Submenu popup styling */
+.submenu-popup {
+    position: absolute;
+    left: 17%;
+    top: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    display: none;
+    z-index: 1000;
+}
+
+.dark-mode .submenu-popup {
+    background-color: #333333;
+}
+
+.dark-mode .submenu-item:hover {
+    background-color: #404040;
+    color: #fff; /* Ensure text stays white on hover in dark mode */
+}
+
+/* Submenu items styling */
+.submenu-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.submenu-item:hover {
+    background-color: #025299;
+    color: #ffffff;
+}
+
+.submenu-item img {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    transition: all 0.3s ease; /* Ubah transition untuk semua properti */
+}
+
+/* Menambahkan filter untuk mengubah warna ikon saat hover */
+.submenu-item:hover img {
+    filter: brightness(0) invert(1); /* Ini akan membuat ikon menjadi putih */
+}
+
+/* Dark mode styles */
+.dark-mode .submenu-item:hover img {
+    filter: brightness(0) invert(1); /* Pastikan ikon tetap putih di dark mode */
+}
+
+
+.dark-mode .submenu-separator {
+    background-color: #404040;
+}
+
+
+/* Modal base styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Confirmation dialog styles */
+.confirm-dialog {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.confirm-icon {
+    margin-bottom: 15px;
+}
+
+.confirm-icon i {
+    color: #00BCD4;
+    font-size: 40px;
+}
+
+.confirm-message {
+    font-size: 25px;
+    color: #333;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.confirm-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+
+/* Dark mode styles */
+.dark-mode .confirm-dialog {
+    background: #2d2d2d;
+}
+
+.dark-mode .confirm-message {
+    color: white;
+}
+
+.dark-mode .btn-cancel {
+    background: #404040;
+    color: white;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.dark-mode.modal {
+    background: #2d2d2d;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 300px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .modal-content {
+    background-color: #2d2d2d;
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 300px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.dark-mode .modal-content h2 {
+        margin-top: 0;
+        color: white;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+}
+
+.modal-content p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.modal-content button {
+    padding: 8px 16px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.modal-content button:first-of-type {
+    background-color: #025299; 
+    color: white;
+    font-weight: bolder;
+}
+
+.modal-content button:first-of-type:hover {
+    background-color: #0085C5;
+    transform: scale(1.1);
+    font-size: 16px;
+}
+
+.modal-content button:last-of-type {
+        background-color: #025299; 
+        color: white;
+        font-weight: bolder;
+}
+
+.modal-content button:last-of-type:hover {
+    background-color: #e53935; 
+    transform: scale(1.1);
+    font-size: 16px;
+}
+ 
+.dark-mode .modal-content button:first-of-type {
+    background-color: #666666; 
+    color: white;
+    font-weight: bolder;
+}
+
+.modal-content button:first-of-type:hover {
+    background-color: #0085C5;
+    transform: scale(1.1);
+    font-size: 16px;
+}
+
+.dark-mode .modal-content button:last-of-type {
+        background-color: #666666; 
+        color: white;
+        font-weight: bolder;
+}
+
+.modal-content button:last-of-type:hover {
+    background-color: #e53935; 
+    transform: scale(1.1);
+    font-size: 16px;
+}
+#rejectionReason {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.dark-mode #rejectionReason {
+    color: #ffffff;
+    background-color: #2d2d2d;
+    border: 1px solid #404040;
+}
+
+/* Button Styles */
+.btn-approve, .btn-reject {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background: none;
+    transition: transform 0.2s;
+}
+
+.btn-approve:hover, .btn-reject:hover {
+    transform: scale(1.1);
+}
+
+.btn-approve img, .btn-reject img {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+/* Action Buttons Container */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Success Modal styles */
+#successModal .confirm-icon i {
+    color: #00BCD4;
+    font-size: 40px;
+}
+
+#successModal .confirm-message {
+    font-size: 25px;
+    color: #333;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* Dark mode support */
+.dark-mode #successModal .confirm-message {
+    color: white;
+}
+
+
