@@ -16,21 +16,21 @@
 
             <ul>
                 <li class="dashboard">
-                    <a href="dashboard_admin" class="inactive">
+                    <a href="/admin/dashboard_admin" class="inactive">
                         <img src="<?php echo base_url('assets/images/dashboard.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
                         Dashboard
                     </a>
                 </li>
 
                 <li class="data_pengguna">
-                    <a href="data_pengguna" class="active">
+                    <a href="/admin/data_pengguna" class="active">
                         <img src="<?php echo base_url('assets/images/datapengguna.png'); ?>" alt="Data Pengguna Icon" class="sidebar-icon">
                         Data Pengguna
                     </a>
                 </li>
 
                 <li class="riwayat-notulensi">
-                    <a href="riwayatadmin" class="inactive">
+                    <a href="/admin/riwayatadmin" class="inactive">
                         <img src="<?php echo base_url('assets/images/riwayatnotulensi.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
                         Riwayat Notulensi
                     </a>

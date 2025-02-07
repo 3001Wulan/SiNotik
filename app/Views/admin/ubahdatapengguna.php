@@ -68,16 +68,17 @@
             </div>
         </div>
     </div>
-    <div class="logout-popup-overlay" id="logoutPopupOverlay" style="display: none;">
-                <div class="logout-popup">
-                    <img src="<?= base_url('assets/images/logout_warning.png') ?>" alt="Logout Warning" class="logout-popup-image">
-                    <h3>Anda ingin logout?</h3>
-                    <div class="logout-popup-buttons">
-                        <button class="btn-logout-yes" id="confirmLogout">Ya</button>
-                        <button class="btn-logout-no" id="cancelLogout">Tidak</button>
-                    </div>
+    <div class="popup-overlay" id="popupOverlay">
+            <div class="popup">
+                <img src="<?= base_url('assets/images/logout_warning.png') ?>" alt="Logout Warning" class="popup-image">
+                <h3>Anda ingin logout?</h3>
+                <div class="popup-buttons">
+                    <button class="btn-yes" id="confirmLogout">Ya</button>
+                    <button class="btn-no" id="cancelLogout">Tidak</button>
                 </div>
             </div>
+        </div> 
+    
            
 
     <div class="page-title">
@@ -173,81 +174,92 @@
 </div> 
 
 <script>
-    document.getElementById('simpan-perubahan').addEventListener('click', function() {
-        var formData = new FormData();
-        var fileInput = document.getElementById('photo');
-        if (fileInput.files[0]) {
-            formData.append('photo', fileInput.files[0]);
-        }
-        formData.append('password', document.getElementById('password').value);
-        formData.append('confirm-password', document.getElementById('confirm-password').value);
-        formData.append('username', document.getElementById('username').value);
-        formData.append('nama', document.getElementById('nama').value);
-        formData.append('nip', document.getElementById('nip').value);
-        formData.append('email', document.getElementById('email').value);
-        formData.append('status', document.getElementById('status').value);
-        formData.append('bidang', document.getElementById('bidang').value);
-        formData.append('jabatan', document.getElementById('jabatan').value);
-
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', '<?= site_url('admin/ubahdatapengguna/'.$user['user_id'].'/update') ?>', true);
-
-        xhr.onload = function() {
-            if (xhr.status === 200) {
-                window.location.reload();
-            } else {
-                alert('Gagal memperbarui data.');
+    // Tunggu hingga DOM selesai dimuat
+    window.addEventListener('DOMContentLoaded', () => {
+        // Event listener untuk menyimpan perubahan
+        document.getElementById('simpan-perubahan').addEventListener('click', function() {
+            var formData = new FormData();
+            var fileInput = document.getElementById('photo');
+            
+            // Menambahkan foto ke formData jika dipilih
+            if (fileInput.files[0]) {
+                formData.append('photo', fileInput.files[0]);
             }
-        };
 
-        xhr.send(formData);
-    });
-    const photoInput = document.getElementById('photo');
-    const previewImage = document.getElementById('previewImage');
-    const previewContainer = document.getElementById('preview-container');
-    const errorMessage = document.getElementById('error-message');
+            // Menambahkan data lainnya ke formData
+            formData.append('password', document.getElementById('password').value);
+            formData.append('confirm-password', document.getElementById('confirm-password').value);
+            formData.append('username', document.getElementById('username').value);
+            formData.append('nama', document.getElementById('nama').value);
+            formData.append('nip', document.getElementById('nip').value);
+            formData.append('email', document.getElementById('email').value);
+            formData.append('status', document.getElementById('status').value);
+            formData.append('bidang', document.getElementById('bidang').value);
+            formData.append('jabatan', document.getElementById('jabatan').value);
 
-    photoInput.addEventListener('change', function (event) {
-        const file = event.target.files[0];
+            // Membuat XMLHttpRequest dan mengirim form data
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '<?= site_url('admin/ubahdatapengguna/'.$user['user_id'].'/update') ?>', true);
 
-        if (file) {
-            if (file.size > 5 * 1024 * 1024) { 
-                errorMessage.style.display = 'block';
-                photoInput.value = ''; 
-                previewImage.style.display = 'none'; 
-            } else {
-                errorMessage.style.display = 'none'; 
-                const reader = new FileReader();
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    window.location.reload();
+                } else {
+                    alert('Gagal memperbarui data.');
+                }
+            };
 
-                reader.onload = function (e) {
-                    previewImage.src = e.target.result;
-                    previewImage.style.display = 'block'; 
-                };
+            xhr.send(formData);
+        });
 
-                reader.readAsDataURL(file); 
+        // Fitur pratinjau gambar dan validasi ukuran file
+        const photoInput = document.getElementById('photo');
+        const previewImage = document.getElementById('previewImage');
+        const errorMessage = document.getElementById('error-message');
+
+        photoInput.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+
+            if (file) {
+                if (file.size > 5 * 1024 * 1024) { // Maksimal ukuran 5MB
+                    errorMessage.style.display = 'block';
+                    photoInput.value = ''; 
+                    previewImage.style.display = 'none';
+                } else {
+                    errorMessage.style.display = 'none';
+                    const reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        previewImage.src = e.target.result;
+                        previewImage.style.display = 'block';
+                    };
+
+                    reader.readAsDataURL(file);
+                }
             }
+        });
+
+        // Fitur toggle dark mode
+        const toggleDarkMode = document.getElementById('toggleDarkMode');
+        toggleDarkMode.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const darkModeEnabled = document.body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', darkModeEnabled);
+
+            toggleDarkMode.src = darkModeEnabled ? 
+                '<?php echo base_url('assets/images/sun.png'); ?>' : 
+                '<?php echo base_url('assets/images/moon.png'); ?>';
+        });
+
+        // Periksa preferensi dark mode saat halaman dimuat
+        const isDarkMode = localStorage.getItem('darkMode') === 'true';
+        if (isDarkMode) {
+            document.body.classList.add('dark-mode');
+            toggleDarkMode.src = '<?php echo base_url('assets/images/sun.png'); ?>';
+        } else {
+            toggleDarkMode.src = '<?php echo base_url('assets/images/moon.png'); ?>';
         }
-    });
-    toggleDarkMode.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    const darkModeEnabled = document.body.classList.contains('dark-mode');
-    localStorage.setItem('darkMode', darkModeEnabled);
 
-    toggleDarkMode.src = darkModeEnabled ? 
-        '<?php echo base_url('assets/images/sun.png'); ?>' : 
-        '<?php echo base_url('assets/images/moon.png'); ?>';
-});
-window.addEventListener('DOMContentLoaded', () => {
-    const isDarkMode = localStorage.getItem('darkMode') === 'true';
-    if (isDarkMode) {
-        document.body.classList.add('dark-mode');
-        toggleDarkMode.src = '<?php echo base_url('assets/images/sun.png'); ?>';
-    } else {
-        toggleDarkMode.src = '<?php echo base_url('assets/images/moon.png'); ?>';
-    }
-});
-
-        // Popup Logout
         const logoutLink = document.getElementById('logoutLink');
         const popupOverlay = document.getElementById('popupOverlay');
         const confirmLogout = document.getElementById('confirmLogout');
@@ -266,32 +278,14 @@ window.addEventListener('DOMContentLoaded', () => {
             window.location.href = '<?= base_url('/') ?>';
         });
 
-        toggleDarkMode.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    const darkModeEnabled = document.body.classList.contains('dark-mode');
-    localStorage.setItem('darkMode', darkModeEnabled);
+        // Dropdown profile menu
+        const profileIcon = document.getElementById('profile-icon');
+        const dropdownMenu = document.getElementById('dropdownMenu');
 
-    toggleDarkMode.src = darkModeEnabled ? 
-        '<?php echo base_url('assets/images/sun.png'); ?>' : 
-        '<?php echo base_url('assets/images/moon.png'); ?>';
-});
-window.addEventListener('DOMContentLoaded', () => {
-    const isDarkMode = localStorage.getItem('darkMode') === 'true';
-    if (isDarkMode) {
-        document.body.classList.add('dark-mode');
-        toggleDarkMode.src = '<?php echo base_url('assets/images/sun.png'); ?>';
-    } else {
-        toggleDarkMode.src = '<?php echo base_url('assets/images/moon.png'); ?>';
-    }
-});
-
-const profileIcon = document.getElementById('profile-icon');
-const dropdownMenu = document.getElementById('dropdownMenu');
-
-profileIcon.addEventListener('click', function() {
-    dropdownMenu.style.display = (dropdownMenu.style.display === 'block') ? 'none' : 'block';
-});
+        profileIcon.addEventListener('click', function() {
+            dropdownMenu.style.display = (dropdownMenu.style.display === 'block') ? 'none' : 'block';
+        });
+    });
 </script>
-
 </body>
 </html>
