@@ -27,7 +27,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="" class="<?php echo ($current_page == 'melihat_pegawai') ? 'active notulensi-pegawai' : 'inactive'; ?>">
+                    <a href="melihatnotulen" class="<?php echo ($current_page == '') ? 'active notulensi-pegawai' : 'inactive'; ?>">
                         <img src="<?php echo base_url('assets/images/codicon_book.png'); ?>" alt="Data Pengguna Icon" class="sidebar-icon">
                         Notulensi
                     </a>

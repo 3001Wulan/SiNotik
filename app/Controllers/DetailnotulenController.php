@@ -26,19 +26,35 @@ class DetailnotulenController extends BaseController
         }
 
         $dokumentasi = $dokumentasiModel->getDokumentasiByNotulensiId($id);
-        $agenda = is_string($notulensi['agenda']) ? explode(',', $notulensi['agenda']) : (array) $notulensi['agenda'];
+
+        // Pemisahan agenda tanpa mencocokkan dengan agendaIsi
+        $agenda = preg_split('/(?=\d+\.)/', $notulensi['agenda']);
+        $agenda = array_filter($agenda);  // Menghapus elemen kosong jika ada
+
+        // Mengambil isi yang tidak terkait dengan agenda
         $agendaIsi = is_string($notulensi['isi']) ? explode(',', $notulensi['isi']) : (array) $notulensi['isi'];
-        
+
+        // Mengatasi jika hanya ada satu isi namun ada lebih dari satu agenda
+        if (count($agenda) > 1 && count($agendaIsi) == 1) {
+            // Jika hanya ada satu isi, maka bagi untuk setiap agenda
+            $agendaIsi = array_fill(0, count($agenda), $agendaIsi[0]);
+        }
+
+        // Jika tidak ada agendaIsi, ganti dengan default 'Tidak ada isi'
+        $agendaIsi = array_map(function ($item) {
+            return $item ?: 'Tidak ada isi untuk agenda ini'; // Jika kosong, ganti dengan default
+        }, $agendaIsi);
+
         $data = [
             'id' => $id,
             'notulensi' => $notulensi,
-            'agenda' => $agenda,
-            'agendaIsi' => $agendaIsi,
+            'agenda' => $agenda,  // Mengirimkan agenda tanpa mengaitkan dengan isi
+            'agendaIsi' => $agendaIsi,  // Hanya mengirimkan isi agenda
             'dokumentasi' => $dokumentasi,
             'current_page' => 'notulensi',
             'allNotulensi' => $notulensiModel->findAll(),
             'allDokumentasi' => $dokumentasiModel->findAll(),
-            'feedbacks' => $feedbackModel->getFeedbackByNotulensiId($id) // Gunakan fungsi dari model
+            'feedbacks' => $feedbackModel->getFeedbackByNotulensiId($id) // Mengambil feedback terkait notulensi ini
         ];
 
         log_message('info', 'Data yang dikirim ke view: ' . print_r($data, true));

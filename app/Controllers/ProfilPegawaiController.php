@@ -19,7 +19,7 @@ class ProfilPegawaiController extends BaseController
         } else {
             log_message('info', 'User profile for ID ' . $user_id . ' retrieved successfully.');
         }
-
+        
         return view('pegawai/profilpegawai', ['user_profile' => $user_profile]);
     }
 }
