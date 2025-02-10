@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar Notulensi</title>
-    <link rel="stylesheet" href="<?= base_url('assets/css/persetujuanadmin.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/historyadmin.css') ?>">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
 </head>
@@ -13,7 +13,7 @@
         <div class="sidebar">
           <div class="logo">
                 <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo">
-            </div>
+            </div> 
             <div class="menu">
                 <a href="#" class="menu-item">
                     <img src="<?= base_url('assets/images/dashboard.png') ?>" alt="Dashboard Icon">
@@ -30,7 +30,7 @@
                     <span>Riwayat Notulensi</span>
                 </a>
                 <div class="separator"></div>
-                <div class="menu-item-with-submenu active">
+                <div class="menu-item-with-submenu">
                     <a href="#" class="menu-item">
                         <img src="<?= base_url('assets/images/rapat.png') ?>" alt="Rapat Icon">
                         <span>Rapat</span>
@@ -49,7 +49,7 @@
                     </div>
                 </div>
                 <div class="separator"></div>
-                <a href="#" class="menu-item">
+                <a href="#" class="menu-item active">
                     <img src="<?= base_url('assets/images/riwayatemail.png') ?>" alt="History Icon">
                     <span>Riwayat Email</span>
                 </a>
@@ -83,7 +83,7 @@
     </div>
 </div>
             <div class="content">
-                <h1>Persetujuan Admin</h1>
+                <h1>History Email</h1>
                 <div class="filters">
                      <div class="category-select-container">
                         <div class="iinput-container">
@@ -111,7 +111,6 @@
                         <label for="entries">Entries</label>
                     </div>
                 </div>
-
                 <div class="table-wrapper">
                     <table>
                         <thead>
@@ -119,10 +118,9 @@
                                 <th>No</th>
                                 <th>Tanggal</th>
                                 <th>Bidang</th>
-                                <th>Lokasi</th>
-                                <th>Judul</th>
-                                <th>Agenda</th>
-                                <th>Aksi</th>
+                                <th>Topik</th>
+                                <th>Nama</th>
+                                <th>Email</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -130,97 +128,51 @@
                                 <td>1</td>
                                 <td>01/02/2025</td>
                                 <td>APTIKA</td>
-                                <td>Dimanamana hatiku senang</td>
-                                <td>mabar ml</td>
-                                <td>blablabla</td>
-                                <td>
-                                <div class="action-buttons">
-                                    <button class="btn-approve" onclick="showApprovalModal(this)">
-                                        <img src="<?= base_url('assets/images/yes.png') ?>" alt="Approve">
-                                    </button>
-                                    <button class="btn-reject" onclick="showRejectionModal(this)">
-                                        <img src="<?= base_url('assets/images/no.png') ?>" alt="Reject">
-                                    </button>
-                                </div>
+                                <td>abc</td>
+                                <td>heni</td>
+                                <td>heni@gmail.com</td>
                             </td>
                             </tr>
                             <tr>
                                 <td>2</td>
                                 <td>01/02/2025</td>
                                 <td>APTIKA</td>
-                                <td>Dimanamana hatiku senang</td>
-                                <td>mabar ml</td>
-                                <td>blablabla</td>
-                                <td>
-                                <div class="action-buttons">
-                                    <button class="btn-approve" onclick="showApprovalModal(this)">
-                                        <img src="<?= base_url('assets/images/yes.png') ?>" alt="Approve">
-                                    </button>
-                                    <button class="btn-reject" onclick="showRejectionModal(this)">
-                                        <img src="<?= base_url('assets/images/no.png') ?>" alt="Reject">
-                                    </button>
-                                </div>
+                                <td>abc</td>
+                                <td>mahir</td>
+                                <td>mahir@gmail.com</td>
                             </td>
                             </tr>
                             <tr>
                                 <td>3</td>
                                 <td>01/02/2025</td>
                                 <td>IKP</td>
-                                <td>Dimanamana hatiku senang</td>
-                                <td>mabar ml</td>
-                                <td>blablabla</td>
-                                <td>
-                                <div class="action-buttons">
-                                    <button class="btn-approve" onclick="showApprovalModal(this)">
-                                        <img src="<?= base_url('assets/images/yes.png') ?>" alt="Approve">
-                                    </button>
-                                    <button class="btn-reject" onclick="showRejectionModal(this)">
-                                        <img src="<?= base_url('assets/images/no.png') ?>" alt="Reject">
-                                    </button>
-                                </div>
+                                <td>abc</td>
+                                <td>ulan</td>
+                                <td>ulan@gmail.com</td>
                             </td>
                             </tr>
                             <tr>
                                 <td>4</td>
                                 <td>01/02/2025</td>
                                 <td>Statistik & Persandian</td>
-                                <td>Dimanamana hatiku senang</td>
-                                <td>mabar ml</td>
-                                <td>blablabla</td>
-                                <td>
-                                <div class="action-buttons">
-                                    <button class="btn-approve" onclick="showApprovalModal(this)">
-                                        <img src="<?= base_url('assets/images/yes.png') ?>" alt="Approve">
-                                    </button>
-                                    <button class="btn-reject" onclick="showRejectionModal(this)">
-                                        <img src="<?= base_url('assets/images/no.png') ?>" alt="Reject">
-                                    </button>
-                                </div>
+                                <td>abc</td>
+                                <td>cindy</td>
+                                <td>cindy@gmail.com</td>
                             </td>
                             </tr>
                             <tr>
                                 <td>5</td>
                                 <td>01/02/2025</td>
                                 <td>APTIKA</td>
-                                <td>Dimanamana hatiku senang</td>
-                                <td>mabar ml</td>
-                                <td>blablabla</td>
-                                <td>
-                                <div class="action-buttons">
-                                    <button class="btn-approve" onclick="showApprovalModal(this)">
-                                        <img src="<?= base_url('assets/images/yes.png') ?>" alt="Approve">
-                                    </button>
-                                    <button class="btn-reject" onclick="showRejectionModal(this)">
-                                        <img src="<?= base_url('assets/images/no.png') ?>" alt="Reject">
-                                    </button>
-                                </div>
+                                <td>abc</td>
+                                <td>intan</td>
+                                <td>intan@gmail.com</td>
                             </td>
                             </tr>
                             <tr>
                         </tbody>
                     </table>
                 </div>
-
                 <div class="pagination">
                     <button class="btn-prev">Previous</button>
                     <span class="page-number">1</span>
@@ -229,53 +181,6 @@
             </div>
         </div>
     </div>
-<div id="rejectionModal" class="modal">
-    <div class="modal-content">
-        <h2>Alasan Penolakan</h2>
-        <textarea id="rejectionReason" placeholder="Masukkan alasan penolakan..."></textarea>
-        <button onclick="submitRejection()">Kirim</button>
-        <button onclick="closeRejectionModal()">Batal</button>
-    </div>
-</div>
-
-<div id="rejectionSuccessModal" class="modal">
-    <div class="modal-content confirm-dialog">
-        <div class="confirm-icon">
-            <img src="<?= base_url('assets/images/Info.png') ?>" alt="" class="popup-image">
-        </div>
-        <div class="confirm-message">
-            <div id="rejectionMessage"></div>
-        </div>
-    </div>
-</div>
-
-<div id="approvalModal" class="modal">
-    <div class="modal-content confirm-dialog">
-        <div class="confirm-icon">
-        <img src="<?= base_url('assets/images/Info.png') ?>" alt="" class="popup-image">
-        </div>
-        <div class="confirm-message">
-            Setujui Rapat Ini?
-        </div>
-        <div class="confirm-buttons">
-            <button onclick="approveMeeting()" class="btn-confirm">Iya</button>
-            <button onclick="closeApprovalModal()" class="btn-cancel">Tidak</button>
-        </div>
-    </div>
-</div>
-</div>
-
-<div id="successModal" class="modal">
-    <div class="modal-content confirm-dialog">
-        <div class="confirm-icon">
-        <img src="<?= base_url('assets/images/Info.png') ?>" alt="" class="popup-image">
-        </div>
-        <div class="confirm-message">
-            Rapat Disetujui!!
-        </div>
-    </div>
-</div>
-
 <div id="logoutModal" class="modal">
     <div class="modal-content">
     <img src="<?= base_url('assets/images/logout_warning.png') ?>" alt="Logout Warning" class="popup-image">
@@ -286,8 +191,7 @@
         </div>
     </div>
 </div>
-
-    <script>
+<script>
 document.addEventListener('DOMContentLoaded', function() {
     const body = document.body;
     const moonIcon = document.querySelector('.moon-icon');
@@ -309,7 +213,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let itemsPerPage = parseInt(entriesSelect.value);
     let filteredRows = [...tableRows];
     let currentRow = null;
-
+    
     profileContainer.addEventListener('click', (e) => {
         e.stopPropagation();
         profileDropdown.classList.toggle('show');
@@ -393,112 +297,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    window.showApprovalModal = function(button) {
-        currentRow = button.closest('tr');
-        document.getElementById('approvalModal').style.display = 'flex';
-    };
-
-    window.closeApprovalModal = function() {
-        document.getElementById('approvalModal').style.display = 'none';
-        currentRow = null;
-    };
-
-    window.approveMeeting = function() {
-        if (currentRow) {
-            closeApprovalModal();
-            const successModal = document.getElementById('successModal');
-            successModal.style.display = 'flex';
-            setTimeout(() => {
-                successModal.style.display = 'none';
-            }, 2000);
-        }
-    };
-
-    window.showRejectionModal = function(button) {
-        currentRow = button.closest('tr');
-        document.getElementById('rejectionModal').style.display = 'flex';
-    };
-
-    window.closeRejectionModal = function() {
-        document.getElementById('rejectionModal').style.display = 'none';
-        document.getElementById('rejectionReason').value = '';
-        currentRow = null;
-    };
-
-    window.submitRejection = function() {
-        const reason = document.getElementById('rejectionReason').value;
-        if (reason.trim() === '') {
-            alert('Silakan masukkan alasan penolakan.');
-            return;
-        }
-        
-        if (currentRow) {
-            const topik = currentRow.cells[4].textContent;
-            alert(`Rapat "${topik}" ditolak dengan alasan: ${reason}`);
-            closeRejectionModal();
-        }
-    };
-    
-
-    window.submitRejection = function() {
-    const reason = document.getElementById('rejectionReason').value;
-    if (reason.trim() === '') {
-        alert('Silakan masukkan alasan penolakan.');
-        return;
-    }
-    
-    if (currentRow) {
-        const topik = currentRow.cells[4].textContent;
-        closeRejectionModal();
-        
-        const rejectionMessage = document.getElementById('rejectionMessage');
-        rejectionMessage.textContent = `Rapat "${topik}" ditolak dengan alasan: ${reason}`;
-        
-        const rejectionSuccessModal = document.getElementById('rejectionSuccessModal');
-        rejectionSuccessModal.style.display = 'flex';
-        
-        setTimeout(() => {
-            rejectionSuccessModal.style.display = 'none';
-        }, 3000); 
-    }
-};
-
-const logoutLink = document.querySelector('.dropdown-item:last-child');
-    logoutLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        showLogoutModal();
-    });
-
-    window.showLogoutModal = function() {
-        logoutModal.style.display = 'block';
-        profileDropdown.classList.remove('show');
-    }
-
-    window.closeLogoutModal = function() {
-        logoutModal.style.display = 'none';
-    }
-
-    window.confirmLogout = function() {
-        window.location.href = "<?= base_url('logout') ?>"; 
-    }
-
-document.addEventListener('click', (e) => {
-    if (!categorySelect.contains(e.target) && 
-        !categoryPopup.contains(e.target) && 
-        !categoryIcon.contains(e.target)) {
-        categoryPopup.style.display = 'none';
-    }
-    
-    if (e.target.classList.contains('modal')) {
-        if (e.target.id === 'approvalModal') {
-            closeApprovalModal();
-        } else if (e.target.id === 'rejectionModal') {
-            closeRejectionModal();
-        } else if (e.target.id === 'rejectionSuccessModal') {
-            e.target.style.display = 'none';
-        }
-    }
-});
     searchInput.addEventListener('input', filterAndDisplayData);
     
     entriesSelect.addEventListener('change', () => {
@@ -552,11 +350,34 @@ document.addEventListener('click', (e) => {
         }
     });
     
+    const logoutLink = document.querySelector('.dropdown-item:last-child');
+    logoutLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        showLogoutModal();
+    });
+
+    window.showLogoutModal = function() {
+        logoutModal.style.display = 'block';
+        profileDropdown.classList.remove('show');
+    }
+
+    window.closeLogoutModal = function() {
+        logoutModal.style.display = 'none';
+    }
+
+    window.confirmLogout = function() {
+        window.location.href = "<?= base_url('logout') ?>"; 
+    }
+
     document.addEventListener('click', (e) => {
         if (!categorySelect.contains(e.target) && 
             !categoryPopup.contains(e.target) && 
             !categoryIcon.contains(e.target)) {
             categoryPopup.style.display = 'none';
+        }
+        
+        if (e.target === logoutModal) {
+            closeLogoutModal();
         }
         
         if (e.target.classList.contains('modal')) {
@@ -571,5 +392,6 @@ document.addEventListener('click', (e) => {
     filterAndDisplayData();
 });
 </script>
+
 </body>
 </html>

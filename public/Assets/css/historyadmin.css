@@ -37,6 +37,40 @@ body {
     overflow-x: hidden;
 }
 
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-text {
+    display: flex;
+    flex-direction: column; 
+    margin-right: 10px; 
+}
+
+.user-name {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;  
+    margin-left: -150px;
+    margin-bottom: 5px; 
+}
+
+.user-role {
+    font-size: 16px;
+    color: #444;
+    text-align: center; 
+    margin-left: -80px;
+}
+
+.dark-mode .top-bar .user-info {
+    color: white;
+}
+
+.dark-mode .top-bar .user-info .user-role {
+    color: white;
+}
+
 .sidebar {
     width: 300px;
     background-color: #0085C5;
@@ -903,13 +937,6 @@ table tbody tr:last-child {
     color: white !important;
 }
 
-
-
-
-
-
-
-
 /* Submenu popup styling */
 .submenu-popup {
     position: absolute;
@@ -970,292 +997,6 @@ table tbody tr:last-child {
     background-color: #404040;
 }
 
-
-/* Modal base styles */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-/* Confirmation dialog styles */
-.confirm-dialog {
-    background: white;
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-    width: 300px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.confirm-icon {
-    margin-bottom: 15px;
-}
-
-.confirm-icon i {
-    color: #00BCD4;
-    font-size: 40px;
-}
-
-.confirm-message {
-    font-size: 25px;
-    color: #333;
-    margin-bottom: 20px;
-    font-style: italic;
-}
-
-.confirm-buttons {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-}
-
-
-/* Dark mode styles */
-.dark-mode .confirm-dialog {
-    background: #2d2d2d;
-}
-
-.dark-mode .confirm-message {
-    color: white;
-}
-
-.dark-mode .btn-cancel {
-    background: #404040;
-    color: white;
-}
-
-/* Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.dark-mode.modal {
-    background: #2d2d2d;
-}
-
-.modal-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    min-width: 300px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.dark-mode .modal-content {
-    background-color: #2d2d2d;
-    padding: 20px;
-    border-radius: 8px;
-    min-width: 300px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.modal-content h2 {
-    margin-top: 0;
-    color: #333;
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-.dark-mode .modal-content h2 {
-        margin-top: 0;
-        color: white;
-        font-size: 1.5rem;
-        margin-bottom: 15px;
-}
-
-.modal-content p {
-    margin-bottom: 20px;
-    color: #666;
-}
-
-.modal-content button {
-    padding: 8px 16px;
-    margin: 0 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 500;
-}
-
-.modal-content button:first-of-type {
-    background-color: #025299; 
-    color: white;
-    font-weight: bolder;
-}
-
-.modal-content button:first-of-type:hover {
-    background-color: #0085C5;
-    transform: scale(1.1);
-    font-size: 16px;
-}
-
-.modal-content button:last-of-type {
-        background-color: #025299; 
-        color: white;
-        font-weight: bolder;
-}
-
-.modal-content button:last-of-type:hover {
-    background-color: #e53935; 
-    transform: scale(1.1);
-    font-size: 16px;
-}
- 
-.dark-mode .modal-content button:first-of-type {
-    background-color: #666666; 
-    color: white;
-    font-weight: bolder;
-}
-
-.modal-content button:first-of-type:hover {
-    background-color: #0085C5;
-    transform: scale(1.1);
-    font-size: 16px;
-}
-
-.dark-mode .modal-content button:last-of-type {
-        background-color: #666666; 
-        color: white;
-        font-weight: bolder;
-}
-
-.modal-content button:last-of-type:hover {
-    background-color: #e53935; 
-    transform: scale(1.1);
-    font-size: 16px;
-}
-#rejectionReason {
-    width: 100%;
-    min-height: 100px;
-    padding: 10px;
-    margin: 10px 0 20px 0;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    resize: vertical;
-}
-
-.dark-mode #rejectionReason {
-    color: #ffffff;
-    background-color: #2d2d2d;
-    border: 1px solid #404040;
-}
-
-/* Button Styles */
-.btn-approve, .btn-reject {
-    padding: 6px 12px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    background: none;
-    transition: transform 0.2s;
-}
-
-.btn-approve:hover, .btn-reject:hover {
-    transform: scale(1.1);
-}
-
-.btn-approve img, .btn-reject img {
-    width: 20px;
-    height: 20px;
-    display: block;
-}
-
-/* Action Buttons Container */
-.action-buttons {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-}
-
-/* Success Modal styles */
-#successModal .confirm-icon i {
-    color: #00BCD4;
-    font-size: 40px;
-}
-
-#successModal .confirm-message {
-    font-size: 25px;
-    color: #333;
-    margin-bottom: 20px;
-    font-style: italic;
-}
-
-/* Dark mode support */
-.dark-mode #successModal .confirm-message {
-    color: white;
-}
-
-.user-info {
-    position: relative;
-    cursor: pointer;
-}
-
-.user-info {
-    display: flex;
-    align-items: center;
-}
-
-.user-text {
-    display: flex;
-    flex-direction: column; 
-    margin-right: 10px; 
-}
-
-.user-name {
-    font-weight: bold;
-    font-size: 18px;
-    text-align: center;  
-    margin-left: -150px;
-    margin-bottom: 5px; 
-}
-
-.user-role {
-    font-size: 16px;
-    color: #444;
-    text-align: center; 
-    margin-left: -80px;
-}
-
-.dark-mode .top-bar .user-info {
-    color: white;
-}
-
-.dark-mode .top-bar .user-info .user-role {
-    color: white;
-}
-
-.user-text {
-    display: flex;
-    flex-direction: column; 
-    justify-content: center; 
-}
-
-.user-name {
-    font-size: 1.1em; 
-    font-weight: bold; 
-}
-
-.user-role {
-    font-size: 0.9em; 
-    color: #888; 
-}
 
 .user-info {
     position: relative;
@@ -1549,12 +1290,6 @@ table tbody tr:last-child {
 
 .dark-mode .modal-buttons .btn-cancel:hover {
     background-color: #e53935;
-}
-
-/* Dark mode styles */
-.dark-mode .modal-content {
-    background-color: #555;
-    color: #fff;
 }
 
 .dark-mode .modal h2 {
