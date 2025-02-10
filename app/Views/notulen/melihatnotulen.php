@@ -6,76 +6,89 @@
     <title>Daftar Notulensi</title>
     <link rel="stylesheet" href="<?= base_url('assets/css/melihatnotulen.css') ?>">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets/css/user-info.css') ?>">
+    
 </head>
-<body class="light-mode">
+<body>
     <div class="container">
-        <!-- Sidebar -->
+        <!-- Sidebar Section -->
         <div class="sidebar">
             <div class="logo">
                 <img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="Logo">
             </div>
             <ul>
-            <li>
-                <a href="dashboard_admin" class="<?php echo (isset($current_page) && $current_page == 'dashboard') ? 'active dashboard' : 'inactive'; ?>">
-                    <img src="<?php echo base_url('assets/images/dashboard.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
-                    Dashboard
-                </a>
-            </li>
-            <li class="notulensi-menu">
-            <a href="#" class="<?php echo ($current_page == 'data_pengguna') ? 'active' : 'inactive'; ?>">
-                <img src="<?php echo base_url('assets/images/notulensi.png'); ?>" alt="Data Pengguna Icon" class="sidebar-icon">
-                Notulensi
-                </a>
-                <div class="popup-menu">
-                <a href="daftar-notulensi" class="popup-item">
-                    <img src="<?= base_url('assets/images/buat.png') ?>" alt="List Icon" class="sidebar-icon">
-                    Daftar Notulensi
-                </a>
-                <a href="buatnotulen" class="popup-item">
-                    <img src="<?= base_url('assets/images/edit.png') ?>" alt="Create Icon" class="sidebar-icon">
-                    Buat Notulensi
-                </a>
-            </div>
+                <li>
+                    <a href="dashboard_pegawai" class="<?php echo ($current_page == 'dashboard') ? 'active dashboard' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/dashboard.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
+                        Dashboard
+                    </a>
                 </li>
+                <li class="dropdown">
+                    <a href="#" class="<?php echo ($current_page == 'melihat_pegawai') ? 'active notulensi-pegawai ' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/codicon_book.png'); ?>" alt="Notulensi Icon" class="sidebar-icon">
+                        Notulensi
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="melihatnotulen" class="dropdown-item">
+                            <img src="<?= base_url('assets/images/buat.png') ?>" alt="Daftar Notulensi Icon">
+                            <span>Daftar Notulensi</span>
+                        </a>
+                        
+                        <a href="buatnotulen" class="dropdown-item">
+                            <img src="<?= base_url('assets/images/edit.png') ?>" alt="Buat Notulensi Icon">
+                            <span>Buat Notulensi</span>
+                        </a>
+                    </div>
                 </li>
                 <li>
-                    <a href="riwayatadmin" class="<?php echo ($current_page == 'riwayat_notulensi') ? 'active riwayat-notulensi' : 'inactive'; ?>">
+                    <a href="riwayatnotulen" class="<?php echo ($current_page == 'riwayat_notulensi') ? 'active riwayat-notulensi' : 'inactive'; ?>">
                         <img src="<?php echo base_url('assets/images/riwayatnotulensi.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
                         Riwayat Notulensi
                     </a>
                 </li>
             </ul>
         </div>
-                   
-        <!-- Main Content -->
+
+        <!-- Main Content Section -->
         <div class="main-content">
-            <div class="header">
-                <div class="theme-toggle">
-                    <img src="<?= base_url('assets/images/bulan.png') ?>" alt="Moon" class="theme-icon moon-icon">
-                    <img src="<?= base_url('assets/images/sun.png') ?>" alt="Sun" class="theme-icon sun-icon">
+            <div class="top-bar">
+                <div class="toggle-dark-mode">
+                    <img id="toggleDarkMode" src="<?php echo base_url('assets/images/moon.png'); ?>" alt="Dark Mode">
                 </div>
+
                 <div class="user-info">
-                    <!-- User details with profile image and role -->
-                    <div class="user-details">
-                        <?php
-                        // Cek apakah ada gambar profil, jika tidak, tampilkan gambar default
-                            $profilePic = $user['profil_foto'] ? base_url('assets/images/profiles/' . $user['profil_foto']) : base_url('assets/images/profiles/delvaut.png');
-                        ?>
-                        <img src="<?= $profilePic ?>" alt="Profile" class="profile-img">
-                        <div class="user-text">
-                            <p class="user-name"><?= esc($user['nama']); ?></p>
-                            <p class="user-role"><?= esc($user['role']); ?></p>
+                    <div class="user-text">
+                        <div class="user-name">
+                            <span><?php echo isset($user['nama']) ? $user['nama'] : 'Nama Tidak Ditemukan'; ?></span>
+                        </div>                            
+                        <div class="user-role">
+                            <span><?php echo isset($user['role']) ? ucfirst($user['role']) : 'Role Tidak Ditemukan'; ?></span>
                         </div>
+                    </div>
+                    <div>
+                        <img src="<?= base_url('assets/images/profiles/' . $user['profil_foto']) ?>" alt="Profile" class="profile-img" id="profile-icon">
+                    </div>
+
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="<?= base_url('notulen/profilnotulen') ?>" class="dropdown-item">
+                            <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
+                            Profil
+                        </a>
+                        <a href="#" class="dropdown-item" id="logoutLink">
+                            <img src="<?= base_url('assets/images/icon_logout.png') ?>" alt="Logout" class="dropdown-icon">
+                            Logout
+                        </a>
                     </div>
                 </div>
             </div>
-            <!-- Content Area -->
-            <div class="content">
-                <h1>Daftar Notulensi</h1>
 
+            <div class="page-title">
+                <h1>Daftar Notulensi</h1>
+            </div>
+             
+            <div class="content">
                 <div class="filters">
-                    <!-- Category Selection -->
                     <div class="category-select-container">
                         <div class="iinput-container">
                             <input type="text" class="category-select" placeholder="Kategori" readonly>
@@ -85,24 +98,23 @@
                         </div>
                     </div>
 
-                    <!-- Search Box -->
                     <div class="search-box">
-                        <input type="text" placeholder="Search here...">
+                        <input type="text" placeholder="Search here">
                         <button type="button">
                             <i class="fas fa-search"></i>
                         </button>
                     </div>
 
-                    <!-- Show Entries Dropdown -->
                     <div class="show-entries">
-                        <label for="entries">Show:</label>
+                        <label for="entries">Show</label>
                         <select id="entries" name="entries">
+                            <option value="">Select</option>
                             <option value="5">5</option>
                             <option value="10">10</option>
                             <option value="15">15</option>
                             <option value="20">20</option>
                         </select>
-                        <label for="entries">Entries</label>
+                        <span class="entries-text">entries</span>
                     </div>
                 </div>
 
@@ -132,7 +144,6 @@
                                         <td>
                                             <div class="action-buttons">
                                                 <button class="btn-detail" onclick="viewDetails(this, <?= esc($notulen['notulensi_id']) ?>)">Lihat</button>
-                                            </button>
                                             </div>
                                         </td>
                                     </tr>
@@ -143,9 +154,21 @@
                 </div>
 
                 <div class="pagination">
-                    <button class="btn-prev">Previous</button>
+                    <button class="btn-prev" disabled>Previous</button>
                     <span class="page-number">1</span>
                     <button class="btn-next">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popup Logout -->
+        <div class="popup-overlay" id="popupOverlay">
+            <div class="popup">
+                <img src="<?= base_url('assets/images/logout_warning.png') ?>" alt="Logout Warning" class="popup-image">
+                <h3>Anda ingin logout?</h3>
+                <div class="popup-buttons">
+                    <button class="btn-yes" id="confirmLogout">Ya</button>
+                    <button class="btn-no" id="cancelLogout">Tidak</button>
                 </div>
             </div>
         </div>
@@ -154,40 +177,25 @@
     <script>
 document.addEventListener('DOMContentLoaded', function() {
     const body = document.body;
-    const moonIcon = document.querySelector('.moon-icon');
-    const sunIcon = document.querySelector('.sun-icon');
+    const moonIcon = document.querySelector('#toggleDarkMode');
     const categorySelect = document.querySelector('.category-select');
     const searchInput = document.querySelector('.search-box input');
     const searchButton = document.querySelector('.search-box button');
     const tableRows = document.querySelectorAll('table tbody tr');
-    const categories = ['APTIKA', 'IKP', 'Statistik dan Persandian'];
+    const categories = ['APTIKA', 'IKP', 'Statistik & Persandian'];
     let itemsPerPage = 5;
-    let currentPage = 1; // Initialize current page
+    let currentPage = 1; // Deklarasikan currentPage di sini
+    let totalPages = 0; // Initialize totalPages
 
-    // Notulensi Menu Popup Handling
-    const notulensiMenu = document.querySelector('.notulensi-menu');
-    if (notulensiMenu) {
-        notulensiMenu.addEventListener('mouseenter', function() {
-            const popupMenu = this.querySelector('.popup-menu');
-            if (popupMenu) {
-                popupMenu.style.display = 'block';
-            }
-        });
-
-        notulensiMenu.addEventListener('mouseleave', function() {
-            const popupMenu = this.querySelector('.popup-menu');
-            if (popupMenu) {
-                popupMenu.style.display = 'none';
-            }
-        });
+    // Cek tema yang disimpan di localStorage
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        body.classList.remove('light-mode', 'dark-mode');
+        body.classList.add(savedTheme);
+    } else {
+        // Default ke light mode
+        body.classList.add('light-mode');
     }
-
-    // Reset to light mode on page load
-    localStorage.setItem('theme', 'light-mode');
-    body.classList.remove('dark-mode');
-    body.classList.add('light-mode');
-    moonIcon.style.opacity = '1';
-    sunIcon.style.opacity = '0';
 
     // Create category popup
     let categoryPopup = document.createElement('div');
@@ -198,9 +206,9 @@ document.addEventListener('DOMContentLoaded', function() {
         option.className = 'category-option';
         option.textContent = category;
         option.onclick = function() {
-            categorySelect.value = category; // Set the selected category to the select dropdown
-            categoryPopup.style.display = 'none'; // Hide the popup after selection
-            filterAndDisplayData(); // Filter and display data based on the selected category
+            categorySelect.value = category; 
+            categoryPopup.style.display = 'none'; 
+            filterAndDisplayData(); 
         };
         categoryPopup.appendChild(option);
     });
@@ -233,26 +241,13 @@ document.addEventListener('DOMContentLoaded', function() {
             return searchMatch && categoryMatch;
         });
 
-        // Debugging
-        console.log('Visible Rows:', visibleRows);
-        
-        // Update pagination and display logic
         totalPages = Math.ceil(visibleRows.length / itemsPerPage);
-        // Reset to first page when filtering
-
-        // Debugging
-        console.log('Total Pages:', totalPages);
-        console.log('Current Page:', currentPage);
-
         updateTable(visibleRows);
     }
 
-    // Update table display based on visible rows
     function updateTable(visibleRows) {
-        // Hide all rows first
         tableRows.forEach(row => row.style.display = 'none');
 
-        // Show only the visible rows
         const start = (currentPage - 1) * itemsPerPage;
         const end = start + itemsPerPage;
 
@@ -260,89 +255,97 @@ document.addEventListener('DOMContentLoaded', function() {
             row.style.display = index >= start && index < end ? '' : 'none';
         });
 
-        // Update pagination controls
-        pageNumber.textContent = `${currentPage} of ${totalPages}`;
-        prevButton.disabled = currentPage === 1;
-        nextButton.disabled = currentPage === totalPages || totalPages === 0;
+        document.querySelector('.page-number').textContent = `${currentPage} of ${totalPages}`;
+        document.querySelector('.btn-prev').disabled = currentPage === 1;
+        document.querySelector('.btn-next').disabled = currentPage === totalPages || totalPages === 0;
     }
 
-    // View Details Function
     window.viewDetails = function(button, notulensiId) {
-        // Arahkan ke halaman detail notulensi
-        window.location.href = `<?= base_url('notulensi/lihatnotulen/') ?>${notulensiId}`;
+        window.location.href = `<?= base_url('pegawai/lihatnotulen/') ?>${notulensiId}`;
     };
 
-    // Show Entries dropdown change event
     document.getElementById('entries').addEventListener('change', function() {
         itemsPerPage = parseInt(this.value);
         filterAndDisplayData();
     });
 
-    // Pagination
-    let totalPages = Math.ceil(tableRows.length / itemsPerPage);
-    
     const prevButton = document.querySelector('.btn-prev');
     const nextButton = document.querySelector('.btn-next');
-    const pageNumber = document.querySelector('.page-number');
 
-    // Pagination event listeners
     prevButton.addEventListener('click', function() {
         if (currentPage > 1) {
             currentPage--;
-            filterAndDisplayData();
+            filterAndDisplayData(); // Panggil fungsi untuk memperbarui tampilan
         }
     });
 
     nextButton.addEventListener('click', function() {
         if (currentPage < totalPages) {
             currentPage++;
-            filterAndDisplayData();
+            filterAndDisplayData(); // Panggil fungsi untuk memperbarui tampilan
         }
     });
 
-    // Theme handling
-    const themeToggle = document.querySelector('.theme-toggle');
-    themeToggle.addEventListener('click', function() {
+    moonIcon.addEventListener('click', function() {
         body.classList.toggle('dark-mode');
         body.classList.toggle('light-mode');
-        
+
+        // Simpan tema yang dipilih ke localStorage
         if (body.classList.contains('dark-mode')) {
-            moonIcon.style.opacity = '0';
-            sunIcon.style.opacity = '1';
             localStorage.setItem('theme', 'dark-mode');
         } else {
-            moonIcon.style.opacity = '1';
-            sunIcon.style.opacity = '0';
             localStorage.setItem('theme', 'light-mode');
         }
     });
 
-    // Close modal and popups when clicking outside
     window.onclick = function(event) {
-        // Close category popup
         if (!categoryPopup.contains(event.target) && !categorySelect.contains(event.target)) {
             categoryPopup.style.display = 'none';
         }
-        // Close notulensi popup
-        if (notulensiMenu && !notulensiMenu.contains(event.target)) {
-            const popupMenu = notulensiMenu.querySelector('.popup-menu');
-            if (popupMenu) {
-                popupMenu.style.display = 'none';
-            }
-        }
     };
 
-    // Initial table setup
     filterAndDisplayData();
 
-    // Event listener for search input to trigger the filter
     searchInput.addEventListener('input', function() {
         filterAndDisplayData();
     });
 
-    // Event listener for search button to trigger the filter
     searchButton.addEventListener('click', function() {
         filterAndDisplayData();
+    });
+
+    const profileIcon = document.getElementById('profile-icon');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+
+    profileIcon.addEventListener('click', (event) => {
+        event.stopPropagation(); 
+        dropdownMenu.classList.toggle('show');
+    });
+
+    window.addEventListener('click', () => {
+        dropdownMenu.classList.remove('show');
+    });
+
+    // JavaScript untuk Popup Logout
+    const logoutLink = document.getElementById('logoutLink'); // Perbaikan ID
+    const popupOverlay = document.getElementById('popupOverlay');
+    const confirmLogout = document.getElementById('confirmLogout');
+    const cancelLogout = document.getElementById('cancelLogout');
+
+    // Menampilkan popup konfirmasi logout
+    logoutLink.addEventListener('click', (event) => {
+        event.preventDefault(); // Mencegah link logout berfungsi langsung
+        popupOverlay.style.display = 'block'; // Menampilkan popup overlay
+    });
+
+    // Menyelesaikan logout ketika tombol "Ya" diklik
+    confirmLogout.addEventListener('click', () => {
+        window.location.href = '/'; // Ganti dengan halaman logout atau proses logout
+    });
+
+    // Menyembunyikan popup ketika tombol "Tidak" diklik
+    cancelLogout.addEventListener('click', () => {
+        popupOverlay.style.display = 'none'; 
     });
 });
 </script>

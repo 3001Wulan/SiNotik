@@ -27,7 +27,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="melihatnotulen" class="<?php echo ($current_page == '') ? 'active notulensi-pegawai' : 'inactive'; ?>">
+                    <a href="" class="<?php echo ($current_page == 'melihat_pegawai') ? 'active notulensi-pegawai' : 'inactive'; ?>">
                         <img src="<?php echo base_url('assets/images/codicon_book.png'); ?>" alt="Data Pengguna Icon" class="sidebar-icon">
                         Notulensi
                     </a>
@@ -65,7 +65,7 @@
 
                     <!-- Profile Dropdown Menu -->
                     <div class="dropdown-menu" id="dropdownMenu">
-                        <a href="<?= base_url('admin/profiladmin') ?>" class="dropdown-item">
+                        <a href="<?= base_url('notulen/profilnotulen') ?>" class="dropdown-item">
                             <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
                             Profil
                         </a>
