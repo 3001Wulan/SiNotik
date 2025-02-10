@@ -16,30 +16,30 @@
             </div>
             <ul>
                 <li>
-                    <a href="dashboard_admin" class="inactive">
+                    <a href="dashboard_notulen" class="inactive">
                         <img src="<?php echo base_url('assets/images/dashboard.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
                         Dashboard
                     </a>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="inactive dropdown-toggle">
-                        <img src="<?php echo base_url('assets/images/notulensi.png'); ?>" alt="Data Pengguna Icon" class="sidebar-icon">
+                    <a href="#" class="<?php echo ($current_page == 'melihat_notulen') ? 'active notulensi-pegawai ' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/codicon_book.png'); ?>" alt="Notulensi Icon" class="sidebar-icon">
                         Notulensi
                     </a>
                     <div class="dropdown-content">
-                        <a href="daftarnotulensi" class="dropdown-subitem">
-                            <img src="<?php echo base_url('assets/images/buat.png'); ?>" alt="Daftar Notulensi Icon">
-                            Daftar Notulensi
+                        <a href="melihatnotulen" class="dropdown-item">
+                            <img src="<?= base_url('assets/images/buat.png') ?>" alt="Daftar Notulensi Icon">
+                            <span>Daftar Notulensi</span>
                         </a>
-                        <div class="dropdown-separator"></div>
-                        <a href="buatnotulensi" class="dropdown-subitem">
-                            <img src="<?php echo base_url('assets/images/edit.png'); ?>" alt="Buat Notulensi Icon">
-                            Buat Notulensi
+                        
+                        <a href="buatnotulen" class="dropdown-item">
+                            <img src="<?= base_url('assets/images/edit.png') ?>" alt="Buat Notulensi Icon">
+                            <span>Buat Notulensi</span>
                         </a>
                     </div>
                 </li>
                 <li>
-                    <a href="riwayatnotulensi" class="inactive">
+                    <a href="riwayatnotulen" class="inactive">
                         <img src="<?php echo base_url('assets/images/riwayatnotulensi.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
                         Riwayat Notulensi
                     </a>
@@ -65,7 +65,7 @@
 
                     <!-- Dropdown Menu -->
                     <div class="dropdown-menu" id="dropdownMenu">
-                        <a href="<?= base_url('admin/profiladmin') ?>" class="dropdown-item">
+                        <a href="<?= base_url('notulen/profilnotulen') ?>" class="dropdown-item">
                             <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
                             Profil
                         </a>
@@ -165,7 +165,7 @@
                         <div class="profile-field">
                             <div class="field-left">
                                 <span class="field-label">Password</span>
-                                <span class="field-value" id="passwordSpan"><?= !empty($password) ? str_repeat('', strlen($password)) : '' ?></span>
+                                <span class="field-value" id="passwordSpan"><?= !empty($password) ? str_repeat('*', strlen($password)) : '*****' ?></span>
                                 <input type="password" name="password" value="<?= $password ?? 'N/A' ?>" class="field-value-input" id="passwordField" style="display:none;">
                             </div>
                             <div class="edit-icon">

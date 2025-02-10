@@ -112,6 +112,7 @@ class EditProfilNotulenController extends Controller
             'jabatan' => $jabatan,
             'tanggal_lahir' => $tanggal_lahir,
             'profil_foto' => $profil_foto,
+            'current_page' => 'edit_profil_notulen'
         ]);
     }
 }
