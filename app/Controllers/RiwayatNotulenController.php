@@ -35,7 +35,7 @@ class RiwayatNotulenController extends BaseController
         } else {
             log_message('info', 'Data notulensi berhasil ditampilkan: ' . print_r($data['notulensi'], true));
         }
-        return view('pegawai/riwayatpegawai', $data);
+        return view('notulen/riwayatnotulen', $data);
     }
 
 }
