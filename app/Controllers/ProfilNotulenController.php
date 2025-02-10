@@ -20,6 +20,11 @@ class ProfilNotulenController extends BaseController
             log_message('info', 'User profile for ID ' . $user_id . ' retrieved successfully.');
         }
 
-        return view('notulen/profilnotulen', ['user_profile' => $user_profile]);
+        $data = [
+            'user_profile' => $user_profile,
+            'current_page' => 'profil_notulen'
+        ];
+
+        return view('notulen/profilnotulen', $data);
     }
 }
