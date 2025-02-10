@@ -10,13 +10,13 @@
 <body>
     <div class="container">
         <!-- Sidebar -->
-        <div class="sidebar">z
+        <div class="sidebar">
             <div class="logo">
                 <img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="Logo" class="logo-img">
             </div>
             <ul>
                 <li>
-                    <a href="#" class="<?php echo ($current_page == 'dashboard') ? 'active dashboard' : 'inactive'; ?>">
+                    <a href="dashboard_notulen" class="<?php echo ($current_page == 'dashboard') ? 'active dashboard' : 'inactive'; ?>">
                         <img src="<?php echo base_url('assets/images/dashboard.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
                         Dashboard
                     </a>
@@ -31,7 +31,7 @@
                             <img src="<?= base_url('assets/images/buat.png') ?>" alt="Daftar Notulensi Icon">
                             <span>Daftar Notulensi</span>
                         </a>
-                        <div class="dropdown-separator"></div>
+                        
                         <a href="buatnotulen" class="dropdown-item">
                             <img src="<?= base_url('assets/images/edit.png') ?>" alt="Buat Notulensi Icon">
                             <span>Buat Notulensi</span>
