@@ -22,7 +22,7 @@
                     </a>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="<?php echo ($current_page == 'melihat_pegawai') ? 'active notulensi-pegawai ' : 'inactive'; ?>">
+                    <a href="melihatpegawai" class="<?php echo ($current_page == 'melihat_pegawai') ? 'active notulensi-pegawai ' : 'inactive'; ?>">
                         <img src="<?php echo base_url('assets/images/codicon_book.png'); ?>" alt="Notulensi Icon" class="sidebar-icon">
                         Notulensi
                     </a>
@@ -42,6 +42,24 @@
                     <a href="riwayatnotulen" class="<?php echo ($current_page == 'riwayat_notulensi') ? 'active riwayat-notulensi' : 'inactive'; ?>">
                         <img src="<?php echo base_url('assets/images/riwayatnotulensi.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
                         Riwayat Notulensi
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="inactive">
+                        <img src="<?php echo base_url('assets/images/rapat.png'); ?>" alt="Jadwal Rapat Icon" class="sidebar-icon">
+                        Jadwal Rapat
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="inactive">
+                        <img src="<?php echo base_url('assets/images/distribusi.png'); ?>" alt="Distribusi Notulensi Icon" class="sidebar-icon">
+                        Distribusi Notulensi
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="inactive">
+                        <img src="<?php echo base_url('assets/images/panduanpengguna.png'); ?>" alt="Panduan Pengguna Icon" class="sidebar-icon">
+                        Panduan Pengguna
                     </a>
                 </li>
             </ul>

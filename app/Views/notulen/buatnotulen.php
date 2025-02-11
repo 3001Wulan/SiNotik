@@ -45,6 +45,24 @@
                         Riwayat Notulensi
                     </a>
                 </li>
+                <li>
+                    <a href="#" class="inactive">
+                        <img src="<?php echo base_url('assets/images/rapat.png'); ?>" alt="Jadwal Rapat Icon" class="sidebar-icon">
+                        Jadwal Rapat
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="inactive">
+                        <img src="<?php echo base_url('assets/images/distribusi.png'); ?>" alt="Distribusi Notulensi Icon" class="sidebar-icon">
+                        Distribusi Notulensi
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="inactive">
+                        <img src="<?php echo base_url('assets/images/panduanpengguna.png'); ?>" alt="Panduan Pengguna Icon" class="sidebar-icon">
+                        Panduan Pengguna
+                    </a>
+                </li>
             </ul>
         </div>
 

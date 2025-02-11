@@ -4,10 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Daftar Notulensi</title>
-  <link rel="stylesheet" href="<?= base_url('assets/css/detailnotulennotulen.css') ?>">
+  <link rel="stylesheet" href="<?= base_url('assets/css/detailnotulen.css') ?>">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-  <script type="module" src="<?= base_url('assets/js/script.js') ?>"></script>
-  <script type="module" src="https://unpkg.com/emoji-picker-element"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body class="light-mode">
@@ -15,41 +13,57 @@
     <!-- Sidebar -->
     <div class="sidebar">
       <div class="logo">
-        <img src="<?= base_url('assets/images/logo.png'); ?>" alt="Logo">
+        <img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="Logo">
       </div>
       <ul>
-        <li>
-          <a href="/pegawai/dashboard_notulen" class="<?= isset($current_page) && $current_page == 'dashboard' ? 'active dashboard' : 'inactive'; ?>">
-            <img src="<?= base_url('assets/images/dashboard.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
-            Dashboard
-          </a>
-        </li>
-        
-        <li class="notulensi-menu">
-          <a href="daftar-notulensi" class="active">
-            <img src="<?= base_url('assets/images/notulensi.png'); ?>" alt="Notulensi Icon" class="sidebar-icon">
-            Notulensi
-          </a>
-          <div class="dropdown-content">
-            <a href="melihatnotulen" class="dropdown-item">
-              <img src="<?= base_url('assets/images/buat.png') ?>" alt="Daftar Notulensi Icon">
-              <span>Daftar Notulensi</span>
-            </a>
-            <div class="dropdown-separator"></div>
-            <a href="buatnotulen" class="dropdown-item">
-              <img src="<?= base_url('assets/images/edit.png') ?>" alt="Buat Notulensi Icon">
-              <span>Buat Notulensi</span>
-            </a>
-          </div>
-        </li>
-        
-        <li>
-          <a href="/pegawai/riwayatadmin" class="<?= $current_page == 'riwayat_notulensi' ? 'active riwayat-notulensi' : 'inactive'; ?>">
-            <img src="<?= base_url('assets/images/riwayatnotulensi.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
-            Riwayat Notulensi
-          </a>
-        </li>
-      </ul>
+                <li>
+                    <a href="dashboard_notulen" class="<?php echo ($current_page == 'dashboard') ? 'active dashboard' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/dashboard.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
+                        Dashboard
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="<?php echo ($current_page == 'melihat_notulen') ? 'active notulensi-pegawai ' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/codicon_book.png'); ?>" alt="Notulensi Icon" class="sidebar-icon">
+                        Notulensi
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="melihatnotulen" class="dropdown-item">
+                            <img src="<?= base_url('assets/images/buat.png') ?>" alt="Daftar Notulensi Icon">
+                            <span>Daftar Notulensi</span>
+                        </a>
+                        
+                        <a href="buatnotulen" class="dropdown-item">
+                            <img src="<?= base_url('assets/images/edit.png') ?>" alt="Buat Notulensi Icon">
+                            <span>Buat Notulensi</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <a href="riwayatnotulen" class="<?php echo ($current_page == 'riwayat_notulensi') ? 'active riwayat-notulensi' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/riwayatnotulensi.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
+                        Riwayat Notulensi
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="inactive">
+                        <img src="<?php echo base_url('assets/images/rapat.png'); ?>" alt="Jadwal Rapat Icon" class="sidebar-icon">
+                        Jadwal Rapat
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="inactive">
+                        <img src="<?php echo base_url('assets/images/distribusi.png'); ?>" alt="Distribusi Notulensi Icon" class="sidebar-icon">
+                        Distribusi Notulensi
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="inactive">
+                        <img src="<?php echo base_url('assets/images/panduanpengguna.png'); ?>" alt="Panduan Pengguna Icon" class="sidebar-icon">
+                        Panduan Pengguna
+                    </a>
+                </li>
+            </ul>
     </div>
 
     <!-- Content Area -->
@@ -57,50 +71,24 @@
       <div class="top-bar">
         <!-- Dark Mode Toggle -->
         <div class="toggle-dark-mode">
-          <img id="toggleDarkMode" src="<?= base_url('assets/images/moon.png'); ?>" alt="Dark Mode">
+          <img id="toggleDarkMode" src="<?php echo base_url('assets/images/moon.png'); ?>" alt="Dark Mode">
         </div>
 
         <!-- User Info -->
         <div class="user-info">
           <div class="user-text">
             <div class="user-name">
-              <span><?= session()->get('nama') ?? 'Nama Tidak Ditemukan'; ?></span>
+              <span><?= session()->get('nama') ? session()->get('nama') : 'Nama Tidak Ditemukan'; ?></span>
             </div>
             <div class="user-role">
               <span><?= session()->get('role') ? ucfirst(session()->get('role')) : 'Role Tidak Ditemukan'; ?></span>
             </div>
           </div>
-          <div class="profile-wrapper">
-            <img src="<?= base_url('assets/images/profiles/' . (session()->get('profil_foto') && file_exists(FCPATH . 'assets/images/profiles/' . session()->get('profil_foto')) ? session()->get('profil_foto') : 'default.png')) ?>" 
-                 alt="User Photo" class="header-profile-img" id="profile-icon">
-          </div>
-        </div>
-
-        <!-- Dropdown Menu -->
-        <div class="dropdown-menu" id="dropdownMenu">
-          <a href="<?= base_url('pegawai/profilpegawai') ?>" class="dropdown-item">
-            <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
-            Profil
-          </a>
-          <a href="#" class="dropdown-item" id="logoutLink">
-            <img src="<?= base_url('assets/images/icon_logout.png') ?>" alt="Logout" class="dropdown-icon">
-            Logout
-          </a>
-        </div>
-      </div>
-
-      <!-- Popup Logout -->
-      <div class="logout-popup-overlay" id="logoutPopupOverlay" style="display: none;">
-        <div class="logout-popup">
-          <img src="<?= base_url('assets/images/logout_warning.png') ?>" alt="Logout Warning" class="logout-popup-image">
-          <h3>Anda ingin logout?</h3>
-          <div class="logout-popup-buttons">
-            <button class="btn-logout-yes" id="confirmLogout">Ya</button>
-            <button class="btn-logout-no" id="cancelLogout">Tidak</button>
+          <div>
+            <img src="<?= base_url('assets/images/profiles/' . (file_exists('assets/images/profiles/' . session()->get('profil_foto')) ? session()->get('profil_foto') : 'delvaut.png')) ?>" alt="User Photo" class="header-profile-img" id="profile-icon">
           </div>
         </div>
       </div>
-
 
       <!-- Page Title -->
       <div class="page-title">
@@ -161,40 +149,53 @@
       </div>
     </div>
   </div>
+</body>
+</html>
 
-  <!-- Pop-up untuk Komentar -->
-  <div id="commentPopup" class="comment-popup" style="display: none;">
-    <div class="popup-content">
-      <span class="close-popup" id="closePopup">&times;</span>
-      <h3>Komentar</h3>
-      <!-- Daftar komentar -->
-      <div id="commentList">
-        <?php foreach ($feedbacks as $k): ?>
-          <div class="comment-item">
-            <img src="<?= base_url('assets/images/profiles/' . ($k['profil_foto'] ?: 'default.png')) ?>" alt="Profile" class="comment-avatar">
-            <div class="comment-body">
-              <strong class="comment-name"><?= esc($k['user_nama']) ?></strong>
-              <p class="comment-text"><?= esc($k['isi']) ?></p>
-              <small><?= date('d M Y, H:i', strtotime($k['tanggal_feedback'])) ?></small>
+
+        <!-- Pop-up untuk Komentar -->
+        <div id="commentPopup" class="comment-popup" style="display: none;">
+          <div class="popup-content">
+            <span class="close-popup" id="closePopup">&times;</span>
+            <h3>Komentar</h3>
+            <!-- Daftar komentar -->
+            <div id="commentList">
+              <?php foreach ($feedbacks as $k): ?>
+                <div class="comment-item">
+                  <img src="<?= base_url('assets/images/profiles/' . ($k['profil_foto'] ?: 'default.png')) ?>" alt="Profile" class="comment-avatar">
+                  <div class="comment-body">
+                    <strong class="comment-name"><?= esc($k['user_nama']) ?></strong>
+                    <p class="comment-text"><?= esc($k['isi']) ?></p>
+                    <small><?= date('d M Y, H:i', strtotime($k['tanggal_feedback'])) ?></small>
+                  </div>
+                </div>
+              <?php endforeach; ?>
             </div>
-          </div>
-        <?php endforeach; ?>
-      </div>
 
-      <div class="comment-input-container">
-    <input type="hidden" id="notulensi_id" value="<?= esc($notulensi['notulensi_id']) ?>">
-    <div class="textarea-container">
-        <textarea id="newComment" placeholder="Tulis komentar..."></textarea>
-        <button type="button" id="emojiButton">😊</button>
-    </div>
-    <button id="submitComment">
-        <i class="fas fa-paper-plane"></i>
-    </button>
-</div>
-
-
+           <!-- Input komentar baru -->
+<div class="comment-input-container">
+  <input type="hidden" id="notulensi_id" value="<?= esc($notulensi['notulensi_id']) ?>">
+  <img src="https://via.placeholder.com/40" alt="Profile" class="comment-avatar">
+  <textarea id="newComment" placeholder="Tulis komentar..."></textarea>
+  <!-- Tombol Emoji -->
+  <button type="button" id="emojiButton">😊</button>
+  <!-- Pemilih Emoji -->
+  <div id="emojiPicker" class="emoji-picker" style="display: none;">
+    <span class="emoji" data-emoji="😊">😊</span>
+    <span class="emoji" data-emoji="😂">😂</span>
+    <span class="emoji" data-emoji="😍">😍</span>
+    <span class="emoji" data-emoji="😢">😢</span>
+    <span class="emoji" data-emoji="👍">👍</span>
+    <span class="emoji" data-emoji="😎">😎</span>
+    <span class="emoji" data-emoji="💡">💡</span>
   </div>
-  <div id="emojiPicker" class="emoji-picker" style="display: none;"></div>
+  <button id="submitComment">Kirim</button>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -217,7 +218,7 @@
           localStorage.setItem('theme', 'light');
         }
       });
-      
+
       // Pop-up Komentar
       const commentButton = document.getElementById('commentButton');
       const commentPopup = document.getElementById('commentPopup');
@@ -226,73 +227,66 @@
       const newComment = document.getElementById('newComment');
       const commentList = document.getElementById('commentList');
       const emojiButton = document.getElementById('emojiButton');
+      const emojiPicker = document.getElementById('emojiPicker');
 
       commentButton.addEventListener('click', () => {
-        commentPopup.style.display = 'flex'; // Menampilkan pop-up
+        commentPopup.style.display = 'flex';
       });
 
       closePopup.addEventListener('click', () => {
-        commentPopup.style.display = 'none'; // Menyembunyikan pop-up
+        commentPopup.style.display = 'none';
       });
 
       submitComment.addEventListener('click', () => {
-        const commentText = newComment.value.trim();
-        const notulensiId = document.getElementById('notulensi_id').value;
+  const commentText = newComment.value.trim();
+  const notulensiId = document.getElementById('notulensi_id').value;
 
-        if (commentText) {
-          // Kirim permintaan AJAX untuk menyimpan komentar
-          fetch('<?= base_url('lihatnotulen/saveFeedback') ?>', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'X-Requested-With': 'XMLHttpRequest'
-            },
-            body: JSON.stringify({
-              notulensi_id: notulensiId,
-              isi: commentText
-            })
-          })
-          .then(response => response.json())
-          .then(data => {
-            if (data.status === 'success') {
-              const commentItem = document.createElement('div');
-              commentItem.classList.add('comment-item', 'user-comment'); 
-              commentItem.innerHTML = `
-                <div class="comment-body">
-                  <strong class="comment-name">Anda</strong>
-                  <p class="comment-text">${commentText}</p>
-                </div>
-              `;
-              commentList.appendChild(commentItem);
-              newComment.value = ''; // Kosongkan input
-            } else {
-              alert(data.message); // Tampilkan pesan kesalahan
-            }
-          })
-          .catch(error => {
-            console.error('Error:', error);
-            alert('Terjadi kesalahan saat mengirim komentar.');
-          });
-        }
-      });
-
-      emojiButton.addEventListener('click', () => {
-  const pickerContainer = document.getElementById('emojiPicker');
-  if (pickerContainer.style.display === 'none' || pickerContainer.style.display === '') {
-    pickerContainer.style.display = 'block';
-    // Jika belum ada elemen <emoji-picker>, buat dan tambahkan
-    if (!pickerContainer.querySelector('emoji-picker')) {
-      const emojiPicker = document.createElement('emoji-picker');
-      pickerContainer.appendChild(emojiPicker);
-      emojiPicker.addEventListener('emoji-click', event => {
-        const emoji = event.detail.unicode;
-        newComment.value += emoji;
-      });
-    }
-  } else {
-    pickerContainer.style.display = 'none';
+  if (commentText) {
+    // Kirim permintaan AJAX untuk menyimpan komentar
+    fetch('<?= base_url('lihatnotulen/saveFeedback') ?>', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Requested-With': 'XMLHttpRequest'
+      },
+      body: JSON.stringify({
+        notulensi_id: notulensiId,
+        isi: commentText
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.status === 'success') {
+        const commentItem = document.createElement('div');
+        commentItem.classList.add('comment-item', 'user-comment'); 
+        commentItem.innerHTML = `
+          <div class="comment-body">
+            <strong class="comment-name">Anda</strong>
+            <p class="comment-text">${commentText}</p>
+          </div>
+        `;
+        commentList.appendChild(commentItem);
+        newComment.value = ''; // Kosongkan input
+      } else {
+        alert(data.message); // Tampilkan pesan kesalahan
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('Terjadi kesalahan saat mengirim komentar.');
+    });
   }
 });
+      emojiButton.addEventListener('click', () => {
+        emojiPicker.style.display = emojiPicker.style.display === 'none' || emojiPicker.style.display === '' ? 'block' : 'none';
+      });
+
+      emojiPicker.addEventListener('click', (event) => {
+        if (event.target.classList.contains('emoji')) {
+          const emoji = event.target.dataset.emoji;
+          newComment.value += emoji; 
+        }
+      });
 
       // PDF Download Functionality
       document.getElementById('downloadButton').addEventListener('click', function() {
@@ -363,41 +357,6 @@
       });
 
     });
-    document.addEventListener("DOMContentLoaded", function () {
-    const profileIcon = document.getElementById("profile-icon");
-    const dropdownMenu = document.getElementById("dropdownMenu");
-    const logoutLink = document.getElementById("logoutLink");
-    const logoutPopupOverlay = document.getElementById("logoutPopupOverlay");
-    const confirmLogout = document.getElementById("confirmLogout");
-    const cancelLogout = document.getElementById("cancelLogout");
-
-    profileIcon.addEventListener("click", function (event) {
-        event.stopPropagation();
-        dropdownMenu.classList.toggle("show");
-    });
-
-    document.addEventListener("click", function (event) {
-        if (!dropdownMenu.contains(event.target) && !profileIcon.contains(event.target)) {
-            dropdownMenu.classList.remove("show");
-        }
-    });
-
-    logoutLink.addEventListener("click", function (event) {
-        event.preventDefault();
-        logoutPopupOverlay.style.display = "flex";
-    });
-
-    cancelLogout.addEventListener("click", function () {
-        logoutPopupOverlay.style.display = "none";
-    });
-
-    confirmLogout.addEventListener("click", function () {
-        window.location.href = "<?= base_url('/') ?>";
-    });
-});
-
-    
   </script>
-  
 </body>
 </html>

@@ -151,7 +151,7 @@ body {
     font-weight: bold;
     font-size: 18px;
     text-align: center;  
-   
+    margin-left: -150px;
     margin-bottom: 5px; 
 }
 
@@ -159,6 +159,7 @@ body {
     font-size: 16px;
     color: #444;
     text-align: center; 
+    margin-left: -80px;
 }
 
 .user-info img {
@@ -253,6 +254,8 @@ body {
 .dark-mode .menu-item-link:hover {
     background-color: #555555;
 }
+
+/* Keep all your existing styles for other elements */
 .agenda-header {
     display: flex;
     align-items: flex-start;
@@ -283,7 +286,7 @@ body {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     width: 100%; 
-    height: 570px; 
+    height: 570px; /* Ini akan menetapkan tinggi tetap */
     max-width: 1200px; 
     min-height: 650px; 
     margin-left: -250px;
@@ -373,59 +376,113 @@ body {
     height: 24px;
 }
 
-.menu-item.active {
-    background-color: #006c9e;
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 200px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px; 
+    padding: 0;
+    z-index: 999;
+    overflow: hidden;
+    width: max-content;
+    pointer-events: auto;
 }
 
-.menu-item:hover {
-    background-color: #006c9e;
+.dropdown-content .dropdown-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    padding: 8px 8px; 
+    width: 100%;
+    background-color: transparent;
+    margin: 0;
+    font-size: 16px; 
+    line-height: 1.4;
+    height: 38px; 
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.dropdown-content .dropdown-item img {
+    width: 25px; 
+    height: 25px;
+    margin-right: 10px;
+    margin-left: 10px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.dropdown-content .dropdown-item:hover {
+    background-color: #025299;
+    color: #fff;
+    font-weight: bolder;
+    transform: scale(1.1);
+}
+
+.dropdown-content .dropdown-item:hover img {
+    filter: brightness(0) invert(1); 
+}
+
+li:hover .dropdown-content {
+    display: block;
+    position: absolute;
+    left: 50px; 
+    top: 100%; 
+    border-radius: 8px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: #333;
+}
+
+.sidebar a.active {
+    background-color: #ddd;
+}
+
+.sidebar li:hover > a,
+.sidebar li:has(.dropdown-content:hover) > a {
+    background-color: #025299;
+    color: #fff; 
+    font-weight: bolder;
+}
+
+.sidebar li:hover > a img,
+.sidebar li:has(.dropdown-content:hover) > a img {
+    filter: brightness(0) invert(1);
 }
 
 body.dark-mode {
-    background-color: #222;
+    background-color: #121212;
     color: white;
 }
 
-body.dark-mode .sidebar ul li a.inactive:hover,
-body.dark-mode .sidebar ul li a.active {
+body.dark-mode .top-bar {
     background-color: #444444;
-    padding: 15px 10px;
-    font-size: 1.1em;
-    border: none; 
 }
 
-body.dark-mode .top-bar,
-body.dark-mode .left-blue{
-    background-color: #444444;
-}
 body.dark-mode .sidebar {
-    background-color: #333;
-}
-body.dark-mode .agenda-section,
-body.dark-mode .documentation-images img,
-body.dark-mode .download-button,
-body.dark-mode .textarea {
-    background-color: #444444;
-    border: none; 
-}
-body.dark-mode .dropdown-menu{
-    background-color: #777;
-    border: 1px solid #555;
-    color: #ddd;
-}
-.dark-mode .dropdown-menu .dropdown-item:hover {
-    background-color: #999;
-    color: #fff;
-}
-.dark-mode .page-title h2,
-.dark-mode .close-popup{
-    color: #ddd;
+    background-color: #555555;
 }
 
 body.dark-mode .feedback-container,
-body.dark-mode .comment-container,
-body.dark-mode .popup-content{
-    background-color: #333;
+body.dark-mode .comment-container {
+    background-color: #1e1e1e;
 }
 
 body.dark-mode .comment-section {
@@ -437,6 +494,7 @@ body.dark-mode .comment-input {
     background-color: #2d2d2d;
     color: #555555;
 }
+
 body.dark-mode .menu-item,
 body.dark-mode .page-title,
 body.dark-mode .agenda-title,
@@ -456,66 +514,6 @@ body.dark-mode .comment-box {
 
 body.dark-mode .comment-box::placeholder {
     color: #666;
-}
-
-.dark-mode .logout-popup-overlay {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.dark-mode .logout-popup {
-    background: #333;
-    color: #fff; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.dark-mode .logout-popup h3 {
-    color: #ddd;
-}
-.dark-mode .comment-name{
-    color: #ddd;
-}
-body.dark-mode .textarea-container {
-    background-color: #333;
-    border-color: #555;
-}
-
-body.dark-mode .textarea-container textarea {
-    background-color: #444;
-    color: #fff;
-}
-
-body.dark-mode .textarea-container button {
-    color: #fff;
-}
-body.dark-mode #submitComment {
-    background-color: #4444; 
-}
-
-body.dark-mode #submitComment:hover {
-    background-color: #2c4964;
-}
-
-.dark-mode .logout-popup-buttons button {
-    background-color: #444444; 
-    color: #fff; 
-    font-weight: bolder;
-    transition: background-color 0.3s ease;
-}
-
-.dark-mode .btn-logout-yes {
-    background-color: #666666;
-}
-
-.dark-mode .btn-logout-yes:hover {
-    background-color: #0085C5;
-}
-
-.dark-mode .btn-logout-no {
-    background-color: #666666;
-}
-
-.dark-mode .btn-logout-no:hover {
-    background-color: #c62828;
 }
 
 @media (max-width: 768px) {
@@ -617,7 +615,6 @@ body.dark-mode #submitComment:hover {
     margin-top: 13px;
 }
 
-/* Popup */
 .comment-popup {
     display: none;
     position: fixed;
@@ -651,7 +648,6 @@ body.dark-mode #submitComment:hover {
     color: #333;
 }
 
-/* Komentar */
 .comment-item {
     display: flex;
     align-items: flex-start;
@@ -659,14 +655,7 @@ body.dark-mode #submitComment:hover {
     padding: 10px;
     border-bottom: 1px solid #ddd;
 }
-.comment-icon {
-    background: none; 
-    border: none; 
-    padding: 10px; 
-    cursor: pointer;
-    font-size: 25px;
-    color: inherit; 
-}
+
 .comment-avatar {
     width: 40px;
     height: 40px;
@@ -690,46 +679,22 @@ body.dark-mode #submitComment:hover {
     margin-top: 5px;
 }
 
-/* Input Komentar */
 .comment-input-container {
     display: flex;
-    align-items: center;
-    margin-top: 10px;
-    width: 100%;
+    align-items: flex-start;
+    margin-top: 20px;
 }
 
-.textarea-container {
-    display: flex;
-    flex-direction: column;
+.comment-input-container textarea {
     width: 100%;
-    position: relative;
-}
-
-textarea {
-    width: 100%;
-    height: 120px; 
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    resize: none; 
-    padding-right: 40px; 
-    box-sizing: border-box;
+    resize: vertical;
+    margin-right: 10px;
 }
 
-#emojiButton {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-#submitComment {
-    margin-top: 15px;
-    margin-left: 15px; 
+.comment-input-container button {
     background-color: #007BFF;
     border: none;
     color: white;
@@ -737,26 +702,26 @@ textarea {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    align-self: flex-end; 
 }
 
-#submitComment:hover {
+.comment-input-container button:hover {
     background-color: #0056b3;
 }
 
 .emoji-picker {
     display: none;
     position: absolute;
-    top: 250px;  
-    left: 600px; 
+    bottom: 60px;
+    left: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
     border-radius: 8px;
     padding: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     width: 250px;
-    z-index: 9999;  
+    z-index: 999;
     text-align: center;
 }
-
 
 .emoji {
     font-size: 24px;
@@ -768,14 +733,40 @@ textarea {
 .emoji:hover {
     transform: scale(1.3);
 }
-
-/* Body */
 body.no-scroll {
     overflow: hidden;
 }
 
-
-.notulensi-menu .popup-menu {
+ /* CSS untuk styling sidebar dan dropdown */
+ .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar li {
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: #333;
+  }
+  
+  .sidebar a.active {
+    background-color: #ddd;
+  }
+  
+  /* Style untuk menu Notulensi */
+  .notulensi-menu {
+    position: relative;
+  }
+  
+  /* Dropdown tersembunyi secara default */
+  .notulensi-menu .popup-menu {
     display: none;
     position: absolute;
     left: 0;
@@ -786,158 +777,128 @@ body.no-scroll {
     width: 200px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 100;
-}
-
-.notulensi-menu:hover .popup-menu {
+  }
+  
+  /* Dropdown muncul saat kursor diarahkan ke menu Notulensi */
+  .notulensi-menu:hover .popup-menu {
     display: block;
-}
-
-.popup-menu a {
+  }
+  
+  .popup-menu a {
     padding: 8px;
     color: #333;
     text-decoration: none;
-}
-
-.popup-menu a:hover {
+  }
+  
+  .popup-menu a:hover {
     background: #ddd;
-}
-.user-comment {
-    justify-content: flex-end; 
+  }
+  /* Basic styles for the comment input container */
+  .comment-input-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* Space above the input container */
 }
 
-.comment-avatar {
-    border-radius: 50%; 
+.comment-input-container textarea {
+    flex: 1; /* Allow the textarea to take up available space */
+    margin-right: 10px; /* Space between textarea and button */
+    padding: 10px; /* Padding for the textarea */
+    border: 1px solid #ccc; /* Border for the textarea */
+    border-radius: 4px; /* Rounded corners */
 }
 
-#newComment {
+.comment-icon {
+    background: none; /* No background */
+    border: none; /* No border */
+    cursor: pointer; 
+    font-size: 25px;
+    
+}
+.comment-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .user-comment {
+    justify-content: flex-end; /* Mengatur agar komentar pengguna berada di sebelah kanan */
+  }
+
+  
+
+  .comment-avatar {
+    border-radius: 50%; /* Membuat avatar menjadi bulat */
+  }
+
+  .comment-input-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  #newComment {
     flex: 1;
     margin-left: 10px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
+  }
 
-.emoji {
+  .emoji {
     cursor: pointer;
     margin: 0 5px;
-}
-
-.content {
+  }
+  .content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-}
-
-.comment-section {
+  }
+  
+  .comment-section {
     margin-top: auto;
     margin-left: -45px;
-}
+  }
 
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 60px; 
-    left: 0;
-    display: none;  
-    background-color: white;
-    border: 1px solid #ccc;
+  .dark-mode .dropdown-content {
+    background-color: #555 !important; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 130px;  
-    margin-left: 1450px;
-    margin-top: 5px;
-    
 }
 
-.dropdown-menu.show {
-    display: block; 
+.dark-mode .dropdown-content .dropdown-item {
+    color: black; 
+    background-color: transparent;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.dropdown-item {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    text-decoration: none;
-    color: #333;
+.dark-mode .dropdown-content .dropdown-item:hover {
+    background-color: #777; 
+    color: #fff;
     font-weight: bolder;
-    border-radius: 10px;
-}
-
-.dropdown-item:hover {
-    color: white;
-    background-color: #025299;
-    border-bottom: none; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05); 
-}
-
-.dropdown-icon {
-    width: 20px;
-    margin-right: 10px;
-}
-.logout-popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.logout-popup {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
-    width: 100%;
-}
-
-.logout-popup-image {
-    height: 120px;
-    display: block;
-    margin: 0 auto 10px; 
-}
-
-.logout-popup h3 {
-    font-size: 25px;
-    color: #333;
-    margin-bottom: 20px;
-    font-style: italic;
-}
-
-.logout-popup-buttons button {
-    margin: 10px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.btn-logout-yes {
-    background-color: #025299;
-    color: white;
-}
-
-.btn-logout-yes:hover {
-    background-color: #0085C5;
     transform: scale(1.1);
 }
 
-.btn-logout-no {
-    background-color: #025299; 
-    color: white;
+.dark-mode li:hover .dropdown-content {
+    background-color: #444;
+    border-radius: 8px;
+}
+
+.dark-mode .sidebar li:hover > a,
+.dark-mode .sidebar li:has(.dropdown-content:hover) > a {
+    background-color: #555; 
+    color: #fff;
     font-weight: bolder;
 }
 
-.btn-logout-no:hover {
-    background-color: #e53935; 
-    transform: scale(1.1);
+.dark-mode .sidebar li:hover > a img,
+.dark-mode .sidebar li:has(.dropdown-content:hover) > a img {
+    filter: brightness(1) invert(1) !important; 
 }
+
+.dark-mode .dropdown-content .dropdown-item:hover img {
+    filter: brightness(0) invert(1) !important;
+}
+
+  
