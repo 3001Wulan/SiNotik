@@ -8,7 +8,7 @@ $current_page = 'jadwalrapatnotulen';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jadwal Rapat Notulen</title>
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/jadwalrapatnotulen.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/jadwalrapatnotulensi.css'); ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/popup-logout.css') ?>">
     <script src="<?= base_url('assets/js/popup-logout.js') ?>"></script>
 
@@ -23,7 +23,7 @@ $current_page = 'jadwalrapatnotulen';
             <ul>
             <li>
     <a href="#" class="<?php echo ($current_page == 'dashboard') ? 'active dashboard' : 'inactive'; ?>">
-        <img src="<?php echo base_url('assets/images/dashboard_admin.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
+        <img src="<?php echo base_url('assets/images/dashboard.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
         Dashboard
     </a>
 </li>
@@ -100,7 +100,7 @@ $current_page = 'jadwalrapatnotulen';
                 <h1>Jadwal Rapat</h1>
                 <button class="btn-add" onclick="openPopup()">
         Buat Rapat
-        <img src="assets/images/plus.png" alt="Tambah Icon" class="btn-icon">
+        <img src="<?php echo base_url('assets/images/plus.png'); ?>" alt="Plus Icon" class="plus-icon">
     </button>
 
 <div id="overlay" class="popup-overlay" onclick="closePopup()"></div>
