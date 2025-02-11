@@ -151,11 +151,11 @@
         
         document.getElementById('logoutLink').addEventListener('click', (e) => {
             e.preventDefault();
-            document.getElementById('popupOverlay').style.display = 'block';
+            document.getElementById('popupOverlay').classList.add('active');
         });
-        
+
         document.getElementById('cancelLogout').addEventListener('click', () => {
-            document.getElementById('popupOverlay').style.display = 'none';
+            document.getElementById('popupOverlay').classList.remove('active');
         });
         
         document.getElementById('confirmLogout').addEventListener('click', () => {
