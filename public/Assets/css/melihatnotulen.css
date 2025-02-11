@@ -986,8 +986,3 @@ li:hover .dropdown-content {
 .dark-mode .dropdown-content .dropdown-item:hover img {
     filter: brightness(0) invert(1) !important;
 }
-
-html, body {
-    height: 100%;
-    overflow: hidden; 
-}

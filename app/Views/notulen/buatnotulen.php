@@ -10,115 +10,148 @@
 </head>
 <body>
     <div class="container">
+        <!-- Sidebar Section -->
         <div class="sidebar">
             <div class="logo">
-                <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo">
+                <img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="Logo">
             </div>
-            <div class="menu">
-                <a href="dashboard_notulen" class="menu-item-link">
-                    <img src="<?= base_url('assets/images/dashboard.png') ?>" alt="Dashboard Icon">
-                    <span>Dashboard</span>
-                </a>
-                <div class="separator"></div>
-                <div class="menu-item dropdown">
-                    <a href="dashboard_notulen" class="dropdown-item">
-                        <img src="<?= base_url('assets/images/notulensi.png') ?>" alt="Data User Icon">
-                        <span>Notulensi</span>
+            <ul>
+                <li>
+                    <a href="dashboard_notulen" class="<?php echo ($current_page == 'dashboard') ? 'active dashboard' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/dashboard.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
+                        Dashboard
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="<?php echo ($current_page == 'melihat_notulen') ? 'active notulensi-pegawai ' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/codicon_book.png'); ?>" alt="Notulensi Icon" class="sidebar-icon">
+                        Notulensi
                     </a>
                     <div class="dropdown-content">
-                            <a href="melihatnotulen" class="dropdown-item">
+                        <a href="melihatnotulen" class="dropdown-item">
                             <img src="<?= base_url('assets/images/buat.png') ?>" alt="Daftar Notulensi Icon">
                             <span>Daftar Notulensi</span>
                         </a>
-                        <div class="dropdown-separator"></div>
+                        
                         <a href="buatnotulen" class="dropdown-item">
                             <img src="<?= base_url('assets/images/edit.png') ?>" alt="Buat Notulensi Icon">
                             <span>Buat Notulensi</span>
                         </a>
                     </div>
-                </div>
-                <div class="separator"></div>
-                <a href="#" class="menu-item-link">
-                    <img src="<?= base_url('assets/images/riwayat.png') ?>" alt="Riwayat Notulensi Icon">
-                    <span>Riwayat Notulensi</span>
-                </a>
-            </div>
+                </li>
+                <li>
+                    <a href="riwayatnotulen" class="<?php echo ($current_page == 'riwayat_notulensi') ? 'active riwayat-notulensi' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/riwayatnotulensi.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
+                        Riwayat Notulensi
+                    </a>
+                </li>
+            </ul>
         </div>
 
         <div class="main-content">
-            <div class="header">
+            <div class="top-bar">
                 <div class="theme-toggle">
                     <img src="<?= base_url('assets/images/moon.png') ?>" alt="Toggle Theme" id="theme-icon">
                 </div>
 
                 <div class="user-info">
-                    <div class="profile-picture">
-                        <img src="<?= base_url('assets/images/profiles/' . ($profil_foto ? $profil_foto : 'delvaut.png')) ?>" alt="Profile Picture" id="profile-pic">
-                        <div class="profile-info">
-                            <p class="profile-name"><?= $nama ?></p> 
-                            <p class="profile-role"><?= $role ?></p> 
-                    </div>
-                        <div class="dropdown-menu" id="profile-dropdown">
-                            <div class="dropdown-item">
-                                <img src="<?= base_url('assets/images/profil.png') ?>" alt="Icon Notulensi">
-                                Profil
-                            </div>
-                            <div class="dropdown-separator"></div>
-                            <div class="dropdown-item" id="logout-btn">
-                                <img src="<?= base_url('assets/images/Logout.png') ?>" alt="Logout">
-                                Logout
-                            </div>
-
-                            <div id="logout-modal" class="logout-modal">
-                                <div class="logout-modal-content">
-                                    <span class="close-btn">&times;</span>
-                                    <img src="<?= base_url('assets/images/Info.png') ?>" alt="Info">
-                                    <h2>Anda ingin logout?</h2>
-                                    <button class="confirm-logout">Ya</button>
-                                    <button class="cancel-logout">Tidak</button>
-                                </div>
-                            </div>
+                    <div class="user-text">
+                        <div class="user-name">
+                            <span><?= isset($nama) ? $nama : 'Nama Tidak Ditemukan'; ?></span>
+                        </div>                            
+                        <div class="user-role">
+                            <span><?= isset($role) ? ucfirst($role) : 'Role Tidak Ditemukan'; ?></span>
                         </div>
+                    </div>
+                    <div>
+                        <img src="<?= base_url('assets/images/profiles/' . ($profil_foto ? $profil_foto : 'default.png')) ?>" alt="Profile" class="profile-img" id="profile-icon">
+                    </div>
+
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="<?= base_url('notulen/profilnotulen') ?>" class="dropdown-item">
+                            <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
+                            Profil
+                        </a>
+                        <a href="#" class="dropdown-item" id="logoutLink">
+                            <img src="<?= base_url('assets/images/icon_logout.png') ?>" alt="Logout" class="dropdown-icon">
+                            Logout
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="dashboard-title">
-    <h2>Buat Notulensi</h2>
-</div>
 
-<div class="form-container">
-    <div class="stat-box">
-        <form action="<?= base_url('notulen/simpan') ?>" method="POST" enctype="multipart/form-data">
-            <label for="judul" class="label-judul">Judul</label>
-            <input type="text" id="judul" name="judul" class="input-judul" placeholder="">
+            <div class="page-title">
+                <h1>Buat Notulensi</h1>
+            </div>
 
-            <label for="agenda" class="label-agenda">Agenda</label>
-            <textarea id="agenda" name="agenda" class="textarea-agenda" placeholder=""></textarea>
+            <div class="form-container">
+                <div class="stat-box">
+                    <form action="<?= base_url('notulen/simpan') ?>" method="POST" enctype="multipart/form-data">
+                        <label for="judul" class="label-judul">Topik</label>
+                        <input type="text" id="judul" name="judul" class="input-judul" placeholder="Input Topik">
 
-            <label for="tanggal" class="label-tanggal">Tanggal</label>
-            <input type="date" id="tanggal" name="tanggal" class="input-tanggal" min="2010-01-01" max="2030-12-31">
+                        <label for="agenda" class="label-agenda">Agenda</label>
+                        <textarea id="agenda" name="agenda" class="textarea-agenda" placeholder="Input Agenda"></textarea>
 
-            <label for="partisipan" class="label-partisipan">Partisipan</label>
-            <textarea id="partisipan" name="partisipan" class="textarea-partisipan" placeholder=""></textarea>
-    </div>
+                        <label for="tanggal" class="label-tanggal">Tanggal</label>
+                        <input type="date" id="tanggal" name="tanggal" class="input-tanggal" min="2010-01-01" max="2030-12-31">
 
-    <div class="stat-box-2">
-        <div class="textarea-container">
-            <textarea id="pembahasan" name="pembahasan" class="textarea-pembahasan" placeholder=""></textarea>
-            <button type="button" id="speech-btn" class="mic-button">
-                <img src="<?= base_url('assets/images/microphone.png') ?>" alt="Voice" class="mic-icon">
-            </button>
+                        <label for="partisipan" class="label-partisipan">Partisipan <span class="label-pegawai">(Pegawai)</span></label>
+                        <textarea id="partisipan" name="partisipan" class="textarea-partisipan" placeholder="Input Partisipan"></textarea>
+
+                        <label for="partisipan-2" class="label-partisipan-2">Partisipan <span class="label-non-pegawai">(Non-Pegawai)</span></label>
+                        <textarea id="partisipan" name="partisipan" class="textarea-partisipan" placeholder="Input Partisipan"></textarea>
+
+                        <label for="email" class="label-email">Email</label>
+                        <textarea id="agenda" name="agenda" class="textarea-agenda" placeholder="Input Email"></textarea>
+                    </form>
+                </div>
+
+                <div class="stat-box-2">
+                    <div class="textarea-container">
+                        <label for="pembahasan">Pembahasan</label>
+                        <textarea id="pembahasan" name="pembahasan" class="textarea-pembahasan" placeholder=""></textarea>
+                            <button type="button" id="speech-btn" class="mic-button">
+                                <img src="<?= base_url('assets/images/microphone.png') ?>" alt="Voice" class="mic-icon">
+                            </button>
+                    </div>
+
+                    <label for="upload" class="upload-label">Upload Dokumentasi <span>(file maks 5 MB)</span></label>
+                    <br>
+                    <label for="upload" class="custom-file-upload">📂 Pilih File</label>
+                    <input type="file" id="upload" name="upload" accept="image/*">
+    
+                    <!-- Kotak Preview -->
+                    <div class="preview-container" id="previewContainer">
+                        <div class="image-box">
+                            <img id="imagePreview" src="" alt="Preview Gambar">
+                        </div>
+                    </div>
+
+                    <p class="error-message" id="errorMessage"></p>
+
+                    <button type="submit" class="btn-save">
+                        <img src="<?php echo base_url('assets/images/simpan.png'); ?>" alt="icon">
+                        Simpan
+                    </button>
+                </div>
+            </div>
         </div>
 
-        <label for="upload" class="upload-label">Upload Dokumentasi (<span>file maks 5 MB</span>)</label>
-        <input type="file" id="upload" name="upload">
-
-        <button type="submit">Simpan</button>
-        </form>
+        <!-- Popup Logout -->
+        <div class="popup-overlay" id="popupOverlay">
+            <div class="popup">
+                <img src="<?= base_url('assets/images/logout_warning.png') ?>" alt="Logout Warning" class="popup-image">
+                <h3>Anda ingin logout?</h3>
+                <div class="popup-buttons">
+                    <button class="btn-yes" id="confirmLogout">Ya</button>
+                    <button class="btn-no" id="cancelLogout">Tidak</button>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
 
-<script>
+    <script>
     document.addEventListener('DOMContentLoaded', function () {
         const themeIcon = document.getElementById('theme-icon');
         const body = document.body;
@@ -227,6 +260,66 @@
             }
         });
     });
-</script>
+
+    document.getElementById("upload").addEventListener("change", function(event) {
+    const file = event.target.files[0];
+    const imagePreview = document.getElementById("imagePreview");
+    const errorMessage = document.getElementById("errorMessage");
+
+    if (file) {
+        if (file.size > 5 * 1024 * 1024) {  // Batas 5MB
+            errorMessage.textContent = "File terlalu besar! Maksimal 5MB.";
+            errorMessage.style.display = "block";
+            imagePreview.style.display = "none"; // Sembunyikan gambar jika error
+            return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            imagePreview.src = e.target.result;
+            imagePreview.style.display = "block";  // Tampilkan gambar setelah upload
+            errorMessage.style.display = "none";
+        };
+        reader.readAsDataURL(file);
+    } else {
+        imagePreview.style.display = "none"; // Sembunyikan gambar jika tidak ada file
+    }
+});
+
+const profileIcon = document.getElementById('profile-icon');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+
+    profileIcon.addEventListener('click', (event) => {
+        event.stopPropagation(); 
+        dropdownMenu.classList.toggle('show');
+    });
+
+    window.addEventListener('click', () => {
+        dropdownMenu.classList.remove('show');
+    });
+
+    // JavaScript untuk Popup Logout
+    const logoutLink = document.getElementById('logoutLink'); // Perbaikan ID
+    const popupOverlay = document.getElementById('popupOverlay');
+    const confirmLogout = document.getElementById('confirmLogout');
+    const cancelLogout = document.getElementById('cancelLogout');
+
+    // Menampilkan popup konfirmasi logout
+    logoutLink.addEventListener('click', (event) => {
+        event.preventDefault(); // Mencegah link logout berfungsi langsung
+        popupOverlay.style.display = 'block'; // Menampilkan popup overlay
+    });
+
+    // Menyelesaikan logout ketika tombol "Ya" diklik
+    confirmLogout.addEventListener('click', () => {
+        window.location.href = '/'; // Ganti dengan halaman logout atau proses logout
+    });
+
+    // Menyembunyikan popup ketika tombol "Tidak" diklik
+    cancelLogout.addEventListener('click', () => {
+        popupOverlay.style.display = 'none'; 
+    });
+
+    </script>
 </body>
 </html>
