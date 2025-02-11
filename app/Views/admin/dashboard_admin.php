@@ -45,7 +45,7 @@
                             <span>Buat Jadwal Rapat</span>
                         </a>
                         
-                        <a href="buatnotulen" class="dropdown-item">
+                        <a href="persetujuanadmin" class="dropdown-item">
                             <img src="<?= base_url('assets/images/edit.png') ?>" alt="Buat Notulensi Icon">
                             <span>Persetujuan Rapat</span>
                         </a>

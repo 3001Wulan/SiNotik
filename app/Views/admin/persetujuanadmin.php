@@ -6,12 +6,12 @@
     <title>Daftar Notulensi</title>
     <link rel="stylesheet" href="<?= base_url('assets/css/persetujuanadmin.css') ?>">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
 </head>
 <body class="light-mode">
     <div class="container">
+        <!-- Sidebar -->
         <div class="sidebar">
-          <div class="logo">
+            <div class="logo">
                 <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo">
             </div>
             <div class="menu">
@@ -55,37 +55,26 @@
                 </a>
             </div>
         </div>
+
+        <!-- Main Content -->
         <div class="main-content">
             <div class="header">
-    <div class="theme-toggle">
-        <img src="<?= base_url('assets/images/bulan.png') ?>" alt="Moon" class="theme-icon moon-icon">
-        <img src="<?= base_url('assets/images/sun.png') ?>" alt="Sun" class="theme-icon sun-icon">
-    </div>
-    <div class="user-info">
-        <div class="user-text">
-            <div class="user-name">Heni Yunida</div>
-            <div class="user-role">Admin</div>
-        </div>
-        <div class="profile-container">
-            <img src="<?= base_url('assets/images/profile.jpg') ?>" alt="Profile" class="profile-img">
-            <div class="profile-dropdown">
-                <a href="#" class="dropdown-item">
-                <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
-                    Profil
-                </a>
-                <div class="dropdown-separator"></div>
-                <a href="#" class="dropdown-item">
-                <img src="<?= base_url('assets/images/icon_logout.png') ?>" alt="Logout" class="dropdown-icon">
-                    Logout
-                </a>
+                <div class="theme-toggle">
+                    <img src="<?= base_url('assets/images/bulan.png') ?>" alt="Moon" class="theme-icon moon-icon">
+                    <img src="<?= base_url('assets/images/sun.png') ?>" alt="Sun" class="theme-icon sun-icon">
+                </div>
+                <div class="user-info">
+                    <img src="<?= base_url('assets/images/profile.jpg') ?>" alt="Profile" class="profile-img">
+                </div>
             </div>
-        </div>
-    </div>
-</div>
+
+            <!-- Content Area -->
             <div class="content">
                 <h1>Persetujuan Admin</h1>
+
                 <div class="filters">
-                     <div class="category-select-container">
+                    <!-- Category Selection -->
+                    <div class="category-select-container">
                         <div class="iinput-container">
                             <input type="text" class="category-select" placeholder="Kategori" readonly>
                             <div class="iicon-container">
@@ -93,16 +82,20 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Search Box -->
                     <div class="search-box">
                         <input type="text" placeholder="Search here...">
                         <button type="button">
                             <i class="fas fa-search"></i>
                         </button>
                     </div>
+
+                    <!-- Show Entries Dropdown -->
                     <div class="show-entries">
                         <label for="entries">Show:</label>
                         <select id="entries" name="entries">
-                          <option value="2">2</option>
+                            <option value="2">2</option>
                             <option value="5">5</option>
                             <option value="10">10</option>
                             <option value="15">15</option>
@@ -121,102 +114,30 @@
                                 <th>Bidang</th>
                                 <th>Lokasi</th>
                                 <th>Judul</th>
-                                <th>Agenda</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                                <td>1</td>
-                                <td>01/02/2025</td>
-                                <td>APTIKA</td>
-                                <td>Dimanamana hatiku senang</td>
-                                <td>mabar ml</td>
-                                <td>blablabla</td>
-                                <td>
-                                <div class="action-buttons">
-                                    <button class="btn-approve" onclick="showApprovalModal(this)">
-                                        <img src="<?= base_url('assets/images/yes.png') ?>" alt="Approve">
-                                    </button>
-                                    <button class="btn-reject" onclick="showRejectionModal(this)">
-                                        <img src="<?= base_url('assets/images/no.png') ?>" alt="Reject">
-                                    </button>
-                                </div>
-                            </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>01/02/2025</td>
-                                <td>APTIKA</td>
-                                <td>Dimanamana hatiku senang</td>
-                                <td>mabar ml</td>
-                                <td>blablabla</td>
-                                <td>
-                                <div class="action-buttons">
-                                    <button class="btn-approve" onclick="showApprovalModal(this)">
-                                        <img src="<?= base_url('assets/images/yes.png') ?>" alt="Approve">
-                                    </button>
-                                    <button class="btn-reject" onclick="showRejectionModal(this)">
-                                        <img src="<?= base_url('assets/images/no.png') ?>" alt="Reject">
-                                    </button>
-                                </div>
-                            </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>01/02/2025</td>
-                                <td>IKP</td>
-                                <td>Dimanamana hatiku senang</td>
-                                <td>mabar ml</td>
-                                <td>blablabla</td>
-                                <td>
-                                <div class="action-buttons">
-                                    <button class="btn-approve" onclick="showApprovalModal(this)">
-                                        <img src="<?= base_url('assets/images/yes.png') ?>" alt="Approve">
-                                    </button>
-                                    <button class="btn-reject" onclick="showRejectionModal(this)">
-                                        <img src="<?= base_url('assets/images/no.png') ?>" alt="Reject">
-                                    </button>
-                                </div>
-                            </td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>01/02/2025</td>
-                                <td>Statistik & Persandian</td>
-                                <td>Dimanamana hatiku senang</td>
-                                <td>mabar ml</td>
-                                <td>blablabla</td>
-                                <td>
-                                <div class="action-buttons">
-                                    <button class="btn-approve" onclick="showApprovalModal(this)">
-                                        <img src="<?= base_url('assets/images/yes.png') ?>" alt="Approve">
-                                    </button>
-                                    <button class="btn-reject" onclick="showRejectionModal(this)">
-                                        <img src="<?= base_url('assets/images/no.png') ?>" alt="Reject">
-                                    </button>
-                                </div>
-                            </td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>01/02/2025</td>
-                                <td>APTIKA</td>
-                                <td>Dimanamana hatiku senang</td>
-                                <td>mabar ml</td>
-                                <td>blablabla</td>
-                                <td>
-                                <div class="action-buttons">
-                                    <button class="btn-approve" onclick="showApprovalModal(this)">
-                                        <img src="<?= base_url('assets/images/yes.png') ?>" alt="Approve">
-                                    </button>
-                                    <button class="btn-reject" onclick="showRejectionModal(this)">
-                                        <img src="<?= base_url('assets/images/no.png') ?>" alt="Reject">
-                                    </button>
-                                </div>
-                            </td>
-                            </tr>
-                            <tr>
+                            <?php $no = 1; ?>
+                            <?php foreach ($jadwal_rapat as $jadwal): ?>
+                                <tr>
+                                    <td><?= $no++; ?></td>
+                                    <td><?= $jadwal['tanggal']; ?></td>
+                                    <td><?= $jadwal['Bidang']; ?></td>
+                                    <td><?= $jadwal['lokasi']; ?></td>
+                                    <td data-meeting-id="<?= $jadwal['id']; ?>"><?= $jadwal['agenda']; ?></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn-approve" onclick="showApprovalModal(this)">
+                                                <img src="<?= base_url('assets/images/yes.png') ?>" alt="Approve">
+                                            </button>
+                                            <button class="btn-reject" onclick="showRejectionModal(this)">
+                                                <img src="<?= base_url('assets/images/no.png') ?>" alt="Reject">
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>
@@ -229,66 +150,60 @@
             </div>
         </div>
     </div>
-<div id="rejectionModal" class="modal">
-    <div class="modal-content">
-        <h2>Alasan Penolakan</h2>
-        <textarea id="rejectionReason" placeholder="Masukkan alasan penolakan..."></textarea>
-        <button onclick="submitRejection()">Kirim</button>
-        <button onclick="closeRejectionModal()">Batal</button>
-    </div>
-</div>
 
-<div id="rejectionSuccessModal" class="modal">
-    <div class="modal-content confirm-dialog">
-        <div class="confirm-icon">
-            <img src="<?= base_url('assets/images/Info.png') ?>" alt="" class="popup-image">
-        </div>
-        <div class="confirm-message">
-            <div id="rejectionMessage"></div>
+    <!-- Rejection Modal -->
+    <div id="rejectionModal" class="modal">
+        <div class="modal-content">
+            <h2>Alasan Penolakan</h2>
+            <textarea id="rejectionReason" placeholder="Masukkan alasan penolakan..."></textarea>
+            <button onclick="submitRejection()">Kirim</button>
+            <button onclick="closeRejectionModal()">Batal</button>
         </div>
     </div>
-</div>
 
-<div id="approvalModal" class="modal">
-    <div class="modal-content confirm-dialog">
-        <div class="confirm-icon">
-        <img src="<?= base_url('assets/images/Info.png') ?>" alt="" class="popup-image">
-        </div>
-        <div class="confirm-message">
-            Setujui Rapat Ini?
-        </div>
-        <div class="confirm-buttons">
-            <button onclick="approveMeeting()" class="btn-confirm">Iya</button>
-            <button onclick="closeApprovalModal()" class="btn-cancel">Tidak</button>
+    <!-- Rejection Success Modal -->
+    <div id="rejectionSuccessModal" class="modal">
+        <div class="modal-content confirm-dialog">
+            <div class="confirm-icon">
+                <img src="<?= base_url('assets/images/Info.png') ?>" alt="" class="popup-image">
+            </div>
+            <div class="confirm-message">
+                <div id="rejectionMessage"></div>
+            </div>
         </div>
     </div>
-</div>
-</div>
 
-<div id="successModal" class="modal">
-    <div class="modal-content confirm-dialog">
-        <div class="confirm-icon">
-        <img src="<?= base_url('assets/images/Info.png') ?>" alt="" class="popup-image">
-        </div>
-        <div class="confirm-message">
-            Rapat Disetujui!!
+    <!-- Approval Modal -->
+    <div id="approvalModal" class="modal">
+        <div class="modal-content confirm-dialog">
+            <div class="confirm-icon">
+                <img src="<?= base_url('assets/images/Info.png') ?>" alt="" class="popup-image">
+            </div>
+            <div class="confirm-message">
+                Setujui Rapat Ini?
+            </div>
+            <div class="confirm-buttons">
+                <button onclick="approveMeeting()" class="btn-confirm">Iya</button>
+                <button onclick="closeApprovalModal()" class="btn-cancel">Tidak</button>
+            </div>
         </div>
     </div>
-</div>
 
-<div id="logoutModal" class="modal">
-    <div class="modal-content">
-    <img src="<?= base_url('assets/images/logout_warning.png') ?>" alt="Logout Warning" class="popup-image">
-        <h2>Anda ingin logout?</h2>
-        <div class="modal-buttons">
-            <button onclick="confirmLogout()" class="btn-confirm">Ya</button>
-            <button onclick="closeLogoutModal()" class="btn-cancel">Tidak</button>
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content confirm-dialog">
+            <div class="confirm-icon">
+                <img src="<?= base_url('assets/images/Info.png') ?>" alt="" class="popup-image">
+            </div>
+            <div class="confirm-message">
+                Rapat Disetujui!!
+            </div>
         </div>
     </div>
-</div>
 
     <script>
 document.addEventListener('DOMContentLoaded', function() {
+    // Cache DOM elements
     const body = document.body;
     const moonIcon = document.querySelector('.moon-icon');
     const sunIcon = document.querySelector('.sun-icon');
@@ -301,26 +216,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const prevButton = document.querySelector('.btn-prev');
     const nextButton = document.querySelector('.btn-next');
     const pageNumber = document.querySelector('.page-number');
-    const profileContainer = document.querySelector('.profile-container');
-    const profileDropdown = document.querySelector('.profile-dropdown');
-    const logoutModal = document.getElementById('logoutModal');
-
+    
+    // State variables
     let currentPage = 1;
     let itemsPerPage = parseInt(entriesSelect.value);
     let filteredRows = [...tableRows];
     let currentRow = null;
-
-    profileContainer.addEventListener('click', (e) => {
-        e.stopPropagation();
-        profileDropdown.classList.toggle('show');
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!profileContainer.contains(e.target)) {
-            profileDropdown.classList.remove('show');
-        }
-    });
     
+    // Category setup
     const categories = ['APTIKA', 'IKP', 'Statistik & Persandian'];
     const categoryPopup = document.createElement('div');
     categoryPopup.className = 'category-popup';
@@ -340,6 +243,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.body.appendChild(categoryPopup);
     
+    // Category select click handler
     categorySelect.addEventListener('click', function(e) {
         e.stopPropagation();
         const rect = this.getBoundingClientRect();
@@ -349,6 +253,7 @@ document.addEventListener('DOMContentLoaded', function() {
         categoryPopup.style.display = categoryPopup.style.display === 'block' ? 'none' : 'block';
     });
 
+    // Filter and Display Data function
     function filterAndDisplayData() {
         const searchTerm = searchInput.value.toLowerCase().trim();
         const selectedCategory = categorySelect.value.toLowerCase().trim();
@@ -372,6 +277,7 @@ document.addEventListener('DOMContentLoaded', function() {
         displayCurrentPage();
     }
     
+    // Pagination functions
     function updatePagination() {
         const totalPages = Math.ceil(filteredRows.length / itemsPerPage) || 1;
         currentPage = Math.min(currentPage, totalPages);
@@ -393,6 +299,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Modal Functions
     window.showApprovalModal = function(button) {
         currentRow = button.closest('tr');
         document.getElementById('approvalModal').style.display = 'flex';
@@ -405,12 +312,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.approveMeeting = function() {
         if (currentRow) {
+            const meetingId = currentRow.cells[4].dataset.meetingId;  // Ambil ID rapat dari data atribut
             closeApprovalModal();
-            const successModal = document.getElementById('successModal');
-            successModal.style.display = 'flex';
-            setTimeout(() => {
-                successModal.style.display = 'none';
-            }, 2000);
+
+            fetch('<?= base_url('admin/persetujuanadmin/approve_meeting') ?>/' + meetingId, {
+                method: 'POST',  
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ id: meetingId }),  
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    const successModal = document.getElementById('successModal');
+                    successModal.style.display = 'flex';
+                    setTimeout(() => {
+                        successModal.style.display = 'none';
+                    }, 2000);
+                } else {
+                    alert('Gagal menyetujui rapat.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
         }
     };
 
@@ -433,14 +359,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         if (currentRow) {
-            const topik = currentRow.cells[4].textContent;
-            alert(`Rapat "${topik}" ditolak dengan alasan: ${reason}`);
+            const meetingId = currentRow.cells[4].dataset.meetingId;  // Ambil ID rapat dari data atribut
             closeRejectionModal();
-        }
-    };
-    
-
-    window.submitRejection = function() {
+            
+            // Kirim alasan penolakan ke controller
+            fetch('<?= base_url('admin/persetujuanadmin/reject_meeting') ?>/' + meetingId, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ reason: reason }),  // Kirim alasan penolakan
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    const rejectionMessage = document.getElementById('rejectionMessage');
+                    rejectionMessage.textContent = `Rapat "${currentRow.cells[4].textContent}" ditolak dengan alasan: ${reason}`;
+                    
+                    // Tampilkan modal notifikasi
+                    const rejectionSuccessModal = document.getElementById('rejectionSuccessModal');
+                    rejectionSuccessModal.style.display = 'flex';
+                    window.submitRejection = function() {
     const reason = document.getElementById('rejectionReason').value;
     if (reason.trim() === '') {
         alert('Silakan masukkan alasan penolakan.');
@@ -448,57 +387,65 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     if (currentRow) {
-        const topik = currentRow.cells[4].textContent;
+        const meetingId = currentRow.cells[4].dataset.meetingId;  // Ambil ID rapat dari data atribut
         closeRejectionModal();
         
-        const rejectionMessage = document.getElementById('rejectionMessage');
-        rejectionMessage.textContent = `Rapat "${topik}" ditolak dengan alasan: ${reason}`;
-        
-        const rejectionSuccessModal = document.getElementById('rejectionSuccessModal');
-        rejectionSuccessModal.style.display = 'flex';
-        
-        setTimeout(() => {
-            rejectionSuccessModal.style.display = 'none';
-        }, 3000); 
+        // Kirim alasan penolakan ke controller
+        fetch(`<?= base_url('admin/persetujuanadmin/reject_meeting/') ?>${meetingId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ alasan: reason }),  // Kirim alasan penolakan
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('Rapat berhasil ditolak.');
+                // Lakukan tindakan lain jika perlu, seperti memperbarui tampilan
+            } else {
+                alert('Gagal menolak rapat.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
     }
 };
-
-const logoutLink = document.querySelector('.dropdown-item:last-child');
-    logoutLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        showLogoutModal();
-    });
-
-    window.showLogoutModal = function() {
-        logoutModal.style.display = 'block';
-        profileDropdown.classList.remove('show');
-    }
-
-    window.closeLogoutModal = function() {
-        logoutModal.style.display = 'none';
-    }
-
-    window.confirmLogout = function() {
-        window.location.href = "<?= base_url('logout') ?>"; 
-    }
-
-document.addEventListener('click', (e) => {
-    if (!categorySelect.contains(e.target) && 
-        !categoryPopup.contains(e.target) && 
-        !categoryIcon.contains(e.target)) {
-        categoryPopup.style.display = 'none';
-    }
-    
-    if (e.target.classList.contains('modal')) {
-        if (e.target.id === 'approvalModal') {
-            closeApprovalModal();
-        } else if (e.target.id === 'rejectionModal') {
-            closeRejectionModal();
-        } else if (e.target.id === 'rejectionSuccessModal') {
-            e.target.style.display = 'none';
+                    // Tutup modal notifikasi setelah beberapa detik
+                    setTimeout(() => {
+                        rejectionSuccessModal.style.display = 'none';
+                    }, 3000); // Modal akan tertutup setelah 3 detik
+                } else {
+                    alert('Gagal menolak rapat.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
         }
-    }
-});
+    };
+
+    // Update bagian event listener untuk modal
+    document.addEventListener('click', (e) => {
+        if (!categorySelect.contains(e.target) && 
+            !categoryPopup.contains(e.target) && 
+            !categoryIcon.contains(e.target)) {
+            categoryPopup.style.display = 'none';
+        }
+        
+        if (e.target.classList.contains('modal')) {
+            if (e.target.id === 'approvalModal') {
+                closeApprovalModal();
+            } else if (e.target.id === 'rejectionModal') {
+                closeRejectionModal();
+            } else if (e.target.id === 'rejectionSuccessModal') {
+                e.target.style.display = 'none';
+            }
+        }
+    });
+    
+    // Event listeners
     searchInput.addEventListener('input', filterAndDisplayData);
     
     entriesSelect.addEventListener('change', () => {
@@ -524,6 +471,7 @@ document.addEventListener('click', (e) => {
         }
     });
 
+    // Submenu handlers
     const menuWithSubmenu = document.querySelector('.menu-item-with-submenu');
     const submenuPopup = document.querySelector('.submenu-popup');
 
@@ -537,6 +485,7 @@ document.addEventListener('click', (e) => {
         });
     }
 
+    // Theme toggle
     const themeToggle = document.querySelector('.theme-toggle');
     themeToggle.addEventListener('click', function() {
         body.classList.toggle('dark-mode');
@@ -552,6 +501,7 @@ document.addEventListener('click', (e) => {
         }
     });
     
+    // Global click handler for closing popups
     document.addEventListener('click', (e) => {
         if (!categorySelect.contains(e.target) && 
             !categoryPopup.contains(e.target) && 
@@ -571,5 +521,6 @@ document.addEventListener('click', (e) => {
     filterAndDisplayData();
 });
 </script>
+
 </body>
 </html>

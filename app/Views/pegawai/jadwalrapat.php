@@ -1,15 +1,14 @@
-<?php
+<?php 
 $current_page = 'jadwalrapat'; 
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jadwal Rapat</title>
     <link rel="stylesheet" href="<?php echo base_url('assets/css/jadwalrapat.css'); ?>">
-   <link rel="stylesheet" href="styles/logout-popup.css">
+    <link rel="stylesheet" href="styles/logout-popup.css">
 </head>
 <body>
     <div class="container">
@@ -19,32 +18,28 @@ $current_page = 'jadwalrapat';
                 <img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="Logo">
             </div>
             <ul>
-            <li>
-    <a href="dashboard_pegawai" class="<?php echo ($current_page == 'dashboard') ? 'active dashboard' : 'inactive'; ?>">
-        <img src="<?php echo base_url('assets/images/dashboard_admin.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
-        Dashboard
-    </a>
-</li>
-<li>
-    <a href="melihatpegawai" class="<?php echo ($current_page == 'notulensi_notulen') ? 'active data-pengguna' : 'inactive'; ?>">
-        <img src="<?php echo base_url('assets/images/codicon_book.png'); ?>" alt="Data Pengguna Icon" class="sidebar-icon">
-        Notulensi
-    </a>
-</li>
-<li>
-    <a href="riwayatadmin" class="<?php echo ($current_page == 'riwayat_notulensi') ? 'active riwayat-notulensi' : 'inactive'; ?>">
-        <img src="<?php echo base_url('assets/images/icon_riwayat.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
-        Riwayat Notulensi
-    </a>
-</li>
-<li>
-<a href="#" class="<?php echo ($current_page == 'jadwal_rapat') ? 'active jadwal rapat' : 'inactive'; ?>">
-    <img src="<?php echo base_url('assets/images/rapat.png'); ?>" alt="Jadwal Rapat Icon" class="sidebar-icon">
-    Jadwal Rapat
-</a>
-</li>
-</ul>
-</div>
+                <li>
+                    <a href="dashboard_pegawai" class="<?php echo ($current_page == 'dashboard') ? 'active' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/dashboard.png'); ?>" alt="Dashboard Icon" class="sidebar-icon"> Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="melihatpegawai" class="<?php echo ($current_page == 'notulensi_notulen') ? 'active' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/codicon_book.png'); ?>" alt="Notulensi Icon" class="sidebar-icon"> Notulensi
+                    </a>
+                </li>
+                <li>
+                    <a href="riwayatadmin" class="<?php echo ($current_page == 'riwayat_notulensi') ? 'active' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/icon_riwayat.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon"> Riwayat Notulensi
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="<?php echo ($current_page == 'jadwalrapat') ? 'active' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/rapat.png'); ?>" alt="Jadwal Rapat Icon" class="sidebar-icon"> Jadwal Rapat
+                    </a>
+                </li>
+            </ul>
+        </div>
 
         <!-- Content Area -->
         <div class="content">
@@ -54,56 +49,60 @@ $current_page = 'jadwalrapat';
                     <img id="toggleDarkMode" src="<?php echo base_url('assets/images/moon.png'); ?>" alt="Dark Mode">
                 </div>
 
-           <div class="profile" onclick="toggleDropdown()">
-                 <img src="<?php echo base_url('assets/images/profil.png'); ?>" alt="Profil Icon" class="sidebar-icon">
-        
-          <div class="dropdown-menu" id="profileDropdown">
-              <a href="<?= base_url('profile') ?>">
-                 <img src="<?= base_url('assets/images/Profil.png') ?>" alt="Profil" class="dropdown-icon"> Profil
-                </a>
-               <a href="#" id="logoutLink">
-                 <img src="<?= base_url('assets/images/logout.png') ?>" alt="Logout" class="dropdown-icon"> Logout
-                </a>
-              </div>
-          </div>
-      </div>
-
-
+                <!-- Profile Dropdown -->
+                <div class="profile" onclick="toggleDropdown()">
+                    <div class="profile-info">
+                        <img src="<?= base_url('assets/images/profiles/' . esc($user['profil_foto'])); ?>" alt="Profil" class="profile-img">
+                        <div class="profile-details">
+                            <span class="profile-name"><?= esc($user['nama']); ?></span>
+                            <span class="profile-role"><?= esc($user['role']); ?></span>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu" id="profileDropdown">
+                        <a href="<?= base_url('profile') ?>">
+                            <img src="<?= base_url('assets/images/Profil.png') ?>" alt="Profil" class="dropdown-icon"> Profil
+                        </a>
+                        <a href="#" id="logoutLink">
+                            <img src="<?= base_url('assets/images/logout.png') ?>" alt="Logout" class="dropdown-icon"> Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
 
             <div class="page-title">
                 <h1>Jadwal Rapat</h1>
                 <button class="btn-add" onclick="openPopup()">
-        Buat Rapat
-        <img src="assets/images/plus.png" alt="Tambah Icon" class="btn-icon">
-    </button>
+                    Buat Rapat
+                    <img src="<?php echo base_url('assets/images/plus.png'); ?>" alt="Tambah Icon" class="btn-icon">
+                </button>
+            </div>
 
-<div id="overlay" class="popup-overlay" onclick="closePopup()"></div>
-<div id="popup" class="popup">
-    <div class="popup-content">
-        <span class="close" onclick="closePopup()">&times;</span>
-        <h2>Buat Rapat</h2>
-        <form>
-            <label for="agenda">Agenda:</label>
-            <input type="text" id="agenda" name="agenda" required>
-            
-            <label for="tanggal">Tanggal:</label>
-            <input type="date" id="tanggal" name="tanggal" required>
-            
-            <label for="waktu">Waktu:</label>
-            <input type="time" id="waktu" name="waktu" required>
-            
-            <label for="lokasi">Lokasi:</label>
-            <input type="text" id="lokasi" name="lokasi" required>
-            
-            <button type="submit" id="simpan">Simpan</button>
-        </form>
-    </div>
-</div>
+            <!-- Popup for Creating Meeting -->
+            <div id="overlay" class="popup-overlay" onclick="closePopup()"></div>
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                    <span class="close" onclick="closePopup()">&times;</span>
+                    <h2>Buat Rapat</h2>
+                    <form id="agendaForm">
+                        <label for="agenda">Agenda:</label>
+                        <input type="text" id="agenda" name="agenda" required>
+                        
+                        <label for="tanggal">Tanggal:</label>
+                        <input type="date" id="tanggal" name="tanggal" required>
+                        
+                        <label for="waktu">Waktu:</label>
+                        <input type="time" id="waktu" name="waktu" required>
+                        
+                        <label for="lokasi">Lokasi:</label>
+                        <input type="text" id="lokasi" name="lokasi" required>
+                        
+                        <button type="submit" id="simpan">Simpan</button>
+                    </form>
+                </div>
+            </div>
 
-
-      
-
-<div class="table-container">
+            <!-- Table for Meeting Schedule -->
+            <div class="table-container">
                 <div class="search-container">
                     <div class="show-entries">
                         <label for="entries" class="show-label">Show</label>
@@ -124,130 +123,146 @@ $current_page = 'jadwalrapat';
                 </div>
 
                 <table id="dataTable">
-    <thead>
-        <tr>
-            <th>No</th>
-            <th>Topik</th>
-            <th>Bidang</th>
-            <th>Tanggal</th>
-            <th>Status</th>
-        </tr>
-    </thead>
-    <tbody>
-    <tr>
-    <td>1</td>
-    <td>Pembagian Tugas</td>
-    <td>APTIKA</td>
-    <td>01/01/2025</td>
-    <td><span class="status disetujui">Disetujui</span></td>
-</tr>
-<tr>
-    <td>2</td>
-    <td>Rapat Bulanan</td>
-    <td>APTIKA</td>
-    <td>02/01/2025</td>
-    <td><span class="status belum-disetujui">Belum Disetujui</span></td>
-</tr>
-<tr>
-    <td>3</td>
-    <td>Rapat Rutin</td>
-    <td>IKP</td>
-    <td>03/01/2025</td>
-    <td><span class="status ditolak">Ditolak</span></td>
-</tr>
-<tr>
-    <td>4</td>
-    <td>Rapat Tahunan</td>
-    <td>IKP</td>
-    <td>04/01/2025</td>
-    <td><span class="status disetujui">Disetujui</span></td>
-</tr>
-<tr>
-    <td>5</td>
-    <td>Agenda Wajib</td>
-    <td>Statistik Dan Persandian</td>
-    <td>05/01/2025</td>
-    <td><span class="status belum-disetujui">Belum Disetujui</span></td>
-</tr>
-<tr>
-    <td>6</td>
-    <td>Evaluasi Bulanan </td>
-    <td>Statistik Dan Persandian</td>
-    <td>06/01/2025</td>
-    <td><span class="status ditolak">Ditolak</span></td>
-</tr>
-    </tbody>
-</table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Topik</th>
+                            <th>Bidang</th>
+                            <th>Tanggal</th>
+                            <th>Status</th> <!-- Hanya kolom Status yang tersisa -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php if (!empty($jadwal)) : ?>
+                            <?php $no = 1; foreach ($jadwal as $row) : ?>
+                                <tr>
+                                    <td><?= $no++; ?></td>
+                                    <td><?= esc($row['agenda']); ?></td>
+                                    <td><?= esc($row['Bidang']); ?></td>
+                                    <td><?= esc(date('d/m/Y', strtotime($row['tanggal']))); ?></td>
+                                    <td>
+                            <span class="status <?= strtolower(str_replace(' ', '-', $row['status'])); ?>">
+                                <?= esc($row['status']); ?>
+                            </span>
+                            <?php if (strtolower($row['status']) == 'ditolak') : ?>
+                                <img src="<?php echo base_url('assets/images/bulb.png'); ?>" alt="Alasan Ditolak" class="status-icon" onclick="showReason('<?= esc($row['alasan']); ?>')">
+                            <?php endif; ?>
+                        </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        <?php else : ?>
+                            <tr>
+                                <td colspan="5" class="text-center">Tidak ada data jadwal</td>
+                            </tr>
+                        <?php endif; ?>
+                    </tbody>
+                </table>
+            </div>
 
-    
+            <!-- Popup for Reason -->
+            <div id="reasonOverlay" class="popup-overlay" onclick="closeReasonPopup()"></div>
+            <div id="reasonPopup" class="popup">
+                <div class="popup-content">
+                    <span class="close" onclick="closeReasonPopup()">&times;</span>
+                    <h2>Alasan Ditolak</h2>
+                    <p id="reasonText"></p>
+                </div>
+            </div>
 
-    <script>
-    
-        // Fungsi untuk membuka popup
-function openPopup() {
-    document.getElementById("popup").style.display = "block";
-}
+            <script>
+                // Function to open the popup for creating a meeting
+                function openPopup() {
+                    document.getElementById("overlay").style.display = "block";
+                    document.getElementById("popup").style.display = "block";
+                }
 
-// Fungsi untuk menutup popup
-function closePopup() {
-    document.getElementById("popup").style.display = "none";
-}
-        const toggleDarkMode = document.getElementById('toggleDarkMode');
-        toggleDarkMode.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            // Change image based on the mode
-            if (document.body.classList.contains('dark-mode')) {
-                toggleDarkMode.src = '<?php echo base_url('assets/images/sun.png'); ?>'; // Ganti dengan gambar mode terang
-            } else {
-                toggleDarkMode.src = '<?php echo base_url('assets/images/moon.png'); ?>'; // Ganti dengan gambar mode gelap
-            }
-        });
-// Menampilkan popup dan overlay
-function openPopup() {
-    document.getElementById("overlay").style.display = "block";
-    document.getElementById("popup").style.display = "block";
-}
-// Menutup popup dan overlay
-function closePopup() {
-    document.getElementById("overlay").style.display = "none";
-    document.getElementById("popup").style.display = "none";
-}
-function searchTable() {
-      var input = document.getElementById('searchInput');
-      var filter = input.value.toUpperCase();
-      var table = document.getElementById('dataTable');
-      var tr = table.getElementsByTagName('tr');
-      
-      for (var i = 1; i < tr.length; i++) {
-        var td = tr[i].getElementsByTagName('td');
-        var rowContainsSearchTerm = false;
-        
-        for (var j = 0; j < td.length; j++) {
-          if (td[j] && td[j].innerText.toUpperCase().indexOf(filter) > -1) {
-            rowContainsSearchTerm = true;
-          }
-        }
+                // Function to close the popup for creating a meeting
+                function closePopup() {
+                    document.getElementById("overlay").style.display = "none";
+                    document.getElementById("popup").style.display = "none";
+                }
 
-        if (rowContainsSearchTerm) {
-          tr[i].style.display = "";
-        } else {
-          tr[i].style.display = "none";
-        }
-      }
-    }
-    function toggleDropdown() {
-        const dropdown = document.querySelector(".dropdown-menu");
-        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
-    }
+                // Function to show the reason for rejection
+                function showReason(reason) {
+                    document.getElementById("reasonText").innerText = reason;
+                    document.getElementById("reasonOverlay").style.display = "block";
+                    document.getElementById("reasonPopup").style.display = "block";
+                }
 
-    // Menutup dropdown jika klik di luar
-    document.addEventListener("click", function(event) {
-        const profile = document.querySelector(".profile");
-        if (!profile.contains(event.target)) {
-            document.querySelector(".dropdown-menu").style.display = "none";
-        }
-    });
-  
-    </script>
+                // Function to close the reason popup
+                function closeReasonPopup() {
+                    document.getElementById("reasonOverlay").style.display = "none";
+                    document.getElementById("reasonPopup").style.display = "none";
+                }
+
+                // Toggle dark mode
+                const toggleDarkMode = document.getElementById('toggleDarkMode');
+                toggleDarkMode.addEventListener('click', () => {
+                    document.body.classList.toggle('dark-mode');
+                    toggleDarkMode.src = document.body.classList.contains('dark-mode') 
+                        ? '<?php echo base_url('assets/images/sun.png'); ?>' 
+                        : '<?php echo base_url('assets/images/moon.png'); ?>';
+                });
+
+                // Search function for the table
+                function searchTable() {
+                    const input = document.getElementById('searchInput');
+                    const filter = input.value.toUpperCase();
+                    const table = document.getElementById('dataTable');
+                    const tr = table.getElementsByTagName('tr');
+
+                    for (let i = 1; i < tr.length; i++) {
+                        const td = tr[i].getElementsByTagName('td');
+                        let rowContainsSearchTerm = false;
+
+                        for (let j = 0; j < td.length; j++) {
+                            if (td[j] && td[j].innerText.toUpperCase().indexOf(filter) > -1) {
+                                rowContainsSearchTerm = true;
+                            }
+                        }
+
+                        tr[i].style.display = rowContainsSearchTerm ? "" : "none";
+                    }
+                }
+
+                // Toggle dropdown menu
+                function toggleDropdown() {
+                    const dropdown = document.querySelector(".dropdown-menu");
+                    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+                }
+
+                // Close dropdown if clicked outside
+                document.addEventListener("click", function(event) {
+                    const profile = document.querySelector(".profile");
+                    if (!profile.contains(event.target)) {
+                        document.querySelector(".dropdown-menu").style.display = "none";
+                    }
+                });
+
+                document.getElementById('agendaForm').addEventListener('submit', function(e) {
+                    e.preventDefault(); // Prevent form submission
+
+                    const formData = new FormData(this);
+
+                    fetch('<?= site_url('pegawai-jadwal/save') ?>', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            window.location.reload();
+                        } else {
+                            alert('Gagal menyimpan data');
+                        }
+                    })
+                    .catch(error => {
+                        alert('Terjadi kesalahan');
+                        console.error(error);
+                    });
+                });
+            </script>
+        </div>
+    </div>
 </body>
 </html>

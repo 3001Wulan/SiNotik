@@ -57,7 +57,14 @@ $routes->post('lihatnotulen/saveFeedback', 'LihatNotulenController::saveFeedback
 
 $routes->get('pegawai/lihatnotulen/(:num)', 'DetailnotulenController::lihatnotulen/$1');
 $routes->post('lihatnotulen/saveFeedback', 'DetailnotulenController::saveFeedback');
-
+$routes->get('pegawai/jadwalrapat', 'PegawaiJadwalController::index');
+$routes->get('/jadwal-pegawai/delete/(:num)', 'PegawaiJadwalController::delete/$1');
+$routes->post('pegawai/jadwalrapat/add', 'PegawaiJadwalController::add');
+$routes->post('pegawai-jadwal/save', 'PegawaiJadwalController::save');
+$routes->get('/pegawai/jadwalrapat', 'PegawaiJadwalController::getAllJadwal');
+$routes->get('admin/persetujuanadmin', 'PersetujuanAdminController::index');
+$routes->post('admin/persetujuanadmin/approve_meeting/(:num)', 'PersetujuanAdminController::approveMeeting/$1');
+$routes->post('admin/persetujuanadmin/reject_meeting/(:num)', 'PersetujuanAdminController::rejectMeeting/$1');
 
 
 
