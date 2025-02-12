@@ -37,6 +37,17 @@ $current_page = 'jadwalrapat';
                     <a href="#" class="<?php echo ($current_page == 'jadwalrapat') ? 'active' : 'inactive'; ?>">
                         <img src="<?php echo base_url('assets/images/rapat.png'); ?>" alt="Jadwal Rapat Icon" class="sidebar-icon"> Jadwal Rapat
                     </a>
+                    <li>
+                    <a href="#" class="inactive">
+                        <img src="<?php echo base_url('assets/images/distribusi.png'); ?>" alt="Distribusi Notulensi Icon" class="sidebar-icon">
+                        Distribusi Notulensi
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="inactive">
+                        <img src="<?php echo base_url('assets/images/panduanpengguna.png'); ?>" alt="Panduan Pengguna Icon" class="sidebar-icon">
+                        Panduan Pengguna
+                    </a>
                 </li>
             </ul>
         </div>
@@ -49,21 +60,20 @@ $current_page = 'jadwalrapat';
                     <img id="toggleDarkMode" src="<?php echo base_url('assets/images/moon.png'); ?>" alt="Dark Mode">
                 </div>
 
-                <!-- Profile Dropdown -->
                 <div class="profile" onclick="toggleDropdown()">
+                <img src="<?= base_url('assets/images/profiles/' . esc($user['profil_foto'])); ?>" alt="Profil" class="profile-img">
                     <div class="profile-info">
-                        <img src="<?= base_url('assets/images/profiles/' . esc($user['profil_foto'])); ?>" alt="Profil" class="profile-img">
-                        <div class="profile-details">
-                            <span class="profile-name"><?= esc($user['nama']); ?></span>
-                            <span class="profile-role"><?= esc($user['role']); ?></span>
-                        </div>
+                        <span class="profile-name"><?= esc($user['nama']); ?></span>
+                        <span class="profile-role"><?= esc($user['role']); ?></span>
                     </div>
-                    <div class="dropdown-menu" id="profileDropdown">
-                        <a href="<?= base_url('profile') ?>">
-                            <img src="<?= base_url('assets/images/Profil.png') ?>" alt="Profil" class="dropdown-icon"> Profil
+                    <div class="dropdown-menu" id="dropdownMenu" style="display: none;">
+                        <a href="<?= base_url('notulen/profilnotulen') ?>" class="dropdown-item">
+                            <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
+                            Profil
                         </a>
-                        <a href="#" id="logoutLink">
-                            <img src="<?= base_url('assets/images/logout.png') ?>" alt="Logout" class="dropdown-icon"> Logout
+                        <a href="#" class="dropdown-item" id="logoutLink">
+                            <img src="<?= base_url('assets/images/icon_logout.png') ?>" alt="Logout" class="dropdown-icon">
+                            Logout
                         </a>
                     </div>
                 </div>
@@ -122,15 +132,16 @@ $current_page = 'jadwalrapat';
                     </div>
                 </div>
 
-                <table id="dataTable">
-                    <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>Topik</th>
-                            <th>Bidang</th>
-                            <th>Tanggal</th>
-                            <th>Status</th> <!-- Hanya kolom Status yang tersisa -->
-                        </tr>
+                <div class="table-wrapper">
+                    <table id="dataTable">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Topik</th>
+                                <th>Bidang</th>
+                                <th>Tanggal</th>
+                                <th>Status</th>
+                            </tr>
                     </thead>
                     <tbody>
                         <?php if (!empty($jadwal)) : ?>
@@ -159,6 +170,18 @@ $current_page = 'jadwalrapat';
                 </table>
             </div>
 
+                 <!-- Popup Logout -->
+                 <div class="logout-overlay" id="logoutOverlay" style="display: none;"></div>
+            <div class="logout-popup" id="logoutPopup" style="display: none;">
+                <img src="<?= base_url('assets/images/logout_warning.png') ?>" alt="Logout Warning" class="logout-image">
+                <h3>Anda ingin logout?</h3>
+                <div class="logout-buttons">
+                    <button class="btn-yes" id="confirmLogout">Ya</button>
+                    <button class="btn-no" id="cancelLogout">Tidak</button>
+                </div>
+            </div>
+        </div>
+    </div>
             <!-- Popup for Reason -->
             <div id="reasonOverlay" class="popup-overlay" onclick="closeReasonPopup()"></div>
             <div id="reasonPopup" class="popup">
@@ -230,7 +253,32 @@ $current_page = 'jadwalrapat';
                     const dropdown = document.querySelector(".dropdown-menu");
                     dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
                 }
+ // Logout functionality
+ document.addEventListener("DOMContentLoaded", function () {
+            const logoutLink = document.getElementById("logoutLink");
+            const logoutOverlay = document.getElementById("logoutOverlay");
+            const logoutPopup = document.getElementById("logoutPopup");
+            const cancelLogout = document.getElementById("cancelLogout");
+            const confirmLogout = document.getElementById("confirmLogout");
 
+            logoutLink.addEventListener("click", function (e) {
+                e.preventDefault();
+                logoutOverlay.style.display = "block";
+                logoutPopup.style.display = "block";
+            });
+
+            function closeLogoutPopup() {
+                logoutOverlay.style.display = "none";
+                logoutPopup.style.display = "none";
+            }
+
+            cancelLogout.addEventListener("click", closeLogoutPopup);
+            logoutOverlay.addEventListener("click", closeLogoutPopup);
+
+            confirmLogout.addEventListener("click", function () {
+                window.location.href = "<?= base_url('auth/logout') ?>"; 
+            });
+        });
                 // Close dropdown if clicked outside
                 document.addEventListener("click", function(event) {
                     const profile = document.querySelector(".profile");
