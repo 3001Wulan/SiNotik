@@ -1,3 +1,14 @@
+Copy* {
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     overflow-x: hidden;
     font-family: Arial, sans-serif;
@@ -10,6 +21,7 @@ body {
 .container {
     display: flex;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 .sidebar {
@@ -22,6 +34,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
+    overflow-y: auto;
 }
 
 .sidebar .logo img {
@@ -158,6 +171,9 @@ body {
     flex-grow: 1;
     padding: 30px 20px;
     transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh;
 }
 
 .top-bar {
