@@ -1,50 +1,48 @@
 <!DOCTYPE html>
-<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buat Jadwal Rapat</title>
-    <link rel="stylesheet" href="assets/css/jadwalrapatadmin.css">
+    <link rel="stylesheet" href="<?= base_url('assets/css/jadwalrapatadmin.css') ?>">
 </head>
-<body>
     <div class="container">
         <!-- Sidebar -->
         <div class="sidebar">
             <div class="logo">
-                <img src="assets/images/logo.png" alt="Logo">
+                <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo">
             </div>
             <ul>
                 <li class="dashboard">
-                    <a href="dashboard_admin" class="inactive">
-                        <img src="assets/images/dashboard.png" alt="Dashboard Icon" class="sidebar-icon">
+                    <a href="<?= base_url('dashboard_admin') ?>" class="inactive">
+                        <img src="<?= base_url('assets/images/dashboard.png') ?>" alt="Dashboard Icon" class="sidebar-icon">
                         Dashboard
                     </a>
                 </li>
                 <li>
-                    <a href="data_pengguna" class="inactive">
-                        <img src="assets/images/datapengguna.png" alt="Data Pengguna Icon" class="sidebar-icon">
+                    <a href="<?= base_url('data_pengguna') ?>" class="inactive">
+                        <img src="<?= base_url('assets/images/datapengguna.png') ?>" alt="Data Pengguna Icon" class="sidebar-icon">
                         Data Pengguna
                     </a>
                 </li>
                 <li class="riwayat-notulensi">
-                    <a href="riwayatadmin" class="inactive">
-                        <img src="assets/images/riwayatnotulensi.png" alt="Riwayat Notulensi Icon" class="sidebar-icon">
+                    <a href="<?= base_url('riwayatadmin') ?>" class="inactive">
+                        <img src="<?= base_url('assets/images/riwayatnotulensi.png') ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
                         Riwayat Notulensi
                     </a>
                 </li>
                 <li class="rapat">
-                    <a href="jadwalrapatadmin" class="active">
-                         <img src="assets/images/rapat.png" alt="Rapat Icon" class="sidebar-icon">
-                         Rapat
+                    <a href="<?= base_url('jadwalrapatadmin') ?>" class="active">
+                        <img src="<?= base_url('assets/images/rapat.png') ?>" alt="Rapat Icon" class="sidebar-icon">
+                        Rapat
                     </a>
                     <div class="dropdown-menu-rapat">
-                         <a href="buat-jadwal" class="dropdown-item-rapat">
-                            <img src="assets/images/edit.png" alt="Buat Jadwal Rapat Icon" class="dropdown-icon">
+                        <a href="<?= base_url('buat-jadwal') ?>" class="dropdown-item-rapat">
+                            <img src="<?= base_url('assets/images/edit.png') ?>" alt="Buat Jadwal Rapat Icon" class="dropdown-icon">
                             Buat Jadwal Rapat
                         </a>
                         <div class="dropdown-separator"></div>
-                        <a href="persetujuan-rapat" class="dropdown-item-rapat">
-                            <img src="assets/images/setuju.png" alt="Persetujuan Rapat Icon" class="dropdown-icon">
+                        <a href="<?= base_url('persetujuan-rapat') ?>" class="dropdown-item-rapat">
+                            <img src="<?= base_url('assets/images/setuju.png') ?>" alt="Persetujuan Rapat Icon" class="dropdown-icon">
                             Persetujuan Rapat
                         </a>
                     </div>
@@ -56,7 +54,7 @@
         <div class="content">
             <div class="top-bar">
                 <div class="toggle-dark-mode">
-                    <img id="toggleDarkMode" src="assets/images/moon.png" alt="Dark Mode">
+                    <img id="toggleDarkMode" src="<?= base_url('assets/images/moon.png') ?>" alt="Dark Mode">
                 </div>
                 <div class="user-info">
                     <div class="user-text">
@@ -67,14 +65,14 @@
                             <span>Admin</span>
                         </div>
                     </div>
-                    <img src="assets/images/profiles/default.png" alt="User Photo" class="header-profile-img" id="profile-icon">
+                    <img src="<?= base_url('assets/images/profiles/default.png') ?>" alt="User Photo" class="header-profile-img" id="profile-icon">
                     <div class="dropdown-menu" id="dropdownMenu">
-                        <a href="admin/jadwalrapatadmin" class="dropdown-item">
-                            <img src="assets/images/User.png" alt="Profil" class="dropdown-icon">
+                        <a href="<?= base_url('admin/jadwalrapatadmin') ?>" class="dropdown-item">
+                            <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
                             Profil
                         </a>
                         <a href="#" class="dropdown-item" id="logoutLink">
-                            <img src="assets/images/icon_logout.png" alt="Logout" class="dropdown-icon">
+                            <img src="<?= base_url('assets/images/icon_logout.png') ?>" alt="Logout" class="dropdown-icon">
                             Logout
                         </a>
                     </div>
@@ -85,7 +83,7 @@
                 <h1>Buat Jadwal Rapat</h1>
             </div>
             
-            <form id="form-jadwal-rapat" action="/submit-jadwal" method="post">
+            <form id="form-jadwal-rapat" action="<?= base_url('submit-jadwal') ?>" method="post">
                 <div class="form-container">
                     <div class="form-group">
                         <label for="judul">Judul</label>
@@ -115,7 +113,7 @@
         <!-- Popup Logout -->
         <div class="popup-overlay" id="popupOverlay">
             <div class="popup">
-                <img src="assets/images/logout_warning.png" alt="Logout Warning" class="popup-img">
+                <img src="<?= base_url('assets/images/logout_warning.png') ?>" alt="Logout Warning" class="popup-img">
                 <h3>Anda ingin logout?</h3>
                 <div class="popup-buttons">
                     <button class="btn-yes" id="confirmLogout">Ya</button>
