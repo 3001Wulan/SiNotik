@@ -39,7 +39,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="inactive">
+                    <a href="jadwalrapat" class="inactive">
                         <img src="<?php echo base_url('assets/images/rapat.png'); ?>" alt="Jadwal Rapat Icon" class="sidebar-icon">
                         Jadwal Rapat
                     </a>

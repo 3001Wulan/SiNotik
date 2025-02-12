@@ -105,35 +105,41 @@ body {
 .profile {
     position: relative;
     display: flex;
-    justify-content: center;
-    flex-direction: row-reverse; 
-    align-items: center; 
+    flex-direction: row-reverse; /* Tetap gambar di kanan, teks di kiri */
+    align-items: center;
     width: fit-content;
     padding: 10px;
     cursor: pointer;
     left: -10px; 
 }
+
 .profile-img {
-    width: 50px; 
-    height: 50px; 
-    border-radius: 50%; 
-    object-fit: cover; 
-    overflow: hidden; 
-    border: 2px solid #ccc; 
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+    border: 2px solid #ccc;
 }
+
 .profile-info {
-    margin-left: 10px; 
-    text-align: left;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-end;
+    margin-right: 10px; 
 }
+
 .profile-name {
     font-weight: bold;
-    margin-right: 5px; 
+    font-size: 1em;
+    margin-bottom: 2px; 
 }
+
 .profile-role {
     font-size: 0.9em;
     color: gray;
-    margin-right: 5px; 
 }
+
 .sidebar-icon {
     width: 35px;
     height: 35px;
@@ -207,7 +213,7 @@ body {
     position: absolute;
     margin-right: 10px;
     right: 10px; 
-    top: 170px; 
+    top: 140px; 
 }
 .btn-add:hover {
     background-color: #0085C5;
@@ -788,4 +794,116 @@ html, body {
     overflow: hidden; 
     margin: 0;
     padding: 0;
+}
+
+.status-icon {
+    width: 15px; 
+    height: 15px; 
+    cursor: pointer; 
+    margin-left: 5px; 
+}
+ /* Overlay Background */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.popup-overlay.show {
+    display: block;
+    opacity: 1;
+}
+
+/* Popup Box */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    z-index: 1001;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup.show {
+    display: block;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #e74c3c;
+}
+
+/* Title */
+h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Textarea */
+#reasonText {
+    width: 100%;
+    max-width: 400px; /* Batasi lebar maksimal */
+    height: 100px; /* Tinggi tetap */
+    font-size: 16px;
+    color: #555;
+    font-family: 'Verdana', sans-serif;
+    line-height: 1.6;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px;
+    resize: none; /* Nonaktifkan resize manual */
+}
+
+
+/* Tombol */
+button {
+    margin: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
 }

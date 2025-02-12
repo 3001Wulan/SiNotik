@@ -43,6 +43,7 @@ $routes->get('admin/ubahdatapengguna/(:num)', 'UbahDataController::ubahDataPengg
 $routes->delete('RiwayatAdminController/delete/(:segment)', 'RiwayatAdminController::delete/$1');
 $routes->get('/pegawai/melihatpegawai', 'MelihatNotulenpegawaiController::lihat');
 $routes->get('notulensi/lihatnotulen/(:num)', 'LihatNotulenController::lihatnotulen/$1');
+$routes->get('notulen/detailnotulen/(:num)', 'LihatNotulenController::lihatnotulen/$1');
 $routes->get('pegawai/riwayatpegawai', 'RiwayatPegawaiController::index');
 $routes->get('notulen/riwayatnotulen', 'RiwayatNotulenController::index');
 $routes->get('admin/ubahpassword', 'UbahPasswordController::ubah');
@@ -54,19 +55,20 @@ $routes->get('assets/images/profiles/(:any)', function() {
 });
 $routes->post('save-feedback', 'LihatNotulenController::saveFeedback');
 $routes->post('lihatnotulen/saveFeedback', 'LihatNotulenController::saveFeedback');
-
 $routes->get('pegawai/lihatnotulen/(:num)', 'DetailnotulenController::lihatnotulen/$1');
 $routes->post('lihatnotulen/saveFeedback', 'DetailnotulenController::saveFeedback');
 $routes->get('pegawai/jadwalrapat', 'PegawaiJadwalController::index');
-$routes->get('/jadwal-pegawai/delete/(:num)', 'PegawaiJadwalController::delete/$1');
 $routes->post('pegawai/jadwalrapat/add', 'PegawaiJadwalController::add');
 $routes->post('pegawai-jadwal/save', 'PegawaiJadwalController::save');
 $routes->get('/pegawai/jadwalrapat', 'PegawaiJadwalController::getAllJadwal');
 $routes->get('admin/persetujuanadmin', 'PersetujuanAdminController::index');
 $routes->post('admin/persetujuanadmin/approve_meeting/(:num)', 'PersetujuanAdminController::approveMeeting/$1');
 $routes->post('admin/persetujuanadmin/reject_meeting/(:num)', 'PersetujuanAdminController::rejectMeeting/$1');
-
-
+$routes->get('notulen/jadwalrapatnotulen', 'NotulenJadwalController::index');
+$routes->post('notulen/jadwalrapatnotulen/add', 'NotulenJadwalController::add');
+$routes->post('notulen-jadwal/save', 'NotulenJadwalController::save');
+$routes->get('/notulen/jadwalrapanotulent', 'NotulenJadwalController::getAllJadwal');
+$routes->get('admin/jadwalrapatadmin', 'NotulenJadwalrapatController::index');
 
 
 

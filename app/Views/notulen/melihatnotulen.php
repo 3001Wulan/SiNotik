@@ -279,7 +279,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     window.viewDetails = function(button, notulensiId) {
-        window.location.href = `<?= base_url('pegawai/lihatnotulen/') ?>${notulensiId}`;
+        window.location.href = `<?= base_url('notulen/detailnotulen/') ?>${notulensiId}`;
     };
 
     document.getElementById('entries').addEventListener('change', function() {
