@@ -6,12 +6,13 @@ use App\Models\PegawaiJadwalModel;
 
 class PersetujuanAdminController extends BaseController
 {
-    public function index(): string
-    {
-        $pegawaiJadwalModel = new PegawaiJadwalModel();
-        $data['jadwal_rapat'] = $pegawaiJadwalModel->getPendingJadwal();  
-        return view('admin/persetujuanadmin', $data);
-    }
+    public function index()
+{
+    $pegawaiJadwalModel = new PegawaiJadwalModel();
+    $data['jadwal_rapat'] = $pegawaiJadwalModel->getPendingJadwal();
+    $data['current_page'] = 'persetujuan_admin'; // Tambahkan ini
+    return view('admin/persetujuanadmin', $data);
+}
 
     public function approvemeeting()
     {

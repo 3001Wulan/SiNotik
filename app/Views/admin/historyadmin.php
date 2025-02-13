@@ -10,80 +10,91 @@
 </head>
 <body class="light-mode">
     <div class="container">
+        <!-- Sidebar -->
         <div class="sidebar">
-          <div class="logo">
-                <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo">
-            </div> 
-            <div class="menu">
-                <a href="#" class="menu-item">
-                    <img src="<?= base_url('assets/images/dashboard.png') ?>" alt="Dashboard Icon">
-                    <span>Dashboard</span>
-                </a>
-                <div class="separator"></div>
-                <a href="#" class="menu-item">
-                    <img src="<?= base_url('assets/images/datauser.png') ?>" alt="Data User Icon">
-                    <span>Data Pengguna</span>
-                </a>
-                <div class="separator"></div>
-                <a href="#" class="menu-item">
-                    <img src="<?= base_url('assets/images/riwayat.png') ?>" alt="History Icon">
-                    <span>Riwayat Notulensi</span>
-                </a>
-                <div class="separator"></div>
-                <div class="menu-item-with-submenu">
-                    <a href="#" class="menu-item">
-                        <img src="<?= base_url('assets/images/rapat.png') ?>" alt="Rapat Icon">
-                        <span>Rapat</span>
+            <div class="logo">
+                <img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="Logo">
+            </div>
+            <ul>
+                <li>
+                <a href="#" class="inactive">
+                        <img src="<?php echo base_url('assets/images/dashboard.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
+                        Dashboard
                     </a>
-                    <div class="submenu-popup">
-                        <a href="#" class="submenu-item">
-                            <img src="<?= base_url('assets/images/edit.png') ?>" alt="Buat Jadwal Icon">
+                </li>
+                <li>
+                <a href="#" class="inactive">
+                        <img src="<?php echo base_url('assets/images/datapengguna.png'); ?>" alt="Data Pengguna Icon" class="sidebar-icon">
+                        Data Pengguna
+                    </a>
+                </li>
+                <li>
+                <a href="#" class="inactive">
+                        <img src="<?php echo base_url('assets/images/riwayatnotulensi.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
+                        Riwayat Notulensi
+                    </a>
+                </li>
+                <li class="dropdown">
+                <a href="#" class="inactive">
+                    <img src="<?php echo base_url('assets/images/rapat.png'); ?>" alt="Notulensi Icon" class="sidebar-icon">
+                    <span>Rapat</span>
+                </a>
+                    <div class="dropdown-content">
+                        <a href="melihatnotulen" class="dropdown-item">
+                            <img src="<?= base_url('assets/images/edit.png') ?>" alt="Daftar Notulensi Icon">
                             <span>Buat Jadwal Rapat</span>
                         </a>
-                        <div class="separator"></div>
-                        <div class="submenu-separator"></div>
-                        <a href="#" class="submenu-item">
-                            <img src="<?= base_url('assets/images/setuju.png') ?>" alt="Persetujuan Icon">
+                        
+                        <a href="buatnotulen" class="dropdown-item">
+                            <img src="<?= base_url('assets/images/setuju.png') ?>" alt="Buat Notulensi Icon">
                             <span>Persetujuan Rapat</span>
                         </a>
                     </div>
-                </div>
-                <div class="separator"></div>
-                <a href="#" class="menu-item active">
-                    <img src="<?= base_url('assets/images/riwayatemail.png') ?>" alt="History Icon">
-                    <span>Riwayat Email</span>
-                </a>
-            </div>
+                </li>
+                <li>
+                    <a href="#" class="active distribusi-notulensi">
+                        <img src="<?php echo base_url('assets/images/distribusi.png'); ?>" alt="Distribusi Notulensi Icon" class="sidebar-icon">
+                        Distribusi Notulensi
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="inactive">
+                        <img src="<?php echo base_url('assets/images/panduanpengguna.png'); ?>" alt="Panduan Pengguna Icon" class="sidebar-icon">
+                        Panduan Pengguna
+                    </a>
+                </li>
+            </ul>
         </div>
         <div class="main-content">
             <div class="header">
-    <div class="theme-toggle">
-        <img src="<?= base_url('assets/images/bulan.png') ?>" alt="Moon" class="theme-icon moon-icon">
-        <img src="<?= base_url('assets/images/sun.png') ?>" alt="Sun" class="theme-icon sun-icon">
-    </div>
-    <div class="user-info">
-        <div class="user-text">
-            <div class="user-name">Heni Yunida</div>
-            <div class="user-role">Admin</div>
-        </div>
-        <div class="profile-container">
-            <img src="<?= base_url('assets/images/profile.jpg') ?>" alt="Profile" class="profile-img">
-            <div class="profile-dropdown">
-                <a href="#" class="dropdown-item">
-                <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
-                    Profil
-                </a>
-                <div class="dropdown-separator"></div>
-                <a href="#" class="dropdown-item">
-                <img src="<?= base_url('assets/images/icon_logout.png') ?>" alt="Logout" class="dropdown-icon">
-                    Logout
-                </a>
+                <div class="theme-toggle">
+                    <img src="<?= base_url('assets/images/bulan.png') ?>" alt="Moon" class="theme-icon moon-icon">
+                    <img src="<?= base_url('assets/images/sun.png') ?>" alt="Sun" class="theme-icon sun-icon">
+                </div>
+                <div class="user-info">
+                    <div class="user-text">
+                        <div class="user-name">Heni Yunida</div>
+                        <div class="user-role">Admin</div>
+                    </div>
+                    <div class="profile-container">
+                        <img src="<?= base_url('assets/images/profile.jpg') ?>" alt="Profile" class="profile-img">
+                        <div class="profile-dropdown">
+                            <a href="#" class="dropdown-item">
+                            <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
+                                Profil
+                            </a>
+                            <div class="dropdown-separator"></div>
+                            <a href="#" class="dropdown-item">
+                            <img src="<?= base_url('assets/images/icon_logout.png') ?>" alt="Logout" class="dropdown-icon">
+                                Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</div>
-            <div class="content">
-                <h1>History Email</h1>
+            <div class="content1">
+                <h1>Distribusi Notulensi</h1>
+                <div class="content">
                 <div class="filters">
                      <div class="category-select-container">
                         <div class="iinput-container">
@@ -193,6 +204,7 @@
 </div>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+    // Cache DOM elements
     const body = document.body;
     const moonIcon = document.querySelector('.moon-icon');
     const sunIcon = document.querySelector('.sun-icon');
@@ -208,23 +220,28 @@ document.addEventListener('DOMContentLoaded', function() {
     const profileContainer = document.querySelector('.profile-container');
     const profileDropdown = document.querySelector('.profile-dropdown');
     const logoutModal = document.getElementById('logoutModal');
+    const logoutLink = document.querySelector('.dropdown-item img[alt="Logout"]').closest('.dropdown-item');
 
+    // State variables
     let currentPage = 1;
     let itemsPerPage = parseInt(entriesSelect.value);
     let filteredRows = [...tableRows];
     let currentRow = null;
     
+    // Profile dropdown toggle
     profileContainer.addEventListener('click', (e) => {
         e.stopPropagation();
         profileDropdown.classList.toggle('show');
     });
 
+    // Close profile dropdown when clicking outside
     document.addEventListener('click', (e) => {
         if (!profileContainer.contains(e.target)) {
             profileDropdown.classList.remove('show');
         }
     });
     
+    // Category setup
     const categories = ['APTIKA', 'IKP', 'Statistik & Persandian'];
     const categoryPopup = document.createElement('div');
     categoryPopup.className = 'category-popup';
@@ -244,6 +261,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.body.appendChild(categoryPopup);
     
+    // Category select click handler
     categorySelect.addEventListener('click', function(e) {
         e.stopPropagation();
         const rect = this.getBoundingClientRect();
@@ -253,6 +271,7 @@ document.addEventListener('DOMContentLoaded', function() {
         categoryPopup.style.display = categoryPopup.style.display === 'block' ? 'none' : 'block';
     });
 
+    // Filter and display data function
     function filterAndDisplayData() {
         const searchTerm = searchInput.value.toLowerCase().trim();
         const selectedCategory = categorySelect.value.toLowerCase().trim();
@@ -276,6 +295,7 @@ document.addEventListener('DOMContentLoaded', function() {
         displayCurrentPage();
     }
     
+    // Pagination functions
     function updatePagination() {
         const totalPages = Math.ceil(filteredRows.length / itemsPerPage) || 1;
         currentPage = Math.min(currentPage, totalPages);
@@ -297,6 +317,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Event listeners for search and pagination
     searchInput.addEventListener('input', filterAndDisplayData);
     
     entriesSelect.addEventListener('change', () => {
@@ -322,6 +343,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Submenu handlers
     const menuWithSubmenu = document.querySelector('.menu-item-with-submenu');
     const submenuPopup = document.querySelector('.submenu-popup');
 
@@ -335,6 +357,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Theme toggle
     const themeToggle = document.querySelector('.theme-toggle');
     themeToggle.addEventListener('click', function() {
         body.classList.toggle('dark-mode');
@@ -350,12 +373,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    const logoutLink = document.querySelector('.dropdown-item:last-child');
-    logoutLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        showLogoutModal();
-    });
+    // Logout functionality
+    if (logoutLink) {
+        logoutLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            showLogoutModal();
+        });
+    }
 
+    // Modal functions
     window.showLogoutModal = function() {
         logoutModal.style.display = 'block';
         profileDropdown.classList.remove('show');
@@ -366,9 +393,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     window.confirmLogout = function() {
-        window.location.href = "<?= base_url('logout') ?>"; 
+        window.location.href = "<?= base_url('logout') ?>";
     }
 
+    // Global click handler for closing popups
     document.addEventListener('click', (e) => {
         if (!categorySelect.contains(e.target) && 
             !categoryPopup.contains(e.target) && 
@@ -379,19 +407,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (e.target === logoutModal) {
             closeLogoutModal();
         }
-        
-        if (e.target.classList.contains('modal')) {
-            if (e.target.id === 'approvalModal') {
-                closeApprovalModal();
-            } else if (e.target.id === 'rejectionModal') {
-                closeRejectionModal();
-            }
-        }
     });
     
+    // Initial display
     filterAndDisplayData();
 });
 </script>
-
 </body>
 </html>

@@ -245,3 +245,122 @@ DEBUG - 2025-02-13 02:55:47 --> User Name: jungwon yang
 DEBUG - 2025-02-13 02:55:47 --> User Role: admin
 INFO - 2025-02-13 02:55:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-02-13 04:55:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 05:10:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 05:12:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 05:12:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 05:12:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 05:12:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-13 05:12:09 --> Login attempt with username: lili
+ERROR - 2025-02-13 05:12:09 --> Checking login for username: lili
+ERROR - 2025-02-13 05:12:09 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => wulandari yulianis
+    [nip] => 123456780123456789
+    [email] => bismillah@gmail.com
+    [password] => $2y$10$GNfd6zIA4kK/7vX47gN7eepuS.AXjm5tSpBgx7YvxRDjgGubdAS0K
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => 7 (1).jpg
+    [alamat] => jalan  saja
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-09
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-02-12 03:02:39
+)
+
+ERROR - 2025-02-13 05:12:10 --> Password verify result for username lili: Success
+ERROR - 2025-02-13 05:12:10 --> Login success for username: lili
+INFO - 2025-02-13 05:12:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-13 05:12:10 --> User ID: 9
+DEBUG - 2025-02-13 05:12:10 --> Profile Picture: 7 (1).jpg
+DEBUG - 2025-02-13 05:12:10 --> User Name: wulandari yulianis
+DEBUG - 2025-02-13 05:12:10 --> User Role: admin
+INFO - 2025-02-13 05:12:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-13 05:12:15 --> ErrorException: Undefined variable $current_page
+[Method: GET, Route: admin/persetujuanadmin]
+in APPPATH\Views\admin\persetujuanadmin.php on line 19.
+ 1 APPPATH\Views\admin\persetujuanadmin.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $current_page', 'C:\\xampp\\htdocs\\SiNotik\\app\\Views\\admin\\persetujuanadmin.php', 19)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SiNotik\\app\\Views\\admin\\persetujuanadmin.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/persetujuanadmin', [], true)
+ 5 APPPATH\Controllers\PersetujuanAdminController.php(13): view('admin/persetujuanadmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PersetujuanAdminController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersetujuanAdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-02-13 05:12:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-13 05:12:18 --> User ID: 9
+DEBUG - 2025-02-13 05:12:18 --> Profile Picture: 7 (1).jpg
+DEBUG - 2025-02-13 05:12:18 --> User Name: wulandari yulianis
+DEBUG - 2025-02-13 05:12:18 --> User Role: admin
+INFO - 2025-02-13 05:12:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 05:12:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-13 05:12:23 --> User ID: 9
+DEBUG - 2025-02-13 05:12:23 --> Profile Picture: 7 (1).jpg
+DEBUG - 2025-02-13 05:12:23 --> User Name: wulandari yulianis
+DEBUG - 2025-02-13 05:12:23 --> User Role: admin
+INFO - 2025-02-13 05:12:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-13 05:12:25 --> ErrorException: Undefined variable $current_page
+[Method: GET, Route: admin/persetujuanadmin]
+in APPPATH\Views\admin\persetujuanadmin.php on line 19.
+ 1 APPPATH\Views\admin\persetujuanadmin.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $current_page', 'C:\\xampp\\htdocs\\SiNotik\\app\\Views\\admin\\persetujuanadmin.php', 19)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SiNotik\\app\\Views\\admin\\persetujuanadmin.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/persetujuanadmin', [], true)
+ 5 APPPATH\Controllers\PersetujuanAdminController.php(13): view('admin/persetujuanadmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PersetujuanAdminController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersetujuanAdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-02-13 05:12:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-13 05:12:34 --> User ID: 9
+DEBUG - 2025-02-13 05:12:34 --> Profile Picture: 7 (1).jpg
+DEBUG - 2025-02-13 05:12:34 --> User Name: wulandari yulianis
+DEBUG - 2025-02-13 05:12:34 --> User Role: admin
+INFO - 2025-02-13 05:12:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 05:12:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 05:12:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 05:13:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-13 05:13:31 --> Login attempt with username: lili
+ERROR - 2025-02-13 05:13:31 --> Checking login for username: lili
+ERROR - 2025-02-13 05:13:31 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => wulandari yulianis
+    [nip] => 123456780123456789
+    [email] => bismillah@gmail.com
+    [password] => $2y$10$GNfd6zIA4kK/7vX47gN7eepuS.AXjm5tSpBgx7YvxRDjgGubdAS0K
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => 7 (1).jpg
+    [alamat] => jalan  saja
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-09
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-02-12 03:02:39
+)
+
+ERROR - 2025-02-13 05:13:31 --> Password verify result for username lili: Success
+ERROR - 2025-02-13 05:13:31 --> Login success for username: lili
+INFO - 2025-02-13 05:13:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-13 05:13:31 --> User ID: 9
+DEBUG - 2025-02-13 05:13:31 --> Profile Picture: 7 (1).jpg
+DEBUG - 2025-02-13 05:13:31 --> User Name: wulandari yulianis
+DEBUG - 2025-02-13 05:13:31 --> User Role: admin
+INFO - 2025-02-13 05:13:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 05:13:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 05:14:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 05:14:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 05:15:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 05:15:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 05:15:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 05:15:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

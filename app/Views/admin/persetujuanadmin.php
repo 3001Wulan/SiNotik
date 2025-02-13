@@ -12,50 +12,58 @@
         <!-- Sidebar -->
         <div class="sidebar">
             <div class="logo">
-                <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo">
+                <img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="Logo">
             </div>
-            <div class="menu">
-                <a href="#" class="menu-item">
-                    <img src="<?= base_url('assets/images/dashboard.png') ?>" alt="Dashboard Icon">
-                    <span>Dashboard</span>
-                </a>
-                <div class="separator"></div>
-                <a href="#" class="menu-item">
-                    <img src="<?= base_url('assets/images/datauser.png') ?>" alt="Data User Icon">
-                    <span>Data Pengguna</span>
-                </a>
-                <div class="separator"></div>
-                <a href="#" class="menu-item">
-                    <img src="<?= base_url('assets/images/riwayat.png') ?>" alt="History Icon">
-                    <span>Riwayat Notulensi</span>
-                </a>
-                <div class="separator"></div>
-                <div class="menu-item-with-submenu active">
-                    <a href="#" class="menu-item">
-                        <img src="<?= base_url('assets/images/rapat.png') ?>" alt="Rapat Icon">
-                        <span>Rapat</span>
+            <ul>
+                <li>
+                    <a href="dashboard_admin" class="<?php echo ($current_page == 'dashboard') ? 'active dashboard' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/dashboard.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
+                        Dashboard
                     </a>
-                    <div class="submenu-popup">
-                        <a href="#" class="submenu-item">
-                            <img src="<?= base_url('assets/images/edit.png') ?>" alt="Buat Jadwal Icon">
+                </li>
+                <li>
+                    <a href="data-pengguna" class="<?php echo ($current_page == 'data_pengguna') ? 'active data-pengguna' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/datapengguna.png'); ?>" alt="Data Pengguna Icon" class="sidebar-icon">
+                        Data Pengguna
+                    </a>
+                </li>
+                <li>
+                    <a href="riwayatadmin" class="<?php echo ($current_page == 'riwayat_notulensi') ? 'active riwayat-notulensi' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/riwayatnotulensi.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
+                        Riwayat Notulensi
+                    </a>
+                </li>
+                <li class="dropdown">
+                <a href="#" class="active rapat">
+                    <img src="<?php echo base_url('assets/images/rapat.png'); ?>" alt="Notulensi Icon" class="sidebar-icon">
+                    <span>Rapat</span>
+                </a>
+                    <div class="dropdown-content">
+                        <a href="melihatnotulen" class="dropdown-item">
+                            <img src="<?= base_url('assets/images/edit.png') ?>" alt="Daftar Notulensi Icon">
                             <span>Buat Jadwal Rapat</span>
                         </a>
-                        <div class="separator"></div>
-                        <div class="submenu-separator"></div>
-                        <a href="#" class="submenu-item">
-                            <img src="<?= base_url('assets/images/setuju.png') ?>" alt="Persetujuan Icon">
+                        
+                        <a href="buatnotulen" class="dropdown-item">
+                            <img src="<?= base_url('assets/images/setuju.png') ?>" alt="Buat Notulensi Icon">
                             <span>Persetujuan Rapat</span>
                         </a>
                     </div>
-                </div>
-                <div class="separator"></div>
-                <a href="#" class="menu-item">
-                    <img src="<?= base_url('assets/images/riwayatemail.png') ?>" alt="History Icon">
-                    <span>Riwayat Email</span>
-                </a>
-            </div>
+                </li>
+                <li>
+                    <a href="#" class="inactive">
+                        <img src="<?php echo base_url('assets/images/distribusi.png'); ?>" alt="Distribusi Notulensi Icon" class="sidebar-icon">
+                        Distribusi Notulensi
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="inactive">
+                        <img src="<?php echo base_url('assets/images/panduanpengguna.png'); ?>" alt="Panduan Pengguna Icon" class="sidebar-icon">
+                        Panduan Pengguna
+                    </a>
+                </li>
+            </ul>
         </div>
-
         <!-- Main Content -->
         <div class="main-content">
             <div class="header">
@@ -64,14 +72,30 @@
                     <img src="<?= base_url('assets/images/sun.png') ?>" alt="Sun" class="theme-icon sun-icon">
                 </div>
                 <div class="user-info">
+                <div class="user-text">
+                    <div class="user-name">Heni Yunida</div>
+                    <div class="user-role">Admin</div>
+                </div>
+                <div class="profile-container">
                     <img src="<?= base_url('assets/images/profile.jpg') ?>" alt="Profile" class="profile-img">
+                    <div class="profile-dropdown">
+                        <a href="#" class="dropdown-item">
+                        <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
+                            Profil
+                        </a>
+                        <div class="dropdown-separator"></div>
+                        <a href="#" class="dropdown-item">
+                        <img src="<?= base_url('assets/images/icon_logout.png') ?>" alt="Logout" class="dropdown-icon">
+                            Logout
+                        </a>
+                    </div>
                 </div>
             </div>
-
-            <!-- Content Area -->
-            <div class="content">
+        </div>
+                <div class="content1">
                 <h1>Persetujuan Admin</h1>
-
+                <!-- Content Area -->
+                <div class="content">
                 <div class="filters">
                     <!-- Category Selection -->
                     <div class="category-select-container">
@@ -150,6 +174,16 @@
             </div>
         </div>
     </div>
+    <div id="logoutModal" class="modal">
+    <div class="modal-content">
+    <img src="<?= base_url('assets/images/logout_warning.png') ?>" alt="Logout Warning" class="popup-image">
+        <h2>Anda ingin logout?</h2>
+        <div class="modal-buttons">
+            <button onclick="confirmLogout()" class="btn-confirm">Ya</button>
+            <button onclick="closeLogoutModal()" class="btn-cancel">Tidak</button>
+        </div>
+    </div>
+</div>
 
     <!-- Rejection Modal -->
     <div id="rejectionModal" class="modal">
@@ -216,7 +250,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const prevButton = document.querySelector('.btn-prev');
     const nextButton = document.querySelector('.btn-next');
     const pageNumber = document.querySelector('.page-number');
-    
+    const profileContainer = document.querySelector('.profile-container');
+    const profileDropdown = document.querySelector('.profile-dropdown');
+    const logoutModal = document.getElementById('logoutModal');
+    const logoutLink = document.querySelector('.dropdown-item img[alt="Logout"]').closest('.dropdown-item');
+
     // State variables
     let currentPage = 1;
     let itemsPerPage = parseInt(entriesSelect.value);
@@ -517,10 +555,43 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
+    // Profile Dropdown Toggle
+profileContainer.addEventListener('click', (e) => {
+        e.stopPropagation();
+        profileDropdown.classList.toggle('show');
+    });
+
+// Logout functionality
+if (logoutLink) {
+        logoutLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            showLogoutModal();
+        });
+    }
+
+    // Modal functions
+    window.showLogoutModal = function() {
+        if (logoutModal) {
+            logoutModal.style.display = 'block';
+            profileDropdown.classList.remove('show');
+        }
+    }
+
+    window.closeLogoutModal = function() {
+        if (logoutModal) {
+            logoutModal.style.display = 'none';
+        }
+    }
+
+    window.confirmLogout = function() {
+        window.location.href = "<?= base_url('logout') ?>";
+    }
     
     filterAndDisplayData();
 });
-</script>
 
+</script>
 </body>
 </html>
