@@ -86,8 +86,8 @@
             <form id="form-jadwal-rapat" action="<?= base_url('submit-jadwal') ?>" method="post">
                 <div class="form-container">
                     <div class="form-group">
-                        <label for="judul">Judul</label>
-                        <input type="text" id="judul" name="judul" placeholder="Masukkan judul rapat" required>
+                        <label for="topik">Topik</label>
+                        <input type="text" id="topik" name="topik" placeholder="Masukkan Topik rapat" required>
                     </div>
                     <div class="form-group">
                         <label for="agenda">Agenda</label>
@@ -97,6 +97,10 @@
                         <label for="tanggal">Tanggal</label>
                         <input type="date" id="tanggal" name="tanggal" required>
                     </div>
+                    <div class="form-group">
+                        <label for="waktu">Waktu</label>
+                        <input type="time" id="waktu" name="waktu" required>
+                    </div>   
                     <div class="form-group">
                         <label for="lokasi">Lokasi</label>
                         <input type="text" id="lokasi" name="lokasi" placeholder="Masukkan lokasi rapat" required>
