@@ -1,0 +1,228 @@
+INFO - 2025-02-13 02:51:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 02:51:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 02:51:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 02:51:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-13 02:51:57 --> Login attempt with username: lili
+ERROR - 2025-02-13 02:51:57 --> Checking login for username: lili
+ERROR - 2025-02-13 02:51:57 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => jungwon yang
+    [nip] => 123456780123456789
+    [email] => jungwon@gmail.com
+    [password] => $2y$10$GNfd6zIA4kK/7vX47gN7eepuS.AXjm5tSpBgx7YvxRDjgGubdAS0K
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => CINDY_.jpg
+    [alamat] => seoul
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2004-02-09
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-02-07 04:57:40
+)
+
+ERROR - 2025-02-13 02:51:57 --> Password verify result for username lili: Success
+ERROR - 2025-02-13 02:51:57 --> Login success for username: lili
+INFO - 2025-02-13 02:51:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-13 02:51:58 --> User ID: 9
+DEBUG - 2025-02-13 02:51:58 --> Profile Picture: CINDY_.jpg
+DEBUG - 2025-02-13 02:51:58 --> User Name: jungwon yang
+DEBUG - 2025-02-13 02:51:58 --> User Role: admin
+INFO - 2025-02-13 02:51:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 02:52:01 --> Mencoba mengambil pengguna dengan role notulensi dan pegawai
+INFO - 2025-02-13 02:52:01 --> Pengguna dengan role notulensi atau pegawai ditemukan: Array
+(
+    [0] => Array
+        (
+            [user_id] => 3
+            [username] => admin
+            [nama] => John 
+            [nip] => 123456789
+            [email] => admin@example.com
+            [password] => $2y$10$vtl3rv1OaY3pW2hnmPpXoe1OzmxqdjvxJLl.7qZDvhjN8fQfo6Mhq
+
+
+            [role] => pegawai
+            [Bidang] => Statistik dan Persandian
+            [profil_foto] => profile1.jpg
+            [alamat] => Jl. Merdeka No. 123, Jakarta
+            [jabatan] => korea
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 22:02:06
+            [updated_at] => 2025-01-27 17:20:44
+        )
+
+    [1] => Array
+        (
+            [user_id] => 6
+            [username] => wulan
+            [nama] => wulandari 
+            [nip] => 18679202938390
+            [email] => lala@gmail.com
+            [password] => $2y$10$QW2QpL2k9f5eBfqMjakx7eNCI3/XVLCO9a42jzNPjzvXpS8iFmqoK
+            [role] => notulensi
+            [Bidang] => Aptika
+            [profil_foto] => pegawai.png
+
+
+            [alamat] => 
+            [jabatan] => sek
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 15:02:18
+            [updated_at] => 2025-01-27 17:37:11
+        )
+
+    [2] => Array
+        (
+            [user_id] => 7
+            [username] => lala
+            [nama] => lala
+
+            [nip] => 123456789123456789
+            [email] => lala1@gmail.com
+            [password] => $2y$10$tBSYxTpvfWjIlSkqSZ.7TeAQp2RvMqDg2J91d0vUGxaieUvPIv61a
+            [role] => notulensi
+            [Bidang] => Aptika
+            [profil_foto] => 
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 15:16:16
+            [updated_at] => 2025-01-15 21:48:23
+        )
+
+    [3] => Array
+        (
+            [user_id] => 13
+            [username] => jaja
+            [nama] => jungwon
+            [nip] => 123456788987654324
+            [email] => jaja@gmail.com
+            [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+            [role] => pegawai
+            [Bidang] => IKP
+            [profil_foto] => CINDY_.jpg
+            [alamat] => 
+            [jabatan] => korea
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-13 07:53:10
+            [updated_at] => 2025-01-30 08:54:26
+        )
+
+    [4] => Array
+        (
+            [user_id] => 18
+            [username] => notulensi_user18
+            [nama] => Nama Notulensi 18
+            [nip] => 12345678918
+            [email] => notulensi_user18@example.com
+            [password] => password_enkripsi18
+            [role] => notulensi
+            [Bidang] => Administrasi
+            [profil_foto] => 
+            [alamat] => Alamat Notulensi 18
+            [jabatan] => Notulensi
+            [tanggal_lahir] => 1998-08-18
+            [created_at] => 2025-01-16 09:28:25
+            [updated_at] => 2025-01-17 00:16:49
+        )
+
+    [5] => Array
+        (
+            [user_id] => 26
+            [username] => notulensi
+            [nama] => alhamdulilla
+            [nip] => 345678909876789376
+            [email] => notulensi@gmail.com
+            [password] => $2y$10$ZhNj131GHHBnlqCvbB3.bOR13E/V13x3i1tumnFZPNg.YhqScDCnq
+            [role] => notulensi
+            [Bidang] => 
+            [profil_foto] => image.png
+
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-16 02:36:45
+            [updated_at] => 2025-01-16 15:11:16
+        )
+
+    [6] => Array
+        (
+            [user_id] => 32
+            [username] => dadang
+            [nama] => cindy arwinda 
+            [nip] => 098765432234567892
+            [email] => dadang@gmail.com
+            [password] => $2y$10$FKo1RqxUsHWcoWzbk5ZZae9C4Al32xjQuyf99kyXR4CMMYtDOyMVC
+            [role] => notulensi
+            [Bidang] => IKP
+            [profil_foto] => 2.jpg
+            [alamat] => 
+            [jabatan] => Sekretaris
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-17 09:26:42
+            [updated_at] => 2025-01-27 20:37:10
+        )
+
+    [7] => Array
+        (
+            [user_id] => 40
+            [username] => cindy
+            [nama] => cindy arwinda putry
+            [nip] => 123456788987654259
+            [email] => cindy@gmail.com
+            [password] => $2y$10$fFtsHB1wzUtGMaBUM0/c3uv.EFy0QXZgTj6.q2gKaPtCdUVYHNMqG
+            [role] => notulensi
+            [Bidang] => IKP
+            [profil_foto] => 2.jpg
+            [alamat] => 
+            [jabatan] => Sekretaris
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-21 05:07:14
+            [updated_at] => 2025-01-27 00:04:23
+        )
+
+    [8] => Array
+        (
+            [user_id] => 46
+            [username] => bismillah
+            [nama] => 
+            [nip] => 123456789023749185
+            [email] => bismillah10@gmail.com
+            [password] => $2y$10$xL7EcP9eM.sZ7iGKd8FpnuEzf3a4WEgfr3jNz0Ujw3YyxXNfmQKIq
+            [role] => pegawai
+            [Bidang] => APTIKA
+            [profil_foto] => 
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-24 08:06:32
+            [updated_at] => 2025-01-24 08:06:32
+        )
+
+    [9] => Array
+        (
+            [user_id] => 55
+            [username] => intan 
+            [nama] => intan salma denaidy
+            [nip] => 123456788987654027
+            [email] => udin@gmail.com
+            [password] => $2y$10$9kVXeKAthFw9q.ufMS8QROXgLFNFyncZwjwX4he7cdOxGPvWR0yYG
+            [role] => notulensi
+            [Bidang] => IKP
+            [profil_foto] => 1737989756_c65595a1af910fde5423.jpg
+            [alamat] => 
+            [jabatan] => Sekretaris
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-27 14:55:56
+            [updated_at] => 2025-01-27 14:55:56
+        )
+
+)
+
+INFO - 2025-02-13 02:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 02:52:01 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-02-13 02:52:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 02:52:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 02:52:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
