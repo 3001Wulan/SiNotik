@@ -20,38 +20,34 @@ $current_page = 'jadwalrapatnotulen';
             </div>
             <ul>
                 <li>
-                    <a href="dashboard_notulen" class="<?php echo ($current_page == 'dashboard') ? 'active dashboard' : 'inactive'; ?>">
-                        <img src="<?php echo base_url('assets/images/dashboard.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
-                        Dashboard
+                <a href="dashboard_pegawai" class="<?php echo ($current_page == 'dashboard') ? 'active' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/dashboard.png'); ?>" alt="Dashboard Icon" class="sidebar-icon"> Dashboard
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="<?php echo ($current_page == 'notulensi_notulen') ? 'active data-pengguna' : 'inactive'; ?>">
-                        <img src="<?php echo base_url('assets/images/codicon_book.png'); ?>" alt="Data Pengguna Icon" class="sidebar-icon">
-                        Notulensi
-                    </a>
-                    <div class="dropdown-content">
-                        <a href="melihatnotulen" class="dropdown-item">
-                            <img src="<?= base_url('assets/images/buat.png') ?>" alt="Daftar Notulensi Icon">
-                            <span>Daftar Notulensi</span>
-                        </a>
-                        <div class="dropdown-separator"></div>
-                        <a href="buatnotulen" class="dropdown-item">
-                            <img src="<?= base_url('assets/images/edit.png') ?>" alt="Buat Notulensi Icon">
-                            <span>Buat Notulensi</span>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <a href="#" class="<?php echo ($current_page == 'riwayat_notulensi') ? 'active riwayat-notulensi' : 'inactive'; ?>">
-                        <img src="<?php echo base_url('assets/images/icon_riwayat.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
-                        Riwayat Notulensi
+                    <a href="melihatpegawai" class="<?php echo ($current_page == 'notulensi_notulen') ? 'active' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/codicon_book.png'); ?>" alt="Notulensi Icon" class="sidebar-icon"> Notulensi
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="<?php echo ($current_page == 'jadwal_rapat') ? 'active' : ''; ?>">
-                        <img src="<?php echo base_url('assets/images/rapat.png'); ?>" alt="Jadwal Rapat Icon" class="sidebar-icon">
-                        Jadwal Rapat
+                    <a href="riwayatadmin" class="<?php echo ($current_page == 'riwayat_notulensi') ? 'active' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/icon_riwayat.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon"> Riwayat Notulensi
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="<?php echo ($current_page == 'jadwalrapat') ? 'active' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/rapat.png'); ?>" alt="Jadwal Rapat Icon" class="sidebar-icon"> Jadwal Rapat
+                    </a>
+                    <li>
+                    <a href="#" class="inactive">
+                        <img src="<?php echo base_url('assets/images/distribusi.png'); ?>" alt="Distribusi Notulensi Icon" class="sidebar-icon">
+                        Distribusi Notulensi
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="inactive">
+                        <img src="<?php echo base_url('assets/images/panduanpengguna.png'); ?>" alt="Panduan Pengguna Icon" class="sidebar-icon">
+                        Panduan Pengguna
                     </a>
                 </li>
             </ul>

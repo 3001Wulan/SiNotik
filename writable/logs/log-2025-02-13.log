@@ -793,3 +793,140 @@ INFO - 2025-02-13 05:19:44 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2025-02-13 05:19:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-02-13 05:20:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-02-13 05:21:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 05:39:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 05:39:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 05:39:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 05:39:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-13 05:39:51 --> Login attempt with username: dadang
+ERROR - 2025-02-13 05:39:52 --> Checking login for username: dadang
+ERROR - 2025-02-13 05:39:52 --> User data: Array
+(
+    [user_id] => 32
+    [username] => dadang
+    [nama] => cindy arwinda 
+    [nip] => 098765432234567892
+    [email] => dadang@gmail.com
+    [password] => $2y$10$FKo1RqxUsHWcoWzbk5ZZae9C4Al32xjQuyf99kyXR4CMMYtDOyMVC
+    [role] => notulensi
+    [Bidang] => aptika
+    [profil_foto] => 2.jpg
+    [alamat] => 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-17 09:26:42
+    [updated_at] => 2025-02-11 14:05:41
+)
+
+ERROR - 2025-02-13 05:39:52 --> Password verify result for username dadang: Success
+ERROR - 2025-02-13 05:39:52 --> Login success for username: dadang
+INFO - 2025-02-13 05:39:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-13 05:39:52 --> User ID: 32
+DEBUG - 2025-02-13 05:39:52 --> Profile Picture: 2.jpg
+DEBUG - 2025-02-13 05:39:52 --> User Name: cindy arwinda 
+DEBUG - 2025-02-13 05:39:52 --> User Role: notulensi
+INFO - 2025-02-13 05:39:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 05:39:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 05:39:55 --> Mencoba mengambil profil pengguna dengan ID 32
+INFO - 2025-02-13 05:39:55 --> Pengguna dengan ID 32 ditemukan di database: Array
+(
+    [user_id] => 32
+    [username] => dadang
+    [nama] => cindy arwinda 
+    [nip] => 098765432234567892
+    [email] => dadang@gmail.com
+    [password] => $2y$10$FKo1RqxUsHWcoWzbk5ZZae9C4Al32xjQuyf99kyXR4CMMYtDOyMVC
+    [role] => notulensi
+    [Bidang] => aptika
+    [profil_foto] => 2.jpg
+    [alamat] => 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-17 09:26:42
+    [updated_at] => 2025-02-11 14:05:41
+)
+
+INFO - 2025-02-13 05:39:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 05:40:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 05:40:20 --> Mencoba mengambil profil pengguna dengan ID 32
+INFO - 2025-02-13 05:40:20 --> Pengguna dengan ID 32 ditemukan di database: Array
+(
+    [user_id] => 32
+    [username] => dadang
+    [nama] => cindy arwinda 
+    [nip] => 098765432234567892
+    [email] => dadang@gmail.com
+    [password] => $2y$10$FKo1RqxUsHWcoWzbk5ZZae9C4Al32xjQuyf99kyXR4CMMYtDOyMVC
+    [role] => notulensi
+    [Bidang] => aptika
+    [profil_foto] => 2.jpg
+    [alamat] => 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-17 09:26:42
+    [updated_at] => 2025-02-11 14:05:41
+)
+
+INFO - 2025-02-13 05:40:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 05:40:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 05:40:43 --> Mencoba mengambil profil pengguna dengan ID 32
+INFO - 2025-02-13 05:40:43 --> Pengguna dengan ID 32 ditemukan di database: Array
+(
+    [user_id] => 32
+    [username] => dadang
+    [nama] => cindy arwinda 
+    [nip] => 098765432234567892
+    [email] => dadang@gmail.com
+    [password] => $2y$10$FKo1RqxUsHWcoWzbk5ZZae9C4Al32xjQuyf99kyXR4CMMYtDOyMVC
+    [role] => notulensi
+    [Bidang] => aptika
+    [profil_foto] => 2.jpg
+    [alamat] => 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-17 09:26:42
+    [updated_at] => 2025-02-11 14:05:41
+)
+
+INFO - 2025-02-13 05:40:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 05:40:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 05:40:54 --> Mencoba mengambil profil pengguna dengan ID 32
+INFO - 2025-02-13 05:40:54 --> Pengguna dengan ID 32 ditemukan di database: Array
+(
+    [user_id] => 32
+    [username] => dadang
+    [nama] => cindy arwinda 
+    [nip] => 098765432234567892
+    [email] => dadang@gmail.com
+    [password] => $2y$10$FKo1RqxUsHWcoWzbk5ZZae9C4Al32xjQuyf99kyXR4CMMYtDOyMVC
+    [role] => notulensi
+    [Bidang] => aptika
+    [profil_foto] => 2.jpg
+    [alamat] => 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-17 09:26:42
+    [updated_at] => 2025-02-11 14:05:41
+)
+
+INFO - 2025-02-13 05:40:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 05:41:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 05:41:29 --> Mencoba mengambil profil pengguna dengan ID 32
+INFO - 2025-02-13 05:41:29 --> Pengguna dengan ID 32 ditemukan di database: Array
+(
+    [user_id] => 32
+    [username] => dadang
+    [nama] => cindy arwinda 
+    [nip] => 098765432234567892
+    [email] => dadang@gmail.com
+    [password] => $2y$10$FKo1RqxUsHWcoWzbk5ZZae9C4Al32xjQuyf99kyXR4CMMYtDOyMVC
+    [role] => notulensi
+    [Bidang] => aptika
+    [profil_foto] => 2.jpg
+    [alamat] => 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-17 09:26:42
+    [updated_at] => 2025-02-11 14:05:41
+)
+
+INFO - 2025-02-13 05:41:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
