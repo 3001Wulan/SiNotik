@@ -10,7 +10,7 @@ class PersetujuanAdminController extends BaseController
 {
     $pegawaiJadwalModel = new PegawaiJadwalModel();
     $data['jadwal_rapat'] = $pegawaiJadwalModel->getPendingJadwal();
-    $data['current_page'] = 'persetujuan_admin'; // Tambahkan ini
+    $data['current_page'] = 'persetujuan_admin'; 
     return view('admin/persetujuanadmin', $data);
 }
 

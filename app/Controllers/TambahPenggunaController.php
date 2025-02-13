@@ -69,10 +69,10 @@ class TambahPenggunaController extends Controller
 
     $penggunaModel = new PenggunaModel();
     if ($penggunaModel->save($data)) {
-        $logger->info('Data pengguna berhasil disimpan untuk username: ' . $data['username']); // Log sukses simpan data
+        $logger->info('Data pengguna berhasil disimpan untuk username: ' . $data['username']); 
         return redirect()->to('/admin/data_pengguna')->with('message', 'Pengguna berhasil ditambahkan!');
     } else {
-        $logger->error('Gagal menyimpan data pengguna untuk username: ' . $data['username']); // Log kesalahan simpan data
+        $logger->error('Gagal menyimpan data pengguna untuk username: ' . $data['username']); 
         return redirect()->back()->withInput()->with('error', 'Terjadi kesalahan saat menyimpan data.');
     }
 }

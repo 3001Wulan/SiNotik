@@ -30,14 +30,12 @@ class UbahDataController extends BaseController
 
     log_message('debug', 'Data input: ' . print_r($input, true));
 
-    // Validasi password jika diinput
     if (!empty($input['password']) && isset($input['confirm-password'])) {
         if ($input['password'] !== $input['confirm-password']) {
             return redirect()->to("admin/ubahdatapengguna/$id")->withInput()->with('error', 'Password dan konfirmasi tidak cocok');
         }
     }
 
-    // Aturan validasi
     $rules = [
         'username' => 'required|min_length[3]',
         'nama' => 'required|min_length[3]',
@@ -48,12 +46,10 @@ class UbahDataController extends BaseController
         'jabatan' => 'required',
     ];
 
-    // Validasi input
     if (!$this->validate($rules)) {
         return redirect()->to("admin/ubahdatapengguna/$id")->withInput()->with('errors', $this->validator->getErrors());
     }
 
-    // Siapkan data untuk update
     $data = [
         'username' => $input['username'],
         'nama' => $input['nama'],
@@ -64,20 +60,17 @@ class UbahDataController extends BaseController
         'jabatan' => $input['jabatan'],
     ];
 
-    // Jika password diubah
     if (!empty($input['password'])) {
         $data['password'] = password_hash($input['password'], PASSWORD_DEFAULT);
     }
 
-    // Update data pengguna
     log_message('debug', 'Data yang akan diperbarui: ' . print_r($data, true));
     $model->update($id, $data);
 
-    // **Upload Foto Profil**
     $photo = $this->request->getFile('photo');
     if ($photo && $photo->isValid() && !$photo->hasMoved()) {
-        // **Validasi ukuran dan ekstensi**
-        $maxSize = 5 * 1024 * 1024; // 5MB
+    
+        $maxSize = 5 * 1024 * 1024; 
         $allowedExtensions = ['jpeg', 'jpg', 'png'];
         $fileExtension = $photo->getExtension();
 
@@ -89,13 +82,11 @@ class UbahDataController extends BaseController
             return redirect()->to("admin/ubahdatapengguna/$id")->withInput()->with('error', 'Format file tidak valid! Hanya diperbolehkan JPEG, JPG, atau PNG');
         }
 
-        // Jika validasi berhasil, simpan file
         $newName = $photo->getRandomName();
         $photo->move('assets/images/profiles', $newName);
 
         log_message('debug', "Foto berhasil diupload dengan nama: $newName");
 
-        // Update kolom `profil_foto` di database
         if ($model->updateProfilePhoto($id, $newName)) {
             log_message('debug', "Foto profil berhasil diperbarui di database untuk user_id: $id");
         } else {

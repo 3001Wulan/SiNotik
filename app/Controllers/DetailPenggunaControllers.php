@@ -31,7 +31,6 @@ class DetailPenggunaControllers extends BaseController
         if ($user_profile) {
             log_message('info', 'User profile for ID ' . $user_id . ' retrieved successfully.');
 
-            // Menambahkan log untuk memeriksa data yang akan dikirim ke view
             log_message('info', 'User profile data: ' . print_r($user_profile, true));
 
             $profil_foto = str_replace('__', '', $user_profile['profil_foto']);

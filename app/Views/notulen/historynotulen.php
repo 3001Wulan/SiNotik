@@ -93,105 +93,101 @@
                 </div>
             </div>
             <div class="content1">
-                <h1>Distribusi Notulensi</h1>
-                <div class="content">
-                <div class="filters">
-                     <div class="category-select-container">
-                        <div class="iinput-container">
-                            <input type="text" class="category-select" placeholder="Kategori" readonly>
-                            <div class="iicon-container">
-                                <img src="<?= base_url('assets/images/down.png') ?>" alt="Dropdown Icon">
-                            </div>
-                        </div>
+    <h1>Distribusi Notulensi</h1>
+    <div class="content">
+        <div class="filters">
+            <div class="category-select-container">
+                <div class="iinput-container">
+                    <input type="text" class="category-select" placeholder="Kategori" readonly>
+                    <div class="iicon-container">
+                        <img src="<?= base_url('assets/images/down.png') ?>" alt="Dropdown Icon">
                     </div>
-                    <div class="search-box">
-                        <input type="text" placeholder="Search here...">
-                        <button type="button">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-                    <div class="show-entries">
-                        <label for="entries">Show:</label>
-                        <select id="entries" name="entries">
-                          <option value="2">2</option>
-                            <option value="5">5</option>
-                            <option value="10">10</option>
-                            <option value="15">15</option>
-                            <option value="20">20</option>
-                        </select>
-                        <label for="entries">Entries</label>
-                    </div>
-                </div>
-                <div class="table-wrapper">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>Tanggal</th>
-                                <th>Bidang</th>
-                                <th>Topik</th>
-                                <th>Nama</th>
-                                <th>Email</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                                <td>1</td>
-                                <td>01/02/2025</td>
-                                <td>APTIKA</td>
-                                <td>abc</td>
-                                <td>heni</td>
-                                <td>heni@gmail.com</td>
-                            </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>01/02/2025</td>
-                                <td>APTIKA</td>
-                                <td>abc</td>
-                                <td>mahir</td>
-                                <td>mahir@gmail.com</td>
-                            </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>01/02/2025</td>
-                                <td>IKP</td>
-                                <td>abc</td>
-                                <td>ulan</td>
-                                <td>ulan@gmail.com</td>
-                            </td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>01/02/2025</td>
-                                <td>Statistik & Persandian</td>
-                                <td>abc</td>
-                                <td>cindy</td>
-                                <td>cindy@gmail.com</td>
-                            </td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>01/02/2025</td>
-                                <td>APTIKA</td>
-                                <td>abc</td>
-                                <td>intan</td>
-                                <td>intan@gmail.com</td>
-                            </td>
-                            </tr>
-                            <tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="pagination">
-                    <button class="btn-prev">Previous</button>
-                    <span class="page-number">1</span>
-                    <button class="btn-next">Next</button>
                 </div>
             </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search here...">
+                <button type="button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="show-entries">
+                <label for="entries">Show:</label>
+                <select id="entries" name="entries">
+                    <option value="2">2</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+                <label for="entries">Entries</label>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Tanggal</th>
+                        <th>Bidang</th>
+                        <th>Topik</th>
+                        <th>Nama</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+    <?php if (!empty($history_emails)): ?>
+        <?php foreach ($history_emails as $index => $email): ?>
+            <tr>
+                <td><?= esc($index + 1) ?></td> <!-- No urut utama -->
+                <td><?= esc($email['tanggal_dibuat']) ?></td> <!-- Tanggal dari tabel notulensi -->
+                <td><?= esc($email['Bidang']) ?></td> <!-- Bidang dari tabel notulensi -->
+                <td><?= esc($email['judul']) ?></td> <!-- Topik dari tabel notulensi -->
+
+                <?php
+    // Pastikan email berbentuk string biasa, hilangkan tanda [] dan ""
+    $emailRaw = trim($email['email'], "[]"); // Hilangkan tanda []
+    $emailRaw = str_replace('"', '', $emailRaw); // Hilangkan tanda kutip "
+    
+    $emails = explode(',', $emailRaw); // Pecah menjadi array
+
+    $email_list = [];
+    $name_list = [];
+
+    foreach ($emails as $email_index => $single_email) {
+        $single_email = trim($single_email);
+        $name_part = explode('@', $single_email)[0];
+        $name_part = preg_replace('/[0-9]+/', '', $name_part);
+        $name_part = ucwords(str_replace(['.', '_'], ' ', $name_part));
+        
+        $name_list[] = (count($emails) > 1 ? ($email_index + 1) . '. ' : '') . $name_part;
+        $email_list[] = (count($emails) > 1 ? ($email_index + 1) . '. ' : '') . $single_email;
+    }
+?>
+
+<td><?= nl2br(esc(implode("\n", $name_list))) ?></td> <!-- Kolom Nama -->
+<td><?= nl2br(esc(implode("\n", $email_list))) ?></td> <!-- Kolom Email -->
+
+            </tr>
+        <?php endforeach; ?>
+    <?php else: ?>
+        <tr>
+            <td colspan="6">Tidak ada data tersedia</td>
+        </tr>
+    <?php endif; ?>
+</tbody>
+
+            </table>
+        </div>
+
+        <div class="pagination">
+            <button class="btn-prev">Previous</button>
+            <span class="page-number">1</span>
+            <button class="btn-next">Next</button>
         </div>
     </div>
+</div>
+
 <div id="logoutModal" class="modal">
     <div class="modal-content">
     <img src="<?= base_url('assets/images/logout_warning.png') ?>" alt="Logout Warning" class="popup-image">

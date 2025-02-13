@@ -39,7 +39,6 @@ class UserModel extends Model
 
         $changes = [];
         foreach ($data as $key => $value) {
-            // Pastikan nilai baru tidak kosong dan berbeda dengan nilai yang ada
             if (isset($user[$key]) && $user[$key] !== $value && !empty($value)) {
                 $changes[$key] = $value;
             }
@@ -52,7 +51,6 @@ class UserModel extends Model
 
         log_message('info', 'Data yang akan diperbarui: ' . print_r($changes, true));
 
-        // Tambahkan validasi sebelum update
         $this->allowedFields = array_keys($user);
 
         try {

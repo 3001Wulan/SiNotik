@@ -11,7 +11,6 @@ class PenggunaModel extends Model
     protected $allowedFields = ['username', 'nama', 'nip', 'email', 'role', 'bidang', 'jabatan', 'profil_foto', 'password'];
     protected $useTimestamps = true;
 
-    // Fungsi untuk mengambil data pengguna berdasarkan user_id
     public function getUserById($user_id)
     {
         $user = $this->where('user_id', $user_id)->first();
@@ -25,7 +24,6 @@ class PenggunaModel extends Model
         return $user;
     }
 
-    // Fungsi untuk update foto profil
     public function updateProfilePhoto($user_id, $photoName)
     {
         log_message('debug', "Memperbarui foto profil pengguna ID: $user_id dengan nama file: $photoName");
@@ -33,7 +31,6 @@ class PenggunaModel extends Model
         return $this->update($user_id, ['profil_foto' => $photoName]);
     }
 
-    // Fungsi untuk memverifikasi password
     public function verifyPassword($user_id, $password)
     {
         $user = $this->where('user_id', $user_id)->first();
@@ -45,7 +42,6 @@ class PenggunaModel extends Model
         return false;
     }
 
-    // Fungsi untuk memperbarui password
     public function updatePassword($user_id, $newPassword)
     {
         $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);

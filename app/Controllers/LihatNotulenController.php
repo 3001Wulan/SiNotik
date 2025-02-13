@@ -38,7 +38,7 @@ class LihatNotulenController extends BaseController
             'current_page' => 'notulensi',
             'allNotulensi' => $notulensiModel->findAll(),
             'allDokumentasi' => $dokumentasiModel->findAll(),
-            'feedbacks' => $feedbackModel->getFeedbackByNotulensiId($id) // Gunakan fungsi dari model
+            'feedbacks' => $feedbackModel->getFeedbackByNotulensiId($id) 
         ];
 
         log_message('info', 'Data yang dikirim ke view: ' . print_r($data, true));
@@ -53,7 +53,6 @@ class LihatNotulenController extends BaseController
         $notulensi_id = $this->request->getVar('notulensi_id');
         $isi = $this->request->getVar('isi');
 
-        // Validasi input
         if (empty($notulensi_id) || empty($isi)) {
             return $this->response->setJSON(['status' => 'error', 'message' => 'Feedback tidak boleh kosong.']);
         }

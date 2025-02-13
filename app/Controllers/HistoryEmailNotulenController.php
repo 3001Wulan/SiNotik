@@ -2,10 +2,14 @@
 
 namespace App\Controllers;
 
+use App\Models\HistoryEmailModel;
+
 class HistoryEmailNotulenController extends BaseController
 {
     public function index(): string
     {
-        return view('notulen/historynotulen');
+        $historyEmailModel = new HistoryEmailModel();
+        $data['history_emails'] = $historyEmailModel->getAllHistoryEmails();
+        return view('notulen/historynotulen', $data);
     }
 }

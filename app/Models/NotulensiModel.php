@@ -10,7 +10,7 @@ class NotulensiModel extends Model
     protected $primaryKey = 'notulensi_id';
     protected $allowedFields = [
         'user_id', 'judul', 'partisipan', 'agenda', 'isi', 'bidang', 'tanggal_dibuat',
-        'partisipan_non_pegawai', 'email'
+        'partisipan_non_pegawai'
     ];
 
     protected $validationRules = [
@@ -19,7 +19,6 @@ class NotulensiModel extends Model
         'tanggal_dibuat' => 'required|valid_date',
         'partisipan' => 'required',
         'partisipan_non_pegawai' => 'permit_empty', 
-        'email' => 'permit_empty|valid_email', 
         'isi' => 'required',
         'bidang' => 'permit_empty|max_length[255]',
     ];

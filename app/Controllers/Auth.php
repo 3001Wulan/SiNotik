@@ -25,7 +25,6 @@ class Auth extends BaseController
                 if (password_verify($password, $user['password'])) {
                     log_message('error', 'Login success for username: ' . $email);
 
-                    // Set session data
                     $session->set([
                         'logged_in' => true,
                         'user_id' => $user['user_id'],
@@ -35,7 +34,6 @@ class Auth extends BaseController
                         'profil_foto' => $user['profil_foto']
                     ]);
 
-                    // Redirect berdasarkan role pengguna
                     if ($user['role'] === 'admin') {
                         return redirect()->to('/admin/dashboard_admin');
                     } elseif ($user['role'] === 'pegawai') {
@@ -63,7 +61,6 @@ class Auth extends BaseController
     {
         $session = session();
 
-        // Pastikan pengguna sudah login
         if (!$session->get('logged_in')) {
             return redirect()->to('/login');
         }
@@ -86,7 +83,6 @@ class Auth extends BaseController
     {
         $session = session();
 
-        // Pastikan pengguna sudah login
         if (!$session->get('logged_in')) {
             return redirect()->to('/login');
         }
@@ -106,15 +102,12 @@ class Auth extends BaseController
 {
     $session = session();
 
-    // Pastikan pengguna sudah login
     if (!$session->get('logged_in')) {
         return redirect()->to('/login');
     }
 
-    // Mendapatkan foto profil atau menggunakan default jika tidak ada
     $profil_foto = $session->get('profil_foto') ? $session->get('profil_foto') : 'delvaut.png';
 
-    // Menyiapkan data pengguna untuk dikirim ke view
     $userData = [
         'user_id' => $session->get('user_id'),
         'nama' => $session->get('nama'),
@@ -124,8 +117,6 @@ class Auth extends BaseController
     ];
 
     log_message('info', 'User Data for Notulensi: ' . print_r($userData, true));
-
-    // Mengirim data pengguna ke view notulen/detailnotulen
     return view('notulen/detailnotulen', $userData);
 }
 

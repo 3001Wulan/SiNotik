@@ -12,15 +12,13 @@ class Email extends BaseConfig
 
     public string $userAgent = 'CodeIgniter';
     public string $protocol = 'smtp';
-
-    // Konfigurasi SMTP Gmail
     public string $SMTPHost = 'smtp.gmail.com';       
     public string $SMTPUser = 'sinotik3@gmail.com'; 
-    public string $SMTPPass = 'rwto ztql tcks cooq';   // Ganti dengan App Password
+    public string $SMTPPass = 'rwto ztql tcks cooq';   
     public int $SMTPPort = 587;                       
     public int $SMTPTimeout = 10;
     public bool $SMTPKeepAlive = false;
-    public string $SMTPCrypto = 'tls';               // Gunakan TLS
+    public string $SMTPCrypto = 'tls';               
 
     public bool $wordWrap = true;
     public int $wrapChars = 76;
@@ -34,6 +32,5 @@ class Email extends BaseConfig
     public int $BCCBatchSize = 200;
     public bool $DSN = false;
 
-    // Debugging
-    public bool $SMTPDebug = true; // Ubah ke false jika tidak ingin melihat log SMTP
+    public bool $SMTPDebug = true; 
 }

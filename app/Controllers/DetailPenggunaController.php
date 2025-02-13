@@ -11,12 +11,10 @@ class DetailPenggunaController extends BaseController
     {
         $dataPenggunaModel = new DataPenggunaModel();
 
-        // Mengambil pengguna dengan role "notulensi" dan "pegawai"
         $data['users'] = $dataPenggunaModel->getUsersByRoles('notulensi', 'pegawai');
 
         $userModel = new UserModel();
 
-        // Mengambil profil pengguna berdasarkan sesi user_id
         $user_id = session()->get('user_id');
         $user_profile = $userModel->find($user_id);
 

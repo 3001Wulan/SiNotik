@@ -10,7 +10,6 @@ class PegawaiJadwalModel extends Model
     protected $primaryKey = 'id';
     protected $allowedFields = ['agenda', 'tanggal', 'waktu', 'lokasi', 'keterangan', 'user_id', 'status', 'alasan']; // Tambahkan 'alasan'
 
-    // Mengambil semua jadwal rapat
     public function getAllJadwal()
     {
         $builder = $this->db->table($this->table);
@@ -21,7 +20,6 @@ class PegawaiJadwalModel extends Model
         return $query->getResultArray();
     }
 
-    // Mengambil jadwal rapat yang belum disetujui
     public function getPendingJadwal()
     {
         return $this->select('jadwal_rapat.*, user.Bidang')
@@ -30,12 +28,11 @@ class PegawaiJadwalModel extends Model
                     ->findAll();
     }
 
-    // Memperbarui status rapat dan menyimpan alasan jika ada
     public function updateMeetingStatus($meetingId, $status, $alasan = null)
     {
         $data = ['status' => $status];
         if ($alasan !== null) {
-            $data['alasan'] = $alasan; // Tambahkan alasan jika ada
+            $data['alasan'] = $alasan; 
         }
         
         return $this->update($meetingId, $data); 

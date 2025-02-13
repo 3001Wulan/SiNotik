@@ -25,7 +25,7 @@ $current_page = 'jadwalrapatnotulen';
                     </a>
                 </li>
                 <li>
-                    <a href="melihatpegawai" class="<?php echo ($current_page == 'notulensi_notulen') ? 'active' : 'active'; ?>">
+                    <a href="melihatpegawai" class="<?php echo ($current_page == 'notulensi_notulen') ? 'active' : 'inactive'; ?>">
                         <img src="<?php echo base_url('assets/images/codicon_book.png'); ?>" alt="Notulensi Icon" class="sidebar-icon"> Notulensi
                     </a>
                 </li>
@@ -35,7 +35,7 @@ $current_page = 'jadwalrapatnotulen';
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="<?php echo ($current_page == 'jadwalrapat') ? 'active' : 'inactive'; ?>">
+                    <a href="#" class="<?php echo ($current_page == 'jadwalrapat') ? 'active' : 'active'; ?>">
                         <img src="<?php echo base_url('assets/images/rapat.png'); ?>" alt="Jadwal Rapat Icon" class="sidebar-icon"> Jadwal Rapat
                     </a>
                     <li>

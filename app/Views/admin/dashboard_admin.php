@@ -40,7 +40,7 @@
                         Rapat
                     </a>
                     <div class="dropdown-content">
-                        <a href="melihatnotulen" class="dropdown-item">
+                        <a href="jadwalrapatadmin" class="dropdown-item">
                             <img src="<?= base_url('assets/images/buat.png') ?>" alt="Daftar Notulensi Icon">
                             <span>Buat Jadwal Rapat</span>
                         </a>
@@ -52,7 +52,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="#" class="inactive">
+                    <a href="historyadmin" class="inactive">
                         <img src="<?php echo base_url('assets/images/distribusi.png'); ?>" alt="Distribusi Notulensi Icon" class="sidebar-icon">
                         Distribusi Notulensi
                     </a>

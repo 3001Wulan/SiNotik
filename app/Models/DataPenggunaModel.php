@@ -11,12 +11,10 @@ class DataPenggunaModel extends Model
     protected $allowedFields = ['username', 'nama', 'nip', 'email', 'password', 'role', 'profil_foto', 'alamat', 'jabatan', 'tanggallahir'];
     protected $useTimestamps = true;
 
-    // Mendapatkan semua pengguna berdasarkan role tertentu
     public function getUsersByRole($role)
     {
         log_message('info', 'Mencoba mengambil pengguna dengan role ' . $role);
 
-        // Mengambil data pengguna berdasarkan role
         $users = $this->where('role', $role)->findAll();
 
         if (!$users) {
@@ -28,12 +26,9 @@ class DataPenggunaModel extends Model
         return $users;
     }
 
-    // Mendapatkan semua pengguna berdasarkan dua role tertentu
     public function getUsersByRoles($role1, $role2)
     {
         log_message('info', 'Mencoba mengambil pengguna dengan role ' . $role1 . ' dan ' . $role2);
-
-        // Mengambil data pengguna berdasarkan dua role
         $users = $this->where('role', $role1)
                       ->orWhere('role', $role2)
                       ->findAll();
@@ -47,7 +42,6 @@ class DataPenggunaModel extends Model
         return $users;
     }
 
-    // Mendapatkan pengguna berdasarkan user_id
     public function getUserById($user_id)
     {
         log_message('info', 'Mencoba mengambil profil pengguna dengan ID ' . $user_id);
@@ -63,7 +57,6 @@ class DataPenggunaModel extends Model
         return $user;
     }
 
-    // Update data pengguna berdasarkan user_id
     public function updateUser($user_id, $data)
     {
         $user = $this->find($user_id);
@@ -77,13 +70,11 @@ class DataPenggunaModel extends Model
 
         $changes = [];
         foreach ($data as $key => $value) {
-            // Pastikan nilai baru tidak kosong dan berbeda dengan nilai yang ada
             if (isset($user[$key]) && $user[$key] !== $value && !empty($value)) {
                 $changes[$key] = $value;
             }
         }
 
-        // Jika tidak ada perubahan yang valid
         if (empty($changes)) {
             log_message('info', 'Tidak ada perubahan valid untuk pengguna ID ' . $user_id . '. Pembaruan tidak diperlukan.');
             return false;
@@ -91,11 +82,10 @@ class DataPenggunaModel extends Model
 
         log_message('info', 'Data yang akan diperbarui: ' . print_r($changes, true));
 
-        // Tambahkan validasi sebelum update
         $this->allowedFields = array_keys($user);
 
         try {
-            // Cek apakah ada perubahan yang valid untuk diproses
+
             $result = $this->update($user_id, $changes);
 
             if ($result) {
@@ -111,7 +101,6 @@ class DataPenggunaModel extends Model
         }
     }
 
-    // Fungsi untuk menambahkan pengguna baru
     public function addUser($data)
     {
         try {
@@ -124,7 +113,6 @@ class DataPenggunaModel extends Model
         }
     }
 
-    // Fungsi untuk menghapus pengguna berdasarkan user_id
     public function deleteUser($user_id)
     {
         $user = $this->find($user_id);

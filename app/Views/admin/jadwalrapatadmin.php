@@ -13,19 +13,19 @@
             </div>
             <ul>
                 <li class="dashboard">
-                    <a href="<?= base_url('dashboard_admin') ?>" class="inactive">
+                    <a href="<?= base_url('admin/dashboard_admin') ?>" class="inactive">
                         <img src="<?= base_url('assets/images/dashboard.png') ?>" alt="Dashboard Icon" class="sidebar-icon">
                         Dashboard
                     </a>
                 </li>
                 <li>
-                    <a href="<?= base_url('data_pengguna') ?>" class="inactive">
+                    <a href="<?= base_url('admin/data_pengguna') ?>" class="inactive">
                         <img src="<?= base_url('assets/images/datapengguna.png') ?>" alt="Data Pengguna Icon" class="sidebar-icon">
                         Data Pengguna
                     </a>
                 </li>
                 <li class="riwayat-notulensi">
-                    <a href="<?= base_url('riwayatadmin') ?>" class="inactive">
+                    <a href="<?= base_url('admin/riwayatadmin') ?>" class="inactive">
                         <img src="<?= base_url('assets/images/riwayatnotulensi.png') ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
                         Riwayat Notulensi
                     </a>
@@ -41,7 +41,7 @@
                             Buat Jadwal Rapat
                         </a>
                         <div class="dropdown-separator"></div>
-                        <a href="<?= base_url('persetujuan-rapat') ?>" class="dropdown-item-rapat">
+                        <a href="<?= base_url('admin/persetujuanadmin') ?>" class="dropdown-item-rapat">
                             <img src="<?= base_url('assets/images/setuju.png') ?>" alt="Persetujuan Rapat Icon" class="dropdown-icon">
                             Persetujuan Rapat
                         </a>

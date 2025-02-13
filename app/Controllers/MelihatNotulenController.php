@@ -26,8 +26,7 @@ class MelihatNotulenController extends Controller
         $model = new NotulensiModel();
         $data['notulensi'] = $model->getAllNotulensi();
         $data['user'] = $userData;
-    
-        // Tambahkan variabel current_page
+ 
         $data['current_page'] = 'melihatnotulen';
     
         return view('notulen/melihatnotulen', $data);

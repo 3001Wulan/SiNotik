@@ -25,7 +25,7 @@
                     </a>
                 </li>
                 <li class="dropdown">
-                <a href="#" class="active notulensi">
+                    <a href="#" class="<?php echo ($current_page == 'melihat_notulen') ? 'active notulensi-pegawai ' : 'active'; ?>">
                         <img src="<?php echo base_url('assets/images/codicon_book.png'); ?>" alt="Notulensi Icon" class="sidebar-icon">
                         Notulensi
                     </a>
@@ -202,30 +202,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const tableRows = document.querySelectorAll('table tbody tr');
     const categories = ['APTIKA', 'IKP', 'Statistik & Persandian'];
     let itemsPerPage = 5;
-    let currentPage = 1;
-    let totalPages = 0;
+    let currentPage = 1; // Deklarasikan currentPage di sini
+    let totalPages = 0; // Initialize totalPages
 
-    // Function to update the icon based on theme
-    function updateThemeIcon(theme) {
-        if (theme === 'dark-mode') {
-            moonIcon.src = '<?php echo base_url("assets/images/sun.png"); ?>';
-            moonIcon.alt = 'Light Mode';
-        } else {
-            moonIcon.src = '<?php echo base_url("assets/images/moon.png"); ?>';
-            moonIcon.alt = 'Dark Mode';
-        }
-    }
-
-    // Check saved theme in localStorage
+    // Cek tema yang disimpan di localStorage
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
         body.classList.remove('light-mode', 'dark-mode');
         body.classList.add(savedTheme);
-        updateThemeIcon(savedTheme);
     } else {
-        // Default to light mode
+        // Default ke light mode
         body.classList.add('light-mode');
-        updateThemeIcon('light-mode');
     }
 
     // Create category popup
@@ -295,67 +282,56 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = `<?= base_url('notulen/detailnotulen/') ?>${notulensiId}`;
     };
 
-    // Entries per page change handler
     document.getElementById('entries').addEventListener('change', function() {
         itemsPerPage = parseInt(this.value);
-        currentPage = 1; // Reset to first page when changing entries per page
         filterAndDisplayData();
     });
 
-    // Pagination handlers
     const prevButton = document.querySelector('.btn-prev');
     const nextButton = document.querySelector('.btn-next');
 
     prevButton.addEventListener('click', function() {
         if (currentPage > 1) {
             currentPage--;
-            filterAndDisplayData();
+            filterAndDisplayData(); // Panggil fungsi untuk memperbarui tampilan
         }
     });
 
     nextButton.addEventListener('click', function() {
         if (currentPage < totalPages) {
             currentPage++;
-            filterAndDisplayData();
+            filterAndDisplayData(); // Panggil fungsi untuk memperbarui tampilan
         }
     });
 
-    // Theme toggle handler
     moonIcon.addEventListener('click', function() {
-        const newTheme = body.classList.contains('light-mode') ? 'dark-mode' : 'light-mode';
-        
-        body.classList.remove('light-mode', 'dark-mode');
-        body.classList.add(newTheme);
-        
-        // Update the icon
-        updateThemeIcon(newTheme);
-        
-        // Save theme preference
-        localStorage.setItem('theme', newTheme);
+        body.classList.toggle('dark-mode');
+        body.classList.toggle('light-mode');
+
+        // Simpan tema yang dipilih ke localStorage
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark-mode');
+        } else {
+            localStorage.setItem('theme', 'light-mode');
+        }
     });
 
-    // Close category popup when clicking outside
     window.onclick = function(event) {
         if (!categoryPopup.contains(event.target) && !categorySelect.contains(event.target)) {
             categoryPopup.style.display = 'none';
         }
     };
 
-    // Initial data load
     filterAndDisplayData();
 
-    // Search handlers
     searchInput.addEventListener('input', function() {
-        currentPage = 1; // Reset to first page when searching
         filterAndDisplayData();
     });
 
     searchButton.addEventListener('click', function() {
-        currentPage = 1; // Reset to first page when searching
         filterAndDisplayData();
     });
 
-    // Profile dropdown handlers
     const profileIcon = document.getElementById('profile-icon');
     const dropdownMenu = document.getElementById('dropdownMenu');
 
@@ -368,30 +344,22 @@ document.addEventListener('DOMContentLoaded', function() {
         dropdownMenu.classList.remove('show');
     });
 
-    // Logout popup handlers
-    const logoutLink = document.getElementById('logoutLink');
+    const logoutLink = document.getElementById('logoutLink'); 
     const popupOverlay = document.getElementById('popupOverlay');
     const confirmLogout = document.getElementById('confirmLogout');
     const cancelLogout = document.getElementById('cancelLogout');
 
     logoutLink.addEventListener('click', (event) => {
-        event.preventDefault();
-        popupOverlay.style.display = 'block';
+        event.preventDefault(); 
+        popupOverlay.style.display = 'block'; 
     });
 
     confirmLogout.addEventListener('click', () => {
-        window.location.href = '/';
+        window.location.href = '/'; 
     });
 
     cancelLogout.addEventListener('click', () => {
-        popupOverlay.style.display = 'none';
-    });
-
-    // Close popup when clicking outside
-    popupOverlay.addEventListener('click', (event) => {
-        if (event.target === popupOverlay) {
-            popupOverlay.style.display = 'none';
-        }
+        popupOverlay.style.display = 'none'; 
     });
 });
 </script>

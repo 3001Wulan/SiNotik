@@ -9,15 +9,12 @@ class UbahPasswordController extends BaseController
     public function ubah()
     {
         if ($this->request->getMethod() === 'POST') {
-            // Mengambil data dari form
             $password = $this->request->getPost('password');
             $newPassword = $this->request->getPost('new-password');
             $confirmPassword = $this->request->getPost('confirm-password');
 
-            // Log data yang diterima (hanya untuk debugging)
             log_message('debug', 'Data form diterima untuk ubah password.');
 
-            // Validasi input
             if (empty($password) || empty($newPassword) || empty($confirmPassword)) {
                 session()->setFlashdata('errors', ['Semua field harus diisi.']);
                 log_message('error', 'Field tidak lengkap dalam permintaan ubah password.');
@@ -30,8 +27,7 @@ class UbahPasswordController extends BaseController
                 return redirect()->back()->withInput();
             }
 
-            // Ambil user_id dari session (pastikan sudah login)
-            $userId = session()->get('user_id'); // Asumsi user_id disimpan di session
+            $userId = session()->get('user_id'); 
             if (!$userId) {
                 session()->setFlashdata('errors', ['Anda belum login.']);
                 log_message('error', 'User tidak ditemukan di session.');
@@ -40,14 +36,12 @@ class UbahPasswordController extends BaseController
 
             $penggunaModel = new PenggunaModel();
 
-            // Verifikasi password lama
             if (!$penggunaModel->verifyPassword($userId, $password)) {
                 session()->setFlashdata('errors', ['Password lama salah.']);
                 log_message('error', 'Password lama salah untuk user_id: ' . $userId);
                 return redirect()->back()->withInput();
             }
 
-            // Perbarui password
             try {
                 if ($penggunaModel->updatePassword($userId, $newPassword)) {
                     session()->setFlashdata('success', 'Password berhasil diperbarui!');
@@ -65,7 +59,6 @@ class UbahPasswordController extends BaseController
             return redirect()->back()->withInput();
         }
 
-        // Tampilkan halaman ubah password
         return view('admin/ubahpassword');
     }
 }

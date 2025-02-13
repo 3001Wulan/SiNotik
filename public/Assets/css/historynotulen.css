@@ -1595,3 +1595,31 @@ table tbody tr:last-child {
 .dark-mode .modal h2 {
     color: #fff;
 }
+    .table-wrapper {
+        overflow-x: auto; 
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: auto; 
+    }
+
+    th, td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: left; 
+        vertical-align: top;
+    }
+
+    th {
+        background-color: #f4f4f4;
+        font-weight: bold;
+    }
+
+    td:nth-child(1) { min-width: 50px; max-width: 80px; text-align: center; } 
+    td:nth-child(2) { min-width: 120px; max-width: 180px; } 
+    td:nth-child(3) { min-width: 150px; max-width: 200px; } 
+    td:nth-child(4) { min-width: 200px; max-width: 300px; } 
+    td:nth-child(5) { min-width: 200px; max-width: 350px; text-align: left; word-break: break-word; } 
+    td:nth-child(6) { min-width: 300px; max-width: 500px; text-align: left; word-break: break-word; } 

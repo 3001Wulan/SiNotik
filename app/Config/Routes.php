@@ -70,6 +70,7 @@ $routes->post('notulen-jadwal/save', 'NotulenJadwalController::save');
 $routes->get('/notulen/jadwalrapanotulent', 'NotulenJadwalController::getAllJadwal');
 $routes->get('admin/jadwalrapatadmin', 'NotulenJadwalrapatController::index');
 $routes->get('notulen/historynotulen', 'HistoryEmailNotulenController::index');
+$routes->get('admin/historyadmin', 'HistoryEmailAdminController ::index');
 
 
 
