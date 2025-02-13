@@ -1136,3 +1136,56 @@ DEBUG - 2025-02-13 07:22:26 --> Profile Picture: 7 (1).jpg
 DEBUG - 2025-02-13 07:22:26 --> User Name: wulandari yulianis
 DEBUG - 2025-02-13 07:22:26 --> User Role: admin
 INFO - 2025-02-13 07:22:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:10:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:10:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:10:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:10:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-13 08:10:43 --> Login attempt with username: jaja
+ERROR - 2025-02-13 08:10:44 --> Checking login for username: jaja
+ERROR - 2025-02-13 08:10:44 --> User data: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-31 05:12:25
+)
+
+ERROR - 2025-02-13 08:10:44 --> Password verify result for username jaja: Success
+ERROR - 2025-02-13 08:10:44 --> Login success for username: jaja
+INFO - 2025-02-13 08:10:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-13 08:10:44 --> User ID: 13
+DEBUG - 2025-02-13 08:10:44 --> Profile Picture: pegawai.png
+DEBUG - 2025-02-13 08:10:44 --> User Name: jungwon
+DEBUG - 2025-02-13 08:10:44 --> User Role: pegawai
+INFO - 2025-02-13 08:10:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:10:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:10:46 --> Mencoba mengambil profil pengguna dengan ID 13
+INFO - 2025-02-13 08:10:46 --> Pengguna dengan ID 13 ditemukan di database: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-31 05:12:25
+)
+
+INFO - 2025-02-13 08:10:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

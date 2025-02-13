@@ -94,6 +94,10 @@ $current_page = 'jadwalrapat';
                     <span class="close" onclick="closePopup()">&times;</span>
                     <h2>Buat Rapat</h2>
                     <form id="agendaForm">
+
+                       <label for="agenda">Topik:</label>
+                        <input type="text" id="agenda" name="agenda" required>
+
                         <label for="agenda">Agenda:</label>
                         <input type="text" id="agenda" name="agenda" required>
                         
