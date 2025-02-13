@@ -20,6 +20,7 @@ use CodeIgniter\Config\AutoloadConfig;
  *
  * @immutable
  */
+
 class Autoload extends AutoloadConfig
 {
     /**
@@ -41,6 +42,7 @@ class Autoload extends AutoloadConfig
      */
     public $psr4 = [
         APP_NAMESPACE => APPPATH,
+        'PHPMailer' => ROOTPATH . 'app/Libraries/PHPMailer-master/src',
     ];
 
     /**
@@ -91,4 +93,7 @@ class Autoload extends AutoloadConfig
      * @var list<string>
      */
     public $helpers = [];
+    
+
 }
+

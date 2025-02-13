@@ -104,7 +104,7 @@
 
             <div class="form-container">
                 <div class="stat-box">
-                    <form action="<?= base_url('notulen/simpan') ?>" method="POST" enctype="multipart/form-data">
+                    <form id="notulensiForm" action="<?= base_url('notulen/simpan') ?>" method="POST" enctype="multipart/form-data">
                         <label for="judul" class="label-judul">Topik</label>
                         <input type="text" id="judul" name="judul" class="input-judul" placeholder="Input Topik">
 
@@ -117,12 +117,11 @@
                         <label for="partisipan" class="label-partisipan">Partisipan <span class="label-pegawai">(Pegawai)</span></label>
                         <textarea id="partisipan" name="partisipan" class="textarea-partisipan" placeholder="Input Partisipan"></textarea>
 
-                        <label for="partisipan-2" class="label-partisipan-2">Partisipan <span class="label-non-pegawai">(Non-Pegawai)</span></label>
-                        <textarea id="partisipan" name="partisipan" class="textarea-partisipan" placeholder="Input Partisipan"></textarea>
-
+                        <label for="partisipan-2">Partisipan (Non-Pegawai)</label>
+                        <textarea id="partisipan_non_pegawai" name="partisipan_non_pegawai" class="textarea-partisipan" placeholder="Input Partisipan Non-Pegawai"></textarea>
+                        
                         <label for="email" class="label-email">Email</label>
-                        <textarea id="agenda" name="agenda" class="textarea-agenda" placeholder="Input Email"></textarea>
-                    </form>
+                        <textarea id="email" name="email" class="textarea-agenda" placeholder="Input Email"></textarea>
                 </div>
 
                 <div class="stat-box-2">
@@ -152,6 +151,7 @@
                         <img src="<?php echo base_url('assets/images/simpan.png'); ?>" alt="icon">
                         Simpan
                     </button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -170,6 +170,7 @@
     </div>
 
     <script>
+        
     document.addEventListener('DOMContentLoaded', function () {
         const themeIcon = document.getElementById('theme-icon');
         const body = document.body;
@@ -337,6 +338,11 @@ const profileIcon = document.getElementById('profile-icon');
     cancelLogout.addEventListener('click', () => {
         popupOverlay.style.display = 'none'; 
     });
+    document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector(".btn-save").addEventListener("click", function () {
+        let emailInput = document.getElementById("email").value;
+    });
+});
 
     </script>
 </body>

@@ -25,7 +25,7 @@ $current_page = 'jadwalrapatnotulen';
                     </a>
                 </li>
                 <li>
-                    <a href="melihatpegawai" class="<?php echo ($current_page == 'notulensi_notulen') ? 'active' : 'inactive'; ?>">
+                    <a href="melihatpegawai" class="<?php echo ($current_page == 'notulensi_notulen') ? 'active' : 'active'; ?>">
                         <img src="<?php echo base_url('assets/images/codicon_book.png'); ?>" alt="Notulensi Icon" class="sidebar-icon"> Notulensi
                     </a>
                 </li>

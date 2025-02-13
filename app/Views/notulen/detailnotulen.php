@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Daftar Notulensi</title>
-  <link rel="stylesheet" href="<?= base_url('assets/css/detailnotulen.css') ?>">
+  <link rel="stylesheet" href="<?= base_url('assets/css/detailnotulennotulen.css') ?>">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>

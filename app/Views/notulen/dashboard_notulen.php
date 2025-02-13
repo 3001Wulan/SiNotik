@@ -51,7 +51,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="inactive">
+                    <a href="historynotulen" class="inactive">
                         <img src="<?php echo base_url('assets/images/distribusi.png'); ?>" alt="Distribusi Notulensi Icon" class="sidebar-icon">
                         Distribusi Notulensi
                     </a>

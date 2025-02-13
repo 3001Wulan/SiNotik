@@ -6,13 +6,15 @@ use CodeIgniter\Model;
 
 class RiwayatModel extends Model
 {
-    protected $table = 'notulensi';  // Nama tabel yang digunakan
-    protected $primaryKey = 'notulensi_id'; // Primary key dari tabel notulensi
+    protected $table = 'riwayatnotulensi';  
+    protected $primaryKey = 'notulensi_id'; 
 
-    // Fungsi untuk mengambil data notulensi dengan informasi terkait
+    protected $allowedFields = [
+        'notulensi_id'
+    ];
+
     public function getNotulensWithIsi()
     {
-        // Menjalankan query dengan join ke tabel terkait
         return $this->db->table('notulensi')
                         ->select('
                             notulensi.*, 
@@ -26,34 +28,19 @@ class RiwayatModel extends Model
                         ->join('dokumentasi', 'dokumentasi.notulensi_id = notulensi.notulensi_id')
                         ->join('user', 'user.user_id = notulensi.user_id')
                         ->get()
-                        ->getResultArray();  // Mengembalikan hasil query dalam bentuk array
+                        ->getResultArray();  
     }
 
-    // Fungsi untuk menghapus data berdasarkan ID
     public function deleteNotulensiById($id)
     {
-        // Memulai transaksi untuk penghapusan data
         $this->db->transStart();
-
-        // Menghapus data terkait di tabel 'dokumentasi'
         $this->db->table('dokumentasi')->delete(['notulensi_id' => $id]);
-
-        // Menghapus data dari tabel 'riwayatnotulensi'
         $this->db->table('riwayatnotulensi')->delete(['notulensi_id' => $id]);
-
-        // Menghapus data dari tabel 'notulensi'
         $this->db->table('notulensi')->delete(['notulensi_id' => $id]);
-
-        // Menyelesaikan transaksi
         $this->db->transComplete();
-
-        // Mengecek apakah transaksi berhasil
         if ($this->db->transStatus() === FALSE) {
-            // Jika transaksi gagal, mengembalikan false
             return false;
         }
-
-        // Jika penghapusan berhasil, mengembalikan true
         return true;
     }
 }

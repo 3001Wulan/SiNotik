@@ -25,10 +25,8 @@ class DokumentasiModel extends Model
             'max_length' => 'Nama file foto dokumentasi tidak boleh lebih dari 255 karakter.',
         ],
     ];
-
-    // Menambahkan metode untuk mendapatkan dokumentasi berdasarkan notulensi_id
     public function getDokumentasiByNotulensiId($notulensiId)
     {
-        return $this->where('notulensi_id', $notulensiId)->findAll(); // Mengambil semua dokumentasi yang sesuai dengan notulensi_id
+        return $this->where('notulensi_id', $notulensiId)->findAll(); 
     }
 }
