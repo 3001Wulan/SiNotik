@@ -48,19 +48,8 @@
                 <li class="dropdown">
                 <a href="#" class="inactive">
                     <img src="<?php echo base_url('assets/images/rapat.png'); ?>" alt="Notulensi Icon" class="sidebar-icon">
-                    <span>Rapat</span>
+                    <span>Jadwal Rapat</span>
                 </a>
-                    <div class="dropdown-content">
-                        <a href="melihatnotulen" class="dropdown-item">
-                            <img src="<?= base_url('assets/images/edit.png') ?>" alt="Daftar Notulensi Icon">
-                            <span>Buat Jadwal Rapat</span>
-                        </a>
-                        
-                        <a href="buatnotulen" class="dropdown-item">
-                            <img src="<?= base_url('assets/images/setuju.png') ?>" alt="Buat Notulensi Icon">
-                            <span>Persetujuan Rapat</span>
-                        </a>
-                    </div>
                 </li>
                 <li>
                     <a href="#" class="active distribusi-notulensi">
