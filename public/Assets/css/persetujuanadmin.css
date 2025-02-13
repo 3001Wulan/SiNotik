@@ -483,11 +483,11 @@ li:hover .dropdown-content {
 }
 
 .theme-icon {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 37%;
     transform: translate(-50%, -50%);
     transition: opacity 0.3s ease;
 }

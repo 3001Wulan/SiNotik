@@ -191,17 +191,30 @@ document.addEventListener('DOMContentLoaded', function() {
     const tableRows = document.querySelectorAll('table tbody tr');
     const categories = ['APTIKA', 'IKP', 'Statistik & Persandian'];
     let itemsPerPage = 5;
-    let currentPage = 1; // Deklarasikan currentPage di sini
-    let totalPages = 0; // Initialize totalPages
+    let currentPage = 1;
+    let totalPages = 0;
 
-    // Cek tema yang disimpan di localStorage
+    // Function to update the icon based on theme
+    function updateThemeIcon(theme) {
+        if (theme === 'dark-mode') {
+            moonIcon.src = '<?php echo base_url("assets/images/sun.png"); ?>';
+            moonIcon.alt = 'Light Mode';
+        } else {
+            moonIcon.src = '<?php echo base_url("assets/images/moon.png"); ?>';
+            moonIcon.alt = 'Dark Mode';
+        }
+    }
+
+    // Check saved theme in localStorage
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
         body.classList.remove('light-mode', 'dark-mode');
         body.classList.add(savedTheme);
+        updateThemeIcon(savedTheme);
     } else {
-        // Default ke light mode
+        // Default to light mode
         body.classList.add('light-mode');
+        updateThemeIcon('light-mode');
     }
 
     // Create category popup
@@ -273,6 +286,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('entries').addEventListener('change', function() {
         itemsPerPage = parseInt(this.value);
+        currentPage = 1; // Reset to first page when changing entries
         filterAndDisplayData();
     });
 
@@ -282,27 +296,29 @@ document.addEventListener('DOMContentLoaded', function() {
     prevButton.addEventListener('click', function() {
         if (currentPage > 1) {
             currentPage--;
-            filterAndDisplayData(); // Panggil fungsi untuk memperbarui tampilan
+            filterAndDisplayData();
         }
     });
 
     nextButton.addEventListener('click', function() {
         if (currentPage < totalPages) {
             currentPage++;
-            filterAndDisplayData(); // Panggil fungsi untuk memperbarui tampilan
+            filterAndDisplayData();
         }
     });
 
+    // Theme toggle handler with icon update
     moonIcon.addEventListener('click', function() {
-        body.classList.toggle('dark-mode');
-        body.classList.toggle('light-mode');
-
-        // Simpan tema yang dipilih ke localStorage
-        if (body.classList.contains('dark-mode')) {
-            localStorage.setItem('theme', 'dark-mode');
-        } else {
-            localStorage.setItem('theme', 'light-mode');
-        }
+        const newTheme = body.classList.contains('light-mode') ? 'dark-mode' : 'light-mode';
+        
+        body.classList.remove('light-mode', 'dark-mode');
+        body.classList.add(newTheme);
+        
+        // Update the icon
+        updateThemeIcon(newTheme);
+        
+        // Save theme preference
+        localStorage.setItem('theme', newTheme);
     });
 
     window.onclick = function(event) {
@@ -314,10 +330,12 @@ document.addEventListener('DOMContentLoaded', function() {
     filterAndDisplayData();
 
     searchInput.addEventListener('input', function() {
+        currentPage = 1; // Reset to first page when searching
         filterAndDisplayData();
     });
 
     searchButton.addEventListener('click', function() {
+        currentPage = 1; // Reset to first page when searching
         filterAndDisplayData();
     });
 
@@ -333,26 +351,30 @@ document.addEventListener('DOMContentLoaded', function() {
         dropdownMenu.classList.remove('show');
     });
 
-    // JavaScript untuk Popup Logout
-    const logoutLink = document.getElementById('logoutLink'); // Perbaikan ID
+    // Logout popup handlers
+    const logoutLink = document.getElementById('logoutLink');
     const popupOverlay = document.getElementById('popupOverlay');
     const confirmLogout = document.getElementById('confirmLogout');
     const cancelLogout = document.getElementById('cancelLogout');
 
-    // Menampilkan popup konfirmasi logout
     logoutLink.addEventListener('click', (event) => {
-        event.preventDefault(); // Mencegah link logout berfungsi langsung
-        popupOverlay.style.display = 'block'; // Menampilkan popup overlay
+        event.preventDefault();
+        popupOverlay.style.display = 'block';
     });
 
-    // Menyelesaikan logout ketika tombol "Ya" diklik
     confirmLogout.addEventListener('click', () => {
-        window.location.href = '/'; // Ganti dengan halaman logout atau proses logout
+        window.location.href = '/';
     });
 
-    // Menyembunyikan popup ketika tombol "Tidak" diklik
     cancelLogout.addEventListener('click', () => {
-        popupOverlay.style.display = 'none'; 
+        popupOverlay.style.display = 'none';
+    });
+
+    // Close popup when clicking outside
+    popupOverlay.addEventListener('click', (event) => {
+        if (event.target === popupOverlay) {
+            popupOverlay.style.display = 'none';
+        }
     });
 });
 </script>

@@ -68,7 +68,7 @@
         <div class="main-content">
             <div class="header">
                 <div class="theme-toggle">
-                    <img src="<?= base_url('assets/images/bulan.png') ?>" alt="Moon" class="theme-icon moon-icon">
+                    <img src="<?= base_url('assets/images/moon.png') ?>" alt="Moon" class="theme-icon moon-icon">
                     <img src="<?= base_url('assets/images/sun.png') ?>" alt="Sun" class="theme-icon sun-icon">
                 </div>
                 <div class="user-info">

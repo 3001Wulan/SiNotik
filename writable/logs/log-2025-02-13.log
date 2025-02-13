@@ -1189,3 +1189,160 @@ INFO - 2025-02-13 08:10:46 --> Pengguna dengan ID 13 ditemukan di database: Arra
 )
 
 INFO - 2025-02-13 08:10:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:27:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:27:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:27:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:27:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-13 08:27:24 --> Login attempt with username: dadang
+ERROR - 2025-02-13 08:27:24 --> Checking login for username: dadang
+ERROR - 2025-02-13 08:27:24 --> User data: Array
+(
+    [user_id] => 32
+    [username] => dadang
+    [nama] => cindy arwinda 
+    [nip] => 098765432234567892
+    [email] => dadang@gmail.com
+    [password] => $2y$10$FKo1RqxUsHWcoWzbk5ZZae9C4Al32xjQuyf99kyXR4CMMYtDOyMVC
+    [role] => notulensi
+    [Bidang] => aptika
+    [profil_foto] => 2.jpg
+    [alamat] => 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-17 09:26:42
+    [updated_at] => 2025-02-11 14:05:41
+)
+
+ERROR - 2025-02-13 08:27:25 --> Password verify result for username dadang: Success
+ERROR - 2025-02-13 08:27:25 --> Login success for username: dadang
+INFO - 2025-02-13 08:27:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-13 08:27:25 --> User ID: 32
+DEBUG - 2025-02-13 08:27:25 --> Profile Picture: 2.jpg
+DEBUG - 2025-02-13 08:27:25 --> User Name: cindy arwinda 
+DEBUG - 2025-02-13 08:27:25 --> User Role: notulensi
+INFO - 2025-02-13 08:27:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:27:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:27:31 --> Data pengguna ditemukan: user_id = 32
+INFO - 2025-02-13 08:27:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:27:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:27:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:27:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:27:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:27:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:27:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-13 08:27:56 --> Login attempt with username: jaja
+ERROR - 2025-02-13 08:27:56 --> Checking login for username: jaja
+ERROR - 2025-02-13 08:27:56 --> User data: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-31 05:12:25
+)
+
+ERROR - 2025-02-13 08:27:56 --> Password verify result for username jaja: Success
+ERROR - 2025-02-13 08:27:56 --> Login success for username: jaja
+INFO - 2025-02-13 08:27:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-13 08:27:56 --> User ID: 13
+DEBUG - 2025-02-13 08:27:56 --> Profile Picture: pegawai.png
+DEBUG - 2025-02-13 08:27:56 --> User Name: jungwon
+DEBUG - 2025-02-13 08:27:56 --> User Role: pegawai
+INFO - 2025-02-13 08:27:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:28:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:28:05 --> Data pengguna ditemukan: user_id = 13
+INFO - 2025-02-13 08:28:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:28:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:28:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:28:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:28:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-13 08:28:25 --> Login attempt with username: lili
+ERROR - 2025-02-13 08:28:25 --> Checking login for username: lili
+ERROR - 2025-02-13 08:28:25 --> User data: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => wulandari yulianis
+    [nip] => 123456780123456789
+    [email] => bismillah@gmail.com
+    [password] => $2y$10$GNfd6zIA4kK/7vX47gN7eepuS.AXjm5tSpBgx7YvxRDjgGubdAS0K
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => 7 (1).jpg
+    [alamat] => jalan  saja
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-09
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-02-12 03:02:39
+)
+
+ERROR - 2025-02-13 08:28:25 --> Password verify result for username lili: Success
+ERROR - 2025-02-13 08:28:25 --> Login success for username: lili
+INFO - 2025-02-13 08:28:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-13 08:28:26 --> User ID: 9
+DEBUG - 2025-02-13 08:28:26 --> Profile Picture: 7 (1).jpg
+DEBUG - 2025-02-13 08:28:26 --> User Name: wulandari yulianis
+DEBUG - 2025-02-13 08:28:26 --> User Role: admin
+INFO - 2025-02-13 08:28:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:28:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:28:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-13 08:28:37 --> User ID: 9
+DEBUG - 2025-02-13 08:28:37 --> Profile Picture: 7 (1).jpg
+DEBUG - 2025-02-13 08:28:37 --> User Name: wulandari yulianis
+DEBUG - 2025-02-13 08:28:37 --> User Role: admin
+INFO - 2025-02-13 08:28:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:28:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:28:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-13 08:28:47 --> User ID: 9
+DEBUG - 2025-02-13 08:28:47 --> Profile Picture: 7 (1).jpg
+DEBUG - 2025-02-13 08:28:47 --> User Name: wulandari yulianis
+DEBUG - 2025-02-13 08:28:47 --> User Role: admin
+INFO - 2025-02-13 08:28:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:28:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:29:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:30:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:30:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:30:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:30:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-13 08:30:51 --> Login attempt with username: dadang
+ERROR - 2025-02-13 08:30:51 --> Checking login for username: dadang
+ERROR - 2025-02-13 08:30:51 --> User data: Array
+(
+    [user_id] => 32
+    [username] => dadang
+    [nama] => cindy arwinda 
+    [nip] => 098765432234567892
+    [email] => dadang@gmail.com
+    [password] => $2y$10$FKo1RqxUsHWcoWzbk5ZZae9C4Al32xjQuyf99kyXR4CMMYtDOyMVC
+    [role] => notulensi
+    [Bidang] => aptika
+    [profil_foto] => 2.jpg
+    [alamat] => 
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-17 09:26:42
+    [updated_at] => 2025-02-11 14:05:41
+)
+
+ERROR - 2025-02-13 08:30:51 --> Password verify result for username dadang: Success
+ERROR - 2025-02-13 08:30:51 --> Login success for username: dadang
+INFO - 2025-02-13 08:30:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-13 08:30:51 --> User ID: 32
+DEBUG - 2025-02-13 08:30:51 --> Profile Picture: 2.jpg
+DEBUG - 2025-02-13 08:30:51 --> User Name: cindy arwinda 
+DEBUG - 2025-02-13 08:30:51 --> User Role: notulensi
+INFO - 2025-02-13 08:30:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:30:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:30:55 --> Data pengguna ditemukan: user_id = 32
+INFO - 2025-02-13 08:30:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:30:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 08:30:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
