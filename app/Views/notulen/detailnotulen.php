@@ -89,69 +89,95 @@
           </div>
         </div>
       </div>
-
-      <!-- Page Title -->
-      <div class="page-title">
+ <!-- Page Title -->
+ <div class="page-title">
         <h2><?= esc($notulensi['judul']) ?></h2>
       </div>
 
       <!-- Main Content -->
-      <div class="main-content">
-        <div class="outer-blue-background">
-          <div class="left-blue"></div> <!-- Left blue section -->
-          <div class="feedback-container">
+<div class="main-content">
+    <div class="outer-blue-background">
+        <div class="left-blue"></div> <!-- Left blue section -->
+        <div class="feedback-container">
             <div class="feedback-content">
-              <div class="content-wrapper">
-                <div class="agenda-section">
-                  <div class="agenda-item main-agenda">
-                    <div class="agenda-header">
-                      <span class="agenda-title">Agenda:</span>
-                      <div class="agenda-numbers">
-                        <?php if (!empty($agenda)): ?>
-                          <?php foreach ($agenda as $index => $item): ?>
-                            <div><?= ($index + 1) . '. ' . esc($item) ?></div>
-                          <?php endforeach; ?>
-                        <?php endif; ?>
-                      </div>
+                <div class="content-wrapper">
+                    <div class="agenda-section">
+                        <div class="agenda-item main-agenda">
+                            <div class="agenda-header">
+                                <span class="agenda-title">Agenda:</span>
+                                <div class="agenda-numbers">
+                                    <?php if (!empty($agenda)): ?>
+                                        <?php foreach ($agenda as $index => $item): ?>
+                                            <div>
+                                                <?= preg_match('/^\d+\./', $item) ? esc($item) : ($index + 1) . '. ' . esc($item) ?>
+                                            </div>
+                                        <?php endforeach; ?>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agenda-item">
+                            <div class="agenda-title">Pembahasan</div>
+                            <?php foreach ($agenda as $index => $agendaItem): ?>
+                                <li><strong><?= esc($agendaItem) ?>:</strong> <p><?= nl2br(esc($agendaIsi[$index])) ?></p></li>
+                            <?php endforeach; ?>
+                        </div>
+
+                        <!-- Partisipan Section -->
+                        <div class="agenda-item">
+                            <div class="agenda-title">Partisipan</div>
+                            <?php if (!empty($notulensi['partisipan']) && is_array($notulensi['partisipan'])): ?>
+                                <div class="agenda-numbers">
+                                    <?php foreach ($notulensi['partisipan'] as $index => $partisipan): ?>
+                                        <div><?= ($index + 1) . '. ' . esc($partisipan) ?></div>
+                                    <?php endforeach; ?>
+                                </div>
+                            <?php elseif (!empty($notulensi['partisipan'])): ?>
+                                <p><?= esc($notulensi['partisipan']) ?></p>
+                            <?php else: ?>
+                                <p>Tidak ada partisipan yang terdaftar.</p>
+                            <?php endif; ?>
+                        </div>
+
+                        <!-- Partisipan Non Pegawai Section -->
+                        <div class="agenda-item">
+                            <div class="agenda-title">Partisipan Non Pegawai</div>
+                            <?php if (!empty($notulensi['partisipan_non_pegawai']) && is_array($notulensi['partisipan_non_pegawai'])): ?>
+                                <div class="agenda-numbers">
+                                    <?php foreach ($notulensi['partisipan_non_pegawai'] as $index => $nonPegawai): ?>
+                                        <div><?= ($index + 1) . '. ' . esc($nonPegawai) ?></div>
+                                    <?php endforeach; ?>
+                                </div>
+                            <?php elseif (!empty($notulensi['partisipan_non_pegawai'])): ?>
+                                <p><?= esc($notulensi['partisipan_non_pegawai']) ?></p>
+                            <?php else: ?>
+                                <p>Tidak ada partisipan non-pegawai yang terdaftar.</p>
+                            <?php endif; ?>
+                        </div>
                     </div>
-                  </div>
-                  <div class="agenda-item">
-                    <div class="agenda-title">Pembahasan</div>
-                    <?php foreach ($agenda as $index => $agendaItem): ?>
-                      <li>
-                        <?= esc($agendaItem) ?> : <?= esc($agendaIsi[$index] ?? 'Tidak ada isi untuk agenda ini') ?>
-                      </li>
-                    <?php endforeach; ?>
-                  </div>
-                </div>
 
-                <div class="documentation-section">
-                  <div class="documentation-images">
-                    <?php if (!empty($dokumentasi) && isset($dokumentasi[0]['foto_dokumentasi']) && $dokumentasi[0]['foto_dokumentasi']): ?>
-                      <img src="<?= base_url('uploads/' . esc($dokumentasi[0]['foto_dokumentasi'])) ?>" alt="Dokumentasi Foto" class="header-profile-img" id="profile-icon">
-                    <?php else: ?>
-                      <img src="" alt="Dokumentasi Foto" class="header-profile-img" id="profile-icon">
-                    <?php endif; ?>
-                  </div>
-                  <button class="download-button" id="downloadButton">Unduh</button>
-                </div>
+                    <div class="documentation-section">
+                        <div class="documentation-images">
+                            <?php if (!empty($dokumentasi) && isset($dokumentasi[0]['foto_dokumentasi']) && $dokumentasi[0]['foto_dokumentasi']): ?>
+                                <img src="<?= base_url('uploads/' . esc($dokumentasi[0]['foto_dokumentasi'])) ?>" alt="Dokumentasi Foto" class="header-profile-img" id="profile-icon">
+                            <?php else: ?>
+                                <img src="" alt="Dokumentasi Foto" class="header-profile-img" id="profile-icon">
+                            <?php endif; ?>
+                        </div>
+                        <button class="download-button" id="downloadButton">Unduh</button>
+                    </div>
 
-                <!-- Comment Section -->
-                <div class="comment-section">
-                  <button id="commentButton" class="comment-icon">
-                    <i class="fas fa-comment"></i> 
-                  </button>
+                    <!-- Comment Section -->
+                    <div class="comment-section">
+                        <button id="commentButton" class="comment-icon">
+                            <i class="fas fa-comment"></i> 
+                        </button>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
-</body>
-</html>
-
+</div>
 
         <!-- Pop-up untuk Komentar -->
         <div id="commentPopup" class="comment-popup" style="display: none;">

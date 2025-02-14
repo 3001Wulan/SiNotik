@@ -17,19 +17,19 @@
             </div>
             <ul>
                 <li>
-                <a href="#" class="inactive">
+                <a href="dashboard_admin" class="inactive">
                         <img src="<?php echo base_url('assets/images/dashboard.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
                         Dashboard
                     </a>
                 </li>
                 <li>
-                <a href="#" class="inactive">
+                <a href="data_penggguna" class="inactive">
                         <img src="<?php echo base_url('assets/images/datapengguna.png'); ?>" alt="Data Pengguna Icon" class="sidebar-icon">
                         Data Pengguna
                     </a>
                 </li>
                 <li>
-                <a href="#" class="inactive">
+                <a href="riwayatadmin" class="inactive">
                         <img src="<?php echo base_url('assets/images/riwayatnotulensi.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
                         Riwayat Notulensi
                     </a>
@@ -40,12 +40,12 @@
                     <span>Rapat</span>
                 </a>
                     <div class="dropdown-content">
-                        <a href="melihatnotulen" class="dropdown-item">
+                        <a href="jadwalrapatadmin" class="dropdown-item">
                             <img src="<?= base_url('assets/images/edit.png') ?>" alt="Daftar Notulensi Icon">
                             <span>Buat Jadwal Rapat</span>
                         </a>
                         
-                        <a href="buatnotulen" class="dropdown-item">
+                        <a href="persetujuanadmin" class="dropdown-item">
                             <img src="<?= base_url('assets/images/setuju.png') ?>" alt="Buat Notulensi Icon">
                             <span>Persetujuan Rapat</span>
                         </a>
@@ -58,7 +58,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="inactive">
+                    <a href="panduanadmin" class="inactive">
                         <img src="<?php echo base_url('assets/images/panduanpengguna.png'); ?>" alt="Panduan Pengguna Icon" class="sidebar-icon">
                         Panduan Pengguna
                     </a>
@@ -73,11 +73,11 @@
                 </div>
                 <div class="user-info">
                     <div class="user-text">
-                        <div class="user-name">Heni Yunida</div>
-                        <div class="user-role">Admin</div>
+                        <span><?= session()->get('nama') ? session()->get('nama') : 'Nama Tidak Ditemukan'; ?></span>
+                        <span><?= session()->get('role') ? ucfirst(session()->get('role')) : 'Role Tidak Ditemukan'; ?></span>
                     </div>
                     <div class="profile-container">
-                        <img src="<?= base_url('assets/images/profile.jpg') ?>" alt="Profile" class="profile-img">
+                    <img src="<?= base_url('assets/images/profiles/' . (file_exists('assets/images/profiles/' . session()->get('profil_foto')) ? session()->get('profil_foto') : 'delvaut.png')) ?>" alt="User Photo" class="profile-img" id="profile-icon">
                         <div class="profile-dropdown">
                             <a href="#" class="dropdown-item">
                             <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
@@ -135,53 +135,45 @@
                             </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                                <td>1</td>
-                                <td>01/02/2025</td>
-                                <td>APTIKA</td>
-                                <td>abc</td>
-                                <td>heni</td>
-                                <td>heni@gmail.com</td>
-                            </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>01/02/2025</td>
-                                <td>APTIKA</td>
-                                <td>abc</td>
-                                <td>mahir</td>
-                                <td>mahir@gmail.com</td>
-                            </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>01/02/2025</td>
-                                <td>IKP</td>
-                                <td>abc</td>
-                                <td>ulan</td>
-                                <td>ulan@gmail.com</td>
-                            </td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>01/02/2025</td>
-                                <td>Statistik & Persandian</td>
-                                <td>abc</td>
-                                <td>cindy</td>
-                                <td>cindy@gmail.com</td>
-                            </td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>01/02/2025</td>
-                                <td>APTIKA</td>
-                                <td>abc</td>
-                                <td>intan</td>
-                                <td>intan@gmail.com</td>
-                            </td>
-                            </tr>
-                            <tr>
-                        </tbody>
+                        <?php if (!empty($history_emails)): ?>
+        <?php foreach ($history_emails as $index => $email): ?>
+            <tr>
+                <td><?= esc($index + 1) ?></td>
+                <td><?= esc($email['tanggal_dibuat']) ?></td> 
+                <td><?= esc($email['Bidang']) ?></td> 
+                <td><?= esc($email['judul']) ?></td> 
+
+                <?php
+    $emailRaw = trim($email['email'], "[]"); 
+    $emailRaw = str_replace('"', '', $emailRaw); 
+    
+    $emails = explode(',', $emailRaw); 
+
+    $email_list = [];
+    $name_list = [];
+
+    foreach ($emails as $email_index => $single_email) {
+        $single_email = trim($single_email);
+        $name_part = explode('@', $single_email)[0];
+        $name_part = preg_replace('/[0-9]+/', '', $name_part);
+        $name_part = ucwords(str_replace(['.', '_'], ' ', $name_part));
+        
+        $name_list[] = (count($emails) > 1 ? ($email_index + 1) . '. ' : '') . $name_part;
+        $email_list[] = (count($emails) > 1 ? ($email_index + 1) . '. ' : '') . $single_email;
+    }
+?>
+
+<td><?= nl2br(esc(implode("\n", $name_list))) ?></td> <!-- Kolom Nama -->
+<td><?= nl2br(esc(implode("\n", $email_list))) ?></td> <!-- Kolom Email -->
+
+            </tr>
+        <?php endforeach; ?>
+    <?php else: ?>
+        <tr>
+            <td colspan="6">Tidak ada data tersedia</td>
+        </tr>
+    <?php endif; ?>
+</tbody>
                     </table>
                 </div>
                 <div class="pagination">

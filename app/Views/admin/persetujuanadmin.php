@@ -51,13 +51,13 @@
                     </div>
                 </li>
                 <li>
-                    <a href="#" class="inactive">
+                    <a href="historyadmin" class="inactive">
                         <img src="<?php echo base_url('assets/images/distribusi.png'); ?>" alt="Distribusi Notulensi Icon" class="sidebar-icon">
                         Distribusi Notulensi
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="inactive">
+                    <a href="panduanadmin" class="inactive">
                         <img src="<?php echo base_url('assets/images/panduanpengguna.png'); ?>" alt="Panduan Pengguna Icon" class="sidebar-icon">
                         Panduan Pengguna
                     </a>
@@ -73,11 +73,11 @@
                 </div>
                 <div class="user-info">
                 <div class="user-text">
-                    <div class="user-name">Heni Yunida</div>
-                    <div class="user-role">Admin</div>
+                    <span><?= session()->get('nama') ? session()->get('nama') : 'Nama Tidak Ditemukan'; ?></span>
+                    <span><?= session()->get('role') ? ucfirst(session()->get('role')) : 'Role Tidak Ditemukan'; ?></span>
                 </div>
                 <div class="profile-container">
-                    <img src="<?= base_url('assets/images/profile.jpg') ?>" alt="Profile" class="profile-img">
+                    <img src="<?= base_url('assets/images/profiles/' . (file_exists('assets/images/profiles/' . session()->get('profil_foto')) ? session()->get('profil_foto') : 'delvaut.png')) ?>" alt="User Photo" class="profile-img" id="profile-icon">
                     <div class="profile-dropdown">
                         <a href="#" class="dropdown-item">
                         <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">

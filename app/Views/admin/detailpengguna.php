@@ -41,25 +41,25 @@
                         Rapat
                     </a>
                     <div class="dropdown-content">
-                        <a href="melihatnotulen" class="dropdown-item">
+                        <a href="jadwalrapatadmin" class="dropdown-item">
                             <img src="<?= base_url('assets/images/buat.png') ?>" alt="Daftar Notulensi Icon">
                             <span>Buat Jadwal Rapat</span>
                         </a>
                         
-                        <a href="buatnotulen" class="dropdown-item">
+                        <a href="persetujuanadmin" class="dropdown-item">
                             <img src="<?= base_url('assets/images/edit.png') ?>" alt="Buat Notulensi Icon">
                             <span>Persetujuan Rapat</span>
                         </a>
                     </div>
                 </li>
                 <li>
-                    <a href="#" class="inactive">
+                    <a href="historyadmin" class="inactive">
                         <img src="<?php echo base_url('assets/images/distribusi.png'); ?>" alt="Distribusi Notulensi Icon" class="sidebar-icon">
                         Distribusi Notulensi
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="inactive">
+                    <a href="panduanadmin" class="inactive">
                         <img src="<?php echo base_url('assets/images/panduanpengguna.png'); ?>" alt="Panduan Pengguna Icon" class="sidebar-icon">
                         Panduan Pengguna
                     </a>

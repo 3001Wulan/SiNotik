@@ -32,7 +32,6 @@ class NotulenController extends Controller
 
     public function simpan()
 {
-
     $judul = $this->request->getPost('judul');
     $agenda = $this->request->getPost('agenda');
     $tanggal = $this->request->getPost('tanggal');
@@ -88,15 +87,62 @@ class NotulenController extends Controller
         $dokumentasiModel->save($dokumentasiData);
     }
 
+    
     $emailService = \Config\Services::email();
-    $emailService->setFrom('sinotik3@gmail.com', 'Notulensi');
+    $emailService->setFrom('sinotik3@gmail.com', 'Notulensi Diskominfo Solok Selatan');
     $emailService->setSubject('Notulensi Rapat: ' . $judul);
-    $message = "Notulensi Rapat\n\n";
-    $message .= "Judul: $judul\n";
-    $message .= "Agenda: $agenda\n";
-    $message .= "Pembahasan:\n$pembahasan\n\n";
-    $message .= "Untuk pertanyaan lebih lanjut, silakan hubungi kami di admin@example.com\n\n";
-    $message .= "Terima kasih,\nNotulensi - Notulensi Diskominfo Solok Selatan ";
+    log_message('info', "Memulai pengiriman email dengan subjek: $judul");
+    
+    $filePath = 'uploads/' . $fileName;
+    if (!file_exists($filePath)) {
+        log_message('error', "File gambar tidak ditemukan: $filePath");
+    } else {
+        log_message('info', "File gambar ditemukan: $filePath");
+        
+        // Pastikan gambar berhasil dibaca dan di-encode
+        $imageData = base64_encode(file_get_contents($filePath));
+        if (empty($imageData)) {
+            log_message('error', "Gambar gagal dikodekan ke Base64");
+        } else {
+            log_message('info', "Gambar berhasil dikodekan ke Base64");
+            // Tentukan tipe MIME sesuai dengan gambar yang digunakan (PNG/JPEG)
+            $imageSrc = 'data:image/' . pathinfo($fileName, PATHINFO_EXTENSION) . ';base64,' . $imageData;
+            log_message('info', "Dokumentasi gambar berhasil disisipkan ke email dengan Base64.");
+        }
+    }
+    
+    $message = "
+    <html>
+    <head>
+        <style>
+            body { font-family: Arial, sans-serif; line-height: 1.6; }
+            .highlight { font-weight: bold; }
+        </style>
+    </head>
+    <body>
+        <p><strong>Yth. Bapak/Ibu,</strong></p>
+        <p>Berikut adalah notulensi rapat yang telah diselenggarakan:</p>
+    
+        <p><strong>Judul Rapat:</strong> $judul</p>
+        <p><strong>Agenda:</strong><br> $agenda </p>
+    
+        <p><strong>Pembahasan:</strong><br> $pembahasan </p>
+    
+        <p><strong>Partisipan Pegawai:</strong><br> " . nl2br(implode("\n", (array) $partisipan)) . "</p>
+        <p><strong>Partisipan Non-Pegawai:</strong><br> " . nl2br(implode("\n", (array) $partisipan_non_pegawai)) . "</p>
+    
+        " . ($fileName ? "<p><strong>Dokumentasi:</strong><br> <img src='" . $imageSrc . "' alt='Dokumentasi Rapat' style='max-width: 100%; height: auto;'></p>" : "") . "
+    
+        <p>📧 Untuk pertanyaan lebih lanjut, silakan hubungi kami di <strong>admin@example.com</strong></p>
+    
+        <p>Salam,<br>  <strong>Diskominfo Solok Selatan</strong></p>
+    </body>
+    </html>";
+
+$emailService->setMessage($message);
+$emailService->setMailType('html'); 
+$emailService->send();
+
     $emails = preg_split('/[\s,]+/', $email);
     $validEmails = [];
     foreach ($emails as $emailAddress) {
@@ -142,6 +188,4 @@ class NotulenController extends Controller
 
     return redirect()->to('/notulen/melihatnotulen')->with('message', 'Notulensi berhasil disimpan dan email terkirim');
 }
-
-    
 }

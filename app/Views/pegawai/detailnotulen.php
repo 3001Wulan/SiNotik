@@ -85,61 +85,89 @@
       </div>
 
       <!-- Main Content -->
-      <div class="main-content">
-        <div class="outer-blue-background">
-          <div class="left-blue"></div> <!-- Left blue section -->
-          <div class="feedback-container">
+<div class="main-content">
+    <div class="outer-blue-background">
+        <div class="left-blue"></div> <!-- Left blue section -->
+        <div class="feedback-container">
             <div class="feedback-content">
-              <div class="content-wrapper">
-                <div class="agenda-section">
-                  <div class="agenda-item main-agenda">
-                    <div class="agenda-header">
-                      <span class="agenda-title">Agenda:</span>
-                      <div class="agenda-numbers">
-                        <?php if (!empty($agenda)): ?>
-                          <?php foreach ($agenda as $index => $item): ?>
-                            <div><?= ($index + 1) . '. ' . esc($item) ?></div>
-                          <?php endforeach; ?>
-                        <?php endif; ?>
-                      </div>
+                <div class="content-wrapper">
+                    <div class="agenda-section">
+                        <div class="agenda-item main-agenda">
+                            <div class="agenda-header">
+                                <span class="agenda-title">Agenda:</span>
+                                <div class="agenda-numbers">
+                                    <?php if (!empty($agenda)): ?>
+                                        <?php foreach ($agenda as $index => $item): ?>
+                                            <div>
+                                                <?= preg_match('/^\d+\./', $item) ? esc($item) : ($index + 1) . '. ' . esc($item) ?>
+                                            </div>
+                                        <?php endforeach; ?>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agenda-item">
+                            <div class="agenda-title">Pembahasan</div>
+                            <?php foreach ($agenda as $index => $agendaItem): ?>
+                                <li><strong><?= esc($agendaItem) ?>:</strong> <p><?= nl2br(esc($agendaIsi[$index])) ?></p></li>
+                            <?php endforeach; ?>
+                        </div>
+
+                        <!-- Partisipan Section -->
+                        <div class="agenda-item">
+                            <div class="agenda-title">Partisipan</div>
+                            <?php if (!empty($notulensi['partisipan']) && is_array($notulensi['partisipan'])): ?>
+                                <div class="agenda-numbers">
+                                    <?php foreach ($notulensi['partisipan'] as $index => $partisipan): ?>
+                                        <div><?= ($index + 1) . '. ' . esc($partisipan) ?></div>
+                                    <?php endforeach; ?>
+                                </div>
+                            <?php elseif (!empty($notulensi['partisipan'])): ?>
+                                <p><?= esc($notulensi['partisipan']) ?></p>
+                            <?php else: ?>
+                                <p>Tidak ada partisipan yang terdaftar.</p>
+                            <?php endif; ?>
+                        </div>
+
+                        <!-- Partisipan Non Pegawai Section -->
+                        <div class="agenda-item">
+                            <div class="agenda-title">Partisipan Non Pegawai</div>
+                            <?php if (!empty($notulensi['partisipan_non_pegawai']) && is_array($notulensi['partisipan_non_pegawai'])): ?>
+                                <div class="agenda-numbers">
+                                    <?php foreach ($notulensi['partisipan_non_pegawai'] as $index => $nonPegawai): ?>
+                                        <div><?= ($index + 1) . '. ' . esc($nonPegawai) ?></div>
+                                    <?php endforeach; ?>
+                                </div>
+                            <?php elseif (!empty($notulensi['partisipan_non_pegawai'])): ?>
+                                <p><?= esc($notulensi['partisipan_non_pegawai']) ?></p>
+                            <?php else: ?>
+                                <p>Tidak ada partisipan non-pegawai yang terdaftar.</p>
+                            <?php endif; ?>
+                        </div>
                     </div>
-                  </div>
-                  <div class="agenda-item">
-                    <div class="agenda-title">Pembahasan</div>
-                    <?php foreach ($agenda as $index => $agendaItem): ?>
-                      <li>
-                        <?= esc($agendaItem) ?> : <?= esc($agendaIsi[$index] ?? 'Tidak ada isi untuk agenda ini') ?>
-                      </li>
-                    <?php endforeach; ?>
-                  </div>
-                </div>
 
-                <div class="documentation-section">
-                  <div class="documentation-images">
-                    <?php if (!empty($dokumentasi) && isset($dokumentasi[0]['foto_dokumentasi']) && $dokumentasi[0]['foto_dokumentasi']): ?>
-                      <img src="<?= base_url('uploads/' . esc($dokumentasi[0]['foto_dokumentasi'])) ?>" alt="Dokumentasi Foto" class="header-profile-img" id="profile-icon">
-                    <?php else: ?>
-                      <img src="" alt="Dokumentasi Foto" class="header-profile-img" id="profile-icon">
-                    <?php endif; ?>
-                  </div>
-                  <button class="download-button" id="downloadButton">Unduh</button>
-                </div>
+                    <div class="documentation-section">
+                        <div class="documentation-images">
+                            <?php if (!empty($dokumentasi) && isset($dokumentasi[0]['foto_dokumentasi']) && $dokumentasi[0]['foto_dokumentasi']): ?>
+                                <img src="<?= base_url('uploads/' . esc($dokumentasi[0]['foto_dokumentasi'])) ?>" alt="Dokumentasi Foto" class="header-profile-img" id="profile-icon">
+                            <?php else: ?>
+                                <img src="" alt="Dokumentasi Foto" class="header-profile-img" id="profile-icon">
+                            <?php endif; ?>
+                        </div>
+                        <button class="download-button" id="downloadButton">Unduh</button>
+                    </div>
 
-                <!-- Comment Section -->
-                <div class="comment-section">
-                  <button id="commentButton" class="comment-icon">
-                    <i class="fas fa-comment"></i> 
-                  </button>
+                    <!-- Comment Section -->
+                    <div class="comment-section">
+                        <button id="commentButton" class="comment-icon">
+                            <i class="fas fa-comment"></i> 
+                        </button>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
-</body>
-</html>
+</div>
 
 
         <!-- Pop-up untuk Komentar -->
@@ -277,73 +305,121 @@
         }
       });
 
-      // PDF Download Functionality
       document.getElementById('downloadButton').addEventListener('click', function() {
-        const { jsPDF } = window.jspdf;
-        const doc = new jsPDF();
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF('p', 'mm', 'a4');
 
-        // Get the content you want to include in the PDF
-        const title = document.querySelector('.page-title h2').innerText;
-        const agendaItems = document.querySelectorAll('.agenda-section .agenda-numbers div');
-        const discussionItems = document.querySelectorAll('.agenda-section .agenda-item:last-child li');
-        const documentationImage = document.querySelector('.documentation-images img').src;
+  const marginLeft = 20;
+  const marginTop = 20;
+  const pageWidth = doc.internal.pageSize.getWidth();
+  const pageHeight = doc.internal.pageSize.getHeight();
 
-        // Add kop
-        doc.setFontSize(24);
-        const kopText1 = 'Dinas Kominfo Sook Selatan';
-        const kopText2 = `Tanggal: ${new Date().toLocaleDateString()}`;
-        const kopText3 = 'Notulensi Rapat';
+  let y = marginTop;
 
-        // Calculate the width of the text to center it
-        const pageWidth = doc.internal.pageSize.getWidth();
-        const textWidth1 = doc.getTextWidth(kopText1);
-        const textWidth2 = doc.getTextWidth(kopText2);
-        const textWidth3 = doc.getTextWidth(kopText3);
+  const checkPageSpace = (requiredHeight) => {
+    if (y + requiredHeight > pageHeight - marginTop) {
+      doc.addPage();
+      y = marginTop;
+    }
+  };
 
-        // Set the X position to center the text
-        const x1 = (pageWidth - textWidth1) / 2;
-        const x2 = (pageWidth - textWidth2) / 2;
-        const x3 = (pageWidth - textWidth3) / 2;
+  const title = document.querySelector('.page-title h2')?.innerText || 'Judul Tidak Tersedia';
+  const agendaItems = document.querySelectorAll('.agenda-section .agenda-numbers div');
+  const discussionItems = document.querySelectorAll('.agenda-section .agenda-item:last-child li');
+  const documentationImage = document.querySelector('.documentation-images img')?.src;
 
-        // Add the text to the PDF
-        doc.text(kopText1, x1, 10);
-        doc.setFontSize(12);
-        doc.text(kopText2, x2, 20);
-        doc.text(kopText3, x3, 30);
-        doc.line(10, 35, 200, 35); // Garis pemisah
+  // Header
+  doc.setFontSize(20);
+  doc.setFont('helvetica', 'bold');
+  doc.text('Dinas Kominfo Sook Selatan', pageWidth / 2, y, { align: 'center' });
 
-        // Add title
-        doc.setFontSize(22);
-        const titleWidth = doc.getTextWidth(title);
-        const titleX = (pageWidth - titleWidth) / 2;
-        doc.text(title, titleX, 40);
+  doc.setFontSize(12);
+  y += 8;
+  doc.text(`Tanggal: ${new Date().toLocaleDateString()}`, pageWidth / 2, y, { align: 'center' });
 
-        // Add agenda items
-        doc.setFontSize(16);
-        doc.text('Agenda:', 10, 50);
-        let y = 60;
-        agendaItems.forEach((item, index) => {
-          doc.text(`${index + 1}. ${item.innerText}`, 10, y);
-          y += 10;
-        });
+  y += 8;
+  doc.setFontSize(16);
+  doc.text('Notulensi Rapat', pageWidth / 2, y, { align: 'center' });
 
-        // Add discussion items
-        doc.setFontSize(16);
-        doc.text('Pembahasan:', 10, y);
-        y += 10;
-        discussionItems.forEach(item => {
-          doc.text(item.innerText, 10, y);
-          y += 10;
-        });
+  // Garis pemisah
+  y += 6;
+  doc.line(marginLeft, y, pageWidth - marginLeft, y);
+  y += 10;
 
-        // Add documentation image if available
-        if (documentationImage) {
-          doc.addImage(documentationImage, 'JPEG', 10, y, 180, 160); // Adjust dimensions as needed
-        }
+  // Judul Notulensi di Tengah
+  doc.setFontSize(14);
+  doc.text(title, pageWidth / 2, y, { align: 'center' });
+  y += 8;
 
-        // Save the PDF
-        doc.save('notulensi.pdf');
-      });
+  // Bagian Agenda
+  doc.setFontSize(12);
+  doc.setFont('helvetica', 'bold');
+  doc.text('Agenda:', marginLeft, y);
+  y += 6;
+  doc.setFont('helvetica', 'normal');
+
+  agendaItems.forEach((item, index) => {
+    // Mengambil teks agenda
+    const agendaText = item.textContent.trim();
+    
+    if (agendaText) {
+      checkPageSpace(8);
+      doc.text(`${agendaText}`, marginLeft, y, { maxWidth: pageWidth - 2 * marginLeft });
+      y += 6;
+    }
+  });
+
+  // Bagian Pembahasan
+  y += 8;
+  doc.setFont('helvetica', 'bold');
+  doc.text('Pembahasan:', marginLeft, y);
+  y += 6;
+  doc.setFont('helvetica', 'normal');
+
+  discussionItems.forEach((item, index) => {
+    // Mengambil teks pembahasan
+    const discussionText = item.textContent.trim();
+
+    if (discussionText) {
+      checkPageSpace(8);
+      doc.text(`${discussionText}`, marginLeft, y, { maxWidth: pageWidth - 2 * marginLeft });
+      y += 6;
+    }
+  });
+
+  // Bagian Dokumentasi (jika ada gambar)
+  if (documentationImage) {
+    y += 8;
+    doc.setFont('helvetica', 'bold');
+    doc.text('Dokumentasi:', marginLeft, y);
+    y += 6;
+
+    // Load gambar untuk mengetahui ukurannya
+    const img = new Image();
+    img.src = documentationImage;
+    img.onload = function () {
+      let imgWidth = pageWidth * 0.3; // Maksimal 30% dari lebar halaman
+      let imgHeight = (img.naturalHeight / img.naturalWidth) * imgWidth;
+
+      // Jika gambar terlalu tinggi, sesuaikan agar tidak keluar halaman
+      if (imgHeight > pageHeight - y - marginTop) {
+        const scaleFactor = (pageHeight - y - marginTop) / imgHeight;
+        imgWidth *= scaleFactor;
+        imgHeight *= scaleFactor;
+      }
+
+      // Tambahkan gambar ke PDF di tepi kiri
+      checkPageSpace(imgHeight);
+      doc.addImage(documentationImage, 'JPEG', marginLeft, y, imgWidth, imgHeight);
+      y += imgHeight + 6;
+
+      // Simpan PDF setelah gambar selesai dimuat
+      doc.save('notulensi.pdf');
+    };
+  } else {
+    doc.save('notulensi.pdf');
+  }
+});
 
     });
   </script>
