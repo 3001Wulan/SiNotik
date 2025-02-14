@@ -25,9 +25,21 @@ $current_page = 'jadwalrapatnotulen';
                     </a>
                 </li>
                 <li>
-                    <a href="melihatpegawai" class="<?php echo ($current_page == 'notulensi_notulen') ? 'active' : 'inactive'; ?>">
-                        <img src="<?php echo base_url('assets/images/codicon_book.png'); ?>" alt="Notulensi Icon" class="sidebar-icon"> Notulensi
+                <li class="dropdown">
+                    <a href="melihatpegawai" class="<?php echo ($current_page == 'melihat_pegawai') ? 'active notulensi-pegawai ' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/codicon_book.png'); ?>" alt="Notulensi Icon" class="sidebar-icon">
+                        Notulensi
                     </a>
+                    <div class="dropdown-content">
+                        <a href="melihatnotulen" class="dropdown-item">
+                            <img src="<?= base_url('assets/images/buat.png') ?>" alt="Daftar Notulensi Icon">
+                            <span>Daftar Notulensi</span>
+                        </a>
+                        
+                        <a href="buatnotulen" class="dropdown-item">
+                            <img src="<?= base_url('assets/images/edit.png') ?>" alt="Buat Notulensi Icon">
+                            <span>Buat Notulensi</span>
+                        </a>
                 </li>
                 <li>
                     <a href="riwayatadmin" class="<?php echo ($current_page == 'riwayat_notulensi') ? 'active' : 'inactive'; ?>">
@@ -95,6 +107,10 @@ $current_page = 'jadwalrapatnotulen';
                     <span class="close" onclick="closePopup()">&times;</span>
                     <h2>Buat Rapat</h2>
                     <form id="agendaForm">
+
+                        <label for="agenda">Topik:</label>
+                        <input type="text" id="agenda" name="agenda" required>
+                        
                         <label for="agenda">Agenda:</label>
                         <input type="text" id="agenda" name="agenda" required>
                         

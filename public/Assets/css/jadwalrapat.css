@@ -526,7 +526,7 @@ body.dark-mode .dropdown-menu a:hover {
     color: white;
 }
 .dark-mode .popup {
-    background: #333;
+    background:  #555; 
     color: white;
 }
 
@@ -565,11 +565,15 @@ body.dark-mode .dropdown-menu a:hover {
     background-color: #222;
     color: #fff;
 }
-
+.dark-mode .popup h2{
+    color: #fff;
+}
+.dark-mode .close{
+    color: #fff;
+}
 .dark-mode .sidebar {
     background-color: #333333;
 }
-
 .dark-mode .sidebar ul li a {
     color: #e0e0e0;
 }
@@ -737,6 +741,13 @@ h2 {
     border-radius: 5px;
     padding: 8px;
     resize: none; /* Nonaktifkan resize manual */
+}
+.dark-mode #reasonText {
+    width: 100%;
+    max-width: 480px; /* Batasi lebar maksimal */
+    height: 100px; /* Tinggi tetap */
+    font-size: 16px;
+    color: #fff;
 }
 /* Tombol */
 button {
