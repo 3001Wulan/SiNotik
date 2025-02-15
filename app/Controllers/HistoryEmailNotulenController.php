@@ -10,6 +10,7 @@ class HistoryEmailNotulenController extends BaseController
     {
         $historyEmailModel = new HistoryEmailModel();
         $data['history_emails'] = $historyEmailModel->getAllHistoryEmails();
+        $data['current_page'] = 'history_notulen';
         return view('notulen/historynotulen', $data);
     }
 }

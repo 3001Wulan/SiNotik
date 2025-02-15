@@ -261,10 +261,11 @@ body {
 }
 
 .agenda-title {
-    font-weight: 600;
-    color: #333;
+    font-weight: bold; 
+    color: #000;
     min-width: 70px;
 }
+
 
 .agenda-numbers {
     display: flex;
@@ -311,6 +312,12 @@ body {
 .agenda-item {
     margin-bottom: 12px;
 }
+.agenda-isi {
+    text-align: justify; 
+    line-height: 1.5; 
+    margin-bottom: 5px;
+}
+
 
 .agenda-list {
     list-style: none;

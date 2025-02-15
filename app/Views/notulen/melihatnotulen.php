@@ -8,7 +8,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="<?= base_url('assets/css/user-info.css') ?>">
-    
 </head>
 <body>
     <div class="container">
@@ -34,7 +33,6 @@
                             <img src="<?= base_url('assets/images/buat.png') ?>" alt="Daftar Notulensi Icon">
                             <span>Daftar Notulensi</span>
                         </a>
-                        
                         <a href="buatnotulen" class="dropdown-item">
                             <img src="<?= base_url('assets/images/edit.png') ?>" alt="Buat Notulensi Icon">
                             <span>Buat Notulensi</span>
@@ -48,13 +46,13 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="inactive">
+                    <a href="jadwalrapatnotulen" class="inactive">
                         <img src="<?php echo base_url('assets/images/rapat.png'); ?>" alt="Jadwal Rapat Icon" class="sidebar-icon">
                         Jadwal Rapat
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="inactive">
+                    <a href="historynotulen" class="inactive">
                         <img src="<?php echo base_url('assets/images/distribusi.png'); ?>" alt="Distribusi Notulensi Icon" class="sidebar-icon">
                         Distribusi Notulensi
                     </a>
@@ -126,11 +124,12 @@
                     <div class="show-entries">
                         <label for="entries">Show</label>
                         <select id="entries" name="entries">
-                            <option value="">Select</option>
+                            <option value="9999">Select</option>
                             <option value="5">5</option>
                             <option value="10">10</option>
                             <option value="15">15</option>
                             <option value="20">20</option>
+                             <!-- Opsi baru untuk menampilkan semua data -->
                         </select>
                         <span class="entries-text">entries</span>
                     </div>
@@ -284,6 +283,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('entries').addEventListener('change', function() {
         itemsPerPage = parseInt(this.value);
+        
+        // Jika "Show All" dipilih, set itemsPerPage ke jumlah yang sangat besar
+        if (itemsPerPage === 9999) {
+            itemsPerPage = tableRows.length; // Tampilkan semua data
+        }
+        
         filterAndDisplayData();
     });
 

@@ -20,13 +20,13 @@ $current_page = 'jadwalrapatnotulen';
             </div>
             <ul>
                 <li>
-                <a href="dashboard_pegawai" class="<?php echo ($current_page == 'dashboard') ? 'active' : 'inactive'; ?>">
+                <a href="dashboard_notulen" class="<?php echo ($current_page == 'dashboard') ? 'active' : 'inactive'; ?>">
                         <img src="<?php echo base_url('assets/images/dashboard.png'); ?>" alt="Dashboard Icon" class="sidebar-icon"> Dashboard
                     </a>
                 </li>
                 <li>
                 <li class="dropdown">
-                    <a href="melihatpegawai" class="<?php echo ($current_page == 'melihat_pegawai') ? 'active notulensi-pegawai ' : 'inactive'; ?>">
+                    <a href="" class="<?php echo ($current_page == 'melihat_pegawai') ? 'active notulensi-pegawai ' : 'inactive'; ?>">
                         <img src="<?php echo base_url('assets/images/codicon_book.png'); ?>" alt="Notulensi Icon" class="sidebar-icon">
                         Notulensi
                     </a>
@@ -42,7 +42,7 @@ $current_page = 'jadwalrapatnotulen';
                         </a>
                 </li>
                 <li>
-                    <a href="riwayatadmin" class="<?php echo ($current_page == 'riwayat_notulensi') ? 'active' : 'inactive'; ?>">
+                    <a href="riwayatanotulen" class="<?php echo ($current_page == 'riwayat_notulensi') ? 'active' : 'inactive'; ?>">
                         <img src="<?php echo base_url('assets/images/icon_riwayat.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon"> Riwayat Notulensi
                     </a>
                 </li>
@@ -51,7 +51,7 @@ $current_page = 'jadwalrapatnotulen';
                         <img src="<?php echo base_url('assets/images/rapat.png'); ?>" alt="Jadwal Rapat Icon" class="sidebar-icon"> Jadwal Rapat
                     </a>
                     <li>
-                    <a href="#" class="inactive">
+                    <a href="historynotulen" class="inactive">
                         <img src="<?php echo base_url('assets/images/distribusi.png'); ?>" alt="Distribusi Notulensi Icon" class="sidebar-icon">
                         Distribusi Notulensi
                     </a>
