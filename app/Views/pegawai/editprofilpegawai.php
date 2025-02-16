@@ -265,7 +265,7 @@
         });
 
         confirmLogout.addEventListener('click', () => {
-            window.location.href = '<?= base_url('/') ?>';
+            window.location.href = '<?= base_url('login') ?>';
         });
 
         function redirectToEditPage() {

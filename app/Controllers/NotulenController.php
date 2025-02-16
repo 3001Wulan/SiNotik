@@ -50,14 +50,24 @@ class NotulenController extends Controller
         $bidang = $bidang['bidang'] ?? 'default_bidang';
         
         $fileName = null;
+        $maxSize = 5 * 1024 * 1024; // 5MB dalam bytes
+        $allowedTypes = ['image/jpeg', 'image/png', 'image/gif']; // Hanya format gambar yang diperbolehkan
+        
         if ($file = $this->request->getFile('upload')) {
             if ($file->isValid() && !$file->hasMoved()) {
+                if ($file->getSize() > $maxSize) {
+                    return redirect()->back()->with('error', 'Ukuran file tidak boleh lebih dari 5MB.');
+                }
+                if (!in_array($file->getMimeType(), $allowedTypes)) {
+                    return redirect()->back()->with('error', 'Format file tidak diizinkan. Hanya JPG, PNG, dan GIF yang diperbolehkan.');
+                }
+        
                 $fileName = $file->getRandomName();
                 $file->move('./uploads', $fileName);
             } else {
                 return redirect()->back()->with('error', $file->getErrorString());
             }
-        }
+        }        
 
         $notulensiModel = new NotulensiModel();
         $notulensiData = [

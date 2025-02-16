@@ -5,11 +5,13 @@
     <title>Buat Jadwal Rapat</title>
     <link rel="stylesheet" href="<?= base_url('assets/css/jadwalrapatadmin.css') ?>">
 </head>
+<body>
+
     <div class="container">
         <!-- Sidebar -->
         <div class="sidebar">
             <div class="logo">
-                <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo">
+                <img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="Logo" class="logo-img">
             </div>
             <ul>
                 <li class="dashboard">

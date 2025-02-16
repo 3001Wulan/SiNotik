@@ -191,18 +191,15 @@
     const confirmLogout = document.getElementById('confirmLogout');
     const cancelLogout = document.getElementById('cancelLogout');
 
-    // Menampilkan popup konfirmasi logout
     logoutLink.addEventListener('click', (event) => {
-        event.preventDefault(); // Mencegah link logout berfungsi langsung
-        popupOverlay.style.display = 'block'; // Menampilkan popup overlay
+        event.preventDefault(); 
+        popupOverlay.style.display = 'block'; 
     });
 
-    // Menyelesaikan logout ketika tombol "Ya" diklik
     confirmLogout.addEventListener('click', () => {
-        window.location.href = '/'; // Ganti dengan halaman logout atau proses logout
+        window.location.href = 'login'; 
     });
 
-    // Menyembunyikan popup ketika tombol "Tidak" diklik
     cancelLogout.addEventListener('click', () => {
         popupOverlay.style.display = 'none'; 
     });

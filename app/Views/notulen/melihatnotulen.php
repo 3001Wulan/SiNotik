@@ -201,20 +201,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const tableRows = document.querySelectorAll('table tbody tr');
     const categories = ['APTIKA', 'IKP', 'Statistik & Persandian'];
     let itemsPerPage = 5;
-    let currentPage = 1; // Deklarasikan currentPage di sini
-    let totalPages = 0; // Initialize totalPages
+    let currentPage = 1; 
+    let totalPages = 0; 
 
-    // Cek tema yang disimpan di localStorage
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
         body.classList.remove('light-mode', 'dark-mode');
         body.classList.add(savedTheme);
     } else {
-        // Default ke light mode
         body.classList.add('light-mode');
     }
 
-    // Create category popup
     let categoryPopup = document.createElement('div');
     categoryPopup.className = 'category-popup';
     
@@ -283,10 +280,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('entries').addEventListener('change', function() {
         itemsPerPage = parseInt(this.value);
-        
-        // Jika "Show All" dipilih, set itemsPerPage ke jumlah yang sangat besar
+
         if (itemsPerPage === 9999) {
-            itemsPerPage = tableRows.length; // Tampilkan semua data
+            itemsPerPage = tableRows.length; 
         }
         
         filterAndDisplayData();
@@ -298,14 +294,14 @@ document.addEventListener('DOMContentLoaded', function() {
     prevButton.addEventListener('click', function() {
         if (currentPage > 1) {
             currentPage--;
-            filterAndDisplayData(); // Panggil fungsi untuk memperbarui tampilan
+            filterAndDisplayData(); 
         }
     });
 
     nextButton.addEventListener('click', function() {
         if (currentPage < totalPages) {
             currentPage++;
-            filterAndDisplayData(); // Panggil fungsi untuk memperbarui tampilan
+            filterAndDisplayData(); 
         }
     });
 
@@ -313,7 +309,6 @@ document.addEventListener('DOMContentLoaded', function() {
         body.classList.toggle('dark-mode');
         body.classList.toggle('light-mode');
 
-        // Simpan tema yang dipilih ke localStorage
         if (body.classList.contains('dark-mode')) {
             localStorage.setItem('theme', 'dark-mode');
         } else {
@@ -360,7 +355,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     confirmLogout.addEventListener('click', () => {
-        window.location.href = '/'; 
+        window.location.href = 'login'; 
     });
 
     cancelLogout.addEventListener('click', () => {

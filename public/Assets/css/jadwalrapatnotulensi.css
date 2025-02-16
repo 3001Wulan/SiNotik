@@ -917,3 +917,12 @@ button:hover {
         transform: translate(-50%, -50%);
     }
 }
+textarea {
+    resize: none; /* Mencegah perubahan ukuran */
+    width: 100%; /* Sesuaikan dengan kebutuhan */
+    height: 100px; /* Atur tinggi awal */
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5p
+}

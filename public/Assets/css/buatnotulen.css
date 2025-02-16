@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden;
 }
 
 .container {

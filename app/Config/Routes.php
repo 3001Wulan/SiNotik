@@ -50,9 +50,6 @@ $routes->get('admin/ubahpassword', 'UbahPasswordController::ubah');
 $routes->post('UbahPasswordController/ubah', 'UbahPasswordController::ubah');
 $routes->post('admin/ubahdatapengguna/(:num)/update', 'UbahDataController::updatePengguna/$1');
 $routes->post('UbahPasswordController/ubah', 'UbahPasswordController::ubah');
-$routes->get('assets/images/profiles/(:any)', function() {
-    return redirect()->to(base_url('/'));
-});
 $routes->post('save-feedback', 'LihatNotulenController::saveFeedback');
 $routes->post('lihatnotulen/saveFeedback', 'LihatNotulenController::saveFeedback');
 $routes->get('pegawai/lihatnotulen/(:num)', 'DetailnotulenController::lihatnotulen/$1');
@@ -73,6 +70,12 @@ $routes->get('notulen/historynotulen', 'HistoryEmailNotulenController::index');
 $routes->get('admin/historyadmin', 'HistoryEmailAdminController::index');
 $routes->get('admin/panduanadmin', 'PanduanAdminController::index');
 $routes->get('pegawai/panduanpegawai', 'PanduanPegawaiController::index');
+$routes->get('/jadwal-rapat', 'NotulenjadwalrapatController::index');
+$routes->post('/submit-jadwal', 'NotulenjadwalrapatController::submitJadwal');
+$routes->get('assets/images/profiles/(:any)', function () {
+    return redirect()->to('/login');
+});
+$routes->get('assets/images/profiles/(:any)', 'AuthRedirect::blockAccess');
 
 
 

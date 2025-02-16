@@ -278,7 +278,7 @@ window.addEventListener('DOMContentLoaded', () => {
         });
 
         confirmLogout.addEventListener('click', () => {
-            window.location.href = '<?= base_url('/') ?>';
+            window.location.href = '<?= base_url('login') ?>';
         });
     </script>
 </body>

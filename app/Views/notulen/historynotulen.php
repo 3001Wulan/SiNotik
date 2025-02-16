@@ -389,7 +389,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     window.confirmLogout = function() {
-        window.location.href = "<?= base_url('logout') ?>";
+        window.location.href = "<?= base_url('login') ?>";
     }
 
     // Global click handler for closing popups

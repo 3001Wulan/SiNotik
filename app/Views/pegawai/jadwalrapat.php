@@ -90,11 +90,11 @@ $current_page = 'jadwalrapat';
                     <h2>Buat Rapat</h2>
                     <form id="agendaForm">
 
-                       <label for="agenda">Topik:</label>
-                        <input type="text" id="agenda" name="agenda" required>
+                        <label for="topik">Topik:</label>
+                        <input type="text" id="topik" name="topik" required>
 
                         <label for="agenda">Agenda:</label>
-                        <input type="text" id="agenda" name="agenda" required>
+                        <textarea id="agenda" name="agenda" rows="4" required></textarea>
                         
                         <label for="tanggal">Tanggal:</label>
                         <input type="date" id="tanggal" name="tanggal" required>
@@ -137,6 +137,7 @@ $current_page = 'jadwalrapat';
                             <tr>
                                 <th>No</th>
                                 <th>Topik</th>
+                                <th>Agenda</th>
                                 <th>Bidang</th>
                                 <th>Tanggal</th>
                                 <th>Status</th>
@@ -147,7 +148,8 @@ $current_page = 'jadwalrapat';
                             <?php $no = 1; foreach ($jadwal as $row) : ?>
                                 <tr>
                                     <td><?= $no++; ?></td>
-                                    <td><?= esc($row['agenda']); ?></td>
+                                    <td><?= esc($row['Topik']); ?></td>
+                                    <td><?= is_array($row['agenda']) ? implode('<br>', array_map('esc', $row['agenda'])) : esc($row['agenda']); ?></td>
                                     <td><?= esc($row['Bidang']); ?></td>
                                     <td><?= esc(date('d/m/Y', strtotime($row['tanggal']))); ?></td>
                                     <td>

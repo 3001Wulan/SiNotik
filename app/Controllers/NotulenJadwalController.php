@@ -35,6 +35,7 @@ class NotulenJadwalController extends Controller
     public function save()
     {
         $model = new PegawaiJadwalModel();
+        $agenda = $this->request->getPost('topik');
         $agenda = $this->request->getPost('agenda');
         $tanggal = $this->request->getPost('tanggal');
         $waktu = $this->request->getPost('waktu');
@@ -49,6 +50,7 @@ class NotulenJadwalController extends Controller
         }
 
         $data = [
+            'topik' => $topik,
             'agenda' => $agenda,
             'tanggal' => $tanggal,
             'waktu' => $waktu,

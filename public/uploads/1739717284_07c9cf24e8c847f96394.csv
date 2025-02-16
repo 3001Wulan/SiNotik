@@ -1,0 +1,624 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Feb 15, 2025 at 02:18 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.26
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `sinotik`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dokumentasi`
+--
+
+CREATE TABLE `dokumentasi` (
+  `dokumentasi_id` int(11) NOT NULL,
+  `notulensi_id` int(11) NOT NULL,
+  `foto_dokumentasi` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `dokumentasi`
+--
+
+INSERT INTO `dokumentasi` (`dokumentasi_id`, `notulensi_id`, `foto_dokumentasi`) VALUES
+(7, 24, '1737522296_e30de4811cd8fff7bfcc.png'),
+(10, 27, '1737524818_ba551a20c47b9344245b.png'),
+(12, 29, '1737527174_5ea251670dabbf17b632.jpg'),
+(15, 32, '1737602617_76a013c1434405cb2d87.jpg'),
+(18, 35, '1738000425_bc512c9b9867d4013bda.png'),
+(37, 49, '1739334722_ec8fa5f34552aaa3ca03.png'),
+(43, 55, '1739335495_6ea6703031a62e49938e.png'),
+(44, 56, '1739335543_fb071a0870034c81f8ca.png'),
+(45, 57, '1739335734_69dc72273d53730b6466.png'),
+(46, 58, '1739335736_e8426d374b9e9e4fc2c1.png'),
+(47, 59, '1739335756_7befb79bf18fffbb4f20.png'),
+(48, 60, '1739335849_a40e77df708c510ed9dd.png'),
+(49, 61, '1739335857_0198f86a6fe715976562.png'),
+(50, 62, '1739336015_7101f6a1a79a76d30c81.png'),
+(191, 135, '1739498839_4ae515d01367204bc5dd.png'),
+(192, 136, '1739499121_f4c4502f266c6cce2735.jpg'),
+(193, 137, '1739499260_e6c28a859ff02e82990e.png'),
+(194, 138, '1739499460_132ec8cf117087b8eb60.png'),
+(195, 139, '1739499731_fe265a467d030a5273e2.png'),
+(196, 140, '1739499952_bff202e5649d2422c786.png'),
+(197, 141, '1739500120_9ba0ed53dee9d34ee056.png'),
+(198, 142, '1739500239_2f46e9edad77e9623894.png'),
+(199, 143, '1739500352_1b0939b63d22bb1c4edf.jpg'),
+(200, 144, '1739500590_dd18e049712983924b74.png'),
+(201, 145, '1739500814_73640570b27d4409836b.jpg'),
+(202, 146, '1739500892_726904bb4a52ecd217c7.png'),
+(203, 147, '1739501135_ba3b29ccd9dca99cbbe0.png'),
+(204, 148, '1739503698_8cc0ccfe5f69d7e45e70.png'),
+(205, 149, '1739503892_2c6fecaf3bb63a4d7776.png'),
+(206, 150, '1739504115_b43899611a7286cf8b0d.png'),
+(207, 151, '1739504246_bb17bf3b3ec7cdab924c.jpg'),
+(208, 152, '1739504489_fb3e6e5af17ab08bbb21.png'),
+(209, 153, '1739504761_e2979976231f34ffb065.jpg'),
+(210, 154, '1739504953_67f16dbab35de5ef9e79.png'),
+(211, 155, '1739505203_3a1975162ce6984db95a.png'),
+(212, 156, '1739505555_433ab3075fe7877fdca9.png'),
+(213, 157, '1739505724_f45388ea3fd98113a365.jpg'),
+(214, 158, '1739505911_d4bcc16dcc11e08b45cd.png'),
+(215, 159, '1739506098_1e5f9a2727bde66afc1e.png'),
+(216, 160, '1739506183_0f4f2c5baff50c7eaf48.png'),
+(217, 161, '1739506304_86857f4f44a674dc6822.png'),
+(218, 162, '1739506457_ca2cccfa2f774d2a53d3.png'),
+(219, 163, '1739506509_23a978f1becd3f8a472f.png'),
+(220, 164, '1739506530_41efc405ec8d3d475d90.png'),
+(221, 165, '1739506733_9b3a9c22363849de45a7.png'),
+(222, 166, '1739506861_6260d519eec0934e28e9.png'),
+(223, 167, '1739506877_9a1928efa92eb791b99c.png'),
+(224, 168, '1739506981_e38af3ca6a17bcc1e8b7.png'),
+(225, 169, '1739507299_abcea038912e4cc93ea2.png'),
+(226, 170, '1739507389_517e87cfedf021b10cbf.png'),
+(227, 171, '1739507447_e39fed110d4b1ebbebcf.png'),
+(228, 172, '1739507756_1ea1565f52e6b6242feb.png'),
+(229, 173, '1739507935_4d13249f3a4aed65353e.png'),
+(230, 174, '1739508101_c5d677b092940cefc922.png'),
+(231, 175, '1739508310_fb4701e76cd39d6d43c6.png'),
+(232, 176, '1739508609_16188bf15fef96190189.png'),
+(233, 177, '1739509625_42268ac75587c7667bf6.png'),
+(234, 178, '1739509889_86cf4d29ed7739a635df.png'),
+(235, 179, '1739510008_12997aef436048fdeb62.png'),
+(236, 180, '1739510280_eca6ef8e1ac877ecdd89.png'),
+(237, 181, '1739510427_718bc05fef6999cf091b.png'),
+(238, 182, '1739518055_b27dd3efcf663c208755.png'),
+(239, 183, '1739518405_400871867e2f63231522.jpg'),
+(240, 184, '1739519340_5b4e6e59f064efa7c6c0.png'),
+(241, 185, '1739520749_84b4cccfb4bc5901556f.jpg'),
+(242, 186, '1739626200_6cf2af78844d2c77573e.jpg'),
+(243, 187, '1739626637_4179775ee307eea3977b.jpg'),
+(244, 188, '1739627008_375c82d520ade587b19b.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `feedback`
+--
+
+CREATE TABLE `feedback` (
+  `feedback_id` int(11) NOT NULL,
+  `notulensi_id` int(11) NOT NULL,
+  `isi` text NOT NULL,
+  `tanggal_feedback` date NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `created_at` datetime DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `feedback`
+--
+
+INSERT INTO `feedback` (`feedback_id`, `notulensi_id`, `isi`, `tanggal_feedback`, `user_id`, `created_at`) VALUES
+(3, 32, 'test', '2025-02-05', 32, '2025-02-05 09:34:00'),
+(4, 1, 'lala', '2025-02-05', 13, '2025-02-05 09:35:28'),
+(5, 32, 'coba lagi', '2025-02-05', 32, '2025-02-05 09:38:22'),
+(6, 32, 'lala', '2025-02-05', 9, '2025-02-05 09:39:07'),
+(7, 19, 'mm', '2025-02-05', 32, '2025-02-05 09:56:50'),
+(8, 7, 'ggg', '2025-02-05', 13, '2025-02-05 10:01:22'),
+(9, 1, 'nn', '2025-02-06', 13, '2025-02-06 11:59:36'),
+(10, 1, '🤭', '2025-02-06', 13, '2025-02-06 15:24:33'),
+(11, 1, '😛', '2025-02-06', 13, '2025-02-06 15:35:05'),
+(12, 2, '😏', '2025-02-06', 13, '2025-02-06 15:54:49'),
+(13, 2, '😱', '2025-02-06', 13, '2025-02-06 15:58:07'),
+(14, 2, '😬', '2025-02-06', 13, '2025-02-06 16:05:13'),
+(15, 2, 'test', '2025-02-06', 13, '2025-02-06 16:05:24'),
+(16, 2, '😑', '2025-02-06', 13, '2025-02-06 16:10:55'),
+(17, 29, 'nn', '2025-02-07', 13, '2025-02-07 14:58:23'),
+(18, 1, '😒', '2025-02-07', 13, '2025-02-07 15:59:40');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `history_email`
+--
+
+CREATE TABLE `history_email` (
+  `id` int(11) NOT NULL,
+  `notulensi_id` int(11) DEFAULT NULL,
+  `email` text DEFAULT NULL,
+  `status_kirim` enum('berhasil','gagal') DEFAULT NULL,
+  `timestamp_kirim` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `history_email`
+--
+
+INSERT INTO `history_email` (`id`, `notulensi_id`, `email`, `status_kirim`, `timestamp_kirim`) VALUES
+(16, 135, '[\"wulandariyulianis360@gmail.com\"]', 'berhasil', '2025-02-14 02:07:24'),
+(17, 136, '[\"wulandariyulianis360@gmail.com\",\"jurandariyurianidu@gmail.com\"]', 'berhasil', '2025-02-14 02:12:06'),
+(18, 137, '[\"wulandatiyulianis360@gmail.com\",\"jurandariyurianidu@gmail.com\"]', 'berhasil', '2025-02-14 02:14:24'),
+(19, 138, '[\"wulandariyulianis360@gmail.com\",\"jurandariyurianidu@gmail.com\"]', 'berhasil', '2025-02-14 02:17:45'),
+(20, 139, '[\"wulandariyulianis360@gmail.com\",\"jurandariyurianidu@gmail.com\"]', 'berhasil', '2025-02-14 02:22:16'),
+(21, 140, '[\"wulandariyulianis360@gmail.com\",\"jurandariyurianidu@gmail.com\"]', 'berhasil', '2025-02-14 02:25:56'),
+(22, 141, '[\"wulandariyulianis360@gmail.com\"]', 'berhasil', '2025-02-14 02:28:44'),
+(23, 142, '[\"wulandariyulianis360@gmail.com\"]', 'berhasil', '2025-02-14 02:30:43'),
+(24, 143, '[\"wulandariyulianis360@gmail.com\"]', 'berhasil', '2025-02-14 02:32:36'),
+(25, 144, '[\"cindyarwinda76@gmail.com\"]', 'berhasil', '2025-02-14 02:36:34'),
+(26, 145, '[\"wulandariyulianis360@gmail.com\"]', 'berhasil', '2025-02-14 02:40:19'),
+(27, 146, '[\"wulandariyulianis360@gmail.com\"]', 'berhasil', '2025-02-14 02:41:36'),
+(28, 147, '[\"wulandariyulianis360@gmail.com\"]', 'berhasil', '2025-02-14 02:45:39'),
+(29, 148, '[\"wulandariyulianis360@gmail.com\"]', 'berhasil', '2025-02-14 03:28:22'),
+(30, 149, '[\"wulandariyulianis360@gmail.com\"]', 'berhasil', '2025-02-14 03:31:36'),
+(31, 150, '[\"wulandariyulianis360@gmail.com\"]', 'berhasil', '2025-02-14 03:35:19'),
+(32, 151, '[\"wulandariyulianis360@gmail.com\",\"cindyarwinda76@gmail.com\"]', 'berhasil', '2025-02-14 03:37:30'),
+(33, 152, '[\"cindyarwinda76@gmail.com\",\"wulandariyulianis360@gmail.com\"]', 'berhasil', '2025-02-14 03:41:33'),
+(34, 153, '[\"wulandariyulianis360@gmail.com\"]', 'berhasil', '2025-02-14 03:46:05'),
+(35, 154, '[\"wulandariyulianis360@gmail.com\"]', 'berhasil', '2025-02-14 03:49:17'),
+(36, 155, '[\"wulandariyulianis360@gmail.com\"]', 'berhasil', '2025-02-14 03:53:27'),
+(37, 156, '[\"wulandariyulianis360@gmail.com\"]', 'berhasil', '2025-02-14 03:59:19'),
+(38, 157, '[\"jurandariyurianidu@gmail.com\"]', 'berhasil', '2025-02-14 04:02:08'),
+(39, 158, '[\"wulandariyulianis360@gmail.com\"]', 'berhasil', '2025-02-14 04:05:14'),
+(40, 159, '[\"wulandariyulianis360@gmail.com\"]', 'berhasil', '2025-02-14 04:08:22'),
+(41, 160, '[\"wulandariyulianis360@gmail.com\"]', 'berhasil', '2025-02-14 04:09:47'),
+(42, 161, '[\"wulandariyulianis20@gmail.com\"]', 'berhasil', '2025-02-14 04:11:48'),
+(43, 164, '[\"wulandariyulianis20@gmail.com\"]', 'berhasil', '2025-02-14 04:15:33'),
+(44, 167, '[\"wulandariyulianis20@gmail.com\"]', 'berhasil', '2025-02-14 04:21:21'),
+(45, 168, '[\"wulandariyulianis20@gmail.com\"]', 'berhasil', '2025-02-14 04:23:04'),
+(46, 171, '[\"wulandariyulianis20@gmail.com\"]', 'berhasil', '2025-02-14 04:30:51'),
+(47, 172, '[\"wulandariyulianis20@gmail.com\"]', 'berhasil', '2025-02-14 04:36:01'),
+(48, 173, '[\"wulandariyulianis20@gmail.com\"]', 'berhasil', '2025-02-14 04:39:02'),
+(49, 174, '[\"wulandariyulianis20@gmail.com\"]', 'berhasil', '2025-02-14 04:41:45'),
+(50, 175, '[\"wulandariyulianis20@gmail.com\"]', 'berhasil', '2025-02-14 04:45:14'),
+(51, 176, '[\"wulandariyulianis20@gmail.com\"]', 'berhasil', '2025-02-14 04:50:13'),
+(52, 177, '[\"wulandariyulianis20@gmail.com\"]', 'berhasil', '2025-02-14 05:07:09'),
+(53, 178, '[\"wulandariyulianis20@gmail.com\"]', 'berhasil', '2025-02-14 05:11:34'),
+(54, 179, '[\"wulandariyulianis20@gmail.com\"]', 'berhasil', '2025-02-14 05:13:32'),
+(55, 180, '[\"wulandariyulianis20@gmail.com\"]', 'berhasil', '2025-02-14 05:18:04'),
+(56, 181, '[\"wulandariyulianis20@gmail.com\"]', 'berhasil', '2025-02-14 05:20:31'),
+(57, 182, '[\"wulandariyulianis20@gmail.com\",\"jurandariyurianidu@gmail.com\"]', 'berhasil', '2025-02-14 07:27:42'),
+(58, 184, '[\"wulandariyulianis360@gmail.com\"]', 'berhasil', '2025-02-14 07:49:04'),
+(59, 185, '[\"wulandariyulianis20@gmail.com\"]', 'berhasil', '2025-02-14 08:12:34'),
+(60, 186, '[\"wulandariyulianis20@gmail.com\",\"jurandariyurianidu@gmail.com\",\"wulandariyulianis360@gmail.com\"]', 'berhasil', '2025-02-15 13:30:07'),
+(61, 187, '[\"wulandariyulianis360@gmail.com\",\"jurandariyurianidu@gmail.com\"]', 'berhasil', '2025-02-15 13:37:24'),
+(62, 188, '[]', 'berhasil', '2025-02-15 13:43:34');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `jadwal_rapat`
+--
+
+CREATE TABLE `jadwal_rapat` (
+  `id` int(11) NOT NULL,
+  `agenda` varchar(255) NOT NULL,
+  `tanggal` date NOT NULL,
+  `waktu` time NOT NULL,
+  `lokasi` varchar(255) NOT NULL,
+  `status` enum('Belum Disetujui','Disetujui','Ditolak') DEFAULT 'Belum Disetujui',
+  `user_id` int(11) NOT NULL,
+  `alasan` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `jadwal_rapat`
+--
+
+INSERT INTO `jadwal_rapat` (`id`, `agenda`, `tanggal`, `waktu`, `lokasi`, `status`, `user_id`, `alasan`) VALUES
+(9, 'kkk', '2025-02-11', '10:02:00', 'sksk', 'Disetujui', 13, NULL),
+(10, 'sks', '2025-02-19', '20:00:00', 'kekk', 'Ditolak', 13, 'rapat rapat nya ada ada aja'),
+(11, 'kkk', '2025-02-05', '18:22:00', 'mmm', 'Disetujui', 13, NULL),
+(13, 'rapat ulala', '2025-02-10', '12:00:00', 'ssl', 'Disetujui', 13, NULL),
+(16, 'lala', '2025-02-10', '12:33:00', 'alal', 'Ditolak', 13, 'bentrok'),
+(17, 'makan', '2025-02-10', '12:59:00', 'alla', 'Disetujui', 13, NULL),
+(18, 'test', '2025-02-10', '12:34:00', 'sll', 'Ditolak', 13, 'heni gilaa'),
+(19, 'tes lagi', '2025-02-11', '19:59:00', 'sll', 'Ditolak', 13, 'llllllllllll'),
+(20, ',,,', '2025-02-11', '20:00:00', 'sll', 'Disetujui', 13, NULL),
+(21, 'coa', '2025-02-11', '12:23:00', 'ss', 'Disetujui', 13, NULL),
+(22, 'test', '2025-01-28', '23:04:00', 'sll', 'Belum Disetujui', 32, NULL),
+(23, 'aksk', '2025-02-18', '12:02:00', 'ss', 'Belum Disetujui', 32, NULL),
+(24, 'aa', '2025-02-10', '23:04:00', 'sss', 'Belum Disetujui', 32, NULL),
+(25, 'mencoba', '2025-02-11', '13:44:00', 'skkks', 'Belum Disetujui', 32, NULL),
+(26, 'tes saja', '2025-02-10', '18:20:00', 'akk', 'Belum Disetujui', 32, NULL),
+(27, 'tes saja', '2025-02-14', '15:52:00', 'akk', 'Belum Disetujui', 9, NULL),
+(28, 'tes saja', '2025-02-14', '17:52:00', 'akk', 'Belum Disetujui', 9, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `notulensi`
+--
+
+CREATE TABLE `notulensi` (
+  `notulensi_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `judul` varchar(255) NOT NULL,
+  `partisipan` varchar(50) NOT NULL,
+  `agenda` varchar(50) NOT NULL,
+  `isi` text NOT NULL,
+  `Bidang` varchar(50) NOT NULL,
+  `tanggal_dibuat` date NOT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `partisipan_non_pegawai` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `notulensi`
+--
+
+INSERT INTO `notulensi` (`notulensi_id`, `user_id`, `judul`, `partisipan`, `agenda`, `isi`, `Bidang`, `tanggal_dibuat`, `email`, `partisipan_non_pegawai`) VALUES
+(1, 3, 'Rapat Koordinasi Aptika', '', '1. kakka', 'Pembahasan rencana digitalisasi layanan publik.', 'Aptika', '2025-01-10', NULL, NULL),
+(2, 6, 'Strategi Komunikasi Publik', '', '', 'Menyusun pedoman komunikasi yang lebih efektif.', 'IKP', '2025-01-08', NULL, NULL),
+(3, 7, 'Pengembangan Statistik', '', '', 'Diskusi terkait pengumpulan data statistik terbaru.', 'Statistik dan Persandian', '2025-01-09', NULL, NULL),
+(6, 3, 'Infrastruktur TIK', '', '', 'Pengembangan infrastruktur untuk mendukung program Aptika.', 'Aptika', '2025-01-10', NULL, NULL),
+(7, 6, 'Kampanye Publikasi Digital', '', '', 'Strategi kampanye melalui media sosial dan digital.', 'IKP', '2025-01-06', NULL, NULL),
+(10, 9, 'Sosialisasi Layanan Publik', '', '', 'Peningkatan pemahaman layanan publik berbasis Aptika.', 'Aptika', '2025-01-11', NULL, NULL),
+(14, 32, 'jsjm', 'sdi;wy', 'sngdlk', 'dhd', 'IKP', '2025-01-21', NULL, NULL),
+(15, 32, 'rapat wajib', 'lala\r\nlili\r\nlulu\r\n', '1.agenda wajib\r\n2.pelaporan progress', 'dadadadadaddadaddadadd', 'IKP', '2025-01-21', NULL, NULL),
+(16, 32, 'rapat saja', 'kwkkwkk', '1.lala\r\n2.lala\r\ndkkd', 'wkkkw', 'IKP', '2025-01-21', NULL, NULL),
+(19, 32, 'lala', 'jejjq', 'dnbn', 'nnsn', 'IKP', '2025-01-21', NULL, NULL),
+(24, 32, 'rapat saja', 'skmskldl', '1.\r\n2.\r\n', 'qwwwwwwwwwwwwwwww', 'IKP', '2025-01-22', NULL, NULL),
+(27, 32, 'rapat saja', 'nskdlld', 'lalak', 'ajjjjj', 'IKP', '2025-01-22', NULL, NULL),
+(29, 32, 'pemilihan jodoh terbaik untuk cindy', '1.wulan\r\n2.heni\r\n3.intan\r\n4.mahira', '1. ktiteria jodoh cindy\r\n2. alterfantif jodoh cind', 'belum menemukan karena lagi dibogor sudah rindu\r\nkakaalla', 'IKP', '2025-01-22', NULL, NULL),
+(32, 32, 'lala', 'kdkkd', 'ddd', 'ejje', 'IKP', '2025-01-23', NULL, NULL),
+(35, 32, 'duri duri damn', 'mm', 'mm', '<p>nnnnnnnnnnn</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>', 'IKP', '2025-01-27', NULL, NULL),
+(49, 32, 'sj', 'sjj', 'ssk', '<p>sjj</p>', 'aptika', '2025-02-12', NULL, NULL),
+(55, 32, 'sj', 'sjj', 'ssk', '<p>sjj</p>', 'aptika', '2025-02-12', NULL, NULL),
+(56, 32, 'sj', 'sjj', 'ssk', '<p>sjj</p>', 'aptika', '2025-02-12', NULL, NULL),
+(57, 32, 'sj', 'sjj', 'ssk', '<p>sjj</p>', 'aptika', '2025-02-12', NULL, NULL),
+(58, 32, 'sj', 'sjj', 'ssk', '<p>sjj</p>', 'aptika', '2025-02-12', NULL, NULL),
+(59, 32, 'sj', 'sjj', 'wulandari@gmai.com', '<p>sjj</p>', 'aptika', '2025-02-12', NULL, NULL),
+(60, 32, 'sj', 'sjj', 'wulandari@gmai.com', '<p>sjj</p>', 'aptika', '2025-02-12', NULL, NULL),
+(61, 32, 'sj', 'sjj', 'wulandari@gmai.com', '<p>sjj</p>', 'aptika', '2025-02-12', NULL, NULL),
+(62, 32, 'sj', 'sjj', 'wulandari@gmai.com', '<p>sjj</p>', 'aptika', '2025-02-12', NULL, NULL),
+(135, 32, 'coba lagii', 'ss', '1.jsjj\r\n2.djjbj', '<p>sjknksj</p>', 'aptika', '2025-02-14', NULL, '1.jsjj\r\n2.sjjj'),
+(136, 32, 'coba lagii yaa', '1.wulan \r\n2.cindy\r\n3.intan', '1.sjjsk\r\n2.sjjj\r\n', '<p>mencoba sajaa yaa</p>', 'aptika', '2025-02-14', NULL, '1.heni\r\n2.mahira'),
+(137, 32, 'coba lagii yaa', '1.wulan \r\n2.cindy\r\n3.intan', '1.ajjj\r\n2.sjj', '<p>bla blaa blaa</p>', 'aptika', '2025-02-14', NULL, '1.heni\r\n2.mahira'),
+(138, 32, 'coba lagii yaa', '1.wulan\r\n2.cindy\r\n3.intan ', '1.sjsjjs\r\n2.jsj', '<p>ssss</p>', 'aptika', '2025-02-14', NULL, '1.heni\r\n2.mahira'),
+(139, 32, 'coba lagii yaa', '1.sjjjdk\r\n2.sjjj', '1.skk\r\n2.skkkk', '<p>snjkedn</p>', 'aptika', '2025-02-14', NULL, '1.skk\r\n2.snnj\r\n'),
+(140, 32, 'coba lagii yaa', '1.sjj\r\n2.skk', 'smkkk', '<p>blaalal</p>', 'aptika', '2025-02-14', NULL, '1.skk\r\n2.skk'),
+(141, 32, 'sjjjj', 'aa', 'kdkdkkdk', '<p>sss</p>', 'aptika', '2025-02-14', NULL, 'aa'),
+(142, 32, 'ss', 'aa', 'aa', '<p>sjjjjjbj</p>', 'aptika', '2025-02-14', NULL, 'aa'),
+(143, 32, 'jjj', '1..sjj\r\n2.sjj', 'jjj', '<p>sss</p>', 'aptika', '2025-02-14', NULL, '1.sjjjj\r\n2.sjj'),
+(144, 32, 'test yaa', 'jjnjn', '1.skk\r\n2.skk', '<p>blabla</p>', 'aptika', '2025-02-14', NULL, 'kkkk'),
+(145, 32, 'test yaa', 'kkk', 'mmk', '<p>blablaba</p>', 'aptika', '2025-02-14', NULL, 'zz'),
+(146, 32, 'test yaa', 'aa', 'aaa', '<p>www</p>', 'aptika', '2025-02-14', NULL, 'aa'),
+(147, 32, 'test yaa', 'aaa', 'ss', '<p>blabla</p>', 'aptika', '2025-02-14', NULL, 'aa'),
+(148, 32, 'test yaa', 'ss', 'aa', '<p>aa</p>', 'aptika', '2025-02-14', NULL, 'ss'),
+(149, 32, 'teslagi yaa', 'mm', '1.skk\r\n2.skk', '<p>ss</p>', 'aptika', '2025-02-14', NULL, 'zz'),
+(150, 32, 'nnnnnnnnnnnn', 'nn', 'nn', '<p>nnmmmmmmmmmmmmmmmmmmm</p>', 'aptika', '2025-02-14', NULL, 'aa'),
+(151, 32, 'mencoba lagi', 'aa', 'aa', '<p>www</p>', 'aptika', '2025-02-14', NULL, 'aa'),
+(152, 32, 'tets lagi yaa', '1.wulan\r\n2.cindy\r\n3.intan', '1.ejjjjjjdndjj\r\n2.sjj', '<p data-start=\"49\" data-end=\"496\">Pada rapat ini, dibahas mengenai strategi peningkatan efisiensi dalam proses kerja di lingkungan Diskominfo Solok Selatan. Salah satu fokus utama adalah optimalisasi sistem notulensi digital agar lebih mudah diakses dan terdokumentasi dengan baik. Selain itu, dilakukan evaluasi terhadap kendala yang sering dihadapi dalam pencatatan dan distribusi notulensi, serta usulan solusi berupa pelatihan bagi pegawai terkait penggunaan sistem tersebut.</p>\r\n<p data-start=\"498\" data-end=\"910\" data-is-last-node=\"\">Selain itu, rapat juga membahas peningkatan kolaborasi antar pegawai dan pihak eksternal dalam pengelolaan informasi. Ditekankan pentingnya transparansi serta kemudahan dalam berbagi data yang relevan guna mempercepat pengambilan keputusan. Beberapa peserta rapat mengusulkan pengembangan fitur baru dalam sistem untuk meningkatkan akurasi serta keamanan data, yang nantinya akan ditindaklanjuti oleh tim teknis.</p>', 'aptika', '2025-02-14', NULL, '1.mahira\r\n2.heni'),
+(153, 32, 'Rapat Wajib', 'skkkmkmkm', '1. anggaran\r\n2.skkk', '<p>sjjjjjnjj</p>', 'aptika', '2025-02-14', NULL, 'ss'),
+(154, 32, 'Rapat Wajib', '1.smmm\r\n2.kk', '1.akk\r\n2.sjj', '<p>mm</p>', 'aptika', '2025-02-14', NULL, '1.skk\r\n2.wkk'),
+(155, 32, 'Rapat Wajib', '1.wulan\r\n2.cindy\r\n3.intan', '1.kk\r\n2.skk', '<p>smmmm</p>', 'aptika', '2025-02-14', NULL, '1.heni\r\n2.mahira'),
+(156, 32, 'Rapat Wajib', '1.wulan \r\n2.sjj', '1.kk\r\n2.ss', '<p>nnnn</p>', 'aptika', '2025-02-14', NULL, '1.sjj\r\n2.ss'),
+(157, 32, 'Rapat Wajib', '1.sjj\r\n2.sk', '1.ajj\r\n2.sjj', '<p>aa</p>', 'aptika', '2025-02-14', NULL, '1.skk\r\n2.lkk'),
+(158, 32, 'Rapat Wajib lagii', '1.hhhh\r\n2.ajjj', '1.ajjj\r\n2.akk', '<p>aaa</p>', 'aptika', '2025-02-14', NULL, '1.akahj\r\n2.alk'),
+(159, 32, 'Rapat Wajib lagii q', '1.kk\r\n2.skk', '1.akk', '<p>nnn</p>', 'aptika', '2025-02-14', NULL, '1.akk\r\n2.kk'),
+(160, 32, 'Rapat Wajib lagii q', '1.ajj\r\n2kk', '1.akk\r\n2.skk', '<p>ssssss</p>', 'aptika', '2025-02-14', NULL, '1.akk\r\n2.kk'),
+(161, 32, 'Rapat Wajib lagii q', '1.sll\r\n2.s\r\n\r\n', '1.slll', '<p>mmmm</p>', 'aptika', '2025-02-14', NULL, '1.skk\r\n2.sll'),
+(162, 32, 'Rapat Wajib lagii quuu', '1.al\r\n2.sk', '1.skk\r\n2.kk', '<p>ssss</p>', 'aptika', '2025-02-14', NULL, '1.skk\r\n2.skk'),
+(163, 32, 'Rapat Wajib lagii quuu', '1.al\r\n2.sk', '1.skk\r\n2.kk', '<p>ssss</p>', 'aptika', '2025-02-14', NULL, '1.skk\r\n2.skk'),
+(164, 32, 'Rapat Wajib lagii quuu', '1.al\r\n2.sk', '1.skk\r\n2.kk', '<p>ssss</p>', 'aptika', '2025-02-14', NULL, '1.skk\r\n2.skk'),
+(165, 32, 'ss', '1.skk\r\n2.sjnn', '11', '<p>ssss</p>', 'aptika', '2025-02-14', NULL, '1.kk'),
+(166, 32, 'ss', '1.skk\r\n2.sjnn', '11', '<p>ssss</p>', 'aptika', '2025-02-14', NULL, '1.kk'),
+(167, 32, 'ss', '1.skk\r\n2.sjnn', '11', '<p>ssss</p>', 'aptika', '2025-02-14', NULL, '1.kk'),
+(168, 32, 'duri duri damn', 'aa', 'aa', '<p>nn</p>', 'aptika', '2025-02-14', NULL, ''),
+(169, 32, 'duri duri damn', '1.kkkn\r\n2.nkj', 'jjjj', '<p>dd</p>', 'aptika', '2025-02-14', NULL, '1.mkm\r\n2.jnjk'),
+(170, 32, 'duri duri damn', '1.kkkn\r\n2.nkj', 'jjjj', '<p>dd</p>', 'aptika', '2025-02-14', NULL, '1.mkm\r\n2.jnjk'),
+(171, 32, 'duri duri damn', '1.kkkn\r\n2.nkj', 'jjjj', '<p>dd</p>', 'aptika', '2025-02-14', NULL, '1.mkm\r\n2.jnjk'),
+(172, 32, 'ss', 'aa', 'a', '<p>m ,,,</p>', 'aptika', '2025-02-14', NULL, 'aa'),
+(173, 32, 'nn', 'nn', 'nn', '<p>kkk</p>', 'aptika', '2025-02-14', NULL, ''),
+(174, 32, 'ss', 'mm', 'kn  ', '<p>zzz</p>', 'aptika', '2025-02-14', NULL, 'nn'),
+(175, 32, 'mm', 'mmm', 'mmm', '<p>sss</p>', 'aptika', '2025-02-14', NULL, 'mmm'),
+(176, 32, 'duri duri damn', '1.skk\r\n2.sll', '1.skk\r\n2.skkk', '<p>sss</p>', 'aptika', '2025-02-14', NULL, '1.skk\r\n2.sjj'),
+(177, 32, 'qq', 'qq', 'qq', '<p>eee</p>', 'aptika', '2025-02-14', NULL, 'qq'),
+(178, 32, 'ss', 'm', 'm', '<p>ww</p>', 'aptika', '2025-02-14', NULL, 'mm'),
+(179, 32, 'ss', 'aa', 'aa', '<p>ww</p>', 'aptika', '2025-02-14', NULL, ''),
+(180, 32, 'duri duri damn', '1.akk\r\n2.k\r\n', '1.akk\r\n2.skk', '<p>mmm</p>', 'aptika', '2025-02-14', NULL, ''),
+(181, 32, 'duri duri damn', 'aa', 'aa', '<p>aa</p>', 'aptika', '2025-02-14', NULL, ''),
+(182, 32, 'rapat wajib ', '1.wulan\r\n2.cindy\r\n3.heni', '1.blabla\r\n2.kakak\r\n3.skk', '<p>mengakk</p>\r\n<p>amk</p>', 'aptika', '2025-02-14', NULL, '1.heni\r\n2.mahira'),
+(183, 32, 'rapat wajib ', '1.sll\r\n2.sll', '1.skk\r\n2.skk', '<p>www</p>', 'aptika', '2025-02-14', NULL, '1.skkk\r\n2.skk'),
+(184, 32, 'ss', 'ss', '1.kk\r\n2.mm', '<p>mmmm</p>', 'aptika', '2025-02-14', NULL, '1.skk\r\n2.skk'),
+(185, 32, 'test', 'a', '1ll', '<p>sss</p>', 'aptika', '2025-02-14', NULL, 'aa'),
+(186, 32, 'test', '1.wulan\r\n2.cindy\r\n3.heni', '1.shhs\r\n2.skk', '<p data-start=\"0\" data-end=\"560\">Teknologi terus berkembang dengan pesat, membawa perubahan signifikan dalam berbagai aspek kehidupan manusia. Dalam dunia bisnis, digitalisasi telah mendorong efisiensi operasional melalui otomatisasi proses, analisis data yang lebih akurat, dan kemudahan akses informasi. Perkembangan kecerdasan buatan (AI) juga semakin mempengaruhi berbagai sektor, mulai dari layanan pelanggan hingga pengambilan keputusan berbasis data. Dengan adopsi teknologi yang tepat, perusahaan dapat meningkatkan daya saing dan memberikan layanan yang lebih baik kepada pelanggan.</p>\r\n<p data-start=\"562\" data-end=\"1125\" data-is-last-node=\"\">Di sisi lain, perkembangan teknologi juga menimbulkan tantangan, terutama dalam hal keamanan data dan privasi pengguna. Serangan siber semakin canggih, sehingga perlindungan terhadap informasi menjadi prioritas utama bagi individu maupun organisasi. Selain itu, perubahan teknologi yang cepat menuntut masyarakat untuk terus belajar dan beradaptasi agar tidak tertinggal. Oleh karena itu, keseimbangan antara pemanfaatan teknologi dan upaya mitigasi risikonya sangat penting agar perkembangan ini tetap membawa manfaat tanpa mengorbankan aspek keamanan dan etika.</p>', 'aptika', '2025-02-15', NULL, '1.heni\r\n2.mahira'),
+(187, 32, 'mencoba lagi', '1.wulan\r\n2.cindy\r\n3.intan \r\n', '1.palaj\r\n2.akk', '<p data-start=\"0\" data-end=\"560\">Teknologi terus berkembang dengan pesat, membawa perubahan signifikan dalam berbagai aspek kehidupan manusia. Dalam dunia bisnis, digitalisasi telah mendorong efisiensi operasional melalui otomatisasi proses, analisis data yang lebih akurat, dan kemudahan akses informasi. Perkembangan kecerdasan buatan (AI) juga semakin mempengaruhi berbagai sektor, mulai dari layanan pelanggan hingga pengambilan keputusan berbasis data. Dengan adopsi teknologi yang tepat, perusahaan dapat meningkatkan daya saing dan memberikan layanan yang lebih baik kepada pelanggan.</p>\r\n<p data-start=\"562\" data-end=\"1125\" data-is-last-node=\"\">Di sisi lain, perkembangan teknologi juga menimbulkan tantangan, terutama dalam hal keamanan data dan privasi pengguna. Serangan siber semakin canggih, sehingga perlindungan terhadap informasi menjadi prioritas utama bagi individu maupun organisasi. Selain itu, perubahan teknologi yang cepat menuntut masyarakat untuk terus belajar dan beradaptasi agar tidak tertinggal. Oleh karena itu, keseimbangan antara pemanfaatan teknologi dan upaya mitigasi risikonya sangat penting agar perkembangan ini tetap membawa manfaat tanpa mengorbankan aspek keamanan dan etika.</p>', 'aptika', '2025-02-15', NULL, '1.heni\r\n2.mahira'),
+(188, 32, 'ss', '1.wulan\r\n2.intan\r\n3.cindy', '1.akks\r\n2.skk', '<p data-start=\"0\" data-end=\"560\">Teknologi terus berkembang dengan pesat, membawa perubahan signifikan dalam berbagai aspek kehidupan manusia. Dalam dunia bisnis, digitalisasi telah mendorong efisiensi operasional melalui otomatisasi proses, analisis data yang lebih akurat, dan kemudahan akses informasi. Perkembangan kecerdasan buatan (AI) juga semakin mempengaruhi berbagai sektor, mulai dari layanan pelanggan hingga pengambilan keputusan berbasis data. Dengan adopsi teknologi yang tepat, perusahaan dapat meningkatkan daya saing dan memberikan layanan yang lebih baik kepada pelanggan.</p>\r\n<p data-start=\"562\" data-end=\"1125\" data-is-last-node=\"\">Di sisi lain, perkembangan teknologi juga menimbulkan tantangan, terutama dalam hal keamanan data dan privasi pengguna. Serangan siber semakin canggih, sehingga perlindungan terhadap informasi menjadi prioritas utama bagi individu maupun organisasi. Selain itu, perubahan teknologi yang cepat menuntut masyarakat untuk terus belajar dan beradaptasi agar tidak tertinggal. Oleh karena itu, keseimbangan antara pemanfaatan teknologi dan upaya mitigasi risikonya sangat penting agar perkembangan ini tetap membawa manfaat tanpa mengorbankan aspek keamanan dan etika.</p>', 'aptika', '2025-02-15', NULL, '1.heni\r\n2.mahira');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `riwayatnotulensi`
+--
+
+CREATE TABLE `riwayatnotulensi` (
+  `riwayat_id` int(11) NOT NULL,
+  `notulensi_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `riwayatnotulensi`
+--
+
+INSERT INTO `riwayatnotulensi` (`riwayat_id`, `notulensi_id`) VALUES
+(7, 29),
+(10, 32),
+(13, 35),
+(27, 49),
+(33, 55),
+(34, 56),
+(35, 57),
+(36, 58),
+(37, 59),
+(38, 60),
+(39, 61),
+(40, 62),
+(101, 135),
+(102, 136),
+(103, 137),
+(104, 138),
+(105, 139),
+(106, 140),
+(107, 141),
+(108, 142),
+(109, 143),
+(110, 144),
+(111, 145),
+(112, 146),
+(113, 147),
+(114, 148),
+(115, 149),
+(116, 150),
+(117, 151),
+(118, 152),
+(119, 153),
+(120, 154),
+(121, 155),
+(122, 156),
+(123, 157),
+(124, 158),
+(125, 159),
+(126, 160),
+(127, 161),
+(128, 162),
+(129, 163),
+(130, 164),
+(131, 165),
+(132, 166),
+(133, 167),
+(134, 168),
+(135, 169),
+(136, 170),
+(137, 171),
+(138, 172),
+(139, 173),
+(140, 174),
+(141, 175),
+(142, 176),
+(143, 177),
+(144, 178),
+(145, 179),
+(146, 180),
+(147, 181),
+(148, 182),
+(149, 183),
+(150, 184),
+(151, 185),
+(152, 186),
+(153, 187),
+(154, 188);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `user_id` int(11) NOT NULL,
+  `username` varchar(30) NOT NULL,
+  `nama` varchar(100) NOT NULL,
+  `nip` varchar(50) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `role` varchar(50) NOT NULL,
+  `Bidang` varchar(50) NOT NULL,
+  `profil_foto` varchar(255) DEFAULT NULL,
+  `alamat` text DEFAULT NULL,
+  `jabatan` varchar(50) NOT NULL,
+  `tanggal_lahir` varchar(50) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`user_id`, `username`, `nama`, `nip`, `email`, `password`, `role`, `Bidang`, `profil_foto`, `alamat`, `jabatan`, `tanggal_lahir`, `created_at`, `updated_at`) VALUES
+(3, 'wulan dari yulianis', 'John ', '123456789', 'admin@example.com', '$2y$10$bt4.BEmdIhnRDA3GANoKeeIiyFy6FgKuhWEF3oGI1mNGglFfdCg3u', 'pegawai', 'Statistik dan Persandian', '1738903732_04234f3e6cf8c546acb3.jpg', 'Jl. Merdeka No. 123, Jakarta', 'korea', '', '2025-01-09 15:02:06', '2025-02-06 21:48:52'),
+(6, 'wulan saja', 'wulandari yulianis', '18679202938390', 'lala@gmail.com', '$2y$10$Sbofb2lg7PyOSv1D1/vCauYJmgWsYc62iaww/yz9aMuZHwdpRyscG', 'notulensi', 'Aptika', '1738317012_28f82e9f4a84a03b1352.png', NULL, 'sek', '', '2025-01-09 08:02:18', '2025-01-31 02:50:12'),
+(7, 'lala', 'lala', '123456789123456789', 'lala1@gmail.com', '$2y$10$tBSYxTpvfWjIlSkqSZ.7TeAQp2RvMqDg2J91d0vUGxaieUvPIv61a', 'notulensi', 'Aptika', NULL, NULL, '', '', '2025-01-09 08:16:16', '2025-01-30 08:15:20'),
+(9, 'lili', 'wulandari yulianis', '123456780123456789', 'bismillah@gmail.com', '$2y$10$GNfd6zIA4kK/7vX47gN7eepuS.AXjm5tSpBgx7YvxRDjgGubdAS0K', 'admin', '', '7 (1).jpg', 'jalan  saja', 'Sekretaris', '2003-07-09', '2025-01-09 19:06:34', '2025-02-11 20:02:39'),
+(13, 'jaja', 'jungwon', '123456788987654324', 'jaja@gmail.com', '$2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO', 'pegawai', 'IKP', 'pegawai.png', NULL, 'korea', '', '2025-01-13 00:53:10', '2025-01-30 22:12:25'),
+(18, 'notulensi_user18', 'Nama Notulensi 18', '12345678918', 'notulensi_user18@example.com', 'password_enkripsi18', 'notulensi', 'Administrasi', '', 'Alamat Notulensi 18', 'Notulensi', '1998-08-18', '2025-01-16 02:28:25', '2025-01-16 17:16:49'),
+(26, 'notulensi', 'alhamdulilla', '345678909876789376', 'notulensi@gmail.com', '$2y$10$ZhNj131GHHBnlqCvbB3.bOR13E/V13x3i1tumnFZPNg.YhqScDCnq', 'notulensi', '', 'image.png\r\n', NULL, '', '', '2025-01-15 19:36:45', '2025-01-16 08:11:16'),
+(32, 'dadang', 'cindy arwinda ', '098765432234567892', 'dadang@gmail.com', '$2y$10$FKo1RqxUsHWcoWzbk5ZZae9C4Al32xjQuyf99kyXR4CMMYtDOyMVC', 'notulensi', 'aptika', '2.jpg', NULL, 'Sekretaris', '', '2025-01-17 02:26:42', '2025-02-11 07:05:41'),
+(40, 'cindy', 'cindy arwinda putry', '123456788987654259', 'cindy@gmail.com', '$2y$10$fFtsHB1wzUtGMaBUM0/c3uv.EFy0QXZgTj6.q2gKaPtCdUVYHNMqG', 'notulensi', 'IKP', '2.jpg', NULL, 'Sekretaris', '', '2025-01-20 22:07:14', '2025-01-26 17:04:23'),
+(56, 'fafa', '', '123456789023749256', 'fafa0@gmail.com', '$2y$10$XJUEmFJrojPtC9R4cycKnuDoJCBxq3y6dseNmJboMocJb8tipDMyq', 'pegawai', 'APTIKA', NULL, NULL, '', '', '2025-01-30 22:24:03', '2025-01-30 22:24:03');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `dokumentasi`
+--
+ALTER TABLE `dokumentasi`
+  ADD PRIMARY KEY (`dokumentasi_id`),
+  ADD KEY `notulensi_id` (`notulensi_id`);
+
+--
+-- Indexes for table `feedback`
+--
+ALTER TABLE `feedback`
+  ADD PRIMARY KEY (`feedback_id`),
+  ADD KEY `notulensi_id` (`notulensi_id`),
+  ADD KEY `fk_feedback_user` (`user_id`);
+
+--
+-- Indexes for table `history_email`
+--
+ALTER TABLE `history_email`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `notulensi_id` (`notulensi_id`);
+
+--
+-- Indexes for table `jadwal_rapat`
+--
+ALTER TABLE `jadwal_rapat`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_jadwal_rapat_user` (`user_id`);
+
+--
+-- Indexes for table `notulensi`
+--
+ALTER TABLE `notulensi`
+  ADD PRIMARY KEY (`notulensi_id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
+-- Indexes for table `riwayatnotulensi`
+--
+ALTER TABLE `riwayatnotulensi`
+  ADD PRIMARY KEY (`riwayat_id`),
+  ADD KEY `notulensi_id` (`notulensi_id`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`user_id`),
+  ADD UNIQUE KEY `nip` (`nip`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `dokumentasi`
+--
+ALTER TABLE `dokumentasi`
+  MODIFY `dokumentasi_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=245;
+
+--
+-- AUTO_INCREMENT for table `feedback`
+--
+ALTER TABLE `feedback`
+  MODIFY `feedback_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT for table `history_email`
+--
+ALTER TABLE `history_email`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+
+--
+-- AUTO_INCREMENT for table `jadwal_rapat`
+--
+ALTER TABLE `jadwal_rapat`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+
+--
+-- AUTO_INCREMENT for table `notulensi`
+--
+ALTER TABLE `notulensi`
+  MODIFY `notulensi_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=189;
+
+--
+-- AUTO_INCREMENT for table `riwayatnotulensi`
+--
+ALTER TABLE `riwayatnotulensi`
+  MODIFY `riwayat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=155;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `dokumentasi`
+--
+ALTER TABLE `dokumentasi`
+  ADD CONSTRAINT `dokumentasi_ibfk_1` FOREIGN KEY (`notulensi_id`) REFERENCES `notulensi` (`notulensi_id`);
+
+--
+-- Constraints for table `feedback`
+--
+ALTER TABLE `feedback`
+  ADD CONSTRAINT `feedback_ibfk_1` FOREIGN KEY (`notulensi_id`) REFERENCES `notulensi` (`notulensi_id`),
+  ADD CONSTRAINT `fk_feedback_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `history_email`
+--
+ALTER TABLE `history_email`
+  ADD CONSTRAINT `history_email_ibfk_1` FOREIGN KEY (`notulensi_id`) REFERENCES `notulensi` (`notulensi_id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `jadwal_rapat`
+--
+ALTER TABLE `jadwal_rapat`
+  ADD CONSTRAINT `fk_jadwal_rapat_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`);
+
+--
+-- Constraints for table `notulensi`
+--
+ALTER TABLE `notulensi`
+  ADD CONSTRAINT `notulensi_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`);
+
+--
+-- Constraints for table `riwayatnotulensi`
+--
+ALTER TABLE `riwayatnotulensi`
+  ADD CONSTRAINT `riwayatnotulensi_ibfk_1` FOREIGN KEY (`notulensi_id`) REFERENCES `notulensi` (`notulensi_id`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -554,7 +554,7 @@
     });
 
     confirmLogout.addEventListener('click', function () {
-        window.location.href = '<?= base_url("home") ?>'; 
+        window.location.href = '<?= base_url("login") ?>'; 
         logoutPopupOverlay.style.display = 'none'; 
     });
 

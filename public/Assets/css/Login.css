@@ -1,145 +1,153 @@
+/* Mengatur tampilan halaman secara keseluruhan */
 body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-image: url('../images/Background_blur.png');
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
-    
-    .container {
-        width: 100%;
-        max-width: 350px;
-        background: rgba(255, 255, 255, 0.486);
-        border-radius: 30px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        padding: 20px;
-    }
-    
-    .logo {
-        text-align: center;
-    }
-    
-    .logo img {
-        width: 100px;
-        height: 100px;
-        margin-top: 10px;
-    }
-    
-    .logo h1 {
-        font-size: 30px;
-        margin-top: 5px;
-        margin-bottom: 50px;
-        color: #000000;
-        font-family: sans-serif ;
-    }
-    
-    .input-group {
-        margin-bottom: 15px;
-    }
-    
-    .input-group label {
-        display: block;
-        margin-top: 25px;
-        margin-bottom: 7px;
-        margin-left: 45px;
-        font-size: 14px;
-        color: #000000;
-        font-style: italic;
-        font-family:  sans-serif;
-        font: bold;
-    }
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden; /* Menghilangkan scroll */
+}
 
-    .input-wrapper {
-        position: relative;
-    }
-    
-    .input-wrapper .icon {
-        position: absolute;
-        left: 35px;
-        top: 50%;
-        transform: translateY(-50%) scale(0.7);
-        color: #555;
-    }
-    
-    .input-wrapper input {
-        width: 75%;
-        margin-left: 30px;
-        padding: 15px;
-        border: 1px solid #292A6E;
-        border-radius: 10px;
-        font-size: 14px;
-        color: #333;
-        font-style: italic;
-        font-family: sans-serif;
-        background:  rgba(255, 255, 255, 0.349);
-        text-indent: 35px;
-    }
-    
-    .links {
-        text-align: right;
-        margin-bottom: 40px;
-    }
-    
-    .links a {
-        font-size: 14px;
-        color: #0085C5;
-        text-decoration: none;
-        margin-right: 40px;
-        font-style: italic;
-        font-weight: bolder;
-    }
-    
-    .links a:hover {
-        text-decoration: underline;
-    }
-    
-    .btn-login {
-        width: 30%;
-        padding: 10px;
-        background: #025299;
-        border: none;
-        border-radius: 5px;
-        font-size: 20px;
-        font-family: sans-serif;
-        font-weight: bolder;
-        color: #fff;
-        cursor: pointer;
-        margin-left: 130px;
-    }
-    
-    .btn-login:hover {
-        background: #0085C5;
-        transform: scale(1.1);
-    }
-    
-    .register-link {
-        text-align: center;
-        margin-top: 15px;
-        font-family: sans-serif;
-    }
-    
-    .register-link a {
-        color: #007BFF;
-        text-decoration: none;
-        font-style: italic;
-        font-weight: bolder;
+/* Container utama yang membagi halaman menjadi dua bagian */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
 
-    }
-    
-    .register-link a:hover {
-        text-decoration: underline;
-    }
-    .error-message {
-        color: red;
-        font-weight: bold;
-        text-align: center;
-        margin-bottom: 10px;
-    }
+/* Bagian kiri: Login Section */
+.login-section {
+    width: 80%;
+    background: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.3); 
+    padding: 25px 25px; 
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    width: 85%;
+    max-width: 420px; 
+    max-height: 470px; 
+    min-height: 320px; 
+    text-align: center;
+    backdrop-filter: blur(15px); 
+    position: absolute;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin: 25px 0 7px 45px;
+    font-size: 14px;
+    color: #000000;
+    font-style: italic;
+    font-weight: bold;
+    margin-left: -300px;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper .icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%) scale(0.7);
+    color: #555;
+}
+
+.input-wrapper input {
+    width: 90%; /* Perkecil lebar */
+    margin-left: 10px; /* Sesuaikan posisi */
+    padding: 10px; /* Kurangi padding */
+    border: 1px solid #292A6E;
+    border-radius: 8px; /* Perkecil radius */
+    font-size: 13px; /* Perkecil font */
+    color: #333;
+    font-style: italic;
+    background: rgba(255, 255, 255, 0.3);
+    text-indent: 20px; /* Kurangi jarak teks */
+}
+
+.links {
+    text-align: right;
+    margin-bottom: 40px;
+}
+
+.links a {
+    font-size: 14px;
+    color: #003f7f;
+    text-decoration: none;
+    margin-right: 20px;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.btn-login {
+    width: 25%; /* Perkecil lebar */
+    padding: 8px; /* Kurangi padding */
+    background: #025299;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px; 
+    font-weight: bold; 
+    color: #fff;
+    cursor: pointer;
+    margin-left: 50px; 
+    margin-top: -20px;
+    margin-bottom: 0px;
+}
+
+
+.btn-login:hover {
+    background: #0085C5;
+    transform: scale(1.1);
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.register-link a {
+    color: #003f7f;
+    text-decoration: none;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
 
 .popup {
     position: fixed;
@@ -180,7 +188,6 @@ body {
     margin-bottom: 20px;
     margin-top: 5px;
     font-style: italic;
-    font-family: sans-serif;
 }
 
 .contact-info {
@@ -190,13 +197,14 @@ body {
 .contact-info p {
     margin-bottom: 5px;
 }
+
 .contact-info .label {
     color: #000000;
     font-style: normal;
 }
 
 .contact-info .value {
-    color: #2A86A4; 
+    color: #2A86A4;
     font-style: normal;
 }
 
@@ -214,7 +222,110 @@ body {
 
 .btn-close:hover {
     background-color: #3e9bff;
-}      
-.input-wrapper {
+}
+
+/* Bagian kanan: Home Section */
+.welcome-section {
+    width: 55%; /* Sedikit dipersempit agar lebih seimbang */
+    background: url('../images/background.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(230, 230, 230); /* Warna teks lebih nyaman di mata */
+    text-align: center;
+    padding: 50px;
     position: relative;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Overlay agar teks lebih mudah dibaca */
+.welcome-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Pastikan teks tetap terlihat di atas overlay */
+.welcome-section * {
+    position: relative;
+    z-index: 2;
+}
+
+.welcome-section header {
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Memindahkan About ke kanan */
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    width: 100px;
+    margin-right: 20px;
+}
+
+.about-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about-link:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.8;
+    max-width: 600px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+
+/* Animasi masuk */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #025299; 
+}
+
+#background-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.login-section {
+    position: relative;
+    z-index: 1;
 }

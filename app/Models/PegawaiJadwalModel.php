@@ -8,7 +8,7 @@ class PegawaiJadwalModel extends Model
 {
     protected $table      = 'jadwal_rapat';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['agenda', 'tanggal', 'waktu', 'lokasi', 'keterangan', 'user_id', 'status', 'alasan']; // Tambahkan 'alasan'
+    protected $allowedFields = ['topik','agenda', 'tanggal', 'waktu', 'lokasi', 'keterangan', 'user_id', 'status', 'alasan']; // Tambahkan 'alasan'
 
     public function getAllJadwal()
     {

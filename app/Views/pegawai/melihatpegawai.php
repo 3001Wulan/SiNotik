@@ -357,7 +357,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     confirmLogout.addEventListener('click', () => {
-        window.location.href = '/';
+        window.location.href = 'login';
     });
 
     cancelLogout.addEventListener('click', () => {

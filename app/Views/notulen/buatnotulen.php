@@ -132,6 +132,13 @@
                                 <img src="<?= base_url('assets/images/microphone.png') ?>" alt="Voice" class="mic-icon">
                             </button>
                     </div>
+                    <?php if (session()->getFlashdata('error')) : ?>
+    <div style="color: red;"><?= session()->getFlashdata('error') ?></div>
+<?php endif; ?>
+
+<?php if (session()->getFlashdata('success')) : ?>
+    <div style="color: green;"><?= session()->getFlashdata('success') ?></div>
+<?php endif; ?>
 
                     <label for="upload" class="upload-label">Upload Dokumentasi <span>(file maks 5 MB)</span></label>
                     <br>
@@ -317,24 +324,20 @@ const profileIcon = document.getElementById('profile-icon');
         dropdownMenu.classList.remove('show');
     });
 
-    // JavaScript untuk Popup Logout
-    const logoutLink = document.getElementById('logoutLink'); // Perbaikan ID
+    const logoutLink = document.getElementById('logoutLink'); 
     const popupOverlay = document.getElementById('popupOverlay');
     const confirmLogout = document.getElementById('confirmLogout');
     const cancelLogout = document.getElementById('cancelLogout');
 
-    // Menampilkan popup konfirmasi logout
     logoutLink.addEventListener('click', (event) => {
-        event.preventDefault(); // Mencegah link logout berfungsi langsung
-        popupOverlay.style.display = 'block'; // Menampilkan popup overlay
+        event.preventDefault(); 
+        popupOverlay.style.display = 'block'; 
     });
 
-    // Menyelesaikan logout ketika tombol "Ya" diklik
     confirmLogout.addEventListener('click', () => {
-        window.location.href = '/'; // Ganti dengan halaman logout atau proses logout
+        window.location.href = 'login'; 
     });
 
-    // Menyembunyikan popup ketika tombol "Tidak" diklik
     cancelLogout.addEventListener('click', () => {
         popupOverlay.style.display = 'none'; 
     });
