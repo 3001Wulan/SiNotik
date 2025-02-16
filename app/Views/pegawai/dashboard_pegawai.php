@@ -40,13 +40,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="inactive">
-                        <img src="<?php echo base_url('assets/images/distribusi.png'); ?>" alt="Distribusi Notulensi Icon" class="sidebar-icon">
-                        Distribusi Notulensi
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="inactive">
+                    <a href="panduanpegawai" class="inactive">
                         <img src="<?php echo base_url('assets/images/panduanpengguna.png'); ?>" alt="Panduan Pengguna Icon" class="sidebar-icon">
                         Panduan Pengguna
                     </a>

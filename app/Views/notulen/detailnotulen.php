@@ -19,48 +19,40 @@
       <ul>
         <li>
           <a href="/notulen/dashboard_notulen" class="<?php echo ($current_page == 'dashboard') ? 'active dashboard' : 'inactive'; ?>">
-            <img src="<?php echo base_url('assets/images/dashboard.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
-            Dashboard
+            <img src="<?php echo base_url('assets/images/dashboard.png'); ?>" alt="Dashboard Icon" class="sidebar-icon"> Dashboard
           </a>
         </li>
         <li class="dropdown">
           <a href="#" class="<?php echo ($current_page == 'melihat_notulen') ? 'active notulensi-pegawai' : 'inactive'; ?>">
-            <img src="<?php echo base_url('assets/images/codicon_book.png'); ?>" alt="Notulensi Icon" class="sidebar-icon">
-            Notulensi
+            <img src="<?php echo base_url('assets/images/codicon_book.png'); ?>" alt="Notulensi Icon" class="sidebar-icon"> Notulensi
           </a>
           <div class="dropdown-content">
             <a href="/notulen/melihatnotulen" class="dropdown-item">
-              <img src="<?= base_url('assets/images/buat.png') ?>" alt="Daftar Notulensi Icon">
-              <span>Daftar Notulensi</span>
+              <img src="<?= base_url('assets/images/buat.png') ?>" alt="Daftar Notulensi Icon"> <span>Daftar Notulensi</span>
             </a>
             <a href="/notulen/buatnotulen" class="dropdown-item">
-              <img src="<?= base_url('assets/images/edit.png') ?>" alt="Buat Notulensi Icon">
-              <span>Buat Notulensi</span>
+              <img src="<?= base_url('assets/images/edit.png') ?>" alt="Buat Notulensi Icon"> <span>Buat Notulensi</span>
             </a>
           </div>
         </li>
         <li>
           <a href="/notulen/riwayatnotulen" class="<?php echo ($current_page == 'riwayat_notulensi') ? 'active riwayat-notulensi' : 'inactive'; ?>">
-            <img src="<?php echo base_url('assets/images/riwayatnotulensi.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
-            Riwayat Notulensi
+            <img src="<?php echo base_url('assets/images/riwayatnotulensi.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon"> Riwayat Notulensi
           </a>
         </li>
         <li>
           <a href="notulen/jadwalrapatnotulen" class="inactive">
-            <img src="<?php echo base_url('assets/images/rapat.png'); ?>" alt="Jadwal Rapat Icon" class="sidebar-icon">
-            Jadwal Rapat
+            <img src="<?php echo base_url('assets/images/rapat.png'); ?>" alt="Jadwal Rapat Icon" class="sidebar-icon"> Jadwal Rapat
           </a>
         </li>
         <li>
           <a href="/notulen/historynotulen" class="inactive">
-            <img src="<?php echo base_url('assets/images/distribusi.png'); ?>" alt="Distribusi Notulensi Icon" class="sidebar-icon">
-            Distribusi Notulensi
+            <img src="<?php echo base_url('assets/images/distribusi.png'); ?>" alt="Distribusi Notulensi Icon" class="sidebar-icon"> Distribusi Notulensi
           </a>
         </li>
         <li>
           <a href="/notulen/panduannotulen" class="inactive">
-            <img src="<?php echo base_url('assets/images/panduanpengguna.png'); ?>" alt="Panduan Pengguna Icon" class="sidebar-icon">
-            Panduan Pengguna
+            <img src="<?php echo base_url('assets/images/panduanpengguna.png'); ?>" alt="Panduan Pengguna Icon" class="sidebar-icon"> Panduan Pengguna
           </a>
         </li>
       </ul>
@@ -87,6 +79,14 @@
           <div>
             <img src="<?= base_url('assets/images/profiles/' . (file_exists('assets/images/profiles/' . session()->get('profil_foto')) ? session()->get('profil_foto') : 'delvaut.png')) ?>" alt="User  Photo" class="header-profile-img" id="profile-icon">
           </div>
+          <div class="dropdown-menu" id="dropdownMenu">
+            <a href="<?= base_url('admin/profiladmin') ?>" class="dropdown-item">
+              <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon"> Profil
+            </a>
+            <a href="#" class="dropdown-item" id="logoutLink">
+              <img src="<?= base_url('assets/images/icon_logout.png') ?>" alt="Logout" class="dropdown-icon"> Logout
+            </a>
+          </div>
         </div>
       </div>
 
@@ -98,7 +98,7 @@
       <!-- Main Content -->
       <div class="main-content">
         <div class="outer-blue-background">
-          <div class="left-blue"></div> <!-- Left blue section -->
+          <div class="left-blue"></div>
           <div class="feedback-container">
             <div class="feedback-content">
               <div class="content-wrapper">
@@ -109,7 +109,7 @@
                       <div class="agenda-numbers">
                         <?php if (!empty($agenda) && is_array($agenda)): ?>
                           <ul style="list-style-type: none; padding-left: 0;">
-                            <?php foreach ($agenda as $index => $item): ?>
+                            <?php foreach ($agenda as $item): ?>
                               <li><?= esc(trim($item)) ?></li>
                             <?php endforeach; ?>
                           </ul>
@@ -118,31 +118,39 @@
                     </div>
                   </div>
 
+                  <!-- Partisipan -->
                   <div class="agenda-title">Partisipan</div>
                   <div class="agenda-partisipan">
-                    <?php if (!empty($notulensi['partisipan']) && is_array($notulensi['partisipan'])): ?>
-                      <ul>
-                        <?php foreach ($notulensi['partisipan'] as $index => $partisipan): ?>
-                          <li><?= ($index + 1) . '. ' . esc($partisipan) ?></li>
+                    <?php 
+                    $partisipanList = !empty($notulensi['partisipan']) 
+                        ? (is_array($notulensi['partisipan']) ? $notulensi['partisipan'] : array_map('trim', explode("\n", $notulensi['partisipan']))) 
+                        : [];
+
+                    if (!empty($partisipanList)): ?>
+                      <ul style="list-style-type: none; padding-left: 0;">
+                        <?php foreach ($partisipanList as $partisipan): ?>
+                          <li><?= esc(trim($partisipan)) ?></li>
                         <?php endforeach; ?>
                       </ul>
-                    <?php elseif (!empty($notulensi['partisipan'])): ?>
-                      <p><?= esc($notulensi['partisipan']) ?></p>
                     <?php else: ?>
                       <p>Tidak ada partisipan yang terdaftar.</p>
                     <?php endif; ?>
                   </div>
 
+                  <!-- Partisipan Non Pegawai -->
                   <div class="agenda-title">Partisipan Non Pegawai</div>
                   <div class="agenda-partisipannon">
-                    <?php if (!empty($notulensi['partisipan_non_pegawai']) && is_array($notulensi['partisipan_non_pegawai'])): ?>
-                      <ul>
-                        <?php foreach ($notulensi['partisipan_non_pegawai'] as $index => $nonPegawai): ?>
-                          <li><?= ($index + 1) . '. ' . esc($nonPegawai) ?></li>
+                    <?php 
+                    $nonPegawaiList = !empty($notulensi['partisipan_non_pegawai']) 
+                        ? (is_array($notulensi['partisipan_non_pegawai']) ? $notulensi['partisipan_non_pegawai'] : array_map('trim', explode("\n", $notulensi['partisipan_non_pegawai']))) 
+                        : [];
+
+                    if (!empty($nonPegawaiList)): ?>
+                      <ul style="list-style-type: none; padding-left: 0;">
+                        <?php foreach ($nonPegawaiList as $nonPegawai): ?>
+                          <li><?= esc(trim($nonPegawai)) ?></li>
                         <?php endforeach; ?>
                       </ul>
-                    <?php elseif (!empty($notulensi['partisipan_non_pegawai'])): ?>
-                      <p><?= esc($notulensi['partisipan_non_pegawai']) ?></p>
                     <?php else: ?>
                       <p>Tidak ada partisipan non-pegawai yang terdaftar.</p>
                     <?php endif; ?>
@@ -157,7 +165,7 @@
                 <div class="documentation-section">
                   <div class="documentation-images">
                     <?php if (!empty($dokumentasi) && isset($dokumentasi[0]['foto_dokumentasi']) && $dokumentasi[0]['foto_dokumentasi']): ?>
-                      <img src="<?= base_url('uploads/' . esc($dokumentasi[0]['foto_dokumentasi'])) ?>" alt="Dokumentasi Foto" class="header-profile-img" id="profile-icon">
+                      <img src="<?= base_url('uploads/' . esc($dokumentasi[0]['foto_dokumentasi'])) ?>" alt="Dokumentasi Foto" class="header-profile-img" id="profile-icon" onclick="openModal(this)">
                     <?php else: ?>
                       <img src="" alt="Dokumentasi Foto" class="header-profile-img" id="profile-icon">
                     <?php endif; ?>
@@ -176,40 +184,57 @@
           </div>
         </div>
       </div>
-    
-       <!-- Pop-up untuk Komentar -->
-  <div id="commentPopup" class="comment-popup" style="display: none;">
-    <div class="popup-content">
-      <span class="close-popup" id="closePopup">&times;</span>
-      <h3>Komentar</h3>
-      <!-- Daftar komentar -->
-      <div id="commentList">
-        <?php foreach ($feedbacks as $k): ?>
-          <div class="comment-item">
-            <img src="<?= base_url('assets/images/profiles/' . ($k['profil_foto'] ?: 'default.png')) ?>" alt="Profile" class="comment-avatar">
-            <div class="comment-body">
-              <strong class="comment-name"><?= esc($k['user_nama']) ?></strong>
-              <p class="comment-text"><?= esc($k['isi']) ?></p>
-              <small><?= date('d M Y, H:i', strtotime($k['tanggal_feedback'])) ?></small>
-            </div>
+
+      <!-- Pop-up untuk Komentar -->
+      <div id="commentPopup" class="comment-popup" style="display: none;">
+        <div class="popup-content">
+          <span class="close-popup" id="closePopup">&times;</span>
+          <h3>Komentar</h3>
+          <div id="commentList">
+            <?php foreach ($feedbacks as $k): ?>
+              <div class="comment-item">
+                <img src="<?= base_url('assets/images/profiles/' . ($k['profil_foto'] ?: 'default.png')) ?>" alt="Profile" class="comment-avatar">
+                <div class="comment-body">
+                  <strong class="comment-name"><?= esc($k['user_nama']) ?></strong>
+                  <p class="comment-text"><?= esc($k['isi']) ?></p>
+                  <small><?= date('d M Y, H:i', strtotime($k['tanggal_feedback'])) ?></small>
+                </div>
+              </div>
+            <?php endforeach; ?>
           </div>
-        <?php endforeach; ?>
+
+          <div class="comment-input-container">
+            <input type="hidden" id="notulensi_id" value="<?= esc($notulensi['notulensi_id']) ?>">
+            <div class="textarea-container">
+              <textarea id="newComment" placeholder="Tulis komentar..."></textarea>
+              <button type="button" id="emojiButton">😊</button>
+            </div>
+            <button id="submitComment">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+        <div id="emojiPicker" class="emoji-picker" style="display: none;"></div>
       </div>
-
-      <div class="comment-input-container">
-    <input type="hidden" id="notulensi_id" value="<?= esc($notulensi['notulensi_id']) ?>">
-    <div class="textarea-container">
-        <textarea id="newComment" placeholder="Tulis komentar..."></textarea>
-        <button type="button" id="emojiButton">😊</button>
     </div>
-    <button id="submitComment">
-        <i class="fas fa-paper-plane"></i>
-    </button>
-</div>
-
-
   </div>
-  <div id="emojiPicker" class="emoji-picker" style="display: none;"></div>
+
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup">
+      <img src="<?= base_url('assets/images/logout_warning.png') ?>" alt="Logout Warning" class="popup-image">
+      <h3>Anda ingin logout?</h3>
+      <div class="popup-buttons">
+        <button class="btn-yes" id="confirmLogout">Ya</button>
+        <button class="btn-no" id="cancelLogout">Tidak</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Popup -->
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -232,7 +257,6 @@
           localStorage.setItem('theme', 'light');
         }
       });
-      
       // Pop-up Komentar
       const commentButton = document.getElementById('commentButton');
       const commentPopup = document.getElementById('commentPopup');
@@ -292,193 +316,184 @@
       });
 
       emojiButton.addEventListener('click', () => {
-  const pickerContainer = document.getElementById('emojiPicker');
-  if (pickerContainer.style.display === 'none' || pickerContainer.style.display === '') {
-    pickerContainer.style.display = 'block';
-    // Jika belum ada elemen <emoji-picker>, buat dan tambahkan
-    if (!pickerContainer.querySelector('emoji-picker')) {
-      const emojiPicker = document.createElement('emoji-picker');
-      pickerContainer.appendChild(emojiPicker);
-      emojiPicker.addEventListener('emoji-click', event => {
-        const emoji = event.detail.unicode;
-        newComment.value += emoji;
-      });
-    }
-  } else {
-    pickerContainer.style.display = 'none';
-  }
-});
-
-document.getElementById('downloadButton').addEventListener('click', function () {
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF({ unit: 'cm', format: 'a4' });
-
-    // Mengambil konten dari halaman
-    const title = "Notulensi Rapat";
-    const agendaItems = [...document.querySelectorAll('.agenda-numbers li')]
-        .map((item, index) => `${index + 1}. ${item.innerText.trim()}`)
-        .join('\n') || 'Tidak ada agenda.';
-    const discussion = document.querySelector('.agenda-isi')?.innerText.trim() || 'Tidak ada pembahasan.';
-    
-    // Mengambil daftar partisipan pegawai dan non pegawai
-    const participants = document.querySelector('.agenda-partisipan ')
-        ? [...document.querySelectorAll('.agenda-partisipan ')]
-            .map((item, index) => `${index + 1}. ${item.innerText.trim()}`)
-            .join('\n')
-        : 'Belum ada data partisipan.';
-
-    const nonEmployeeParticipants = document.querySelector('.agenda-partisipannon ')
-        ? [...document.querySelectorAll('.agenda-partisipannon ')]
-            .map((item, index) => `${index + 1}. ${item.innerText.trim()}`)
-            .join('\n')
-        : 'Tidak ada partisipan non pegawai.';
-
-    // Mengambil dokumentasi jika ada
-    const documentationImage = document.querySelector('.documentation-images img')?.src;
-
-    // Variabel ukuran halaman dan margin
-    const pageWidth = doc.internal.pageSize.getWidth();
-    const leftMargin = 2.54, rightMargin = 2.54;
-    const maxWidth = pageWidth - (leftMargin + rightMargin);
-    let y = 2.5; 
-    const pageHeight = doc.internal.pageSize.height - 2.54; 
-
-    // Fungsi untuk mengecek overflow halaman & tambah halaman baru jika perlu
-    const checkPageOverflow = (extraSpace = 1) => {
-        if (y + extraSpace > pageHeight) {
-            doc.addPage();
-            y = 3;
+        const pickerContainer = document.getElementById('emojiPicker');
+        if (pickerContainer.style.display === 'none' || pickerContainer.style.display === '') {
+          pickerContainer.style.display = 'block';
+          // Jika belum ada elemen <emoji-picker>, buat dan tambahkan
+          if (!pickerContainer.querySelector('emoji-picker')) {
+            const emojiPicker = document.createElement('emoji-picker');
+            pickerContainer.appendChild(emojiPicker);
+            emojiPicker.addEventListener('emoji-click', event => {
+              const emoji = event.detail.unicode;
+              newComment.value += emoji;
+            });
+          }
+        } else {
+          pickerContainer.style.display = 'none';
         }
-    };
+      });
 
-    // Fungsi untuk menambahkan teks biasa (rata kiri) dengan font Times New Roman ukuran 12
-    const addNormalText = (text) => {
-        checkPageOverflow(1);
-        doc.setFont("times", "normal");
-        doc.setFontSize(12);
-        const textLines = doc.splitTextToSize(text, maxWidth);
-        textLines.forEach(line => {
-            doc.text(line, leftMargin, y);
-            y += 0.5;
-        });
-    };
+      document.getElementById('downloadButton').addEventListener('click', function () {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF({ unit: 'cm', format: 'a4' });
 
-    // Fungsi untuk menambahkan teks justified (pembahasan) dengan font Times New Roman ukuran 12
-    const addJustifiedText = (text) => {
-        doc.setFont("times", "normal");
-        doc.setFontSize(12);
-        const textLines = doc.splitTextToSize(text, maxWidth);
-        textLines.forEach((line, index) => {
-            checkPageOverflow(0.5);
-            let words = line.split(" ");
+        const title = document.querySelector('.page-title h2')?.innerText || 'Judul Tidak Tersedia';
+        const agendaItems = [...document.querySelectorAll('.agenda-numbers li')]
+            .map(item => item.innerText.trim())
+            .join('\n') || 'Tidak ada agenda.';
+        const discussion = document.querySelector('.agenda-isi')?.innerText.trim() || 'Tidak ada pembahasan.';
+        const participants = [...document.querySelectorAll('.agenda-partisipan li')]
+            .map(item => item.innerText.trim())
+            .join('\n') || 'Belum ada data partisipan.';
+        const nonEmployeeParticipants = [...document.querySelectorAll('.agenda-partisipannon li')]
+            .map(item => item.innerText.trim())
+            .join('\n') || 'Tidak ada partisipan non pegawai.';
+        const documentationImage = document.querySelector('.documentation-images img')?.src;
 
-            if (words.length > 1 && index !== textLines.length - 1) {
-                let totalSpacing = (maxWidth - doc.getTextWidth(line)) / (words.length - 1);
-                let x = leftMargin;
-                words.forEach(word => {
-                    doc.text(word, x, y);
-                    x += doc.getTextWidth(word) + totalSpacing;
-                });
-            } else {
-                doc.text(line, leftMargin, y);
+        const pageWidth = doc.internal.pageSize.getWidth();
+        const leftMargin = 2.54, rightMargin = 2.54;
+        const maxWidth = pageWidth - (leftMargin + rightMargin);
+        let y = 3;
+        const pageHeight = doc.internal.pageSize.height - 2.54;
+
+        const checkPageOverflow = (extraSpace = 1) => {
+            if (y + extraSpace > pageHeight) {
+                doc.addPage();
+                y = 3;
             }
-            y += 0.5;
-        });
-    };
+        };
 
-    // Header (Tetap Helvetica, Bold, Ukuran lebih besar)
-    doc.setFont("helvetica", "bold");
-    doc.setFontSize(16);
-    doc.text('Dinas Kominfo Sook Selatan', pageWidth / 2, y, { align: "center" });
-    doc.setFontSize(11);
-    y += 1.2;
-    doc.text(`Tanggal: ${new Date().toLocaleDateString()}`, pageWidth / 2, y, { align: "center" });
-    doc.setFontSize(14);
-    y += 1;
-    doc.text('Notulensi Rapat', pageWidth / 2, y, { align: "center" });
+        const addJustifiedText = (text) => {
+            doc.setFont("times", "normal");
+            doc.setFontSize(12);
+            const textLines = doc.splitTextToSize(text, maxWidth);
+            textLines.forEach(line => {
+                checkPageOverflow(0.5);
+                doc.text(leftMargin, y, line, { align: "left" });
+                y += 0.5;
+            });
+        };
 
-    // Garis pemisah
-    y += 1;
-    doc.line(leftMargin, y, pageWidth - rightMargin, y);
-    y += 1.3;
+        const addSectionTitle = (text) => {
+            checkPageOverflow(1);
+            doc.setFont("helvetica", "bold");
+            doc.setFontSize(12);
+            doc.text(leftMargin, y, text);
+            y += 0.7;
+        };
 
-    // Menampilkan Judul Notulensi
-    doc.setFontSize(16);
-    doc.setFont("helvetica", "bold");
-    doc.text(title, pageWidth / 2, y, { align: "center" });
-    y += 1.5;
+        // Menambahkan logo dan informasi lainnya
+        const logoPath = '/assets/images/logo.png';
+        const logoWidth = 3.5;
+        const logoHeight = 3.5;
 
-    // Fungsi untuk menambahkan judul per bagian (Font tetap bold)
-    const addSectionTitle = (text) => {
-        checkPageOverflow(1);
-        doc.setFont("helvetica", "bold");
-        doc.setFontSize(12);
-        doc.text(text, leftMargin, y);
-        y += 0.7;
-    };
+        fetch(logoPath)
+            .then(response => response.blob())
+            .then(blob => {
+                const reader = new FileReader();
+                reader.readAsDataURL(blob);
+                reader.onloadend = function () {
+                    const base64data = reader.result;
 
-    // Menambahkan konten ke dalam PDF
-    addSectionTitle('Agenda:');
-    addNormalText(agendaItems);
+                    doc.addImage(base64data, 'PNG', leftMargin, 1, logoWidth, logoHeight);
+                    doc.setFont("helvetica", "bold");
+                    doc.setFontSize(16);
+                    doc.text(pageWidth / 2, 2, 'Dinas Kominfo Sook Selatan', { align: "center" });
+                    doc.setFontSize(11);
+                    doc.text(pageWidth / 2, 3, `Tanggal: ${new Date().toLocaleDateString()}`, { align: "center" });
+                    doc.setFontSize(14);
+                    doc.text(pageWidth / 2, 4, 'Notulensi Rapat', { align: "center" });
 
-    addSectionTitle('Partisipan Pegawai:');
-    addNormalText(participants);
+                    y = 5.5;
+                    doc.line(leftMargin, y, pageWidth - rightMargin, y);
+                    y += 1.3;
 
-    addSectionTitle('Partisipan Non Pegawai:');
-    addNormalText(nonEmployeeParticipants);
+                    doc.setFontSize(16);
+                    doc.setFont("helvetica", "bold");
+                    doc.text(pageWidth / 2, y, title, { align: "center" });
+                    y += 1.5;
 
-    addSectionTitle('Pembahasan:');
-    addJustifiedText(discussion); 
+                    addSectionTitle('Agenda:');
+                    addJustifiedText(agendaItems);
 
-    // Menambahkan gambar jika ada
-    if (documentationImage) {
-        checkPageOverflow(10);
-        addSectionTitle('Dokumentasi:');
-        const imgWidth = 7, imgHeight = 9;
-        doc.addImage(documentationImage, 'JPEG', (pageWidth - imgWidth) / 2, y, imgWidth, imgHeight);
-        y += imgHeight + 1;
-    }
+                    addSectionTitle('Partisipan Pegawai:');
+                    addJustifiedText(participants);
 
-    // Simpan PDF
-    doc.save('notulensi.pdf');
-});
+                    addSectionTitle('Partisipan Non Pegawai:');
+                    addJustifiedText(nonEmployeeParticipants);
 
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-    const profileIcon = document.getElementById("profile-icon");
-    const dropdownMenu = document.getElementById("dropdownMenu");
-    const logoutLink = document.getElementById("logoutLink");
-    const logoutPopupOverlay = document.getElementById("logoutPopupOverlay");
-    const confirmLogout = document.getElementById("confirmLogout");
-    const cancelLogout = document.getElementById("cancelLogout");
+                    addSectionTitle('Pembahasan:');
+                    addJustifiedText(discussion);
 
-    profileIcon.addEventListener("click", function (event) {
+                    if (documentationImage) {
+                        checkPageOverflow(10);
+                        addSectionTitle('Dokumentasi:');
+                        const img = new Image();
+                        img.src = documentationImage;
+                        img.onload = function () {
+                            let imgWidth, imgHeight;
+                            if (img.width > img.height) {
+                                imgWidth = 9;
+                                imgHeight = 7;
+                            } else {
+                                imgWidth = 7;
+                                imgHeight = 9;
+                            }
+                            doc.addImage(documentationImage, 'JPEG', leftMargin, y, imgWidth, imgHeight);
+                            y += imgHeight + 1;
+                            doc.save('notulensi.pdf');
+                        };
+                    } else {
+                        doc.save('notulensi.pdf');
+                    }
+                };
+            })
+            .catch(error => console.error("Error loading logo:", error));
+      });
+
+      // Dropdown Menu
+      const profileIcon = document.getElementById("profile-icon");
+      const dropdownMenu = document.getElementById("dropdownMenu");
+      const logoutLink = document.getElementById("logoutLink");
+      const popupOverlay = document.getElementById("popupOverlay");
+      const confirmLogout = document.getElementById("confirmLogout");
+      const cancelLogout = document.getElementById("cancelLogout");
+
+      profileIcon.addEventListener("click", function (event) {
         event.stopPropagation();
         dropdownMenu.classList.toggle("show");
-    });
+      });
 
-    document.addEventListener("click", function (event) {
+      document.addEventListener("click", function (event) {
         if (!dropdownMenu.contains(event.target) && !profileIcon.contains(event.target)) {
-            dropdownMenu.classList.remove("show");
+          dropdownMenu.classList.remove("show");
         }
-    });
+      });
 
-    logoutLink.addEventListener("click", function (event) {
+      logoutLink.addEventListener("click", function (event) {
         event.preventDefault();
-        logoutPopupOverlay.style.display = "flex";
-    });
+        popupOverlay.style.display = "flex";
+      });
 
-    cancelLogout.addEventListener("click", function () {
-        logoutPopupOverlay.style.display = "none";
-    });
+      cancelLogout.addEventListener("click", function () {
+        popupOverlay.style.display = "none";
+      });
 
-    confirmLogout.addEventListener("click", function () {
+      confirmLogout.addEventListener("click", function () {
         window.location.href = "<?= base_url('/') ?>";
+      });
     });
-});
 
-    
+    function openModal(imgElement) {
+      var modal = document.getElementById("imageModal");
+      var modalImg = document.getElementById("modalImage");
+      modal.style.display = "block";
+      modalImg.src = imgElement.src;
+    }
+
+    function closeModal() {
+      document.getElementById("imageModal").style.display = "none";
+    }
   </script>
-  
 </body>
 </html>

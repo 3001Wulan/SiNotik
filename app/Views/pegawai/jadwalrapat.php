@@ -34,17 +34,12 @@ $current_page = 'jadwalrapat';
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="<?php echo ($current_page == 'jadwalrapat') ? 'active' : 'inactive'; ?>">
+                    <a href="jadwalrapat" class="<?php echo ($current_page == 'jadwalrapat') ? 'active' : 'inactive'; ?>">
                         <img src="<?php echo base_url('assets/images/rapat.png'); ?>" alt="Jadwal Rapat Icon" class="sidebar-icon"> Jadwal Rapat
                     </a>
-                    <li>
-                    <a href="#" class="inactive">
-                        <img src="<?php echo base_url('assets/images/distribusi.png'); ?>" alt="Distribusi Notulensi Icon" class="sidebar-icon">
-                        Distribusi Notulensi
-                    </a>
-                </li>
                 <li>
-                    <a href="#" class="inactive">
+                <li>
+                    <a href="panduanpegawai" class="inactive">
                         <img src="<?php echo base_url('assets/images/panduanpengguna.png'); ?>" alt="Panduan Pengguna Icon" class="sidebar-icon">
                         Panduan Pengguna
                     </a>

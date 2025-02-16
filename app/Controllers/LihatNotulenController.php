@@ -44,8 +44,6 @@ class LihatNotulenController extends BaseController
             'partisipan_non_pegawai' => $this->parseStringToArray($notulensi['partisipan_non_pegawai'] ?? '')
         ];
 
-        log_message('debug', 'Data dikirim ke view: ' . json_encode($data));
-
         return view('notulen/detailnotulen', $data);
     }
 
@@ -82,12 +80,10 @@ class LihatNotulenController extends BaseController
 
         $data = [
             'notulensi_id' => $notulensi_id,
-            'isi' => esc($isi), // Hindari XSS
+            'isi' => esc($isi), 
             'tanggal_feedback' => date('Y-m-d H:i:s'),
             'user_id' => $user_id
         ];
-
-        log_message('debug', 'Data feedback disimpan: ' . json_encode($data));
 
         if ($feedbackModel->insert($data)) {
             return $this->response->setJSON(['status' => 'success']);
