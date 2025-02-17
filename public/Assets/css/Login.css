@@ -1,24 +1,22 @@
-/* Mengatur tampilan halaman secara keseluruhan */
+
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     display: flex;
     height: 100vh;
-    overflow: hidden; /* Menghilangkan scroll */
+    overflow: hidden; 
+    background: url('../images/background.jpg') no-repeat center center/cover;  
 }
 
-/* Container utama yang membagi halaman menjadi dua bagian */
 .container {
     display: flex;
     width: 100%;
     height: 100vh;
 }
 
-/* Bagian kiri: Login Section */
 .login-section {
     width: 80%;
-    background: #f4f4f4;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,17 +28,22 @@ body {
     border-radius: 12px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     width: 85%;
-    max-width: 420px; 
-    max-height: 470px; 
+    max-width: 350px; 
+    max-height: 500px; 
     min-height: 320px; 
     text-align: center;
     backdrop-filter: blur(15px); 
-    position: absolute;
+    position: relative; 
 }
 
-.logo {
+.logowelcome {
     text-align: center;
     margin-bottom: 20px;
+    animation: bounce 2s infinite; 
+    width: 150px;
+    height: 150px;
+    
+
 }
 
 .logo img {
@@ -75,16 +78,16 @@ body {
 }
 
 .input-wrapper input {
-    width: 90%; /* Perkecil lebar */
-    margin-left: 10px; /* Sesuaikan posisi */
-    padding: 10px; /* Kurangi padding */
+    width: 90%; 
+    margin-left: 10px; 
+    padding: 10px; 
     border: 1px solid #292A6E;
-    border-radius: 8px; /* Perkecil radius */
-    font-size: 13px; /* Perkecil font */
+    border-radius: 8px; 
+    font-size: 13px; 
     color: #333;
     font-style: italic;
     background: rgba(255, 255, 255, 0.3);
-    text-indent: 20px; /* Kurangi jarak teks */
+    text-indent: 20px; 
 }
 
 .links {
@@ -106,8 +109,8 @@ body {
 }
 
 .btn-login {
-    width: 25%; /* Perkecil lebar */
-    padding: 8px; /* Kurangi padding */
+    width: 25%; 
+    padding: 8px; 
     background: #025299;
     border: none;
     border-radius: 5px;
@@ -119,7 +122,6 @@ body {
     margin-top: -20px;
     margin-bottom: 0px;
 }
-
 
 .btn-login:hover {
     background: #0085C5;
@@ -224,22 +226,19 @@ body {
     background-color: #3e9bff;
 }
 
-/* Bagian kanan: Home Section */
 .welcome-section {
-    width: 55%; /* Sedikit dipersempit agar lebih seimbang */
-    background: url('../images/background.jpg') no-repeat center center/cover;
+    width: 55%; 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: rgb(230, 230, 230); /* Warna teks lebih nyaman di mata */
+    color: rgb(230, 230, 230); 
     text-align: center;
     padding: 50px;
     position: relative;
     animation: fadeIn 1s ease-in-out;
 }
 
-/* Overlay agar teks lebih mudah dibaca */
 .welcome-section::before {
     content: "";
     position: absolute;
@@ -247,11 +246,9 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
-/* Pastikan teks tetap terlihat di atas overlay */
 .welcome-section * {
     position: relative;
     z-index: 2;
@@ -260,7 +257,7 @@ body {
 .welcome-section header {
     position: absolute;
     top: 20px;
-    right: 20px; /* Memindahkan About ke kanan */
+    right: 20px; 
     display: flex;
     align-items: center;
 }
@@ -269,6 +266,7 @@ body {
     width: 100px;
     margin-right: 20px;
 }
+
 
 .about-link {
     color: white;
@@ -284,6 +282,12 @@ h1 {
     font-size: 40px;
     margin-bottom: 30px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    animation: bounce 2s infinite; 
+}
+h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 p {
@@ -291,8 +295,8 @@ p {
     line-height: 1.8;
     max-width: 600px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    animation: bounce 2s infinite; 
 }
-
 
 /* Animasi masuk */
 @keyframes fadeIn {
@@ -306,22 +310,21 @@ p {
     }
 }
 
-#background-animation {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: #025299; 
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); 
+    }
 }
 
 #background-animation {
     position: absolute;
-    width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
     z-index: -1;
 }
 

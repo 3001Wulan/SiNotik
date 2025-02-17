@@ -9,6 +9,7 @@
 
 </head>
 <body>
+<div id="background-animation"></div> 
     <div class="container">
         <!-- Bagian kiri: Welcome -->
         <div class="welcome-section">
@@ -17,6 +18,7 @@
                     <a href="<?php echo base_url('about'); ?>" class="about-link">About</a>
                 </nav>
             </header>
+                <img class="logowelcome" src="<?php echo base_url('assets/images/logo.png'); ?>" alt="SINOTIK Logo">
             <h1>Welcome to SiNotik</h1>
             <p>
                 Optimalkan pencatatan rapat dengan cepat dan akurat. SiNotik menghadirkan kemudahan <br>
@@ -26,11 +28,10 @@
         </div>
 
         <div class="login-section">
-            <div id="background-animation"></div> 
             <div class="login-box">
                 <div class="logo">
                     <img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="SINOTIK Logo">
-                    <h1>SINOTIK</h1>
+                    <h2>SINOTIK</h2>
                 </div>
                 <?php if (session()->getFlashdata('error')): ?>
                     <div class="error-message">
@@ -58,7 +59,7 @@
                     </div>
                     <button type="submit" class="btn-login">Login</button>
                     <div class="register-link">
-                        <p>Don't have an account? <a href="<?php echo base_url('register'); ?>">Register Here</a></p>
+                        <div>Don't have an account? <a href="<?php echo base_url('register'); ?>">Register Here</a></div>
                     </div>
                 </form>
             </div>
