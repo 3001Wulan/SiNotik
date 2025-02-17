@@ -142,7 +142,6 @@
                         <div id="preview-container">
                             <img id="previewImage" alt="Preview">
                         </div>
-
                         <p id="error-message" style="color: red; display: none;">Ukuran file tidak boleh lebih dari 5MB!</p>
                     </div>
 
@@ -217,24 +216,36 @@ window.addEventListener('DOMContentLoaded', () => {
             const file = event.target.files[0];
 
             if (file) {
-               
-                if (file.size > 5 * 1024 * 1024) { // Maksimal 5MB
-                    errorMessage.style.display = 'block';
-                    photoInput.value = ''; // Kosongkan input file
-                    previewImage.style.display = 'none'; // Sembunyikan gambar preview
-                } else {
-                    errorMessage.style.display = 'none'; // Sembunyikan pesan error
-                    const reader = new FileReader();
-
-                    reader.onload = function (e) {
-                        previewImage.src = e.target.result;
-                        previewImage.style.display = 'block'; // Tampilkan gambar preview
-                    };
-
-                    reader.readAsDataURL(file); // Membaca file dan menampilkan sebagai gambar
-                }
+            const allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
+            
+            if (!allowedTypes.includes(file.type)) {
+                errorMessage.textContent = 'Hanya gambar dengan format JPG, PNG, GIF, atau WEBP yang diperbolehkan!';
+                errorMessage.style.display = 'block';
+                event.target.value = ''; // Reset input file
+                previewImage.style.display = 'none';
+                return;
             }
-        });
+
+            if (file.size > 5 * 1024 * 1024) { // Maksimal 5MB
+                errorMessage.textContent = 'Ukuran file terlalu besar! Maksimal 5MB.';
+                errorMessage.style.display = 'block';
+                event.target.value = ''; // Reset input file
+                previewImage.style.display = 'none';
+                return;
+            }
+
+            // Jika lolos validasi, tampilkan gambar
+            errorMessage.style.display = 'none'; // Sembunyikan pesan error
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                previewImage.src = e.target.result;
+                previewImage.style.display = 'block'; // Tampilkan gambar preview
+            };
+
+            reader.readAsDataURL(file); // Membaca file dan menampilkan sebagai gambar
+        }
+    });
 
         // Password Validation
         const passwordField = document.getElementById('password');

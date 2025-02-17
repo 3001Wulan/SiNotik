@@ -132,7 +132,7 @@
 
                     <!-- Card untuk Gambar -->
                     <div class="card-image">
-                        <img src="<?php echo base_url('assets/images/CINDY_.jpg'); ?>" alt="screenshoot" class="screenshoot-dashboard">
+                        <img src="<?php echo base_url('assets/images/dashboardadmin.png'); ?>" alt="screenshoot" class="screenshoot-dashboard">
                     </div>
                 </div>
             </div>
@@ -172,7 +172,7 @@
 
                     <!-- Card untuk Gambar -->
                     <div class="card-datapengguna-image">
-                        <img id="component-image" src="<?= base_url('assets/images/INTAN_.jpg') ?>" alt="Data Pengguna">
+                        <img id="component-image" src="<?= base_url('assets/images/data_pengguna.png') ?>" alt="Data Pengguna">
                     </div>
                 </div>
             </div>
@@ -201,7 +201,7 @@
 
                     <!-- Card untuk Gambar -->
                     <div class="card-riwayat-image">
-                        <img src="<?php echo base_url('assets/images/WULAN_.jpg'); ?>" alt="screenshoot" class="screenshoot-dashboard">
+                        <img src="<?php echo base_url('assets/images/riwayat_notulensi.png'); ?>" alt="screenshoot" class="screenshoot-dashboard">
                     </div>
                 </div>
             </div>
@@ -262,7 +262,7 @@
 
                     <!-- Card untuk Gambar -->
                     <div class="card-distribusi-image">
-                        <img src="<?php echo base_url('assets/images/MAHIRA_.jpg'); ?>" alt="screenshoot" class="screenshoot-dashboard">
+                        <img src="<?php echo base_url('assets/images/distribusinotulensi.png'); ?>" alt="screenshoot" class="screenshoot-dashboard">
                     </div>
                 </div>
             </div>
