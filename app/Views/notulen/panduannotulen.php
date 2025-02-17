@@ -3,61 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panduan Admin</title>
-    <link rel="stylesheet" href="<?= base_url('assets/css/panduanadmin.css'); ?>">
+    <title>Panduan Notulen</title>
+    <link rel="stylesheet" href="<?= base_url('assets/css/panduannotulen.css'); ?>">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
 </head>
 <body>
     <?php $current_page = $current_page ?? ''; ?>
     <div class="container">
-        <div class="sidebar">
+       <!-- Sidebar -->
+       <div class="sidebar">
             <div class="logo">
                 <img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="Logo" class="logo-img">
             </div>
             <ul>
                 <li>
-                    <a href="dashboard_admin" class="<?php echo ($current_page == 'dashboard') ? 'active dashboard' : 'inactive'; ?>">
-                        <img src="<?php echo base_url('assets/images/dashboard.png'); ?>" class="sidebar-icon"> 
+                    <a href="dashboard_notulen" class="<?php echo ($current_page == 'dashboard') ? 'active dashboard' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/dashboard.png'); ?>" alt="Dashboard Icon" class="sidebar-icon">
                         Dashboard
                     </a>
                 </li>
-                <li>
-                    <a href="data_pengguna" class="<?php echo ($current_page == 'data_pengguna') ? 'active data-pengguna' : 'inactive'; ?>">
-                        <img src="<?php echo base_url('assets/images/datapengguna.png'); ?>" class="sidebar-icon"> 
-                        Data Pengguna
-                    </a>
-                </li>
-                <li>
-                    <a href="riwayatadmin" class="<?php echo ($current_page == 'riwayat_notulensi') ? 'active riwayat-notulensi' : 'inactive'; ?>">
-                        <img src="<?php echo base_url('assets/images/riwayatnotulensi.png'); ?>" class="sidebar-icon"> 
-                        Riwayat Notulensi
-                    </a>
-                </li>
                 <li class="dropdown">
-                    <a href="#" class="<?php echo ($current_page == 'melihat_pegawai') ? 'active notulensi-pegawai' : 'inactive'; ?>">
-                        <img src="<?php echo base_url('assets/images/rapat.png'); ?>" class="sidebar-icon"> 
-                        Rapat
+                    <a href="#" class="<?php echo ($current_page == 'melihat_notulen') ? 'active notulensi-pegawai ' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/codicon_book.png'); ?>" alt="Notulensi Icon" class="sidebar-icon">
+                        Notulensi
                     </a>
-
                     <div class="dropdown-content">
-                        <a href="jadwalrapatadmin" class="dropdown-item">
-                            <img src="<?= base_url('assets/images/buat.png') ?>"> 
-                            <span>Buat Jadwal Rapat</span>
+                        <a href="melihatnotulen" class="dropdown-item">
+                            <img src="<?= base_url('assets/images/buat.png') ?>" alt="Daftar Notulensi Icon">
+                            <span>Daftar Notulensi</span>
                         </a>
-                        <a href="persetujuanadmin" class="dropdown-item">
-                            <img src="<?= base_url('assets/images/edit.png') ?>"> 
-                            <span>Persetujuan Rapat</span>
+                        
+                        <a href="buatnotulen" class="dropdown-item">
+                            <img src="<?= base_url('assets/images/edit.png') ?>" alt="Buat Notulensi Icon">
+                            <span>Buat Notulensi</span>
                         </a>
                     </div>
                 </li>
                 <li>
-                    <a href="historyadmin" class="inactive">
+                    <a href="riwayatnotulen" class="<?php echo ($current_page == 'riwayat_notulensi') ? 'active riwayat-notulensi' : 'inactive'; ?>">
+                        <img src="<?php echo base_url('assets/images/riwayatnotulensi.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon">
+                        Riwayat Notulensi
+                    </a>
+                </li>
+                <li>
+                    <a href="jadwalrapatnotulen" class="inactive">
+                        <img src="<?php echo base_url('assets/images/rapat.png'); ?>" alt="Jadwal Rapat Icon" class="sidebar-icon">
+                        Jadwal Rapat
+                    </a>
+                </li>
+                <li>
+                    <a href="historynotulen" class="inactive">
                         <img src="<?php echo base_url('assets/images/distribusi.png'); ?>" alt="Distribusi Notulensi Icon" class="sidebar-icon">
                         Distribusi Notulensi
                     </a>
                 </li>
                 <li>
-                    <a href="panduanpegawai" class="active">
+                    <a href="panduanpengguna" class="active">
                         <img src="<?php echo base_url('assets/images/panduanpengguna.png'); ?>" alt="Panduan Pengguna Icon" class="sidebar-icon">
                         Panduan Pengguna
                     </a>
@@ -87,7 +88,7 @@
                     
                     <!-- Dropdown Menu -->
                     <div class="dropdown-menu" id="dropdownMenu">
-                        <a href="<?= base_url('admin/profiladmin') ?>" class="dropdown-item">
+                        <a href="<?= base_url('pegawai/profilpegawai') ?>" class="dropdown-item">
                             <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
                             Profil
                         </a>
@@ -137,40 +138,42 @@
             </div>
 
             <!-- Card Data Pengguna -->
-            <div class="card datapengguna-card" onclick="toggleDropdown(this, 'default')">
+            <div class="card notulensi-card" onclick="toggleDropdown(this, 'default')">
                 <h2>
-                    <img src="<?php echo base_url('assets/images/datapengguna.png'); ?>" class="card-icon">
-                    Data Pengguna
+                    <img src="<?php echo base_url('assets/images/codicon_book.png'); ?>" class="card-icon">
+                    Notulensi
                 </h2>
 
                 <div class="grid-container">
                     <!-- Card untuk Penjelasan -->
-                    <div class="card-datapengguna-content">
-                        <p class="intro-text">Halaman ini digunakan untuk mengelola informasi pengguna dalam sistem. Administrator dapat melihat, menambah, mengedit, dan menghapus data pengguna. Tabel Data Pengguna berisi <b>Foto Profil, Nama, NIP, Email, Status (Pegawai/Notulen)</b>, serta opsi <b>Edit</b> dan <b>Hapus</b>.</p>
-                        <ul>
-                            <li><b>Hapus Pengguna:</b> Untuk <b>menghapus data pengguna</b> dari sistem. Ketika ditekan <b>button hapus</b>, maka akan muncul <b>popup konfirmasi</b> apakah admin yakin ingin menghapus data tersebut.</li>
-                            <li><b>Pencarian:</b> Mempermudah pencarian pengguna berdasarkan <b>nama, email</b>, dan <b>bidang</b>.</li>
-                            <li><b>Show Entries:</b> Mempermudah pengguna dalam mengatur jumlah data yang ditampilkan dalam tabel, sehingga dapat memilih untuk menampilkan <b>5, 10, 15, atau 20</b> data pengguna dalam satu halaman.</li>
-                        </ul>
-                        <p class="section-tittle">Di halaman Data Pengguna terdapat 3 komponen utama:</p>
+                    <div class="card-notulensi-content">
+                        <p class="intro-text">Halaman ini digunakan untuk mengelola informasi notulensi. Terdapat dua bagian utama, yaitu <b>Daftar Notulensi</b> untuk menampilkan data notulensi dalam bentu tabel, dan <b>Buat Notulensi</b> untuk membuat notulensi rapat baru yang berisikan topik, agenda, tanggal, partisipan, email, pembahasan, dan upload dokumentasi.</p>
+                        <p class="section-tittle">Di halaman ini terdapat 4 komponen utama:</p>
 
                         <!-- Card untuk Komponen Utama -->
                         <div class="component-cards">
-                            <div class="component-card" onclick="changeContent('tambah')">
-                                <i class="fas fa-user-plus"></i> Tambah Pengguna
+                            <div class="component-card" onclick="changeContent('daftar')">
+                                <i class="fas fa-list"></i> Daftar Notulensi
                             </div>
-                            <div class="component-card" onclick="changeContent('edit')">
-                                <i class="fas fa-user-edit"></i> Edit Pengguna
+
+                            <div class="component-card" onclick="changeContent('buat')">
+                                <i class="fas fa-plus"></i> Buat Notulensi
                             </div>
+                
                             <div class="component-card" onclick="changeContent('detail')">
-                                <i class="fas fa-user"></i> Detail Pengguna
+                                <i class="fas fa-folder-open"></i> Detail Notulensi
+                            </div>
+
+                            <div class="component-card" onclick="changeContent('feedback')">
+                                <i class="fas fa-comment-alt"></i> Feedback
                             </div>
                         </div>
+
                     </div>
 
                     <!-- Card untuk Gambar -->
-                    <div class="card-datapengguna-image">
-                        <img id="component-image" src="assets/images/INTAN_.jpg" alt="Data Pengguna">
+                    <div class="card-notulensi-image">
+                        <img id="component-image" src="<?= base_url('assets/images/INTAN_.jpg') ?>" alt="Notulensi">
                     </div>
                 </div>
             </div>
@@ -203,33 +206,33 @@
                 </div>
             </div>
 
-             <!-- Card Rapat -->
+            <!-- Card Jadwal Rapat -->
              <div class="card rapat-card" onclick="toggleDropdown(this, 'default')">
                 <h2>
                     <img src="<?php echo base_url('assets/images/rapat.png'); ?>" class="card-icon">
-                    Rapat
+                    Jadwal Rapat
                 </h2>
 
                 <div class="grid-container">
                     <!-- Card untuk Penjelasan -->
                     <div class="card-rapat-content" id="card-content">
-                    <p class="intro-text-rapat">Bagian ini digunakan untuk mengelola <b>jadwal</b> dan <b>persetujuan rapat</b>. Terdapat dua dropdown, satu untuk <b>membuat jadwal rapat</b> dan satu lagi untuk <b>mengelola persetujuan rapat</b>. Pengguna dapat melihat <b>detail rapat</b>, mengatur <b>waktu</b> dan <b>tempat</b>, serta <b>menyetujui</b> atau <b>menolak</b> rapat yang diajukan.</p>
-                        <p class="section-tittle">Fitur Rapat ini terdiri dari 2 halaman:</p>
-
+                    <p class="intro-text-jadwal">Halaman ini digunakan untuk mengelola jadwal rapat. Terdapat dua bagian utama, yaitu <b>Buat Jadwal Rapat</b> untuk menambahkan rapat baru dengan detail seperti topik, agenda, tanggal, waktu, dan tempat, serta <b>Daftar Jadwal Rapat</b> yang menampilkan daftar rapat yang telah dijadwalkan beserta status dan detailnya.</p>
+                        <p class="section-tittle">Ada 2 komponen utama:</p>
+                        
                         <!-- Card untuk Komponen Utama -->
                         <div class="component-cards-rapat">
                             <div class="component-card-rapat" onclick="changeRapatContent('buat')">
-                                <i class="fas fa-user-plus"></i> Buat Jadwal Rapat
+                                <i class="fas fa-calendar-plus"></i> Buat Jadwal Rapat
                             </div>
-                            <div class="component-card-rapat" onclick="changeRapatContent('persetujuan')">
-                                <i class="fas fa-user-edit"></i> Persetujuan Rapat
+                            <div class="component-card-rapat" onclick="changeRapatContent('jadwal')">
+                                <i class="fas fa-list"></i> Jadwal Rapat
                             </div>
                         </div>
                     </div>
 
                     <!-- Card untuk Gambar -->
                     <div class="card-rapat-image">
-                        <img id="rapat-image" src="assets/images/HENI_.jpg" alt="Rapat">
+                        <img id="rapat-image" src="<?= base_url('assets/images/HENI_.jpg') ?>" alt="Rapat">
                     </div>
                 </div>
             </div>
@@ -269,6 +272,7 @@
                     Profil
                 </h2>
 
+ 
                 <div class="grid-container">
                     <!-- Card untuk Penjelasan -->
                     <div class="card-profil-content">
@@ -296,7 +300,7 @@
 
                 <div class="grid-container">
                     <!-- Card untuk Penjelasan -->
-                    <div class="card-edit-content">
+                    <div class="card-profil-content">
                         <p class="intro-text-profil">Halaman ini merupakan halaman <b>Edit Profil</b> yang memungkinkan pengguna untuk memperbarui informasi pribadi mereka dalam sistem. Pada halaman ini, pengguna dapat mengubah data seperti <b>nama, NIP, jabatan, alamat, tanggal lahir, email, password,</b> serta mengganti <b>foto profil</b>.</p>
                         <p class="section-text-profil">Di halaman ini terdapat beberapa fitur utama:</p>
                             <ul>
@@ -359,56 +363,79 @@
 
         function changeContent(component) {
             let image = document.getElementById("component-image");
-            let contentText = document.querySelector(".card-datapengguna-content");
+            let contentText = document.querySelector(".card-notulensi-content");
 
+
+            let baseURL = "<?= base_url(); ?>";
             let images = {
-                "tambah": "assets/images/MAHIRA_.jpg",
-                "edit": "assets/images/HENI_.jpg",
-                "detail": "assets/images/WULAN_.jpg"
+                "daftar": baseURL + "assets/images/MAHIRA_.jpg",
+                "buat": baseURL + "assets/images/HENI_.jpg",
+                "detail": baseURL + "assets/images/INTAN_.jpg",
+                "feedback": baseURL + "assets/images/WULAN_.jpg"
             };
 
             let descriptions = {
-                "tambah": `
-                    <p style="margin-top: -5px; text-align: justify;">
-                        Halaman <b>Tambah Pengguna</b> digunakan untuk menambahkan pengguna baru ke dalam sistem. Administrator dapat menginput data pengguna, 
-                        mengunggah foto profil, serta mengatur password sebelum menyimpannya.
+                "daftar": `
+                    <p style="margin-top: 10px; text-align: justify;">
+                       Halaman ini digunakan untuk mengelola informasi notulensi. Pengguna dapat melihat data notulensi yang tampil dalam bentuk tabel. Tabel daftar notulensi ini berisi <b>Topik, Bidang, Tanggal dan Aksi</b>
                     </p>
 
-                    <p style="text-align: justify;"><b>Proses penambahan pengguna melibatkan beberapa langkah penting:</b></p>
+                    <p style="text-align: justify; margin-bottom: 10px; line-heigt: 1.5"><b>Proses penambahan pengguna melibatkan beberapa langkah penting:</b></p>
                         <ul class="checklist">
-                            <li><b>Pengisian Data:</b> Admin harus mengisi informasi penting seperti <b>Username, Nama Lengkap, NIP, Email, Status, Bidang, dan Jabatan.</b> 
-                            Pastikan semua data dimasukkan dengan benar untuk menghindari kesalahan dalam sistem.</li>
-
-                            <li><b>Upload Foto Profil:</b> Untuk setiap pengguna, admin dapat mengunggah foto profil dengan ukuran maksimal 5MB. 
-                            Foto ini akan membantu dalam identifikasi pengguna dalam sistem.</li>
-                
-                            <li><b>Pengaturan Password:</b> Administrator harus menetapkan password untuk pengguna baru, serta mengonfirmasinya agar tidak terjadi kesalahan input. 
-                            Password yang aman direkomendasikan untuk menghindari akses yang tidak sah.</li>
-                
-                            <li><b>Tombol Simpan Perubahan:</b> Tombol biru di bagian bawah digunakan untuk menyimpan data pengguna yang telah diinput ke dalam sistem.</li>
+                            <li><b>Kategori:</b> Untuk <b>menampilkan data notulensi per bidang.</b> Untuk bidangnya ada 3 yaitu, <b>APTIKA, IKP, Statistik dan Persandian.</b></li>
+                            <li><b>Pencarian:</b> Mempermudah pencarian pengguna berdasarkan <b>topik</b> dan <b>bidang</b>.</li>
+                            <li><b>Show Entries:</b> Mempermudah pengguna dalam mengatur jumlah data yang ditampilkan dalam tabel, sehingga dapat memilih untuk menampilkan <b>5, 10, 15, atau 20</b> data pengguna dalam satu halaman.</li>
+                            <li><b>Aksi:</b> Pengguna bisa melihat detail dari notulensi yang dipilih dengan <b>menekan</b> tombol <b>detail.</b>
                         </ul>
                 `,
 
-                "edit": `
-                    <p style="margin-top: 5px; text-align: justify;">
-                        Halaman <b>Ubah Data Pengguna</b> digunakan untuk mengedit informasi pengguna yang sudah ada dalam sistem. 
-                        Administrator dapat memperbarui data pengguna jika ada perubahan informasi.
+                "buat": `
+                    <p style="margin-top: 10px; text-align: justify;">
+                        Halaman <b>Buat Notulensi</b> digunakan untuk mencatat hasil rapat secara sistematis.
+                        Pengguna dapat mengisi berbagai informasi terkait notulensi sebelum menyimpannya ke dalam sistem.
                     </p>
 
-                    <p style="text-align: justify;"><b>Langkah-langkah untuk mengedit data pengguna:</b></p>
+                    <p style="text-align: justify; margin-bottom: 10px; line-heigt:1.5"><b>Langkah-langkah untuk membuat notulensi:</b></p>
                         <ul class="checklist">
-                            <li><b>Memilih Pengguna:</b> Administrator memilih pengguna yang akan diedit dari daftar pengguna.</li>
-                            <li><b>Memperbarui Data:</b> Administrator dapat memperbarui informasi seperti <b>Username, Nama Lengkap, NIP, Email, Status, Bidang, dan Jabatan.</b></li>
-                            <li><b>Upload Foto Profil Baru:</b> Jika diperlukan, administrator bisa mengganti foto profil pengguna dengan ukuran maksimal 5MB.</li>
-                            <li><b>Pengubahan Password:</b> Jika diperlukan, administrator bisa menetapkan password baru untuk pengguna.</li>
-                            <li><b>Menyimpan Perubahan:</b> Setelah semua data diperbarui, administrator harus mengklik tombol <b>Simpan Perubahan</b> untuk memperbarui informasi pengguna di dalam sistem.</li>
+                            <li><b>Topik:</b> Masukkan <b>judul atau topik utama</b> dari rapat yang dilakukan.</li>
+                            <li><b>Agenda:</b> Rincikan <b>poin-poin penting</b> yang dibahas dalam rapat.</li>
+                            <li><b>Partisipan:</b> Tambahkan daftar <b>peserta rapat yang hadir</b>, baik pegawai maupun non-pegawai.</li>
+                            <li><b>Email (Opsional):</b> Jika diperlukan, masukkan <b>email peserta</b> untuk pemberitahuan lebih lanjut.</li>
+                            <li><b>Pembahasan:</b> Catat hasil <b>diskusi dan keputusan</b> yang dibuat. Pengguna juga dapat menggunakan <b>fitur input suara</b> untuk mempermudah pencatatan.</li>
+                            <li><b>Upload Dokumentasi:</b> Unggah <b>file atau gambar</b> sebagai dokumentasi tambahan terkait rapat.</li>
+                            <li><b>Menyimpan Notulensi:</b> Setelah semua informasi diisi, pengguna harus mengklik tombol <b>Simpan</b> agar data tersimpan dalam sistem.</li>
                         </ul>
                 `,
-        
+
                 "detail": `
-                    <p style="margin-top: 5px; text-align: justify;">Halaman <b>Detail Pengguna</b> menampilkan informasi lengkap tentang pengguna yang dipilih. 
-                    Informasi yang ditampilkan mencakup <b>ID User, Username, Nama Lengkap, NIP, Email, Status, Bidang, dan Jabatan</b>. 
-                    Selain itu, foto profil pengguna juga ditampilkan untuk memudahkan identifikasi.</p>
+                    <p style="margin-top: 20px; text-align: justify;">
+                        Halaman <b>Detail Notulensi</b> digunakan untuk menampilkan informasi lengkap mengenai suatu notulensi rapat yang telah dibuat dalam sistem.
+                         Pengguna dapat melihat agenda rapat, daftar partisipan, pembahasan, serta dokumentasi foto terkait.
+                    </p>
+
+                    <p style="text-align: justify;"><b>Fitur utama dalam halaman ini:</b></p>
+                        <ul class="checklist">
+                            <li><b>Agenda Rapat:</b> Menampilkan daftar agenda yang dibahas dalam rapat.</li>
+                            <li><b>Partisipan:</b> Menunjukkan daftar pegawai dan non-pegawai yang berpartisipasi dalam rapat.</li>   
+                            <li><b>Pembahasan:</b> Berisi ringkasan atau catatan dari hasil diskusi dalam rapat.</li>
+                            <li><b>Dokumentasi Foto:</b> Jika tersedia, pengguna dapat melihat dan mengunduh dokumentasi foto rapat melalui tombol <b>Unduh</b>.</li>
+                            <li><b>Unduh Notulensi:</b> Pengguna dapat mengunduh notulensi dalam format dokumen melalui tombol <b>Unduh</b> untuk keperluan arsip atau referensi.</li>
+                            <li><b>Fitur Komentar:</b> Pengguna dapat memberikan komentar secara real-time untuk berdiskusi atau menambahkan informasi tambahan.</li>
+                        </ul>
+                `,
+
+                "feedback": `
+                    <p style="margin-top: -5px; text-align: justify;">
+                        Halaman <b>Komentar Notulensi</b> memungkinkan pengguna untuk memberikan tanggapan, atau catatan tambahan terkait hasil rapat yang telah dicatat dalam sistem.
+                        Fitur ini membantu komunikasi antar pengguna secara lebih interaktif.
+                    </p>
+
+                    <p style="text-align: justify;"><b>Fitur utama dalam halaman ini:</b></p>
+                        <ul class="checklist">
+                            <li><b>Kolom Input Komentar:</b> Pengguna dapat mengetikkan komentar dan mengirimkannya secara langsung. Fitur emoji juga tersedia untuk menambahkan ekspresi dalam pesan.</li>
+                            <li><b>Riwayat Komentar:</b> Menampilkan daftar komentar dari berbagai pengguna, lengkap dengan informasi nama, waktu, dan isi komentar.</li>
+                            <li><b>Interaksi Real-Time:</b> Komentar yang dikirim akan langsung muncul tanpa perlu memuat ulang halaman, mempermudah komunikasi.</li>
+                        </ul>
                 `
             };
 
@@ -427,15 +454,15 @@
 
             setTimeout(() => {
                 resetToDefault();
-            }, 20000); 
+            }, 20000);
         }
 
         const defaultImageSrc = document.getElementById("component-image")?.src;
-        const defaultContent = document.querySelector(".card-datapengguna-content")?.innerHTML;
+        const defaultContent = document.querySelector(".card-notulensi-content")?.innerHTML;
 
         function resetToDefault() {
             let image = document.getElementById("component-image");
-            let contentText = document.querySelector(".card-datapengguna-content");
+            let contentText = document.querySelector(".card-notulensi-content");
 
             if (image) {
                 image.src = defaultImageSrc; 
@@ -446,15 +473,15 @@
             }
 
             document.querySelectorAll(".grid-container.show").forEach(container => {
-                let parentCard = container.closest(".datapengguna-card");
+                let parentCard = container.closest(".notulensi-card");
                     if (!parentCard) {
                         container.classList.remove("show"); 
                     }
             });
 
-            let cardDataPengguna = document.querySelector(".datapengguna-card .grid-container");
-                if (cardDataPengguna && !cardDataPengguna.classList.contains("show")) {
-                    cardDataPengguna.classList.add("show");
+            let cardNotulensi = document.querySelector(".notulensi-card .grid-container");
+                if (cardNotulensi && !cardNotulensi.classList.contains("show")) {
+                    cardNotulensi.classList.add("show");
                 }
         }
 
@@ -462,37 +489,40 @@
             let image = document.getElementById("rapat-image");
             let contentText = document.querySelector(".card-rapat-content");
 
+            let baseURL = "<?= base_url(); ?>";
             let images = {
-                "buat": "assets/images/INTAN_.jpg",
-                "persetujuan": "assets/images/CINDY_.jpg"
+                "buat": baseURL + "assets/images/INTAN_.jpg",
+                "jadwal": baseURL + "assets/images/CINDY_.jpg"
             };
 
             let descriptions = {
                 "buat": `
                     <p style="margin-top: -5px; text-align: justify;"> 
                         Halaman <b>Buat Jadwal Rapat</b> digunakan untuk membuat dan mengatur jadwal rapat baru dalam sistem. 
-                        Admin dapat memasukkan detail penting seperti <b>topik rapat, agenda, tanggal, waktu, dan lokasi</b> agar rapat dapat terjadwal dengan jelas dan terorganisir.
+                        Pengguna dapat memasukkan detail penting seperti <b>topik rapat, agenda, tanggal, waktu, dan lokasi</b> agar rapat dapat terjadwal dengan jelas dan terorganisir.
                     </p>
 
                     <p style="text-align: justify;"><b>Langkah-langkah dalam membuat jadwal rapat:</b></p>
                         <ul class="checklist" style="text-align : justify; line-heigt : 1.5;">
-                            <li><b>Pengisian Data Rapat:</b> Admin mengisi informasi rapat termasuk <b>topik, agenda, tanggal, waktu, dan lokasi</b>.</li>
+                            <li><b>Pengisian Data Rapat:</b> Pengguna mengisi informasi rapat termasuk <b>topik, agenda, tanggal, waktu, dan lokasi</b>.</li>
                             <li><b>Tombol Simpan:</b> Setelah data diisi, admin dapat menekan tombol <b>Simpan</b> agar jadwal tersimpan dalam sistem.</li>
                         </ul>
                 `,
 
-                "persetujuan": `
-                    <p style="margin-top: 5px; text-align: justify;">  
-                        Halaman <b>Persetujuan Rapat</b> digunakan untuk menampilkan dan mengelola permintaan persetujuan rapat yang diajukan oleh <b>pegawai</b> dan <b>notulen</b> dalam bentuk tabel.  
-                        Admin dapat <b>menyetujui</b> atau <b>menolak</b> rapat berdasarkan keputusan <b>Kepala Bidang</b> masing-masing serta <b>Keputusan Kepala Dinas</b>.  
+                "jadwal": `
+                    <p style="margin-top: -5px; text-align: justify;">
+                        Halaman <b>Jadwal Rapat</b> digunakan untuk menampilkan daftar jadwal rapat yang telah direncanakan dalam sistem.
+                        Pengguna dapat melihat informasi rapat seperti topik, bidang terkait, tanggal pelaksanaan, serta status persetujuan.
                     </p>
 
-                    <p style="text-align: justify;"><b>Proses persetujuan rapat:</b></p>
-                        <ul class="checklist" style="text-align : justify;">
-                            <li><b>Meninjau Permintaan:</b> Admin melihat daftar permintaan rapat yang membutuhkan persetujuan.</li>
-                            <li><b>Mengambil Keputusan:</b> Admin dapat memilih untuk <b>menyetujui</b> atau <b>menolak</b></li>
-                            <li><b>Memberikan Alasan Penolakan Rapat:</b> Admin dapat menginputkan <b>alasan penolakan rapat</b> melalui <b>form dalam popup</b> yang muncul ketika <b>icon Tolak</b> ditekan.</li>
-                        </ul>
+                    <p style="text-align: justify;"><b>Fitur utama dalam halaman ini:</b></p>
+                    <ul class="checklist">
+                        <li><b>Daftar Jadwal Rapat:</b> Menampilkan informasi <b>Topik, Bidang, Tanggal, dan Status</b> apakah rapat telah disetujui, ditolak, atau masih menunggu persetujuan.</li>
+                        <li><b>Indikator Status:</b> Rapat yang telah <b>disetujui</b> akan ditandai dengan warna hijau, <b>belum disetujui</b> berwarna abu-abu, dan <b>ditolak</b> berwarna merah.</li>
+                        <li><b>Popup Alasan Penolakan:</b> Untuk rapat yang ditolak, terdapat ikon yang dapat diklik untuk menampilkan alasan penolakan.</li>
+                        <li><b>Pencarian:</b> Pengguna dapat melakukan pencarian dan filter berdasarkan bidang dan topik untuk menemukan jadwal yang diinginkan.</li>
+                        <li><b>Show Entries:</b> Mempermudah pengguna dalam mengatur jumlah data yang ditampilkan dalam tabel, sehingga dapat memilih untuk menampilkan <b>5, 10, 15, atau 20</b> data pengguna dalam satu halaman.</li>
+                </ul>
                 `
             };
 
@@ -522,11 +552,11 @@
             let contentText = document.querySelector(".card-rapat-content");
 
                 if (image) {
-                    image.src = defaultRapatImageSrc; 
+                    image.src = defaultRapatImageSrc; // Balik ke gambar awal
                 }
                 
                 if (contentText) {
-                    contentText.innerHTML = defaultRapatContent; 
+                    contentText.innerHTML = defaultRapatContent; // Balik ke teks awal
                 }
 
             document.querySelectorAll(".grid-container.show").forEach(container => {
