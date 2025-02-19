@@ -350,7 +350,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.approveMeeting = function() {
         if (currentRow) {
-            const meetingId = currentRow.cells[4].dataset.meetingId;  // Ambil ID rapat dari data atribut
+            const meetingId = currentRow.cells[4].dataset.meetingId;  
             closeApprovalModal();
 
             fetch('<?= base_url('admin/persetujuanadmin/approve_meeting') ?>/' + meetingId, {
@@ -397,24 +397,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         if (currentRow) {
-            const meetingId = currentRow.cells[4].dataset.meetingId;  // Ambil ID rapat dari data atribut
+            const meetingId = currentRow.cells[4].dataset.meetingId;  
             closeRejectionModal();
-            
-            // Kirim alasan penolakan ke controller
+     
             fetch('<?= base_url('admin/persetujuanadmin/reject_meeting') ?>/' + meetingId, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ reason: reason }),  // Kirim alasan penolakan
+                body: JSON.stringify({ reason: reason }),  
             })
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
                     const rejectionMessage = document.getElementById('rejectionMessage');
                     rejectionMessage.textContent = `Rapat "${currentRow.cells[4].textContent}" ditolak dengan alasan: ${reason}`;
-                    
-                    // Tampilkan modal notifikasi
                     const rejectionSuccessModal = document.getElementById('rejectionSuccessModal');
                     rejectionSuccessModal.style.display = 'flex';
                     window.submitRejection = function() {
@@ -425,22 +422,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     if (currentRow) {
-        const meetingId = currentRow.cells[4].dataset.meetingId;  // Ambil ID rapat dari data atribut
+        const meetingId = currentRow.cells[4].dataset.meetingId;  
         closeRejectionModal();
         
-        // Kirim alasan penolakan ke controller
         fetch(`<?= base_url('admin/persetujuanadmin/reject_meeting/') ?>${meetingId}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ alasan: reason }),  // Kirim alasan penolakan
+            body: JSON.stringify({ alasan: reason }),  
         })
         .then(response => response.json())
         .then(data => {
             if (data.success) {
                 alert('Rapat berhasil ditolak.');
-                // Lakukan tindakan lain jika perlu, seperti memperbarui tampilan
             } else {
                 alert('Gagal menolak rapat.');
             }
@@ -450,10 +445,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 };
-                    // Tutup modal notifikasi setelah beberapa detik
+        
                     setTimeout(() => {
                         rejectionSuccessModal.style.display = 'none';
-                    }, 3000); // Modal akan tertutup setelah 3 detik
+                    }, 3000); 
                 } else {
                     alert('Gagal menolak rapat.');
                 }
@@ -464,7 +459,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    // Update bagian event listener untuk modal
     document.addEventListener('click', (e) => {
         if (!categorySelect.contains(e.target) && 
             !categoryPopup.contains(e.target) && 
@@ -482,8 +476,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
-    
-    // Event listeners
+
     searchInput.addEventListener('input', filterAndDisplayData);
     
     entriesSelect.addEventListener('change', () => {
@@ -509,7 +502,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Submenu handlers
     const menuWithSubmenu = document.querySelector('.menu-item-with-submenu');
     const submenuPopup = document.querySelector('.submenu-popup');
 
@@ -523,7 +515,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Theme toggle
     const themeToggle = document.querySelector('.theme-toggle');
     themeToggle.addEventListener('click', function() {
         body.classList.toggle('dark-mode');
@@ -538,8 +529,7 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('theme', 'light-mode');
         }
     });
-    
-    // Global click handler for closing popups
+
     document.addEventListener('click', (e) => {
         if (!categorySelect.contains(e.target) && 
             !categoryPopup.contains(e.target) && 
@@ -556,13 +546,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Profile Dropdown Toggle
 profileContainer.addEventListener('click', (e) => {
         e.stopPropagation();
         profileDropdown.classList.toggle('show');
     });
 
-// Logout functionality
 if (logoutLink) {
         logoutLink.addEventListener('click', function(e) {
             e.preventDefault();
@@ -571,7 +559,6 @@ if (logoutLink) {
         });
     }
 
-    // Modal functions
     window.showLogoutModal = function() {
         if (logoutModal) {
             logoutModal.style.display = 'block';

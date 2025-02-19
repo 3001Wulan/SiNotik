@@ -205,8 +205,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-
-        // Image Preview and Validation
         const photoInput = document.getElementById('photo');
         const previewImage = document.getElementById('previewImage');
         const previewContainer = document.getElementById('preview-container');
@@ -221,33 +219,31 @@ window.addEventListener('DOMContentLoaded', () => {
             if (!allowedTypes.includes(file.type)) {
                 errorMessage.textContent = 'Hanya gambar dengan format JPG, PNG, GIF, atau WEBP yang diperbolehkan!';
                 errorMessage.style.display = 'block';
-                event.target.value = ''; // Reset input file
+                event.target.value = ''; 
                 previewImage.style.display = 'none';
                 return;
             }
 
-            if (file.size > 5 * 1024 * 1024) { // Maksimal 5MB
+            if (file.size > 5 * 1024 * 1024) { 
                 errorMessage.textContent = 'Ukuran file terlalu besar! Maksimal 5MB.';
                 errorMessage.style.display = 'block';
-                event.target.value = ''; // Reset input file
+                event.target.value = ''; 
                 previewImage.style.display = 'none';
                 return;
             }
 
-            // Jika lolos validasi, tampilkan gambar
-            errorMessage.style.display = 'none'; // Sembunyikan pesan error
+            errorMessage.style.display = 'none'; 
             const reader = new FileReader();
 
             reader.onload = function (e) {
                 previewImage.src = e.target.result;
-                previewImage.style.display = 'block'; // Tampilkan gambar preview
+                previewImage.style.display = 'block'; 
             };
 
-            reader.readAsDataURL(file); // Membaca file dan menampilkan sebagai gambar
+            reader.readAsDataURL(file); 
         }
     });
 
-        // Password Validation
         const passwordField = document.getElementById('password');
         const confirmPasswordField = document.getElementById('confirm-password');
 
@@ -258,22 +254,17 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // JavaScript untuk Dropdown Menu
         const profileIcon = document.getElementById('profile-icon');
         const dropdownMenu = document.getElementById('dropdownMenu');
-
-        // Toggle dropdown menu saat foto profil diklik
         profileIcon.addEventListener('click', (event) => {
-            event.stopPropagation(); // Mencegah event bubbling
+            event.stopPropagation(); 
             dropdownMenu.classList.toggle('show');
         });
 
-        // Menyembunyikan dropdown menu jika klik di luar area dropdown
         window.addEventListener('click', () => {
             dropdownMenu.classList.remove('show');
         });
 
-        // Popup Logout
         const logoutLink = document.getElementById('logoutLink');
         const popupOverlay = document.getElementById('popupOverlay');
         const confirmLogout = document.getElementById('confirmLogout');

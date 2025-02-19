@@ -252,8 +252,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     document.body.appendChild(categoryPopup);
-    
-    // Category select click handler
     categorySelect.addEventListener('click', function(e) {
         e.stopPropagation();
         const rect = this.getBoundingClientRect();
@@ -262,8 +260,6 @@ document.addEventListener('DOMContentLoaded', function() {
         categoryPopup.style.width = `${rect.width}px`;
         categoryPopup.style.display = categoryPopup.style.display === 'block' ? 'none' : 'block';
     });
-
-    // Filter and display data function
     function filterAndDisplayData() {
         const searchTerm = searchInput.value.toLowerCase().trim();
         const selectedCategory = categorySelect.value.toLowerCase().trim();
@@ -286,8 +282,6 @@ document.addEventListener('DOMContentLoaded', function() {
         updatePagination();
         displayCurrentPage();
     }
-    
-    // Pagination functions
     function updatePagination() {
         const totalPages = Math.ceil(filteredRows.length / itemsPerPage) || 1;
         currentPage = Math.min(currentPage, totalPages);
@@ -308,8 +302,6 @@ document.addEventListener('DOMContentLoaded', function() {
             row.cells[0].textContent = start + index + 1;
         });
     }
-
-    // Event listeners for search and pagination
     searchInput.addEventListener('input', filterAndDisplayData);
     
     entriesSelect.addEventListener('change', () => {
@@ -335,7 +327,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Submenu handlers
     const menuWithSubmenu = document.querySelector('.menu-item-with-submenu');
     const submenuPopup = document.querySelector('.submenu-popup');
 
@@ -349,7 +340,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Theme toggle
     const themeToggle = document.querySelector('.theme-toggle');
     themeToggle.addEventListener('click', function() {
         body.classList.toggle('dark-mode');
@@ -364,8 +354,6 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('theme', 'light-mode');
         }
     });
-    
-    // Logout functionality
     if (logoutLink) {
         logoutLink.addEventListener('click', function(e) {
             e.preventDefault();
@@ -373,8 +361,6 @@ document.addEventListener('DOMContentLoaded', function() {
             showLogoutModal();
         });
     }
-
-    // Modal functions
     window.showLogoutModal = function() {
         logoutModal.style.display = 'block';
         profileDropdown.classList.remove('show');
@@ -387,8 +373,6 @@ document.addEventListener('DOMContentLoaded', function() {
     window.confirmLogout = function() {
         window.location.href = "<?= base_url('logout') ?>";
     }
-
-    // Global click handler for closing popups
     document.addEventListener('click', (e) => {
         if (!categorySelect.contains(e.target) && 
             !categoryPopup.contains(e.target) && 
@@ -400,8 +384,7 @@ document.addEventListener('DOMContentLoaded', function() {
             closeLogoutModal();
         }
     });
-    
-    // Initial display
+
     filterAndDisplayData();
 });
 </script>

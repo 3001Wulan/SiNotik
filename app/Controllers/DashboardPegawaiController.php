@@ -17,7 +17,6 @@ class DashboardPegawaiController extends BaseController
 
         $user_id = session()->get('user_id');  
 
-        log_message('debug', 'User ID: ' . $user_id);
 
         $profile_picture = $dashboardAdminModel->getProfilePicture($user_id);
 

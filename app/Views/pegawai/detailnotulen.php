@@ -22,9 +22,8 @@
             Dashboard
           </a>
         </li>
-        <!-- Menu Notulensi dengan dropdown yang muncul saat hover -->
         <li class="notulensi-menu">
-          <a href="daftar-notulensi" class="<?php echo ($current_page == '') ? 'active' : 'active'; ?>">
+          <a href="/pegawai/melihatpegawai" class="<?php echo ($current_page == '') ? 'active' : 'active'; ?>">
             <img src="<?php echo base_url('assets/images/notulensi.png'); ?>" alt="Notulensi Icon" class="sidebar-icon">
             Notulensi
           </a>
@@ -35,13 +34,13 @@
           </a>
         </li>
         <li>
-            <a href="jadwalrapat" class="inactive">
+            <a href="/pegawai/jadwalrapat" class="inactive">
               <img src="<?php echo base_url('assets/images/rapat.png'); ?>" alt="Jadwal Rapat Icon" class="sidebar-icon">
               Jadwal Rapat
             </a>
           </li>
           <li>
-            <a href="panduanpegawai" class="inactive">
+            <a href="/pegawai/panduanpegawai" class="inactive">
               <img src="<?php echo base_url('assets/images/panduanpengguna.png'); ?>" alt="Panduan Pengguna Icon" class="sidebar-icon">
               Panduan Pengguna
             </a>

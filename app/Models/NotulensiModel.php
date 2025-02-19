@@ -10,7 +10,7 @@ class NotulensiModel extends Model
     protected $primaryKey = 'notulensi_id';
     protected $allowedFields = [
         'user_id', 'judul', 'partisipan', 'agenda', 'isi', 'bidang', 'tanggal_dibuat',
-        'partisipan_non_pegawai'
+        'partisipan_non_pegawai',
     ];
 
     protected $validationRules = [
@@ -56,8 +56,46 @@ class NotulensiModel extends Model
     {
         return $this->findAll();
     }
+    public function getNotulensiByUserIdAndBidang($user_id)
+    {
+        $db = \Config\Database::connect();
+    
+        // 1. Ambil bidang berdasarkan user_id
+        $query = $db->table('notulensi')
+                    ->select('Bidang')
+                    ->where('user_id', $user_id)
+                    ->limit(1);
+    
+        log_message('debug', 'Query Bidang: ' . $query->getCompiledSelect());
+    
+        $userBidang = $query->get()->getRowArray();
+    
+        if (!$userBidang) {
+            log_message('debug', 'User ID ' . $user_id . ' tidak memiliki bidang yang terdaftar.');
+            return [];
+        }
+    
+        $bidang = $userBidang['Bidang']; 
+        $query = $db->table('notulensi')
+                    ->where('Bidang', $bidang);
+    
+        $result = $query->get()->getResultArray();
 
-    public function getNotulensiById($notulensi_id)
+        log_message('debug', 'Bidang ditemukan: ' . $bidang);
+        log_message('debug', 'Query Notulensi Result: ' . json_encode($result));
+
+
+        return $result;
+    }
+    
+    
+    
+public function getNotulensiByBidang($bidang)
+{
+    return $this->where('Bidang', $bidang)->findAll();
+}
+
+public function getNotulensiById($notulensi_id)
     {
         return $this->where('notulensi_id', $notulensi_id)->first();
     }

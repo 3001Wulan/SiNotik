@@ -214,7 +214,7 @@
     });
 
     confirmLogout.addEventListener('click', () => {
-        window.location.href = 'login'; 
+        window.location.href = '/'; 
     });
 
     cancelLogout.addEventListener('click', () => {

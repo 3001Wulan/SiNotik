@@ -268,7 +268,6 @@
             }
         });
 
-        // Fitur toggle dark mode
         const toggleDarkMode = document.getElementById('toggleDarkMode');
         toggleDarkMode.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
@@ -280,7 +279,6 @@
                 '<?php echo base_url('assets/images/moon.png'); ?>';
         });
 
-        // Periksa preferensi dark mode saat halaman dimuat
         const isDarkMode = localStorage.getItem('darkMode') === 'true';
         if (isDarkMode) {
             document.body.classList.add('dark-mode');
@@ -306,8 +304,6 @@
         confirmLogout.addEventListener('click', () => {
             window.location.href = '<?= base_url('/') ?>';
         });
-
-        // Dropdown profile menu
         const profileIcon = document.getElementById('profile-icon');
         const dropdownMenu = document.getElementById('dropdownMenu');
 

@@ -24,6 +24,7 @@ class NotulenJadwalController extends Controller
         $jadwal = $jadwalModel->getAllJadwal(); 
         $data['user'] = $userData;
         $data['jadwal'] = $jadwal; 
+    
         return view('notulen/jadwalrapatnotulen', $data);
     }
     public function getAllJadwal()

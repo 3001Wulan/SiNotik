@@ -12,10 +12,7 @@ class AuthModel extends Model
 
     public function checkLogin($username)
 {
-    // Mengubah pencarian dari nama ke username (sesuaikan dengan nama kolom di database)
     $user = $this->where('username', $username)->first(); 
-    log_message('error', 'Checking login for username: ' . $username);
-    log_message('error', 'User data: ' . print_r($user, true));
     return $user;
 }
     

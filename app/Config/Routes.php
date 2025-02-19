@@ -76,6 +76,7 @@ $routes->get('assets/images/profiles/(:any)', function () {
     return redirect()->to('/login');
 });
 $routes->get('assets/images/profiles/(:any)', 'AuthRedirect::blockAccess');
+$routes->get('notulen/panduannotulen', 'PanduanNotulenController::index');
 
 
 

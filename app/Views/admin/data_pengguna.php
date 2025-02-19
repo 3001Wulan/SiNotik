@@ -27,7 +27,7 @@ $current_page = 'data_pengguna';
                     </a>
                 </li>
                 <li>
-                    <a href="data-pengguna" class="<?php echo ($current_page == 'data_pengguna') ? 'active' : 'inactive'; ?>">
+                    <a href="" class="<?php echo ($current_page == 'data_pengguna') ? 'active' : 'inactive'; ?>">
                         <img src="<?php echo base_url('assets/images/datapengguna.png'); ?>" alt="Data Pengguna Icon" class="sidebar-icon">
                         Data Pengguna
                     </a>

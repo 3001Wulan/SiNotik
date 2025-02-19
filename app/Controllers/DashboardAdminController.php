@@ -18,19 +18,13 @@ class DashboardAdminController extends BaseController
 
         $user_id = session()->get('user_id');  
 
-        log_message('debug', 'User ID: ' . $user_id);
-
         $profile_picture = $dashboardAdminModel->getProfilePicture($user_id);
 
         $profile_picture = $profile_picture['profil_foto'] ?? 'default.jpg';
-        log_message('debug', 'Profile Picture: ' . $profile_picture);
         $user = $dashboardAdminModel->getUserInfo($user_id);
 
         $user_name = isset($user['nama']) && !empty($user['nama']) ? $user['nama'] : 'Guest';
         $user_role = isset($user['role']) && !empty($user['role']) ? $user['role'] : 'Unknown';
-
-        log_message('debug', 'User Name: ' . $user_name);
-        log_message('debug', 'User Role: ' . $user_role);
 
         return view('admin/dashboard_admin', [
             'total_pegawai' => $totalPegawai,

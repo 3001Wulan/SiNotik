@@ -224,6 +224,14 @@
             </div>
         </div>
     </div>
+    <!-- Modal untuk Preview Gambar -->
+<div id="imageModal" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); justify-content: center; align-items: center;">
+    <img id="previewImage" style="max-width: 90%; max-height: 90%;"/>
+    <button onclick="closePreview()" id="closeBtn" style="position: absolute; top: 20px; right: 20px; background: rgba(0, 0, 0, 0.5); color: white; border: none; border-radius: 50%; font-size: 30px; width: 40px; height: 40px; display: flex; justify-content: center; align-items: center;">
+        &times;
+    </button>
+</div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -284,10 +292,10 @@
                     <td>${data.partisipan}</td> 
                     <td>${data.isi}</td>
                     <td>
-                        <div style="width: 150px; height: 150px; overflow: hidden; border: 1px solid #ccc;">
-                            <img src="<?= base_url('uploads/') ?>${data.foto_dokumentasi}" alt="Dokumentasi" class="doc-img">
-                        </div>
-                    </td>
+    <div style="width: 150px; height: 150px; overflow: hidden; border: 1px solid #ccc;">
+        <img src="<?= base_url('uploads/') ?>${data.foto_dokumentasi}" alt="Dokumentasi" class="doc-img" onclick="openPreview(this)">
+    </div>
+</td>
                     <td>
                         <button class="delete-btn" onclick="showDeleteModal(${data.notulensi_id})">
                             <img src="<?= base_url('assets/images/hapus.png') ?>" alt="Hapus Icon">
@@ -579,7 +587,19 @@ window.addEventListener('DOMContentLoaded', () => {
         toggleDarkMode.src = '<?php echo base_url('assets/images/moon.png'); ?>';
     }
 });
+function openPreview(imgElement) {
+        var modal = document.getElementById('imageModal');
+        var previewImage = document.getElementById('previewImage');
+        
 
+        previewImage.src = imgElement.src;
+        modal.style.display = 'flex';
+    }
+
+    function closePreview() {
+        var modal = document.getElementById('imageModal');
+        modal.style.display = 'none';
+    }
 </script>
 
 </body>

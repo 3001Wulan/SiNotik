@@ -9,8 +9,11 @@ class NotulenjadwalrapatController extends BaseController
 {
     public function index(): string
     {
-        return view('admin/jadwalrapatadmin');
+        return view('admin/jadwalrapatadmin', [
+            'current_page' => 'jadwalrapat'
+        ]);
     }
+    
 
     public function submitJadwal()
     {

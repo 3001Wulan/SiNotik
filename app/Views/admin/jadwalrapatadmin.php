@@ -49,6 +49,18 @@
                         </a>
                     </div>
                 </li>
+                <li>
+                    <a href="historyadmin" class="inactive">
+                        <img src="<?php echo base_url('assets/images/distribusi.png'); ?>" alt="Distribusi Notulensi Icon" class="sidebar-icon">
+                        Distribusi Notulensi
+                    </a>
+                </li>
+                <li>
+                    <a href="panduanadmin" class="inactive">
+                        <img src="<?php echo base_url('assets/images/panduanpengguna.png'); ?>" alt="Panduan Pengguna Icon" class="sidebar-icon">
+                        Panduan Pengguna
+                    </a>
+                </li>
             </ul>
         </div>
 
@@ -61,13 +73,15 @@
                 <div class="user-info">
                     <div class="user-text">
                         <div class="user-name">
-                            <span>Masya Allah</span>
+                            <span><?= session()->get('nama') ? session()->get('nama') : 'Nama Tidak Ditemukan'; ?></span>
+                        
                         </div>
                         <div class="user-role">
-                            <span>Admin</span>
+                            <span><?= session()->get('role') ? ucfirst(session()->get('role')) : 'Role Tidak Ditemukan'; ?></span>
                         </div>
                     </div>
-                    <img src="<?= base_url('assets/images/profiles/default.png') ?>" alt="User Photo" class="header-profile-img" id="profile-icon">
+                    
+                    <img src="<?= base_url('assets/images/profiles/' . (file_exists('assets/images/profiles/' . session()->get('profil_foto')) ? session()->get('profil_foto') : 'delvaut.png')) ?>" alt="User Photo" class="header-profile-img" id="profile-icon">
                     <div class="dropdown-menu" id="dropdownMenu">
                         <a href="<?= base_url('admin/jadwalrapatadmin') ?>" class="dropdown-item">
                             <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">

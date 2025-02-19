@@ -13,7 +13,6 @@ class DataPenggunaModel extends Model
 
     public function getUsersByRole($role)
     {
-        log_message('info', 'Mencoba mengambil pengguna dengan role ' . $role);
 
         $users = $this->where('role', $role)->findAll();
 
@@ -28,7 +27,6 @@ class DataPenggunaModel extends Model
 
     public function getUsersByRoles($role1, $role2)
     {
-        log_message('info', 'Mencoba mengambil pengguna dengan role ' . $role1 . ' dan ' . $role2);
         $users = $this->where('role', $role1)
                       ->orWhere('role', $role2)
                       ->findAll();
@@ -44,7 +42,6 @@ class DataPenggunaModel extends Model
 
     public function getUserById($user_id)
     {
-        log_message('info', 'Mencoba mengambil profil pengguna dengan ID ' . $user_id);
 
         $user = $this->find($user_id);
 

@@ -57,7 +57,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="panduanpegawai" class="active">
+                    <a href="" class="active">
                         <img src="<?php echo base_url('assets/images/panduanpengguna.png'); ?>" alt="Panduan Pengguna Icon" class="sidebar-icon">
                         Panduan Pengguna
                     </a>

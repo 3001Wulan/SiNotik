@@ -221,7 +221,6 @@
     </div>
 
     <script>
-    //Perubahan Data
      function toggleEdit(fieldId, spanId) {
             var field = document.getElementById(fieldId);
             var span = document.getElementById(spanId);
