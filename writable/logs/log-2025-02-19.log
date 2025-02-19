@@ -1,0 +1,859 @@
+INFO - 2025-02-19 05:11:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:11:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:11:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-19 05:12:00 --> Login success for username: lili
+INFO - 2025-02-19 05:12:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:12:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:12:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:12:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:12:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:12:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:12:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:12:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:12:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-19 05:12:23 --> Login success for username: jaja
+INFO - 2025-02-19 05:12:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-19 05:12:24 --> Profile Picture: pegawai.png
+DEBUG - 2025-02-19 05:12:24 --> User Name: jungwon
+DEBUG - 2025-02-19 05:12:24 --> User Role: pegawai
+INFO - 2025-02-19 05:12:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:12:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:12:28 --> Mencoba mengambil profil pengguna dengan ID 13
+INFO - 2025-02-19 05:12:28 --> Pengguna dengan ID 13 ditemukan di database: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-31 05:12:25
+)
+
+INFO - 2025-02-19 05:12:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:17:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:17:44 --> Mencoba mengambil profil pengguna dengan ID 13
+INFO - 2025-02-19 05:17:44 --> Pengguna dengan ID 13 ditemukan di database: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-31 05:12:25
+)
+
+CRITICAL - 2025-02-19 05:17:44 --> BadMethodCallException: Call to undefined method App\Models\PegawaiJadwalModel::getAllJadwal
+[Method: GET, Route: pegawai/jadwalrapat]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\PegawaiJadwalController.php(24): CodeIgniter\Model->__call('getAllJadwal', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PegawaiJadwalController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiJadwalController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-02-19 05:18:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:18:00 --> Mencoba mengambil profil pengguna dengan ID 13
+INFO - 2025-02-19 05:18:00 --> Pengguna dengan ID 13 ditemukan di database: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-31 05:12:25
+)
+
+CRITICAL - 2025-02-19 05:18:00 --> ArgumentCountError: Too few arguments to function App\Models\PegawaiJadwalModel::getJadwalByBidang(), 0 passed in D:\xampp\htdocs\SiNotik\app\Controllers\PegawaiJadwalController.php on line 24 and exactly 1 expected
+[Method: GET, Route: pegawai/jadwalrapat]
+in APPPATH\Models\PegawaiJadwalModel.php on line 13.
+ 1 APPPATH\Controllers\PegawaiJadwalController.php(24): App\Models\PegawaiJadwalModel->getJadwalByBidang()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PegawaiJadwalController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiJadwalController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-02-19 05:18:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:18:21 --> Mencoba mengambil profil pengguna dengan ID 13
+INFO - 2025-02-19 05:18:21 --> Pengguna dengan ID 13 ditemukan di database: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-31 05:12:25
+)
+
+CRITICAL - 2025-02-19 05:18:21 --> ArgumentCountError: Too few arguments to function App\Models\PegawaiJadwalModel::getJadwalByBidang(), 0 passed in D:\xampp\htdocs\SiNotik\app\Controllers\PegawaiJadwalController.php on line 24 and exactly 1 expected
+[Method: GET, Route: pegawai/jadwalrapat]
+in APPPATH\Models\PegawaiJadwalModel.php on line 13.
+ 1 APPPATH\Controllers\PegawaiJadwalController.php(24): App\Models\PegawaiJadwalModel->getJadwalByBidang()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PegawaiJadwalController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiJadwalController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-02-19 05:18:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:18:23 --> Mencoba mengambil profil pengguna dengan ID 13
+INFO - 2025-02-19 05:18:23 --> Pengguna dengan ID 13 ditemukan di database: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-31 05:12:25
+)
+
+CRITICAL - 2025-02-19 05:18:23 --> ArgumentCountError: Too few arguments to function App\Models\PegawaiJadwalModel::getJadwalByBidang(), 0 passed in D:\xampp\htdocs\SiNotik\app\Controllers\PegawaiJadwalController.php on line 24 and exactly 1 expected
+[Method: GET, Route: pegawai/jadwalrapat]
+in APPPATH\Models\PegawaiJadwalModel.php on line 13.
+ 1 APPPATH\Controllers\PegawaiJadwalController.php(24): App\Models\PegawaiJadwalModel->getJadwalByBidang()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PegawaiJadwalController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiJadwalController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-02-19 05:18:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:18:23 --> Mencoba mengambil profil pengguna dengan ID 13
+INFO - 2025-02-19 05:18:23 --> Pengguna dengan ID 13 ditemukan di database: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-31 05:12:25
+)
+
+CRITICAL - 2025-02-19 05:18:23 --> ArgumentCountError: Too few arguments to function App\Models\PegawaiJadwalModel::getJadwalByBidang(), 0 passed in D:\xampp\htdocs\SiNotik\app\Controllers\PegawaiJadwalController.php on line 24 and exactly 1 expected
+[Method: GET, Route: pegawai/jadwalrapat]
+in APPPATH\Models\PegawaiJadwalModel.php on line 13.
+ 1 APPPATH\Controllers\PegawaiJadwalController.php(24): App\Models\PegawaiJadwalModel->getJadwalByBidang()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PegawaiJadwalController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiJadwalController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-02-19 05:18:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:18:23 --> Mencoba mengambil profil pengguna dengan ID 13
+INFO - 2025-02-19 05:18:23 --> Pengguna dengan ID 13 ditemukan di database: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-31 05:12:25
+)
+
+CRITICAL - 2025-02-19 05:18:23 --> ArgumentCountError: Too few arguments to function App\Models\PegawaiJadwalModel::getJadwalByBidang(), 0 passed in D:\xampp\htdocs\SiNotik\app\Controllers\PegawaiJadwalController.php on line 24 and exactly 1 expected
+[Method: GET, Route: pegawai/jadwalrapat]
+in APPPATH\Models\PegawaiJadwalModel.php on line 13.
+ 1 APPPATH\Controllers\PegawaiJadwalController.php(24): App\Models\PegawaiJadwalModel->getJadwalByBidang()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PegawaiJadwalController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiJadwalController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-02-19 05:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:18:30 --> Mencoba mengambil profil pengguna dengan ID 13
+INFO - 2025-02-19 05:18:30 --> Pengguna dengan ID 13 ditemukan di database: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-31 05:12:25
+)
+
+CRITICAL - 2025-02-19 05:18:30 --> ArgumentCountError: Too few arguments to function App\Models\PegawaiJadwalModel::getJadwalByBidang(), 0 passed in D:\xampp\htdocs\SiNotik\app\Controllers\PegawaiJadwalController.php on line 24 and exactly 1 expected
+[Method: GET, Route: pegawai/jadwalrapat]
+in APPPATH\Models\PegawaiJadwalModel.php on line 13.
+ 1 APPPATH\Controllers\PegawaiJadwalController.php(24): App\Models\PegawaiJadwalModel->getJadwalByBidang()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PegawaiJadwalController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiJadwalController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-02-19 05:19:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:19:13 --> Mencoba mengambil profil pengguna dengan ID 13
+INFO - 2025-02-19 05:19:13 --> Pengguna dengan ID 13 ditemukan di database: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-31 05:12:25
+)
+
+CRITICAL - 2025-02-19 05:19:13 --> ArgumentCountError: Too few arguments to function App\Models\PegawaiJadwalModel::getJadwalByBidang(), 0 passed in D:\xampp\htdocs\SiNotik\app\Controllers\PegawaiJadwalController.php on line 24 and exactly 1 expected
+[Method: GET, Route: pegawai/jadwalrapat]
+in APPPATH\Models\PegawaiJadwalModel.php on line 13.
+ 1 APPPATH\Controllers\PegawaiJadwalController.php(24): App\Models\PegawaiJadwalModel->getJadwalByBidang()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PegawaiJadwalController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiJadwalController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-02-19 05:19:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-19 05:19:15 --> Profile Picture: pegawai.png
+DEBUG - 2025-02-19 05:19:15 --> User Name: jungwon
+DEBUG - 2025-02-19 05:19:15 --> User Role: pegawai
+INFO - 2025-02-19 05:19:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:19:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:19:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:19:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-19 05:19:28 --> Login success for username: jaja
+INFO - 2025-02-19 05:19:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-19 05:19:28 --> Profile Picture: pegawai.png
+DEBUG - 2025-02-19 05:19:28 --> User Name: jungwon
+DEBUG - 2025-02-19 05:19:28 --> User Role: pegawai
+INFO - 2025-02-19 05:19:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:19:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:19:31 --> Data pengguna ditemukan: user_id = 13
+DEBUG - 2025-02-19 05:19:31 --> Query Bidang: SELECT `Bidang`
+FROM `notulensi`
+WHERE `user_id` = 'IKP'
+ LIMIT 1
+DEBUG - 2025-02-19 05:19:31 --> Bidang ditemukan: aptika
+DEBUG - 2025-02-19 05:19:31 --> Query Notulensi Result: [{"notulensi_id":"1","user_id":"32","judul":"rapat wajib ","partisipan":"1.wulan\r\n2.cindy\r\n3.intan","agenda":"1. Pembukaan\r\n2. Evaluasi Kegiatan Sebelumnya\r\n3. bb","isi":"<p data-start=\"0\" data-end=\"630\">Agenda rapat wajib dimulai dengan <strong data-start=\"34\" data-end=\"47\">pembukaan<\/strong>, di mana moderator atau pimpinan rapat memberikan sambutan serta menyampaikan tujuan dan aturan rapat agar berjalan dengan tertib. Selanjutnya, dilakukan <strong data-start=\"202\" data-end=\"234\">evaluasi kegiatan sebelumnya<\/strong>, yang mencakup laporan progres dari setiap divisi atau tim, identifikasi kendala yang dihadapi, serta solusi atau langkah perbaikan yang telah atau perlu dilakukan. Setelah itu, masuk ke <strong data-start=\"422\" data-end=\"449\">pembahasan agenda utama<\/strong>, yang meliputi diskusi terkait proyek atau program yang sedang berjalan, perencanaan kegiatan mendatang, serta keputusan strategis yang harus diambil untuk kelancaran organisasi.<\/p>\r\n<p data-start=\"632\" data-end=\"1274\" data-is-last-node=\"\">Setelah agenda utama dibahas, rapat dilanjutkan dengan <strong data-start=\"687\" data-end=\"721\">rencana dan target selanjutnya<\/strong>, yang berisi penyusunan timeline kegiatan, pembagian tugas, penetapan deadline, serta identifikasi sumber daya yang dibutuhkan untuk mencapai target yang telah ditentukan. Kemudian, dibuka sesi <strong data-start=\"916\" data-end=\"945\">lain-lain dan tanya jawab<\/strong>, di mana peserta dapat menyampaikan saran, masukan, atau isu tambahan yang perlu didiskusikan. Rapat ditutup dengan <strong data-start=\"1062\" data-end=\"1075\">penutupan<\/strong>, yang berisi rangkuman hasil diskusi, pembagian tugas tindak lanjut, serta informasi terkait pertemuan selanjutnya agar semua peserta memiliki pemahaman yang jelas mengenai langkah-langkah ke depan.<\/p>","Bidang":"aptika","tanggal_dibuat":"2025-02-15","email":null,"partisipan_non_pegawai":"1.heni\r\n2.mahira"},{"notulensi_id":"4","user_id":"32","judul":"rapat wajib ","partisipan":"1.wulan\r\n2.intan\r\n3.heni","agenda":"1.evaluasi\r\n2.keuangan \r\n3.laporan kerja","isi":"<p data-start=\"895\" data-end=\"1273\">Rapat wajib ini bertujuan untuk mengevaluasi kegiatan yang telah berjalan serta merumuskan strategi untuk pelaksanaan agenda selanjutnya. Dalam sesi pertama, dilakukan analisis terhadap keberhasilan maupun kendala yang dihadapi pada kegiatan sebelumnya. Evaluasi ini penting untuk mengidentifikasi aspek yang perlu diperbaiki agar kegiatan mendatang dapat berjalan lebih baik.<\/p>\r\n<p data-start=\"1275\" data-end=\"1635\">Selanjutnya, rapat akan membahas rencana kegiatan ke depan, termasuk penentuan jadwal, pembagian tugas, serta anggaran yang diperlukan. Dalam sesi ini, setiap anggota diharapkan dapat menyampaikan ide dan masukan agar perencanaan menjadi lebih matang. Keuangan juga menjadi salah satu fokus utama untuk memastikan penggunaan dana yang transparan dan efektif.<\/p>\r\n<p data-start=\"1637\" data-end=\"2020\" data-is-last-node=\"\">Terakhir, pembagian tugas dan tanggung jawab akan didiskusikan untuk memastikan seluruh anggota memahami peran masing-masing. Dengan koordinasi yang baik, diharapkan seluruh agenda dapat berjalan lancar. Rapat akan ditutup dengan sesi tanya jawab atau diskusi mengenai hal-hal lain yang belum terbahas, guna memastikan semua aspek penting telah dipertimbangkan sebelum rapat selesai.<\/p>","Bidang":"aptika","tanggal_dibuat":"2025-02-16","email":null,"partisipan_non_pegawai":"1.heni\r\n2.mahira"},{"notulensi_id":"5","user_id":"32","judul":"aa","partisipan":"aa","agenda":"mm","isi":"<p>aa<\/p>","Bidang":"aptika","tanggal_dibuat":"2025-02-16","email":null,"partisipan_non_pegawai":"aa"},{"notulensi_id":"6","user_id":"32","judul":"rapat bulanan","partisipan":"1.laporan\r\n2.kerjasama","agenda":"1.raisya\r\n2.rama","isi":"Rapat bulanan merupakan kegiatan rutin yang penting untuk menjaga komunikasi dan koordinasi antar anggota tim atau divisi dalam sebuah organisasi. Tujuan utama dari rapat ini adalah untuk mengevaluasi pencapaian yang telah dilakukan dalam sebulan terakhir, mengidentifikasi masalah yang muncul, dan merencanakan langkah-langkah yang perlu diambil untuk mencapai tujuan di bulan berikutnya. Dalam rapat bulanan, setiap anggota tim biasanya akan melaporkan progres dari tugas yang telah diberikan, serta menyampaikan hambatan atau tantangan yang mereka hadapi. Hal ini memungkinkan pimpinan dan tim untuk segera memberikan solusi atau dukungan yang diperlukan agar pencapaian target dapat lebih optimal.\r\n\r\nSelain evaluasi dan perencanaan, rapat bulanan juga menjadi momen untuk mempererat hubungan antar anggota tim. Diskusi yang terbuka dan konstruktif akan membantu membangun pemahaman bersama mengenai visi dan misi organisasi, serta mendorong kolaborasi yang lebih erat. Dalam rapat ini, penting juga untuk memberikan kesempatan kepada setiap anggota tim untuk menyampaikan ide atau inovasi yang dapat meningkatkan kinerja atau efisiensi kerja. Dengan demikian, rapat bulanan tidak hanya berfungsi sebagai sarana evaluasi, tetapi juga sebagai platform untuk pembelajaran dan pengembangan bersama.","Bidang":"aptika","tanggal_dibuat":"2025-02-16","email":null,"partisipan_non_pegawai":"1.kk"},{"notulensi_id":"7","user_id":"32","judul":"rapat wajib ","partisipan":"1,hssh","agenda":"1.rapat saja\r\n2.rapayt ","isi":"<p>shhhsjhhhjhhh<\/p>","Bidang":"aptika","tanggal_dibuat":"2025-02-19","email":null,"partisipan_non_pegawai":"1.shhj"}]
+INFO - 2025-02-19 05:19:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:19:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:19:34 --> Mencoba mengambil profil pengguna dengan ID 13
+INFO - 2025-02-19 05:19:34 --> Pengguna dengan ID 13 ditemukan di database: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-31 05:12:25
+)
+
+CRITICAL - 2025-02-19 05:19:34 --> ArgumentCountError: Too few arguments to function App\Models\PegawaiJadwalModel::getJadwalByBidang(), 0 passed in D:\xampp\htdocs\SiNotik\app\Controllers\PegawaiJadwalController.php on line 24 and exactly 1 expected
+[Method: GET, Route: pegawai/jadwalrapat]
+in APPPATH\Models\PegawaiJadwalModel.php on line 13.
+ 1 APPPATH\Controllers\PegawaiJadwalController.php(24): App\Models\PegawaiJadwalModel->getJadwalByBidang()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PegawaiJadwalController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiJadwalController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-02-19 05:20:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:20:26 --> Mencoba mengambil profil pengguna dengan ID 13
+INFO - 2025-02-19 05:20:26 --> Pengguna dengan ID 13 ditemukan di database: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-31 05:12:25
+)
+
+CRITICAL - 2025-02-19 05:20:26 --> ArgumentCountError: Too few arguments to function App\Models\PegawaiJadwalModel::getJadwalByBidang(), 0 passed in D:\xampp\htdocs\SiNotik\app\Controllers\PegawaiJadwalController.php on line 24 and exactly 1 expected
+[Method: GET, Route: pegawai/jadwalrapat]
+in APPPATH\Models\PegawaiJadwalModel.php on line 13.
+ 1 APPPATH\Controllers\PegawaiJadwalController.php(24): App\Models\PegawaiJadwalModel->getJadwalByBidang()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PegawaiJadwalController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiJadwalController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\SiNotik\\public\\index.php')
+INFO - 2025-02-19 05:21:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:21:20 --> Mencoba mengambil profil pengguna dengan ID 13
+INFO - 2025-02-19 05:21:20 --> Pengguna dengan ID 13 ditemukan di database: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-31 05:12:25
+)
+
+INFO - 2025-02-19 05:21:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:21:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:21:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:21:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-19 05:21:50 --> Login success for username: lili
+INFO - 2025-02-19 05:21:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:21:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:21:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:21:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:22:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:22:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:22:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:22:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:23:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:23:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:24:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:24:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:25:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:25:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:27:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:27:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:27:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:27:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:29:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:29:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:30:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:30:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:32:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:32:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:32:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:32:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:35:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:35:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:38:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:38:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:38:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:38:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:38:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:38:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:38:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:38:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:40:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:40:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:40:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:40:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:41:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:41:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:43:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:43:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:43:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:43:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:43:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:43:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:44:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-19 05:44:04 --> Login success for username: lili
+INFO - 2025-02-19 05:44:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:44:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:44:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:44:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:44:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:44:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:44:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:44:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:49:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:49:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:49:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:49:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:50:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:50:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:50:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-19 05:50:35 --> Login success for username: jaja
+INFO - 2025-02-19 05:50:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-19 05:50:35 --> Profile Picture: pegawai.png
+DEBUG - 2025-02-19 05:50:35 --> User Name: jungwon
+DEBUG - 2025-02-19 05:50:35 --> User Role: pegawai
+INFO - 2025-02-19 05:50:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:50:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:50:39 --> Mencoba mengambil profil pengguna dengan ID 13
+INFO - 2025-02-19 05:50:39 --> Pengguna dengan ID 13 ditemukan di database: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-31 05:12:25
+)
+
+INFO - 2025-02-19 05:50:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:51:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:51:02 --> Data yang akan disimpan: {"topik":"yyyyyy","agenda":"gcytdudy","tanggal":"2025-02-12","waktu":"12:51","lokasi":"gftcggf","user_id":"13"}
+INFO - 2025-02-19 05:51:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:51:02 --> Mencoba mengambil profil pengguna dengan ID 13
+INFO - 2025-02-19 05:51:02 --> Pengguna dengan ID 13 ditemukan di database: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-31 05:12:25
+)
+
+INFO - 2025-02-19 05:51:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:51:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:51:19 --> Data yang akan disimpan: {"topik":"fffffffffff","agenda":"yuftydtrd","tanggal":"2025-02-01","waktu":"12:53","lokasi":"ihyugt","user_id":"13"}
+INFO - 2025-02-19 05:51:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:51:19 --> Mencoba mengambil profil pengguna dengan ID 13
+INFO - 2025-02-19 05:51:19 --> Pengguna dengan ID 13 ditemukan di database: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-31 05:12:25
+)
+
+INFO - 2025-02-19 05:51:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:51:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:51:35 --> Data yang akan disimpan: {"topik":"bdfdczfsz","agenda":"huvtrese","tanggal":"2025-02-19","waktu":"13:51","lokasi":"kk","user_id":"13"}
+INFO - 2025-02-19 05:51:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:51:35 --> Mencoba mengambil profil pengguna dengan ID 13
+INFO - 2025-02-19 05:51:35 --> Pengguna dengan ID 13 ditemukan di database: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-31 05:12:25
+)
+
+INFO - 2025-02-19 05:51:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:51:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:51:53 --> Data yang akan disimpan: {"topik":"fgddgtbr","agenda":"hjfytdtbnyhnfny","tanggal":"2025-02-19","waktu":"15:51","lokasi":"hyubfvd","user_id":"13"}
+INFO - 2025-02-19 05:51:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:51:53 --> Mencoba mengambil profil pengguna dengan ID 13
+INFO - 2025-02-19 05:51:53 --> Pengguna dengan ID 13 ditemukan di database: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-31 05:12:25
+)
+
+INFO - 2025-02-19 05:51:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:52:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:52:12 --> Data yang akan disimpan: {"topik":"kkhjvfcdv","agenda":"jj","tanggal":"2025-02-19","waktu":"15:52","lokasi":"mmmm","user_id":"13"}
+INFO - 2025-02-19 05:52:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:52:12 --> Mencoba mengambil profil pengguna dengan ID 13
+INFO - 2025-02-19 05:52:12 --> Pengguna dengan ID 13 ditemukan di database: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-31 05:12:25
+)
+
+INFO - 2025-02-19 05:52:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:52:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:52:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:52:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-19 05:52:22 --> Login success for username: lili
+INFO - 2025-02-19 05:52:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:52:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:52:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:52:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:53:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:53:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:53:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:53:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:56:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:56:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:57:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:57:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:57:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:57:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:57:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:57:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:58:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:58:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:59:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 05:59:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:01:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:01:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:01:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:01:12 --> Mencoba mengambil profil pengguna dengan ID 9
+INFO - 2025-02-19 06:01:12 --> Pengguna dengan ID 9 ditemukan di database: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => wulandari yulianis
+    [nip] => 123456780123456789
+    [email] => bismillah@gmail.com
+    [password] => $2y$10$GNfd6zIA4kK/7vX47gN7eepuS.AXjm5tSpBgx7YvxRDjgGubdAS0K
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => 7 (1).jpg
+    [alamat] => jalan  saja
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-09
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-02-16 18:12:59
+)
+
+INFO - 2025-02-19 06:01:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:01:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:01:28 --> Data yang akan disimpan: {"topik":"SSS","agenda":"SSS","tanggal":"2025-02-19","waktu":"15:01","lokasi":"SS","user_id":"9"}
+INFO - 2025-02-19 06:01:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:01:29 --> Mencoba mengambil profil pengguna dengan ID 9
+INFO - 2025-02-19 06:01:29 --> Pengguna dengan ID 9 ditemukan di database: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => wulandari yulianis
+    [nip] => 123456780123456789
+    [email] => bismillah@gmail.com
+    [password] => $2y$10$GNfd6zIA4kK/7vX47gN7eepuS.AXjm5tSpBgx7YvxRDjgGubdAS0K
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => 7 (1).jpg
+    [alamat] => jalan  saja
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-09
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-02-16 18:12:59
+)
+
+INFO - 2025-02-19 06:01:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:01:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:01:50 --> Data yang akan disimpan: {"topik":"JHVJVHUV","agenda":"HUVGHVBG","tanggal":"2025-02-19","waktu":"13:05","lokasi":"JB","user_id":"9"}
+INFO - 2025-02-19 06:01:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:01:50 --> Mencoba mengambil profil pengguna dengan ID 9
+INFO - 2025-02-19 06:01:50 --> Pengguna dengan ID 9 ditemukan di database: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => wulandari yulianis
+    [nip] => 123456780123456789
+    [email] => bismillah@gmail.com
+    [password] => $2y$10$GNfd6zIA4kK/7vX47gN7eepuS.AXjm5tSpBgx7YvxRDjgGubdAS0K
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => 7 (1).jpg
+    [alamat] => jalan  saja
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-09
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-02-16 18:12:59
+)
+
+INFO - 2025-02-19 06:01:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:02:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:02:05 --> Data yang akan disimpan: {"topik":"NJ HJGFB","agenda":"GCGB","tanggal":"2025-02-20","waktu":"14:02","lokasi":"akk","user_id":"9"}
+INFO - 2025-02-19 06:02:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:02:05 --> Mencoba mengambil profil pengguna dengan ID 9
+INFO - 2025-02-19 06:02:05 --> Pengguna dengan ID 9 ditemukan di database: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => wulandari yulianis
+    [nip] => 123456780123456789
+    [email] => bismillah@gmail.com
+    [password] => $2y$10$GNfd6zIA4kK/7vX47gN7eepuS.AXjm5tSpBgx7YvxRDjgGubdAS0K
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => 7 (1).jpg
+    [alamat] => jalan  saja
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-09
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-02-16 18:12:59
+)
+
+INFO - 2025-02-19 06:02:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:02:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:02:21 --> Data yang akan disimpan: {"topik":"DDD","agenda":"AAA","tanggal":"2025-02-19","waktu":"13:03","lokasi":"VGGG","user_id":"9"}
+INFO - 2025-02-19 06:02:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:02:21 --> Mencoba mengambil profil pengguna dengan ID 9
+INFO - 2025-02-19 06:02:21 --> Pengguna dengan ID 9 ditemukan di database: Array
+(
+    [user_id] => 9
+    [username] => lili
+    [nama] => wulandari yulianis
+    [nip] => 123456780123456789
+    [email] => bismillah@gmail.com
+    [password] => $2y$10$GNfd6zIA4kK/7vX47gN7eepuS.AXjm5tSpBgx7YvxRDjgGubdAS0K
+    [role] => admin
+    [Bidang] => 
+    [profil_foto] => 7 (1).jpg
+    [alamat] => jalan  saja
+    [jabatan] => Sekretaris
+    [tanggal_lahir] => 2003-07-09
+    [created_at] => 2025-01-10 02:06:34
+    [updated_at] => 2025-02-16 18:12:59
+)
+
+INFO - 2025-02-19 06:02:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:02:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:02:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:02:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:02:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:03:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:03:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:05:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:05:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:05:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:05:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:06:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:06:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:06:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-19 06:06:09 --> Login success for username: jaja
+INFO - 2025-02-19 06:06:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-19 06:06:09 --> Profile Picture: pegawai.png
+DEBUG - 2025-02-19 06:06:09 --> User Name: jungwon
+DEBUG - 2025-02-19 06:06:09 --> User Role: pegawai
+INFO - 2025-02-19 06:06:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:06:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:06:12 --> Mencoba mengambil profil pengguna dengan ID 13
+INFO - 2025-02-19 06:06:12 --> Pengguna dengan ID 13 ditemukan di database: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-31 05:12:25
+)
+
+INFO - 2025-02-19 06:06:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:06:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:06:28 --> Data yang akan disimpan: {"topik":"mencoba","agenda":"aaa","tanggal":"2025-02-19","waktu":"14:06","lokasi":"aaa","user_id":"13"}
+INFO - 2025-02-19 06:06:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:06:28 --> Mencoba mengambil profil pengguna dengan ID 13
+INFO - 2025-02-19 06:06:28 --> Pengguna dengan ID 13 ditemukan di database: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-31 05:12:25
+)
+
+INFO - 2025-02-19 06:06:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:06:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:06:44 --> Data yang akan disimpan: {"topik":"aaa","agenda":"aaa","tanggal":"2025-02-21","waktu":"15:06","lokasi":"zz","user_id":"13"}
+INFO - 2025-02-19 06:06:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:06:44 --> Mencoba mengambil profil pengguna dengan ID 13
+INFO - 2025-02-19 06:06:44 --> Pengguna dengan ID 13 ditemukan di database: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-31 05:12:25
+)
+
+INFO - 2025-02-19 06:06:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:06:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:06:59 --> Data yang akan disimpan: {"topik":"aaa","agenda":"aaa","tanggal":"2025-02-19","waktu":"14:06","lokasi":"dd","user_id":"13"}
+INFO - 2025-02-19 06:06:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:06:59 --> Mencoba mengambil profil pengguna dengan ID 13
+INFO - 2025-02-19 06:06:59 --> Pengguna dengan ID 13 ditemukan di database: Array
+(
+    [user_id] => 13
+    [username] => jaja
+    [nama] => jungwon
+    [nip] => 123456788987654324
+    [email] => jaja@gmail.com
+    [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+    [role] => pegawai
+    [Bidang] => IKP
+    [profil_foto] => pegawai.png
+    [alamat] => 
+    [jabatan] => korea
+    [tanggal_lahir] => 
+    [created_at] => 2025-01-13 07:53:10
+    [updated_at] => 2025-01-31 05:12:25
+)
+
+INFO - 2025-02-19 06:07:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:07:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:07:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:10:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 06:10:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 07:06:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 07:06:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

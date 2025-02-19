@@ -9,29 +9,43 @@ use CodeIgniter\Controller;
 class PegawaiJadwalController extends Controller
 {
     public function index()
-    {
-        $userModel = new UserModel();
-        $jadwalModel = new PegawaiJadwalModel();
-        $user_id = session()->get('user_id');
-        if (!$user_id) {
-            return redirect()->to('/login'); 
-        }
-        $userData = $userModel->getUserById($user_id);
-        if (!$userData) {
-            return redirect()->to('/error'); 
-        }
+{
+    $userModel = new UserModel();
+    $jadwalModel = new PegawaiJadwalModel();
+    $user_id = session()->get('user_id');
 
-        $jadwal = $jadwalModel->getAllJadwal(); 
-        $data['user'] = $userData;
-        $data['jadwal'] = $jadwal; 
-        return view('pegawai/jadwalrapat', $data);
+    if (!$user_id) {
+        return redirect()->to('/login'); 
     }
-    public function getAllJadwal()
-    {
-        $model = new PegawaiJadwalModel();
-        $data['jadwal'] = $model->getAllJadwal();
-        return $this->response->setJSON($data);
+
+    $userData = $userModel->getUserById($user_id);
+
+    if (!$userData) {
+        return redirect()->to('/error'); 
     }
+
+    // Pastikan $user_id dikirim ke getJadwalByBidang()
+    $jadwal = $jadwalModel->getJadwalByBidang($user_id);
+
+    $data['user'] = $userData;
+    $data['jadwal'] = $jadwal; // Simpan hasil query ke array $data
+
+    return view('pegawai/jadwalrapat', $data);
+}
+
+public function getJadwalByBidang()
+{
+    $model = new PegawaiJadwalModel();
+    $user_id = session()->get('user_id'); // Ambil user_id dari sesi
+
+    if (!$user_id) {
+        return $this->response->setJSON(['success' => false, 'message' => 'User tidak terautentikasi.']);
+    }
+
+    $data['jadwal'] = $model->getJadwalByBidang($user_id);
+    return $this->response->setJSON($data);
+}
+
     public function save()
     {
         $model = new PegawaiJadwalModel();
