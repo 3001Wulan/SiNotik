@@ -109,7 +109,8 @@
                     </div>
 
                     <div class="upload-container">
-                        <input type="file" name="profil_foto" id="upload" class="upload-input" accept="image/*">
+                        <input type="file" name="profil_foto" id="upload" class="upload-input" accept="image/jpeg, image/png, image/gif">
+                        <p id="errorMessage" style="color: red; font-size: 14px;"></p>
                     </div>
                 </div>
                 
@@ -234,17 +235,33 @@
             }
         }
 
-    document.getElementById('upload').addEventListener('change', function (e) {
-        const file = e.target.files[0];
-        if (file) {
-            const reader = new FileReader();
-                reader.onload = function (event) {
-                    const profileImage = document.getElementById('profileImage');
-                    profileImage.src = event.target.result; 
-                };
-                reader.readAsDataURL(file); 
+        document.getElementById('upload').addEventListener('change', function (e) {
+    const file = e.target.files[0];
+    const allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
+    const maxSize = 5 * 1024 * 1024; 
+    const errorMessage = document.getElementById('errorMessage');
+
+    if (file) {
+        if (!allowedTypes.includes(file.type)) {
+            errorMessage.textContent = 'Format file tidak diizinkan. Hanya JPG, PNG, dan GIF yang diperbolehkan.';
+            return;
         }
-    });
+
+        if (file.size > maxSize) {
+            errorMessage.textContent = 'Ukuran file terlalu besar. Maksimal 5MB.';
+            return;
+        }
+
+        errorMessage.textContent = ''; 
+
+        const reader = new FileReader();
+        reader.onload = function (event) {
+            const profileImage = document.getElementById('profileImage');
+            profileImage.src = event.target.result; 
+        };
+        reader.readAsDataURL(file); 
+    }
+});
 
     toggleDarkMode.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');

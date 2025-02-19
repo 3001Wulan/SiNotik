@@ -77,8 +77,14 @@ $routes->get('assets/images/profiles/(:any)', function () {
 });
 $routes->get('assets/images/profiles/(:any)', 'AuthRedirect::blockAccess');
 $routes->get('notulen/panduannotulen', 'PanduanNotulenController::index');
-
-
+$routes->get('pegawai/ubahpassword', 'UbahPasswordPegawaiController::ubah');
+$routes->post('UbahPasswordPegawaiController/ubah', 'UbahPasswordPegawaiController::ubah');
+$routes->post('pegawai/ubahdatapengguna/(:num)/update', 'UbahDataController::updatePengguna/$1');
+$routes->post('UbahPasswordPegawaiController/ubah', 'UbahPasswordPegawaiController::ubah');
+$routes->get('notulen/ubahpassword', 'UbahPasswordNotulenController::ubah');
+$routes->post('UbahPasswordNotulenController/ubah', 'UbahPasswordNotulenController::ubah');
+$routes->post('pegawai/ubahdatapengguna/(:num)/update', 'UbahDataNotulenController::updatePengguna/$1');
+$routes->post('UbahPasswordPegawaiController/ubah', 'UbahPasswordNotulenController::ubah');
 
 
 

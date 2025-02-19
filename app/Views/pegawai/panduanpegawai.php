@@ -115,7 +115,7 @@
 
                     <!-- Card untuk Gambar -->
                     <div class="card-image">
-                        <img src="<?php echo base_url('assets/images/CINDY_.jpg'); ?>" alt="screenshoot" class="screenshoot-dashboard">
+                        <img src="<?php echo base_url('assets/images/dashboardpegawai.png'); ?>" alt="screenshoot" class="screenshoot-dashboard">
                     </div>
                 </div>
             </div>
@@ -151,7 +151,7 @@
 
                     <!-- Card untuk Gambar -->
                     <div class="card-notulensi-image">
-                        <img id="component-image" src="<?= base_url('assets/images/INTAN_.jpg') ?>" alt="Notulensi">
+                        <img id="component-image" src="<?= base_url('assets/images/Notulensipegawai.png') ?>" alt="Notulensi">
                     </div>
                 </div>
             </div>
@@ -179,7 +179,7 @@
 
                     <!-- Card untuk Gambar -->
                     <div class="card-riwayat-image">
-                        <img src="<?php echo base_url('assets/images/WULAN_.jpg'); ?>" alt="screenshoot" class="screenshoot-dashboard">
+                        <img src="<?php echo base_url('assets/images/RiwayatPegawai.png'); ?>" alt="screenshoot" class="screenshoot-dashboard">
                     </div>
                 </div>
             </div>
@@ -210,7 +210,7 @@
 
                     <!-- Card untuk Gambar -->
                     <div class="card-rapat-image">
-                        <img id="rapat-image" src="<?= base_url('assets/images/HENI_.jpg') ?>" alt="Rapat">
+                        <img id="rapat-image" src="<?= base_url('assets/images/Jadwalrapatpegawai.png') ?>" alt="Rapat">
                     </div>
                 </div>
             </div>
@@ -235,7 +235,7 @@
                 </div>
                     <!-- Card untuk Gambar -->
                     <div class="card-profil-image">
-                        <img src="<?php echo base_url('assets/images/CINDY_.jpg'); ?>" alt="screenshoot" class="screenshoot-dashboard">
+                        <img src="<?php echo base_url('assets/images/Profilpegawai.png'); ?>" alt="screenshoot" class="screenshoot-dashboard">
                     </div>
                 </div>
             </div>
@@ -261,7 +261,7 @@
 
                     <!-- Card untuk Gambar -->
                     <div class="card-edit-image">
-                        <img src="<?php echo base_url('assets/images/INTAN_.jpg'); ?>" alt="screenshoot" class="screenshoot-dashboard">
+                        <img src="<?php echo base_url('assets/images/EditProfilpegawai.png'); ?>" alt="screenshoot" class="screenshoot-dashboard">
                     </div>
                 </div>
             </div>
@@ -317,8 +317,8 @@
 
             let baseURL = "<?= base_url(); ?>";
             let images = {
-                "detail": baseURL + "assets/images/HENI_.jpg",
-                "feedback": baseURL + "assets/images/WULAN_.jpg"
+                "detail": baseURL + "assets/images/Detailnotulen.png",
+                "feedback": baseURL + "assets/images/Feedback.png"
             };
 
             let descriptions = {
@@ -406,8 +406,8 @@
 
             let baseURL = "<?= base_url(); ?>";
             let images = {
-                "buat": baseURL + "assets/images/INTAN_.jpg",
-                "jadwal": baseURL + "assets/images/CINDY_.jpg"
+                "buat": baseURL + "assets/images/Buatjadwalrapatpegawai.png",
+                "jadwal": baseURL + "assets/images/Jadwalrapatpegawai.png"
             };
 
             let descriptions = {

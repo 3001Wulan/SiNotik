@@ -131,7 +131,7 @@
 
                     <!-- Card untuk Gambar -->
                     <div class="card-image">
-                        <img src="<?php echo base_url('assets/images/CINDY_.jpg'); ?>" alt="screenshoot" class="screenshoot-dashboard">
+                        <img src="<?php echo base_url('assets/images/dashboardadmin.png'); ?>" alt="screenshoot" class="screenshoot-dashboard">
                     </div>
                 </div>
             </div>
@@ -170,7 +170,7 @@
 
                     <!-- Card untuk Gambar -->
                     <div class="card-datapengguna-image">
-                        <img id="component-image" src="assets/images/INTAN_.jpg" alt="Data Pengguna">
+                        <img id="component-image" src="<?= base_url('assets/images/Data_pengguna.png'); ?>" alt="Data Pengguna">
                     </div>
                 </div>
             </div>
@@ -198,7 +198,7 @@
 
                     <!-- Card untuk Gambar -->
                     <div class="card-riwayat-image">
-                        <img src="<?php echo base_url('assets/images/WULAN_.jpg'); ?>" alt="screenshoot" class="screenshoot-dashboard">
+                        <img src="<?php echo base_url('assets/images/Riwayat_notulensi.png'); ?>" alt="screenshoot" class="screenshoot-dashboard">
                     </div>
                 </div>
             </div>
@@ -229,7 +229,8 @@
 
                     <!-- Card untuk Gambar -->
                     <div class="card-rapat-image">
-                        <img id="rapat-image" src="assets/images/HENI_.jpg" alt="Rapat">
+                    <img id="rapat-image" src="<?= base_url('assets/images/Rapatadmin.png'); ?>" alt="Rapat">
+
                     </div>
                 </div>
             </div>
@@ -237,7 +238,7 @@
             <!-- Card Distribusi Notulensi -->
             <div class="card distribusi-card" onclick="toggleDropdown(this, 'default')">
                 <h2>
-                    <img src="<?php echo base_url('assets/images/distribution.png'); ?>" class="card-icon">
+                    <img src="<?php echo base_url('assets/images/distribusi.png'); ?>" class="card-icon">
                     Distribusi Notulensi
                 </h2>
 
@@ -257,7 +258,7 @@
 
                     <!-- Card untuk Gambar -->
                     <div class="card-distribusi-image">
-                        <img src="<?php echo base_url('assets/images/MAHIRA_.jpg'); ?>" alt="screenshoot" class="screenshoot-dashboard">
+                        <img src="<?php echo base_url('assets/images/distribusinotulensi.png'); ?>" alt="screenshoot" class="screenshoot-dashboard">
                     </div>
                 </div>
             </div>
@@ -282,7 +283,7 @@
                 </div>
                     <!-- Card untuk Gambar -->
                     <div class="card-profil-image">
-                        <img src="<?php echo base_url('assets/images/CINDY_.jpg'); ?>" alt="screenshoot" class="screenshoot-dashboard">
+                        <img src="<?php echo base_url('assets/images/ProfilAdmin.png'); ?>" alt="screenshoot" class="screenshoot-dashboard">
                     </div>
                 </div>
             </div>
@@ -308,7 +309,7 @@
 
                     <!-- Card untuk Gambar -->
                     <div class="card-edit-image">
-                        <img src="<?php echo base_url('assets/images/INTAN_.jpg'); ?>" alt="screenshoot" class="screenshoot-dashboard">
+                        <img src="<?php echo base_url('assets/images/Editprofil.png'); ?>" alt="screenshoot" class="screenshoot-dashboard">
                     </div>
                 </div>
             </div>
@@ -361,10 +362,11 @@
             let image = document.getElementById("component-image");
             let contentText = document.querySelector(".card-datapengguna-content");
 
+            let baseURL = "<?= base_url(); ?>";
             let images = {
-                "tambah": "assets/images/MAHIRA_.jpg",
-                "edit": "assets/images/HENI_.jpg",
-                "detail": "assets/images/WULAN_.jpg"
+                "tambah": baseURL + "assets/images/tambah_pengguna.png",
+                "edit": baseURL + "assets/images/ubahdatapengguna.png",
+                "detail": baseURL + "assets/images/detail.png",
             };
 
             let descriptions = {
@@ -462,9 +464,11 @@
             let image = document.getElementById("rapat-image");
             let contentText = document.querySelector(".card-rapat-content");
 
+            let baseURL = "<?= base_url(); ?>";
             let images = {
-                "buat": "assets/images/INTAN_.jpg",
-                "persetujuan": "assets/images/CINDY_.jpg"
+                "buat": baseURL + "assets/images/buatjadwalrapatadmin.png",
+                "persetujuan": baseURL + "assets/images/persetujuanadmin.png"
+                
             };
 
             let descriptions = {

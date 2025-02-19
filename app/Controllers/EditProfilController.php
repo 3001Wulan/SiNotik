@@ -23,11 +23,11 @@ class EditProfilController extends Controller
         $alamat = $this->request->getPost('alamat') ?? $user['alamat'];
         $jabatan = $this->request->getPost('jabatan') ?? $user['jabatan'];
         $tanggal_lahir = $this->request->getPost('tanggal_lahir') ?? $user['tanggal_lahir'];
-
         $file = $this->request->getFile('profil_foto');
         $profil_foto = $user['profil_foto']; 
 
         $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
+        $maxSize = 5 * 1024 * 1024;
         if ($file && $file->isValid()) {
             log_message('info', 'File ditemukan. Nama file: ' . $file->getName());
             $profil_foto = $file->getName(); 

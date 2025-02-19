@@ -33,6 +33,15 @@ class PegawaiJadwalModel extends Model
 
     return $query->getResultArray();
 }
+public function getAllJadwal()
+    {
+        $builder = $this->db->table($this->table);
+        $builder->select('jadwal_rapat.*, user.Bidang');  
+        $builder->join('user', 'user.user_id = jadwal_rapat.user_id', 'left'); 
+        $query = $builder->get();
+
+        return $query->getResultArray();
+    }
 
 
     public function getPendingJadwal()

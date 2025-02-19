@@ -26,7 +26,9 @@ class EditProfilNotulenController extends Controller
 
         $file = $this->request->getFile('profil_foto');
         $profil_foto = $user['profil_foto']; 
-
+        
+        $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
+        $maxSize = 5 * 1024 * 1024;
         if ($file && $file->isValid()) {
             $profil_foto = $file->getName(); 
             $targetDir = FCPATH . 'Assets/images/profiles/';

@@ -11,7 +11,7 @@ class DetailPenggunaController extends BaseController
     {
         $dataPenggunaModel = new DataPenggunaModel();
 
-        $data['users'] = $dataPenggunaModel->getUsersByRoles('notulensi', 'pegawai');
+        $data['users'] = $dataPenggunaModel->getUsersByRoles('notulen', 'pegawai');
 
         $userModel = new UserModel();
 
