@@ -66,7 +66,6 @@
         </div>
     </div>
 
-    <!-- Overlay dan Popup untuk sukses -->
     <div class="overlay" id="overlay" style="display: none;"></div>
 
     <div class="popup" id="success-popup" style="display: none;">
@@ -85,6 +84,7 @@
                 setTimeout(function() {
                     popup.style.display = 'none';
                     overlay.style.display = 'none';
+                    window.location.href = "<?= base_url('admin/profiladmin'); ?>";
                 }, 2000);
             });
         <?php endif; ?>

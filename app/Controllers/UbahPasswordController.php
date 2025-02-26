@@ -6,6 +6,7 @@ use App\Models\PenggunaModel;
 
 class UbahPasswordController extends BaseController
 {
+    
     public function ubah()
     {
         if ($this->request->getMethod() === 'POST') {

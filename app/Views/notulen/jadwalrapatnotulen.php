@@ -42,7 +42,7 @@ $current_page = 'jadwalrapatnotulen';
                         </a>
                 </li>
                 <li>
-                    <a href="riwayatanotulen" class="<?php echo ($current_page == 'riwayat_notulensi') ? 'active' : 'inactive'; ?>">
+                    <a href="riwayatnotulen" class="<?php echo ($current_page == 'riwayat_notulensi') ? 'active' : 'inactive'; ?>">
                         <img src="<?php echo base_url('assets/images/icon_riwayat.png'); ?>" alt="Riwayat Notulensi Icon" class="sidebar-icon"> Riwayat Notulensi
                     </a>
                 </li>
@@ -57,7 +57,7 @@ $current_page = 'jadwalrapatnotulen';
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="inactive">
+                    <a href="panduannotulen" class="inactive">
                         <img src="<?php echo base_url('assets/images/panduanpengguna.png'); ?>" alt="Panduan Pengguna Icon" class="sidebar-icon">
                         Panduan Pengguna
                     </a>
@@ -203,7 +203,6 @@ $current_page = 'jadwalrapatnotulen';
         </div>
     </div>
 
-    <!-- Popup for Reason -->
     <div id="reasonOverlay" class="popup-overlay" onclick="closeReasonPopup()"></div>
     <div id="reasonPopup" class="popup">
         <div class="popup-content">
@@ -214,134 +213,154 @@ $current_page = 'jadwalrapatnotulen';
     </div>
 
     <script>
-        // Open and close popup functions
-        function openPopup() {
-            document.getElementById("overlay").style.display = "block";
-            document.getElementById("popup").style.display = "block";
+    // Function to open the main popup
+    function openPopup() {
+        document.getElementById("overlay").style.display = "block";
+        document.getElementById("popup").style.display = "block";
+    }
+
+    // Function to close the main popup
+    function closePopup() {
+        document.getElementById("overlay").style.display = "none";
+        document.getElementById("popup").style.display = "none";
+    }
+
+    // Function to show the reason in a separate popup
+    function showReason(reason) {
+        document.getElementById("reasonText").innerText = reason;
+        document.getElementById("reasonOverlay").style.display = "block";
+        document.getElementById("reasonPopup").style.display = "block";
+    }
+
+    // Function to close the reason popup
+    function closeReasonPopup() {
+        document.getElementById("reasonOverlay").style.display = "none";
+        document.getElementById("reasonPopup").style.display = "none";
+    }
+
+    // Function to search through the table
+    function searchTable() {
+        const input = document.getElementById('searchInput');
+        const filter = input.value.toUpperCase();
+        const table = document.getElementById('dataTable');
+        const tr = table.getElementsByTagName('tr');
+
+        for (let i = 1; i < tr.length; i++) {
+            const td = tr[i].getElementsByTagName('td');
+            let rowContainsSearchTerm = false;
+
+            for (let j = 0; j < td.length; j++) {
+                if (td[j] && td[j].innerText.toUpperCase().indexOf(filter) > -1) {
+                    rowContainsSearchTerm = true;
+                }
+            }
+
+            tr[i].style.display = rowContainsSearchTerm ? "" : "none";
+        }
+    }
+
+    // Function to toggle the dropdown menu
+    function toggleDropdown() {
+        const dropdown = document.querySelector(".dropdown-menu");
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    }
+
+    // Close dropdown if clicked outside
+    document.addEventListener("click", function(event) {
+        const profile = document.querySelector(".profile");
+        if (!profile.contains(event.target)) {
+            document.querySelector(".dropdown-menu").style.display = "none";
+        }
+    });
+
+    // Handle entries change to show/hide rows
+    document.getElementById("entries").addEventListener("change", function() {
+        const selectedValue = parseInt(this.value);
+        const rows = document.getElementById("dataTable").getElementsByTagName("tbody")[0].getElementsByTagName("tr");
+
+        for (let i = 0; i < rows.length; i++) {
+            rows[i].style.display = (i < selectedValue || isNaN(selectedValue)) ? "" : "none";
+        }
+    });
+
+    // Handle logout confirmation popup
+    document.addEventListener("DOMContentLoaded", function () {
+        const logoutLink = document.getElementById("logoutLink");
+        const logoutOverlay = document.getElementById("logoutOverlay");
+        const logoutPopup = document.getElementById("logoutPopup");
+        const cancelLogout = document.getElementById("cancelLogout");
+        const confirmLogout = document.getElementById("confirmLogout");
+
+        logoutLink.addEventListener("click", function (e) {
+            e.preventDefault();
+            logoutOverlay.style.display = "block";
+            logoutPopup.style.display = "block";
+        });
+
+        function closeLogoutPopup() {
+            logoutOverlay.style.display = "none";
+            logoutPopup.style.display = "none";
         }
 
-        function closePopup() {
-            document.getElementById("overlay").style.display = "none";
-            document.getElementById("popup").style.display = "none";
-        }
+        cancelLogout.addEventListener("click", closeLogoutPopup);
+        logoutOverlay.addEventListener("click", closeLogoutPopup);
 
-        // Function to show the reason for rejection
-        function showReason(reason) {
-            document.getElementById("reasonText").innerText = reason;
-            document.getElementById("reasonOverlay").style.display = "block";
-            document.getElementById("reasonPopup").style.display = "block";
-        }
+        confirmLogout.addEventListener("click", function () {
+            window.location.href = "<?= base_url('auth/logout') ?>"; 
+        });
+    });
 
-        // Function to close the reason popup
-        function closeReasonPopup() {
-            document.getElementById("reasonOverlay").style.display = "none";
-            document.getElementById("reasonPopup").style.display = "none";
-        }
+    // Handle form submission for agenda
+    document.getElementById('agendaForm').addEventListener('submit', function(e) {
+        e.preventDefault(); 
 
-        // Dark mode toggle
+        const formData = new FormData(this);
+
+        fetch('<?= site_url('pegawai-jadwal/save') ?>', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                window.location.reload();
+            } else {
+                alert('Gagal menyimpan data');
+            }
+        })
+        .catch(error => {
+            alert('Terjadi kesalahan');
+            console.error(error);
+        });
+    });
+
+    // Dark mode toggle functionality
+    document.addEventListener('DOMContentLoaded', function () {
         const toggleDarkMode = document.getElementById('toggleDarkMode');
+        const body = document.body;
+
+        // Check saved theme in localStorage
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            toggleDarkMode.src = '<?php echo base_url('assets/images/sun.png'); ?>';
+        } else {
+            toggleDarkMode.src = '<?php echo base_url('assets/images/moon.png'); ?>';
+        }
+
+        // Add event listener for dark mode toggle
         toggleDarkMode.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            toggleDarkMode.src = document.body.classList.contains('dark-mode') 
-                ? '<?php echo base_url('assets/images/sun.png'); ?>' 
+            body.classList.toggle('dark-mode');
+            const darkModeEnabled = body.classList.contains('dark-mode');
+
+            // Save status in localStorage
+            localStorage.setItem('darkMode', darkModeEnabled);
+
+            // Change icon
+            toggleDarkMode.src = darkModeEnabled
+                ? '<?php echo base_url('assets/images/sun.png'); ?>'
                 : '<?php echo base_url('assets/images/moon.png'); ?>';
         });
-
-        // Search table function
-        function searchTable() {
-            const input = document.getElementById('searchInput');
-            const filter = input.value.toUpperCase();
-            const table = document.getElementById('dataTable');
-            const tr = table.getElementsByTagName('tr');
-
-            for (let i = 1; i < tr.length; i++) {
-                const td = tr[i].getElementsByTagName('td');
-                let rowContainsSearchTerm = false;
-
-                for (let j = 0; j < td.length; j++) {
-                    if (td[j] && td[j].innerText.toUpperCase().indexOf(filter) > -1) {
-                        rowContainsSearchTerm = true;
-                    }
-                }
-
-                tr[i].style.display = rowContainsSearchTerm ? "" : "none";
-            }
-        }
-
-        // Toggle dropdown menu
-        function toggleDropdown() {
-            const dropdown = document.querySelector(".dropdown-menu");
-            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
-        }
-
-        // Close dropdown if clicked outside
-        document.addEventListener("click", function(event) {
-            const profile = document.querySelector(".profile");
-            if (!profile.contains(event.target)) {
-                document.querySelector(".dropdown-menu").style.display = "none";
-            }
-        });
-
-        // Show entries functionality
-        document.getElementById("entries").addEventListener("change", function() {
-            const selectedValue = parseInt(this.value);
-            const rows = document.getElementById("dataTable").getElementsByTagName("tbody")[0].getElementsByTagName("tr");
-
-            for (let i = 0; i < rows.length; i++) {
-                rows[i].style.display = (i < selectedValue || isNaN(selectedValue)) ? "" : "none";
-            }
-        });
-
-        // Logout functionality
-        document.addEventListener("DOMContentLoaded", function () {
-            const logoutLink = document.getElementById("logoutLink");
-            const logoutOverlay = document.getElementById("logoutOverlay");
-            const logoutPopup = document.getElementById("logoutPopup");
-            const cancelLogout = document.getElementById("cancelLogout");
-            const confirmLogout = document.getElementById("confirmLogout");
-
-            logoutLink.addEventListener("click", function (e) {
-                e.preventDefault();
-                logoutOverlay.style.display = "block";
-                logoutPopup.style.display = "block";
-            });
-
-            function closeLogoutPopup() {
-                logoutOverlay.style.display = "none";
-                logoutPopup.style.display = "none";
-            }
-
-            cancelLogout.addEventListener("click", closeLogoutPopup);
-            logoutOverlay.addEventListener("click", closeLogoutPopup);
-
-            confirmLogout.addEventListener("click", function () {
-                window.location.href = "<?= base_url('auth/logout') ?>"; 
-            });
-        });
-
-        // Form submission for creating a meeting
-        document.getElementById('agendaForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // Prevent form submission
-
-            const formData = new FormData(this);
-
-            fetch('<?= site_url('pegawai-jadwal/save') ?>', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    window.location.reload();
-                } else {
-                    alert('Gagal menyimpan data');
-                }
-            })
-            .catch(error => {
-                alert('Terjadi kesalahan');
-                console.error(error);
-            });
-        });
-    </script>
+    });
+</script>
 </body>
 </html>

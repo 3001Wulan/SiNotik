@@ -7,6 +7,10 @@ use App\Models\UserModel;
 
 class EditProfilNotulenController extends Controller
 {
+     public function index()
+    {
+        return view('notulen/ubahpassword');
+    }
     public function editProfil()
     {
         $session = \Config\Services::session();

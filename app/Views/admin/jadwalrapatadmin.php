@@ -33,12 +33,12 @@
                     </a>
                 </li>
                 <li class="rapat">
-                    <a href="<?= base_url('jadwalrapatadmin') ?>" class="active">
+                    <a href="<?= base_url('admin/jadwalrapatadmin') ?>" class="active">
                         <img src="<?= base_url('assets/images/rapat.png') ?>" alt="Rapat Icon" class="sidebar-icon">
                         Rapat
                     </a>
                     <div class="dropdown-menu-rapat">
-                        <a href="<?= base_url('buat-jadwal') ?>" class="dropdown-item-rapat">
+                        <a href="<?= base_url('admin/jadwalrapatadmin') ?>" class="dropdown-item-rapat">
                             <img src="<?= base_url('assets/images/edit.png') ?>" alt="Buat Jadwal Rapat Icon" class="dropdown-icon">
                             Buat Jadwal Rapat
                         </a>
@@ -144,19 +144,23 @@
     </div>
 
     <script>
-        document.getElementById('toggleDarkMode').addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            const darkModeEnabled = document.body.classList.contains('dark-mode');
-            localStorage.setItem('darkMode', darkModeEnabled);
-            document.getElementById('toggleDarkMode').src = darkModeEnabled ? 'assets/images/sun.png' : 'assets/images/moon.png';
-        });
-        
-        window.addEventListener('DOMContentLoaded', () => {
-            if (localStorage.getItem('darkMode') === 'true') {
-                document.body.classList.add('dark-mode');
-                document.getElementById('toggleDarkMode').src = 'assets/images/sun.png';
-            }
-        });
+       document.getElementById('toggleDarkMode').addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const darkModeEnabled = document.body.classList.contains('dark-mode');
+    localStorage.setItem('darkMode', darkModeEnabled);
+
+    document.getElementById('toggleDarkMode').src = darkModeEnabled 
+        ? "<?= base_url('assets/images/sun.png') ?>" 
+        : "<?= base_url('assets/images/moon.png') ?>";
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark-mode');
+        document.getElementById('toggleDarkMode').src = "<?= base_url('assets/images/sun.png') ?>";
+    }
+});
+
         
         document.getElementById('profile-icon').addEventListener('click', (event) => {
             event.stopPropagation();

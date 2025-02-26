@@ -4,23 +4,23 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     transition: background-color 0.3s, color 0.3s;
-    overflow: hidden; /* Mencegah scrolling pada body */
+    overflow: hidden;
 }
 
 .container {
     display: flex;
-    height: 100vh; /* Pastikan container memiliki tinggi penuh */
+    height: 100vh; 
 }
 
 .sidebar {
     width: 250px;
     background-color: #0085C5;
     color: white;
-    height: 100vh; /* Pastikan sidebar penuh */
+    height: 100vh; 
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 500; /* Lebih kecil dari topbar */
+    z-index: 500; 
     padding: 20px 10px;
     transition: background-color 0.3s;
     display: flex;
@@ -100,7 +100,6 @@ body {
 
 .sidebar ul li a:hover {
     background-color: #025299;
-    color: white;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
     padding: 15px 20px;
     font-size: 1.1em;
@@ -111,22 +110,31 @@ body {
     filter: brightness(0) invert(1);
 }
 
+.rapat {
+    position: relative; 
+}
+
 .dropdown-menu-rapat {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: 100%; 
+    left: 0; 
     background-color: white;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     min-width: 200px;
     padding: 10px 0;
     z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
 }
 
 .rapat:hover .dropdown-menu-rapat,
 .dropdown-menu-rapat:hover {
     display: block;
+    opacity: 1;
+    visibility: visible;
 }
 
 .dropdown-item-rapat {
@@ -277,7 +285,7 @@ body {
 }
 
 .form-container {
-    padding: 10px; /* Kurangi padding agar form lebih ramping */
+    padding: 10px; 
     max-width: 800px;
     margin: 20px auto;
     background-color: white;

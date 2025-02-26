@@ -75,18 +75,16 @@
     </div>
 
     <script>
-        // Jika ada pesan sukses, tampilkan popup
         <?php if (session()->getFlashdata('success')): ?>
             document.addEventListener('DOMContentLoaded', function() {
                 const popup = document.getElementById('success-popup');
                 const overlay = document.getElementById('overlay');
                 popup.style.display = 'block';
                 overlay.style.display = 'block';
-
-                // Sembunyikan popup setelah 2 detik
                 setTimeout(function() {
                     popup.style.display = 'none';
                     overlay.style.display = 'none';
+                    window.location.href = "<?= base_url('notulen/profilnotulen'); ?>";
                 }, 2000);
             });
         <?php endif; ?>

@@ -7,6 +7,10 @@ use App\Models\UserModel;
 
 class EditProfilPegawaiController extends Controller
 {
+    public function index()
+    {
+        return view('pegawai/ubahpassword');
+    }
     public function editProfil()
     {
         $session = \Config\Services::session();

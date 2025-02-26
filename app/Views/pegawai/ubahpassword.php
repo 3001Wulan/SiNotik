@@ -75,7 +75,6 @@
     </div>
 
     <script>
-        // Jika ada pesan sukses, tampilkan popup
         <?php if (session()->getFlashdata('success')): ?>
             document.addEventListener('DOMContentLoaded', function() {
                 const popup = document.getElementById('success-popup');
@@ -83,10 +82,10 @@
                 popup.style.display = 'block';
                 overlay.style.display = 'block';
 
-                // Sembunyikan popup setelah 2 detik
                 setTimeout(function() {
                     popup.style.display = 'none';
                     overlay.style.display = 'none';
+                    window.location.href = "<?= base_url('pegawai/profilpegawai'); ?>";
                 }, 2000);
             });
         <?php endif; ?>

@@ -1469,7 +1469,7 @@ body {
     
 
     .dark-mode .dashboard-card,
-    .dark-mode .datapengguna-card,
+    .dark-mode .notulensi-card,
     .dark-mode .riwayat-card,
     .dark-mode .rapat-card,
     .dark-mode .distribusi-card,
@@ -1481,7 +1481,7 @@ body {
     }
 
     .dark-mode .dashboard-card:hover,
-    .dark-mode .datapengguna-card:hover,
+    .dark-mode .notulensi-card:hover,
     .dark-mode .riwayat-card:hover,
     .dark-mode .rapat-card:hover,
     .dark-mode .distribusi-card:hover,
@@ -1493,7 +1493,7 @@ body {
     }
 
     .dark-mode .card-content,
-    .dark-mode .card-datapengguna-content,
+    .dark-mode .card-notulensi-content,
     .dark-mode .card-riwayat-content,
     .dark-mode .card-rapat-content,
     .dark-mode .card-distribusi-content,
@@ -1526,7 +1526,7 @@ body {
     }
 
     .dark-mode .card-content ul li,
-    .dark-mode .card-datapengguna-content ul li,
+    .dark-mode .card-notulensi-content ul li,
     .dark-mode .card-distribusi-content ul li,
     .dark-mode .card-riwayat-content ul li,
     .dark-mode .card-rapat-content ul li,
@@ -1536,7 +1536,7 @@ body {
     }
 
     .dark-mode .card-content ul li::before,
-    .dark-mode .card-datapengguna-content ul li::before,
+    .dark-mode .card-notulensi-content ul li::before,
     .dark-mode .card-distribusi-content ul li::before,
     .dark-mode .card-riwayat-content ul li::before,
     .dark-mode .card-rapat-content ul li::before,
@@ -1561,7 +1561,7 @@ body {
     }
 
     .dark-mode .card-image,
-    .dark-mode .card-datapengguna-image,
+    .dark-mode .card-notulensi-image,
     .dark-mode .card-riwayat-image,
     .dark-mode .card-rapat-image,
     .dark-mode .card-distribusi-image,

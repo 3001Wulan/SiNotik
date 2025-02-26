@@ -921,8 +921,41 @@ textarea {
     resize: none; /* Mencegah perubahan ukuran */
     width: 100%; /* Sesuaikan dengan kebutuhan */
     height: 100px; /* Atur tinggi awal */
-    padding: 8px;
+    padding: 5px;
     font-size: 14px;
     border: 1px solid #ccc;
-    border-radius: 5p
+    border-radius: 5px;
+}
+
+.dark-mode .dropdown-menu {
+    background-color: #777;
+    border: 1px solid #555;
+    color: #ddd;
+}
+
+.dark-mode .dropdown-menu .dropdown-item:hover {
+    background-color: #999;
+    color: #fff;
+}
+
+.dark-mode .dropdown-menu .dropdown-item {
+    color: #ddd;
+}
+
+.dark-mode .dropdown-menu .dropdown-item .dropdown-icon {
+    filter: brightness(0) invert(1);
+}
+
+.dark-mode input,
+.dark-mode textarea {
+    background-color: #666;
+}
+
+.dark-mode .sidebar ul li a {
+    color: black;
+}
+
+.dark-mode .sidebar ul li a.active {
+    background-color: #444444;
+    color: #fff;
 }

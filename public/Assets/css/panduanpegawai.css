@@ -1378,7 +1378,7 @@ li:hover .dropdown-content {
 
 .dark-mode .intro-text,
 .dark-mode .intro-text-riwayat,
-.dark-mode .intro-text-rapat,
+.dark-mode .intro-text-jadwal,
 .dark-mode .intro-text-profil,
 .dark-mode .intro-text-edit {
     color: #ddd;
@@ -1414,13 +1414,15 @@ li:hover .dropdown-content {
 }
 
 .dark-mode .component-card,
-.dark-mode .component-card-rapat {
+.dark-mode .component-card-rapat,
+.dark-mode .component-card-notulensi {
     background-color: #555;
     color: #ddd;
 }
 
 .dark-mode .component-card:hover,
-.dark-mode .component-card-rapat:hover {
+.dark-mode .component-card-rapat:hover,
+.dark-mode .component-card-notulensi:hover {
     background-color: #777;
 }
 

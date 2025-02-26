@@ -178,67 +178,77 @@
     <script>
 document.addEventListener('DOMContentLoaded', function() {
     const body = document.body;
-    const moonIcon = document.querySelector('#toggleDarkMode');
     const categorySelect = document.querySelector('.category-select');
     const searchInput = document.querySelector('.search-box input');
     const searchButton = document.querySelector('.search-box button');
     const tableRows = document.querySelectorAll('table tbody tr');
     const categories = ['APTIKA', 'IKP', 'Statistik & Persandian'];
     let itemsPerPage = 5;
-    let currentPage = 1;
-    let totalPages = 0;
-
-    // Function to update the icon based on theme
-    function updateThemeIcon(theme) {
-        if (theme === 'dark-mode') {
-            moonIcon.src = '<?php echo base_url("assets/images/sun.png"); ?>';
-            moonIcon.alt = 'Light Mode';
-        } else {
-            moonIcon.src = '<?php echo base_url("assets/images/moon.png"); ?>';
-            moonIcon.alt = 'Dark Mode';
-        }
-    }
-
-    // Check saved theme in localStorage
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-        body.classList.remove('light-mode', 'dark-mode');
-        body.classList.add(savedTheme);
-        updateThemeIcon(savedTheme);
-    } else {
-        // Default to light mode
-        body.classList.add('light-mode');
-        updateThemeIcon('light-mode');
-    }
+    let currentPage = 1; 
+    let totalPages = 0; 
 
     // Create category popup
-    let categoryPopup = document.createElement('div');
-    categoryPopup.className = 'category-popup';
-    
-    categories.forEach(category => {
-        const option = document.createElement('div');
-        option.className = 'category-option';
-        option.textContent = category;
-        option.onclick = function() {
-            categorySelect.value = category; 
-            categoryPopup.style.display = 'none'; 
-            filterAndDisplayData(); 
-        };
-        categoryPopup.appendChild(option);
-    });
-    
+    const categoryPopup = createCategoryPopup(categories);
     document.body.appendChild(categoryPopup);
 
     // Category popup toggle
     const categoryIcon = document.querySelector('.iicon-container');
     categoryIcon.addEventListener('click', function(e) {
-        const rect = categorySelect.getBoundingClientRect();
-        categoryPopup.style.top = `${rect.bottom + window.scrollY}px`;
-        categoryPopup.style.left = `${rect.left + window.scrollX}px`;
-        categoryPopup.style.minWidth = `${rect.width}px`;
-        categoryPopup.style.display = categoryPopup.style.display === 'block' ? 'none' : 'block';
-        e.stopPropagation();
+        toggleCategoryPopup(categoryPopup, categorySelect, e);
     });
+
+    // Event listeners
+    searchInput.addEventListener('input', filterAndDisplayData);
+    searchButton.addEventListener('click', filterAndDisplayData);
+    document.getElementById('entries').addEventListener('change', handleEntriesChange);
+    document.querySelector('.btn-prev').addEventListener('click', handlePrevPage);
+    document.querySelector('.btn-next').addEventListener('click', handleNextPage);
+    window.onclick = function(event) {
+        if (!categoryPopup.contains(event.target) && !categorySelect.contains(event.target)) {
+            categoryPopup.style.display = 'none';
+        }
+    };
+
+    // Profile dropdown
+    setupProfileDropdown();
+
+    // Logout confirmation
+    setupLogoutConfirmation();
+
+    // Dark mode toggle
+    setupDarkModeToggle();
+
+    // Initial data display
+    filterAndDisplayData();
+
+    // Function Definitions
+    function createCategoryPopup(categories) {
+        const popup = document.createElement('div');
+        popup.className = 'category-popup';
+
+        categories.forEach(category => {
+            const option = document.createElement('div');
+            option.className = 'category-option';
+            option.textContent = category;
+            option.onclick = function() {
+                categorySelect.value = category; 
+                popup.style.display = 'none'; 
+                filterAndDisplayData(); 
+            };
+            popup.appendChild(option);
+        });
+
+        return popup;
+    }
+
+    function toggleCategoryPopup(popup, select, event) {
+        const rect = select.getBoundingClientRect();
+        popup.style.top = `${rect.bottom + window.scrollY}px`;
+        popup.style.left = `${rect.left + window.scrollX}px`;
+        popup.style.minWidth = `${rect.width}px`;
+        popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+        event.stopPropagation();
+    }
 
     function filterAndDisplayData() {
         const searchTerm = searchInput.value.toLowerCase().trim();
@@ -274,102 +284,87 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.btn-next').disabled = currentPage === totalPages || totalPages === 0;
     }
 
-    window.viewDetails = function(button, notulensiId) {
-        window.location.href = `<?= base_url('pegawai/lihatnotulen/') ?>${notulensiId}`;
-    };
-
-    document.getElementById('entries').addEventListener('change', function() {
+    function handleEntriesChange() {
         itemsPerPage = parseInt(this.value);
-        currentPage = 1; // Reset to first page when changing entries
+        if (itemsPerPage === 9999) {
+            itemsPerPage = tableRows.length; 
+        }
         filterAndDisplayData();
-    });
+    }
 
-    const prevButton = document.querySelector('.btn-prev');
-    const nextButton = document.querySelector('.btn-next');
-
-    prevButton.addEventListener('click', function() {
+    function handlePrevPage() {
         if (currentPage > 1) {
             currentPage--;
-            filterAndDisplayData();
+            filterAndDisplayData(); 
         }
-    });
+    }
 
-    nextButton.addEventListener('click', function() {
+    function handleNextPage() {
         if (currentPage < totalPages) {
             currentPage++;
-            filterAndDisplayData();
+            filterAndDisplayData(); 
         }
-    });
+    }
 
-    // Theme toggle handler with icon update
-    moonIcon.addEventListener('click', function() {
-        const newTheme = body.classList.contains('light-mode') ? 'dark-mode' : 'light-mode';
-        
-        body.classList.remove('light-mode', 'dark-mode');
-        body.classList.add(newTheme);
-        
-        // Update the icon
-        updateThemeIcon(newTheme);
-        
-        // Save theme preference
-        localStorage.setItem('theme', newTheme);
-    });
+    function setupProfileDropdown() {
+        const profileIcon = document.getElementById('profile-icon');
+        const dropdownMenu = document.getElementById('dropdownMenu');
 
-    window.onclick = function(event) {
-        if (!categoryPopup.contains(event.target) && !categorySelect.contains(event.target)) {
-            categoryPopup.style.display = 'none';
+        profileIcon.addEventListener('click', (event) => {
+            event.stopPropagation(); 
+            dropdownMenu.classList.toggle('show');
+        });
+
+        window.addEventListener('click', () => {
+            dropdownMenu.classList.remove('show');
+        });
+    }
+
+    function setupLogoutConfirmation() {
+        const logoutLink = document.getElementById('logoutLink'); 
+        const popupOverlay = document.getElementById('popupOverlay');
+        const confirmLogout = document.getElementById('confirmLogout');
+        const cancelLogout = document.getElementById('cancelLogout');
+
+        logoutLink.addEventListener('click', (event) => {
+            event.preventDefault(); 
+            popupOverlay.style.display = 'block'; 
+        });
+
+        confirmLogout.addEventListener('click', () => {
+            window.location.href = 'login'; 
+        });
+
+        cancelLogout.addEventListener('click', () => {
+            popupOverlay.style.display = 'none'; 
+        });
+    }
+
+    function setupDarkModeToggle() {
+        const toggleDarkMode = document.getElementById('toggleDarkMode');
+        const isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+        if (isDarkMode) {
+            document.body.classList.add('dark-mode');
+            toggleDarkMode.src = '<?= base_url("assets/images/sun.png") ?>';
+        } else {
+            toggleDarkMode.src = '<?= base_url("assets/images/moon.png") ?>';
         }
+
+        toggleDarkMode.addEventListener('click', () => {
+            const darkModeEnabled = document.body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', darkModeEnabled);
+
+            toggleDarkMode.src = darkModeEnabled ? 
+                '<?= base_url("assets/images/sun.png") ?>' : 
+                '<?= base_url("assets/images/moon.png") ?>';
+        });
+    }
+
+    window.viewDetails = function(button, notulensiId) {
+        window.location.href = `<?= base_url('pegawai/lihatnotulen/') ?>${notulensiId}`;
+
     };
-
-    filterAndDisplayData();
-
-    searchInput.addEventListener('input', function() {
-        currentPage = 1; // Reset to first page when searching
-        filterAndDisplayData();
-    });
-
-    searchButton.addEventListener('click', function() {
-        currentPage = 1; // Reset to first page when searching
-        filterAndDisplayData();
-    });
-
-    const profileIcon = document.getElementById('profile-icon');
-    const dropdownMenu = document.getElementById('dropdownMenu');
-
-    profileIcon.addEventListener('click', (event) => {
-        event.stopPropagation(); 
-        dropdownMenu.classList.toggle('show');
-    });
-
-    window.addEventListener('click', () => {
-        dropdownMenu.classList.remove('show');
-    });
-
-    // Logout popup handlers
-    const logoutLink = document.getElementById('logoutLink');
-    const popupOverlay = document.getElementById('popupOverlay');
-    const confirmLogout = document.getElementById('confirmLogout');
-    const cancelLogout = document.getElementById('cancelLogout');
-
-    logoutLink.addEventListener('click', (event) => {
-        event.preventDefault();
-        popupOverlay.style.display = 'block';
-    });
-
-    confirmLogout.addEventListener('click', () => {
-        window.location.href = 'login';
-    });
-
-    cancelLogout.addEventListener('click', () => {
-        popupOverlay.style.display = 'none';
-    });
-
-    // Close popup when clicking outside
-    popupOverlay.addEventListener('click', (event) => {
-        if (event.target === popupOverlay) {
-            popupOverlay.style.display = 'none';
-        }
-    });
 });
 </script>
 

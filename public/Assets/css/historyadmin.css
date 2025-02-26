@@ -807,6 +807,7 @@ body.dark-mode .theme-toggle img {
 .dark-mode table th {
     color: #fff;
     border-bottom: 2px solid #444;
+    background-color: #555;
 }
 
 .dark-mode table td {

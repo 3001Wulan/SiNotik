@@ -26,7 +26,7 @@ $routes->get('/editprofilpegawai/(:num)', 'EditProfilPegawaiController::editProf
 $routes->get('pegawai/profilpegawai', 'ProfilPegawaiController::profilPegawai');
 $routes->post('DetailPenggunaController/hapusData', 'DetailPenggunaController::hapusData');
 $routes->get('admin/riwayatadmin', 'RiwayatAdminController::index');
-$routes->get('notulen/editprofilnotulwn', 'EditProfilNotulenController::index');
+$routes->get('notulen/editprofilnotulen', 'EditProfilNotulenController::index');
 $routes->post('notulen/editprofilnotulen', 'EditProfilNotulenController::editProfil');
 $routes->get('/editprofilnotulen/(:num)', 'EditProfilNotulenController::editProfil/$1');
 $routes->get('admin/tambahpengguna', 'TambahPenggunaController::index');

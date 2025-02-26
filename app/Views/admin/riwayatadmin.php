@@ -401,88 +401,85 @@
 
         const { jsPDF } = window.jspdf;
 
-        const pdfBtn = document.querySelector('.pdf-btn');
-        pdfBtn.addEventListener('click', function () {
-            const doc = new jsPDF();
-            const table = document.querySelector('.data-table');
-            const rows = table.querySelectorAll('tr');
+const pdfBtn = document.querySelector('.pdf-btn');
+pdfBtn.addEventListener('click', function () {
+    const doc = new jsPDF({ orientation: 'landscape' }); // Set PDF ke lanskap
+    const table = document.querySelector('.data-table');
+    const rows = table.querySelectorAll('tr');
 
-            const headers = ['No', 'Tanggal', 'Bidang', 'Judul', 'Notulen', 'Partisipan','Isi', 'Dokumentasi'];
-            const tableData = [];
-            const imagePromises = [];
+    const headers = ['No', 'Tanggal', 'Bidang', 'Judul', 'Notulen', 'Partisipan', 'Isi', 'Dokumentasi'];
+    const tableData = [];
+    const imagePromises = [];
 
-            rows.forEach((row, rowIndex) => {
-                const cells = row.querySelectorAll('th, td');
-                const rowData = Array.from(cells).map(cell => cell.textContent.trim());
-                if (rowIndex > 0) { 
-                    rowData.pop(); 
-                    tableData.push(rowData);
+    rows.forEach((row, rowIndex) => {
+        const cells = row.querySelectorAll('th, td');
+        const rowData = Array.from(cells).map(cell => cell.textContent.trim());
+        if (rowIndex > 0) { 
+            rowData.pop(); 
+            tableData.push(rowData);
 
-                    const imgCell = row.cells[7]; 
-                    const img = imgCell.querySelector('img');
-                    if (img) {
-                        console.log(`Image found in row ${rowIndex}, processing...`);
+            const imgCell = row.cells[7]; 
+            const img = imgCell.querySelector('img');
+            if (img) {
+                imagePromises.push(
+                    getImageBase64(img)
+                        .then(base64Img => {
+                            tableData[rowIndex - 1].push(base64Img);
+                        })
+                        .catch(err => {
+                            console.error(`Error processing image in row ${rowIndex}:`, err);
+                            tableData[rowIndex - 1].push('');
+                        })
+                );
+            } else {
+                tableData[rowIndex - 1].push('');
+            }
+        }
+    });
 
-                        imagePromises.push(
-                            getImageBase64(img)
-                                .then(base64Img => {
-                                    tableData[rowIndex - 1].push(base64Img); 
-                                })
-                                .catch(err => {
-                                    console.error(`Error processing image in row ${rowIndex}:`, err);
-                                    tableData[rowIndex - 1].push(''); 
-                                })
-                        );
-                    } else {
-                        console.log(`No image found in row ${rowIndex}`);
-                        tableData[rowIndex - 1].push(''); 
+    Promise.all(imagePromises).then(() => {
+        let isFirstPage = true; // Variabel untuk memastikan judul hanya di halaman pertama
+
+        doc.autoTable({
+            head: [headers],
+            body: tableData,
+            startY: 20,
+            margin: { top: 10, bottom: 10, left: 10, right: 10 },
+            theme: 'grid',
+            columnStyles: {
+                6: { cellWidth: 80 }, // Kolom "Isi" lebih besar agar teks lebih rapi
+                7: { cellWidth: 35 }, // Kolom "Dokumentasi" untuk gambar
+            },
+            styles: {
+                overflow: 'linebreak',
+                fontSize: 10,
+                cellPadding: 5,
+            },
+            didDrawPage: function (data) {
+                if (isFirstPage) {
+                    doc.setFontSize(14);
+                    doc.text('Riwayat Notulensi', data.settings.margin.left, 15);
+                    isFirstPage = false; // Pastikan judul tidak muncul di halaman berikutnya
+                }
+            },
+            didDrawCell: function (data) {
+                if (data.column.index === 7 && data.row.index > 0) {
+                    const imageBase64 = tableData[data.row.index][data.column.index + 1];
+                    if (imageBase64) {
+                        const imgWidth = 30;
+                        const imgHeight = 20;
+                        doc.addImage(imageBase64, 'PNG', data.cell.x + 1, data.cell.y + 1, imgWidth, imgHeight);
                     }
                 }
-            });
-
-            Promise.all(imagePromises).then(() => {
-                console.log("All images processed, generating PDF...");
-
-                doc.autoTable({
-                    head: [headers],
-                    body: tableData,
-                    startY: 20,
-                    margin: { top: 10, bottom: 10, left: 10, right: 10 },
-                    theme: 'grid',
-                    didDrawPage: function () {
-                        doc.text('Riwayat Notulensi', 12, 15);
-                    },
-                    styles: {
-                        overflow: 'linebreak',
-                        fontSize: 10,
-                        cellPadding: 5,
-                    },
-                    didDrawCell: function (data) {
-                        console.log(`Processing row ${data.row.index}, column ${data.column.index}`);
-                        if (data.column.index === 7 && data.row.index > 0) {
-                            const imageBase64 = tableData[data.row.index][data.column.index + 1];
-                            console.log(`Processing image for row ${data.row.index}:`, imageBase64);
-                            if (imageBase64) {
-                                const imgWidth = 25;
-                                const imgHeight = 15;
-                                const imgX = data.cell.x + data.cell.width / 2 - imgWidth / 2;
-                                const imgY = data.cell.y + (data.cell.height - imgHeight) / 2;
-                                console.log(`Menambahkan gambar ke PDF di posisi (${imgX}, ${imgY})`);
-                                doc.addImage(imageBase64, 'PNG', data.cell.x + 1, data.cell.y + 1, imgWidth, imgHeight);
-
-                            }else{
-                                console.log(`Tidak ada gambar untuk baris ${data.row.index}`);
-
-                            }
-                        }
-                    },
-                });
-
-                doc.save('data-notulen.pdf');
-            }).catch(error => {
-                console.error('Error processing images before generating PDF:', error);
-            });
+            },
         });
+
+        doc.save('data-notulen.pdf');
+    }).catch(error => {
+        console.error('Error processing images before generating PDF:', error);
+    });
+});
+
 
         const getImageBase64 = (img) => {
             return new Promise((resolve, reject) => {

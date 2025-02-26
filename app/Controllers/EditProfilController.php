@@ -7,6 +7,10 @@ use App\Models\UserModel;
 
 class EditProfilController extends Controller
 {
+    public function index()
+    {
+        return view('admin/ubahpassword');
+    }
     public function editProfil()
     {
         $session = \Config\Services::session();

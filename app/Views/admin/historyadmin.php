@@ -23,7 +23,7 @@
                     </a>
                 </li>
                 <li>
-                <a href="data_penggguna" class="inactive">
+                <a href="data_pengguna" class="inactive">
                         <img src="<?php echo base_url('assets/images/datapengguna.png'); ?>" alt="Data Pengguna Icon" class="sidebar-icon">
                         Data Pengguna
                     </a>
@@ -79,7 +79,7 @@
                     <div class="profile-container">
                     <img src="<?= base_url('assets/images/profiles/' . (file_exists('assets/images/profiles/' . session()->get('profil_foto')) ? session()->get('profil_foto') : 'delvaut.png')) ?>" alt="User Photo" class="profile-img" id="profile-icon">
                         <div class="profile-dropdown">
-                            <a href="#" class="dropdown-item">
+                            <a href="profiladmin" class="dropdown-item">
                             <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
                                 Profil
                             </a>
@@ -196,7 +196,6 @@
 </div>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Cache DOM elements
     const body = document.body;
     const moonIcon = document.querySelector('.moon-icon');
     const sunIcon = document.querySelector('.sun-icon');
@@ -214,26 +213,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const logoutModal = document.getElementById('logoutModal');
     const logoutLink = document.querySelector('.dropdown-item img[alt="Logout"]').closest('.dropdown-item');
 
-    // State variables
     let currentPage = 1;
     let itemsPerPage = parseInt(entriesSelect.value);
     let filteredRows = [...tableRows];
     let currentRow = null;
     
-    // Profile dropdown toggle
     profileContainer.addEventListener('click', (e) => {
         e.stopPropagation();
         profileDropdown.classList.toggle('show');
     });
 
-    // Close profile dropdown when clicking outside
     document.addEventListener('click', (e) => {
         if (!profileContainer.contains(e.target)) {
             profileDropdown.classList.remove('show');
         }
     });
-    
-    // Category setup
+
     const categories = ['APTIKA', 'IKP', 'Statistik & Persandian'];
     const categoryPopup = document.createElement('div');
     categoryPopup.className = 'category-popup';
@@ -340,20 +335,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    const themeToggle = document.querySelector('.theme-toggle');
-    themeToggle.addEventListener('click', function() {
-        body.classList.toggle('dark-mode');
-        body.classList.toggle('light-mode');
-        if (body.classList.contains('dark-mode')) {
-            moonIcon.style.opacity = '0';
-            sunIcon.style.opacity = '1';
-            localStorage.setItem('theme', 'dark-mode');
-        } else {
-            moonIcon.style.opacity = '1';
-            sunIcon.style.opacity = '0';
-            localStorage.setItem('theme', 'light-mode');
-        }
-    });
+    
     if (logoutLink) {
         logoutLink.addEventListener('click', function(e) {
             e.preventDefault();
@@ -371,7 +353,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     window.confirmLogout = function() {
-        window.location.href = "<?= base_url('logout') ?>";
+        window.location.href = "<?= base_url('/') ?>";
     }
     document.addEventListener('click', (e) => {
         if (!categorySelect.contains(e.target) && 
@@ -387,6 +369,45 @@ document.addEventListener('DOMContentLoaded', function() {
 
     filterAndDisplayData();
 });
+const themeToggle = document.querySelector('.theme-toggle');
+const body = document.body;
+const moonIcon = document.getElementById('moonIcon');
+const sunIcon = document.getElementById('sunIcon');
+
+themeToggle.addEventListener('click', function() {
+    body.classList.toggle('dark-mode');
+    const darkModeEnabled = body.classList.contains('dark-mode');
+
+    // Simpan tema di localStorage
+    localStorage.setItem('theme', darkModeEnabled ? 'dark-mode' : 'light-mode');
+
+    // Ganti ikon berdasarkan mode
+    moonIcon.style.opacity = darkModeEnabled ? '0' : '1';
+    sunIcon.style.opacity = darkModeEnabled ? '1' : '0';
+
+    // Ganti gambar tombol toggle
+    document.getElementById('toggleDarkMode').src = darkModeEnabled 
+        ? base_url + "assets/images/sun.png" 
+        : base_url + "assets/images/moon.png";
+});
+
+// Set tema saat halaman dimuat
+window.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme');
+    
+    if (savedTheme === 'dark-mode') {
+        body.classList.add('dark-mode');
+        moonIcon.style.opacity = '0';
+        sunIcon.style.opacity = '1';
+        document.getElementById('toggleDarkMode').src = base_url + "assets/images/sun.png";
+    } else {
+        body.classList.add('light-mode');
+        moonIcon.style.opacity = '1';
+        sunIcon.style.opacity = '0';
+        document.getElementById('toggleDarkMode').src = base_url + "assets/images/moon.png";
+    }
+});
+
 </script>
 </body>
 </html>

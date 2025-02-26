@@ -69,7 +69,7 @@
         <div class="main-content">
             <div class="top-bar">
                 <div class="theme-toggle">
-                    <img src="<?= base_url('assets/images/moon.png') ?>" alt="Toggle Theme" id="theme-icon">
+                    <img id="toggleDarkMode" src="<?= base_url('assets/images/moon.png') ?>" alt="Toggle Dark Mode" style="cursor: pointer;">
                 </div>
 
                 <div class="user-info">
@@ -178,23 +178,27 @@
 
     <script>
         
-    document.addEventListener('DOMContentLoaded', function () {
-        const themeIcon = document.getElementById('theme-icon');
-        const body = document.body;
+        document.addEventListener('DOMContentLoaded', () => {
+    const toggleDarkMode = document.getElementById('toggleDarkMode');
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
 
-        if (localStorage.getItem('theme') === 'dark') {
-            body.classList.add('dark-mode');
-            themeIcon.src = '<?= base_url("assets/images/sun.png") ?>';
-        } else {
-            themeIcon.src = '<?= base_url("assets/images/moon.png") ?>';
-        }
+    // Terapkan dark mode jika sebelumnya aktif
+    if (isDarkMode) {
+        document.body.classList.add('dark-mode');
+        toggleDarkMode.src = '<?= base_url("assets/images/sun.png") ?>';
+    } else {
+        toggleDarkMode.src = '<?= base_url("assets/images/moon.png") ?>';
+    }
 
-        themeIcon.addEventListener('click', function () {
-            body.classList.toggle('dark-mode');
-            const isDark = body.classList.contains('dark-mode');
-            themeIcon.src = isDark ? '<?= base_url("assets/images/sun.png") ?>' : '<?= base_url("assets/images/moon.png") ?>';
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        });
+    // Event listener untuk tombol toggle dark mode
+    toggleDarkMode.addEventListener('click', () => {
+        const darkModeEnabled = document.body.classList.toggle('dark-mode');
+        localStorage.setItem('darkMode', darkModeEnabled);
+
+        toggleDarkMode.src = darkModeEnabled ? 
+            '<?= base_url("assets/images/sun.png") ?>' : 
+            '<?= base_url("assets/images/moon.png") ?>';
+    });
 
         tinymce.init({
             selector: '#pembahasan',
@@ -293,17 +297,17 @@
     const errorMessage = document.getElementById("errorMessage");
 
     if (file) {
-        if (file.size > 5 * 1024 * 1024) {  // Batas 5MB
+        if (file.size > 5 * 1024 * 1024) {  
             errorMessage.textContent = "File terlalu besar! Maksimal 5MB.";
             errorMessage.style.display = "block";
-            imagePreview.style.display = "none"; // Sembunyikan gambar jika error
+            imagePreview.style.display = "none"; 
             return;
         }
 
         const reader = new FileReader();
         reader.onload = function(e) {
             imagePreview.src = e.target.result;
-            imagePreview.style.display = "block";  // Tampilkan gambar setelah upload
+            imagePreview.style.display = "block";  
             errorMessage.style.display = "none";
         };
         reader.readAsDataURL(file);

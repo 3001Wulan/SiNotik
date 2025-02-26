@@ -226,29 +226,28 @@
     <span class="close" onclick="closeModal()">&times;</span>
     <img class="modal-content" id="modalImage">
   </div>
-
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const themeIcon = document.getElementById('toggleDarkMode');
-      const body = document.body;
+    document.addEventListener('DOMContentLoaded', () => {
+    const toggleDarkMode = document.getElementById('toggleDarkMode');
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
 
-      // Cek preferensi tema yang disimpan
-      if (localStorage.getItem('theme') === 'dark') {
-        body.classList.add('dark-mode');
-        themeIcon.src = '<?= base_url('assets/images/sun.png') ?>';
-      }
+    if (isDarkMode) {
+        document.body.classList.add('dark-mode');
+        toggleDarkMode.src = '<?= base_url("assets/images/sun.png") ?>';
+    } else {
+        toggleDarkMode.src = '<?= base_url("assets/images/moon.png") ?>';
+    }
 
-      themeIcon.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-        if (body.classList.contains('dark-mode')) {
-          themeIcon.src = '<?= base_url('assets/images/sun.png') ?>';
-          localStorage.setItem('theme', 'dark');
-        } else {
-          themeIcon.src = '<?= base_url('assets/images/moon.png') ?>';
-          localStorage.setItem('theme', 'light');
-        }
-      });
-      // Pop-up Komentar
+
+    toggleDarkMode.addEventListener('click', () => {
+        const darkModeEnabled = document.body.classList.toggle('dark-mode');
+        localStorage.setItem('darkMode', darkModeEnabled);
+
+        toggleDarkMode.src = darkModeEnabled ? 
+            '<?= base_url("assets/images/sun.png") ?>' : 
+            '<?= base_url("assets/images/moon.png") ?>';
+    });
+
       const commentButton = document.getElementById('commentButton');
       const commentPopup = document.getElementById('commentPopup');
       const closePopup = document.getElementById('closePopup');
@@ -258,11 +257,11 @@
       const emojiButton = document.getElementById('emojiButton');
 
       commentButton.addEventListener('click', () => {
-        commentPopup.style.display = 'flex'; // Menampilkan pop-up
+        commentPopup.style.display = 'flex'; 
       });
 
       closePopup.addEventListener('click', () => {
-        commentPopup.style.display = 'none'; // Menyembunyikan pop-up
+        commentPopup.style.display = 'none'; 
       });
 
       submitComment.addEventListener('click', () => {
@@ -270,7 +269,6 @@
         const notulensiId = document.getElementById('notulensi_id').value;
 
         if (commentText) {
-          // Kirim permintaan AJAX untuk menyimpan komentar
           fetch('<?= base_url('lihatnotulen/saveFeedback') ?>', {
             method: 'POST',
             headers: {
@@ -294,9 +292,9 @@
                 </div>
               `;
               commentList.appendChild(commentItem);
-              newComment.value = ''; // Kosongkan input
+              newComment.value = ''; 
             } else {
-              alert(data.message); // Tampilkan pesan kesalahan
+              alert(data.message);
             }
           })
           .catch(error => {
@@ -310,7 +308,6 @@
         const pickerContainer = document.getElementById('emojiPicker');
         if (pickerContainer.style.display === 'none' || pickerContainer.style.display === '') {
           pickerContainer.style.display = 'block';
-          // Jika belum ada elemen <emoji-picker>, buat dan tambahkan
           if (!pickerContainer.querySelector('emoji-picker')) {
             const emojiPicker = document.createElement('emoji-picker');
             pickerContainer.appendChild(emojiPicker);
@@ -373,7 +370,6 @@
             y += 0.7;
         };
 
-        // Menambahkan logo dan informasi lainnya
         const logoPath = '/assets/images/logo.png';
         const logoWidth = 3.5;
         const logoHeight = 3.5;

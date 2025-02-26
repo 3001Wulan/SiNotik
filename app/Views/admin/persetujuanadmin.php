@@ -39,7 +39,7 @@
                         <span>Rapat</span>
                     </a>
                     <div class="dropdown-content">
-                        <a href="melihatnotulen" class="dropdown-item">
+                        <a href="jadwalrapatadmin" class="dropdown-item">
                             <img src="<?= base_url('assets/images/edit.png') ?>" alt="Daftar Notulensi Icon">
                             <span>Buat Jadwal Rapat</span>
                         </a>
@@ -78,7 +78,7 @@
                     <div class="profile-container">
                         <img src="<?= base_url('assets/images/profiles/' . (file_exists('assets/images/profiles/' . session()->get('profil_foto')) ? session()->get('profil_foto') : 'delvaut.png')) ?>" alt="User  Photo" class="profile-img" id="profile-icon">
                         <div class="profile-dropdown">
-                            <a href="#" class="dropdown-item">
+                            <a href="profiladmin" class="dropdown-item">
                                 <img src="<?= base_url('assets/images/User.png') ?>" alt="Profil" class="dropdown-icon">
                                 Profil
                             </a>
@@ -256,13 +256,11 @@
             const logoutModal = document.getElementById('logoutModal');
             const logoutLink = document.querySelector('.dropdown-item img[alt="Logout"]').closest('.dropdown-item');
 
-            // State variables
             let currentPage = 1;
             let itemsPerPage = parseInt(entriesSelect.value);
             let filteredRows = [...tableRows];
             let currentRow = null;
-            
-            // Category setup
+
             const categories = ['APTIKA', 'IKP', 'Statistik & Persandian'];
             const categoryPopup = document.createElement('div');
             categoryPopup.className = 'category-popup';
@@ -281,8 +279,7 @@
             });
 
             document.body.appendChild(categoryPopup);
-            
-            // Category select click handler
+  
             categorySelect.addEventListener('click', function(e) {
                 e.stopPropagation();
                 const rect = this.getBoundingClientRect();
@@ -292,7 +289,6 @@
                 categoryPopup.style.display = categoryPopup.style.display === 'block' ? 'none' : 'block';
             });
 
-            // Filter and Display Data function
             function filterAndDisplayData() {
                 const searchTerm = searchInput.value.toLowerCase().trim();
                 const selectedCategory = categorySelect.value.toLowerCase().trim();
@@ -368,7 +364,7 @@
                             successModal.style.display = 'flex';
                             setTimeout(() => {
                                 successModal.style.display = 'none';
-                                window.location.reload(); // Reload after success
+                                window.location.reload(); 
                             }, 2000);
                         } else {
                             alert('Gagal menyetujui rapat.');
@@ -392,7 +388,7 @@
             };
             document.querySelectorAll('.reject-button').forEach(button => {
     button.addEventListener('click', function() {
-        currentRow = this.closest('tr'); // Ambil baris terkait
+        currentRow = this.closest('tr'); 
     });
 });
 
@@ -507,20 +503,6 @@ window.submitRejection = function() {
                 });
             }
 
-            const themeToggle = document.querySelector('.theme-toggle');
-            themeToggle.addEventListener('click', function() {
-                body.classList.toggle('dark-mode');
-                body.classList.toggle('light-mode');
-                if (body.classList.contains('dark-mode')) {
-                    moonIcon.style.opacity = '0';
-                    sunIcon.style.opacity = '1';
-                    localStorage.setItem('theme', 'dark-mode');
-                } else {
-                    moonIcon.style.opacity = '1';
-                    sunIcon.style.opacity = '0';
-                    localStorage.setItem('theme', 'light-mode');
-                }
-            });
 
             profileContainer.addEventListener('click', (e) => {
                 e.stopPropagation();
@@ -549,11 +531,45 @@ window.submitRejection = function() {
             }
 
             window.confirmLogout = function() {
-                window.location.href = "<?= base_url('logout') ?>";
+                window.location.href = "<?= base_url('/') ?>";
             }
             
             filterAndDisplayData();
         });
+        const themeToggle = document.querySelector('.theme-toggle');
+const body = document.body;
+const moonIcon = document.getElementById('moonIcon');
+const sunIcon = document.getElementById('sunIcon');
+
+themeToggle.addEventListener('click', function() {
+    body.classList.toggle('dark-mode');
+    const darkModeEnabled = body.classList.contains('dark-mode');
+
+    localStorage.setItem('theme', darkModeEnabled ? 'dark-mode' : 'light-mode');
+
+    moonIcon.style.opacity = darkModeEnabled ? '0' : '1';
+    sunIcon.style.opacity = darkModeEnabled ? '1' : '0';
+    document.getElementById('toggleDarkMode').src = darkModeEnabled 
+        ? base_url + "assets/images/sun.png" 
+        : base_url + "assets/images/moon.png";
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme');
+    
+    if (savedTheme === 'dark-mode') {
+        body.classList.add('dark-mode');
+        moonIcon.style.opacity = '0';
+        sunIcon.style.opacity = '1';
+        document.getElementById('toggleDarkMode').src = base_url + "assets/images/sun.png";
+    } else {
+        body.classList.add('light-mode');
+        moonIcon.style.opacity = '1';
+        sunIcon.style.opacity = '0';
+        document.getElementById('toggleDarkMode').src = base_url + "assets/images/moon.png";
+    }
+});
+
     </script>
 </body>
 </html>

@@ -200,7 +200,6 @@
 </div>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Cache DOM elements
     const body = document.body;
     const moonIcon = document.querySelector('.moon-icon');
     const sunIcon = document.querySelector('.sun-icon');
@@ -218,26 +217,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const logoutModal = document.getElementById('logoutModal');
     const logoutLink = document.querySelector('.dropdown-item img[alt="Logout"]').closest('.dropdown-item');
 
-    // State variables
     let currentPage = 1;
     let itemsPerPage = parseInt(entriesSelect.value);
     let filteredRows = [...tableRows];
     let currentRow = null;
     
-    // Profile dropdown toggle
     profileContainer.addEventListener('click', (e) => {
         e.stopPropagation();
         profileDropdown.classList.toggle('show');
     });
 
-    // Close profile dropdown when clicking outside
     document.addEventListener('click', (e) => {
         if (!profileContainer.contains(e.target)) {
             profileDropdown.classList.remove('show');
         }
     });
-    
-    // Category setup
+
     const categories = ['APTIKA', 'IKP', 'Statistik & Persandian'];
     const categoryPopup = document.createElement('div');
     categoryPopup.className = 'category-popup';
@@ -256,8 +251,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     document.body.appendChild(categoryPopup);
-    
-    // Category select click handler
     categorySelect.addEventListener('click', function(e) {
         e.stopPropagation();
         const rect = this.getBoundingClientRect();
@@ -266,8 +259,6 @@ document.addEventListener('DOMContentLoaded', function() {
         categoryPopup.style.width = `${rect.width}px`;
         categoryPopup.style.display = categoryPopup.style.display === 'block' ? 'none' : 'block';
     });
-
-    // Filter and display data function
     function filterAndDisplayData() {
         const searchTerm = searchInput.value.toLowerCase().trim();
         const selectedCategory = categorySelect.value.toLowerCase().trim();
@@ -290,8 +281,6 @@ document.addEventListener('DOMContentLoaded', function() {
         updatePagination();
         displayCurrentPage();
     }
-    
-    // Pagination functions
     function updatePagination() {
         const totalPages = Math.ceil(filteredRows.length / itemsPerPage) || 1;
         currentPage = Math.min(currentPage, totalPages);
@@ -312,8 +301,6 @@ document.addEventListener('DOMContentLoaded', function() {
             row.cells[0].textContent = start + index + 1;
         });
     }
-
-    // Event listeners for search and pagination
     searchInput.addEventListener('input', filterAndDisplayData);
     
     entriesSelect.addEventListener('change', () => {
@@ -339,7 +326,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Submenu handlers
     const menuWithSubmenu = document.querySelector('.menu-item-with-submenu');
     const submenuPopup = document.querySelector('.submenu-popup');
 
@@ -353,23 +339,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Theme toggle
-    const themeToggle = document.querySelector('.theme-toggle');
-    themeToggle.addEventListener('click', function() {
-        body.classList.toggle('dark-mode');
-        body.classList.toggle('light-mode');
-        if (body.classList.contains('dark-mode')) {
-            moonIcon.style.opacity = '0';
-            sunIcon.style.opacity = '1';
-            localStorage.setItem('theme', 'dark-mode');
-        } else {
-            moonIcon.style.opacity = '1';
-            sunIcon.style.opacity = '0';
-            localStorage.setItem('theme', 'light-mode');
-        }
-    });
     
-    // Logout functionality
     if (logoutLink) {
         logoutLink.addEventListener('click', function(e) {
             e.preventDefault();
@@ -377,8 +347,6 @@ document.addEventListener('DOMContentLoaded', function() {
             showLogoutModal();
         });
     }
-
-    // Modal functions
     window.showLogoutModal = function() {
         logoutModal.style.display = 'block';
         profileDropdown.classList.remove('show');
@@ -389,10 +357,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     window.confirmLogout = function() {
-        window.location.href = "<?= base_url('login') ?>";
+        window.location.href = "<?= base_url('/') ?>";
     }
-
-    // Global click handler for closing popups
     document.addEventListener('click', (e) => {
         if (!categorySelect.contains(e.target) && 
             !categoryPopup.contains(e.target) && 
@@ -404,10 +370,43 @@ document.addEventListener('DOMContentLoaded', function() {
             closeLogoutModal();
         }
     });
-    
-    // Initial display
+
     filterAndDisplayData();
 });
+const themeToggle = document.querySelector('.theme-toggle');
+const body = document.body;
+const moonIcon = document.getElementById('moonIcon');
+const sunIcon = document.getElementById('sunIcon');
+
+themeToggle.addEventListener('click', function() {
+    body.classList.toggle('dark-mode');
+    const darkModeEnabled = body.classList.contains('dark-mode');
+
+    localStorage.setItem('theme', darkModeEnabled ? 'dark-mode' : 'light-mode');
+    moonIcon.style.opacity = darkModeEnabled ? '0' : '1';
+    sunIcon.style.opacity = darkModeEnabled ? '1' : '0';
+
+    document.getElementById('toggleDarkMode').src = darkModeEnabled 
+        ? base_url + "assets/images/sun.png" 
+        : base_url + "assets/images/moon.png";
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme');
+    
+    if (savedTheme === 'dark-mode') {
+        body.classList.add('dark-mode');
+        moonIcon.style.opacity = '0';
+        sunIcon.style.opacity = '1';
+        document.getElementById('toggleDarkMode').src = base_url + "assets/images/sun.png";
+    } else {
+        body.classList.add('light-mode');
+        moonIcon.style.opacity = '1';
+        sunIcon.style.opacity = '0';
+        document.getElementById('toggleDarkMode').src = base_url + "assets/images/moon.png";
+    }
+});
+
 </script>
 </body>
 </html>
