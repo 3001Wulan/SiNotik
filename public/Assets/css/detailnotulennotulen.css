@@ -1,3 +1,5 @@
+
+  
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -726,14 +728,25 @@ body.dark-mode #submitComment:hover {
     border-bottom: 1px solid #ddd;
 }
 .comment-icon {
-    background: none; 
-    border: none; 
-    padding: 10px; 
+    position: fixed; 
+    bottom: 12px; 
+    right: 24px; 
+    background-color: #d0e7ff;
+    border: none;
+    padding: 10px;
     cursor: pointer;
-    font-size: 25px;
-    color: inherit; 
-    margin-bottom: -40px;
+    font-size: 40px; 
+    color: inherit;
+    border-radius: 30%; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); 
+    transition: all 0.3s ease; 
 }
+
+.comment-icon:hover {
+    background-color: #e0e0e0; 
+    transform: scale(1.05); 
+}
+
 .comment-avatar {
     width: 40px;
     height: 40px;
@@ -769,6 +782,7 @@ body.dark-mode #submitComment:hover {
     flex-direction: column;
     width: 100%;
     position: relative;
+    
 }
 
 textarea {
@@ -810,16 +824,21 @@ textarea {
     background-color: #0056b3;
 }
 
+.comment-input-container {
+    position: relative; 
+    display: flex;
+    align-items: center;
+}
+
 .emoji-picker {
-    display: none;
-    position: absolute;
-    top: 250px;  
-    left: 600px; 
+    position: fixed;
+    bottom: 150px;
+    left: 800px;
+    z-index: 9999;
     border-radius: 8px;
     padding: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     width: 250px;
-    z-index: 9999;  
     text-align: center;
 }
 

@@ -1595,3 +1595,509 @@ in SYSTEMPATH\Debug\Toolbar.php on line 218.
  9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-04-26 16:03:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-26 16:03:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-26 16:03:17 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: /]
+in SYSTEMPATH\Debug\Toolbar.php on line 218.
+ 1 SYSTEMPATH\Debug\Toolbar.php(218): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar.php', 218)
+ 2 SYSTEMPATH\Debug\Toolbar.php(201): CodeIgniter\Debug\Toolbar->renderTimelineRecursive([...], 1745683389.173929, 7, 240, [], 0)
+ 3 SYSTEMPATH\Debug\Toolbar\Views\toolbar.tpl.php(102): CodeIgniter\Debug\Toolbar->renderTimeline([...], 1745683389.173929, 7, 240, [])
+ 4 SYSTEMPATH\Debug\Toolbar.php(534): include('C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar\\Views\\toolbar.tpl.php')
+ 5 SYSTEMPATH\Debug\Toolbar.php(497): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 6 APPPATH\Config\Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 7 SYSTEMPATH\Events\Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\Events\Events::trigger('pre_system')
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-04-26 16:03:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-26 16:03:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-26 16:03:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-26 16:03:31 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: /]
+in SYSTEMPATH\Debug\Toolbar.php on line 218.
+ 1 SYSTEMPATH\Debug\Toolbar.php(218): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar.php', 218)
+ 2 SYSTEMPATH\Debug\Toolbar.php(201): CodeIgniter\Debug\Toolbar->renderTimelineRecursive([...], 1745683410.462113, 6, 25, [], 0)
+ 3 SYSTEMPATH\Debug\Toolbar\Views\toolbar.tpl.php(102): CodeIgniter\Debug\Toolbar->renderTimeline([...], 1745683410.462113, 6, 25, [])
+ 4 SYSTEMPATH\Debug\Toolbar.php(534): include('C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar\\Views\\toolbar.tpl.php')
+ 5 SYSTEMPATH\Debug\Toolbar.php(497): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 6 APPPATH\Config\Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 7 SYSTEMPATH\Events\Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\Events\Events::trigger('pre_system')
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-04-26 16:03:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-26 16:03:36 --> Login success for username: dadang
+INFO - 2025-04-26 16:03:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-26 16:03:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-26 16:03:39 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: /]
+in SYSTEMPATH\Debug\Toolbar.php on line 218.
+ 1 SYSTEMPATH\Debug\Toolbar.php(218): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar.php', 218)
+ 2 SYSTEMPATH\Debug\Toolbar.php(201): CodeIgniter\Debug\Toolbar->renderTimelineRecursive([...], 1745683417.146159, 7, 100, [], 0)
+ 3 SYSTEMPATH\Debug\Toolbar\Views\toolbar.tpl.php(102): CodeIgniter\Debug\Toolbar->renderTimeline([...], 1745683417.146159, 7, 100, [])
+ 4 SYSTEMPATH\Debug\Toolbar.php(534): include('C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar\\Views\\toolbar.tpl.php')
+ 5 SYSTEMPATH\Debug\Toolbar.php(497): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 6 APPPATH\Config\Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 7 SYSTEMPATH\Events\Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\Events\Events::trigger('pre_system')
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-04-26 16:03:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-26 16:03:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-26 16:03:41 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: /]
+in SYSTEMPATH\Debug\Toolbar.php on line 218.
+ 1 SYSTEMPATH\Debug\Toolbar.php(218): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar.php', 218)
+ 2 SYSTEMPATH\Debug\Toolbar.php(201): CodeIgniter\Debug\Toolbar->renderTimelineRecursive([...], 1745683420.726484, 6, 25, [], 0)
+ 3 SYSTEMPATH\Debug\Toolbar\Views\toolbar.tpl.php(102): CodeIgniter\Debug\Toolbar->renderTimeline([...], 1745683420.726484, 6, 25, [])
+ 4 SYSTEMPATH\Debug\Toolbar.php(534): include('C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar\\Views\\toolbar.tpl.php')
+ 5 SYSTEMPATH\Debug\Toolbar.php(497): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 6 APPPATH\Config\Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 7 SYSTEMPATH\Events\Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\Events\Events::trigger('pre_system')
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-04-26 16:03:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-26 16:03:42 --> Data pengguna ditemukan: user_id = 32
+INFO - 2025-04-26 16:03:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-26 16:03:44 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: /]
+in SYSTEMPATH\Debug\Toolbar.php on line 218.
+ 1 SYSTEMPATH\Debug\Toolbar.php(218): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar.php', 218)
+ 2 SYSTEMPATH\Debug\Toolbar.php(201): CodeIgniter\Debug\Toolbar->renderTimelineRecursive([...], 1745683422.681378, 7, 60, [], 0)
+ 3 SYSTEMPATH\Debug\Toolbar\Views\toolbar.tpl.php(102): CodeIgniter\Debug\Toolbar->renderTimeline([...], 1745683422.681378, 7, 60, [])
+ 4 SYSTEMPATH\Debug\Toolbar.php(534): include('C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar\\Views\\toolbar.tpl.php')
+ 5 SYSTEMPATH\Debug\Toolbar.php(497): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 6 APPPATH\Config\Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 7 SYSTEMPATH\Events\Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\Events\Events::trigger('pre_system')
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-04-26 16:03:45 --> Feedback data for notulensi_id 1: Array
+(
+    [0] => Array
+        (
+            [feedback_id] => 19
+            [notulensi_id] => 1
+            [isi] => nsn
+            [tanggal_feedback] => 2025-03-15
+            [user_id] => 32
+            [created_at] => 2025-03-15 22:37:59
+            [user_nama] => notulen123
+            [profil_foto] => profil.png
+        )
+
+    [1] => Array
+        (
+            [feedback_id] => 20
+            [notulensi_id] => 1
+            [isi] => 😁
+            [tanggal_feedback] => 2025-03-15
+            [user_id] => 32
+            [created_at] => 2025-03-16 00:41:39
+            [user_nama] => notulen123
+            [profil_foto] => profil.png
+        )
+
+    [2] => Array
+        (
+            [feedback_id] => 18
+            [notulensi_id] => 1
+            [isi] => 🤤
+            [tanggal_feedback] => 2025-03-14
+            [user_id] => 32
+            [created_at] => 2025-03-14 20:57:50
+            [user_nama] => notulen123
+            [profil_foto] => profil.png
+        )
+
+    [3] => Array
+        (
+            [feedback_id] => 5
+            [notulensi_id] => 1
+            [isi] => 😙
+            [tanggal_feedback] => 2025-02-16
+            [user_id] => 32
+            [created_at] => 2025-02-16 09:54:02
+            [user_nama] => notulen123
+            [profil_foto] => profil.png
+        )
+
+    [4] => Array
+        (
+            [feedback_id] => 6
+            [notulensi_id] => 1
+            [isi] => 😛
+            [tanggal_feedback] => 2025-02-16
+            [user_id] => 32
+            [created_at] => 2025-02-16 14:37:46
+            [user_nama] => notulen123
+            [profil_foto] => profil.png
+        )
+
+    [5] => Array
+        (
+            [feedback_id] => 7
+            [notulensi_id] => 1
+            [isi] => tes yaa
+            [tanggal_feedback] => 2025-02-16
+            [user_id] => 13
+            [created_at] => 2025-02-16 14:57:01
+            [user_nama] => pegawai123
+            [profil_foto] => profil.png
+        )
+
+    [6] => Array
+        (
+            [feedback_id] => 1
+            [notulensi_id] => 1
+            [isi] => waw bagus
+            [tanggal_feedback] => 2025-02-15
+            [user_id] => 32
+            [created_at] => 2025-02-15 22:06:24
+            [user_nama] => notulen123
+            [profil_foto] => profil.png
+        )
+
+    [7] => Array
+        (
+            [feedback_id] => 2
+            [notulensi_id] => 1
+            [isi] => nn
+            [tanggal_feedback] => 2025-02-15
+            [user_id] => 32
+            [created_at] => 2025-02-15 22:12:34
+            [user_nama] => notulen123
+            [profil_foto] => profil.png
+        )
+
+    [8] => Array
+        (
+            [feedback_id] => 3
+            [notulensi_id] => 1
+            [isi] => 😃
+            [tanggal_feedback] => 2025-02-15
+            [user_id] => 32
+            [created_at] => 2025-02-15 22:24:25
+            [user_nama] => notulen123
+            [profil_foto] => profil.png
+        )
+
+    [9] => Array
+        (
+            [feedback_id] => 4
+            [notulensi_id] => 1
+            [isi] => 🤨
+            [tanggal_feedback] => 2025-02-15
+            [user_id] => 32
+            [created_at] => 2025-02-15 23:39:57
+            [user_nama] => notulen123
+            [profil_foto] => profil.png
+        )
+
+)
+
+INFO - 2025-04-26 16:03:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-26 16:03:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-26 16:03:46 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: /]
+in SYSTEMPATH\Debug\Toolbar.php on line 218.
+ 1 SYSTEMPATH\Debug\Toolbar.php(218): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar.php', 218)
+ 2 SYSTEMPATH\Debug\Toolbar.php(201): CodeIgniter\Debug\Toolbar->renderTimelineRecursive([...], 1745683425.156543, 7, 30, [], 0)
+ 3 SYSTEMPATH\Debug\Toolbar\Views\toolbar.tpl.php(102): CodeIgniter\Debug\Toolbar->renderTimeline([...], 1745683425.156543, 7, 30, [])
+ 4 SYSTEMPATH\Debug\Toolbar.php(534): include('C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar\\Views\\toolbar.tpl.php')
+ 5 SYSTEMPATH\Debug\Toolbar.php(497): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 6 APPPATH\Config\Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 7 SYSTEMPATH\Events\Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\Events\Events::trigger('pre_system')
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-04-26 16:03:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-26 16:03:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-26 16:03:52 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: /]
+in SYSTEMPATH\Debug\Toolbar.php on line 218.
+ 1 SYSTEMPATH\Debug\Toolbar.php(218): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar.php', 218)
+ 2 SYSTEMPATH\Debug\Toolbar.php(201): CodeIgniter\Debug\Toolbar->renderTimelineRecursive([...], 1745683431.342157, 7, 30, [], 0)
+ 3 SYSTEMPATH\Debug\Toolbar\Views\toolbar.tpl.php(102): CodeIgniter\Debug\Toolbar->renderTimeline([...], 1745683431.342157, 7, 30, [])
+ 4 SYSTEMPATH\Debug\Toolbar.php(534): include('C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar\\Views\\toolbar.tpl.php')
+ 5 SYSTEMPATH\Debug\Toolbar.php(497): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 6 APPPATH\Config\Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 7 SYSTEMPATH\Events\Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\Events\Events::trigger('pre_system')
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-04-26 16:03:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-26 16:03:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-26 16:03:56 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: /]
+in SYSTEMPATH\Debug\Toolbar.php on line 218.
+ 1 SYSTEMPATH\Debug\Toolbar.php(218): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar.php', 218)
+ 2 SYSTEMPATH\Debug\Toolbar.php(201): CodeIgniter\Debug\Toolbar->renderTimelineRecursive([...], 1745683435.692529, 7, 20, [], 0)
+ 3 SYSTEMPATH\Debug\Toolbar\Views\toolbar.tpl.php(102): CodeIgniter\Debug\Toolbar->renderTimeline([...], 1745683435.692529, 7, 20, [])
+ 4 SYSTEMPATH\Debug\Toolbar.php(534): include('C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar\\Views\\toolbar.tpl.php')
+ 5 SYSTEMPATH\Debug\Toolbar.php(497): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 6 APPPATH\Config\Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 7 SYSTEMPATH\Events\Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\Events\Events::trigger('pre_system')
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-04-26 16:04:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-26 16:04:04 --> Login success for username: lili
+INFO - 2025-04-26 16:04:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-26 16:04:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-26 16:04:07 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: /]
+in SYSTEMPATH\Debug\Toolbar.php on line 218.
+ 1 SYSTEMPATH\Debug\Toolbar.php(218): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar.php', 218)
+ 2 SYSTEMPATH\Debug\Toolbar.php(201): CodeIgniter\Debug\Toolbar->renderTimelineRecursive([...], 1745683444.948546, 7, 105, [], 0)
+ 3 SYSTEMPATH\Debug\Toolbar\Views\toolbar.tpl.php(102): CodeIgniter\Debug\Toolbar->renderTimeline([...], 1745683444.948546, 7, 105, [])
+ 4 SYSTEMPATH\Debug\Toolbar.php(534): include('C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar\\Views\\toolbar.tpl.php')
+ 5 SYSTEMPATH\Debug\Toolbar.php(497): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 6 APPPATH\Config\Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 7 SYSTEMPATH\Events\Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\Events\Events::trigger('pre_system')
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-04-26 16:04:10 --> Pengguna dengan role notulen atau pegawai ditemukan: Array
+(
+    [0] => Array
+        (
+            [user_id] => 6
+            [username] => wulan saja
+            [nama] => wulandari yulianis
+            [nip] => 18679202938390
+            [email] => lala@gmail.com
+            [password] => $2y$10$Sbofb2lg7PyOSv1D1/vCauYJmgWsYc62iaww/yz9aMuZHwdpRyscG
+            [role] => notulen
+            [Bidang] => IKP
+            [profil_foto] => 1738317012_28f82e9f4a84a03b1352.png
+            [alamat] => 
+            [jabatan] => sek
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-09 15:02:18
+            [updated_at] => 2025-02-19 22:43:24
+        )
+
+    [1] => Array
+        (
+            [user_id] => 13
+            [username] => jaja
+            [nama] => pegawai123
+            [nip] => 123456788987654324
+            [email] => jaja@gmail.com
+            [password] => $2y$10$nVk3.ULQ.f2qJcwl.zo9p.3ZmVs8RESB.SYe8GvwHZ4Y.pEHR.TlO
+            [role] => pegawai
+            [Bidang] => IKP
+            [profil_foto] => profil.png
+            [alamat] => 
+            [jabatan] => korea
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-13 07:53:10
+            [updated_at] => 2025-02-19 16:04:36
+        )
+
+    [2] => Array
+        (
+            [user_id] => 32
+            [username] => dadang
+            [nama] => notulen123
+            [nip] => 098765432234567892
+            [email] => dadang@gmail.com
+            [password] => $2y$10$DNyQzThGJpqokrIz2BqMBew5bPf6uh1UttFFjNBRAOsorXNJjmyoK
+            [role] => notulen
+            [Bidang] => aptika
+            [profil_foto] => profil.png
+            [alamat] => 
+            [jabatan] => Sekretaris
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-17 09:26:42
+            [updated_at] => 2025-03-18 17:20:20
+        )
+
+    [3] => Array
+        (
+            [user_id] => 56
+            [username] => fafa
+            [nama] => 
+            [nip] => 123456789023749256
+            [email] => fafa0@gmail.com
+            [password] => $2y$10$XJUEmFJrojPtC9R4cycKnuDoJCBxq3y6dseNmJboMocJb8tipDMyq
+            [role] => pegawai
+            [Bidang] => APTIKA
+            [profil_foto] => 
+            [alamat] => 
+            [jabatan] => 
+            [tanggal_lahir] => 
+            [created_at] => 2025-01-31 05:24:03
+            [updated_at] => 2025-01-31 05:24:03
+        )
+
+    [4] => Array
+        (
+            [user_id] => 59
+            [username] => lili
+            [nama] => intan salma denaidy
+            [nip] => 123456788987654328
+            [email] => intan@gmail.com
+            [password] => $2y$10$KdrB3PXMBnKrCd0IAlsjCOx6/gTCziLDwaQI62G1iUdtOcCjdJqZS
+            [role] => notulen
+            [Bidang] => IKP
+            [profil_foto] => 1739929188_5c101946dc4cbe7a3245.jpg
+            [alamat] => 
+            [jabatan] => korea
+            [tanggal_lahir] => 
+            [created_at] => 2025-02-19 01:39:48
+            [updated_at] => 2025-02-19 22:43:37
+        )
+
+)
+
+INFO - 2025-04-26 16:04:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-26 16:04:10 --> User profile for ID 9 retrieved successfully.
+INFO - 2025-04-26 16:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-26 16:04:12 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: /]
+in SYSTEMPATH\Debug\Toolbar.php on line 218.
+ 1 SYSTEMPATH\Debug\Toolbar.php(218): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar.php', 218)
+ 2 SYSTEMPATH\Debug\Toolbar.php(201): CodeIgniter\Debug\Toolbar->renderTimelineRecursive([...], 1745683450.408686, 7, 150, [], 0)
+ 3 SYSTEMPATH\Debug\Toolbar\Views\toolbar.tpl.php(102): CodeIgniter\Debug\Toolbar->renderTimeline([...], 1745683450.408686, 7, 150, [])
+ 4 SYSTEMPATH\Debug\Toolbar.php(534): include('C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar\\Views\\toolbar.tpl.php')
+ 5 SYSTEMPATH\Debug\Toolbar.php(497): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 6 APPPATH\Config\Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 7 SYSTEMPATH\Events\Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\Events\Events::trigger('pre_system')
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-04-26 16:04:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-26 16:04:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-26 16:04:14 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: /]
+in SYSTEMPATH\Debug\Toolbar.php on line 218.
+ 1 SYSTEMPATH\Debug\Toolbar.php(218): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar.php', 218)
+ 2 SYSTEMPATH\Debug\Toolbar.php(201): CodeIgniter\Debug\Toolbar->renderTimelineRecursive([...], 1745683453.497227, 7, 45, [], 0)
+ 3 SYSTEMPATH\Debug\Toolbar\Views\toolbar.tpl.php(102): CodeIgniter\Debug\Toolbar->renderTimeline([...], 1745683453.497227, 7, 45, [])
+ 4 SYSTEMPATH\Debug\Toolbar.php(534): include('C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar\\Views\\toolbar.tpl.php')
+ 5 SYSTEMPATH\Debug\Toolbar.php(497): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 6 APPPATH\Config\Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 7 SYSTEMPATH\Events\Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\Events\Events::trigger('pre_system')
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-04-26 16:04:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-26 16:04:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-26 16:04:39 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: /]
+in SYSTEMPATH\Debug\Toolbar.php on line 218.
+ 1 SYSTEMPATH\Debug\Toolbar.php(218): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar.php', 218)
+ 2 SYSTEMPATH\Debug\Toolbar.php(201): CodeIgniter\Debug\Toolbar->renderTimelineRecursive([...], 1745683478.213014, 7, 20, [], 0)
+ 3 SYSTEMPATH\Debug\Toolbar\Views\toolbar.tpl.php(102): CodeIgniter\Debug\Toolbar->renderTimeline([...], 1745683478.213014, 7, 20, [])
+ 4 SYSTEMPATH\Debug\Toolbar.php(534): include('C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar\\Views\\toolbar.tpl.php')
+ 5 SYSTEMPATH\Debug\Toolbar.php(497): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 6 APPPATH\Config\Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 7 SYSTEMPATH\Events\Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\Events\Events::trigger('pre_system')
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-04-26 16:04:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-26 16:04:47 --> Login success for username: dadang
+INFO - 2025-04-26 16:04:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-26 16:04:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-26 16:04:49 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: /]
+in SYSTEMPATH\Debug\Toolbar.php on line 218.
+ 1 SYSTEMPATH\Debug\Toolbar.php(218): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar.php', 218)
+ 2 SYSTEMPATH\Debug\Toolbar.php(201): CodeIgniter\Debug\Toolbar->renderTimelineRecursive([...], 1745683487.745611, 7, 40, [], 0)
+ 3 SYSTEMPATH\Debug\Toolbar\Views\toolbar.tpl.php(102): CodeIgniter\Debug\Toolbar->renderTimeline([...], 1745683487.745611, 7, 40, [])
+ 4 SYSTEMPATH\Debug\Toolbar.php(534): include('C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar\\Views\\toolbar.tpl.php')
+ 5 SYSTEMPATH\Debug\Toolbar.php(497): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 6 APPPATH\Config\Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 7 SYSTEMPATH\Events\Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\Events\Events::trigger('pre_system')
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-04-26 16:04:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-26 16:04:59 --> Data pengguna ditemukan: user_id = 32
+INFO - 2025-04-26 16:05:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-26 16:05:00 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: /]
+in SYSTEMPATH\Debug\Toolbar.php on line 218.
+ 1 SYSTEMPATH\Debug\Toolbar.php(218): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar.php', 218)
+ 2 SYSTEMPATH\Debug\Toolbar.php(201): CodeIgniter\Debug\Toolbar->renderTimelineRecursive([...], 1745683498.844006, 7, 35, [], 0)
+ 3 SYSTEMPATH\Debug\Toolbar\Views\toolbar.tpl.php(102): CodeIgniter\Debug\Toolbar->renderTimeline([...], 1745683498.844006, 7, 35, [])
+ 4 SYSTEMPATH\Debug\Toolbar.php(534): include('C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar\\Views\\toolbar.tpl.php')
+ 5 SYSTEMPATH\Debug\Toolbar.php(497): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 6 APPPATH\Config\Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 7 SYSTEMPATH\Events\Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\Events\Events::trigger('pre_system')
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-04-26 16:05:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-26 16:05:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-26 16:05:04 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: /]
+in SYSTEMPATH\Debug\Toolbar.php on line 218.
+ 1 SYSTEMPATH\Debug\Toolbar.php(218): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar.php', 218)
+ 2 SYSTEMPATH\Debug\Toolbar.php(201): CodeIgniter\Debug\Toolbar->renderTimelineRecursive([...], 1745683501.029055, 7, 125, [], 0)
+ 3 SYSTEMPATH\Debug\Toolbar\Views\toolbar.tpl.php(102): CodeIgniter\Debug\Toolbar->renderTimeline([...], 1745683501.029055, 7, 125, [])
+ 4 SYSTEMPATH\Debug\Toolbar.php(534): include('C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar\\Views\\toolbar.tpl.php')
+ 5 SYSTEMPATH\Debug\Toolbar.php(497): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 6 APPPATH\Config\Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 7 SYSTEMPATH\Events\Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\Events\Events::trigger('pre_system')
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-04-26 16:05:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-26 16:05:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-26 16:05:52 --> Data pengguna ditemukan: user_id = 32
+INFO - 2025-04-26 16:05:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-26 16:05:53 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: /]
+in SYSTEMPATH\Debug\Toolbar.php on line 218.
+ 1 SYSTEMPATH\Debug\Toolbar.php(218): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar.php', 218)
+ 2 SYSTEMPATH\Debug\Toolbar.php(201): CodeIgniter\Debug\Toolbar->renderTimelineRecursive([...], 1745683552.424742, 7, 30, [], 0)
+ 3 SYSTEMPATH\Debug\Toolbar\Views\toolbar.tpl.php(102): CodeIgniter\Debug\Toolbar->renderTimeline([...], 1745683552.424742, 7, 30, [])
+ 4 SYSTEMPATH\Debug\Toolbar.php(534): include('C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar\\Views\\toolbar.tpl.php')
+ 5 SYSTEMPATH\Debug\Toolbar.php(497): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 6 APPPATH\Config\Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 7 SYSTEMPATH\Events\Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\Events\Events::trigger('pre_system')
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-04-26 16:05:57 --> Feedback data for notulensi_id 16: Array
+(
+)
+
+INFO - 2025-04-26 16:05:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-26 16:05:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-26 16:05:58 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: /]
+in SYSTEMPATH\Debug\Toolbar.php on line 218.
+ 1 SYSTEMPATH\Debug\Toolbar.php(218): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar.php', 218)
+ 2 SYSTEMPATH\Debug\Toolbar.php(201): CodeIgniter\Debug\Toolbar->renderTimelineRecursive([...], 1745683557.482176, 7, 40, [], 0)
+ 3 SYSTEMPATH\Debug\Toolbar\Views\toolbar.tpl.php(102): CodeIgniter\Debug\Toolbar->renderTimeline([...], 1745683557.482176, 7, 40, [])
+ 4 SYSTEMPATH\Debug\Toolbar.php(534): include('C:\\Users\\lenovo\\Downloads\\SiNotik\\system\\Debug\\Toolbar\\Views\\toolbar.tpl.php')
+ 5 SYSTEMPATH\Debug\Toolbar.php(497): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 6 APPPATH\Config\Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 7 SYSTEMPATH\Events\Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\Events\Events::trigger('pre_system')
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

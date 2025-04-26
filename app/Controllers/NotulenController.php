@@ -83,11 +83,7 @@ class NotulenController extends Controller
             'bidang' => $bidang,
         ];
 
-        $riwayatModel = new RiwayatModel();
         $notulensi_id = $notulensiModel->insert($notulensiData);
-        $riwayatModel->insert([
-            'notulensi_id' => $notulensi_id
-        ]);
 
         if ($fileName) {
             $dokumentasiModel = new DokumentasiModel();

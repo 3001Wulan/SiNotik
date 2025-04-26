@@ -172,18 +172,17 @@
                   </div>
                   <button class="download-button" id="downloadButton">Unduh</button>
                 </div>
-
-                <!-- Comment Section -->
-                <div class="comment-section">
-                  <button id="commentButton" class="comment-icon">
-                    <i class="fas fa-comment"></i> 
-                  </button>
-                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="comment-section">
+                  <button id="commentButton" class="comment-icon">
+                    <i class="fas fa-comment"></i> 
+                  </button>
+      </div>
+      
 
       <!-- Pop-up untuk Komentar -->
       <div id="commentPopup" class="comment-popup" style="display: none;">
@@ -208,13 +207,13 @@
             <div class="textarea-container">
               <textarea id="newComment" placeholder="Tulis komentar..."></textarea>
               <button type="button" id="emojiButton">😊</button>
+              <div id="emojiPicker" class="emoji-picker" style="display: none;"></div>
             </div>
             <button id="submitComment">
               <i class="fas fa-paper-plane"></i>
             </button>
           </div>
         </div>
-        <div id="emojiPicker" class="emoji-picker" style="display: none;"></div>
       </div>
     </div>
   </div>
@@ -237,6 +236,7 @@
   </div>
 
   <script>
+    
     document.addEventListener('DOMContentLoaded', () => {
     const toggleDarkMode = document.getElementById('toggleDarkMode');
     const isDarkMode = localStorage.getItem('darkMode') === 'true';
@@ -491,6 +491,7 @@
     function closeModal() {
       document.getElementById("imageModal").style.display = "none";
     }
+    
   </script>
 </body>
 </html>

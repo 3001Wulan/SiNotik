@@ -164,17 +164,17 @@
                   <button class="download-button" id="downloadButton">Unduh</button>
                 </div>
 
-                <!-- Comment Section -->
-                <div class="comment-section">
-                  <button id="commentButton" class="comment-icon">
-                    <i class="fas fa-comment"></i> 
-                  </button>
-                </div>
+                
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="comment-section">
+                  <button id="commentButton" class="comment-icon">
+                    <i class="fas fa-comment"></i> 
+                  </button>
+                </div>
 
       <!-- Pop-up untuk Komentar -->
       <div id="commentPopup" class="comment-popup" style="display: none;">
