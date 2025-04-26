@@ -121,10 +121,26 @@
                         <input type="email" id="email" name="email" placeholder="Input email here" required>
 
                         <label for="status">Status</label>
-                        <input type="text" id="status" name="status" placeholder="Input status here" required>
+                        <div class="custom-dropdown" id="statusDropdown">
+                            <div class="dropdown-selected" onclick="toggleDropdown('statusDropdown')">Pilih Status Pengguna</div>
+                                <div class="dropdown-options">
+                                    <div class="dropdown-option" onclick="selectOption('statusDropdown', 'Pegawai')">Pegawai</div>
+                                    <div class="dropdown-option" onclick="selectOption('statusDropdown', 'Notulen')">Notulensi</div>
+                                    <div class="dropdown-option" onclick="selectOption('statusDropdown', 'Admin')">Admin</div>
+                                </div>
+                            <input type="hidden" name="status" id="status" required>
+                        </div>
 
                         <label for="bidang">Bidang</label>
-                        <input type="text" id="bidang" name="bidang" placeholder="Input bidang here" required>
+                        <div class="custom-dropdown" id="bidangDropdown">
+                            <div class="dropdown-selected" onclick="toggleDropdown('bidangDropdown')">Pilih Status Pengguna</div>
+                                <div class="dropdown-options">
+                                    <div class="dropdown-option" onclick="selectOption('bidangDropdown', 'Aptika')">APTIKA</div>
+                                    <div class="dropdown-option" onclick="selectOption('bidangDropdown', 'Ikp')">IKP</div>
+                                    <div class="dropdown-option" onclick="selectOption('bidangDropdown', 'Statistik')">Statistik dan Persandian</div>
+                                </div>
+                            <input type="hidden" name="bidang" id="bidang" required>
+                        </div>
 
                         <label for="jabatan">Jabatan</label>
                         <input type="text" id="jabatan" name="jabatan" placeholder="Input jabatan here" required>
@@ -282,6 +298,35 @@ window.addEventListener('DOMContentLoaded', () => {
         confirmLogout.addEventListener('click', () => {
             window.location.href = '<?= base_url('login') ?>';
         });
+
+       // Fungsi untuk toggle (buka/tutup) dropdown saat DIKLIK
+        function toggleDropdown(id) {
+            const dropdown = document.getElementById(id);
+            dropdown.classList.toggle('active');
+        }
+
+        // Fungsi untuk memilih opsi dalam dropdown
+        function selectOption(dropdownId, value) {
+            const dropdown = document.getElementById(dropdownId);
+            const selected = dropdown.querySelector('.dropdown-selected');
+            const hiddenInput = dropdown.querySelector('input[type="hidden"]');
+
+            selected.textContent = value;
+            selected.style.color = "#333"; 
+            hiddenInput.value = value;
+
+            dropdown.classList.remove('active');
+        }
+
+    // Tutup dropdown saat kursor keluar dari area dropdown
+    document.querySelectorAll('.custom-dropdown').forEach(function(dropdown) {
+        dropdown.addEventListener('mouseleave', function() {
+            // Hanya tutup jika dropdown sedang AKTIF (terbuka)
+            if (dropdown.classList.contains('active')) {
+                dropdown.classList.remove('active');
+            }
+        });
+    });
     </script>
 </body>
 </html>
